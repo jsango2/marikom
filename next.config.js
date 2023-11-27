@@ -1,10 +1,9 @@
-const { i18n } = require("./next-i18next.config");
-
 module.exports = {
-  i18n,
-};
-
-module.exports = {
+  i18n: {
+    defaultLocale: "hr",
+    locales: ["en", "hr"],
+    localeDetection: false,
+  },
   images: {
     // limit of 25 deviceSizes values
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],

@@ -24,14 +24,14 @@ const Header = ({ siteTitle }) => {
   // State for our modal
 
   // Call hook passing in the ref and a function to call on outside click
-  useOnClickOutside(ref, () => setIsOnamaOpen(false));
+  // useOnClickOutside(ref, () => setIsOnamaOpen(false));
 
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [isOnamaOpen, setIsOnamaOpen] = useState(false);
-  const handleOnamaOpen = () => {
-    setIsOnamaOpen(true);
-  };
+  // const handleOnamaOpen = () => {
+  //   setIsOnamaOpen(true);
+  // };
 
   // <Headroom
   //   style={{
@@ -72,7 +72,7 @@ const Header = ({ siteTitle }) => {
                   // blockScroll()
                 }}
               />
-              {isOnamaOpen && (
+              {/* {isOnamaOpen && (
                 <div className="OnamaDropDown" ref={ref}>
                   <Link className="navLinkDrop" href="/o-nama">
                     {router.locale === "hr" ? "Naša priča" : "Our story"}
@@ -87,19 +87,35 @@ const Header = ({ siteTitle }) => {
                     PRESS
                   </Link>
                 </div>
-              )}
+              )} */}
 
               <div className="navLinks">
-                <div
-                  style={{ cursor: "pointer", marginRight: "20px" }}
-                  onMouseEnter={handleOnamaOpen}
-                >
-                  <Link className="navLink" href="/">
-                    O nama
-                  </Link>
-                  <ArrowDown
-                    style={{ position: "relative", marginLeft: "-8px" }}
-                  />
+                <div className="dropdown">
+                  <div className="dropdown-content">
+                    <Link className="navLinkDrop" href="/o-nama">
+                      {router.locale === "hr" ? "Naša priča" : "Our story"}
+                    </Link>
+                    <Link className="navLinkDrop" href="/marikomerc-kvalitete">
+                      Marikomerc kvalitete
+                    </Link>
+                    <Link className="navLinkDrop" href="/prerada-i-skladiste">
+                      Prerada i skladište
+                    </Link>
+                    <Link className="navLinkDrop" href="/press">
+                      PRESS
+                    </Link>
+                  </div>
+                  <div
+                    style={{ cursor: "pointer", marginRight: "20px" }}
+                    // onMouseOver={handleOnamaOpen}
+                  >
+                    <Link className="navLink" href="/">
+                      O nama
+                    </Link>
+                    <ArrowDown
+                      style={{ position: "relative", marginLeft: "-8px" }}
+                    />
+                  </div>
                 </div>
                 <div>
                   <Link className="navLink" href="/proizvodi">

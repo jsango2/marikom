@@ -108,11 +108,11 @@ function FooterSection() {
             }}
           >
             <Social>
-              <Instagram />
+              {/* <Instagram />
               <Facebook />
               <Linkedin />
               <Location />
-              <Email />
+              <Email /> */}
             </Social>
           </Column>
         )}

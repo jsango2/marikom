@@ -23,7 +23,6 @@ function Content() {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : hr;
-  console.log(t.Index);
   return (
     <div>
       <WrapSliderContent>
