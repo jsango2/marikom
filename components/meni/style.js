@@ -1,6 +1,4 @@
-import styled from "styled-components"
-
-import heroPhoto from "../../images/hero.png"
+import styled from "styled-components";
 
 // import { HeroWrap } from "./style.js"
 
@@ -19,4 +17,4 @@ export const WrapAll = styled.div`
   @media only screen and (max-width: 600px) {
     padding-left: 38px;
   }
-`
+`;

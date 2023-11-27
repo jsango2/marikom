@@ -1,6 +1,0 @@
-
-Sitemap: https://www.runzadar.com/sitemap.xml
-
-# Allow all crawlers for /accounts
-User-agent: *
-Allow: /

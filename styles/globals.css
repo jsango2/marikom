@@ -6,6 +6,29 @@ body .slick-next::before {
   display: none;
 } */
 
+:root {--color-boja:-marikomerc-plava: #1c2640ff;
+  --color-boja-perla-crvena: #e1251bff; 
+  --color-boja:-svj-plava-ocjena: #bee2f0ff;
+  --color-boja-marikomerc-bijela: #f5faffff; 
+  --color-boja:-tamnoplava-ocjena: #50b2d9ff;
+    --color-svj-plava: #4299c8ff;
+    --color-bijela-plava: #b5d3e3ff;
+    --color-dark-charcoal: #2f2a32ff;
+    --color-charcoal: #37313bff;
+    --color-siva: #b0b0b0ff;
+    /* --gradient:-marikomerc-radial-plava: ;  */
+    --gradient-gradient:-crni-od-dolje: linear-gradient(#00000000 0%, #000000a8 100%);
+    --gradient-gradient:-svjetlo-plava: linear-gradient(#338bc2ff 0%, #dffee6ff 100%);
+    --gradient:-perla-crvena-(radial): ; 
+    --gradient-gradient:-linear-gradient-za-posvjetljivanje-od-gore: linear-gradient(#c7c7c72b 0%, #f2f2f200 100%);
+    --color-sunrise:-light-charcoal: #403845ff;
+    --color-sunrise:-text-grey: #605866ff;
+    --color-sunrise:-grey: #f5faffff;
+    --color-sunrise:-white: #ffffffff;
+    --color-sunrise:-error-red: #dc7603ff;
+    --color-sunrise:-waves: #ad7ebcff;
+    --color-system:-grey: #9a9a9ae6;
+}
 body {
   background-color: #191b26;
   -webkit-font-smoothing: antialiased;
@@ -209,10 +232,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   box-shadow: 0px 2.7141px 5.42821px rgba(28, 37, 44, 0.08);
   border-radius: 16.2846px;
 }
-/* .youTubeVideo {
-  width: 50vw;
-} */
-
 .submitButton {
   background: #f9ff00 !important;
   /* Medium Drop */

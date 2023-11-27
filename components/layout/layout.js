@@ -18,8 +18,8 @@ const Layout = ({ children }) => {
           padding: `0`,
         }}
       >
+        SKOLA TRCANJE
         <main>{children}</main>
-
         <Footer />
       </div>
     </>

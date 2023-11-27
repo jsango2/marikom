@@ -1,4 +1,3 @@
-import Footer from "../components/footer/footer";
 import Meta from "../components/meta";
 import Header from "./header";
 
@@ -8,7 +7,7 @@ export default function Layout({ preview, children }) {
       <Header />
       <Meta />
       <main>{children}</main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

@@ -1,3 +1,9 @@
+const { i18n } = require("./next-i18next.config");
+
+module.exports = {
+  i18n,
+};
+
 module.exports = {
   images: {
     // limit of 25 deviceSizes values
@@ -18,7 +24,7 @@ module.exports = {
     formats: ["image/webp"],
     unoptimized: true,
   },
-  assetPrefix: ".",
+
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
