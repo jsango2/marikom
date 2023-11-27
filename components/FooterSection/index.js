@@ -15,10 +15,10 @@ import {
   CopyLink,
 } from "./style.js";
 import MarikomercLogo from "../../svg/marikomerc_logo_footer.svg";
-import Instagram from "../../svg/Instagram.svg";
-import Facebook from "../../svg/Facebook.svg";
-import Linkedin from "../../svg/Linkedin.svg";
-import Location from "../../svg/Location.svg";
+// import Instagram from "../../svg/Instagram.svg";
+// import Facebook from "../../svg/Facebook.svg";
+// import Linkedin from "../../svg/Linkedin.svg";
+// import Location from "../../svg/Location.svg";
 import Email from "../../svg/Email.svg";
 import useWindowSize from "../helper/usewindowsize";
 import { useInView } from "react-intersection-observer";
