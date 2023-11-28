@@ -14,8 +14,8 @@ import { useRouter } from "next/router";
 
 import useWindowSize from "../../helper/usewindowsize.js";
 // import { useTranslations } from "next-intl";
-import en from "../../../messages/en.json";
-import hr from "../../../messages/hr.json";
+import en from "../../../locales/en.json";
+import hr from "../../../locales/hr.json";
 
 function Content() {
   const size = useWindowSize();
@@ -27,8 +27,8 @@ function Content() {
     <div>
       <WrapSliderContent>
         <WrapText>
-          <Title>{t.Index.title}</Title>
-          <SubTitle>{t.Index.description}</SubTitle>
+          <Title>{t.Hero.title}</Title>
+          <SubTitle>{t.Hero.description}</SubTitle>
           {/* <Button
                   bgColor="#4299C8"
                   color="#FFFFFF"

@@ -1,8 +1,14 @@
 import React from "react";
 import Layout from "../../components/layout";
-import { Container, FeaturedNews, News, Left, Right } from "./style.js";
+import {
+  Container,
+  FeaturedNews,
+  News,
+  Left,
+  Right,
+} from "../../components/NewsSectionPage/style.js";
 import { news } from "../../news";
-import NewsCard from "./newsCard";
+import NewsCard from "../../components/NewsSectionPage/newsCard";
 
 function index() {
   return (

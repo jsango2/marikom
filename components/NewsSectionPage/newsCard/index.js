@@ -23,9 +23,7 @@ function NewsCard({ datum, naslov, text, link, isFeatured }) {
         <Title isFeatured={isFeatured}>{naslov}</Title>
         <Text>{text}</Text>
 
-        <ViseInfo
-          href={`/novosti/${naslov.toLowerCase().split(" ").join("-")}`}
-        >
+        <ViseInfo href={`/news/${naslov.toLowerCase().split(" ").join("-")}`}>
           Vise informacija <ArrowRight />
         </ViseInfo>
       </DataContainer>

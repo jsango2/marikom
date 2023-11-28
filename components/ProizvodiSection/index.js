@@ -13,7 +13,13 @@ import p1 from "../../assets/images/podmorjeSm.png";
 import Certs from "../../assets/images/LogotipiCert.png";
 import overlay from "../../assets/images/overlay.png";
 import ProizvodiCLoud from "./proizvodiCloud/index.js";
+import { useRouter } from "next/router";
+import en from "../../locales/en.json";
+import hr from "../../locales/hr.json";
 function ProizvodiSection() {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : hr;
   return (
     <WrapAll>
       <Piktogram />
@@ -24,7 +30,7 @@ function ProizvodiSection() {
         <WrapBg>
           <Image src={p1} alt="bg" layout="fill" objectFit="cover" />
         </WrapBg>
-        <Title>PROIZVODI</Title>
+        <Title>{t.Products.title}</Title>
         <Text>
           Nudimo širok izbor smrznutih, svježih, dimljenih, sušenih, mariniranih
           i usoljenih morskih proizvoda. Također, u ponudi imamo McCain program,

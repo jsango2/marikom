@@ -14,12 +14,12 @@ import {
   Copy,
   CopyLink,
 } from "./style.js";
-import MarikomercLogo from "../../svg/marikomerc_logo_footer.svg";
-// import Instagram from "../../svg/Instagram.svg";
-// import Facebook from "../../svg/Facebook.svg";
-// import Linkedin from "../../svg/Linkedin.svg";
-// import Location from "../../svg/Location.svg";
-import Email from "../../svg/Email.svg";
+import MarikomercLogo from "../../assets/svg/marikomerc_logo_footer.svg";
+import Instagram from "../../assets/svg/Instagram.svg";
+import Facebook from "../../assets/svg/Facebook.svg";
+import Linkedin from "../../assets/svg/Linkedin.svg";
+import Location from "../../assets/svg/Location.svg";
+import Email from "../../assets/svg/Email.svg";
 import useWindowSize from "../helper/usewindowsize";
 import { useInView } from "react-intersection-observer";
 function FooterSection() {
@@ -108,11 +108,11 @@ function FooterSection() {
             }}
           >
             <Social>
-              {/* <Instagram />
+              <Instagram />
               <Facebook />
               <Linkedin />
               <Location />
-              <Email /> */}
+              <Email />
             </Social>
           </Column>
         )}

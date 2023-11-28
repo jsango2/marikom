@@ -1,10 +1,10 @@
 {
-  "Index": {
+  "Hero": {
     "title": "Our mission: biti pouzdan, kvalitetan i inovativan partner koji jača konkurentnost i snagu svojih klijenata.",
     "description": "We have više od 30 godina rada u industriji prerade ribe za profesionalni HoReCa i retail segment na tržištu Republike Hrvatske, a naši ciljevi nas pozicioniraju i kao pouzdanog partnera na tržištu EU."
   },
-  "LocaleSwitcher": {
-    "switchLocale": "Switch to {locale, select, de {German} en {English} other {Unknown}}"
+  "Products": {
+    "title": "PRODUCTS"
   },
   "PageLayout": {
     "pageTitle": "next-intl"

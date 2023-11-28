@@ -22,9 +22,6 @@ import FooterSection from "../components/FooterSection";
 import useWindowSize from "../components/helper/usewindowsize";
 import CertifikatMobileSection from "../components/CertifikatMobileSection";
 
-import en from "../messages/en.json";
-import hr from "../messages/hr.json";
-
 export default function IndexPage() {
   const size = useWindowSize();
 

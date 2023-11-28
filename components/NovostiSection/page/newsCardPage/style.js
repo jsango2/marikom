@@ -112,7 +112,7 @@ export const Datum = styled.p`
   @media only screen and (max-width: 600px) {
   }
 `;
-export const ViseInfo = styled.div`
+export const ViseInfo = styled.a`
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 600;
