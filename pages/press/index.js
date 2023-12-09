@@ -21,7 +21,7 @@ function index() {
       <Skladiste />
       <Brojke />
       <Zajednica />
-      <NovostiSection background={true} />
+      {/* <NovostiSection background={true} /> */}
       <KontaktSection />
       <FooterSection />
     </Layout>
