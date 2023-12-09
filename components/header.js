@@ -28,10 +28,13 @@ const Header = ({ siteTitle, novostiNaslovi }) => {
 
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
-  const [isOnamaOpen, setIsOnamaOpen] = useState(false);
-  // const handleOnamaOpen = () => {
-  //   setIsOnamaOpen(true);
-  // };
+  const [message, setMessage] = useState("Hello World");
+
+  // const [isOnamaOpen, setIsOnamaOpen] = useState(false);
+
+  function handleCloseMenu() {
+    setIsOpen(false);
+  }
 
   // <Headroom
   //   style={{
@@ -47,7 +50,11 @@ const Header = ({ siteTitle, novostiNaslovi }) => {
       {/* <Script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js" /> */}
 
       <header>
-        <MeniMobile isOpen={isOpen} setIsOpen={setIsOpen} />
+        <MeniMobile
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          closeMenu={handleCloseMenu}
+        />
         <div className="headerWrap">
           <div className="navBar">
             <Link href="/">

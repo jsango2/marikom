@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import AppContext from "../../components/AppContext.js";
 import slugify from "slugify";
 
-function LanguageSwitcher({ novostiNaslovi }) {
+function LanguageSwitcher({ novostiNaslovi, setMessage, closeMenu }) {
   const context = useContext(AppContext);
   const { locale, asPath } = useRouter();
 
@@ -15,6 +15,9 @@ function LanguageSwitcher({ novostiNaslovi }) {
 
   const handleSelectLang = (e, lang) => {
     handleRouteChange(lang);
+  };
+  const chooseMessage = (message) => {
+    setMessage(message);
   };
 
   // funkcija za promjenu jezika i trazenje url-a za istu stranicu na drugom jeziku. novostiNaslovi u propsima dolazi iz parent page Novosti
@@ -79,7 +82,13 @@ function LanguageSwitcher({ novostiNaslovi }) {
   return (
     <div className="languageSwitchWrap">
       {lang.map((lang) => (
-        <Switcher key={lang} onClick={(e) => handleSelectLang(e, lang)}>
+        <Switcher
+          key={lang}
+          onClick={(e) => {
+            handleSelectLang(e, lang);
+            closeMenu();
+          }}
+        >
           {lang}
         </Switcher>
       ))}
