@@ -14,24 +14,28 @@ body .slick-next::before {
   src: url("../assets/fonts/gilroy/Gilroy-Regular.ttf");
   font-weight: normal;
   font-style: normal;
+  format: truetype;
 }
 @font-face {
   font-family: "Gilroy";
   src: url("../assets/fonts/gilroy/Gilroy-Bold.ttf");
   font-weight: 700;
   font-style: normal;
+  format: truetype;
 }
 @font-face {
   font-family: "Gilroy";
   src: url("../assets/fonts/gilroy/Gilroy-ExtraBold.ttf");
   font-weight: 900;
   font-style: normal;
+  format: truetype;
 }
 @font-face {
   font-family: "Gilroy";
   src: url("../assets/fonts/gilroy/Gilroy-SemiBold.ttf");
   font-weight: 600;
   font-style: normal;
+  format: truetype;
 }
 :root {
   --color-boja-marikomerc-plava: #1c2640ff;
