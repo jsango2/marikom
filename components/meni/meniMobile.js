@@ -31,7 +31,7 @@ const MeniMobile = ({ isOpen, setIsOpen }) => {
         </Link>
         <Link
           className="mobileLinks"
-          href="/kalkulator"
+          href="/proizvodi"
           // onClick={() => {
           //   setIsOpen(false);
           // }}
@@ -47,7 +47,7 @@ const MeniMobile = ({ isOpen, setIsOpen }) => {
         <Link className="mobileLinks" href="http://www.zadarnight.run">
           Kontakt
         </Link>
-        <Link className="mobileLinks" href="http://www.zadarnight.run">
+        <Link className="mobileLinks" href="/novosti">
           Novosti
         </Link>
         <Link className="mobileLinks" href="http://www.zadarnight.run">
