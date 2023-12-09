@@ -1,8 +1,10 @@
-module.exports = {
+const withTranslateRoutes = require("next-translate-routes/plugin");
+
+module.exports = withTranslateRoutes({
+  // Next i18n config (mandatory): https://nextjs.org/docs/advanced-features/i18n-routing
   i18n: {
-    defaultLocale: "hr",
     locales: ["en", "hr"],
-    localeDetection: false,
+    defaultLocale: "hr",
   },
   images: {
     // limit of 25 deviceSizes values
@@ -32,4 +34,4 @@ module.exports = {
 
     return config;
   },
-};
+});

@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import Link from "next/link";
 
 export const WrapAll = styled.div`
   position: relative;
   z-index: 10;
   font-size: ${(props) => (props.isFeatured ? "30px" : "16px")};
   width: ${(props) => (props.isFeatured ? "300px" : "30%")};
-  height: ${(props) => (props.isFeatured ? "197px" : "416px")};
+  height: ${(props) => (props.isFeatured ? "197px" : "auto")};
   color: black;
   display: flex;
   justify-content: center;
@@ -112,7 +113,7 @@ export const Datum = styled.p`
   @media only screen and (max-width: 600px) {
   }
 `;
-export const ViseInfo = styled.a`
+export const ViseInfo = styled.div`
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 600;
@@ -121,7 +122,7 @@ export const ViseInfo = styled.a`
   /* identical to box height, or 26px */
 
   /* SUNRISE/Coral */
-  width: 150px;
+  width: 160px;
   color: #4299c8;
   display: flex;
   align-items: center;
@@ -130,12 +131,39 @@ export const ViseInfo = styled.a`
   cursor: pointer;
   a {
     color: #4299c8;
-    width: 100%;
+    width: 85%;
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+  @media only screen and (max-width: 600px) {
+  }
+`;
+export const LinkInfo = styled(Link)`
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 185%;
+  /* identical to box height, or 26px */
+
+  /* SUNRISE/Coral */
+  width: 120px;
+  color: #4299c8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  cursor: pointer;
+  /* a {
+    color: #4299c8;
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  } */
   @media only screen and (max-width: 600px) {
   }
 `;

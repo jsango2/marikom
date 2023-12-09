@@ -1,13 +1,14 @@
 import Meta from "../components/meta";
+import FooterSection from "./FooterSection";
 import Header from "./header";
 
-export default function Layout({ preview, children }) {
+export default function Layout({ preview, children, novostiNaslovi }) {
   return (
     <>
-      <Header />
+      <Header novostiNaslovi={novostiNaslovi} />
       <Meta />
       <main>{children}</main>
-      {/* <Footer /> */}
+      <FooterSection />
     </>
   );
 }

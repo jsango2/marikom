@@ -1,31 +1,26 @@
 import React from "react";
-import FooterSection from "../../components/FooterSection";
-import KontaktSection from "../../components/KontaktSection";
-import Layout from "../../components/layout";
-import Brojke from "../../components/nasaPricaPage/brojke/brojke";
-import Hero from "../../components/nasaPricaPage/hero/hero";
-import Onama from "../../components/nasaPricaPage/oNama/oNama";
-import Povijest from "../../components/nasaPricaPage/povijest/povijest";
-import Skladiste from "../../components/nasaPricaPage/skladiste/skladiste";
-import Vrijednosti from "../../components/nasaPricaPage/vrijednost/vrijednosti";
-import Zajednica from "../../components/nasaPricaPage/zajednica/zajednica";
-import NovostiSection from "../../components/NovostiSection";
 
-function index() {
+import Layout from "../../components/layout";
+
+import { catalogData } from "../../catalogData";
+import ProizvodiPage from "../../components/ProizvodiPage";
+import { getAllPhotosProizvodi } from "../../lib/api2.js";
+import Hero from "../../components/ProizvodiPage/Hero/hero.js";
+
+function index(props) {
   return (
     <Layout>
       <Hero />
-      <Onama />
-      <Povijest />
-      <Vrijednosti />
-      <Skladiste />
-      <Brojke />
-      <Zajednica />
-      <NovostiSection background={true} />
-      <KontaktSection />
-      <FooterSection />
+      <ProizvodiPage allPhotosProizvodi={props.allPhotosProizvodi} />
     </Layout>
   );
 }
 
 export default index;
+export async function getStaticProps({ preview = false }) {
+  const allPhotosProizvodi = await getAllPhotosProizvodi();
+
+  return {
+    props: { allPhotosProizvodi },
+  };
+}

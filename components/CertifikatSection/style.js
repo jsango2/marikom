@@ -40,6 +40,8 @@ export const WrapPhoto = styled.div`
   display: flex;
   flex-direction: column;
   padding: 36px 56px 0 56px;
+  border-radius: 6px;
+  overflow: hidden;
   &.inView {
     top: 0px;
     opacity: 1;

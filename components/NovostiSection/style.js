@@ -11,7 +11,7 @@ export const WrapAll = styled.div`
   justify-content: center;
   align-items: center;
   /* overflow: hidden; */
-  padding: 130px;
+  padding: 130px 0;
   z-index: ${(props) => (props.zIndex === "Peru" ? `2` : `0`)};
   @media only screen and (max-width: 820px) {
     padding: 70px 10px;
@@ -25,7 +25,7 @@ export const Container = styled.div`
   height: auto;
   display: flex;
   justify-content: space-between;
-
+  margin: 0 auto;
   /* overflow: hidden; */
   @media only screen and (max-width: 1250px) {
     flex-direction: column;
@@ -73,9 +73,10 @@ export const SubTitle = styled.h3`
   @media only screen and (max-width: 600px) {
   }
 `;
-export const WrapTitleSubTitle = styled.div`
+export const WrapTitleSubTitle = styled.a`
   display: flex;
   flex-direction: column;
+  text-decoration: none;
   @media only screen and (max-width: 1250px) {
     align-items: center;
     flex-direction: unset;
@@ -83,5 +84,114 @@ export const WrapTitleSubTitle = styled.div`
   }
   @media only screen and (max-width: 850px) {
     margin-left: 15px;
+  }
+`;
+
+export const FeaturedImage = styled.div`
+  position: relative;
+  z-index: 10;
+  width: 70%;
+  height: 370px;
+  /* align-items: center; */
+  /* overflow: hidden; */
+  margin: 42px auto;
+  @media only screen and (max-width: 820px) {
+  }
+`;
+export const TextSection = styled.div`
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  min-height: 200px;
+  height: auto;
+  /* align-items: center; */
+  /* overflow: hidden; */
+  background: linear-gradient(
+    180deg,
+    rgba(199, 199, 199, 0.1) 0%,
+    rgba(242, 242, 242, 0) 100%
+  );
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 0 75px 0;
+  @media only screen and (max-width: 820px) {
+  }
+`;
+export const WrapContent = styled.div`
+  position: relative;
+  z-index: 10;
+  width: 70%;
+
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 34px;
+  @media only screen and (max-width: 820px) {
+  }
+`;
+
+export const TitleBlock = styled.div`
+  position: relative;
+  z-index: 10;
+  width: 35%;
+  height: auto;
+  min-height: 100px;
+  left: 20px;
+  /* align-items: center; */
+  /* overflow: hidden; */
+
+  @media only screen and (max-width: 820px) {
+  }
+`;
+export const Content = styled.div`
+  position: relative;
+  z-index: 10;
+  width: 60%;
+  height: auto;
+  min-height: 100px;
+
+  color: var(--color-sunrise-text-grey, #605866);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Gilroy;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142.5%; /* 25.65px */
+  & img {
+    margin: 0 auto;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+  & p {
+    margin: 1.5rem 0;
+  }
+  @media only screen and (max-width: 820px) {
+  }
+`;
+export const Datum = styled.div`
+  position: relative;
+  font-family: Gilroy;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 16.8px */
+  text-transform: uppercase;
+  color: var(--color-siva);
+  @media only screen and (max-width: 820px) {
+  }
+`;
+export const Naslov = styled.div`
+  position: relative;
+  color: var(--color-boja-marikomerc-plava);
+  /* H3 */
+  font-family: Roboto;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 36px */
+  text-transform: uppercase;
+  @media only screen and (max-width: 820px) {
   }
 `;

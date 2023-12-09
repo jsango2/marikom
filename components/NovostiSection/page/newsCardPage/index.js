@@ -8,28 +8,51 @@ import {
   BlueLine,
   Photo,
   DataContainer,
+  LinkInfo,
 } from "./style.js";
 import ArrowRight from "../../../../svg/arrowRight.svg";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Image from "next/image.js";
+import slugify from "slugify";
+import en from "../../../../locales/en.json";
+import hr from "../../../../locales/hr.json";
 
-function NewsCard({ datum, naslov, text, link, isFeatured }) {
+function NewsCard({ datum, naslov, text, link, isFeatured, photo }) {
   const { locale, locales, defaultLocale, asPath } = useRouter();
-  console.log(isFeatured);
-  console.log(`/novosti/${naslov.toLowerCase().split(" ").join("-")}`);
+  const t = locale === "en" ? en : hr;
   return (
     <WrapAll isFeatured={isFeatured}>
-      {!isFeatured && <Photo></Photo>}
+      {!isFeatured && (
+        <Photo>
+          <Image src={photo} layout="fill" objectFit="cover"></Image>
+        </Photo>
+      )}
       <DataContainer>
         <BlueLine isFeatured={isFeatured} />
         <Datum>{datum}</Datum>
         <Title isFeatured={isFeatured}>{naslov}</Title>
-        <Text>{text}</Text>
-
-        <ViseInfo
-          href={`/novosti/${naslov.toLowerCase().split(" ").join("-")}`}
+        <Text
+          dangerouslySetInnerHTML={{
+            __html: [text.slice(0, 100) + "..."],
+          }}
+        />
+        {/* <ViseInfo
+          href={
+            locale === "hr" ? `novosti/${slugify(link)}` : `novosti/${link}`
+          }
         >
-          Vise informacija <ArrowRight />
+          {t.MoreInfo.MoreInfo} <ArrowRight />
+        </ViseInfo> */}
+        <ViseInfo>
+          <LinkInfo
+            href={
+              locale === "hr" ? `/novosti/${slugify(link)}` : `/novosti/${link}`
+            }
+          >
+            {t.MoreInfo.MoreInfo}
+          </LinkInfo>
+          <ArrowRight />
         </ViseInfo>
       </DataContainer>
     </WrapAll>

@@ -6,20 +6,31 @@ import {
   Datum,
   ViseInfo,
   BlueLine,
+  LinkInfo,
 } from "./style.js";
 import ArrowRight from "../../../svg/arrowRight.svg";
 import Link from "next/link";
+import { useRouter } from "next/router.js";
+import en from "../../../locales/en.json";
+import hr from "../../../locales/hr.json";
+import slugify from "slugify";
 
-function NewsCard({ datum, naslov, text, link }) {
+function NewsCard({ datum, naslov, naslovEng, text, link }) {
+  const { locale, locales, defaultLocale, asPath } = useRouter();
+  const t = locale === "en" ? en : hr;
   return (
     <WrapAll>
       <BlueLine />
       <Datum>{datum}</Datum>
       <Title>{naslov}</Title>
-      <Text>{text}</Text>
-
-      <ViseInfo href={link}>
-        Vise informacija <ArrowRight />
+      <Text
+        dangerouslySetInnerHTML={{
+          __html: [text.slice(0, 100) + "..."],
+        }}
+      ></Text>
+      <ViseInfo>
+        <LinkInfo href={`novosti/${link}`}>{t.MoreInfo.MoreInfo}</LinkInfo>
+        <ArrowRight />
       </ViseInfo>
     </WrapAll>
   );

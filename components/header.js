@@ -19,7 +19,7 @@ import MarikomercLogo from "../svg/MarikomercGrupaWhite.svg";
 import HeroLogo from "../assets/images/MClogo2023.svg";
 import { useOnClickOutside } from "./helper/useClickOutside";
 
-const Header = ({ siteTitle }) => {
+const Header = ({ siteTitle, novostiNaslovi }) => {
   const ref = useRef();
   // State for our modal
 
@@ -44,7 +44,7 @@ const Header = ({ siteTitle }) => {
   // >
   return (
     <>
-      <Script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js" />
+      {/* <Script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js" /> */}
 
       <header>
         <MeniMobile isOpen={isOpen} setIsOpen={setIsOpen} />
@@ -156,7 +156,7 @@ const Header = ({ siteTitle }) => {
                       marginRight: "5px",
                     }}
                   /> */}
-                  <LanguageSwitcher />
+                  <LanguageSwitcher novostiNaslovi={novostiNaslovi} />
                 </div>
                 {/* <Veza
                 activeClass="active"

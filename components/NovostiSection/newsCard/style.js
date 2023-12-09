@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled from "styled-components";
 
 export const WrapAll = styled.div`
@@ -7,7 +8,7 @@ export const WrapAll = styled.div`
   height: 197px;
   color: black;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   margin: 0 15px;
@@ -92,7 +93,7 @@ export const Datum = styled.p`
   @media only screen and (max-width: 600px) {
   }
 `;
-export const ViseInfo = styled.a`
+export const ViseInfo = styled.div`
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 600;
@@ -106,7 +107,43 @@ export const ViseInfo = styled.a`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 20px;
   cursor: pointer;
+  a {
+    color: #4299c8;
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @media only screen and (max-width: 600px) {
+  }
+`;
+export const LinkInfo = styled(Link)`
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 185%;
+  /* identical to box height, or 26px */
+
+  /* SUNRISE/Coral */
+  width: 150px;
+  color: #4299c8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  cursor: pointer;
+  /* a {
+    color: #4299c8;
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  } */
   @media only screen and (max-width: 600px) {
   }
 `;

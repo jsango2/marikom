@@ -4,9 +4,19 @@
     "description": "Iza nas je više od 30 godina rada u industriji prerade ribe za profesionalni HoReCa i retail segment na tržištu Republike Hrvatske, a naši ciljevi nas pozicioniraju i kao pouzdanog partnera na tržištu EU."
   },
   "Products": {
-    "title": "PROIZVODI"
+    "title": "PROIZVODI",
+    "KataloskiBr": "Kataloški broj",
+    "Pakiranje": "Pakiranje",
+    "NacinSmrzavanja": "Način smrzavanja"
   },
-  "PageLayout": {
-    "pageTitle": "next-intl"
+  "NewsSectionHomePage": {
+    "Archive": "Arhiva novosti",
+    "News": "Novosti"
+  },
+  "OtherNews": {
+    "OtherNews": "OSTALE NOVOSTI"
+  },
+  "MoreInfo": {
+    "MoreInfo": "Više informacija"
   }
 }

@@ -13,7 +13,6 @@ import {
   Overlay,
 } from "./style.js";
 import p1 from "../../assets/images/perla/dimaris.png";
-import Sticker from "../../svg/stickerdimaris.svg";
 import DiMarisLogo from "../../svg/dimarislogo.svg";
 
 import Image from "next/image";
