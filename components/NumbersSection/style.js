@@ -13,9 +13,13 @@ export const WrapAll = styled.div`
   align-items: center;
   overflow: hidden;
   /* top: -10px; */
+  @media only screen and (max-width: 1150px) {
+    height: auto;
+    padding-bottom: 60px;
+  }
   @media only screen and (max-width: 850px) {
     height: auto;
-    padding: 80px 0 160px 0;
+    padding: 80px 0 70px 0;
   }
 `;
 export const Up = styled.div`
@@ -25,6 +29,7 @@ export const Up = styled.div`
   height: 631px;
 
   @media only screen and (max-width: 850px) {
+    height: 70vw;
   }
 `;
 export const Down = styled.div`
@@ -37,6 +42,10 @@ export const Down = styled.div`
   justify-content: center;
   align-items: center;
   @media only screen and (max-width: 850px) {
+    padding: 50px 10px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 70px 10px;
   }
 `;
 
@@ -51,7 +60,8 @@ export const WrapContent = styled.div`
   align-items: center;
 
   /* overflow: hidden; */
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1150px) {
+    height: auto;
   }
   @media only screen and (max-width: 850px) {
   }
@@ -67,7 +77,8 @@ export const Left = styled.div`
   align-items: flex-start;
   flex-direction: column;
   /* overflow: hidden; */
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1150px) {
+    width: 90%;
   }
   @media only screen and (max-width: 850px) {
   }
@@ -100,9 +111,12 @@ export const Right = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  @media only screen and (max-width: 1000px) {
-    width: 500px;
+  @media only screen and (max-width: 1150px) {
+    width: 90%;
   }
+  /* @media only screen and (max-width: 1000px) {
+    width: 500px;
+  } */
 
   @media only screen and (max-width: 850px) {
     width: 90%;
@@ -142,7 +156,7 @@ export const Title = styled.div`
   align-items: center;
   @media only screen and (max-width: 850px) {
     text-align: center;
-    font-size: 14px;
+    /* font-size: 14px; */
   }
 `;
 export const MainTitle = styled.h3`
@@ -158,8 +172,14 @@ export const MainTitle = styled.h3`
   line-height: 120%; /* 43.2px */
   margin-top: 20px;
   @media only screen and (max-width: 850px) {
+    width: 90%;
     text-align: center;
-    font-size: 14px;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 31.2px */
+  }
+  @media only screen and (max-width: 600px) {
   }
 `;
 export const TopText = styled.p`
@@ -174,14 +194,14 @@ export const TopText = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 142.5%; /* 25.65px */
+  margin-bottom: 20px;
   @media only screen and (max-width: 1000px) {
-    font-size: 32px;
+    /* font-size: 32px; */
   }
   @media only screen and (max-width: 850px) {
-    font-weight: 700;
-    font-size: 21px;
+    /* font-weight: 700; */
+    /* font-size: 21px; */
     line-height: 120%;
-    font-size: 21px;
 
     text-align: center;
   }
@@ -193,6 +213,7 @@ export const Numbers = styled.div`
   justify-content: space-around;
   z-index: 11;
   width: 100%;
+  max-width: 1440px;
   /* identical to box height, or 77px */
 
   /* SUNRISE/Sunray */
@@ -200,15 +221,16 @@ export const Numbers = styled.div`
   color: #f5faff;
   /* overflow: hidden; */
   margin-top: 80px;
-  @media only screen and (max-width: 1000px) {
-    width: 70px;
-
-    font-size: 44px;
+  @media only screen and (max-width: 1150px) {
+    width: 500px;
+    flex-direction: column;
   }
-  @media only screen and (max-width: 850px) {
-    width: 45px;
+  @media only screen and (max-width: 600px) {
+    width: 90%;
 
-    font-size: 34px;
+    /* width: 45px;
+
+    font-size: 34px; */
   }
 `;
 export const Number = styled.div`
@@ -221,9 +243,11 @@ export const Number = styled.div`
   font-weight: 700;
   line-height: 120%; /* 66px */
   margin-right: 50px;
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1150px) {
+    font-size: 36px;
   }
-  @media only screen and (max-width: 850px) {
+  @media only screen and (max-width: 600px) {
+    width: 220px;
   }
 `;
 export const WrapNumberText = styled.div`
@@ -271,7 +295,8 @@ export const Fact = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 142.5%; /* 25.65px */
-  @media only screen and (max-width: 850px) {
+  @media only screen and (max-width: 600px) {
+    font-size: 16px;
   }
   @media only screen and (max-width: 600px) {
   }
@@ -286,6 +311,7 @@ export const Line = styled.div`
 
   /* overflow: hidden; */
   @media only screen and (max-width: 600px) {
+    width: 90%;
   }
 `;
 export const ThinLine = styled.div`
@@ -294,6 +320,9 @@ export const ThinLine = styled.div`
   width: 595px;
   height: 1px;
   background: #f5faff;
+  @media only screen and (max-width: 1150px) {
+    display: none;
+  }
   @media only screen and (max-width: 600px) {
   }
 `;

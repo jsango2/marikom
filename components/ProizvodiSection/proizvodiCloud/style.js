@@ -15,6 +15,6 @@ export const WrapAll = styled.div`
   flex-wrap: wrap;
   /* overflow: hidden; */
   @media only screen and (max-width: 650px) {
-    margin-bottom: 60px;
+    margin-bottom: 0px;
   }
 `;

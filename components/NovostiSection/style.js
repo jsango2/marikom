@@ -30,6 +30,9 @@ export const Container = styled.div`
   @media only screen and (max-width: 1250px) {
     flex-direction: column;
   }
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
 `;
 export const WrapCards = styled.div`
   position: relative;
@@ -41,6 +44,9 @@ export const WrapCards = styled.div`
   /* overflow: hidden; */
   @media only screen and (max-width: 820px) {
     flex-direction: column;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 90%;
   }
 `;
 
@@ -55,6 +61,7 @@ export const Title = styled.h1`
   color: #1e1e1e;
   margin: 0 0 10px 0;
   @media only screen and (max-width: 600px) {
+    font-size: 30px;
   }
 `;
 
@@ -71,6 +78,7 @@ export const SubTitle = styled.h3`
   color: #e0e0e0;
   margin-left: 8px;
   @media only screen and (max-width: 600px) {
+    font-size: 18px;
   }
 `;
 export const WrapTitleSubTitle = styled.a`

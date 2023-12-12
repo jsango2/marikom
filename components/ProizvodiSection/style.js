@@ -50,8 +50,28 @@ export const WrapCerts = styled.div`
   height: 68px;
   margin-top: 70px;
   margin-bottom: 40px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  /* img {
+    margin: 0 20px !important;
+  } */
   /* overflow: hidden; */
+  @media only screen and (max-width: 900px) {
+    width: 90%;
+  }
   @media only screen and (max-width: 600px) {
+    margin-top: 30px;
+    margin-bottom: 0px;
+    justify-content: space-between;
+  }
+`;
+export const WrapImage = styled.div`
+  position: relative;
+  z-index: 10;
+  margin: 0 10px;
+  @media only screen and (max-width: 600px) {
+    margin: 0 5px;
   }
 `;
 

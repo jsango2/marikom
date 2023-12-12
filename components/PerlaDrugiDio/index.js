@@ -36,45 +36,18 @@ import PerlaBg from "../../assets/images/PerlaBg.svg";
 import Image from "next/image";
 import useWindowSize from "../helper/usewindowsize";
 import { useScrollPercentage } from "react-scroll-percentage";
-
-const proizvod = [
-  "Škampi",
-  "Tuna",
-  "Temeljac",
-  "Bakalar",
-  "Sipa",
-  "Lignja",
-  "Plodovi mora",
-];
-const jelo = [
-  "Brzi ručak",
-  "Zdrava večera",
-  "Za sportaše",
-  "Rižoto",
-  "Tjestenina",
-  "Grill tava",
-  "Pećnica",
-];
-const meals = [
-  {
-    photo: meal4,
-    text: "Odrezak tune na žaru s mahunama i krumpirom i nečim još",
-  },
-  {
-    photo: meal4,
-    text: "Odrezak tune na žaru s mahunama i krumpirom i nečim još",
-  },
-  {
-    photo: meal4,
-    text: "Odrezak tune na žaru s mahunama i krumpirom i nečim još",
-  },
-  {
-    photo: meal4,
-    text: "Odrezak tune na žaru s mahunama i krumpirom i nečim još",
-  },
-];
+import { catalogData } from "../../catalogData.js";
+import { useEffect, useState } from "react";
 
 function PerlaDrugiDio() {
+  const [perlaData, setPerlaData] = useState([]);
+  useEffect(() => {
+    setPerlaData(
+      catalogData.filter((data) => data["Perla HORECA (DA/NE)"] === "DA")
+    );
+  }, []);
+
+  console.log(perlaData.slice(0, 4));
   const size = useWindowSize();
   const [ref, percentage] = useScrollPercentage({
     /* Optional options */
@@ -106,7 +79,29 @@ function PerlaDrugiDio() {
         kojom je priprema maštovitih jela jednostavna i zabavna.
       </Text>
       <Proizvodi>
-        <WrapProizvod>
+        {perlaData.slice(0, 4).map((data) => (
+          <WrapProizvod key={data["Kataloški broj:"]}>
+            <Proizvod>
+              <Overlay />
+              <WrapProizvodImage>
+                <Image
+                  src={p1}
+                  // width={157}
+                  // height={244}
+                  // layout="fill"
+                  alt="p1"
+                  objectFit="cover"
+                />
+              </WrapProizvodImage>
+            </Proizvod>
+            <ProizvodName>
+              {data["IME PROIZVODA - do 60 znakova:"]}
+            </ProizvodName>
+            <ProizvodWeight>500G</ProizvodWeight>
+          </WrapProizvod>
+        ))}
+
+        {/* <WrapProizvod>
           <Proizvod>
             <Overlay />
             <WrapProizvodImage>
@@ -170,7 +165,7 @@ function PerlaDrugiDio() {
           </Proizvod>
           <ProizvodName>Hobotnica (Argentina)</ProizvodName>
           <ProizvodWeight>500G</ProizvodWeight>
-        </WrapProizvod>
+        </WrapProizvod> */}
       </Proizvodi>
       <Button>SVI PROIZVODI</Button>
       <Karamarko ref={ref}>

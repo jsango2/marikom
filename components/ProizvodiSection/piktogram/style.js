@@ -6,7 +6,7 @@ export const WrapAll = styled.div`
   left: 0;
   z-index: 11;
   width: 100%;
-  height: 128px;
+  height: 68px;
 
   /* overflow: hidden; */
   @media only screen and (max-width: 600px) {

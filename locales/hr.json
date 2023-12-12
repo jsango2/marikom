@@ -5,6 +5,7 @@
   },
   "Products": {
     "title": "PROIZVODI",
+    "subTitle": "Nudimo širok izbor smrznutih, svježih, dimljenih, sušenih, mariniranih i usoljenih morskih proizvoda. Također, u ponudi imamo McCain program, smrznuto povrće, tjesteninu, meso i veganske supstitute za meso.",
     "KataloskiBr": "Kataloški broj",
     "Pakiranje": "Pakiranje",
     "NacinSmrzavanja": "Način smrzavanja"
@@ -18,5 +19,29 @@
   },
   "MoreInfo": {
     "MoreInfo": "Više informacija"
+  },
+  "Numbers": {
+    "title": "MARIKOMERC GRUPA U BROJKAMA",
+    "subTitle": " Rast u količinama, prihodima, kapacitetima i količini isporuka obilježava našu Marikomerc grupu.",
+    "customerNumber": "Broj kupaca u prošloj godini",
+    "capacityNumber": "Kapacitet prijema kamiona u jednom danu",
+    "averageYear": "Prosječna godišnja količina prodaje",
+    "capacity4": "Ukupni kapacitet u n° paleta +4°C",
+    "capacity25": "Ukupni kapacitet u n° paleta -25°C",
+    "volume": "Prosječni godišnji volumen prerađenih vlastitih proizvoda"
+  },
+  "Map": {
+    "topTitle": "Prijeklo ribe",
+    "title": "Odakle dolazi naša riba",
+    "text": " Smrznutu ribu i plodove mora uvozimo iz svih dijelova svijeta. U odabiru proizvoda uvijek smo se povodili za kvalitetom. Kvalitetni morski proizvodi su naša filozofija, naš brend i naša obveza prema vama.<br /><br /> Vodeći se našom filozofijom, ostvarili smo jake veze s našim partnerima te se na tržištu pozicionirali kao stabilna tvrtka s kvalitetnim proizvodima u koje možete imati potpuno povjerenje. Sve to činimo kako bi naši proizvodi sačuvali sve vrijednosti i karakteristike svježe ulovljene ribe."
+  },
+  "Certifikat": {
+    "topTitle": "POSVEĆENI SMO ODRŽIVOSTI, A SVOJE PROCESE CERTIFICIRAMO",
+    "title1": "ODRŽIVOST KAO TEMELJ POSLOVANJA",
+    "text1": "Marikomerc grupa ima važnu ulogu u zaštiti okoliša i očuvanju resursa. Trudimo se ostaviti našoj djeci i budućim generacijama održiv svijet bez kompromisa. Ekološki smo osviješteni, te nam je zaštita oceana i očuvanje ribljeg fonda prioritet.",
+    "title2": "CERTIFICIRANA KVALITETA I SIGURNOST HRANE",
+    "text2": "Brojni zasluženi certifikati za sigurnost hrane, upravljanje kvalitetom i nutritivno bogate namirnice dokaz su naše kvalitete, a vaše sigurnosti i povjerenja u nas i naše proizvode.",
+    "title3": "ZADOVOLJSTVO NAŠIH KUPACA",
+    "text3": "Kupci su naša vrijednost, te je njihovo zadovoljstvo putokaz ka uspješnom poslovanju u budućnosti. Svake godine vršimo analizu zadovoljstva naših kupaca, te istim podižemo poslovne i proizvodne procese na najviši nivo."
   }
 }

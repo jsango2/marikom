@@ -10,7 +10,7 @@ import { WrapAll } from "./style.js";
 
 import LanguageSwitcher from "../language switcher/index.js";
 
-const MeniMobile = ({ isOpen, setIsOpen, closeMenu }) => {
+const MeniMobile = ({ isOpen, setIsOpen, closeMenu, novostiNaslovi }) => {
   // const history = useHistory()
   // const goToHome = () => {
   //   // console.log("klikni")
@@ -53,7 +53,11 @@ const MeniMobile = ({ isOpen, setIsOpen, closeMenu }) => {
         <Link className="mobileLinks" href="http://www.zadarnight.run">
           Grupa
         </Link>
-        <LanguageSwitcher closeMenu={closeMenu} />
+
+        <LanguageSwitcher
+          closeMenu={closeMenu}
+          novostiNaslovi={novostiNaslovi}
+        />
         <div className="mobileLinks">
           {/* <Link
             to="/"

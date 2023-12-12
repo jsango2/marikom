@@ -28,6 +28,7 @@ export const Proizvodi = styled.div`
   margin: 83px auto 0 auto;
   display: flex;
   justify-content: space-between;
+  color: white;
   @media only screen and (max-width: 1300px) {
     width: 95%;
   }

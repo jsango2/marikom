@@ -12,7 +12,7 @@ export const WrapAll = styled.div`
   margin-top: 40px;
   /* overflow: hidden; */
   height: 32px;
-  min-width: 80px;
+  width: auto;
   /* SUNRISE/Sunray */
 
   background: #f5faff;

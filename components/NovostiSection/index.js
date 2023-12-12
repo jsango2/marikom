@@ -16,7 +16,7 @@ import slugify from "slugify";
 function NovostiSection({ background, novosti }) {
   const router = useRouter();
   const { locale } = router;
-  console.log(novosti);
+  // console.log(novosti);
   const t = locale === "en" ? en : hr;
   return (
     <WrapAll background={background}>

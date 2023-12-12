@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const WrapAll = styled.div`
   position: relative;
   z-index: 10;
-  width: 291px;
+  width: 251px;
   height: 370px;
   padding-top: 60px;
   padding-left: 39px;
@@ -24,7 +24,7 @@ export const WrapAll = styled.div`
     rgba(22, 29, 50, 0.04) 0%,
     rgba(26, 35, 59, 0) 99.48%`}
   );
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1300px) {
   }
 `;
 
@@ -50,9 +50,10 @@ export const Title = styled.h2`
   font-weight: 700;
   line-height: 120%;
   margin-bottom: 15px;
+  text-transform: uppercase;
   @media only screen and (max-width: 1000px) {
-    font-size: 34px;
-    text-transform: none;
+    /* font-size: 34px;
+    text-transform: none; */
   }
 `;
 export const Text = styled.p`

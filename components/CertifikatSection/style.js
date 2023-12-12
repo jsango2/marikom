@@ -23,7 +23,7 @@ export const WrapAll = styled.div`
 export const WrapPhotos = styled.div`
   position: relative;
   z-index: 10;
-  width: 1144px;
+  width: 1350px;
   height: 448px;
   display: flex;
   justify-content: space-between;
@@ -39,7 +39,7 @@ export const WrapPhoto = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 36px 56px 0 56px;
+  padding: 45px 36px 0 37px;
   border-radius: 6px;
   overflow: hidden;
   &.inView {
@@ -71,12 +71,13 @@ export const WrapCerts = styled.div`
   position: relative;
   float: left;
   z-index: 10;
-  width: 100%;
+  /* width: 100%; */
+  max-width: 75%;
   height: 45px;
   display: flex;
-  justify-content: space-between;
-  margin-top: auto;
-  margin-bottom: 34px;
+  justify-content: flex-start;
+
+  margin: auto auto 34px auto;
   @media only screen and (max-width: 600px) {
   }
 `;
@@ -85,7 +86,7 @@ export const WrapCert = styled.div`
   z-index: 10;
   width: 132px;
   height: 52px;
-
+  margin: 0 10px;
   @media only screen and (max-width: 1000px) {
     width: 100px;
     height: 40px;
@@ -136,6 +137,7 @@ export const Title = styled.h1`
   width: 799px;
   color: #f5faff;
   margin-bottom: 60px;
+  text-transform: uppercase;
   @media only screen and (max-width: 850px) {
     width: 90%;
     max-width: 600px;

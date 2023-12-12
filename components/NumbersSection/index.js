@@ -24,8 +24,16 @@ import {
 } from "./style.js";
 import bg from "../../assets/images/bgNumbers.png";
 import viljuskar from "../../assets/images/viljuskar.png";
+import { useRouter } from "next/router.js";
+import en from "../../locales/en.json";
+import hr from "../../locales/hr.json";
 
 function NumbersSection() {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : hr;
+  <Title>{t.Products.title}</Title>;
+
   return (
     <WrapAll>
       <Up>
@@ -35,33 +43,30 @@ function NumbersSection() {
       <Down>
         <WrapContent>
           <Title>
-            <TopText>MARIKOMERC GRUPA U BROJKAMA</TopText>
+            <TopText>{t.Numbers.title}</TopText>
             <Line />
-            <MainTitle>
-              Rast u količinama, prihodima, kapacitetima i količini isporuka
-              obilježava našu Marikomerc grupu.
-            </MainTitle>
+            <MainTitle>{t.Numbers.subTitle}</MainTitle>
           </Title>
           <Numbers>
             <Left>
               <SingleFact>
                 <WrapNumberText>
                   <Number>+10.000</Number>
-                  <Fact>Broj kupaca u prošloj godini</Fact>
+                  <Fact>{t.Numbers.customerNumber}</Fact>
                 </WrapNumberText>
                 <ThinLine />
               </SingleFact>
               <SingleFact>
                 <WrapNumberText>
                   <Number>60</Number>
-                  <Fact>Kapacitet prijema kamiona u jednom danu</Fact>
+                  <Fact>{t.Numbers.capacityNumber}</Fact>
                 </WrapNumberText>
                 <ThinLine />
               </SingleFact>{" "}
               <SingleFact>
                 <WrapNumberText>
                   <Number>+5.000 t</Number>
-                  <Fact>Prosječna godišnja količina prodaje</Fact>
+                  <Fact>{t.Numbers.averageYear}</Fact>
                 </WrapNumberText>
                 {/* <ThinLine /> */}
               </SingleFact>
@@ -70,23 +75,21 @@ function NumbersSection() {
               <SingleFact>
                 <WrapNumberText>
                   <Number>+500</Number>
-                  <Fact>Ukupni kapacitet u n° paleta +4°C</Fact>
+                  <Fact>{t.Numbers.capacity4}</Fact>
                 </WrapNumberText>
                 <ThinLine />
               </SingleFact>
               <SingleFact>
                 <WrapNumberText>
                   <Number>+4.500</Number>
-                  <Fact>Ukupni kapacitet u n° paleta -25°C</Fact>
+                  <Fact>{t.Numbers.capacity25}</Fact>
                 </WrapNumberText>
                 <ThinLine />
               </SingleFact>{" "}
               <SingleFact>
                 <WrapNumberText>
                   <Number>+1.500 t</Number>
-                  <Fact>
-                    Prosječni godišnji volumen prerađenih vlastitih proizvoda
-                  </Fact>
+                  <Fact>{t.Numbers.volume}</Fact>
                 </WrapNumberText>
                 {/* <ThinLine /> */}
               </SingleFact>

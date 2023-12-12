@@ -16,28 +16,30 @@ import p2 from "../../assets/images/certifikat/p2.png";
 import p3 from "../../assets/images/certifikat/p3.png";
 import ArrowRight from "../../svg/arrowRightWhite.svg";
 import { useInView } from "react-intersection-observer";
+import { useRouter } from "next/router";
+import en from "../../locales/en.json";
+import hr from "../../locales/hr.json";
 
 import Image from "next/image";
 function CertifikatSection() {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : hr;
   const { ref, inView, entry } = useInView({
     /* Optional options */
     threshold: 0,
   });
+
   return (
     <WrapAll>
-      <Title>POSVEĆENI SMO ODRŽIVOSTI, A SVOJE PROCESE CERTIFICIRAMO</Title>
+      <Title>{t.Certifikat.topTitle}</Title>
       <WrapPhotos ref={ref}>
         <WrapPhoto className={` ${inView ? "inView" : "outView"}`}>
           {" "}
           <Overlay />
           <Image src={p1} alt="Picture 1" layout="fill" objectFit="cover" />
-          <PhotoTitle>ODRŽIVOST KAO TEMELJ POSLOVANJA</PhotoTitle>
-          <PhotoSubTitle>
-            Marikomerc grupa ima važnu ulogu u zaštiti okoliša i očuvanju
-            resursa. Trudimo se ostaviti našoj djeci i budućim generacijama
-            održiv svijet bez kompromisa. Ekološki smo osviješteni, te nam je
-            zaštita oceana i očuvanje ribljeg fonda prioritet.
-          </PhotoSubTitle>
+          <PhotoTitle>{t.Certifikat.title1}</PhotoTitle>
+          <PhotoSubTitle>{t.Certifikat.text1}</PhotoSubTitle>
           {/* <ViseInfo>
             Vise informacija <ArrowRight />
           </ViseInfo> */}
@@ -65,12 +67,8 @@ function CertifikatSection() {
         <WrapPhoto className={` ${inView ? "inView" : "outView"}`}>
           <Overlay />{" "}
           <Image src={p2} alt="Picture 2" layout="fill" objectFit="cover" />
-          <PhotoTitle>CERTIFICIRANA KVALITETA I SIGURNOST HRANE</PhotoTitle>
-          <PhotoSubTitle>
-            Brojni zasluženi certifikati za sigurnost hrane, upravljanje
-            kvalitetom i nutritivno bogate namirnice dokaz su naše kvalitete, a
-            vaše sigurnosti i povjerenja u nas i naše proizvode.
-          </PhotoSubTitle>
+          <PhotoTitle>{t.Certifikat.title2}</PhotoTitle>
+          <PhotoSubTitle>{t.Certifikat.text2}</PhotoSubTitle>
           {/* <ViseInfo>
             Vise informacija <ArrowRight />
           </ViseInfo> */}
@@ -108,13 +106,8 @@ function CertifikatSection() {
         <WrapPhoto className={` ${inView ? "inView" : "outView"}`}>
           <Overlay />{" "}
           <Image src={p3} alt="Picture 3" layout="fill" objectFit="cover" />
-          <PhotoTitle>ZADOVOLJSTVO NAŠIH KUPACA</PhotoTitle>
-          <PhotoSubTitle>
-            Kupci su naša vrijednost, te je njihovo zadovoljstvo putokaz ka
-            uspješnom poslovanju u budućnosti. Svake godine vršimo analizu
-            zadovoljstva naših kupaca, te istim podižemo poslovne i proizvodne
-            procese na najviši nivo.
-          </PhotoSubTitle>
+          <PhotoTitle>{t.Certifikat.title3}</PhotoTitle>
+          <PhotoSubTitle>{t.Certifikat.text3}</PhotoSubTitle>
           {/* <ViseInfo>
             Vise informacija <ArrowRight />
           </ViseInfo> */}

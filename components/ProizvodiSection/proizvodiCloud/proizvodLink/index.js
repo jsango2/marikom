@@ -5,7 +5,7 @@ function ProizvodLink({ text, link }) {
   return (
     <WrapAll>
       <Text>
-        <Link href={link}>{text}</Link>
+        <Link href="/proizvodi">{text}</Link>
       </Text>
     </WrapAll>
   );

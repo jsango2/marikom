@@ -16,7 +16,7 @@ import { useRouter } from "next/router";
 import LanguageSwitcher from "./language switcher";
 import MarikomercLogo from "../svg/MarikomercGrupaWhite.svg";
 // import HeroLogo from "../assets/images/herologo.png";
-import HeroLogo from "../assets/images/MClogo2023.svg";
+// import HeroLogo from "../assets/images/MClogo2023.svg";
 import { useOnClickOutside } from "./helper/useClickOutside";
 
 const Header = ({ siteTitle, novostiNaslovi }) => {
@@ -54,21 +54,13 @@ const Header = ({ siteTitle, novostiNaslovi }) => {
           isOpen={isOpen}
           setIsOpen={setIsOpen}
           closeMenu={handleCloseMenu}
+          novostiNaslovi={novostiNaslovi}
         />
         <div className="headerWrap">
           <div className="navBar">
             <Link href="/">
               <div className="navLink navTitle navLogo">
-                {/* <Image
-                  src={HeroLogo}
-                  alt="logo"
-                  width={100}
-                  height={31}
-                  objectFit="cover"
-                /> */}
-                <HeroLogo />
-
-                {/* <MarikomercLogo style={{ width: "70px" }} /> */}
+                <Image src="/MClogo2023.svg" layout="fill" />
               </div>
             </Link>
             <div>
@@ -163,7 +155,11 @@ const Header = ({ siteTitle, novostiNaslovi }) => {
                       marginRight: "5px",
                     }}
                   /> */}
-                  <LanguageSwitcher novostiNaslovi={novostiNaslovi} />
+
+                  <LanguageSwitcher
+                    novostiNaslovi={novostiNaslovi}
+                    closeMenu={handleCloseMenu}
+                  />
                 </div>
                 {/* <Veza
                 activeClass="active"

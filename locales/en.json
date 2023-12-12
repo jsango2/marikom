@@ -1,10 +1,11 @@
 {
   "Hero": {
-    "title": "Our mission: biti pouzdan, kvalitetan i inovativan partner koji jača konkurentnost i snagu svojih klijenata.",
-    "description": "We have više od 30 godina rada u industriji prerade ribe za profesionalni HoReCa i retail segment na tržištu Republike Hrvatske, a naši ciljevi nas pozicioniraju i kao pouzdanog partnera na tržištu EU."
+    "title": "Our mission: to be a reliable, high-quality, and innovative partner that enhances the competitiveness and strength of our clients.",
+    "description": "With over 30 years of experience in the fish processing industry for the professional HoReCa and retail segments in the Croatian market, our goals position us as a reliable partner in the EU market."
   },
   "Products": {
     "title": "PRODUCTS",
+    "subTitle": "We offer a wide range of frozen, fresh, smoked, dried, marinated, and salted seafood products. Additionally, we have the McCain program, frozen vegetables, pasta, meat, and vegan meat substitutes in our selection.",
     "KataloskiBr": "Catalog number",
     "Pakiranje": "Packaging",
     "NacinSmrzavanja": "Method of freezing"
@@ -18,5 +19,29 @@
   },
   "MoreInfo": {
     "MoreInfo": "More information"
+  },
+  "Numbers": {
+    "title": "MARIKOMERC GROUP IN NUMBERS",
+    "subTitle": "The growth in quantities, revenues, capacities, and the volume of deliveries characterizes our Marikomerc group.",
+    "customerNumber": "Last years customer number",
+    "capacityNumber": "The capacity to receive trucks in one day.",
+    "averageYear": "The average annual sales quantity.",
+    "capacity4": "The total capacity in the n° of pallets at +4°C.",
+    "capacity25": "The total capacity in the n° of pallets at -25°C.",
+    "volume": "The average annual volume of processed own products."
+  },
+  "Map": {
+    "topTitle": "Fish origin",
+    "title": "Where does our fish come from",
+    "text": "We import frozen fish and seafood from all parts of the world. In product selection, we have always been guided by quality. High-quality seafood is our philosophy, our brand, and our commitment to you.<br/><br/> Following our philosophy, we have established strong relationships with our partners and positioned ourselves in the market as a stable company with quality products that you can trust completely. We do all of this to ensure that our products retain all the values and characteristics of freshly caught fish."
+  },
+  "Certifikat": {
+    "topTitle": "We are dedicated to sustainability, and we certify our processes.",
+    "title1": "Sustainability as the Foundation of Business.",
+    "text1": "Marikomerc Group plays a crucial role in environmental protection and resource conservation. We strive to leave a sustainable world for our children and future generations without compromise. We are environmentally conscious, and the protection of oceans and preservation of fish stocks are our priorities.",
+    "title2": "Certified Quality and Food Safety.",
+    "text2": "Numerous well-deserved certifications for food safety, quality management, and nutritionally rich products are evidence of our quality and your safety and trust in us and our products.",
+    "title3": "Customer Satisfaction.",
+    "text3": "Customers are our value, and their satisfaction is a guide to successful business in the future. Every year, we conduct an analysis of customer satisfaction, and based on it, we elevate our business and production processes to the highest level."
   }
 }
