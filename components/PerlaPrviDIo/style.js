@@ -12,7 +12,8 @@ export const WrapAll = styled.div`
   flex-direction: column; */
   /* overflow: hidden; */
 
-  @media only screen and (max-width: 1500px) {
+  @media only screen and (max-width: 430px) {
+    padding-bottom: 100px;
   }
 `;
 export const WrapPhotos = styled.div`
@@ -425,7 +426,7 @@ export const WrapPhotos2 = styled.div`
   }
   @media only screen and (max-width: 850px) {
     top: -120px;
-    height: 110vw;
+    height: auto;
     min-width: unset;
     width: 90%;
     margin: 0 auto;

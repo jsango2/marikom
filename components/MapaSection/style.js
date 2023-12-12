@@ -54,10 +54,11 @@ export const WrapAll = styled.div`
   position: relative;
   z-index: 10;
   width: 100%;
-  height: 2200px;
+  height: auto;
   background: white;
   color: black;
   padding-top: 40px;
+  padding-bottom: 120px;
   top: -1px;
   /* display: flex;
   justify-content: center;
@@ -114,8 +115,8 @@ export const WrapTextContetnt = styled.div`
   position: relative;
   z-index: 10;
   width: 710px;
-  height: 368px;
-  margin: 30px auto 0 auto;
+  height: auto;
+  margin: 30px auto 45px auto;
   /* color: black;
   display: flex;
   justify-content: center;

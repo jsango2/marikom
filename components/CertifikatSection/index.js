@@ -35,14 +35,11 @@ function CertifikatSection() {
       <Title>{t.Certifikat.topTitle}</Title>
       <WrapPhotos ref={ref}>
         <WrapPhoto className={` ${inView ? "inView" : "outView"}`}>
-          {" "}
           <Overlay />
           <Image src={p1} alt="Picture 1" layout="fill" objectFit="cover" />
           <PhotoTitle>{t.Certifikat.title1}</PhotoTitle>
           <PhotoSubTitle>{t.Certifikat.text1}</PhotoSubTitle>
-          {/* <ViseInfo>
-            Vise informacija <ArrowRight />
-          </ViseInfo> */}
+
           <WrapCerts>
             <WrapCert>
               <Image
@@ -59,8 +56,6 @@ function CertifikatSection() {
                 layout="fill"
                 objectFit="cover"
               />
-
-              {/* <Cert2 /> */}
             </WrapCert2>
           </WrapCerts>
         </WrapPhoto>
@@ -102,7 +97,7 @@ function CertifikatSection() {
               {/* <Cert2 /> */}
             </WrapCert2>
           </WrapCerts>
-        </WrapPhoto>{" "}
+        </WrapPhoto>
         <WrapPhoto className={` ${inView ? "inView" : "outView"}`}>
           <Overlay />{" "}
           <Image src={p3} alt="Picture 3" layout="fill" objectFit="cover" />

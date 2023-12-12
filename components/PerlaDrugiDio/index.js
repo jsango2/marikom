@@ -38,6 +38,7 @@ import useWindowSize from "../helper/usewindowsize";
 import { useScrollPercentage } from "react-scroll-percentage";
 import { catalogData } from "../../catalogData.js";
 import { useEffect, useState } from "react";
+import { clearStorage } from "mapbox-gl";
 
 function PerlaDrugiDio() {
   const [perlaData, setPerlaData] = useState([]);
@@ -85,18 +86,16 @@ function PerlaDrugiDio() {
               <Overlay />
               <WrapProizvodImage>
                 <Image
-                  src={p1}
+                  src={`https://cms.marikomerc.hr/wp-content/uploads/2023/12/${data["Kataloški broj:"]}.png`}
                   // width={157}
                   // height={244}
-                  // layout="fill"
+                  layout="fill"
                   alt="p1"
-                  objectFit="cover"
+                  objectFit="contain"
                 />
               </WrapProizvodImage>
             </Proizvod>
-            <ProizvodName>
-              {data["IME PROIZVODA - do 60 znakova:"]}
-            </ProizvodName>
+            <ProizvodName>{data["IME PROIZVODA - do 60 znakova"]}</ProizvodName>
             <ProizvodWeight>500G</ProizvodWeight>
           </WrapProizvod>
         ))}

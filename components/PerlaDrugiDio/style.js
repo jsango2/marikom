@@ -24,10 +24,11 @@ export const Proizvodi = styled.div`
   position: relative;
   z-index: 10;
   width: 1305px;
-  height: 362px;
+  height: auto;
   margin: 83px auto 0 auto;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   color: white;
   @media only screen and (max-width: 1300px) {
     width: 95%;
@@ -65,7 +66,7 @@ export const WrapProizvodImage = styled.div`
   z-index: 11;
   width: 157px;
   height: 244px;
-
+  padding: 20px;
   @media only screen and (max-width: 1300px) {
     width: 116px;
     height: 182px;
@@ -114,7 +115,7 @@ export const Proizvod = styled.div`
   position: relative;
   z-index: 11;
   width: 273px;
-  height: 297px;
+  height: auto;
   /* background: linear-gradient(180deg, #a4d4ff 0%, rgba(255, 255, 255, 0) 100%); */
   /* opacity: 0.09; */
   /* SUNRISE/Sunray */

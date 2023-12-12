@@ -18,18 +18,52 @@ import {
 
 import Logo from "../../svg/perlalogo.svg";
 import Image from "next/image";
+import Lottie, { useLottie } from "lottie-react";
 
 import GreenMark from "../../svg/greenMark.svg";
 import Button from "../buttonBlue/Button.js";
 import useWindowSize from "../helper/usewindowsize";
 import rizotoBg from "../../assets/images/rizotoBg.png";
 import { useInView } from "react-intersection-observer";
-
 import { useRef } from "react";
+import animacija from "./perlaAnimacija.js";
+import madeBySutra from "./madeBySutra.js";
+
 function PerlaPrviDio() {
+  // const interactivity = {
+  //   mode: "scroll",
+  //   actions: [
+  //     {
+  //       visibility: [0.2, 1.0],
+  //       type: "play",
+  //       frames: [0, 24],
+  //     },
+  //     {
+  //       visibility: [0.2, 1.0],
+  //       type: "stop",
+  //       frames: [25],
+  //     },
+  //   ],
+  // };
+  const style = {
+    height: 120,
+  };
+  const PerlaLogoAnimacija = () => {
+    const options = {
+      animationData: animacija,
+      loop: false,
+      autoplay: true,
+      initialSegment: [0, 68],
+    };
+
+    const { View } = useLottie(options, style);
+
+    return View;
+  };
+
   const { ref, inView, entry } = useInView({
     /* Optional options */
-    threshold: 0,
+    threshold: 0.2,
     triggerOnce: true,
   });
   const ref2 = useRef();
@@ -52,10 +86,7 @@ function PerlaPrviDio() {
         </WrapPhotos2>
         <RightSide>
           <PerlaLogoWrap>
-            {/* <YellowArrow /> */}
-            <LogoWrap>
-              <Logo />
-            </LogoWrap>
+            <LogoWrap>{inView && <PerlaLogoAnimacija />}</LogoWrap>
           </PerlaLogoWrap>
           <TextWrap>
             <UpTitle>Prednosti poslovanja s nama za profesionalce</UpTitle>

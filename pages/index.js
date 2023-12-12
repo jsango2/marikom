@@ -35,8 +35,8 @@ export default function IndexPage({ allPosts }) {
       {/* <KatalogSection /> */}
       <NumbersSection />
       <MapaSection />
-      {size.width > 850 ? <CertifikatSection /> : <CertifikatMobileSection />}
-
+      {/* {size.width > 850 ? <CertifikatSection /> : <CertifikatMobileSection />} */}
+      <CertifikatSection />
       {/* <RastSection /> */}
       <PerlaPrviDio />
       <PerlaDrugiDio />

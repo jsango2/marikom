@@ -4,7 +4,7 @@ export const WrapAll = styled.div`
   position: relative;
   z-index: 10;
   width: 100%;
-  height: 864px;
+  height: auto;
   background: radial-gradient(
       79.54% 79.54% at 1.33% 0%,
       #253151 0%,
@@ -16,6 +16,7 @@ export const WrapAll = styled.div`
   align-items: center;
   flex-direction: column;
   /* overflow: hidden; */
+  padding: 70px 0 130px 0;
   @media only screen and (max-width: 600px) {
   }
 `;
@@ -24,19 +25,25 @@ export const WrapPhotos = styled.div`
   position: relative;
   z-index: 10;
   width: 1350px;
-  height: 448px;
+  height: auto;
   display: flex;
   justify-content: space-between;
   /* overflow: hidden; */
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1350px) {
     width: 97%;
+  }
+  @media only screen and (max-width: 1000px) {
+    width: 85vw;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
   }
 `;
 export const WrapPhoto = styled.div`
   position: relative;
   z-index: 10;
   width: 358px;
-  height: 100%;
+  height: 450px;
   display: flex;
   flex-direction: column;
   padding: 45px 36px 0 37px;
@@ -60,11 +67,28 @@ export const WrapPhoto = styled.div`
     top: 25px;
     opacity: 0;
   }
-
-  @media only screen and (max-width: 1000px) {
-    padding: 29px 56px 0 27px;
+  @media only screen and (max-width: 1350px) {
+    margin: 0 5px;
+  }
+  @media only screen and (max-width: 1100px) {
+    padding: 29px 56px 0 10px;
+    height: 500px;
 
     width: 275px;
+  }
+  @media only screen and (max-width: 1000px) {
+    padding-top: 55px;
+    padding-right: 40px;
+    margin-bottom: 30px;
+    width: 300px;
+    height: 430px;
+  }
+  @media only screen and (max-width: 430px) {
+    padding-top: 55px;
+    padding-right: 10px;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    width: 100%;
   }
 `;
 export const WrapCerts = styled.div`
@@ -78,7 +102,8 @@ export const WrapCerts = styled.div`
   justify-content: flex-start;
 
   margin: auto auto 34px auto;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1000px) {
+    max-width: 95%;
   }
 `;
 export const WrapCert = styled.div`
@@ -108,7 +133,7 @@ export const Overlay = styled.div`
   position: absolute;
   z-index: 10;
   width: 100%;
-  height: 344px;
+  height: 65%;
   top: 0;
   left: 0;
   background: linear-gradient(
@@ -119,7 +144,8 @@ export const Overlay = styled.div`
 
   backdrop-filter: blur(4.5px);
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1100px) {
+    height: 75%;
   }
 `;
 
