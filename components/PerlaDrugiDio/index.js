@@ -38,13 +38,20 @@ import useWindowSize from "../helper/usewindowsize";
 import { useScrollPercentage } from "react-scroll-percentage";
 import { catalogData } from "../../catalogData.js";
 import { useEffect, useState } from "react";
-import { clearStorage } from "mapbox-gl";
+import { useRouter } from "next/router.js";
+import en from "../../locales/en.json";
+import hr from "../../locales/hr.json";
 
 function PerlaDrugiDio() {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : hr;
   const [perlaData, setPerlaData] = useState([]);
   useEffect(() => {
     setPerlaData(
-      catalogData.filter((data) => data["Perla HORECA (DA/NE)"] === "DA")
+      catalogData.filter(
+        (data) => data["Kategorija kojoj proizvod pripada:"] === "PERLA"
+      )
     );
   }, []);
 
@@ -69,16 +76,8 @@ function PerlaDrugiDio() {
           />
         </WrapLogoPerla>
       </RedLine>
-      <Title>
-        S ponosom predstavljamo naš visokokvalitetni brend Perla biser mora
-      </Title>
-      <Text>
-        Vrhunski plodovi mora su našu strast i obaveza prema potrošačima. To je
-        ono što znamo raditi i radimo godinama. Izuzetno smo ponosni na
-        proizvode koje razvijamo za profesionalni segment, stoga nam je užitak
-        to podijeliti sa svima. Zato smo kreirali Perla liniju proizvoda, s
-        kojom je priprema maštovitih jela jednostavna i zabavna.
-      </Text>
+      <Title>{t.Perla2.title}</Title>
+      <Text>{t.Perla2.subTitle}</Text>
       <Proizvodi>
         {perlaData.slice(0, 4).map((data) => (
           <WrapProizvod key={data["Kataloški broj:"]}>
@@ -95,8 +94,12 @@ function PerlaDrugiDio() {
                 />
               </WrapProizvodImage>
             </Proizvod>
-            <ProizvodName>{data["IME PROIZVODA - do 60 znakova"]}</ProizvodName>
-            <ProizvodWeight>500G</ProizvodWeight>
+            <ProizvodName>
+              {locale === "hr"
+                ? data["IME PROIZVODA - do 60 znakova"]
+                : data["PRODUCT NAME - up to 60 characters"]}
+            </ProizvodName>
+            {/* <ProizvodWeight>500G</ProizvodWeight> */}
           </WrapProizvod>
         ))}
 
@@ -166,7 +169,7 @@ function PerlaDrugiDio() {
           <ProizvodWeight>500G</ProizvodWeight>
         </WrapProizvod> */}
       </Proizvodi>
-      <Button>SVI PROIZVODI</Button>
+      <Button>{t.Perla2.button}</Button>
       <Karamarko ref={ref}>
         <PozadinaPerla percentage={percentage}>
           <PerlaBg />
@@ -191,10 +194,7 @@ function PerlaDrugiDio() {
           </Potpis>
         </Left>
         <Right>
-          <Title2>
-            Ponosni smo na sve naše recepture, razvijene u suradnji s našim
-            chefom Tomislavom Karamarkom.
-          </Title2>
+          <Title2>{t.Perla2.karamarkoText}</Title2>
           <LogoHks>
             {" "}
             <Image

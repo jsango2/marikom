@@ -32,7 +32,6 @@ function NumbersSection() {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : hr;
-  <Title>{t.Products.title}</Title>;
 
   return (
     <WrapAll>

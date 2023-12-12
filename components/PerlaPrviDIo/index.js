@@ -27,9 +27,14 @@ import rizotoBg from "../../assets/images/rizotoBg.png";
 import { useInView } from "react-intersection-observer";
 import { useRef } from "react";
 import animacija from "./perlaAnimacija.js";
-import madeBySutra from "./madeBySutra.js";
+import { useRouter } from "next/router.js";
+import en from "../../locales/en.json";
+import hr from "../../locales/hr.json";
 
 function PerlaPrviDio() {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : hr;
   // const interactivity = {
   //   mode: "scroll",
   //   actions: [
@@ -89,31 +94,29 @@ function PerlaPrviDio() {
             <LogoWrap>{inView && <PerlaLogoAnimacija />}</LogoWrap>
           </PerlaLogoWrap>
           <TextWrap>
-            <UpTitle>Prednosti poslovanja s nama za profesionalce</UpTitle>
-            <Title>
-              Trebate li naše proizvode za vaš restoran, bar ili maloprodaju?
-            </Title>
-            <SubTitle>Kontaktirajte nas i iskoristite naše prednosti:</SubTitle>
+            <UpTitle>{t.Perla.topTitle}</UpTitle>
+            <Title>{t.Perla.title}</Title>
+            <SubTitle>{t.Perla.contactUs}</SubTitle>
             <ListWrap ref={ref}>
               <ListItem className={` ${inView ? "inView" : "outView"}`}>
                 <GreenMark style={{ marginRight: "10px" }} />
-                vrhunska kvaliteta proizvoda
+                {t.Perla.line1}
               </ListItem>
               <ListItem className={` ${inView ? "inView" : "outView"}`}>
                 <GreenMark style={{ marginRight: "10px" }} />
-                precizna obrada vaših zahtjeva
+                {t.Perla.line2}
               </ListItem>
               <ListItem className={` ${inView ? "inView" : "outView"}`}>
                 <GreenMark style={{ marginRight: "10px" }} />
-                brza logistika uz koju lako planirate svoje zalihe
+                {t.Perla.line3}
               </ListItem>
               <ListItem className={` ${inView ? "inView" : "outView"}`}>
                 <GreenMark style={{ marginRight: "10px" }} />
-                prilagodba proizvoda i pakrianja po vašim željama
+                {t.Perla.line4}
               </ListItem>
               <ListItem className={` ${inView ? "inView" : "outView"}`}>
                 <GreenMark style={{ marginRight: "10px" }} />
-                PERLA CHEF AKADEMIJA radionice za kuhare
+                {t.Perla.line5}
               </ListItem>
             </ListWrap>
             <WrapButton className={` ${inView ? "inView" : "outView"}`}>
@@ -121,7 +124,7 @@ function PerlaPrviDio() {
                 bgcolor="#4299C8"
                 color="#FFFFFF"
                 width="226px"
-                text="Zatražite sastanak"
+                text={t.Perla.button}
                 linkTo="/o-nama"
               />
             </WrapButton>

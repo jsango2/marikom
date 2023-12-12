@@ -57,6 +57,9 @@ export const WrapProizvod = styled.div`
   @media only screen and (max-width: 1200px) {
     width: 200px;
   }
+  @media only screen and (max-width: 850px) {
+    margin-bottom: 40px;
+  }
   @media only screen and (max-width: 450px) {
     width: 170px;
   }
@@ -138,6 +141,8 @@ export const ProizvodName = styled.p`
   font-weight: 500;
   font-size: 18px;
   line-height: 120%;
+  text-align: center;
+  width: 90%;
   /* identical to box height, or 22px */
 
   /* SUNRISE/Sunray */
@@ -343,10 +348,10 @@ export const WrapLinks = styled.div`
 export const Karamarko = styled.div`
   position: relative;
   z-index: 10;
-  width: auto;
+  width: 1440px;
   height: auto;
   display: flex;
-  overflow: hidden;
+  /* overflow: hidden; */
 
   justify-content: center;
   margin: 230px auto 0 auto;
@@ -385,7 +390,7 @@ export const PozadinaPerla = styled.div`
   height: 750px;
   bottom: ${(props) => props.percentage * 70 - 100}px;
 
-  left: -15px;
+  left: -195px;
   @media only screen and (max-width: 800px) {
   }
 `;

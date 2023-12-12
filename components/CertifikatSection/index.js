@@ -28,6 +28,7 @@ function CertifikatSection() {
   const { ref, inView, entry } = useInView({
     /* Optional options */
     threshold: 0,
+    triggerOnce: true,
   });
 
   return (
