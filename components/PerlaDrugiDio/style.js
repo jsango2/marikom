@@ -17,7 +17,7 @@ export const WrapAll = styled.div`
   flex-direction: column; */
   /* overflow: hidden; */
   @media only screen and (max-width: 768px) {
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
   }
 `;
 export const Proizvodi = styled.div`
@@ -356,7 +356,12 @@ export const Karamarko = styled.div`
   justify-content: center;
   margin: 230px auto 0 auto;
   @media only screen and (max-width: 800px) {
+    flex-direction: column-reverse;
     width: 100%;
+    margin-top: 50px;
+  }
+  @media only screen and (max-width: 800px) {
+    width: 82%;
   }
 `;
 export const Left = styled.div`
@@ -371,6 +376,16 @@ export const Left = styled.div`
     width: 100%;
   }
 `;
+export const ImageWrap = styled.div`
+  position: relative;
+  z-index: 10;
+  height: 440px;
+  width: 300px;
+  @media only screen and (max-width: 430px) {
+    height: 418px;
+    width: 300px;
+  }
+`;
 export const Potpis = styled.div`
   position: absolute;
   z-index: 11;
@@ -381,6 +396,11 @@ export const Potpis = styled.div`
   top: ${(props) => props.percentage * 50 + 100}px;
   @media only screen and (max-width: 800px) {
     width: 100%;
+    width: 220px;
+    height: 230px;
+  }
+  @media only screen and (max-width: 430px) {
+    left: -75px;
   }
 `;
 export const PozadinaPerla = styled.div`
@@ -388,10 +408,12 @@ export const PozadinaPerla = styled.div`
   z-index: 10;
   width: 860px;
   height: 750px;
-  bottom: ${(props) => props.percentage * 70 - 100}px;
+  bottom: ${(props) => props.percentage * 70}px;
 
   left: -195px;
   @media only screen and (max-width: 800px) {
+    width: 560px;
+    height: 550px;
   }
 `;
 export const RedLine2 = styled.div`
@@ -416,6 +438,7 @@ export const Right = styled.div`
   padding-top: 80px;
   @media only screen and (max-width: 800px) {
     width: 100%;
+    height: auto;
   }
 `;
 export const WrapTime = styled.div`
@@ -523,6 +546,10 @@ export const Title2 = styled.h1`
   @media only screen and (max-width: 850px) {
     font-size: 24px;
     text-transform: unset;
+    text-align: center;
+  }
+  @media only screen and (max-width: 430px) {
+    width: 99%;
   }
 `;
 

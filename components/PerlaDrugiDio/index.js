@@ -21,6 +21,7 @@ import {
   Right,
   Potpis,
   LogoHks,
+  ImageWrap,
 } from "./style.js";
 import p1 from "../../assets/images/perla/perla1.png";
 
@@ -102,93 +103,29 @@ function PerlaDrugiDio() {
             {/* <ProizvodWeight>500G</ProizvodWeight> */}
           </WrapProizvod>
         ))}
-
-        {/* <WrapProizvod>
-          <Proizvod>
-            <Overlay />
-            <WrapProizvodImage>
-              <Image
-                src={p1}
-                // width={157}
-                // height={244}
-                // layout="fill"
-                alt="p1"
-                objectFit="cover"
-              />
-            </WrapProizvodImage>
-          </Proizvod>
-          <ProizvodName>Hobotnica (Argentina)</ProizvodName>
-          <ProizvodWeight>500G</ProizvodWeight>
-        </WrapProizvod>
-        <WrapProizvod>
-          <Proizvod>
-            <Overlay />
-            <WrapProizvodImage>
-              <Image
-                src={p1}
-                // width={157}
-                // height={244}
-                alt="p1"
-                objectFit="cover"
-              />
-            </WrapProizvodImage>
-          </Proizvod>
-          <ProizvodName>Hobotnica (Argentina)</ProizvodName>
-          <ProizvodWeight>500G</ProizvodWeight>
-        </WrapProizvod>{" "}
-        <WrapProizvod>
-          <Proizvod>
-            <Overlay />
-            <WrapProizvodImage>
-              <Image
-                src={p1}
-                // width={157}
-                // height={244}
-                alt="p1"
-                objectFit="cover"
-              />
-            </WrapProizvodImage>
-          </Proizvod>
-          <ProizvodName>Hobotnica (Argentina)</ProizvodName>
-          <ProizvodWeight>500G</ProizvodWeight>
-        </WrapProizvod>{" "}
-        <WrapProizvod>
-          <Proizvod>
-            <Overlay />
-            <WrapProizvodImage>
-              <Image
-                src={p1}
-                // width={157}
-                // height={244}
-                alt="p1"
-                objectFit="cover"
-              />
-            </WrapProizvodImage>
-          </Proizvod>
-          <ProizvodName>Hobotnica (Argentina)</ProizvodName>
-          <ProizvodWeight>500G</ProizvodWeight>
-        </WrapProizvod> */}
       </Proizvodi>
       <Button>{t.Perla2.button}</Button>
       <Karamarko ref={ref}>
         <PozadinaPerla percentage={percentage}>
-          <PerlaBg />
+          <Image src="/PerlaBg.svg" layout="fill" />
         </PozadinaPerla>
         <Left>
           {" "}
-          <Image
-            src={KaramarkCut}
-            // width={157}
-            // height={244}
-            alt="p1"
-            objectFit="cover"
-          />
+          <ImageWrap>
+            <Image
+              src={KaramarkCut}
+              // width={157}
+              // height={244}
+              alt="p1"
+              objectFit="cover"
+            />
+          </ImageWrap>
           <Potpis percentage={percentage}>
             <Image
               src={PotpisKaramarko}
               // width={157}
               // height={244}
-              alt="p1"
+              alt="p2"
               objectFit="cover"
             />
           </Potpis>
@@ -202,6 +139,7 @@ function PerlaDrugiDio() {
               // width={157}
               // height={244}
               alt="p1"
+              layout="fill"
               objectFit="cover"
             />
           </LogoHks>
