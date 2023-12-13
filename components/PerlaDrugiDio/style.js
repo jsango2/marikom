@@ -218,7 +218,19 @@ export const LogoHks = styled.div`
   height: 185px;
   @media only screen and (max-width: 850px) {
     width: 170px;
-    height: 122px;
+    height: 170px;
+  }
+  @media only screen and (max-width: 430px) {
+    position: absolute;
+    top: 360px;
+    width: 90px;
+    height: 90px;
+  }
+  @media only screen and (max-width: 410px) {
+    position: absolute;
+    top: 380px;
+    width: 90px;
+    height: 90px;
   }
 `;
 export const WrapLogo = styled.div`
@@ -439,6 +451,12 @@ export const Right = styled.div`
   @media only screen and (max-width: 800px) {
     width: 100%;
     height: auto;
+  }
+  @media only screen and (max-width: 430px) {
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 50px;
   }
 `;
 export const WrapTime = styled.div`

@@ -38,12 +38,38 @@ import Image from "next/image";
 import useWindowSize from "../helper/usewindowsize";
 import { useScrollPercentage } from "react-scroll-percentage";
 import { catalogData } from "../../catalogData.js";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router.js";
 import en from "../../locales/en.json";
 import hr from "../../locales/hr.json";
+import { useInView } from "react-intersection-observer";
+import { useLottie } from "lottie-react";
+import animacija from "./perlaAnimacija.js";
 
 function PerlaDrugiDio() {
+  const style = {
+    height: 120,
+  };
+  const PerlaLogoAnimacija = () => {
+    const options = {
+      animationData: animacija,
+      loop: false,
+      autoplay: true,
+      initialSegment: [0, 68],
+    };
+
+    const { View } = useLottie(options, style);
+
+    return View;
+  };
+
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+  const ref2 = useRef();
+  const size = useWindowSize();
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : hr;
@@ -57,24 +83,24 @@ function PerlaDrugiDio() {
   }, []);
 
   console.log(perlaData.slice(0, 4));
-  const size = useWindowSize();
-  const [ref, percentage] = useScrollPercentage({
+  const [ref3, percentage] = useScrollPercentage({
     /* Optional options */
     threshold: 0,
   });
 
   return (
-    <WrapAll>
+    <WrapAll ref={ref}>
       <RedLine>
         <WrapLogoPerla>
-          <Image
+          {/* <Image
             src="/PerlaBiserMora.svg"
             // width={157}
             // height={244}
             layout="fill"
             alt="p1"
             // objectFit="cover"
-          />
+          /> */}
+          {inView && <PerlaLogoAnimacija />}
         </WrapLogoPerla>
       </RedLine>
       <Title>{t.Perla2.title}</Title>
@@ -105,7 +131,7 @@ function PerlaDrugiDio() {
         ))}
       </Proizvodi>
       <Button>{t.Perla2.button}</Button>
-      <Karamarko ref={ref}>
+      <Karamarko ref={ref3}>
         <PozadinaPerla percentage={percentage}>
           <Image src="/PerlaBg.svg" layout="fill" />
         </PozadinaPerla>

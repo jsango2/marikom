@@ -6,6 +6,8 @@ export const WrapAll = styled.div`
   width: 100%;
   height: auto;
   background: white;
+  padding-bottom: 130px;
+
   /* display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +15,7 @@ export const WrapAll = styled.div`
   /* overflow: hidden; */
 
   @media only screen and (max-width: 430px) {
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
   }
 `;
 export const WrapPhotos = styled.div`
@@ -30,6 +32,7 @@ export const WrapPhotos = styled.div`
   /* overflow: hidden; */
   @media only screen and (max-width: 1400px) {
     width: 100%;
+    height: auto;
   }
 `;
 export const Overlay = styled.div`
@@ -206,7 +209,7 @@ export const WrapContent = styled.div`
   margin: 0px auto 0 auto;
   padding-top: 120px;
   padding-left: 105px;
-  padding-bottom: 120px;
+  /* padding-bottom: 180px; */
   display: flex;
   justify-content: space-between;
   @media only screen and (max-width: 1500px) {
@@ -215,12 +218,20 @@ export const WrapContent = styled.div`
     width: 100%;
     overflow: hidden;
   }
-  @media only screen and (max-width: 850px) {
+  @media only screen and (max-width: 1000px) {
+    flex-direction: column;
     width: 100%;
     margin: 0px auto 0 auto;
-    flex-direction: column;
     padding-top: 0;
     overflow: unset;
+    /* padding-bottom: 129px; */
+  }
+  @media only screen and (max-width: 850px) {
+    /* width: 100%;
+    margin: 0px auto 0 auto;
+    padding-top: 0;
+    overflow: unset; */
+    /* padding-bottom: 129px; */
   }
 `;
 export const TextWrap = styled.div`
@@ -231,10 +242,11 @@ export const TextWrap = styled.div`
   display: flex;
   flex-direction: column;
   @media only screen and (max-width: 1300px) {
+    height: auto;
+
     width: 57%;
   }
-  @media only screen and (max-width: 850px) {
-    height: auto;
+  @media only screen and (max-width: 1000px) {
     width: 90%;
     margin: 0 auto;
     align-items: center;
@@ -425,7 +437,7 @@ export const WrapPhotos2 = styled.div`
   @media only screen and (max-width: 1500px) {
     width: 50%;
   }
-  @media only screen and (max-width: 850px) {
+  @media only screen and (max-width: 1000px) {
     top: -120px;
     height: auto;
     min-width: unset;
@@ -449,7 +461,7 @@ export const PerlaLogoWrap = styled.div`
   justify-content: center;
   align-items: center;
   /* /* overflow: hidden; */
-  @media only screen and (max-width: 850px) {
+  @media only screen and (max-width: 1000px) {
     width: 100%;
   }
 `;
@@ -482,7 +494,7 @@ export const LogoWrap = styled.div`
   justify-content: center;
   align-items: center; */
   /* overflow: hidden; */
-  @media only screen and (max-width: 850px) {
+  @media only screen and (max-width: 1000px) {
     left: 50%;
     transform: translate(-50%, 0);
     display: flex;
@@ -505,7 +517,7 @@ export const RightSide = styled.div`
   @media only screen and (max-width: 1300px) {
     width: 54%;
   }
-  @media only screen and (max-width: 850px) {
+  @media only screen and (max-width: 1000px) {
     margin-left: 0;
     width: 100%;
   }
@@ -525,7 +537,7 @@ export const LightBlueBg = styled.div`
   justify-content: center;
   align-items: center; */
   /* overflow: hidden; */
-  @media only screen and (max-width: 850px) {
+  @media only screen and (max-width: 1000px) {
     display: none;
   }
 `;

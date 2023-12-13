@@ -171,6 +171,7 @@ export const Title = styled.h1`
     font-size: 36px;
   }
   @media only screen and (max-width: 420px) {
+    font-size: 30px;
   }
 `;
 export const SubTitle = styled.p`

@@ -15,7 +15,8 @@ export const WrapAll = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1050px) {
+    padding-bottom: 70px;
   }
 `;
 
@@ -62,7 +63,9 @@ export const BlueLine = styled.div`
   width: 1206px;
   background: var(--color-boja-marikomerc-plava);
   margin: 25px auto 25px auto;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1050px) {
+    width: 80vw;
+    margin-top: 50px;
   }
 `;
 export const Title = styled.h1`
@@ -86,6 +89,14 @@ export const Title = styled.h1`
     font-size: 26px;
     margin: 0 auto 70px auto;
   }
+
+  @media only screen and (max-width: 430px) {
+    /* font-family: Roboto;
+font-size: 26px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%;  */
+  }
 `;
 export const BoldTitle = styled.h3`
   color: var(--color-boja-marikomerc-plava);
@@ -95,7 +106,8 @@ export const BoldTitle = styled.h3`
   font-style: normal;
   font-weight: 700;
   line-height: 120%; /* 19.2px */
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1050px) {
+    /* margin-top: 20px; */
   }
   @media only screen and (max-width: 850px) {
   }
@@ -139,7 +151,9 @@ export const WrapUp = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 50px auto 0 auto;
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1050px) {
+    width: auto;
+    flex-direction: column;
   }
 `;
 export const WrapDown = styled.div`
@@ -154,6 +168,12 @@ export const WrapDown = styled.div`
   margin: 50px auto 0 auto;
   @media only screen and (max-width: 1200px) {
   }
+  @media only screen and (max-width: 1050px) {
+    width: auto;
+    align-items: center;
+
+    flex-direction: column;
+  }
 `;
 export const Box = styled.div`
   position: relative;
@@ -163,7 +183,8 @@ export const Box = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1050px) {
+    margin-top: 20px;
   }
 `;
 export const Column = styled.div`

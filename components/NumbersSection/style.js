@@ -249,6 +249,9 @@ export const Number = styled.div`
   @media only screen and (max-width: 600px) {
     width: 220px;
   }
+  @media only screen and (max-width: 435px) {
+    font-size: 7.5vw;
+  }
 `;
 export const WrapNumberText = styled.div`
   position: relative;
