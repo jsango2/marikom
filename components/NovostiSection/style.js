@@ -14,7 +14,7 @@ export const WrapAll = styled.div`
   padding: 130px 0;
   z-index: ${(props) => (props.zIndex === "Peru" ? `2` : `0`)};
   @media only screen and (max-width: 820px) {
-    padding: 70px 10px;
+    padding: 70px 25px 30px 25px;
   }
 `;
 

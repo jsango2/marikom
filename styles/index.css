@@ -97,6 +97,28 @@ html {
   /* -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; */
+
+  /* Text-size styles */
+  --h1: 55px;
+  --h2: 40px;
+  --h3: 30px;
+  --h4: 21px;
+  --h5-16-nadnaslov: 16px;
+  --h6-16pt--naziv-proizvoda-fat: 16px;
+  --b-18: 18px;
+  --p: 16px;
+  --t: 12px;
+  --latinski-jezik: 14px;
+  --m--h1: 36px;
+  --m--h2: 26px;
+  --m--h3: 20px;
+  --m--h4: 18px;
+  --m--b: 16px;
+  --m--p: 14px;
+  --m--t: 12px;
+  --buttons: 21px;
+  --m--button: 16px;
+  --h5--gilroy-30: 34px;
 }
 
 /* ------FONTS------ */

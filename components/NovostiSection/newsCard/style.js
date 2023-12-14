@@ -18,7 +18,7 @@ export const WrapAll = styled.div`
   }
   @media only screen and (max-width: 820px) {
     width: 95%;
-    margin: 20px 15px;
+    margin: 15px 15px;
   }
 `;
 
@@ -102,7 +102,7 @@ export const ViseInfo = styled.div`
   /* identical to box height, or 26px */
 
   /* SUNRISE/Coral */
-  width: 150px;
+  width: 160px;
   color: #4299c8;
   display: flex;
   align-items: center;
@@ -111,7 +111,7 @@ export const ViseInfo = styled.div`
   cursor: pointer;
   a {
     color: #4299c8;
-    width: 100%;
+    width: 85%;
     text-decoration: none;
     display: flex;
     align-items: center;

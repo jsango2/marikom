@@ -166,7 +166,7 @@ export const MainTitle = styled.h3`
   text-align: center;
   width: 712px;
   font-family: Roboto;
-  font-size: 36px;
+  font-size: var(--m--h1);
   font-style: normal;
   font-weight: 700;
   line-height: 120%; /* 43.2px */
@@ -174,12 +174,14 @@ export const MainTitle = styled.h3`
   @media only screen and (max-width: 850px) {
     width: 90%;
     text-align: center;
-    font-size: 26px;
+    font-size: var(--h3);
+
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 31.2px */
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 430px) {
+    font-size: var(--m--h2);
   }
 `;
 export const TopText = styled.p`
@@ -200,7 +202,7 @@ export const TopText = styled.p`
   }
   @media only screen and (max-width: 850px) {
     /* font-weight: 700; */
-    /* font-size: 21px; */
+    font-size: 16px;
     line-height: 120%;
 
     text-align: center;

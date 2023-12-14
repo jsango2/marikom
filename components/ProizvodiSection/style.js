@@ -91,10 +91,9 @@ export const Title = styled.h1`
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
-  font-size: 55px;
+  font-size: var(--h1);
   line-height: 120%;
   /* identical to box height, or 66px */
-
   text-align: center;
   text-transform: uppercase;
   margin-top: 100px;
@@ -105,7 +104,7 @@ export const Title = styled.h1`
   color: #f5faff;
   /* overflow: hidden; */
   @media only screen and (max-width: 850px) {
-    font-size: 36px;
+    font-size: var(--h2);
   }
   @media only screen and (max-width: 650px) {
     margin: 70px auto 15px auto;
@@ -118,7 +117,8 @@ export const Text = styled.h1`
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: var(--b-18);
+
   line-height: 142.5%;
   /* or 26px */
   width: 693px;
@@ -128,7 +128,8 @@ export const Text = styled.h1`
   margin-bottom: 40px;
   color: #f5faff;
   @media only screen and (max-width: 1000px) {
-    font-size: 16px;
+    font-size: var(--m--b);
+
     width: 85%;
     max-width: 600px;
   }

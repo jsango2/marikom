@@ -27,6 +27,7 @@ import rizotoBg from "../../assets/images/rizotoBg.png";
 import { useInView } from "react-intersection-observer";
 import { useRef } from "react";
 import animacija from "./perlaAnimacija.js";
+import ReceptiLottie from "./ReceptiLottie.js";
 import { useRouter } from "next/router.js";
 import en from "../../locales/en.json";
 import hr from "../../locales/hr.json";
@@ -53,6 +54,10 @@ function PerlaPrviDio() {
   const style = {
     height: 120,
   };
+  const style2 = {
+    height: 520,
+    // width: 1000,
+  };
   const PerlaLogoAnimacija = () => {
     const options = {
       animationData: animacija,
@@ -65,7 +70,17 @@ function PerlaPrviDio() {
 
     return View;
   };
+  const ReceptiAnimacija = () => {
+    const options = {
+      animationData: ReceptiLottie,
+      loop: false,
+      autoplay: true,
+      initialSegment: [0, 376],
+    };
+    const { View } = useLottie(options, style2);
 
+    return View;
+  };
   const { ref, inView, entry } = useInView({
     /* Optional options */
     threshold: 0.2,
@@ -87,7 +102,9 @@ function PerlaPrviDio() {
       <WrapContent>
         <WrapPhotos2>
           {" "}
-          <LightBlueBg />
+          <LightBlueBg>
+            <ReceptiAnimacija />
+          </LightBlueBg>
         </WrapPhotos2>
         <RightSide>
           <PerlaLogoWrap>

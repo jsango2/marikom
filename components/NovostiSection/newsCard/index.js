@@ -29,9 +29,19 @@ function NewsCard({ datum, naslov, naslovEng, text, link }) {
         }}
       ></Text>
       <ViseInfo>
-        <LinkInfo href={`novosti/${link}`}>{t.MoreInfo.MoreInfo}</LinkInfo>
+        <LinkInfo
+          href={
+            locale === "hr" ? `/novosti/${slugify(link)}` : `/novosti/${link}`
+          }
+        >
+          {t.MoreInfo.MoreInfo}
+        </LinkInfo>
         <ArrowRight />
       </ViseInfo>
+      {/* <ViseInfo>
+        <LinkInfo href={`novosti/${link}`}>{t.MoreInfo.MoreInfo}</LinkInfo>
+        <ArrowRight />
+      </ViseInfo> */}
     </WrapAll>
   );
 }

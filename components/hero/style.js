@@ -156,7 +156,7 @@ export const Linija = styled.div`
 `;
 export const Title = styled.h1`
   font-family: Roboto;
-  font-size: 40px;
+  font-size: var(--h2);
   font-style: normal;
   font-weight: 600;
   line-height: 120%;
@@ -167,8 +167,8 @@ export const Title = styled.h1`
   /* color: #f5faff; */
   color: var(--color-boja-marikomerc-bijela);
 
-  @media only screen and (max-width: 1200px) {
-    font-size: 36px;
+  @media only screen and (max-width: 900px) {
+    font-size: var(--h3);
   }
   @media only screen and (max-width: 420px) {
     font-size: 30px;
@@ -178,7 +178,8 @@ export const SubTitle = styled.p`
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: var(--p);
+
   line-height: 25px;
   /* or 179% */
 

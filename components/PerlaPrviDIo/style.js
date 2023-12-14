@@ -13,6 +13,9 @@ export const WrapAll = styled.div`
   align-items: center;
   flex-direction: column; */
   /* overflow: hidden; */
+  @media only screen and (max-width: 1000px) {
+    padding-bottom: 0px;
+  }
 
   @media only screen and (max-width: 430px) {
     /* padding-bottom: 100px; */
@@ -219,7 +222,7 @@ export const WrapContent = styled.div`
     overflow: hidden;
   }
   @media only screen and (max-width: 1000px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     width: 100%;
     margin: 0px auto 0 auto;
     padding-top: 0;
@@ -438,10 +441,10 @@ export const WrapPhotos2 = styled.div`
     width: 50%;
   }
   @media only screen and (max-width: 1000px) {
-    top: -120px;
+    top: -0;
     height: auto;
     min-width: unset;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
   @media only screen and (max-width: 650px) {
@@ -507,7 +510,7 @@ export const RightSide = styled.div`
   z-index: 10;
   width: 750px;
   height: auto;
-  margin-left: 60px;
+  margin-left: 100px;
 
   /* color: black;
   display: flex;
@@ -529,7 +532,7 @@ export const LightBlueBg = styled.div`
   left: 0;
   z-index: 10;
   width: 685px;
-  height: 481px;
+  height: 500px;
   background-color: #f5faff;
 
   /* color: black;
@@ -538,6 +541,8 @@ export const LightBlueBg = styled.div`
   align-items: center; */
   /* overflow: hidden; */
   @media only screen and (max-width: 1000px) {
-    display: none;
+    position: relative;
+
+    /* display: none; */
   }
 `;

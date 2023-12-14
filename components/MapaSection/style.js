@@ -165,6 +165,9 @@ export const Photo1 = styled.div`
   @media only screen and (max-width: 1400px) {
     width: calc(92% / 5);
   }
+  @media only screen and (max-width: 600px) {
+    width: calc(92% / 3.8);
+  }
 `;
 export const Photo2 = styled.div`
   position: relative;
@@ -185,7 +188,9 @@ export const Photo2 = styled.div`
   align-items: center; */
   /* overflow: hidden; */
   @media only screen and (max-width: 1400px) {
-    width: calc(92% / 4);
+    width: calc(92% / 2.9);
+  }
+  @media only screen and (max-width: 600px) {
   }
 `;
 export const Photo3 = styled.div`
@@ -207,7 +212,9 @@ export const Photo3 = styled.div`
   align-items: center; */
   /* overflow: hidden; */
   @media only screen and (max-width: 1400px) {
-    width: calc(92% / 3.2);
+    width: calc(92% / 2.6);
+  }
+  @media only screen and (max-width: 600px) {
   }
 `;
 export const Photo4 = styled.div`
@@ -230,6 +237,9 @@ export const Photo4 = styled.div`
   /* overflow: hidden; */
   @media only screen and (max-width: 1400px) {
     width: calc(92% / 3.8);
+  }
+  @media only screen and (max-width: 600px) {
+    display: none;
   }
 `;
 export const TitleUp = styled.h4`
@@ -257,7 +267,7 @@ export const Title = styled.h1`
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
-  font-size: 55px;
+  font-size: var(--h1);
   line-height: 120%;
   /* identical to box height, or 66px */
   margin: 0 auto 33px auto;
@@ -268,8 +278,8 @@ export const Title = styled.h1`
 
   color: #161722;
   @media only screen and (max-width: 1000px) {
-    font-size: 34px;
-    text-transform: none;
+    font-size: var(--m--h1);
+    text-transform: uppercase;
   }
 `;
 export const Text = styled.p`
@@ -279,7 +289,8 @@ export const Text = styled.p`
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: var(--b-18);
+
   line-height: 142.5%;
   /* or 26px */
   width: 88%;
@@ -289,8 +300,8 @@ export const Text = styled.p`
   /* MK Plava */
 
   color: #1c2640;
-  @media only screen and (max-width: 1000px) {
-    font-size: 14px;
+  @media only screen and (max-width: 430px) {
+    font-size: var(--m--b);
   }
 `;
 export const Nizozemska = styled.div`
