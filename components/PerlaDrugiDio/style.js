@@ -198,6 +198,9 @@ export const RedLine = styled.div`
   @media only screen and (max-width: 850px) {
     height: 50px;
   }
+  @media only screen and (max-width: 430px) {
+    margin-bottom: 80px;
+  }
 `;
 export const WrapLogoPerla = styled.div`
   position: relative;

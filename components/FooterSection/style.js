@@ -16,7 +16,8 @@ export const WrapAll = styled.div`
   justify-content: center;
   align-items: center;
   /* overflow: hidden; */
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 430px) {
+    height: 758px;
   }
 `;
 

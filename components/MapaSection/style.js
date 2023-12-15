@@ -68,6 +68,9 @@ export const WrapAll = styled.div`
     height: auto;
     padding-bottom: 150px;
   }
+  @media only screen and (max-width: 430px) {
+    padding-top: 0px;
+  }
 `;
 
 export const WrapMap = styled.div`
@@ -166,7 +169,7 @@ export const Photo1 = styled.div`
     width: calc(92% / 5);
   }
   @media only screen and (max-width: 600px) {
-    width: calc(92% / 3.8);
+    width: calc(92% / 3.5);
   }
 `;
 export const Photo2 = styled.div`
@@ -188,7 +191,7 @@ export const Photo2 = styled.div`
   align-items: center; */
   /* overflow: hidden; */
   @media only screen and (max-width: 1400px) {
-    width: calc(92% / 2.9);
+    width: calc(92% / 2.7);
   }
   @media only screen and (max-width: 600px) {
   }
@@ -212,7 +215,7 @@ export const Photo3 = styled.div`
   align-items: center; */
   /* overflow: hidden; */
   @media only screen and (max-width: 1400px) {
-    width: calc(92% / 2.6);
+    width: calc(92% / 2.5);
   }
   @media only screen and (max-width: 600px) {
   }

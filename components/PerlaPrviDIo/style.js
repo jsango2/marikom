@@ -254,6 +254,11 @@ export const TextWrap = styled.div`
     margin: 0 auto 100px auto;
     /* align-items: left; */
   }
+  @media only screen and (max-width: 430px) {
+    width: 90%;
+    margin-bottom: 60px;
+    /* align-items: left; */
+  }
 `;
 export const UpTitle = styled.h3`
   font-family: "Gilroy";
