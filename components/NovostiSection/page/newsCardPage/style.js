@@ -5,7 +5,8 @@ export const WrapAll = styled.div`
   position: relative;
   z-index: 10;
   font-size: ${(props) => (props.isFeatured ? "30px" : "16px")};
-  width: ${(props) => (props.isFeatured ? "300px" : "30%")};
+  width: ${(props) => (props.isFeatured ? "300px" : "340px")};
+
   height: ${(props) => (props.isFeatured ? "197px" : "auto")};
   color: black;
   display: flex;
@@ -14,12 +15,15 @@ export const WrapAll = styled.div`
   flex-direction: column;
   margin: 0;
   /* overflow: hidden; */
-  @media only screen and (max-width: 920px) {
+  @media only screen and (max-width: 820px) {
     width: 230px;
   }
   @media only screen and (max-width: 820px) {
     width: 95%;
     margin: 20px 15px;
+  }
+  @media only screen and (max-width: 650px) {
+    margin: 30px 15px 20px 15px;
   }
 `;
 
@@ -37,7 +41,7 @@ export const Container = styled.div`
 export const DataContainer = styled.div`
   position: relative;
   z-index: 10;
-  width: 100%;
+  width: 90%;
   height: auto;
   margin-top: 10px;
   padding-left: 30px;

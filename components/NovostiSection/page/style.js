@@ -3,13 +3,17 @@ import styled from "styled-components";
 export const Container = styled.div`
   position: relative;
   z-index: 10;
-  width: 1100px;
+  max-width: 1100px;
+  width: 100%;
   height: auto;
 
   /* overflow: hidden; */
   margin: 90px auto;
   @media only screen and (max-width: 1250px) {
     flex-direction: column;
+  }
+  @media only screen and (max-width: 650px) {
+    margin-top: 0;
   }
 `;
 export const FeaturedNews = styled.div`
@@ -22,13 +26,19 @@ export const FeaturedNews = styled.div`
   margin-bottom: 90px;
   /* overflow: hidden; */
   @media only screen and (max-width: 1250px) {
+    justify-content: space-around;
+  }
+  @media only screen and (max-width: 650px) {
     flex-direction: column;
+    margin-bottom: 0px;
+    background-color: #f6f6f6;
   }
 `;
 export const News = styled.div`
   position: relative;
   z-index: 10;
   width: 100%;
+  max-width: 1100px;
   height: auto;
   display: flex;
   justify-content: space-between;
@@ -36,8 +46,7 @@ export const News = styled.div`
   flex-wrap: wrap;
 
   /* overflow: hidden; */
-  @media only screen and (max-width: 1250px) {
-    flex-direction: column;
+  @media only screen and (max-width: 1350px) {
   }
 `;
 export const Left = styled.div`
@@ -52,7 +61,8 @@ export const Left = styled.div`
   font-size: 32px;
   color: white;
   /* overflow: hidden; */
-  @media only screen and (max-width: 1250px) {
+  @media only screen and (max-width: 650px) {
+    width: 100%;
   }
 `;
 export const Right = styled.div`
@@ -62,6 +72,12 @@ export const Right = styled.div`
   height: 323px;
   padding-top: 50px;
   /* overflow: hidden; */
-  @media only screen and (max-width: 1250px) {
+  @media only screen and (max-width: 650px) {
+    padding-top: 0px;
+
+    width: 100%;
+    height: auto;
+
+    min-height: 285px;
   }
 `;
