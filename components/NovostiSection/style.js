@@ -103,7 +103,9 @@ export const FeaturedImage = styled.div`
   /* align-items: center; */
   /* overflow: hidden; */
   margin: 42px auto;
-  @media only screen and (max-width: 820px) {
+  @media only screen and (max-width: 630px) {
+    width: 100%;
+    margin-top: 0;
   }
 `;
 export const TextSection = styled.div`
@@ -123,7 +125,7 @@ export const TextSection = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 35px 0 75px 0;
-  @media only screen and (max-width: 820px) {
+  @media only screen and (max-width: 850px) {
   }
 `;
 export const WrapContent = styled.div`
@@ -135,7 +137,11 @@ export const WrapContent = styled.div`
   display: flex;
   justify-content: space-between;
   padding-top: 34px;
-  @media only screen and (max-width: 820px) {
+  @media only screen and (max-width: 850px) {
+    flex-direction: column;
+
+    width: 100%;
+    padding: 0 20px;
   }
 `;
 
@@ -149,7 +155,8 @@ export const TitleBlock = styled.div`
   /* align-items: center; */
   /* overflow: hidden; */
 
-  @media only screen and (max-width: 820px) {
+  @media only screen and (max-width: 850px) {
+    width: 100%;
   }
 `;
 export const Content = styled.div`
@@ -175,7 +182,8 @@ export const Content = styled.div`
   & p {
     margin: 1.5rem 0;
   }
-  @media only screen and (max-width: 820px) {
+  @media only screen and (max-width: 850px) {
+    width: 100%;
   }
 `;
 export const Datum = styled.div`

@@ -28,13 +28,17 @@ export const WrapTitle = styled.div`
 export const Container = styled.div`
   position: relative;
   z-index: 10;
-  width: 1100px;
+  max-width: 1100px;
+  width: 100%;
   height: auto;
 
   /* overflow: hidden; */
   margin: 90px auto;
   @media only screen and (max-width: 1250px) {
     flex-direction: column;
+  }
+  @media only screen and (max-width: 650px) {
+    margin-top: 0;
   }
 `;
 
