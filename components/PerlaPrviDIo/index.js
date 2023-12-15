@@ -14,6 +14,7 @@ import {
   ListWrap,
   ListItem,
   WrapButton,
+  ItemText,
 } from "./style.js";
 
 import Logo from "../../svg/perlalogo.svg";
@@ -25,14 +26,15 @@ import Button from "../buttonBlue/Button.js";
 import useWindowSize from "../helper/usewindowsize";
 import rizotoBg from "../../assets/images/rizotoBg.png";
 import { useInView } from "react-intersection-observer";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import animacija from "./perlaAnimacija.js";
 import ReceptiLottie from "./ReceptiLottie.js";
 import { useRouter } from "next/router.js";
 import en from "../../locales/en.json";
 import hr from "../../locales/hr.json";
-
 function PerlaPrviDio() {
+  const size = useWindowSize();
+
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : hr;
@@ -51,13 +53,29 @@ function PerlaPrviDio() {
   //     },
   //   ],
   // };
-  const style = {
-    height: 120,
-  };
-  const style2 = {
-    height: 520,
-    // width: 1000,
-  };
+
+  const style =
+    size < 1000
+      ? {
+          height: 120,
+        }
+      : {
+          height: 120,
+        };
+  const style2 = {};
+  useEffect(() => {
+    if (size < 1000) {
+      const style2 = { height: 800 };
+    } else {
+      const style2 = { width: 580 };
+    }
+  }, []);
+
+  // const style2 = {
+  //   height: 520,
+  //   // width: 1000,
+  // };
+  console.log(style2);
   const PerlaLogoAnimacija = () => {
     const options = {
       animationData: animacija,
@@ -87,7 +105,6 @@ function PerlaPrviDio() {
     triggerOnce: true,
   });
   const ref2 = useRef();
-  const size = useWindowSize();
 
   return (
     <WrapAll ref={ref2}>
@@ -117,23 +134,23 @@ function PerlaPrviDio() {
             <ListWrap ref={ref}>
               <ListItem className={` ${inView ? "inView" : "outView"}`}>
                 <GreenMark style={{ marginRight: "10px" }} />
-                {t.Perla.line1}
+                <ItemText>{t.Perla.line1}</ItemText>
               </ListItem>
               <ListItem className={` ${inView ? "inView" : "outView"}`}>
                 <GreenMark style={{ marginRight: "10px" }} />
-                {t.Perla.line2}
+                <ItemText>{t.Perla.line2}</ItemText>
               </ListItem>
               <ListItem className={` ${inView ? "inView" : "outView"}`}>
                 <GreenMark style={{ marginRight: "10px" }} />
-                {t.Perla.line3}
+                <ItemText>{t.Perla.line3}</ItemText>
               </ListItem>
               <ListItem className={` ${inView ? "inView" : "outView"}`}>
                 <GreenMark style={{ marginRight: "10px" }} />
-                {t.Perla.line4}
+                <ItemText>{t.Perla.line4}</ItemText>
               </ListItem>
               <ListItem className={` ${inView ? "inView" : "outView"}`}>
                 <GreenMark style={{ marginRight: "10px" }} />
-                {t.Perla.line5}
+                <ItemText>{t.Perla.line5}</ItemText>
               </ListItem>
             </ListWrap>
             <WrapButton className={` ${inView ? "inView" : "outView"}`}>

@@ -251,8 +251,8 @@ export const TextWrap = styled.div`
   }
   @media only screen and (max-width: 1000px) {
     width: 90%;
-    margin: 0 auto;
-    align-items: center;
+    margin: 0 auto 100px auto;
+    /* align-items: left; */
   }
 `;
 export const UpTitle = styled.h3`
@@ -266,11 +266,12 @@ export const UpTitle = styled.h3`
   /* MK Plava */
 
   color: #1c2640;
+  text-transform: uppercase;
   @media only screen and (max-width: 1300px) {
     font-size: 16px;
   }
   @media only screen and (max-width: 850px) {
-    text-align: center;
+    text-align: left;
   }
 `;
 export const Title = styled.h1`
@@ -290,15 +291,15 @@ export const Title = styled.h1`
     width: 100%;
   }
   @media only screen and (max-width: 850px) {
-    text-align: center;
+    text-align: left;
   }
 `;
 export const SubTitle = styled.h3`
-  font-family: "Gilroy";
+  font-family: Gilroy;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 140%;
+  line-height: 130%; /* 23.4px */
   /* or 22px */
 
   /* MK Plava */
@@ -306,7 +307,7 @@ export const SubTitle = styled.h3`
   color: #1c2640;
   margin-bottom: 10px;
   @media only screen and (max-width: 850px) {
-    text-align: center;
+    text-align: left;
   }
 `;
 export const WrapGradovi = styled.div`
@@ -341,7 +342,7 @@ export const WrapButton = styled.div`
     opacity: 0;
   }
   @media only screen and (max-width: 850px) {
-    margin: 0 auto;
+    /* margin: 0 auto; */
   }
 `;
 export const Grad = styled.div`
@@ -377,7 +378,16 @@ export const ListWrap = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 35px;
-  width: 90%;
+  width: 100%;
+  @media only screen and (max-width: 600px) {
+  }
+`;
+export const ItemText = styled.div`
+  position: relative;
+  z-index: 10;
+  margin-left: 20px;
+  text-align: left;
+  width: 100%;
   @media only screen and (max-width: 600px) {
   }
 `;
@@ -396,7 +406,8 @@ export const ListItem = styled.div`
   color: #1c2640;
   display: flex;
   align-items: center;
-  margin-left: 20px;
+  margin-left: 10px;
+  width: 100%;
   &.inView {
     top: 0px;
     opacity: 1;
@@ -421,7 +432,8 @@ export const ListItem = styled.div`
     top: 25px;
     opacity: 0;
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 900px) {
+    margin-left: 10px;
   }
 `;
 export const WrapPhotos2 = styled.div`
@@ -528,7 +540,7 @@ export const RightSide = styled.div`
 
 export const LightBlueBg = styled.div`
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 0;
   z-index: 10;
   width: 685px;
@@ -541,8 +553,9 @@ export const LightBlueBg = styled.div`
   align-items: center; */
   /* overflow: hidden; */
   @media only screen and (max-width: 1000px) {
+    height: auto;
     position: relative;
-
+    width: 100%;
     /* display: none; */
   }
 `;
