@@ -395,10 +395,14 @@ export const ImageWrap = styled.div`
   position: relative;
   z-index: 10;
   height: 440px;
-  width: 300px;
-  @media only screen and (max-width: 430px) {
+  width: 400px;
+  @media only screen and (max-width: 1000px) {
     height: 418px;
     width: 300px;
+  }
+  @media only screen and (max-width: 430px) {
+    height: 371px;
+    width: 249px;
   }
 `;
 export const Potpis = styled.div`
@@ -522,7 +526,7 @@ export const Title = styled.h1`
   z-index: 10;
   font-family: "Roboto";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 40px;
   line-height: 120%;
   /* or 48px */
@@ -548,7 +552,8 @@ export const Title2 = styled.h1`
   z-index: 10;
   font-family: "Roboto";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
+
   font-size: 40px;
   line-height: 120%;
   /* or 48px */

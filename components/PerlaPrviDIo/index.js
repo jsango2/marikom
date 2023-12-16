@@ -26,13 +26,14 @@ import Button from "../buttonBlue/Button.js";
 import useWindowSize from "../helper/usewindowsize";
 import rizotoBg from "../../assets/images/rizotoBg.png";
 import { useInView } from "react-intersection-observer";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import animacija from "./perlaAnimacija.js";
 import ReceptiLottie from "./ReceptiLottie.js";
 import { useRouter } from "next/router.js";
 import en from "../../locales/en.json";
 import hr from "../../locales/hr.json";
 function PerlaPrviDio() {
+  // const [style2, setStyle2] = useState({});
   const size = useWindowSize();
 
   const router = useRouter();
@@ -62,20 +63,18 @@ function PerlaPrviDio() {
       : {
           height: 120,
         };
-  const style2 = {};
-  useEffect(() => {
-    if (size < 1000) {
-      const style2 = { height: 800 };
-    } else {
-      const style2 = { width: 580 };
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (size < 1000) {
+  //     setStyle2({ width: 100 });
+  //   } else {
+  //     setStyle2({ width: 700, height: 750 });
+  //   }
+  // }, []);
 
-  // const style2 = {
-  //   height: 520,
-  //   // width: 1000,
-  // };
-  console.log(style2);
+  const style2 = {
+    // height: 520,
+    // width: 1000,
+  };
   const PerlaLogoAnimacija = () => {
     const options = {
       animationData: animacija,
@@ -94,6 +93,11 @@ function PerlaPrviDio() {
       loop: false,
       autoplay: true,
       initialSegment: [0, 376],
+      rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice",
+        className: "lottie-svg-class",
+        id: "lottie-svg-id",
+      },
     };
     const { View } = useLottie(options, style2);
 
@@ -119,9 +123,9 @@ function PerlaPrviDio() {
       <WrapContent>
         <WrapPhotos2>
           {" "}
-          <LightBlueBg>
-            <ReceptiAnimacija />
-          </LightBlueBg>
+          {/* <LightBlueBg> */}
+          <ReceptiAnimacija />
+          {/* </LightBlueBg> */}
         </WrapPhotos2>
         <RightSide>
           <PerlaLogoWrap>

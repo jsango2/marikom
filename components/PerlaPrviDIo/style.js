@@ -282,7 +282,7 @@ export const UpTitle = styled.h3`
 export const Title = styled.h1`
   font-family: "Roboto";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 40px;
   line-height: 120%;
   /* or 48px */
@@ -445,7 +445,7 @@ export const WrapPhotos2 = styled.div`
   position: relative;
   z-index: 10;
   min-width: 652px;
-  height: 600px;
+  height: 630px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -458,7 +458,7 @@ export const WrapPhotos2 = styled.div`
     width: 50%;
   }
   @media only screen and (max-width: 1000px) {
-    top: -0;
+    top: 10px;
     height: auto;
     min-width: unset;
     width: 100%;

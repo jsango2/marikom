@@ -286,7 +286,7 @@ export const NazivKategorije = styled.div`
   font-family: Roboto;
   font-size: 40px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 120%; /* 48px */
   text-transform: uppercase;
   @media only screen and (max-width: 600px) {

@@ -5,6 +5,7 @@ module.exports = withTranslateRoutes({
   i18n: {
     locales: ["en", "hr"],
     defaultLocale: "hr",
+    localeDetection: false,
   },
   images: {
     // limit of 25 deviceSizes values

@@ -158,7 +158,8 @@ export const Title = styled.h1`
   font-family: Roboto;
   font-size: var(--h2);
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
+
   line-height: 120%;
   /* or 48px */
 

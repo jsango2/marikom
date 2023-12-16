@@ -122,7 +122,8 @@ export const BlueLine = styled.div`
 export const Title = styled.h1`
   font-family: "Roboto";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
+
   font-size: 40px;
   line-height: 120%;
   /* identical to box height, or 48px */

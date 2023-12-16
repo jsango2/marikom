@@ -237,6 +237,9 @@ p {
   padding-left: 0px;
   z-index: 100;
 }
+.lottie-svg-class {
+  width: 670px !important;
+}
 .navBar {
   width: 1290px;
   height: 65px;
@@ -1268,6 +1271,10 @@ select {
     left: -39%;
     transform: rotate(11deg);
     transform: translate(50%, 0);
+  }
+  .lottie-svg-class {
+    width: 100vw !important;
+    height: 400px !important;
   }
   .wrapRaspored {
     display: grid;

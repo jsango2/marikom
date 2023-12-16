@@ -49,7 +49,8 @@ export const Title = styled.div`
   font-family: Roboto;
   font-size: 40px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
+
   line-height: 120%; /* 48px */
   margin-top: 15px;
   @media only screen and (max-width: 820px) {
