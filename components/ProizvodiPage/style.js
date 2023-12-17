@@ -39,6 +39,20 @@ export const NoInput = styled.div`
   @media only screen and (max-width: 600px) {
   }
 `;
+export const OverlayBG = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 10;
+  /* filter: blur(4px); */
+
+  @media only screen and (max-width: 600px) {
+  }
+`;
 export const ArrowDown = styled.div`
   margin-left: 10px;
   margin-top: 2px;
@@ -121,19 +135,19 @@ export const ButtonsWrapMobile = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: flex-start;
+  align-items: center;
   /* margin-right: 10px; */
   top: 70px;
   /* overflow: hidden; */
   /* padding-bottom: 50px; */
   background-color: white;
-  padding-bottom: 30px;
-  overflow-y: scroll;
+  /* padding-bottom: 30px; */
+
   button {
-    width: 100vw;
+    width: 99%;
     margin: 1px;
     background: var(--color-svj-plava);
-    border: 0px;
+    border: 1px;
     color: white;
     height: auto;
     text-align: left;
@@ -143,7 +157,7 @@ export const ButtonsWrapMobile = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 19.2px */
-    padding: 10px 30px;
+    padding: 8px 30px;
   }
   button:hover {
     background: #2f3e66;
@@ -287,7 +301,7 @@ export const Pagination = styled.div`
 `;
 export const WrapProizvodiPagination = styled.div`
   position: relative;
-  z-index: 10;
+  z-index: 9;
   max-width: 1150px;
   width: 80%;
   display: flex;

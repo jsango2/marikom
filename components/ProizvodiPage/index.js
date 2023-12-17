@@ -16,6 +16,7 @@ import {
   Divider,
   Kontakt,
   ArrowDown,
+  OverlayBG,
 } from "./style.js";
 
 import { useRouter } from "next/router";
@@ -246,6 +247,7 @@ function ProizvodiPage({ allPhotosProizvodi }) {
               ))}
             </ButtonsWrapMobile>
           )}
+          {isDropdownOpen && <OverlayBG />}
 
           <Divider />
           {state.list.length > 0 ? (
