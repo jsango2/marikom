@@ -164,6 +164,9 @@ function ProizvodiPage({ allPhotosProizvodi }) {
     blockScroll();
     // document.body.style.overflow = "hidden";
   };
+  const paginationClick = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
   // useEffect(() => {
   //   isDropdownOpen && document.body.style.overflow === "hidden";
   //   !isDropdownOpen && document.body.style.overflow === "unset";
@@ -308,6 +311,7 @@ function ProizvodiPage({ allPhotosProizvodi }) {
             containerClassName={"pagination"}
             previousLabel={""}
             forcePage={forcePage}
+            onClick={paginationClick}
           />
         </Pagination>
       </WrapProizvodiPagination>
