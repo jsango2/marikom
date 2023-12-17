@@ -41,8 +41,8 @@ const MeniMobile = ({ isOpen, setIsOpen, closeMenu, novostiNaslovi }) => {
         <Link className="mobileLinks" href="http://www.zadarnight.run">
           Imate restoran?
         </Link>
-        <Link className="mobileLinks" href="http://www.zadarnight.run">
-          Karijera
+        <Link className="mobileLinks" href="/karijere">
+          Karijere
         </Link>
         <Link className="mobileLinks" href="http://www.zadarnight.run">
           Kontakt

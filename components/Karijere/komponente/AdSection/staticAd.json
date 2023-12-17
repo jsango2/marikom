@@ -1,0 +1,37 @@
+
+
+ [
+    {
+      "naslov": "Voditelja/icu tehničke podrške",
+      "mjestoRada": "Zadar",
+      "datum": "04.01.2023",
+      "imeFirme": "Di Maris",
+      "id": "2",
+      "logoSource": "../ad-section-img/14.png"
+    },
+    {
+      "naslov": "Voditelja/icu prodaje",
+      "mjestoRada": "Zadar",
+      "datum": "05.01.2023",
+      "imeFirme": "Di Maris",  
+      "id": "2",
+      "logoSource": "../ad-section-img/14.png"
+    },
+    {
+      "naslov": "Pomočni radnik/ca",
+      "mjestoRada": "Zadar",
+      "datum": "06.01.2023",
+      "imeFirme": "MLS Logistics",
+      "id": "3",
+      "logoSource": "../ad-section-img/16.png"
+
+    },
+    {
+      "naslov": "It tehničar/ka",
+      "mjestoRada": "Zadar",
+      "datum": "07.01.2023",
+      "imeFirme": "MARIKOMERC",
+      "id":"1",
+      "logoSource": "../ad-section-img/15.png"
+    }
+  ]

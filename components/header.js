@@ -127,7 +127,7 @@ const Header = ({ siteTitle, novostiNaslovi }) => {
                   </Link>
                 </div>
                 <div>
-                  <Link className="navLink" href="/karijera">
+                  <Link className="navLink" href="/karijere">
                     Karijere
                   </Link>
                 </div>
