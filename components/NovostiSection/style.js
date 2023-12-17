@@ -188,6 +188,9 @@ export const Content = styled.div`
   @media only screen and (max-width: 850px) {
     width: 100%;
   }
+  @media only screen and (max-width: 430px) {
+    width: 90vw;
+  }
 `;
 export const Datum = styled.div`
   position: relative;

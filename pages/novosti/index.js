@@ -36,7 +36,7 @@ function index(props) {
   );
   // sve novosti osim istaknute
   const otherNovosti = novosti.filter(
-    (n) => n.node.id != featuredNovost[0].node.id
+    (n) => n.node.novosti.naslov != featuredNovost[0].node.novosti.naslov
   );
 
   // na stranici /novosti   prikaži featured novost (zadnja novost označena u cms-u kao Featured ili istaknuta)

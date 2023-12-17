@@ -18,11 +18,9 @@ import NewsCard from "../page/newsCardPage/index.js";
 
 function OtherNews({ novosti }) {
   const [ostaleNovosti, setOstaleNovosti] = useState([]);
-  console.log(ostaleNovosti);
   const { locale, locales, defaultLocale, asPath, basePath } = useRouter();
   useEffect(() => {
     const getSlug = window.location.pathname.split("/").pop();
-    console.log(getSlug);
     const getOtherNews = novosti.edges.filter((n) =>
       locale === "en"
         ? n.node.novosti.naslovEng.toLowerCase().split(" ").join("-") +

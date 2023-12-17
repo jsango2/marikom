@@ -82,7 +82,6 @@ function PerlaDrugiDio() {
     );
   }, []);
 
-  console.log(perlaData.slice(0, 4));
   const [ref3, percentage] = useScrollPercentage({
     /* Optional options */
     threshold: 0,
