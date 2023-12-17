@@ -39,16 +39,35 @@ export const NoInput = styled.div`
   @media only screen and (max-width: 600px) {
   }
 `;
+export const ArrowDown = styled.div`
+  margin-left: 10px;
+  margin-top: 2px;
+  @media only screen and (max-width: 600px) {
+  }
+`;
 export const DropdownMobile = styled.div`
   margin-top: 0px;
   position: relative;
   z-index: 10;
   width: 100vw;
   text-align: center;
-  background-color: green;
+  background: var(
+    --gradient-gradient-svjetlo-plava,
+    linear-gradient(135deg, #338bc2 0%, #dffee6 100%)
+  );
   padding: 5px 0;
   color: white;
   cursor: pointer;
+  font-family: Gilroy;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 19.2px */
+  display: flex;
+  justify-content: center;
+  span {
+    margin-left: 20px;
+  }
   @media only screen and (max-width: 600px) {
   }
 `;
@@ -94,7 +113,7 @@ export const ButtonsWrapDesktop = styled.div`
 export const ButtonsWrapMobile = styled.div`
   position: fixed;
   z-index: 12;
-  /* width: 100vw; */
+  width: 90vw;
   min-width: 200px;
   height: auto;
   color: black;
@@ -109,6 +128,7 @@ export const ButtonsWrapMobile = styled.div`
   /* padding-bottom: 50px; */
   background-color: white;
   padding-bottom: 30px;
+  overflow-y: scroll;
   button {
     width: 100vw;
     margin: 1px;

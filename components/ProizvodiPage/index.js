@@ -15,6 +15,7 @@ import {
   Pagination,
   Divider,
   Kontakt,
+  ArrowDown,
 } from "./style.js";
 
 import { useRouter } from "next/router";
@@ -224,6 +225,9 @@ function ProizvodiPage({ allPhotosProizvodi }) {
           {size.width < 900 && (
             <DropdownMobile onClick={handleDropdownClick}>
               ODABIR KATEGORIJE
+              <ArrowDown>
+                <Image src="/arrowDown.svg" width={15} height={15} />
+              </ArrowDown>
             </DropdownMobile>
           )}
           {isDropdownOpen && (

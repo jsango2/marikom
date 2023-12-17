@@ -44,11 +44,12 @@
   /* background-color: #0fbcf9; */
   display: flex;
   flex-direction: row;
-  height: 60px;
+  height: 40px;
   justify-content: space-around;
   list-style-type: none;
-  width: 400px;
+  width: 200px;
   margin: 0 auto;
+  padding-left: 0;
 }
 .pagination li {
   cursor: pointer;
@@ -63,10 +64,11 @@
 .pagelink {
   font-weight: 400;
   /* border: 1px solid black; */
-  padding: 20px;
+  /* padding: 10px; */
   color: white;
 
   background-color: #b7bbbf;
+  border-radius: 2px;
 }
 
 .previous {
@@ -80,6 +82,19 @@
 }
 .activePage {
   background-color: #313f66;
+  width: 20px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pageClassName {
+  width: 20px;
+  background-color: #b7bbbf;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (max-width: 800px) {
