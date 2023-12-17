@@ -173,11 +173,14 @@ export const Content = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 142.5%; /* 25.65px */
+  & figure {
+    margin: 0 !important;
+  }
   & img {
     margin: 0 auto;
     width: 100%;
-    height: 350px;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
   }
   & p {
     margin: 1.5rem 0;
