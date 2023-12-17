@@ -173,6 +173,7 @@ export const Content = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 142.5%; /* 25.65px */
+  overflow: hidden;
   & figure {
     margin: 0 !important;
   }
@@ -184,6 +185,10 @@ export const Content = styled.div`
   }
   & p {
     margin: 1.5rem 0;
+  }
+  & figure iframe {
+    width: 90vw;
+    height: 56vw;
   }
   @media only screen and (max-width: 850px) {
     width: 100%;
