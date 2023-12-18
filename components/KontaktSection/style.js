@@ -92,7 +92,7 @@ export const Title = styled.h1`
   }
 
   @media only screen and (max-width: 430px) {
-    /* font-family: Roboto;
+    /* font-family: 'Roboto Condensed', sans-serif;;
 font-size: 26px;
 font-style: normal;
 font-weight: 700;

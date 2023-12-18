@@ -71,7 +71,7 @@ export const BlueLine = styled.div`
 `;
 export const Title = styled.h1`
   font-size: ${(props) => (props.isFeatured ? "30px" : "16px")};
-  font-family: Roboto;
+  font-family: "Roboto Condensed", sans-serif;
   color: var(--boja-color-marikomerc-plava);
 
   font-style: normal;

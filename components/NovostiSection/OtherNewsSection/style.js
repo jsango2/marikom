@@ -46,7 +46,7 @@ export const Title = styled.div`
   color: var(--color-boja-marikomerc-plava);
   text-align: center;
   /* H2 */
-  font-family: Roboto;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
@@ -68,7 +68,7 @@ export const Naslov = styled.div`
   position: relative;
   color: var(--color-boja-marikomerc-plava);
   /* H3 */
-  font-family: Roboto;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;

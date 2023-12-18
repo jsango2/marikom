@@ -155,7 +155,7 @@ export const Linija = styled.div`
   }
 `;
 export const Title = styled.h1`
-  font-family: Roboto;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: var(--h2);
   font-style: normal;
   font-weight: 700;

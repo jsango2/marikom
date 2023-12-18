@@ -32,15 +32,14 @@ export const Data = styled.div`
   position: relative;
   z-index: 10;
   margin-right: 30px;
-  height: 40px;
+  height: 38px;
   width: auto;
   color: #1c2640;
-  padding: 5px 22px;
+  padding: 0px 22px;
   background-color: #c0e0eb69;
   display: flex;
   justify-content: center;
   align-items: center;
-
   text-align: center;
   font-family: Gilroy;
   font-size: 16px;
@@ -55,7 +54,7 @@ export const Data = styled.div`
     padding: 0 20px;
     margin-right: auto;
     margin-bottom: 5px;
-    padding: 5px 22px;
+    padding: 0px 22px;
   }
 `;
 export const Text = styled.div`
@@ -78,7 +77,7 @@ export const MaliNaslov = styled.h4`
   color: var(--color-boja-marikomerc-plava);
 
   /* H4 */
-  font-family: Roboto;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 21px;
   font-style: normal;
   font-weight: 700;
@@ -154,7 +153,7 @@ export const NaslovOglasa = styled.h1`
   width: 100%;
   color: var(--color-boja-marikomerc-plava);
   /* H1 */
-  font-family: Roboto;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 55px;
   font-style: normal;
   font-weight: 700;

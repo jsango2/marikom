@@ -165,7 +165,7 @@ export const MainTitle = styled.h3`
   color: var(--color-boja-marikomerc-bijela);
   text-align: center;
   width: 712px;
-  font-family: Roboto;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: var(--m--h1);
   font-style: normal;
   font-weight: 700;

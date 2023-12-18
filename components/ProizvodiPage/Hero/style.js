@@ -39,7 +39,7 @@ export const HeroTitle = styled.h1`
   color: var(--color-boja-marikomerc-bijela);
   text-align: center;
   /* H1 */
-  font-family: Roboto;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 55px;
   font-style: normal;
   font-weight: 700;

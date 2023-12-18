@@ -317,7 +317,7 @@ export const NazivKategorije = styled.div`
   color: var(--color-boja-marikomerc-bijela);
 
   /* H2 */
-  font-family: Roboto;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
