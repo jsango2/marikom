@@ -16,6 +16,9 @@ export const WrapAll = styled.div`
   @media only screen and (max-width: 1050px) {
     padding-bottom: 70px;
   }
+  @media only screen and (max-width: 720px) {
+    min-width: unset;
+  }
 `;
 
 export const StyledForm = styled.form`
@@ -25,10 +28,16 @@ export const StyledForm = styled.form`
   justify-content: space-between;
   max-width: 1080px;
   margin: 0 auto;
+  @media only screen and (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 export const WrapData = styled.div`
   position: relative;
   width: 60%;
+  @media only screen and (max-width: 720px) {
+    width: 95%;
+  }
 `;
 export const WrapUpload = styled.div`
   position: relative;
@@ -127,8 +136,33 @@ export const StyledButton = styled.button`
   font-weight: 700;
   line-height: 142.5%;
   /* opacity: ${(props) => (!props.enabled ? 0.5 : 1)}; */
+  @media only screen and (max-width: 900px) {
+    display: none;
+  }
 `;
+export const StyledButtonMob = styled.button`
+  color: white;
+  padding: 10px 40px;
+  margin-top: 30px;
+  border: none;
 
+  cursor: pointer;
+  display: block;
+  border-radius: 4px;
+  background: #4299c8;
+  color: #fff;
+  width: 300px;
+  text-align: center;
+  font-family: Gilroy;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 142.5%;
+  /* opacity: ${(props) => (!props.enabled ? 0.5 : 1)}; */
+  @media only screen and (min-width: 900px) {
+    display: none;
+  }
+`;
 export const StyledAlert = styled.div`
   padding: 10px;
   background-color: #f44336;

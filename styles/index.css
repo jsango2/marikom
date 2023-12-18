@@ -715,7 +715,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   right: 50%;
   width: 100%;
   /* border-radius: 0 0 39px 39px; */
-  background: #161822;
+  background: #101628;
   padding-top: 40px;
   display: flex;
   flex-direction: column;
@@ -1298,7 +1298,8 @@ select {
     right: 50%;
     width: 100%;
     /* border-radius: 0 0 39px 39px; */
-    background: #161822;
+    background: #101628;
+
     padding-top: 0px;
     display: flex;
     flex-direction: column;
@@ -1308,6 +1309,9 @@ select {
   }
   .formCalcSubmit {
     margin-top: 0px;
+  }
+  .languageSwitchWrap {
+    margin-bottom: 60px;
   }
   .resetZone {
     margin: 0;

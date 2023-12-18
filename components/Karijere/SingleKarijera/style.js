@@ -9,9 +9,10 @@ export const FeaturedImage = styled.div`
   /* align-items: center; */
   /* overflow: hidden; */
   margin: 0 auto;
-  @media only screen and (max-width: 630px) {
+  @media only screen and (max-width: 1000px) {
     width: 100%;
-    margin-top: 0;
+    min-width: unset;
+    height: 320px;
   }
 `;
 export const WrapContent = styled.div`
@@ -22,11 +23,9 @@ export const WrapContent = styled.div`
   margin: 0 auto;
 
   padding-top: 34px;
-  @media only screen and (max-width: 850px) {
-    /* flex-direction: column;
-
-    width: 100%;
-    padding: 0 20px; */
+  @media only screen and (max-width: 1080px) {
+    width: 95%;
+    min-width: unset;
   }
 `;
 export const Data = styled.div`
@@ -50,9 +49,13 @@ export const Data = styled.div`
   line-height: 140%; /* 22.4px */
   @media only screen and (max-width: 850px) {
     flex-direction: column;
+    height: 30px;
 
-    width: 100%;
+    /* width: 100%; */
     padding: 0 20px;
+    margin-right: auto;
+    margin-bottom: 5px;
+    padding: 5px 22px;
   }
 `;
 export const Text = styled.div`
@@ -106,22 +109,29 @@ export const WrapText = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 50px auto;
-  @media only screen and (max-width: 630px) {
+  @media only screen and (max-width: 1080px) {
+    width: 90%;
+  }
+  @media only screen and (max-width: 650px) {
+    width: 95%;
+
+    flex-direction: column;
   }
 `;
 export const OpisPosla = styled.div`
   position: relative;
   z-index: 10;
   width: 48%;
-  @media only screen and (max-width: 630px) {
+  @media only screen and (max-width: 650px) {
+    width: 90%;
   }
 `;
 export const UvjetiPonuda = styled.div`
   position: relative;
   z-index: 10;
   width: 48%;
-
-  @media only screen and (max-width: 630px) {
+  @media only screen and (max-width: 650px) {
+    width: 90%;
   }
 `;
 export const Uvjeti = styled.div`
@@ -154,19 +164,23 @@ export const NaslovOglasa = styled.h1`
   @media only screen and (max-width: 630px) {
     width: 100%;
     margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 30px;
   }
 `;
 export const WrapDataOglasa = styled.div`
   position: relative;
   z-index: 10;
-  width: auto;
 
   /* align-items: center; */
   /* overflow: hidden; */
   margin: 0 auto;
   display: flex;
+  @media only screen and (max-width: 850px) {
+    flex-direction: column;
+    margin: 0;
+  }
   @media only screen and (max-width: 630px) {
-    width: 100%;
     margin-top: 0;
   }
 `;

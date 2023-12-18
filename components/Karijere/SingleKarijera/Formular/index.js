@@ -6,7 +6,7 @@ import {
   StyledForm,
   StyledInput,
   StyledButton,
-  StyledAlert,
+  StyledButtonMob,
   StyledLabel,
   StyledTextarea,
   WrapData,
@@ -20,39 +20,39 @@ import Image from "next/image.js";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 function Formular() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [passwordInvalid, setPasswordInvalid] = useState(false);
+  const [ime, setIme] = useState("");
+  const [email, setEmail] = useState("");
+  const [telefon, setTelefon] = useState("");
+  const [poruka, setPoruka] = useState("");
+  const [file, setFile] = useState(null);
+
   const [enabled, setEnabled] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // validate password and set passwordInvalid state accordingly
-    if (password.length < 8) {
-      setPasswordInvalid(true);
-    } else {
-      setPasswordInvalid(false);
-    }
   };
-
-  const usernameEntered = (e) => {
-    setUsername(e.target.value);
-    // buttonEnabled(username, password)
+  const handleIme = (e) => {
+    setIme(e.target.value);
   };
-
-  const passwordEntered = (e) => {
-    setPassword(e.target.value);
-    // buttonEnabled(username, password)
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
   };
-
-  const buttonEnabled = (username, password) => {
-    if (username.length > 0 && password.length > 0) {
-      setEnabled(true);
-    } else {
-      setEnabled(false);
-    }
+  const handleTel = (e) => {
+    setTelefon(e.target.value);
   };
+  const handlePoruka = (e) => {
+    setPoruka(e.target.value);
+  };
+  const handleFile = (e) => {
+    setFile(e.target.value);
+  };
+  // const buttonEnabled = (username, password) => {
+  //   if (username.length > 0 && password.length > 0) {
+  //     setEnabled(true);
+  //   } else {
+  //     setEnabled(false);
+  //   }
+  // };
   const size = useWindowSize();
   const [ref, percentage] = useScrollPercentage({
     /* Optional options */
@@ -63,43 +63,44 @@ function Formular() {
       <StyledForm onSubmit={handleSubmit}>
         <WrapData>
           <StyledLabel>Ime i Prezime</StyledLabel>
-          <StyledInput
-            type="text"
-            value={username}
-            onChange={(e) => usernameEntered(e)}
-          />
+          <StyledInput type="text" value={ime} onChange={(e) => handleIme(e)} />
           <DoubleRow>
             <SmallBlock>
               <StyledLabel>Email</StyledLabel>
               <StyledInput
                 type="email"
-                value={password}
-                onChange={(e) => passwordEntered(e)}
+                value={email}
+                onChange={(e) => handleEmail(e)}
               />
             </SmallBlock>
             <SmallBlock>
               <StyledLabel>Broj mobitela</StyledLabel>
               <StyledInput
                 type="tel"
-                value={password}
-                onChange={(e) => passwordEntered(e)}
+                value={telefon}
+                onChange={(e) => handleTel(e)}
               />
             </SmallBlock>
           </DoubleRow>
           <StyledLabel>Poruka</StyledLabel>
           <StyledTextarea
             type="text"
-            value={username}
-            onChange={(e) => usernameEntered(e)}
+            value={poruka}
+            onChange={(e) => handlePoruka(e)}
             rows={4}
           />
           <StyledButton type="submit">Pošalji prijavu</StyledButton>
         </WrapData>
         <WrapUpload>
           <StyledLabel>Upload CV-a:</StyledLabel>
-          <UploadBlock type="file"></UploadBlock>
+
+          <UploadBlock
+            type="file"
+            onChange={(e) => handleFile(e)}
+          ></UploadBlock>
           <UploadBlockTopLayer />
         </WrapUpload>
+        <StyledButtonMob type="submit">Pošalji prijavu</StyledButtonMob>
       </StyledForm>
     </WrapAll>
   );
