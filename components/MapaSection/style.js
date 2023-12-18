@@ -267,7 +267,7 @@ export const TitleUp = styled.h4`
 export const Title = styled.h1`
   position: relative;
   z-index: 10;
-  font-family: "Roboto";
+  font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: var(--h1);

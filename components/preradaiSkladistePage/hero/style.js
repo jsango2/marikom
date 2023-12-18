@@ -44,7 +44,7 @@ export const ContentWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Roboto";
+  font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 55px;
@@ -150,7 +150,7 @@ export const Linija = styled.div`
   }
 `;
 export const Title = styled.h1`
-  font-family: "Roboto";
+  font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 40px;

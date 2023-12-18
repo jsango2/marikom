@@ -109,7 +109,7 @@ export const Icon = styled.div`
 export const Title = styled.h2`
   position: relative;
 
-  font-family: "Roboto";
+  font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: 700;
 

@@ -88,7 +88,7 @@ export const Overlay = styled.div`
 export const Title = styled.h1`
   position: relative;
   z-index: 11;
-  font-family: "Roboto";
+  font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: var(--h1);

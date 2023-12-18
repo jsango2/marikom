@@ -280,7 +280,7 @@ export const UpTitle = styled.h3`
   }
 `;
 export const Title = styled.h1`
-  font-family: "Roboto";
+  font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 40px;

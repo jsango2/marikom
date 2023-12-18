@@ -472,7 +472,7 @@ export const WrapTime = styled.div`
   bottom: 15px;
   left: 20px;
   display: flex;
-  font-family: "Roboto";
+  font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -524,7 +524,7 @@ export const LinkTo2 = styled(LinkTo)`
 export const Title = styled.h1`
   position: relative;
   z-index: 10;
-  font-family: "Roboto";
+  font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
@@ -550,7 +550,7 @@ export const Title = styled.h1`
 export const Title2 = styled.h1`
   position: relative;
   z-index: 10;
-  font-family: "Roboto";
+  font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: 700;
 

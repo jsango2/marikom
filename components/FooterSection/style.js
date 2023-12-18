@@ -120,7 +120,7 @@ export const BlueLine = styled.div`
   }
 `;
 export const Title = styled.h1`
-  font-family: "Roboto";
+  font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: 700;
 
