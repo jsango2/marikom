@@ -10,7 +10,13 @@ import { WrapAll } from "./style.js";
 
 import LanguageSwitcher from "../language switcher/index.js";
 
-const MeniMobile = ({ isOpen, setIsOpen, closeMenu, novostiNaslovi }) => {
+const MeniMobile = ({
+  isOpen,
+  setIsOpen,
+  closeMenu,
+  novostiNaslovi,
+  oglasiNaslovi,
+}) => {
   // const history = useHistory()
   // const goToHome = () => {
   //   // console.log("klikni")
@@ -57,6 +63,7 @@ const MeniMobile = ({ isOpen, setIsOpen, closeMenu, novostiNaslovi }) => {
         <LanguageSwitcher
           closeMenu={closeMenu}
           novostiNaslovi={novostiNaslovi}
+          oglasiNaslovi={oglasiNaslovi}
         />
         <div className="mobileLinks">
           {/* <Link

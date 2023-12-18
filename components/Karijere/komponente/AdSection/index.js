@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from "react";
 
 import {
   AdSectionActionButton,
@@ -13,77 +13,99 @@ import {
   AdSectionWrapper,
   SingleAdBodyText,
   SingleAdTitle,
-} from './style';
-import staticAds from './staticAd.json';
-const TabArray = [
-  { title: 'SVE', id: 0 },
-  { title: 'MARIKOMERC', id: 1 },
-  { title: 'DI MARIS', id: 2 },
-  { title: 'MLS LOGISTICS', id: 3 },
-];
+} from "./style";
+import { useRouter } from "next/router";
+import slugify from "slugify";
+import Link from "next/link";
 
-const AdSection = () => {
-  const [currentActiveTab, setCurrentActiveTab] = React.useState(0);
+const AdSection = (oglasi) => {
+  const [currentActiveTab, setCurrentActiveTab] = React.useState("SVE");
+  const [prikazaniOglasi, setPrikazaniOglasi] = React.useState([]);
+  const sviOglasi = oglasi.oglasi.edges;
+  const sveTvrtke = sviOglasi.map((tv) => tv.node.oglasi.tvrtka);
+  const sveTvrtke2 = sveTvrtke.unshift("SVE");
+  const tvrtke = [...new Set(sveTvrtke)];
+  const { locale } = useRouter();
 
-  const parseDataForRender = () => {
-    if (currentActiveTab === 0) {
-      return staticAds.map((item, index) => {
-        return (
-          <AdSectionSingleAd key={item.naslov} delay={index * 0.75 + 0.75}>
-            <AdSectionSpanBodyWrapper>
-              <span>{`0${index + 1}`}</span>
-              <AdSectionInnerContainer>
-                <SingleAdTitle>
-                  <p>{item.imeFirme}</p>
-                  <h2>{item.naslov}</h2>
-                </SingleAdTitle>
-                <SingleAdBodyText>
-                  <p>Trajanje natječaja do: {item.datum}</p>
-                  <p>Mjesto rada: {item.mjestoRada}</p>
-                </SingleAdBodyText>
-                <AdSectionActionButton>Pogledaj oglas</AdSectionActionButton>
-              </AdSectionInnerContainer>
-            </AdSectionSpanBodyWrapper>
-            <AdSectionBanner logosource={item.logoSource} />
-          </AdSectionSingleAd>
-        );
-      });
+  useEffect(() => {
+    if (currentActiveTab === "SVE") {
+      const data = sviOglasi;
+      setPrikazaniOglasi(data);
     } else {
-      return staticAds
-        .filter((item) => item.id === currentActiveTab.toString())
-        .map((single, index) => (
-          <AdSectionSingleAd key={single.naslov} delay={index * 0.25 + 0.25}>
-            <AdSectionSpanBodyWrapper>
-              <span>{`0${index + 1}`}</span>
-              <AdSectionInnerContainer>
-                <SingleAdTitle>
-                  <p>{single.imeFirme}</p>
-                  <h2>{single.naslov}</h2>
-                </SingleAdTitle>
-                <SingleAdBodyText>
-                  <p>Trajanje natječaja do: {single.datum}</p>
-                  <p>Mjesto rada: {single.mjestoRada}</p>
-                </SingleAdBodyText>
-                <AdSectionActionButton>Pogledaj oglas</AdSectionActionButton>
-              </AdSectionInnerContainer>
-            </AdSectionSpanBodyWrapper>
-            <AdSectionBanner logosource={single.logoSource} />
-          </AdSectionSingleAd>
-        ));
+      const data = sviOglasi.filter(
+        (og) => og.node.oglasi.tvrtka === currentActiveTab
+      );
+      setPrikazaniOglasi(data);
     }
-  };
+  }, [currentActiveTab]);
+
+  console.log(prikazaniOglasi);
 
   return (
     <AdSectionWrapper>
       <AdSectionHeader>TRENUTNO AKTIVNI NATJEČAJI</AdSectionHeader>
       <AdSectionTabs>
-        {TabArray.map((tab, index) => (
-          <AdSectionTab active={currentActiveTab === index} onClick={() => setCurrentActiveTab(index)} key={index}>
-            {tab.title}
+        {tvrtke.map((tab, index) => (
+          <AdSectionTab
+            active={currentActiveTab === tab}
+            onClick={() => setCurrentActiveTab(tab)}
+            key={index}
+          >
+            {tab}
           </AdSectionTab>
         ))}
       </AdSectionTabs>
-      <AdSectionAdContainer>{parseDataForRender()}</AdSectionAdContainer>
+      <AdSectionAdContainer>
+        {prikazaniOglasi.map((item, index) => (
+          <AdSectionSingleAd key={item.node.id} delay={index * 0.75 + 0.75}>
+            <AdSectionSpanBodyWrapper>
+              <span>{`0${index + 1}`}</span>
+              <AdSectionInnerContainer>
+                <SingleAdTitle>
+                  <p>{item.node.oglasi.tvrtka}</p>
+                  <h2>{item.node.oglasi.naslovOglasa}</h2>
+                </SingleAdTitle>
+                <SingleAdBodyText>
+                  <p>
+                    Trajanje natječaja do: {item.node.oglasi.natjecajTrajeDo}
+                  </p>
+                  <p>Mjesto rada: {item.node.oglasi.mjestoRada}</p>
+                </SingleAdBodyText>
+                <AdSectionActionButton>
+                  <Link
+                    href={
+                      locale === "hr"
+                        ? `/karijere/${slugify(
+                            item.node.oglasi.naslovOglasa
+                              .toLowerCase()
+                              .split(" ")
+                              .join("-") +
+                              "-" +
+                              item.node.id,
+                            { locale: "hrv" }
+                          )}`
+                        : `/karijere/${
+                            item.node.oglasi.naslovOglasaEng
+                              .toLowerCase()
+                              .split(" ")
+                              .join("-") +
+                            "-" +
+                            item.node.id
+                          }`
+                    }
+                  >
+                    Pogledaj oglas
+                  </Link>
+                </AdSectionActionButton>
+              </AdSectionInnerContainer>
+            </AdSectionSpanBodyWrapper>
+            <AdSectionBanner
+              logosource={item.node.oglasi.fotografija.sourceUrl}
+            />
+            <AdSectionBanner />
+          </AdSectionSingleAd>
+        ))}
+      </AdSectionAdContainer>
     </AdSectionWrapper>
   );
 };

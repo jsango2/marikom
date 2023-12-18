@@ -19,7 +19,7 @@ import MarikomercLogo from "../svg/MarikomercGrupaWhite.svg";
 // import HeroLogo from "../assets/images/MClogo2023.svg";
 import { useOnClickOutside } from "./helper/useClickOutside";
 
-const Header = ({ siteTitle, novostiNaslovi }) => {
+const Header = ({ siteTitle, novostiNaslovi, oglasiNaslovi }) => {
   const ref = useRef();
   // State for our modal
 
@@ -55,6 +55,7 @@ const Header = ({ siteTitle, novostiNaslovi }) => {
           setIsOpen={setIsOpen}
           closeMenu={handleCloseMenu}
           novostiNaslovi={novostiNaslovi}
+          oglasiNaslovi={oglasiNaslovi}
         />
         <div className="headerWrap">
           <div className="navBar">
@@ -159,6 +160,7 @@ const Header = ({ siteTitle, novostiNaslovi }) => {
                   <LanguageSwitcher
                     novostiNaslovi={novostiNaslovi}
                     closeMenu={handleCloseMenu}
+                    oglasiNaslovi={oglasiNaslovi}
                   />
                 </div>
                 {/* <Veza

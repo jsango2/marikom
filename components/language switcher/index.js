@@ -6,7 +6,12 @@ import { useRouter } from "next/router";
 import AppContext from "../../components/AppContext.js";
 import slugify from "slugify";
 
-function LanguageSwitcher({ novostiNaslovi, setMessage, closeMenu }) {
+function LanguageSwitcher({
+  novostiNaslovi,
+  oglasiNaslovi,
+  setMessage,
+  closeMenu,
+}) {
   const context = useContext(AppContext);
   const { locale, asPath } = useRouter();
 
@@ -19,6 +24,8 @@ function LanguageSwitcher({ novostiNaslovi, setMessage, closeMenu }) {
   const chooseMessage = (message) => {
     setMessage(message);
   };
+  console.log(oglasiNaslovi);
+  // console.log(novostiNaslovi);
 
   // funkcija za promjenu jezika i trazenje url-a za istu stranicu na drugom jeziku. novostiNaslovi u propsima dolazi iz parent page Novosti
   function handleRouteChange(lang) {
@@ -37,6 +44,53 @@ function LanguageSwitcher({ novostiNaslovi, setMessage, closeMenu }) {
         // const homeRedirect = getSlug === "" ? "/en" : "/";
         return router.push("/novosti", undefined, { locale: lang });
       }
+      if (asPath === "/karijere") {
+        // const homeRedirect = getSlug === "" ? "/en" : "/";
+        return router.push("/karijere", undefined, { locale: lang });
+      }
+
+      if (asPath.includes("/karijere/")) {
+        const getTranslationRouteForNews = oglasiNaslovi.filter((naslov) =>
+          locale === "en"
+            ? naslov.node.oglasi.naslovOglasaEng
+                .toLowerCase()
+                .split(" ")
+                .join("-") +
+                "-" +
+                naslov.node.id ===
+              getSlug
+            : slugify(
+                naslov.node.oglasi.naslovOglasa
+                  .toLowerCase()
+                  .split(" ")
+                  .join("-") +
+                  "-" +
+                  naslov.node.id,
+                { locale: "hrv" }
+              ) === getSlug
+        );
+
+        const matchingUrl =
+          locale === "hr"
+            ? getTranslationRouteForNews[0].node.oglasi.naslovOglasaEng
+                .toLowerCase()
+                .split(" ")
+                .join("-") +
+              "-" +
+              getTranslationRouteForNews[0].node.id
+            : slugify(
+                getTranslationRouteForNews[0].node.oglasi.naslovOglasa
+                  .toLowerCase()
+                  .split(" ")
+                  .join("-") +
+                  "-" +
+                  getTranslationRouteForNews[0].node.id,
+                { locale: "hrv" }
+              );
+        console.log(matchingUrl);
+        return router.push(matchingUrl, undefined, { locale: lang });
+      }
+
       if (asPath.includes("/novosti/")) {
         const getTranslationRouteForNews = novostiNaslovi.filter((naslov) =>
           locale === "en"

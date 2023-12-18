@@ -1,10 +1,11 @@
+import Link from "next/link";
 import styled, { keyframes } from "styled-components";
 
-const adsAnimation = keyframes`
-to {
-  transform: translateY(0);
-  opacity: 1;
-}`;
+// {const adsAnimation = keyframes
+// to {
+//   transform: translateY(0);
+//   opacity: 1;
+// }`;}
 
 export const AdSectionWrapper = styled.div`
   display: flex;
@@ -118,10 +119,10 @@ export const AdSectionSingleAd = styled.div`
   gap: 1rem;
   justify-content: space-between;
   padding: 0 3rem;
-  transform: translateY(-50%);
-  opacity: 0;
-  animation: ${adsAnimation} 1s ease forwards;
-  animation-delay: ${(props) => props.delay + "s"};
+  /* transform: translateY(-50%); */
+  opacity: 1;
+  /* animation: ${adsAnimation} 1s ease forwards; */
+  /* animation-delay: ${(props) => props.delay + "s"}; */
   @media only screen and (max-width: 1440px) {
     justify-content: center;
 
@@ -193,7 +194,7 @@ export const SingleAdBodyText = styled.div`
   }
 `;
 
-export const AdSectionActionButton = styled.button`
+export const AdSectionActionButton = styled.div`
   width: clamp(5rem, 12rem, 12rem);
   border-radius: 0.25rem;
   background: #4299c8;
@@ -208,7 +209,13 @@ export const AdSectionActionButton = styled.button`
   height: 2.65rem;
   padding: 0.25rem 0.5rem;
   transition: all 250ms ease;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    text-decoration: none;
+    color: white;
+  }
   &:hover {
     transform: scale(0.95);
     background: #b5d3e3;
