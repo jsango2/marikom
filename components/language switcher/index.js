@@ -31,7 +31,6 @@ function LanguageSwitcher({
   function handleRouteChange(lang) {
     if (lang != locale) {
       const getSlug = window.location.pathname.split("/").pop();
-      console.log(asPath);
       if (asPath === "/") {
         const homeRedirect = locale === "hr" ? "/en" : "/";
         return router.push(homeRedirect, undefined, { locale: lang });

@@ -1310,9 +1310,9 @@ select {
   .formCalcSubmit {
     margin-top: 0px;
   }
-  .languageSwitchWrap {
+  /* .languageSwitchWrap {
     margin-bottom: 60px;
-  }
+  } */
   .resetZone {
     margin: 0;
     position: relative;
