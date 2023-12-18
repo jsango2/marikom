@@ -131,7 +131,7 @@ export const AdSectionSingleAd = styled.div`
 
   place-items: center;
   width: 100%;
-  height: 100%;
+  height: 332px;
   background: linear-gradient(
     180deg,
     rgba(199, 199, 199, 0.1) 0%,
