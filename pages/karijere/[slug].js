@@ -18,7 +18,7 @@ import {
   MaliNaslov,
   Text,
   WrapAll,
-} from "../../components/Karijere/SingleKarijera/style.js";
+} from "../../components/KarijerePage/SingleKarijera/style.js";
 import AppContext from "../../components/AppContext.js";
 import { BlueLine } from "../../components/NovostiSection/newsCard/style.js";
 import parse from "html-react-parser";
@@ -27,8 +27,8 @@ import slugify from "slugify";
 import Head from "next/head.js";
 import en from "../../locales/en.json";
 import hr from "../../locales/hr.json";
-import Formular from "../../components/Karijere/SingleKarijera/Formular/index.js";
-import AdSection from "../../components/karijere/komponente/AdSection/index.js";
+import Formular from "../../components/KarijerePage/SingleKarijera/Formular/index.js";
+import AdSection from "../../components/KarijerePage/komponente/AdSection/index.js";
 
 export default function News({ pageData, params, oglasiNaslovi, oglasi }) {
   const { locale, locales, defaultLocale, asPath, basePath } = useRouter();

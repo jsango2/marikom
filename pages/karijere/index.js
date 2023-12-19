@@ -1,9 +1,9 @@
-import AppHeader from "../../components/Karijere/komponente/AppHeader";
-import MasterContainer from "../../components/Karijere/komponente/MasterContainer";
-import CompanyLogos from "../../components/Karijere/komponente/CompanyLogos";
-import MainSection from "../../components/Karijere/komponente/MainSection";
-import AdSection from "../../components/Karijere/komponente/AdSection";
-import ContactSection from "../../components/Karijere/komponente/ContactSection";
+import AppHeader from "../../components/KarijerePage/komponente/AppHeader";
+import MasterContainer from "../../components/KarijerePage/komponente/MasterContainer";
+import CompanyLogos from "../../components/KarijerePage/komponente/CompanyLogos";
+import MainSection from "../../components/KarijerePage/komponente/MainSection";
+import AdSection from "../../components/KarijerePage/komponente/AdSection";
+import ContactSection from "../../components/KarijerePage/komponente/ContactSection";
 import Layout from "../../components/layout";
 import { getAllOglasi } from "../../lib/api2";
 import slugify from "slugify";
