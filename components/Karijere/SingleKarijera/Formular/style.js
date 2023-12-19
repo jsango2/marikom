@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const WrapAll = styled.div`
   position: relative;
   z-index: 10;
-  height: 620px;
+  height: 520px;
   width: 100%;
   min-width: 1080px;
   margin: 0 auto;

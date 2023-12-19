@@ -66,7 +66,16 @@
     "datumObjave": "Datum objave natječaja",
     "opisPosla": "OPIS POSLA",
     "uvjeti": "UVJETI",
-    "stoNudimo": "ŠTO NUDIMO"
+    "trajanjeNatjecaja": "Trajanje natječaja do:",
+    "mjestoRada": "Mjesto rada:",
+    "pogledajOglasButton": "Pogledaj oglas",
+    "stoNudimo": "ŠTO NUDIMO",
+    "karijere": "Karijere",
+    "naslov": "Više od 150 profesionalaca u službi izvrsnosti",
+    "text": "<p> Marikomerc kao gospodarska tvrtka na polju proizvodnje, smrznute ribe i ribljih proizvoda kontinuirano radi na poboljšanju poslovanja i kvalitete naših proizvoda. Zapošljavamo preko 150 djelatnika, te je danas zahvaljujući baš njima postala inovativna i brzorastuća tvrtka.</p><p> U procesu organizacijskih, tehnoloških i inovativnih rješenja svakodnevno stavljamo snažni fokus na rast i razvijanje potencijala i vještina zaposlenika u poslovanju organizacije.</p><p> Stoga, u svrhu daljnjeg razvoja zapošljavamo ambiciozne, timski orijentirane osobe s relevantnim stručnim kompetencijama i iskustvom koje ćemo nastojati obogatiti daljnjim razvitkom prateći trendove u poslovanju. </p> <p> Prijavite se na neki od naših aktualnih natječaja koji odgovaraju vašem profilu i postanite dio Marikomerc tima.</p>",
+    "aktivniNatjecaji": "Trenutno aktivni natječaji",
+    "zivotopisi": "<p> Vaše životopise šaljite na <a href='mailto:posao@marikomerc.hr'>posao@marikomerc.hr</a>, a za sve informacije nazovite: <a href='tel:023 342 615'>023 342 615</a> ili nas kontaktirajte putem <a href='//'>Linkedin-a</a>.</p><p>Za više informacija pratite našu web stranicu ili nas kontaktirajte otvorenom molbom putem emaila.</p>",
+    "nismoSamo": "Nismo samo distributer kvalitetne hrane, već tim ljudi koji će vam pomoći u unapređivanju vašeg poslovanja, koji će se pobrinuti da najbolji proizvodi u što kraćem vremenu stignu do vas."
   },
   "Horeca": {
     "FAQ": "Najčešća pitanja",
@@ -84,5 +93,12 @@
     "Title": "Svaki dan dostavljamo na više od 400 prodajnih mjesta u Hrvatskoj",
     "Text": "3 distributivna centara raspoređena od Rijeke do Dubrovnika i partneri u Zagrebu i Splitu nam omogućuju optimalnu kapilarnost, a obnovljena flota od 23 kamiona hladnjača nam jamči siguran hladni lanac i brze isporuke. Uz našu logističku podršku možete bolje planirati svoje zalihe i time ostvariti uštede.",
     "buttonText": "Kontakti regionalnih prodajnih centara"
+  },
+  "Formular": {
+    "ime": "Ime i Prezime",
+    "broj": "Broj mobitela",
+    "poruka": "Poruka",
+    "button": "Pošalji prijavu",
+    "upload": "Upload CV-a"
   }
 }

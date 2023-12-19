@@ -24,7 +24,7 @@ export const AdSectionHeader = styled.h2`
   font-style: normal;
   font-weight: 600;
   line-height: 120%;
-
+  text-transform: uppercase;
   &::before {
     position: absolute;
     display: block;
@@ -175,7 +175,7 @@ export const SingleAdTitle = styled.div`
   h2 {
     max-width: 500px;
     color: #1c2640;
-    font-family: Gilroy;
+    font-family: "Gilroy";
     font-size: 30px;
     font-style: normal;
     font-weight: 700;

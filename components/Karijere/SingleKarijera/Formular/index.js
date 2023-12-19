@@ -18,8 +18,13 @@ import {
 import { useState } from "react";
 import Image from "next/image.js";
 // import "bootstrap/dist/css/bootstrap.min.css";
+import en from "../../../../locales/en.json";
+import hr from "../../../../locales/hr.json";
+import { useRouter } from "next/router.js";
 
 function Formular() {
+  const { locale } = useRouter();
+  const t = locale === "en" ? en : hr;
   const [ime, setIme] = useState("");
   const [email, setEmail] = useState("");
   const [telefon, setTelefon] = useState("");
@@ -62,7 +67,7 @@ function Formular() {
     <WrapAll ref={ref}>
       <StyledForm onSubmit={handleSubmit}>
         <WrapData>
-          <StyledLabel>Ime i Prezime</StyledLabel>
+          <StyledLabel>{t.Formular.ime}</StyledLabel>
           <StyledInput type="text" value={ime} onChange={(e) => handleIme(e)} />
           <DoubleRow>
             <SmallBlock>
@@ -74,7 +79,7 @@ function Formular() {
               />
             </SmallBlock>
             <SmallBlock>
-              <StyledLabel>Broj mobitela</StyledLabel>
+              <StyledLabel>{t.Formular.broj}</StyledLabel>
               <StyledInput
                 type="tel"
                 value={telefon}
@@ -82,17 +87,17 @@ function Formular() {
               />
             </SmallBlock>
           </DoubleRow>
-          <StyledLabel>Poruka</StyledLabel>
+          <StyledLabel>{t.Formular.poruka}</StyledLabel>
           <StyledTextarea
             type="text"
             value={poruka}
             onChange={(e) => handlePoruka(e)}
             rows={4}
           />
-          <StyledButton type="submit">Pošalji prijavu</StyledButton>
+          <StyledButton type="submit">{t.Formular.button}</StyledButton>
         </WrapData>
         <WrapUpload>
-          <StyledLabel>Upload CV-a:</StyledLabel>
+          <StyledLabel>{t.Formular.upload}</StyledLabel>
 
           <UploadBlock
             type="file"
@@ -100,7 +105,7 @@ function Formular() {
           ></UploadBlock>
           <UploadBlockTopLayer />
         </WrapUpload>
-        <StyledButtonMob type="submit">Pošalji prijavu</StyledButtonMob>
+        <StyledButtonMob type="submit">{t.Formular.button}</StyledButtonMob>
       </StyledForm>
     </WrapAll>
   );

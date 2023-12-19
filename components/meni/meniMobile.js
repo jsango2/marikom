@@ -17,24 +17,32 @@ const MeniMobile = ({
   novostiNaslovi,
   oglasiNaslovi,
 }) => {
+  const [isOnamaOpen, setIsOnamaOpen] = useState(false);
   // const history = useHistory()
   // const goToHome = () => {
   //   // console.log("klikni")
   //   // let path = `/`
   //   // history.push(path)
   // }
+  console.log(isOnamaOpen);
   return (
     <>
       <div className={`menu ${isOpen ? "openMenu" : "closedMenu"}`}>
-        <Link
+        <p
           className="mobileLinks"
-          href="/blog"
-          // onClick={() => {
-          //   setIsOpen(false);
-          // }}
+          onClick={() => {
+            setIsOnamaOpen(!isOnamaOpen);
+          }}
         >
-          O nama
-        </Link>
+          O nama &gt;
+        </p>
+        {isOnamaOpen && (
+          <>
+            <div className="mobileLinks">Naša priča</div>
+            <div className="mobileLinks">Marikomerc kvalitete</div>
+            <div className="mobileLinks">Prerada i skladište</div>
+          </>
+        )}
         <Link
           className="mobileLinks"
           href="/proizvodi"

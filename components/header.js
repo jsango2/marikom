@@ -101,9 +101,6 @@ const Header = ({ siteTitle, novostiNaslovi, oglasiNaslovi }) => {
                     <Link className="navLinkDrop" href="/prerada-i-skladiste">
                       Prerada i skladište
                     </Link>
-                    <Link className="navLinkDrop" href="/press">
-                      PRESS
-                    </Link>
                   </div>
                   <div
                     style={{ cursor: "pointer", marginRight: "20px" }}

@@ -17,18 +17,28 @@ import {
 import { useRouter } from "next/router";
 import slugify from "slugify";
 import Link from "next/link";
+import en from "../../../../locales/en.json";
+import hr from "../../../../locales/hr.json";
+import parse from "html-react-parser";
 
 const AdSection = (oglasi) => {
-  const [currentActiveTab, setCurrentActiveTab] = React.useState("SVE");
+  const { locale } = useRouter();
+  const [currentActiveTab, setCurrentActiveTab] = React.useState(
+    locale === "hr" ? "SVE" : "ALL"
+  );
   const [prikazaniOglasi, setPrikazaniOglasi] = React.useState([]);
   const sviOglasi = oglasi.oglasi.edges;
   const sveTvrtke = sviOglasi.map((tv) => tv.node.oglasi.tvrtka);
-  const sveTvrtke2 = sveTvrtke.unshift("SVE");
+  if (locale === "hr") {
+    sveTvrtke.unshift("SVE");
+  } else {
+    sveTvrtke.unshift("ALL");
+  }
   const tvrtke = [...new Set(sveTvrtke)];
-  const { locale } = useRouter();
 
+  const t = locale === "en" ? en : hr;
   useEffect(() => {
-    if (currentActiveTab === "SVE") {
+    if (currentActiveTab === "SVE" || currentActiveTab === "ALL") {
       const data = sviOglasi;
       setPrikazaniOglasi(data);
     } else {
@@ -43,7 +53,7 @@ const AdSection = (oglasi) => {
 
   return (
     <AdSectionWrapper>
-      <AdSectionHeader>TRENUTNO AKTIVNI NATJEČAJI</AdSectionHeader>
+      <AdSectionHeader>{t.Karijere.aktivniNatjecaji}</AdSectionHeader>
       <AdSectionTabs>
         {tvrtke.map((tab, index) => (
           <AdSectionTab
@@ -63,13 +73,20 @@ const AdSection = (oglasi) => {
               <AdSectionInnerContainer>
                 <SingleAdTitle>
                   <p>{item.node.oglasi.tvrtka}</p>
-                  <h2>{item.node.oglasi.naslovOglasa}</h2>
+                  <h2>
+                    {locale === "hr"
+                      ? item.node.oglasi.naslovOglasa
+                      : item.node.oglasi.naslovOglasaEng}
+                  </h2>
                 </SingleAdTitle>
                 <SingleAdBodyText>
                   <p>
-                    Trajanje natječaja do: {item.node.oglasi.natjecajTrajeDo}
+                    {t.Karijere.trajanjeNatjecaja}{" "}
+                    {item.node.oglasi.natjecajTrajeDo}
                   </p>
-                  <p>Mjesto rada: {item.node.oglasi.mjestoRada}</p>
+                  <p>
+                    {t.Karijere.mjestoRada} {item.node.oglasi.mjestoRada}
+                  </p>
                 </SingleAdBodyText>
                 <AdSectionActionButton>
                   <Link
@@ -94,7 +111,7 @@ const AdSection = (oglasi) => {
                           }`
                     }
                   >
-                    Pogledaj oglas
+                    {t.Karijere.pogledajOglasButton}
                   </Link>
                 </AdSectionActionButton>
               </AdSectionInnerContainer>

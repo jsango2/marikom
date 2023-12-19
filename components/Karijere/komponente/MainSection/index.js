@@ -12,8 +12,14 @@ import {
   SectionSvgTwo,
 } from "./style";
 import { useObserver } from "../../../helper/utils/hooks/useObserver";
+import en from "../../../../locales/en.json";
+import hr from "../../../../locales/hr.json";
+import { useRouter } from "next/router";
+import parse from "html-react-parser";
 
 const MainSection = () => {
+  const { locale } = useRouter();
+  const t = locale === "en" ? en : hr;
   const mainSectionRef = React.useRef();
   const isEntryIntersecting = useObserver(mainSectionRef, {
     rootMargin: "200px",
@@ -24,38 +30,15 @@ const MainSection = () => {
       <SectionBreadcrumbsWrapper>
         <SectionHeadlineSpan />
         <Breadcrumbs>
-          <p>Karijere</p>
+          <p>{t.Karijere.karijere}</p>
         </Breadcrumbs>
         <SectionHeadlineText>
-          <h2>Više od 150 profesionalaca u službi izvrsnosti</h2>
+          <h2>{t.Karijere.naslov}</h2>
         </SectionHeadlineText>
       </SectionBreadcrumbsWrapper>
 
       <InnerWrapper ref={mainSectionRef}>
-        <SectionBodyText>
-          <p>
-            Marikomerc kao gospodarska tvrtka na polju proizvodnje, smrznute
-            ribe i ribljih proizvoda kontinuirano radi na poboljšanju poslovanja
-            i kvalitete naših proizvoda. Zapošljavamo preko 150 djelatnika, te
-            je danas zahvaljujući baš njima postala inovativna i brzorastuća
-            tvrtka.
-          </p>
-          <p>
-            U procesu organizacijskih, tehnoloških i inovativnih rješenja
-            svakodnevno stavljamo snažni fokus na rast i razvijanje potencijala
-            i vještina zaposlenika u poslovanju organizacije.
-          </p>
-          <p>
-            Stoga, u svrhu daljnjeg razvoja zapošljavamo ambiciozne, timski
-            orijentirane osobe s relevantnim stručnim kompetencijama i iskustvom
-            koje ćemo nastojati obogatiti daljnjim razvitkom prateći trendove u
-            poslovanju.
-          </p>
-          <p>
-            Prijavite se na neki od naših aktualnih natječaja koji odgovaraju
-            vašem profilu i postanite dio Marikomerc tima.
-          </p>
-        </SectionBodyText>
+        <SectionBodyText>{parse(t.Karijere.text)}</SectionBodyText>
         <SectionImages isIntersecting={isEntryIntersecting} />
 
         <SectionSvgOne />

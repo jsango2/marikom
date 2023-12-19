@@ -77,6 +77,7 @@ export const ContactSectionHeadingTwo = styled.h2`
   color: #b5d3e3;
   padding: 0 1rem;
   max-width: 60ch;
+  text-decoration: none;
 `;
 
 export const ContactSectionImageStack = styled.div`
@@ -120,11 +121,11 @@ export const ContactSectionImage = styled.div`
     transform: scale(1.02);
   }
 
-  &:hover::after {
+  /* &:hover::after {
     transform: translateY(0);
     backdrop-filter: blur(2px);
     content: "Content";
-  }
+  } */
   @media only screen and (max-width: 630px) {
     height: 24rem;
   }

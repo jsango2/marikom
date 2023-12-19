@@ -183,3 +183,12 @@ export const WrapDataOglasa = styled.div`
     margin-top: 0;
   }
 `;
+export const WrapAll = styled.div`
+  position: relative;
+  z-index: 10;
+  padding-bottom: 100px;
+  @media only screen and (max-width: 850px) {
+  }
+  @media only screen and (max-width: 630px) {
+  }
+`;
