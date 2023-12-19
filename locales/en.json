@@ -63,9 +63,26 @@
   },
   "Karijere": {
     "rokPrijave": "Application Deadline",
-    "datumObjave": "Publication Date of the Job Posting",
+    "datumObjave": "Ad published on",
     "opisPosla": "Job Description",
     "uvjeti": "Requirements",
     "stoNudimo": "What We Offer"
+  },
+  "Horeca": {
+    "FAQ": "Frequently asked questions",
+    "accordion1Title": "Where can I see your assortment?",
+    "accordion1Text": "You can view our assortment on the website or in our catalog. Additionally, more information about the items is available by phone or email.",
+    "accordion2Title": "How can I order your products?",
+    "accordion2Text": "You can order our products by phone, email, or through our field sales representatives. Delivery to locations covered by transport will be arranged on the next available date. Orders can also be personally picked up at one of our wholesale branches during business hours.",
+    "accordion3Title": "Can individuals buy your products?",
+    "accordion3Text": "In our wholesale branches, individuals can purchase products from our range. Our products are also available for purchase at all DI Maris fish markets.",
+    "accordion4Title": "Where are we located?",
+    "accordion4Text": "The headquarters and central warehouse of Marikomerc d.o.o. are located in the industrial zone of Graba in Poličnik. Additionally, our products are available at our distribution centers in Rijeka, Milutina Barača 19, and Dubrovnik, Sustjepanska obala 34.",
+    "accordion5Title": "Do you deliver your products to customers?",
+    "accordion5Text": "We provide capillary delivery service directly to the address of the business entity for our business partners.",
+    "topTitle": "DISTRIBUTION CENTERS IN CROATIA",
+    "Title": "Every day we deliver to over 400 sales points in Croatia",
+    "Text": "3 distribution centers located from Rijeka to Dubrovnik and partners in Zagreb and Split enable optimal capillarity, and a renewed fleet of 23 refrigerated trucks guarantees a secure cold chain and fast deliveries. With our logistic support, you can better plan your stocks and achieve savings.",
+    "buttonText": "Contacts of regional sales centers"
   }
 }

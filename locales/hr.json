@@ -67,5 +67,22 @@
     "opisPosla": "OPIS POSLA",
     "uvjeti": "UVJETI",
     "stoNudimo": "ŠTO NUDIMO"
+  },
+  "Horeca": {
+    "FAQ": "Najčešća pitanja",
+    "accordion1Title": "Gdje mogu vidjeti vaš asortiman?",
+    "accordion1Text": "Naš asortiman možete pogledati na web stranici ili u našem katalogu. Također, dodatne informacije o artiklima su dostupne telefonski ili putem maila.",
+    "accordion2Title": "Kako mogu naručiti vaše proizvode?",
+    "accordion2Text": "Naše proizvode možete naručiti telefonom, emailom ili preko naših komercijalista na terenu. Dostava na lokacije pokrivene transportom će biti odrađene prvim sljedećim terminom. Narudžbe se mogu i osobno preuzeti na nekom od naših veleprodajnih poslovnica u radnom vremenu.",
+    "accordion3Title": "Mogu li fizičke osobe kupiti vaše proizvode?",
+    "accordion3Text": "U našim veleprodajnim poslovnicama možete kupiti proizvode iz naše ponude i kao fizička osoba. Naše proizvode također možete kupiti u svim DI Maris ribarnicama.",
+    "accordion4Title": "Gdje se nalazimo?",
+    "accordion4Text": "Sjedište i centralno skladište Marikomerc d.o.o. se nalazi u industrijskoj zoni Grabi u Poličniku. Također, naši proizvodi dostupni su i u našim distributivnim centrima Rijeka, Milutina Barača 19, te Dubrovnik, Sustjepanska obala 34.",
+    "accordion5Title": "Dostavljate li svoje proizvode kupcima?",
+    "accordion5Text": "Za naše poslovne partnere vršimo uslugu kapilarne dostave direktno na adresu poslovnog subjekta.",
+    "topTitle": "DISTRIBUTIVNI CENTRI U HRVATSKOJ",
+    "Title": "Svaki dan dostavljamo na više od 400 prodajnih mjesta u Hrvatskoj",
+    "Text": "3 distributivna centara raspoređena od Rijeke do Dubrovnika i partneri u Zagrebu i Splitu nam omogućuju optimalnu kapilarnost, a obnovljena flota od 23 kamiona hladnjača nam jamči siguran hladni lanac i brze isporuke. Uz našu logističku podršku možete bolje planirati svoje zalihe i time ostvariti uštede.",
+    "buttonText": "Kontakti regionalnih prodajnih centara"
   }
 }

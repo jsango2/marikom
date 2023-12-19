@@ -39,6 +39,10 @@ function LanguageSwitcher({
         const homeRedirect = locale === "hr" ? "/en/proizvodi" : "/proizvodi";
         return router.push(homeRedirect, undefined, { locale: lang });
       }
+      if (asPath === "/horeca") {
+        const homeRedirect = locale === "hr" ? "/en/horeca" : "/horeca";
+        return router.push(homeRedirect, undefined, { locale: lang });
+      }
       if (asPath === "/novosti") {
         // const homeRedirect = getSlug === "" ? "/en" : "/";
         return router.push("/novosti", undefined, { locale: lang });

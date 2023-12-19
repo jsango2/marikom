@@ -418,38 +418,54 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 /* ---ACCORDION--- */
 
-.accordion-button::after {
-  display: none;
-}
-.accordion-button::before {
-  position: relative;
-  top: -2px;
-  content: "+";
-  margin-right: 20px;
-  font-size: 20px;
-  font-weight: 700;
-}
-.accordion-button {
-  border-left: 28px solid #1c2640 !important;
-  border-radius: 0 !important;
-}
-.accordion-body {
-  border-left: 28px solid #4299c8 !important;
+/* .accordion-body {
+  background-color: #057426;
+} */
+
+.accordion {
+  --bs-accordion-bg: rgba(255, 0, 0, 0) !important;
+  --bs-accordion-border-color: #ffffff1a !important;
+  --bs-accordion-border-width: var(--bs-border-width);
 }
 .accordion-header {
-  font-family: "Gilroy" !important;
+  height: 88px !important;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FFFFFF'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+}
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FFFFFF'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+}
+.accordion-body {
+  color: white !important ;
+  color: rgba(255, 255, 255, 0.6) !important;
+  /* P */
+  font-family: Gilroy !important;
+  font-size: 16px !important;
   font-style: normal !important;
-  font-weight: 500 !important;
-  font-size: 18px !important;
-  color: #1c2640 !important;
+  font-weight: 400 !important;
+  line-height: 140% !important; /* 22.4px */
+  padding: 0px 20px 40px 20px !important;
 }
-.accordion-button:not(.collapsed) {
-  background-color: white !important;
-}
+.accordion-button {
+  color: white !important ;
+  background-color: #0c0b6200 !important;
+  /* border-bottom: none !important; */
 
+  /* M-H3 */
+  font-family: "Roboto";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 24px */
+}
 .accordion-button:focus {
+  z-index: 3;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+  outline: 0;
   box-shadow: none !important;
 }
+
 /* ---ACCORDION--- */
 
 /* .slick-dots li {

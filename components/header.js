@@ -123,7 +123,7 @@ const Header = ({ siteTitle, novostiNaslovi, oglasiNaslovi }) => {
                   </Link>
                 </div>
                 <div>
-                  <Link className="navLink" href="/imate-restoran">
+                  <Link className="navLink" href="/horeca">
                     HoReCa suradnja
                   </Link>
                 </div>

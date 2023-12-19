@@ -44,8 +44,8 @@ const MeniMobile = ({
         >
           Proizvodi
         </Link>
-        <Link className="mobileLinks" href="http://www.zadarnight.run">
-          Imate restoran?
+        <Link className="mobileLinks" href="/horeca">
+          HoReCa suradnja
         </Link>
         <Link className="mobileLinks" href="/karijere">
           Karijere
