@@ -13,10 +13,13 @@ import {
   AdSectionWrapper,
   SingleAdBodyText,
   SingleAdTitle,
-} from "./style";
+} from "./style.js";
 import { useRouter } from "next/router";
 import slugify from "slugify";
 import Link from "next/link";
+import mlsLogo from "../../../../public/karijereLogo/MLS.png";
+import diMarisLogo from "../../../../public/karijereLogo/diMaris.png";
+import marikomercLogo from "../../../../public/karijereLogo/marikomerc.png";
 
 const AdSection = (oglasi) => {
   const [currentActiveTab, setCurrentActiveTab] = React.useState("SVE");
@@ -100,7 +103,13 @@ const AdSection = (oglasi) => {
               </AdSectionInnerContainer>
             </AdSectionSpanBodyWrapper>
             <AdSectionBanner
-              logosource={item.node.oglasi.fotografija.sourceUrl}
+              logosource={
+                item.node.oglasi.tvrtka === "Marikomerc"
+                  ? "/karijereLogo//marikomerc.png"
+                  : item.node.oglasi.tvrtka === "MLS"
+                  ? "/karijereLogo//MLS.png"
+                  : "/karijereLogo//diMaris.png"
+              }
             />
             <AdSectionBanner />
           </AdSectionSingleAd>

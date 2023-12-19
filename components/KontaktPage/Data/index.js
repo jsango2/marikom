@@ -1,4 +1,16 @@
-import { WrapAllContactData, WrapContent } from "./style.js";
+import {
+  WrapAllContactData,
+  WrapContent,
+  Photo,
+  Data,
+  Ceo,
+  WrapText,
+  Ime,
+  Pozicija,
+  Funkcija,
+  Email,
+  Block,
+} from "./style.js";
 
 import useWindowSize from "../../helper/usewindowsize";
 import Image from "next/image.js";
@@ -14,7 +26,52 @@ function ContactData() {
   const size = useWindowSize();
   return (
     <WrapAllContactData>
-      <WrapContent></WrapContent>
+      <WrapContent>
+        <Ceo>
+          <Photo></Photo>
+          <WrapText>
+            <Ime>Ivan Dell'Orco </Ime>
+            <Pozicija>Predsjednik nadzornog Odbora</Pozicija>
+          </WrapText>
+        </Ceo>
+        <Data>
+          <Block>
+            <Ime>Grgo Anzulović, </Ime>
+            <Funkcija>Direktor prodaje i marketinga</Funkcija>
+            <Email>grgo.anzulovic@marikomerc.hr</Email>
+          </Block>
+          <Block>
+            <Ime>Grgo Anzulović, </Ime>
+            <Funkcija>Direktor prodaje i marketinga</Funkcija>
+            <Email>grgo.anzulovic@marikomerc.hr</Email>
+          </Block>{" "}
+          <Block>
+            <Ime>Grgo Anzulović, </Ime>
+            <Funkcija>Direktor prodaje i marketinga</Funkcija>
+            <Email>grgo.anzulovic@marikomerc.hr</Email>
+          </Block>{" "}
+          <Block>
+            <Ime>Grgo Anzulović, </Ime>
+            <Funkcija>Direktor prodaje i marketinga</Funkcija>
+            <Email>grgo.anzulovic@marikomerc.hr</Email>
+          </Block>{" "}
+          <Block>
+            <Ime>Grgo Anzulović, </Ime>
+            <Funkcija>Direktor prodaje i marketinga</Funkcija>
+            <Email>grgo.anzulovic@marikomerc.hr</Email>
+          </Block>{" "}
+          <Block>
+            <Ime>Grgo Anzulović, </Ime>
+            <Funkcija>Direktor prodaje i marketinga</Funkcija>
+            <Email>grgo.anzulovic@marikomerc.hr</Email>
+          </Block>{" "}
+          <Block>
+            <Ime>Grgo Anzulović, </Ime>
+            <Funkcija>Direktor prodaje i marketinga</Funkcija>
+            <Email>grgo.anzulovic@marikomerc.hr</Email>
+          </Block>
+        </Data>
+      </WrapContent>
     </WrapAllContactData>
   );
 }

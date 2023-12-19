@@ -11,7 +11,7 @@ export const WrapAllContactData = styled.div`
 
   justify-content: flex-start;
   align-items: center; */
-
+  background-image: url("/kontaktBgImg.png");
   @media only screen and (max-width: 850px) {
     padding-top: 40px;
   }
@@ -20,11 +20,106 @@ export const WrapContent = styled.div`
   position: relative;
   z-index: 11;
   display: flex;
-  justify-content: space-evenly;
+
   max-width: 1440px;
   margin: 0 auto;
-  padding: 84px 0 0 25px;
+  padding: 54px 0 0 25px;
+
   @media only screen and (max-width: 1300px) {
     padding: 70px 100px;
+  }
+`;
+export const Photo = styled.div`
+  position: relative;
+  z-index: 11;
+  width: 240px;
+  height: 260px;
+  background-image: url("/dellorco.png");
+  background-size: cover;
+  margin-right: 30px;
+  @media only screen and (max-width: 1300px) {
+  }
+`;
+export const Data = styled.div`
+  position: relative;
+  z-index: 11;
+  margin-left: 130px;
+  @media only screen and (max-width: 1300px) {
+  }
+`;
+export const Ceo = styled.div`
+  position: relative;
+  z-index: 11;
+  display: flex;
+  @media only screen and (max-width: 1300px) {
+  }
+`;
+export const WrapText = styled.div`
+  margin-top: 20px;
+  position: relative;
+  z-index: 11;
+
+  @media only screen and (max-width: 1300px) {
+  }
+`;
+export const Block = styled.div`
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 11;
+
+  @media only screen and (max-width: 1300px) {
+  }
+`;
+export const Ime = styled.div`
+  position: relative;
+  z-index: 11;
+  color: #1c2640;
+  /* gilroy mali */
+  font-family: Gilroy;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 25.2px */
+  @media only screen and (max-width: 1300px) {
+  }
+`;
+export const Funkcija = styled.div`
+  position: relative;
+  z-index: 11;
+  color: #1c2640;
+  /* gilroy mali */
+  font-family: Gilroy;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 25.2px */
+  @media only screen and (max-width: 1300px) {
+  }
+`;
+export const Email = styled.div`
+  position: relative;
+  z-index: 11;
+  color: #1c2640;
+
+  /* gilroy micro */
+  font-family: Gilroy;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+  @media only screen and (max-width: 1300px) {
+  }
+`;
+export const Pozicija = styled.div`
+  position: relative;
+  z-index: 11;
+  color: #1c2640;
+  /* gilroy micro */
+  font-family: Gilroy;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+  @media only screen and (max-width: 1300px) {
   }
 `;
