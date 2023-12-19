@@ -95,6 +95,9 @@ export const AdSectionInnerContainer = styled.div`
     flex-basis: 36rem;
     gap: 1rem;
   }
+  @media only screen and (max-width: 430px) {
+    gap: 0.5rem;
+  }
 
   place-items: center start;
 `;
@@ -110,6 +113,9 @@ export const AdSectionSpanBodyWrapper = styled.div`
   }
   @media only screen and (max-width: 430px) {
     width: 85%;
+  }
+  @media only screen and (max-width: 400px) {
+    gap: 2rem;
   }
 `;
 
@@ -175,6 +181,11 @@ export const SingleAdTitle = styled.div`
     font-weight: 700;
     line-height: 120%; /* 36px */
   }
+  @media only screen and (max-width: 430px) {
+    h2 {
+      font-size: 24px;
+    }
+  }
 `;
 export const SingleAdBodyText = styled.div`
   display: flex;
@@ -191,6 +202,11 @@ export const SingleAdBodyText = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: 142.5%; /* 25.65px */
+  }
+  @media only screen and (max-width: 430px) {
+    p {
+      font-size: 16px;
+    }
   }
 `;
 
@@ -223,6 +239,11 @@ export const AdSectionActionButton = styled.div`
 
   @media only screen and (max-width: 880px) {
     place-self: start;
+  }
+  @media only screen and (max-width: 430px) {
+    height: 30px;
+    width: 160px;
+    font-size: 15px;
   }
 `;
 
