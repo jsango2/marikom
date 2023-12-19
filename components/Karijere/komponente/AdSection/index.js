@@ -17,9 +17,6 @@ import {
 import { useRouter } from "next/router";
 import slugify from "slugify";
 import Link from "next/link";
-import mlsLogo from "../../../../public/karijereLogo/MLS.png";
-import diMarisLogo from "../../../../public/karijereLogo/diMaris.png";
-import marikomercLogo from "../../../../public/karijereLogo/marikomerc.png";
 
 const AdSection = (oglasi) => {
   const [currentActiveTab, setCurrentActiveTab] = React.useState("SVE");
