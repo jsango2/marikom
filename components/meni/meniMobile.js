@@ -76,12 +76,6 @@ const MeniMobile = ({
           oglasiNaslovi={oglasiNaslovi}
         />
         <div>
-          {/* <Link
-            to="/"
-            onClick={() => {
-              setIsOpen(false)
-            }}
-          > */}
           <div
             onClick={() => {
               setIsOpen(false);

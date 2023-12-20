@@ -14,8 +14,11 @@ import Image from "next/image.js";
 import { useRouter } from "next/router.js";
 import slugify from "slugify";
 import { catalogData } from "../../catalogData.js";
+import useScrollBlock from "../../components/helper/useScrollBlock.js";
+import { useEffect } from "react";
 
 function index(props) {
+  const [blockScroll, allowScroll] = useScrollBlock();
   const catDat = catalogData.map(
     (item) => item["IME PROIZVODA - do 60 znakova"]
   );
@@ -38,6 +41,9 @@ function index(props) {
   const otherNovosti = novosti.filter(
     (n) => n.node.novosti.naslov != featuredNovost[0].node.novosti.naslov
   );
+  // useEffect(() => {
+  //   allowScroll();
+  // }, []);
 
   // na stranici /novosti   prikaži featured novost (zadnja novost označena u cms-u kao Featured ili istaknuta)
   // nakon toga prikaži ostale novosti ali bez ove koja je featured(napraviti treba)

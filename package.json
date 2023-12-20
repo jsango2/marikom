@@ -39,6 +39,7 @@
     "react-accessible-accordion": "^5.0.0",
     "react-datepicker": "^4.6.0",
     "react-dom": "^18.2.0",
+    "react-headroom": "^3.2.1",
     "react-html-parser": "^2.0.2",
     "react-i18next": "^13.5.0",
     "react-icons": "^4.3.1",

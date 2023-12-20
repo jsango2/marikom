@@ -20,7 +20,7 @@ import MarikomercLogo from "../svg/MarikomercGrupaWhite.svg";
 import { useOnClickOutside } from "./helper/useClickOutside";
 import useScrollBlock from "../components/helper/useScrollBlock";
 import { useEffect } from "react";
-
+import Headroom from "react-headroom";
 const Header = ({ siteTitle, novostiNaslovi, oglasiNaslovi }) => {
   const ref = useRef();
   // State for our modal
@@ -39,12 +39,16 @@ const Header = ({ siteTitle, novostiNaslovi, oglasiNaslovi }) => {
   function handleCloseMenu() {
     setIsOpen(false);
   }
+
+  // useEffect(() => {
+  //   isOpen == true ? blockScroll() : allowScroll();
+  // }, [isOpen]);
+
+  console.log(isOpen);
   useEffect(() => {
-    if (isOpen === true) {
-      blockScroll();
-    }
-    if (isOpen === false) {
-      allowScroll();
+    const html = document.querySelector("html");
+    if (html) {
+      html.style.overflow = isOpen ? "hidden" : "auto";
     }
   }, [isOpen]);
 
@@ -60,32 +64,32 @@ const Header = ({ siteTitle, novostiNaslovi, oglasiNaslovi }) => {
   return (
     <>
       {/* <Script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js" /> */}
+      <Headroom>
+        <header>
+          <MeniMobile
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+            closeMenu={handleCloseMenu}
+            novostiNaslovi={novostiNaslovi}
+            oglasiNaslovi={oglasiNaslovi}
+          />
+          <div className="headerWrap">
+            <div className="navBar">
+              <Link href="/">
+                <div className="navLink navTitle navLogo">
+                  <Image src="/MClogo2023.svg" layout="fill" />
+                </div>
+              </Link>
+              <div>
+                <GiHamburgerMenu
+                  className="hamburgerMenu"
+                  onClick={() => {
+                    setIsOpen(() => !isOpen);
 
-      <header>
-        <MeniMobile
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-          closeMenu={handleCloseMenu}
-          novostiNaslovi={novostiNaslovi}
-          oglasiNaslovi={oglasiNaslovi}
-        />
-        <div className="headerWrap">
-          <div className="navBar">
-            <Link href="/">
-              <div className="navLink navTitle navLogo">
-                <Image src="/MClogo2023.svg" layout="fill" />
-              </div>
-            </Link>
-            <div>
-              <GiHamburgerMenu
-                className="hamburgerMenu"
-                onClick={() => {
-                  setIsOpen(() => !isOpen);
-
-                  // blockScroll()
-                }}
-              />
-              {/* {isOnamaOpen && (
+                    // blockScroll()
+                  }}
+                />
+                {/* {isOnamaOpen && (
                 <div className="OnamaDropDown" ref={ref}>
                   <Link className="navLinkDrop" href="/o-nama">
                     {router.locale === "hr" ? "Naša priča" : "Our story"}
@@ -102,64 +106,67 @@ const Header = ({ siteTitle, novostiNaslovi, oglasiNaslovi }) => {
                 </div>
               )} */}
 
-              <div className="navLinks">
-                <div className="dropdown">
-                  <div className="dropdown-content">
-                    <Link className="navLinkDrop" href="/o-nama">
-                      {router.locale === "hr" ? "Naša priča" : "Our story"}
-                    </Link>
-                    <Link className="navLinkDrop" href="/marikomerc-kvalitete">
-                      Marikomerc kvalitete
-                    </Link>
-                    <Link className="navLinkDrop" href="/prerada-i-skladiste">
-                      Prerada i skladište
+                <div className="navLinks">
+                  <div className="dropdown">
+                    <div className="dropdown-content">
+                      <Link className="navLinkDrop" href="/o-nama">
+                        {router.locale === "hr" ? "Naša priča" : "Our story"}
+                      </Link>
+                      <Link
+                        className="navLinkDrop"
+                        href="/marikomerc-kvalitete"
+                      >
+                        Marikomerc kvalitete
+                      </Link>
+                      <Link className="navLinkDrop" href="/prerada-i-skladiste">
+                        Prerada i skladište
+                      </Link>
+                    </div>
+                    <div
+                      style={{ cursor: "pointer", marginRight: "20px" }}
+                      // onMouseOver={handleOnamaOpen}
+                    >
+                      <Link className="navLink" href="/">
+                        O nama
+                      </Link>
+                      <ArrowDown
+                        style={{ position: "relative", marginLeft: "-8px" }}
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <Link className="navLink" href="/proizvodi">
+                      Proizvodi
                     </Link>
                   </div>
-                  <div
-                    style={{ cursor: "pointer", marginRight: "20px" }}
-                    // onMouseOver={handleOnamaOpen}
-                  >
-                    <Link className="navLink" href="/">
-                      O nama
+                  <div>
+                    <Link className="navLink" href="/horeca">
+                      HoReCa suradnja
                     </Link>
-                    <ArrowDown
-                      style={{ position: "relative", marginLeft: "-8px" }}
-                    />
                   </div>
-                </div>
-                <div>
-                  <Link className="navLink" href="/proizvodi">
-                    Proizvodi
-                  </Link>
-                </div>
-                <div>
-                  <Link className="navLink" href="/horeca">
-                    HoReCa suradnja
-                  </Link>
-                </div>
-                <div>
-                  <Link className="navLink" href="/karijere">
-                    Karijere
-                  </Link>
-                </div>
-                <div>
-                  <Link className="navLink" href="/kontakt">
-                    Kontakt
-                  </Link>
-                </div>
-                <div>
-                  <Link className="navLink" href="/novosti">
-                    Novosti
-                  </Link>
-                </div>
-                <div className="navLink borderNav"></div>
-                <div>
-                  <Link className="navLink" href="/grupa">
-                    Grupa
-                  </Link>
-                </div>
-                <div className="languageSwitcher">
-                  {/* <ArrowDown
+                  <div>
+                    <Link className="navLink" href="/karijere">
+                      Karijere
+                    </Link>
+                  </div>
+                  <div>
+                    <Link className="navLink" href="/kontakt">
+                      Kontakt
+                    </Link>
+                  </div>
+                  <div>
+                    <Link className="navLink" href="/novosti">
+                      Novosti
+                    </Link>
+                  </div>
+                  <div className="navLink borderNav"></div>
+                  <div>
+                    <Link className="navLink" href="/grupa">
+                      Grupa
+                    </Link>
+                  </div>
+                  <div className="languageSwitcher">
+                    {/* <ArrowDown
                     style={{
                       position: "relative",
                       marginLeft: "-8px",
@@ -167,13 +174,13 @@ const Header = ({ siteTitle, novostiNaslovi, oglasiNaslovi }) => {
                     }}
                   /> */}
 
-                  <LanguageSwitcher
-                    novostiNaslovi={novostiNaslovi}
-                    closeMenu={handleCloseMenu}
-                    oglasiNaslovi={oglasiNaslovi}
-                  />
-                </div>
-                {/* <Veza
+                    <LanguageSwitcher
+                      novostiNaslovi={novostiNaslovi}
+                      closeMenu={handleCloseMenu}
+                      oglasiNaslovi={oglasiNaslovi}
+                    />
+                  </div>
+                  {/* <Veza
                 activeClass="active"
                 to="prijava"
                 spy={true}
@@ -182,12 +189,13 @@ const Header = ({ siteTitle, novostiNaslovi, oglasiNaslovi }) => {
                 duration={1800}
               > */}
 
-                {/* </Veza> */}
+                  {/* </Veza> */}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </header>
+        </header>
+      </Headroom>
     </>
     // </Headroom>
   );
