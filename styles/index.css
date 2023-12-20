@@ -1366,7 +1366,11 @@ select {
     right: 50%;
     width: 100%;
     /* border-radius: 0 0 39px 39px; */
-    background: #101628;
+    background: radial-gradient(
+      91.99% 72.47% at 62.52% 76.02%,
+      #2b3a63 1.65%,
+      #101628 100%
+    );
 
     padding-top: 60px;
     display: flex;
