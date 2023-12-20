@@ -1,10 +1,17 @@
-import { WrapAll, Container, Title, WrapEvents, DashedLine } from "./style.js";
+import {
+  WrapAll,
+  Container,
+  Title,
+  WrapEvents,
+  DashedLine,
+  Icon,
+} from "./style.js";
 
 import Image from "next/image";
 import Link from "next/link";
-import img1 from "../../../assets/images/nasaPrica/oNama/image1.png";
 import Dogadjaj from "./dogadjaj.js";
-
+import { IoIosArrowForward } from "react-icons/io";
+import { useInView } from "react-intersection-observer";
 const events = [
   {
     godina: "1990",
@@ -57,11 +64,21 @@ const events = [
 ];
 
 function Povijest() {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0,
+  });
+
   return (
     <WrapAll>
       <Container>
-        <Title>Naša povijest</Title>
-        <WrapEvents>
+        <Title>
+          Naša povijest
+          <Icon className={` ${inView ? "inView" : "outView"}`}>
+            <IoIosArrowForward size={24} />
+          </Icon>
+        </Title>
+        <WrapEvents ref={ref}>
           {events.map((event, index) => (
             <Dogadjaj key={index} godina={event.godina} text={event.text} />
           ))}

@@ -48,7 +48,7 @@ const Header = ({ siteTitle, novostiNaslovi, oglasiNaslovi }) => {
   useEffect(() => {
     const html = document.querySelector("html");
     if (html) {
-      html.style.overflow = isOpen ? "hidden" : "auto";
+      html.style.overflow = isOpen ? "hidden" : "";
     }
   }, [isOpen]);
 

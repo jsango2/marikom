@@ -7,7 +7,7 @@ import styled from "styled-components";
 export const HeroWrap = styled.div`
   position: relative;
   z-index: 0;
-  min-height: 617px;
+  min-height: 750px;
   height: auto;
   width: 100%;
   display: flex;
@@ -31,7 +31,7 @@ export const HeroWrap = styled.div`
     padding: 100px 0 70px 70px;
   }
   @media only screen and (max-width: 850px) {
-    padding: 0 0 70px 0;
+    padding: 0 0 40px 0;
 
     /* height: 556px; */
   }
@@ -41,7 +41,7 @@ export const ContentWrap = styled.div`
   z-index: 4;
   min-height: 416px;
 
-  max-width: 1257px;
+  max-width: 1440px;
   width: 100%;
   .slick-next {
     right: 100px;
@@ -90,9 +90,19 @@ export const HeroTitle = styled.h1`
   @media only screen and (max-width: 420px) {
   }
 `;
+export const Icon = styled.a`
+  position: absolute;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  bottom: 20px;
+  right: 40px;
+  @media only screen and (max-width: 420px) {
+  }
+`;
 export const WrapSliderContent = styled.div`
-  display: flex !important;
-  justify-content: space-between;
+  display: flex;
+  justify-content: space-evenly;
   flex-wrap: nowrap;
   width: 100%;
   height: auto;
@@ -117,8 +127,13 @@ export const WrapText = styled.div`
 `;
 export const WrapImage = styled.div`
   position: relative;
-  width: 625px;
-  height: 416px;
+  width: 666px;
+  height: 507px;
+  border-radius: 3px;
+  overflow: hidden;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
   @media only screen and (max-width: 850px) {
     width: 100%;
     height: 50vw;

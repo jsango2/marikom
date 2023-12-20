@@ -72,7 +72,7 @@ export const WrapImages = styled.div`
   display: flex;
   justify-content: space-around;
   height: 657px;
-  width: 80%;
+  width: 100%;
   margin-top: 100px;
   @media only screen and (max-width: 850px) {
   }
