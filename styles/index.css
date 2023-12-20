@@ -15,6 +15,7 @@ body .slick-next::before {
   font-weight: normal;
   font-style: normal;
   format: truetype;
+  font-display: swap;
 }
 @font-face {
   font-family: "Gilroy";
@@ -22,6 +23,7 @@ body .slick-next::before {
   font-weight: 700;
   font-style: normal;
   format: truetype;
+  font-display: swap;
 }
 @font-face {
   font-family: "Gilroy";
@@ -29,6 +31,7 @@ body .slick-next::before {
   font-weight: 900;
   font-style: normal;
   format: truetype;
+  font-display: swap;
 }
 @font-face {
   font-family: "Gilroy";
@@ -36,6 +39,7 @@ body .slick-next::before {
   font-weight: 600;
   font-style: normal;
   format: truetype;
+  font-display: swap;
 }
 :root {
   --color-boja-marikomerc-plava: #1c2640ff;

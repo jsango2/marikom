@@ -97,6 +97,10 @@ export const Icon = styled.a`
   color: white;
   bottom: 20px;
   right: 40px;
+
+  &:active {
+    -webkit-tap-highlight-color: transparent;
+  }
   @media only screen and (max-width: 420px) {
   }
 `;
@@ -134,6 +138,10 @@ export const WrapImage = styled.div`
   /* display: flex;
   justify-content: center;
   align-items: center; */
+  background-image: url("/karijereLogo/marikomerc.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   @media only screen and (max-width: 850px) {
     width: 100%;
     height: 50vw;
