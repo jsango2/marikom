@@ -18,10 +18,13 @@ import MarikomercLogo from "../svg/MarikomercGrupaWhite.svg";
 // import HeroLogo from "../assets/images/herologo.png";
 // import HeroLogo from "../assets/images/MClogo2023.svg";
 import { useOnClickOutside } from "./helper/useClickOutside";
+import useScrollBlock from "../components/helper/useScrollBlock";
+import { useEffect } from "react";
 
 const Header = ({ siteTitle, novostiNaslovi, oglasiNaslovi }) => {
   const ref = useRef();
   // State for our modal
+  const [blockScroll, allowScroll] = useScrollBlock();
 
   // Call hook passing in the ref and a function to call on outside click
   // useOnClickOutside(ref, () => setIsOnamaOpen(false));
@@ -36,6 +39,14 @@ const Header = ({ siteTitle, novostiNaslovi, oglasiNaslovi }) => {
   function handleCloseMenu() {
     setIsOpen(false);
   }
+  useEffect(() => {
+    if (isOpen === true) {
+      blockScroll();
+    }
+    if (isOpen === false) {
+      allowScroll();
+    }
+  }, [isOpen]);
 
   // <Headroom
   //   style={{

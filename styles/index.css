@@ -224,7 +224,7 @@ p {
   justify-content: center;
 }
 .headerWrap {
-  width: 100%;
+  width: 100vw;
   height: 65px;
   display: flex;
   justify-content: space-between;
@@ -1367,7 +1367,7 @@ select {
     /* border-radius: 0 0 39px 39px; */
     background: #101628;
 
-    padding-top: 100px;
+    padding-top: 60px;
     padding-left: 30px;
     display: flex;
     flex-direction: column;

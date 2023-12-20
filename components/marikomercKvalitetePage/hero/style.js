@@ -28,11 +28,9 @@ export const HeroWrap = styled.div`
   z-index: 0; */
   overflow: hidden;
   @media only screen and (max-width: 1400px) {
-    padding: 100px 0 70px 70px;
+    /* padding: 100px 0 70px 70px; */
   }
   @media only screen and (max-width: 850px) {
-    padding: 0 0 70px 0;
-
     /* height: 556px; */
   }
 `;
@@ -72,58 +70,7 @@ export const HeroTitle = styled.h1`
   @media only screen and (max-width: 420px) {
   }
 `;
-export const WrapSliderContent = styled.div`
-  display: flex !important;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  width: 100%;
-  height: auto;
 
-  @media only screen and (max-width: 850px) {
-    flex-direction: column-reverse;
-  }
-  @media only screen and (max-width: 420px) {
-  }
-`;
-export const WrapText = styled.div`
-  width: 520px;
-
-  @media only screen and (max-width: 1100px) {
-    padding-right: 25px;
-  }
-  @media only screen and (max-width: 850px) {
-    width: 90%;
-    padding-left: 27px;
-    padding-top: 60px;
-  }
-`;
-export const WrapImage = styled.div`
-  position: relative;
-  width: 625px;
-  height: 416px;
-  @media only screen and (max-width: 850px) {
-    width: 100%;
-    height: 50vw;
-    min-height: 300px;
-    max-height: 780px;
-  }
-  @media only screen and (max-width: 420px) {
-  }
-`;
-export const Broj = styled.div`
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 200px;
-  height: 30px;
-  color: #4299c8;
-  opacity: 0.5;
-
-  @media only screen and (max-width: 600px) {
-  }
-  @media only screen and (max-width: 420px) {
-  }
-`;
 export const Overlay = styled.div`
   position: absolute;
   z-index: 10;
@@ -131,59 +78,8 @@ export const Overlay = styled.div`
   height: 100%;
   background: #1c2640;
   opacity: 0.3;
-
-  @media only screen and (max-width: 600px) {
-  }
-  @media only screen and (max-width: 420px) {
-  }
-`;
-export const Linija = styled.div`
-  position: relative;
-  width: 50px;
-  height: 1px;
-  background-color: #4299c8;
-  margin-right: 54px;
-  opacity: 0.5;
-  @media only screen and (max-width: 600px) {
-  }
-  @media only screen and (max-width: 420px) {
-  }
-`;
-export const Title = styled.h1`
-  font-family: "Roboto Condensed", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-
-  font-size: 40px;
-  line-height: 120%;
-  /* or 48px */
-
-  /* SUNRISE/Sunray */
-
-  color: #f5faff;
-  @media only screen and (max-width: 1200px) {
-    font-size: 36px;
-  }
-  @media only screen and (max-width: 420px) {
-  }
-`;
-export const SubTitle = styled.p`
-  font-family: "Gilroy";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 25px;
-  /* or 179% */
-
-  letter-spacing: 0.175px;
-
-  /* SUNRISE/Sunray */
-
-  color: #f5faff;
-
-  mix-blend-mode: normal;
-  opacity: 0.5;
-  margin-bottom: 45px;
+  top: 0;
+  left: 0;
   @media only screen and (max-width: 600px) {
   }
   @media only screen and (max-width: 420px) {

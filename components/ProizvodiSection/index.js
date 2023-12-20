@@ -11,11 +11,7 @@ import {
 } from "./style.js";
 import Image from "next/image";
 import p1 from "../../assets/images/podmorjeSm.png";
-import ASC from "../../assets/images/certifikat/ASC.svg";
-import IFS from "../../assets/images/certifikat/IFSfood.svg";
-import ISO from "../../assets/images/certifikat/ISO9001.svg";
-import MSC from "../../assets/images/certifikat/MSC.svg";
-import ZZ from "../../assets/images/certifikat/zivjetizdravo.svg";
+
 import overlay from "../../assets/images/overlay.png";
 import ProizvodiCLoud from "./proizvodiCloud/index.js";
 import { useRouter } from "next/router";

@@ -10,6 +10,7 @@ import { WrapAll } from "./style.js";
 
 import LanguageSwitcher from "../language switcher/index.js";
 import { useRouter } from "next/router.js";
+import useScrollBlock from "../helper/useScrollBlock.js";
 
 const MeniMobile = ({
   isOpen,
@@ -20,6 +21,7 @@ const MeniMobile = ({
 }) => {
   const [isOnamaMenuOpen, setIsOnamaMenuOpen] = useState(false);
   const { locale } = useRouter();
+  const [blockScroll, allowScroll] = useScrollBlock();
 
   // const history = useHistory()
   // const goToHome = () => {
@@ -49,8 +51,8 @@ const MeniMobile = ({
         {isOnamaMenuOpen && (
           <div className="mobileSubLinkParent">
             <Link href="/nasa-prica">Naša priča</Link>
-            <Link href="/nasa-prica">Marikomerc kvalitete</Link>
-            <Link href="/nasa-prica">Prerada i skladište</Link>
+            <Link href="/marikomerc-kvalitete">Marikomerc kvalitete</Link>
+            <Link href="/prerada-i-skladiste">Prerada i skladište</Link>
           </div>
         )}
         <Link

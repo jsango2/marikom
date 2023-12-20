@@ -22,7 +22,7 @@ const Hero = () => {
           NA OVIM TEMELJIMA gradimo MARIKOMERC BUDUĆNOSTI
         </ContentWrap>
       </HeroWrap>
-      <Companies />
+      {/* <Companies /> */}
     </>
   );
 };
