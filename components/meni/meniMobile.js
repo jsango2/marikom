@@ -9,6 +9,7 @@ import { WrapAll } from "./style.js";
 // import { HashLink } from "react-router-hash-link";
 
 import LanguageSwitcher from "../language switcher/index.js";
+import { useRouter } from "next/router.js";
 
 const MeniMobile = ({
   isOpen,
@@ -17,31 +18,40 @@ const MeniMobile = ({
   novostiNaslovi,
   oglasiNaslovi,
 }) => {
-  const [isOnamaOpen, setIsOnamaOpen] = useState(false);
+  const [isOnamaMenuOpen, setIsOnamaMenuOpen] = useState(false);
+  const { locale } = useRouter();
+
   // const history = useHistory()
   // const goToHome = () => {
   //   // console.log("klikni")
   //   // let path = `/`
   //   // history.push(path)
   // }
-  console.log(isOnamaOpen);
+  useEffect(() => {
+    if (isOpen === false) {
+      setIsOnamaMenuOpen(false);
+    }
+  }, [isOpen]);
+
   return (
     <>
       <div className={`menu ${isOpen ? "openMenu" : "closedMenu"}`}>
-        <p
-          className="mobileLinks"
+        <div
           onClick={() => {
-            setIsOnamaOpen(!isOnamaOpen);
+            setIsOnamaMenuOpen(!isOnamaMenuOpen);
           }}
+          className={`linkOnama ${
+            isOnamaMenuOpen ? "linkOnamaOpen" : "linkOnamaClosed"
+          }`}
         >
-          O nama &gt;
-        </p>
-        {isOnamaOpen && (
-          <>
-            <div className="mobileLinks">Naša priča</div>
-            <div className="mobileLinks">Marikomerc kvalitete</div>
-            <div className="mobileLinks">Prerada i skladište</div>
-          </>
+          {locale === "hr" ? "O nama" : "About us"}
+        </div>
+        {isOnamaMenuOpen && (
+          <div className="mobileSubLinkParent">
+            <Link href="/nasa-prica">Naša priča</Link>
+            <Link href="/nasa-prica">Marikomerc kvalitete</Link>
+            <Link href="/nasa-prica">Prerada i skladište</Link>
+          </div>
         )}
         <Link
           className="mobileLinks"
@@ -52,28 +62,18 @@ const MeniMobile = ({
         >
           Proizvodi
         </Link>
-        <Link className="mobileLinks" href="/horeca">
-          HoReCa suradnja
-        </Link>
-        <Link className="mobileLinks" href="/karijere">
-          Karijere
-        </Link>
-        <Link className="mobileLinks" href="http://www.zadarnight.run">
-          Kontakt
-        </Link>
-        <Link className="mobileLinks" href="/novosti">
-          Novosti
-        </Link>
-        <Link className="mobileLinks" href="http://www.zadarnight.run">
-          Grupa
-        </Link>
-
+        <Link href="/horeca">HoReCa suradnja</Link>
+        <Link href="/karijere">Karijere</Link>
+        <Link href="http://www.zadarnight.run">Kontakt</Link>
+        <Link href="/novosti">Novosti</Link>
+        <Link href="http://www.zadarnight.run">Grupa</Link>
+        <div className="mobileLinkDivider"></div>
         <LanguageSwitcher
           closeMenu={closeMenu}
           novostiNaslovi={novostiNaslovi}
           oglasiNaslovi={oglasiNaslovi}
         />
-        <div className="mobileLinks">
+        <div>
           {/* <Link
             to="/"
             onClick={() => {

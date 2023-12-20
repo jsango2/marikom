@@ -28,6 +28,7 @@ const Header = ({ siteTitle, novostiNaslovi, oglasiNaslovi }) => {
 
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+
   const [message, setMessage] = useState("Hello World");
 
   // const [isOnamaOpen, setIsOnamaOpen] = useState(false);
@@ -69,6 +70,7 @@ const Header = ({ siteTitle, novostiNaslovi, oglasiNaslovi }) => {
                 className="hamburgerMenu"
                 onClick={() => {
                   setIsOpen(() => !isOpen);
+
                   // blockScroll()
                 }}
               />

@@ -28,23 +28,14 @@ export default function IndexPage({ allPosts }) {
   return (
     <Layout>
       <Hero />
-      {/* <NovostiSection /> */}
-
       <ProizvodiSection />
       <NovostiSection novosti={allPosts.edges} />
-      {/* <KatalogSection /> */}
       <NumbersSection />
       <MapaSection />
-      {/* {size.width > 850 ? <CertifikatSection /> : <CertifikatMobileSection />} */}
       <CertifikatSection />
-      {/* <RastSection /> */}
       <PerlaPrviDio />
       <PerlaDrugiDio />
-      {/* <DiMarisSection /> */}
-      {/* <DeliMarisSection /> */}
-      {/* <ProLogMapSection /> */}
       <KontaktSection />
-      {/* <FooterSection /> */}
     </Layout>
   );
 }

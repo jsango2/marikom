@@ -40,7 +40,7 @@ export const ContentWrap = styled.div`
   position: relative;
   z-index: 11;
   height: auto;
-  width: 843px;
+  width: 750px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,19 +72,6 @@ export const HeroTitle = styled.h1`
   @media only screen and (max-width: 420px) {
   }
 `;
-export const WrapSliderContent = styled.div`
-  display: flex !important;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  width: 100%;
-  height: auto;
-
-  @media only screen and (max-width: 850px) {
-    flex-direction: column-reverse;
-  }
-  @media only screen and (max-width: 420px) {
-  }
-`;
 export const WrapText = styled.div`
   width: 520px;
 
@@ -110,20 +97,7 @@ export const WrapImage = styled.div`
   @media only screen and (max-width: 420px) {
   }
 `;
-export const Broj = styled.div`
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 200px;
-  height: 30px;
-  color: #4299c8;
-  opacity: 0.5;
 
-  @media only screen and (max-width: 600px) {
-  }
-  @media only screen and (max-width: 420px) {
-  }
-`;
 export const Overlay = styled.div`
   position: absolute;
   z-index: 10;
@@ -131,7 +105,8 @@ export const Overlay = styled.div`
   height: 100%;
   background: #1c2640;
   opacity: 0.3;
-
+  top: 0;
+  left: 0;
   @media only screen and (max-width: 600px) {
   }
   @media only screen and (max-width: 420px) {
@@ -144,46 +119,6 @@ export const Linija = styled.div`
   background-color: #4299c8;
   margin-right: 54px;
   opacity: 0.5;
-  @media only screen and (max-width: 600px) {
-  }
-  @media only screen and (max-width: 420px) {
-  }
-`;
-export const Title = styled.h1`
-  font-family: "Roboto Condensed", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-
-  font-size: 40px;
-  line-height: 120%;
-  /* or 48px */
-
-  /* SUNRISE/Sunray */
-
-  color: #f5faff;
-  @media only screen and (max-width: 1200px) {
-    font-size: 36px;
-  }
-  @media only screen and (max-width: 420px) {
-  }
-`;
-export const SubTitle = styled.p`
-  font-family: "Gilroy";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 25px;
-  /* or 179% */
-
-  letter-spacing: 0.175px;
-
-  /* SUNRISE/Sunray */
-
-  color: #f5faff;
-
-  mix-blend-mode: normal;
-  opacity: 0.5;
-  margin-bottom: 45px;
   @media only screen and (max-width: 600px) {
   }
   @media only screen and (max-width: 420px) {

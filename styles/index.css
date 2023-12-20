@@ -368,6 +368,10 @@ p {
   margin: 0 4px;
   text-transform: uppercase;
 }
+.activeLangLink {
+  color: #60c7ff !important;
+  opacity: 0.8 !important;
+}
 .borderNav {
   width: 1px;
   height: 25px;
@@ -740,14 +744,67 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   transition: all 0.3s ease-in-out;
 }
 .menu a {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   text-decoration: none;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 18px;
   cursor: pointer;
   margin: 20px 6px;
   opacity: 0.5;
+}
+.menu div:nth-child(1) {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 10px 6px;
+  opacity: 0.5;
+}
+.linkOnamaClosed::after {
+  content: "";
+  position: relative;
+  right: 0;
+  top: 50%;
+  display: block;
+  margin-left: 20px;
+  border-left: 2px solid #ffffff;
+  border-top: 2px solid #ffffff;
+  width: 10px;
+  height: 10px;
+  float: right;
+  transform: translate(50%, -50%) rotate(135deg);
+  transition: all 0.6s ease;
+}
+.linkOnamaOpen::after {
+  content: "";
+  position: relative;
+  right: 0;
+  top: 50%;
+  display: block;
+  margin-left: 20px;
+  border-left: 2px solid #ffffff;
+  border-top: 2px solid #ffffff;
+  width: 10px;
+  height: 10px;
+  float: right;
+  transform: translate(50%, -50%) rotate(225deg);
+  transition: all 0.6s ease;
+}
+
+.mobileSubLinkParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px 0 0 20px;
+}
+.subLinks {
+  margin-left: 30px;
+}
+.mobileLinkDivider {
+  height: 45px;
 }
 
 .trenerImg {
@@ -812,16 +869,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   flex-direction: column;
   align-items: center;
 }
-.mobileLinks {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 12px;
-  cursor: pointer;
-  margin: 20px 0;
-  opacity: 0.5;
-}
+
 .linkBack {
   margin-top: 30px;
   cursor: pointer;
@@ -1317,9 +1365,10 @@ select {
     background: #101628;
 
     padding-top: 100px;
+    padding-left: 30px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     transition: all 0.3s ease-in-out;
   }

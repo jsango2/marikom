@@ -19,10 +19,10 @@ const Hero = () => {
           objectFit="cover"
         />
         <ContentWrap>
-          Poslujemo više od 30 godina i veselimo se sljedećih 30 godina.
+          Poslujemo više od 30 godina i idemo ususret godinama koje dolaze
         </ContentWrap>
       </HeroWrap>
-      <Companies />
+      {/* <Companies /> */}
     </>
   );
 };

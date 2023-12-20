@@ -28,7 +28,11 @@ export const Container = styled.div`
   overflow: scroll;
   justify-content: flex-start;
   align-items: flex-start;
-  background: rgba(255, 255, 255, 0.03);
+  background: radial-gradient(
+    107.92% 107.92% at 1.33% 0%,
+    #2b3a63 0%,
+    #101628 100%
+  );
   padding: 80px 0 0 80px;
   ::-webkit-scrollbar {
     display: none;

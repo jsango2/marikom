@@ -138,17 +138,36 @@ function LanguageSwitcher({
   }
   return (
     <div className="languageSwitchWrap">
-      {lang.map((lang) => (
+      {/* {lang.map((lang) => (
         <Switcher
           key={lang}
           onClick={(e) => {
             handleSelectLang(e, lang);
             closeMenu();
           }}
+          className={locale === "hr" ? "activeLinkHr" : "activeLinkEn"}
         >
           {lang}
         </Switcher>
-      ))}
+      ))} */}
+      <Switcher
+        onClick={(e) => {
+          handleSelectLang(e, "hr");
+          closeMenu();
+        }}
+        className={locale === "hr" ? "activeLangLink" : ""}
+      >
+        HR
+      </Switcher>
+      <Switcher
+        onClick={(e) => {
+          handleSelectLang(e, "en");
+          closeMenu();
+        }}
+        className={locale === "en" ? "activeLangLink" : ""}
+      >
+        EN
+      </Switcher>
     </div>
   );
 }

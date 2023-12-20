@@ -19,14 +19,14 @@ export const WrapAll = styled.div`
   }
 `;
 
-export const WrapKarijere = styled.div`
+export const WrapContent = styled.div`
   position: relative;
   z-index: 10;
   width: 1266px;
-  height: 643px;
+  height: auto;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   margin: 90px auto 0 auto;
   background-color: white;
   @media only screen and (max-width: 1250px) {
@@ -41,7 +41,7 @@ export const WrapKarijere = styled.div`
 export const Content = styled.div`
   position: relative;
   z-index: 10;
-  width: 552px;
+  width: 580px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -113,7 +113,7 @@ export const Title = styled.div`
   font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: 700;
-
+  width: 95%;
   font-size: 40px;
   line-height: 120%;
   /* or 48px */
@@ -142,7 +142,7 @@ export const Text = styled.div`
   /* or 22px */
 
   color: #000000;
-  width: 494px;
+  width: 95%;
   margin-bottom: 40px;
   @media only screen and (max-width: 1250px) {
     font-size: 14px;

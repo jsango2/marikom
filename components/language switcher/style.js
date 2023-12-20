@@ -9,6 +9,7 @@ export const Switcher = styled.a`
   cursor: pointer;
   padding-top: 4px;
   /* overflow: hidden; */
+  /* color: ${(props) => (props.locale === "" ? "white" : "palevioletred")}; */
   @media only screen and (max-width: 920px) {
   }
   @media only screen and (max-width: 820px) {
