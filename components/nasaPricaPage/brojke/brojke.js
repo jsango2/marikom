@@ -21,8 +21,8 @@ function Brojke() {
         <Right>
           <SingleFact>
             <Wrap>
-              <Number>874</Number>
-              <TextFact>Ukupni kapacitet u n° paleta - 25°C</TextFact>
+              <Number>+36%</Number>
+              <TextFact>Prosječan rast prihoda u zadnje 3 godine</TextFact>
             </Wrap>
             <Line />
           </SingleFact>

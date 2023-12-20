@@ -23,7 +23,7 @@ function index() {
       <Zajednica />
       {/* <NovostiSection background={true} /> */}
       <KontaktSection />
-      <FooterSection />
+      {/* <FooterSection /> */}
     </Layout>
   );
 }

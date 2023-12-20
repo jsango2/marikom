@@ -18,6 +18,26 @@ export const WrapAll = styled.div`
     height: auto;
   }
 `;
+export const WrapContent = styled.div`
+  position: relative;
+  z-index: 10;
+  width: 1440px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 90px auto 0 auto;
+  background-color: white;
+  padding: 0 150px;
+  @media only screen and (max-width: 1250px) {
+    width: 100%;
+  }
+  @media only screen and (max-width: 850px) {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+`;
 export const TextBox = styled.div`
   position: relative;
   z-index: 10;

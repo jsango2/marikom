@@ -748,20 +748,23 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-weight: 400;
   text-decoration: none;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
-  margin: 20px 6px;
-  opacity: 0.5;
+  margin: 15px 6px;
+  opacity: 0.6;
 }
 .menu div:nth-child(1) {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   text-decoration: none;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
-  margin: 10px 6px;
-  opacity: 0.5;
+  margin: 15px 6px;
+  opacity: 0.6;
+  display: flex;
+  width: 84vw;
+  justify-content: space-between;
 }
 .linkOnamaClosed::after {
   content: "";
@@ -772,8 +775,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin-left: 20px;
   border-left: 2px solid #ffffff;
   border-top: 2px solid #ffffff;
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
   float: right;
   transform: translate(50%, -50%) rotate(135deg);
   transition: all 0.6s ease;
@@ -787,8 +790,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin-left: 20px;
   border-left: 2px solid #ffffff;
   border-top: 2px solid #ffffff;
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
   float: right;
   transform: translate(50%, -50%) rotate(225deg);
   transition: all 0.6s ease;
@@ -798,7 +801,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 10px 0 0 20px;
+  margin: 0px 0 0 20px;
 }
 .subLinks {
   margin-left: 30px;

@@ -22,13 +22,14 @@ export const WrapAll = styled.div`
 export const WrapContent = styled.div`
   position: relative;
   z-index: 10;
-  width: 1266px;
+  width: 1440px;
   height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 90px auto 0 auto;
   background-color: white;
+  padding: 0 150px;
   @media only screen and (max-width: 1250px) {
     width: 100%;
   }
@@ -78,7 +79,7 @@ export const Photos = styled.div`
 export const WrapPhoto = styled.div`
   position: relative;
   z-index: 10;
-  width: 90%;
+  width: 100%;
   height: 100%;
   margin-left: 20px;
   @media only screen and (max-width: 1250px) {

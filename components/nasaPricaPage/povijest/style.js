@@ -11,7 +11,8 @@ export const WrapAll = styled.div`
   justify-content: flex-start;
   align-items: center;
   background: #1c2640;
-  padding: 51px 0 69px 105px;
+
+  padding: 51px 0 69px 0;
   @media only screen and (max-width: 850px) {
     /* padding-top: 40px;
     height: auto; */
@@ -22,8 +23,11 @@ export const Container = styled.div`
   position: relative;
   z-index: 10;
   width: 100%;
+  max-width: 1440px;
   height: 542px;
   display: flex;
+  margin: 0 auto;
+  border-radius: 3px;
   flex-direction: column;
   overflow: scroll;
   justify-content: flex-start;
