@@ -22,8 +22,8 @@ import {
   Up,
   Down,
 } from "./style.js";
-import bg from "../../assets/images/bgNumbers.png";
-import viljuskar from "../../assets/images/viljuskar.png";
+
+import viljuskar from "../../assets/images/viljuskar.webp";
 import { useRouter } from "next/router.js";
 import en from "../../locales/en.json";
 import hr from "../../locales/hr.json";
@@ -95,7 +95,12 @@ function NumbersSection() {
             </Right>
           </Numbers>
         </WrapContent>
-        <Image src={bg} alt="overlay" layout="fill" objectFit="cover" />
+        <Image
+          src="/pozadinaBrojke.webp"
+          alt="overlay"
+          layout="fill"
+          objectFit="cover"
+        />
         <Overlay />
         <Elipse />
       </Down>

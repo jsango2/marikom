@@ -11,9 +11,9 @@ import {
   WrapCert2,
   WrapCerts,
 } from "./style.js";
-import p1 from "../../assets/images/certifikat/p1.png";
-import p2 from "../../assets/images/certifikat/p2.png";
-import p3 from "../../assets/images/certifikat/p3.png";
+import p1 from "../../assets/images/certifikat/p1.webp";
+import p2 from "../../assets/images/certifikat/p2.webp";
+import p3 from "../../assets/images/certifikat/p3.webp";
 import ArrowRight from "../../svg/arrowRightWhite.svg";
 import { useInView } from "react-intersection-observer";
 import { useRouter } from "next/router";

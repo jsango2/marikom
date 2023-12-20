@@ -138,7 +138,7 @@ export const WrapImage = styled.div`
   /* display: flex;
   justify-content: center;
   align-items: center; */
-  background-image: url("/karijereLogo/marikomerc.png");
+  background-image: url("/marikomerc.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
