@@ -13,7 +13,7 @@ export const WrapAll = styled.div`
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  margin: 0;
+  margin: 0 0 40px 0;
   /* overflow: hidden; */
   @media only screen and (max-width: 820px) {
     width: 230px;
@@ -55,7 +55,8 @@ export const Photo = styled.div`
   width: 100%;
   height: 250px;
   background: grey;
-
+  border-radius: 3px;
+  overflow: hidden;
   /* overflow: hidden; */
   @media only screen and (max-width: 600px) {
   }

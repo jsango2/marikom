@@ -35,7 +35,11 @@ function NovostiSection({ background, novosti }) {
                   ? n.node.novosti.naslov
                   : n.node.novosti.naslovEng
               }
-              text={n.node.novosti.textNovosti}
+              text={
+                locale === "hr"
+                  ? n.node.novosti.textNovosti
+                  : n.node.novosti.textNovostiEng
+              }
               link={
                 locale === "hr"
                   ? `${slugify(

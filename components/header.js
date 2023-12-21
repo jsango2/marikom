@@ -30,6 +30,8 @@ const Header = ({ siteTitle, novostiNaslovi, oglasiNaslovi }) => {
   // useOnClickOutside(ref, () => setIsOnamaOpen(false));
 
   const router = useRouter();
+  const { locale } = router;
+
   const [isOpen, setIsOpen] = useState(false);
 
   const [message, setMessage] = useState("Hello World");
@@ -110,16 +112,20 @@ const Header = ({ siteTitle, novostiNaslovi, oglasiNaslovi }) => {
                   <div className="dropdown">
                     <div className="dropdown-content">
                       <Link className="navLinkDrop" href="/o-nama">
-                        {router.locale === "hr" ? "Naša priča" : "Our story"}
+                        {locale === "hr" ? "Naša priča" : "Our story"}
                       </Link>
                       <Link
                         className="navLinkDrop"
                         href="/marikomerc-kvalitete"
                       >
-                        Marikomerc kvalitete
+                        {locale === "hr"
+                          ? "Marikomerc kvalitete"
+                          : "Marikomerc qualities"}
                       </Link>
                       <Link className="navLinkDrop" href="/prerada-i-skladiste">
-                        Prerada i skladište
+                        {locale === "hr"
+                          ? "Prerada i skladište"
+                          : "Processing and Storage"}
                       </Link>
                     </div>
                     <div
@@ -127,7 +133,7 @@ const Header = ({ siteTitle, novostiNaslovi, oglasiNaslovi }) => {
                       // onMouseOver={handleOnamaOpen}
                     >
                       <Link className="navLink" href="/">
-                        O nama
+                        {locale === "hr" ? "O nama" : "About us"}
                       </Link>
                       <ArrowDown
                         style={{ position: "relative", marginLeft: "-8px" }}
@@ -136,33 +142,35 @@ const Header = ({ siteTitle, novostiNaslovi, oglasiNaslovi }) => {
                   </div>
                   <div>
                     <Link className="navLink" href="/proizvodi">
-                      Proizvodi
+                      {locale === "hr" ? "Proizvodi" : "Products"}
                     </Link>
                   </div>
                   <div>
                     <Link className="navLink" href="/horeca">
-                      HoReCa suradnja
+                      {locale === "hr"
+                        ? "HoReCa suradnja"
+                        : "HoReCa collaboration"}
                     </Link>
                   </div>
                   <div>
                     <Link className="navLink" href="/karijere">
-                      Karijere
+                      {locale === "hr" ? "Karijere" : "Careers"}
                     </Link>
                   </div>
                   <div>
                     <Link className="navLink" href="/kontakt">
-                      Kontakt
+                      {locale === "hr" ? "Kontakt" : "Contact"}
                     </Link>
                   </div>
                   <div>
                     <Link className="navLink" href="/novosti">
-                      Novosti
+                      {locale === "hr" ? "Novosti" : "News"}
                     </Link>
                   </div>
                   <div className="navLink borderNav"></div>
                   <div>
                     <Link className="navLink" href="/grupa">
-                      Grupa
+                      {locale === "hr" ? "Grupa" : "Group"}
                     </Link>
                   </div>
                   <div className="languageSwitcher">

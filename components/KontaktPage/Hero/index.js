@@ -48,7 +48,7 @@ function ContactHero() {
           <GoogleButton>Upute Google Maps</GoogleButton>
         </WrapText>
         <WrapPhoto>
-          <Image src="/kontaktHeroImg.png" layout="fill" />
+          <Image src="/kontaktHeroImg.webp" layout="fill" />
         </WrapPhoto>
       </WrapContent>
     </WrapAllContactHero>

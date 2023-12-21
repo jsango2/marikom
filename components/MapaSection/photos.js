@@ -13,7 +13,7 @@ const Photos = () => {
   const { ref, inView, entry } = useInView({
     /* Optional options */
     threshold: 0,
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   return (

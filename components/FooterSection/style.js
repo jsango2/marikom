@@ -163,7 +163,7 @@ export const SubName = styled.h2`
   font-size: 16px;
   line-height: 120%;
   /* or 19px */
-
+  text-transform: uppercase;
   /* SUNRISE/Sunray */
 
   color: #f5faff;

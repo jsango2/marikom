@@ -21,13 +21,14 @@ export const WrapAll = styled.div`
   }
 `;
 
-export const WrapPhotos = styled.div`
+export const WrapCards = styled.div`
   position: relative;
   z-index: 10;
-  width: 1350px;
+  width: 60%;
+  max-width: 1000px;
   height: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   /* overflow: hidden; */
   @media only screen and (max-width: 1350px) {
     width: 97%;
@@ -91,63 +92,6 @@ export const WrapPhoto = styled.div`
     width: 100%;
   }
 `;
-export const WrapCerts = styled.div`
-  position: relative;
-  float: left;
-  z-index: 10;
-  /* width: 100%; */
-  max-width: 75%;
-  height: 45px;
-  display: flex;
-  justify-content: flex-start;
-
-  margin: auto auto 34px auto;
-  @media only screen and (max-width: 1000px) {
-    max-width: 95%;
-  }
-`;
-export const WrapCert = styled.div`
-  position: relative;
-  z-index: 10;
-  width: 132px;
-  height: 52px;
-  margin: 0 10px;
-  @media only screen and (max-width: 1000px) {
-    width: 100px;
-    height: 40px;
-  }
-`;
-export const WrapCert2 = styled(WrapCert)`
-  position: relative;
-  z-index: 10;
-  width: 107px;
-  height: 52px;
-  margin-top: auto;
-  margin-bottom: 34px;
-  @media only screen and (max-width: 1000px) {
-    width: 84px;
-    height: 41px;
-  }
-`;
-export const Overlay = styled.div`
-  position: absolute;
-  z-index: 10;
-  width: 100%;
-  height: 65%;
-  top: 0;
-  left: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.8) 22.83%,
-    rgba(255, 255, 255, 0.38) 100%
-  );
-
-  backdrop-filter: blur(4.5px);
-
-  @media only screen and (max-width: 1100px) {
-    height: 75%;
-  }
-`;
 
 export const Title = styled.h1`
   font-family: "Roboto Condensed", sans-serif;
@@ -161,7 +105,7 @@ export const Title = styled.h1`
   text-align: center;
 
   /* SUNRISE/Sunray */
-  width: 799px;
+  width: 640px;
   color: #f5faff;
   margin-bottom: 60px;
   text-transform: uppercase;

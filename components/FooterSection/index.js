@@ -22,7 +22,13 @@ import Location from "../../assets/svg/Location.svg";
 import Email from "../../assets/svg/Email.svg";
 import useWindowSize from "../helper/usewindowsize";
 import { useInView } from "react-intersection-observer";
+import en from "../../locales/en.json";
+import hr from "../../locales/hr.json";
+import { useRouter } from "next/router.js";
 function FooterSection() {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : hr;
   const size = useWindowSize();
   const { ref, inView, entry } = useInView({
     /* Optional options */
@@ -37,57 +43,57 @@ function FooterSection() {
         </WrapLogo>
 
         <MainLinks>
-          <SingleLink>O nama</SingleLink>
-          <SingleLink>Proizvodi</SingleLink>
-          <SingleLink>Novosti</SingleLink>
-          <SingleLink>Kvaliteta</SingleLink>
-          <SingleLink>Karijere</SingleLink>
-          <SingleLink>HoReCa suradnja</SingleLink>
-          <SingleLink>Kontakt</SingleLink>
+          <SingleLink>{t.Linkovi.onama}</SingleLink>
+          <SingleLink>{t.Linkovi.proizvodi}</SingleLink>
+          <SingleLink>{t.Linkovi.novosti}</SingleLink>
+          <SingleLink>{t.Linkovi.kvaliteta}</SingleLink>
+          <SingleLink>{t.Linkovi.karijere}</SingleLink>
+          <SingleLink>{t.Linkovi.horecaSuradnja} </SingleLink>
+          <SingleLink>{t.Linkovi.kontakt}</SingleLink>
         </MainLinks>
         <SubLinks>
           {size.width > 770 ? (
             <>
               <Column>
-                <SubName>LOKACIJE</SubName>
+                <SubName>{t.Linkovi.lokacije}</SubName>
                 <SingleLink2>Zadar</SingleLink2>
                 <SingleLink2>Dubrovnik</SingleLink2>
                 <SingleLink2>Rijeka</SingleLink2>
                 <SingleLink2>Metković</SingleLink2>
               </Column>
               <Column>
-                <SubName>PROIZVODI</SubName>
-                <SingleLink2>Glavonošci</SingleLink2>
-                <SingleLink2>Perla proizvodi</SingleLink2>
-                <SingleLink2>Rakovi</SingleLink2>
-                <SingleLink2>Fileti i odresci</SingleLink2>
-                <SingleLink2>Školjkaši</SingleLink2>
-                <SingleLink2>Ribe</SingleLink2>
-                <SingleLink2>Ostali proizvodi</SingleLink2>
+                <SubName>{t.Linkovi.proizvodi}</SubName>
+                <SingleLink2>{t.Linkovi.glavonosci}</SingleLink2>
+                <SingleLink2>{t.Linkovi.perlaProizvodi}</SingleLink2>
+                <SingleLink2>{t.Linkovi.rakovi}</SingleLink2>
+                <SingleLink2>{t.Linkovi.fileti}</SingleLink2>
+                <SingleLink2>{t.Linkovi.skoljkasi}</SingleLink2>
+                <SingleLink2>{t.Linkovi.ribe}</SingleLink2>
+                <SingleLink2>{t.Linkovi.ostali}</SingleLink2>
               </Column>
             </>
           ) : (
             <Column>
               <SubName>MENI</SubName>
-              <SingleLink2>O nama</SingleLink2>
-              <SingleLink2>Proizvodi</SingleLink2>
-              <SingleLink2>Novosti</SingleLink2>
-              <SingleLink2>Kvalteta</SingleLink2>
-              <SingleLink2>Karijere</SingleLink2>
-              <SingleLink2>HoReCa suradnja</SingleLink2>
-              <SingleLink2>Kontakt</SingleLink2>
+              <SingleLink2>{t.Linkovi.onama}</SingleLink2>
+              <SingleLink2>{t.Linkovi.proizvodi}</SingleLink2>
+              <SingleLink2>{t.Linkovi.novosti}</SingleLink2>
+              <SingleLink2>{t.Linkovi.kvaliteta}</SingleLink2>
+              <SingleLink2>{t.Linkovi.karijere}</SingleLink2>
+              <SingleLink2>{t.Linkovi.horecaSuradnja} </SingleLink2>
+              <SingleLink2>{t.Linkovi.kontakt}</SingleLink2>
             </Column>
           )}
 
           <Column>
-            <SubName>ČLANICE GRUPE</SubName>
+            <SubName>{t.Linkovi.claniceGrupe}</SubName>
             <SingleLink2>Marikomerc</SingleLink2>
             <SingleLink2>DiMaris Ribarnice</SingleLink2>
             <SingleLink2>MLS Logistika</SingleLink2>
           </Column>
           {size.width > 770 && (
             <Column>
-              <SubName>KONTAKTIRAJTE NAS</SubName>
+              <SubName>{t.Linkovi.kontaktirajteNas}</SubName>
               <Social>
                 <Instagram />
                 <Facebook />

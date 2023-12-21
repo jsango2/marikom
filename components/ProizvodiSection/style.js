@@ -10,7 +10,7 @@ export const WrapAll = styled.div`
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  /* overflow: hidden; */
+  overflow: hidden;
   /* padding-bottom: 50px; */
   @media only screen and (max-width: 600px) {
   }
@@ -37,8 +37,10 @@ export const WrapBg = styled.div`
   z-index: 10;
   width: 100%;
   height: 100%;
-  top: 0;
+  /* top: 0; */
   /* overflow: hidden; */
+  top: ${(props) => props.percentage * 100 - 80}px;
+  transform: scale(calc(${(props) => props.percentage / 10 + 1}));
   @media only screen and (max-width: 600px) {
   }
 `;
@@ -68,7 +70,7 @@ export const WrapCerts = styled.div`
 `;
 export const WrapImage = styled.div`
   position: relative;
-  z-index: 10;
+  z-index: 13;
   margin: 0 10px;
   @media only screen and (max-width: 600px) {
     margin: 0 5px;
@@ -103,6 +105,16 @@ export const Title = styled.h1`
 
   color: #f5faff;
   /* overflow: hidden; */
+  &.inView {
+    top: 0px;
+    opacity: 1;
+    transition: all 2s ease-out;
+    /* transition-delay: 0.5s; */
+  }
+  &.outView {
+    top: 25px;
+    opacity: 0;
+  }
   @media only screen and (max-width: 850px) {
     font-size: var(--h2);
   }

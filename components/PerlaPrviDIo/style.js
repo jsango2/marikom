@@ -416,22 +416,22 @@ export const ListItem = styled.div`
   &.inView {
     top: 0px;
     opacity: 1;
-    transition: all 2s ease-out;
+    transition: all 1.4s ease-out;
   }
   &.inView:nth-child(1) {
-    transition-delay: 500ms;
+    transition-delay: 400ms;
   }
   &.inView:nth-child(2) {
-    transition-delay: 1000ms;
+    transition-delay: 800ms;
   }
   &.inView:nth-child(3) {
-    transition-delay: 1500ms;
+    transition-delay: 1200ms;
   }
   &.inView:nth-child(4) {
-    transition-delay: 2000ms;
+    transition-delay: 1600ms;
   }
   &.inView:nth-child(5) {
-    transition-delay: 2500ms;
+    transition-delay: 2000ms;
   }
   &.outView {
     top: 25px;

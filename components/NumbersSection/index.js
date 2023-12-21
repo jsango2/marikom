@@ -27,8 +27,14 @@ import viljuskar from "../../assets/images/viljuskar.webp";
 import { useRouter } from "next/router.js";
 import en from "../../locales/en.json";
 import hr from "../../locales/hr.json";
+import { useInView } from "react-intersection-observer";
 
 function NumbersSection() {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0.2,
+    triggerOnce: true,
+  });
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : hr;
@@ -37,13 +43,18 @@ function NumbersSection() {
     <WrapAll>
       <Up>
         <BlueLine />
-        <Image src={viljuskar} alt="overlay" layout="fill" objectFit="cover" />
+        <video autoPlay muted loop="loop" className="videoHero" playsInline>
+          <source src="/brojkeVideo.mp4" type="video/mp4" />
+        </video>
       </Up>
       <Down>
         <WrapContent>
           <Title>
             <TopText>{t.Numbers.title}</TopText>
-            <Line />
+            <Line
+              ref={ref}
+              className={` ${inView ? "inViewLine" : "outViewLine"}`}
+            />
             <MainTitle>{t.Numbers.subTitle}</MainTitle>
           </Title>
           <Numbers>
@@ -95,12 +106,13 @@ function NumbersSection() {
             </Right>
           </Numbers>
         </WrapContent>
-        <Image
+        {/* <Image
           src="/pozadinaBrojke.webp"
           alt="overlay"
           layout="fill"
           objectFit="cover"
-        />
+          
+        /> */}
         <Overlay />
         <Elipse />
       </Down>

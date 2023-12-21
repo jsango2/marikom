@@ -16,7 +16,7 @@ const Hero = () => {
     <>
       <HeroWrap>
         <Overlay />
-        <Image src={bg} layout="fill" objectFit="cover" />
+        <Image src="/proizvodiHero.webp" layout="fill" objectFit="cover" />
         <HeroTitle>{t.Products.title}</HeroTitle>
       </HeroWrap>
       {/* <Companies /> */}

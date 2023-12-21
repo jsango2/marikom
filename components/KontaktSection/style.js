@@ -60,12 +60,22 @@ export const BlueLine = styled.div`
   position: relative;
   z-index: 10;
   height: 2px;
-  width: 1206px;
+
   background: var(--color-boja-marikomerc-plava);
   margin: 25px auto 25px auto;
+  &.inViewLine {
+    width: 1206px;
+    transition: all 2s ease-out;
+  }
+  &.outViewLine {
+    width: 0;
+  }
   @media only screen and (max-width: 1050px) {
     width: 80vw;
     margin-top: 50px;
+    &.inViewLine {
+      width: 80vw;
+    }
   }
 `;
 export const Title = styled.h1`

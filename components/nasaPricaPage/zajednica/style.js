@@ -95,7 +95,7 @@ export const Img1 = styled.div`
   height: 479px;
   width: 315px;
   border-radius: 3px;
-  background-image: url("/nasaPricaImg1.png");
+  background-image: url("/nasaPricaImg1.webp");
   background-repeat: no-repeat;
   background-size: cover;
   @media only screen and (max-width: 850px) {
@@ -108,7 +108,7 @@ export const Img2 = styled.div`
   width: 315px;
   border-radius: 3px;
 
-  background-image: url("/nasaPricaImg2.png");
+  background-image: url("/nasaPricaImg2.webp");
   background-repeat: no-repeat;
   background-size: cover;
   @media only screen and (max-width: 850px) {
@@ -122,7 +122,7 @@ export const Img3 = styled.div`
   width: 315px;
   border-radius: 3px;
 
-  background-image: url("/nasaPricaImg3.png");
+  background-image: url("/nasaPricaImg3.webp");
   background-repeat: no-repeat;
   background-size: cover;
   @media only screen and (max-width: 850px) {
@@ -136,7 +136,7 @@ export const Img4 = styled.div`
   width: 315px;
   border-radius: 3px;
 
-  background-image: url("/nasaPricaImg4.png");
+  background-image: url("/nasaPricaImg4.webp");
   background-repeat: no-repeat;
   background-size: cover;
   @media only screen and (max-width: 850px) {

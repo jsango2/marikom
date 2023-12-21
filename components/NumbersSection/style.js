@@ -41,6 +41,10 @@ export const Down = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("/pozadinaBrojke.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 50%;
   @media only screen and (max-width: 850px) {
     padding: 50px 10px;
   }
@@ -311,10 +315,17 @@ export const Line = styled.div`
   position: relative;
   z-index: 11;
   height: 6px;
-  width: 425px;
+  /* width: 425px; */
   background: var(--color-svj-plava);
-
+  border-radius: 2px;
   /* overflow: hidden; */
+  transition: all 1.6s ease-out;
+  &.inViewLine {
+    width: 425px;
+  }
+  &.outViewLine {
+    width: 0;
+  }
   @media only screen and (max-width: 600px) {
     width: 90%;
   }

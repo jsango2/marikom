@@ -100,5 +100,30 @@
     "poruka": "Poruka",
     "button": "Pošalji prijavu",
     "upload": "Upload CV-a"
+  },
+  "Kontakt": {
+    "naslov": "KONTAKTIRAJTE NAS S POVJERENJEM",
+    "prodaja": "prodaja",
+    "ljudskiResursi": "ljudski resursi",
+    "kontaktTelefon": "Kontakt telefon"
+  },
+  "Linkovi": {
+    "onama": "O nama",
+    "proizvodi": "Proizvodi",
+    "novosti": "Novosti",
+    "kvaliteta": "Kvaliteta",
+    "karijere": "Karijere",
+    "horecaSuradnja": "HoReCa suradnja",
+    "kontakt": "Kontakt",
+    "lokacije": "Lokacije",
+    "glavonosci": "Glavonošci",
+    "perlaProizvodi": "Perla proizvodi",
+    "rakovi": "Rakovi",
+    "fileti": "Fileti i odresci",
+    "skoljkasi": "Školjkaši",
+    "ribe": "Ribe",
+    "ostali": "Ostali proizvodi",
+    "claniceGrupe": "Članice grupe",
+    "kontaktirajteNas": "Kontaktirajte nas"
   }
 }

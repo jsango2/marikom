@@ -313,6 +313,16 @@ p {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.inView {
+  top: 0px;
+  opacity: 1;
+  transition: all 2s ease-out;
+  /* transition-delay: 0.5s; */
+}
+.outView {
+  top: 25px;
+  opacity: 0;
+}
 .OnamaDropDown {
   position: absolute;
   z-index: 15;

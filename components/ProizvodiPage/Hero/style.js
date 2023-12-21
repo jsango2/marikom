@@ -7,7 +7,7 @@ import styled from "styled-components";
 export const HeroWrap = styled.div`
   position: relative;
   z-index: 0;
-  min-height: 287px;
+  min-height: 347px;
   width: 100%;
   display: flex;
   justify-content: center;

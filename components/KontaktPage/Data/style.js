@@ -11,7 +11,7 @@ export const WrapAllContactData = styled.div`
 
   justify-content: flex-start;
   align-items: center; */
-  background-image: url("/kontaktBgImg.png");
+  background-image: url("/kontaktBgImg.webp");
   @media only screen and (max-width: 850px) {
     padding-top: 40px;
   }

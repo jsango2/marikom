@@ -26,10 +26,11 @@ import { catalogData } from "../../catalogData.js";
 import { useEffect, useState } from "react";
 import Image from "next/image.js";
 import axios from "axios";
+import ReactPaginate from "react-paginate";
+
 import Kartica from "./kartica/index.js";
 import Lupa from "../../assets/images/lupa.svg";
 import Arrow from "../../assets/images/arrowDown.svg";
-import ReactPaginate from "react-paginate";
 import useWindowSize from "../helper/usewindowsize";
 import useScrollBlock from "../helper/useScrollBlock.js";
 function ProizvodiPage({ allPhotosProizvodi }) {

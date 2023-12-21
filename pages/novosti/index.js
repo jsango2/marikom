@@ -6,6 +6,7 @@ import {
   News,
   Left,
   Right,
+  Pagination,
 } from "../../components/NovostiSection/page/style.js";
 import { news } from "../../news";
 import NewsCard from "../../components/NovostiSection/page/newsCardPage";
@@ -16,8 +17,13 @@ import slugify from "slugify";
 import { catalogData } from "../../catalogData.js";
 import useScrollBlock from "../../components/helper/useScrollBlock.js";
 import { useEffect } from "react";
-
+import ReactPaginate from "react-paginate";
+import { useState } from "react";
+import { format, parseISO } from "date-fns";
 function index(props) {
+  const [itemOffset, setItemOffset] = useState([]);
+  const [itemsPerPage] = useState(6);
+  const endOffset = itemOffset + itemsPerPage;
   const [blockScroll, allowScroll] = useScrollBlock();
   const catDat = catalogData.map(
     (item) => item["IME PROIZVODA - do 60 znakova"]
@@ -26,7 +32,6 @@ function index(props) {
   const { locale, locales, defaultLocale, asPath, basePath } = useRouter();
   const novosti = props.novosti.edges;
 
-  console.log("Test", props);
   // pronađi istaknutu novost
   const sortNovostyByDate = novosti.sort((a, b) => {
     return Math.abs(
@@ -38,9 +43,41 @@ function index(props) {
     (n) => n.node.novosti.istaknutaNovost === true
   );
   // sve novosti osim istaknute
-  const otherNovosti = novosti.filter(
-    (n) => n.node.novosti.naslov != featuredNovost[0].node.novosti.naslov
-  );
+  const otherNovosti = novosti
+    .filter(
+      (n) => n.node.novosti.naslov != featuredNovost[0].node.novosti.naslov
+    )
+    .sort(
+      (objA, objB) =>
+        new Date(objB.node.novosti.datum) - new Date(objA.node.novosti.datum)
+    );
+
+  // otherNovosti.forEach((n) => {
+  //   const datumFix = format(new Date(a.node.novosti.datum), "P");
+  //   return {
+  //     ...a,
+  //     datum: datumFix,
+  //   };
+  // });
+
+  otherNovosti.forEach((item) => {
+    item.node.novosti.datum = format(new Date(item.node.novosti.datum), "P");
+  });
+
+  console.log(otherNovosti);
+  const currentItems = otherNovosti.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(otherNovosti.length / itemsPerPage);
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % otherNovosti.length;
+    console.log(
+      `User requested page number ${event.selected}, which is offset ${newOffset}`
+    );
+
+    setItemOffset(newOffset);
+  };
+  const paginationClick = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
   // useEffect(() => {
   //   allowScroll();
   // }, []);
@@ -105,7 +142,7 @@ function index(props) {
         )}
 
         <News>
-          {otherNovosti.map((card) => (
+          {currentItems.map((card) => (
             <NewsCard
               key={card.node.id}
               datum={card.node.novosti.datum}
@@ -144,6 +181,24 @@ function index(props) {
             />
           ))}
         </News>
+        <Pagination>
+          <ReactPaginate
+            breakLabel="..."
+            nextLabel=""
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={2}
+            pageClassName={"pageClassName"}
+            // activeClassName={"activePage"}
+            activeLinkClassName={"activePage"}
+            pageLinkClassName={"pagelink"}
+            pageCount={pageCount}
+            renderOnZeroPageCount={null}
+            containerClassName={"pagination"}
+            previousLabel={""}
+            // forcePage={forcePage}
+            onClick={paginationClick}
+          />
+        </Pagination>
       </Container>
     </Layout>
   );

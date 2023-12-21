@@ -34,6 +34,15 @@ export const FeaturedNews = styled.div`
     background-color: #f6f6f6;
   }
 `;
+export const Pagination = styled.div`
+  position: relative;
+  z-index: 10;
+  margin: 30px auto 0 auto;
+  width: 700px;
+  @media only screen and (max-width: 700px) {
+    width: 80vw;
+  }
+`;
 export const News = styled.div`
   position: relative;
   z-index: 10;
@@ -41,7 +50,7 @@ export const News = styled.div`
   max-width: 1100px;
   height: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
 
@@ -60,7 +69,8 @@ export const Left = styled.div`
   align-items: center;
   font-size: 32px;
   color: white;
-  /* overflow: hidden; */
+  border-radius: 3px;
+  overflow: hidden;
   @media only screen and (max-width: 650px) {
     width: 100%;
   }

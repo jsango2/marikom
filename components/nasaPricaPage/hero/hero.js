@@ -11,7 +11,7 @@ const Hero = () => {
       <HeroWrap>
         <Overlay />
         <Image
-          src="/nasaPricaHero.png"
+          src="/nasaPricaHero.webp"
           alt="cover image warehouse"
           layout="fill"
           objectFit="cover"

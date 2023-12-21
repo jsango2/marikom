@@ -18,8 +18,13 @@ import useWindowSize from "../../helper/usewindowsize.js";
 import en from "../../../locales/en.json";
 import hr from "../../../locales/hr.json";
 import { AiOutlineYoutube } from "react-icons/ai";
-
+import { useInView } from "react-intersection-observer";
 function Content() {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0.2,
+    triggerOnce: true,
+  });
   const size = useWindowSize();
   // const t = useTranslations("Index");
   const router = useRouter();
@@ -29,8 +34,12 @@ function Content() {
     <div>
       <WrapSliderContent>
         <WrapText>
-          <Title>{t.Hero.title}</Title>
-          <SubTitle>{t.Hero.description}</SubTitle>
+          <Title ref={ref} className={` ${inView ? "inView" : "outView"}`}>
+            {t.Hero.title}
+          </Title>
+          <SubTitle className={` ${inView ? "inView" : "outView"}`}>
+            {t.Hero.description}
+          </SubTitle>
           {/* <Button
                   bgColor="#4299C8"
                   color="#FFFFFF"

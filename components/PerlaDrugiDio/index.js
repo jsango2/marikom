@@ -75,11 +75,7 @@ function PerlaDrugiDio() {
   const t = locale === "en" ? en : hr;
   const [perlaData, setPerlaData] = useState([]);
   useEffect(() => {
-    setPerlaData(
-      catalogData.filter(
-        (data) => data["Kategorija kojoj proizvod pripada:"] === "PERLA"
-      )
-    );
+    setPerlaData(catalogData.filter((data) => data.FeaturedPerla == "DA"));
   }, []);
 
   const [ref3, percentage] = useScrollPercentage({

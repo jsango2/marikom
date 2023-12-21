@@ -65,7 +65,7 @@ export const HorecaWrapImage = styled.div`
   z-index: 11;
   height: 1200px;
   width: 640px;
-  background-image: url("/horeca1.png");
+  background-image: url("/horeca1.webp");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 3px;

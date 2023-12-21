@@ -30,8 +30,8 @@ const heartbeat = keyframes`
             animation-timing-function: ease-in;
   }
   17% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    -webkit-transform: scale(1.45);
+            transform: scale(1.35);
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
   }
@@ -355,7 +355,7 @@ export const Vietnam = styled.div`
     animation-name: ${heartbeat};
     animation-duration: 2s;
     animation-iteration-count: 1;
-    animation-delay: 0.1s;
+    animation-delay: 0.5s;
   }
   /* cursor: pointer; */
   transition-delay: 450ms;
@@ -419,7 +419,7 @@ export const NZ = styled.div`
     animation-name: ${heartbeat};
     animation-duration: 2s;
     animation-iteration-count: 1;
-    animation-delay: 0.5s;
+    animation-delay: 0.9s;
   }
   transition-delay: 900ms;
 
@@ -512,7 +512,7 @@ export const USA = styled.div`
     animation-name: ${heartbeat};
     animation-duration: 2s;
     animation-iteration-count: 1;
-    animation-delay: 0.7s;
+    animation-delay: 1.7s;
   }
   transition-delay: 1050ms;
 
@@ -542,7 +542,7 @@ export const SCO = styled.div`
     animation-name: ${heartbeat};
     animation-duration: 2s;
     animation-iteration-count: 1;
-    animation-delay: 0.75s;
+    animation-delay: 1.75s;
   }
   transition-delay: 550ms;
 
@@ -573,7 +573,7 @@ export const JAP = styled.div`
     animation-name: ${heartbeat};
     animation-duration: 2s;
     animation-iteration-count: 1;
-    animation-delay: 0.82s;
+    animation-delay: 2.82s;
   }
   transition-delay: 1850ms;
 
@@ -604,7 +604,7 @@ export const TUR = styled.div`
     animation-name: ${heartbeat};
     animation-duration: 2s;
     animation-iteration-count: 1;
-    animation-delay: 0.1s;
+    animation-delay: 0.7s;
   }
   transition-delay: 950ms;
 

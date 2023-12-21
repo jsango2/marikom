@@ -100,5 +100,31 @@
     "poruka": "Message",
     "button": "Send application",
     "upload": "Upload CV"
+  },
+
+  "Kontakt": {
+    "naslov": "CONTACT US WITH CONFIDENCE",
+    "prodaja": "sales",
+    "ljudskiResursi": "human Resources",
+    "kontaktTelefon": "Contact Phone"
+  },
+  "Linkovi": {
+    "onama": "About us",
+    "proizvodi": "Products",
+    "novosti": "News",
+    "kvaliteta": "Quality",
+    "karijere": "Careers",
+    "horecaSuradnja": "HoReCa colaboration",
+    "kontakt": "Contact",
+    "lokacije": "Locations",
+    "glavonosci": "Cephalopods",
+    "perlaProizvodi": "Perla Products",
+    "rakovi": "Crabs",
+    "fileti": "Fillets and Steaks",
+    "skoljkasi": "Shellfish",
+    "ribe": "Fish",
+    "ostali": "Other Products",
+    "claniceGrupe": "Group Members",
+    "kontaktirajteNas": "Contact Us"
   }
 }

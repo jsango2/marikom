@@ -19,7 +19,7 @@ function Skladiste() {
   return (
     <WrapSkladiste>
       <BlueLine />
-      <Image src="/oNamaTemp.png" alt="p1" layout="fill" objectFit="cover" />
+      <Image src="/oNamaTemp.webp" alt="p1" layout="fill" objectFit="cover" />
       {/* <Lottie
         animationData={katalogAnimation}
         interactivity={interactivity}
