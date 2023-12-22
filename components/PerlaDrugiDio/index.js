@@ -107,7 +107,7 @@ function PerlaDrugiDio() {
               <Overlay />
               <WrapProizvodImage>
                 <Image
-                  src={`https://cms.marikomerc.hr/wp-content/uploads/2023/12/${data["Kataloški broj:"]}.png`}
+                  src={`http://localhost:3000/productImages/${data["Kataloški broj:"]}.webp`}
                   // width={157}
                   // height={244}
                   layout="fill"

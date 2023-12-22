@@ -18,6 +18,7 @@ export const WrapAll = styled.div`
   /* overflow: hidden; */
   padding: 70px 0 130px 0;
   @media only screen and (max-width: 600px) {
+    padding: 70px 0 80px 0;
   }
 `;
 

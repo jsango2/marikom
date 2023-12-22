@@ -33,7 +33,11 @@ import Lupa from "../../assets/images/lupa.svg";
 import Arrow from "../../assets/images/arrowDown.svg";
 import useWindowSize from "../helper/usewindowsize";
 import useScrollBlock from "../helper/useScrollBlock.js";
+import { storage } from "../firebase/firebase.js";
+import { getDownloadURL, ref } from "firebase/storage";
 function ProizvodiPage({ allPhotosProizvodi }) {
+  const [data, setData] = useState([]);
+
   const [blockScroll, allowScroll] = useScrollBlock();
   const size = useWindowSize();
   const router = useRouter();
@@ -72,6 +76,8 @@ function ProizvodiPage({ allPhotosProizvodi }) {
     (item) => (item.node.id = item.node.sourceUrl.slice(-9, -4))
   );
 
+  console.log(allPhotosProizvoda);
+
   const [current, setCurrent] = useState(kategorija);
   const [filteredData, setFilteredData] = useState([]);
   const [filteredDataOnInput, setFilteredDataOnInput] = useState([]);
@@ -104,7 +110,7 @@ function ProizvodiPage({ allPhotosProizvodi }) {
 
     const newArr1 = filteredDataByCategory.map((v) => ({
       ...v,
-      photoUrl: `https://cms.marikomerc.hr/wp-content/uploads/2023/12/${v["Kataloški broj:"]}.png`,
+      photoUrl: `http://localhost:3000/productImages/${v["Kataloški broj:"]}.webp`,
     }));
     newArr1.forEach((item) => {
       item.hasUrl = false;
@@ -169,10 +175,47 @@ function ProizvodiPage({ allPhotosProizvodi }) {
   const paginationClick = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
+  // FIREBASE GET PHOTOS FROM STORAGE:
   // useEffect(() => {
-  //   isDropdownOpen && document.body.style.overflow === "hidden";
-  //   !isDropdownOpen && document.body.style.overflow === "unset";
-  // }, [isDropdownOpen]);
+  //   let podaci = [];
+  //   const getNotes = () => {
+  //     getDocs(dbInstance4).then((data) => {
+  //       podaci = data.docs.map((item) => {
+  //         return { ...item.data(), id: item.id };
+  //       });
+  //       setData(podaci);
+  //     });
+  //   };
+  //   getNotes();
+  // }, []);
+
+  // const imageRef = ref(storage, "images/23001.png");
+  // // Get the download URL
+  // getDownloadURL(imageRef)
+  //   .then((url) => {
+  //     console.log(url);
+  //   })
+  //   .catch((error) => {
+  //     // A full list of error codes is available at
+  //     // https://firebase.google.com/docs/storage/web/handle-errors
+  //     switch (error.code) {
+  //       case "storage/object-not-found":
+  //         // File doesn't exist
+  //         break;
+  //       case "storage/unauthorized":
+  //         // User doesn't have permission to access the object
+  //         break;
+  //       case "storage/canceled":
+  //         // User canceled the upload
+  //         break;
+
+  //       // ...
+
+  //       case "storage/unknown":
+  //         // Unknown error occurred, inspect the server response
+  //         break;
+  //     }
+  //   });
   return (
     <WrapAll>
       {size.width > 900 && (

@@ -70,6 +70,10 @@ export const WrapProizvodImage = styled.div`
   width: 157px;
   height: 244px;
   padding: 20px;
+  background-image: url("/karijereLogo/marikomerc.svg");
+  background-size: 80px 80px;
+  background-repeat: no-repeat;
+  background-position: center;
   @media only screen and (max-width: 1300px) {
     width: 116px;
     height: 182px;
