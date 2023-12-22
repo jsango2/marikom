@@ -190,12 +190,12 @@ export const Title = styled.h1`
 
   /* color: #f5faff; */
   color: var(--color-boja-marikomerc-bijela);
-  &.inView {
+  &.inViewHero {
     top: 0px;
     opacity: 1;
     transition: all 2s ease-out;
   }
-  &.outView {
+  &.outViewHero {
     top: 25px;
     opacity: 0;
   }
@@ -226,13 +226,13 @@ export const SubTitle = styled.p`
 
   margin-bottom: 45px;
   width: 75%;
-  &.inView {
+  &.inViewHero {
     top: 0px;
     opacity: 1;
     transition: all 2s ease-out;
     transition-delay: 0.5s;
   }
-  &.outView {
+  &.outViewHero {
     top: 25px;
     opacity: 0;
   }

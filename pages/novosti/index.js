@@ -28,7 +28,7 @@ function index(props) {
   const catDat = catalogData.map(
     (item) => item["IME PROIZVODA - do 60 znakova"]
   );
-
+  console.log(props);
   const { locale, locales, defaultLocale, asPath, basePath } = useRouter();
   const novosti = props.novosti.edges;
 
@@ -218,30 +218,26 @@ export async function getStaticProps({ locales }) {
 
   const paths = [];
   novosti.edges.map((post, i) => {
-    return locales.map((locale) => {
-      return paths.push({
-        params: {
-          slug:
-            post.node.novosti.naslov.toLowerCase().split(" ").join("-") +
-            "-" +
-            post.node.novosti.datum.split("/").join("-"),
-        },
-        locale,
-      });
+    return paths.push({
+      params: {
+        slug:
+          post.node.novosti.naslov.toLowerCase().split(" ").join("-") +
+          "-" +
+          post.node.novosti.datum.split("/").join("-"),
+      },
+      locale: "hr",
     });
   });
 
   novosti.edges.map((post, i) => {
-    return locales.map((locale) => {
-      return paths.push({
-        params: {
-          slug:
-            post.node.novosti.naslovEng.toLowerCase().split(" ").join("-") +
-            "-" +
-            post.node.novosti.datum.split("/").join("-"),
-        },
-        locale,
-      });
+    return paths.push({
+      params: {
+        slug:
+          post.node.novosti.naslovEng.toLowerCase().split(" ").join("-") +
+          "-" +
+          post.node.novosti.datum.split("/").join("-"),
+      },
+      locale: "en",
     });
   });
 

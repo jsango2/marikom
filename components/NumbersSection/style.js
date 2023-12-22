@@ -328,6 +328,9 @@ export const Line = styled.div`
   }
   @media only screen and (max-width: 600px) {
     width: 90%;
+    &.inViewLine {
+      width: 90vw;
+    }
   }
 `;
 export const ThinLine = styled.div`
@@ -373,6 +376,6 @@ export const Elipse = styled.div`
     top: -95px; */
   }
   @media screen and (max-width: 440px) {
-    /* top: -80px; */
+    clip-path: ellipse(50% 6% at 50% 50%);
   }
 `;

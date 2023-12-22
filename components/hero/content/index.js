@@ -34,10 +34,13 @@ function Content() {
     <div>
       <WrapSliderContent>
         <WrapText>
-          <Title ref={ref} className={` ${inView ? "inView" : "outView"}`}>
+          <Title
+            ref={ref}
+            className={` ${inView ? "inViewHero" : "outViewHero"}`}
+          >
             {t.Hero.title}
           </Title>
-          <SubTitle className={` ${inView ? "inView" : "outView"}`}>
+          <SubTitle className={` ${inView ? "inViewHero" : "outViewHero"}`}>
             {t.Hero.description}
           </SubTitle>
           {/* <Button

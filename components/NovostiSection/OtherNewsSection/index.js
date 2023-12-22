@@ -45,7 +45,7 @@ function OtherNews({ novosti }) {
           <Title>{t.OtherNews.OtherNews}</Title>
         </WrapTitle>
         <News>
-          {ostaleNovosti.map((card) => (
+          {ostaleNovosti.slice(0, 3).map((card) => (
             <NewsCard
               key={card.node.id}
               datum={card.node.novosti.datum}
