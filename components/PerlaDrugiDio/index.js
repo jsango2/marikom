@@ -97,7 +97,7 @@ function PerlaDrugiDio() {
               <Overlay />
               <WrapProizvodImage>
                 <Image
-                  src={`http://localhost:3000/productImages/${data["Kataloški broj:"]}.webp`}
+                  src={`/productImages/${data["Kataloški broj:"]}.webp`}
                   layout="fill"
                   alt="p1"
                   objectFit="contain"

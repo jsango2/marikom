@@ -100,7 +100,10 @@ function ProizvodiPage() {
     allowScroll();
   };
   // const photoIdList = allPhotosProizvoda.map((item) => item.node.id);
-  const photoIdList2 = productImagesIds.map((item) => item.ID);
+
+  // ./productImagesIds.js sadrzi array sa fotkama koje su u bazi (neki proizvodi nemaju fotku). Treba appendati tu informaciju svakom proizvodu a bi se znala renderirati fotka ili placeholder
+  // ako nam posalju nove fotke (nazvane prema id proizvoda), stavi ih sve u /public/productImages u webp formatu a listu imena stavi u .productImagesId.js
+  const photoIdList = productImagesIds.map((item) => item.ID);
 
   useEffect(() => {
     const filteredDataByCategory = catalogData.filter(
@@ -112,12 +115,12 @@ function ProizvodiPage() {
 
     const newArr1 = filteredDataByCategory.map((v) => ({
       ...v,
-      photoUrl: `http://localhost:3000/productImages/${v["Kataloški broj:"]}.webp`,
+      photoUrl: `/productImages/${v["Kataloški broj:"]}.webp`,
     }));
     newArr1.forEach((item) => {
       item.hasUrl = false;
-      for (let j = 0; j < photoIdList2.length; j++) {
-        if (item["Kataloški broj:"] == +photoIdList2[j]) {
+      for (let j = 0; j < photoIdList.length; j++) {
+        if (item["Kataloški broj:"] == +photoIdList[j]) {
           item.hasUrl = true;
         }
       }
