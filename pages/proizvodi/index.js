@@ -7,20 +7,20 @@ import ProizvodiPage from "../../components/ProizvodiPage";
 import { getAllPhotosProizvodi } from "../../lib/api2.js";
 import Hero from "../../components/ProizvodiPage/Hero/hero.js";
 
-function index(props) {
+function index() {
   return (
     <Layout>
       <Hero />
-      <ProizvodiPage allPhotosProizvodi={props.allPhotosProizvodi} />
+      <ProizvodiPage />
     </Layout>
   );
 }
 
 export default index;
-export async function getStaticProps({ preview = false }) {
-  const allPhotosProizvodi = await getAllPhotosProizvodi();
+// export async function getStaticProps({ preview = false }) {
+//   const allPhotosProizvodi = await getAllPhotosProizvodi();
 
-  return {
-    props: { allPhotosProizvodi },
-  };
-}
+//   return {
+//     props: { allPhotosProizvodi },
+//   };
+// }

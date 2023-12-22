@@ -35,7 +35,8 @@ import useWindowSize from "../helper/usewindowsize";
 import useScrollBlock from "../helper/useScrollBlock.js";
 import { storage } from "../firebase/firebase.js";
 import { getDownloadURL, ref } from "firebase/storage";
-function ProizvodiPage({ allPhotosProizvodi }) {
+import { productImagesIds } from "./productImagesIds.js";
+function ProizvodiPage() {
   const [data, setData] = useState([]);
 
   const [blockScroll, allowScroll] = useScrollBlock();
@@ -70,13 +71,13 @@ function ProizvodiPage({ allPhotosProizvodi }) {
     );
   }, [locale]);
 
-  const allPhotosProizvoda = allPhotosProizvodi.edges;
+  // const allPhotosProizvoda = allPhotosProizvodi.edges;
 
-  allPhotosProizvoda.forEach(
-    (item) => (item.node.id = item.node.sourceUrl.slice(-9, -4))
-  );
+  // allPhotosProizvoda.forEach(
+  //   (item) => (item.node.id = item.node.sourceUrl.slice(-9, -4))
+  // );
 
-  console.log(allPhotosProizvoda);
+  // console.log(allPhotosProizvoda);
 
   const [current, setCurrent] = useState(kategorija);
   const [filteredData, setFilteredData] = useState([]);
@@ -98,7 +99,8 @@ function ProizvodiPage({ allPhotosProizvodi }) {
     setIsDropdownOpen(false);
     allowScroll();
   };
-  const photoIdList = allPhotosProizvoda.map((item) => item.node.id);
+  // const photoIdList = allPhotosProizvoda.map((item) => item.node.id);
+  const photoIdList2 = productImagesIds.map((item) => item.ID);
 
   useEffect(() => {
     const filteredDataByCategory = catalogData.filter(
@@ -114,8 +116,8 @@ function ProizvodiPage({ allPhotosProizvodi }) {
     }));
     newArr1.forEach((item) => {
       item.hasUrl = false;
-      for (let j = 0; j < photoIdList.length; j++) {
-        if (item["Kataloški broj:"] == +photoIdList[j]) {
+      for (let j = 0; j < photoIdList2.length; j++) {
+        if (item["Kataloški broj:"] == +photoIdList2[j]) {
           item.hasUrl = true;
         }
       }

@@ -78,7 +78,6 @@ function NumbersSection() {
                   <Number>+5.000 t</Number>
                   <Fact>{t.Numbers.averageYear}</Fact>
                 </WrapNumberText>
-                {/* <ThinLine /> */}
               </SingleFact>
             </Left>
             <Right>
@@ -101,18 +100,10 @@ function NumbersSection() {
                   <Number>+1.500 t</Number>
                   <Fact>{t.Numbers.volume}</Fact>
                 </WrapNumberText>
-                {/* <ThinLine /> */}
               </SingleFact>
             </Right>
           </Numbers>
         </WrapContent>
-        {/* <Image
-          src="/pozadinaBrojke.webp"
-          alt="overlay"
-          layout="fill"
-          objectFit="cover"
-          
-        /> */}
         <Overlay />
         <Elipse />
       </Down>

@@ -86,17 +86,7 @@ function PerlaDrugiDio() {
   return (
     <WrapAll ref={ref}>
       <RedLine>
-        <WrapLogoPerla>
-          {/* <Image
-            src="/PerlaBiserMora.svg"
-            // width={157}
-            // height={244}
-            layout="fill"
-            alt="p1"
-            // objectFit="cover"
-          /> */}
-          {inView && <PerlaLogoAnimacija />}
-        </WrapLogoPerla>
+        <WrapLogoPerla>{inView && <PerlaLogoAnimacija />}</WrapLogoPerla>
       </RedLine>
       <Title>{t.Perla2.title}</Title>
       <Text>{t.Perla2.subTitle}</Text>
@@ -108,8 +98,6 @@ function PerlaDrugiDio() {
               <WrapProizvodImage>
                 <Image
                   src={`http://localhost:3000/productImages/${data["Kataloški broj:"]}.webp`}
-                  // width={157}
-                  // height={244}
                   layout="fill"
                   alt="p1"
                   objectFit="contain"
@@ -121,7 +109,6 @@ function PerlaDrugiDio() {
                 ? data["IME PROIZVODA - do 60 znakova"]
                 : data["PRODUCT NAME - up to 60 characters"]}
             </ProizvodName>
-            {/* <ProizvodWeight>500G</ProizvodWeight> */}
           </WrapProizvod>
         ))}
       </Proizvodi>
@@ -133,36 +120,17 @@ function PerlaDrugiDio() {
         <Left>
           {" "}
           <ImageWrap>
-            <Image
-              src={KaramarkCut}
-              // width={157}
-              // height={244}
-              alt="p1"
-              objectFit="cover"
-            />
+            <Image src={KaramarkCut} alt="p1" objectFit="cover" />
           </ImageWrap>
           <Potpis percentage={percentage}>
-            <Image
-              src={PotpisKaramarko}
-              // width={157}
-              // height={244}
-              alt="p2"
-              objectFit="cover"
-            />
+            <Image src={PotpisKaramarko} alt="p2" objectFit="cover" />
           </Potpis>
         </Left>
         <Right>
           <Title2>{t.Perla2.karamarkoText}</Title2>
           <LogoHks>
             {" "}
-            <Image
-              src={LogoHKS2}
-              // width={157}
-              // height={244}
-              alt="p1"
-              layout="fill"
-              objectFit="cover"
-            />
+            <Image src={LogoHKS2} alt="p1" layout="fill" objectFit="cover" />
           </LogoHks>
         </Right>
       </Karamarko>

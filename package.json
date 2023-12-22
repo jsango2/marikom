@@ -20,6 +20,7 @@
     "dotenv": "^10.0.0",
     "firebase": "^9.6.6",
     "framer-motion": "^5.5.5",
+    "fs-extra": "^11.2.0",
     "globby": "^13.1.1",
     "html-react-parser": "^1.4.4",
     "i18next": "^23.7.6",
