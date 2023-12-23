@@ -129,7 +129,7 @@ export const Icon = styled.div`
 `;
 export const Title = styled.h1`
   position: sticky;
-  width: 400px;
+  width: 384px;
   left: 0px;
   font-family: "Roboto Condensed", sans-serif;
   font-style: normal;

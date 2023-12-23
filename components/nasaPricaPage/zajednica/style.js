@@ -100,6 +100,8 @@ export const WrapImages = styled.div`
   width: 100%;
   margin-top: 100px;
   @media only screen and (max-width: 850px) {
+    margin-top: 60px;
+
     flex-direction: column;
     align-items: center;
   }

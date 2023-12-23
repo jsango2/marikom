@@ -74,7 +74,7 @@ export const WrapIcons = styled.div`
   display: flex;
   justify-content: space-around;
   height: auto;
-  width: 80%;
+  width: 100%;
   margin-top: 70px;
   @media only screen and (max-width: 430px) {
     margin-top: 30px;
