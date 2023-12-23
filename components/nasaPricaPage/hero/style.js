@@ -32,7 +32,13 @@ export const HeroWrap = styled.div`
   }
   @media only screen and (max-width: 850px) {
     padding: 0 0 70px 0;
-
+    min-height: unset;
+    /* height: 556px; */
+    height: 60vw;
+  }
+  @media only screen and (max-width: 540px) {
+    padding: 0 0 70px 0;
+    min-height: 340px;
     /* height: 556px; */
   }
 `;
@@ -66,6 +72,8 @@ export const ContentWrap = styled.div`
   @media only screen and (max-width: 850px) {
   }
   @media only screen and (max-width: 600px) {
+    padding: 100px 30px 0 30px;
+    font-size: 36px;
   }
 `;
 export const HeroTitle = styled.h1`

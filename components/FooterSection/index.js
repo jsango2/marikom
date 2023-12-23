@@ -38,9 +38,10 @@ function FooterSection() {
   return (
     <WrapAll>
       <Container>
-        <WrapLogo ref={ref} className={` ${inView ? "inView" : "outView"}`}>
-          <MarikomercLogo />
-        </WrapLogo>
+        <WrapLogo
+          ref={ref}
+          className={` ${inView ? "inView" : "outView"}`}
+        ></WrapLogo>
 
         <MainLinks>
           <SingleLink>{t.Linkovi.onama}</SingleLink>

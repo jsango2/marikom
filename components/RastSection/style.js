@@ -20,6 +20,9 @@ export const WrapAll = styled.div`
     height: auto;
     padding: 165px 0 160px 0;
   }
+  @media only screen and (max-width: 4300px) {
+    height: auto;
+  }
 `;
 
 export const WrapBg = styled.div`
@@ -138,7 +141,8 @@ export const SingleFact = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   /* overflow: hidden; */
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 430px) {
+    width: 90vw;
   }
 `;
 export const Wrap = styled.div`
@@ -148,7 +152,7 @@ export const Wrap = styled.div`
   align-items: center;
   height: 77px;
   /* overflow: hidden; */
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 430px) {
   }
 `;
 
@@ -204,7 +208,7 @@ export const Number = styled.h2`
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 700;
-  font-size: 64px;
+  font-size: 55px;
   line-height: 120%;
   /* identical to box height, or 77px */
   margin-right: 33px;
@@ -213,13 +217,10 @@ export const Number = styled.h2`
 
   color: #f5faff;
   /* overflow: hidden; */
-  @media only screen and (max-width: 1000px) {
-    width: 70px;
-    font-size: 44px;
-  }
-  @media only screen and (max-width: 850px) {
-    width: 132px;
-    font-size: 34px;
+
+  @media only screen and (max-width: 430px) {
+    width: 156px;
+    font-size: 36px;
   }
 `;
 
@@ -254,7 +255,8 @@ export const Line = styled.div`
   background-color: white;
 
   /* overflow: hidden; */
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1000px) {
+    display: none;
   }
 `;
 

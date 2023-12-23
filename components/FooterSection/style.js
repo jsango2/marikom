@@ -17,7 +17,8 @@ export const WrapAll = styled.div`
   align-items: center;
   /* overflow: hidden; */
   @media only screen and (max-width: 430px) {
-    height: 758px;
+    height: auto;
+    padding: 60px 0;
   }
 `;
 
@@ -46,6 +47,10 @@ export const WrapLogo = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  background-image: url("/karijereLogo/marikomerc.svg");
+  background-position: center;
+  background-size: 130px 100px;
+  background-repeat: no-repeat;
   &.inView {
     top: 0px;
     opacity: 1;

@@ -50,7 +50,7 @@ const MeniMobile = ({
         </div>
         {isOnamaMenuOpen && (
           <div className="mobileSubLinkParent">
-            <Link href="/nasa-prica">Naša priča</Link>
+            <Link href="/o-nama">Naša priča</Link>
             <Link href="/marikomerc-kvalitete">Marikomerc kvalitete</Link>
             <Link href="/prerada-i-skladiste">Prerada i skladište</Link>
           </div>

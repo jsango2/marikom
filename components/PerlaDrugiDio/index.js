@@ -89,7 +89,7 @@ function PerlaDrugiDio() {
         <WrapLogoPerla>{inView && <PerlaLogoAnimacija />}</WrapLogoPerla>
       </RedLine>
       <Title>{t.Perla2.title}</Title>
-      <Text>{t.Perla2.subTitle}</Text>
+      {/* <Text>{t.Perla2.subTitle}</Text> */}
       <Proizvodi>
         {perlaData.slice(0, 4).map((data) => (
           <WrapProizvod key={data["Kataloški broj:"]}>

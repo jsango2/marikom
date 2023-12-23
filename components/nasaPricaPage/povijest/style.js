@@ -30,6 +30,7 @@ export const WrapAll = styled.div`
   position: relative;
   z-index: 10;
   width: 100%;
+
   height: auto;
   display: flex;
   flex-direction: column;
@@ -38,10 +39,8 @@ export const WrapAll = styled.div`
   align-items: center;
   background: #1c2640;
 
-  padding: 51px 0 69px 0;
-  @media only screen and (max-width: 850px) {
-    /* padding-top: 40px;
-    height: auto; */
+  padding: 51px 0 69px 20px;
+  @media only screen and (max-width: 550px) {
   }
 `;
 
@@ -69,9 +68,12 @@ export const Container = styled.div`
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none;
   }
-  @media only screen and (max-width: 850px) {
+  @media only screen and (max-width: 550px) {
     /* padding-top: 40px;
     height: auto; */
+    padding: 50px 0 0 50px;
+    height: 442px;
+    width: 100vw;
   }
 `;
 export const DashedLine = styled.div`
@@ -96,22 +98,22 @@ export const WrapEvents = styled.div`
   z-index: 10;
 
   display: flex;
-
+  margin-right: 50px;
   @media only screen and (max-width: 850px) {
     padding-top: 40px;
     height: auto;
+    margin-right: 95px;
   }
 `;
 export const Icon = styled.div`
   position: absolute;
   z-index: 10;
   right: 150px;
-  bottom: 0px;
   opacity: 0.9;
-  &.outView {
+  &.outViewArrow {
     opacity: 0;
   }
-  &.inView {
+  &.inViewArrow {
     opacity: 1;
     animation-name: ${blink2};
     animation-duration: 2s;
@@ -121,6 +123,8 @@ export const Icon = styled.div`
   @media only screen and (max-width: 850px) {
     padding-top: 40px;
     height: auto;
+    top: -37px;
+    /* bottom: 200px; */
   }
 `;
 export const Title = styled.h1`

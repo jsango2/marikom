@@ -64,7 +64,7 @@ export const WrapCerts = styled.div`
   }
   @media only screen and (max-width: 600px) {
     margin-top: 30px;
-    margin-bottom: 0px;
+    margin-bottom: 30px;
     justify-content: space-between;
   }
 `;
@@ -123,7 +123,7 @@ export const Title = styled.h1`
   }
 `;
 
-export const Text = styled.h1`
+export const Text = styled.p`
   position: relative;
   z-index: 11;
   font-family: "Gilroy";
@@ -147,7 +147,7 @@ export const Text = styled.h1`
   }
   @media only screen and (max-width: 650px) {
     margin-top: 20px;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 0px;
   }
 `;

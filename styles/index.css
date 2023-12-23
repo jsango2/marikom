@@ -316,7 +316,7 @@ p {
 .inView {
   top: 0px;
   opacity: 1;
-  transition: all 2s ease-out;
+  transition: all 1.4s ease-out;
   /* transition-delay: 0.5s; */
 }
 .outView {

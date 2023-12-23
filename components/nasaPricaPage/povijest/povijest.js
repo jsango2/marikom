@@ -74,7 +74,7 @@ function Povijest() {
       <Container>
         <Title>
           Naša povijest
-          <Icon className={` ${inView ? "inView" : "outView"}`}>
+          <Icon className={` ${inView ? "inViewArrow" : "outViewArrow"}`}>
             <IoIosArrowForward size={24} />
           </Icon>
         </Title>

@@ -31,8 +31,8 @@ export const HeroWrap = styled.div`
     padding: 100px 0 70px 70px;
   }
   @media only screen and (max-width: 850px) {
-    padding: 0 0 40px 0;
-
+    padding: 0 0 0px 0;
+    align-items: flex-start;
     /* height: 556px; */
   }
 `;
@@ -148,7 +148,7 @@ export const WrapImage = styled.div`
     min-height: 300px;
     max-height: 780px;
   }
-  @media only screen and (max-width: 420px) {
+  @media only screen and (max-width: 430px) {
   }
 `;
 export const Broj = styled.div`

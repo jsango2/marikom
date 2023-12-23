@@ -16,25 +16,31 @@ export const WrapAll = styled.div`
   @media only screen and (max-width: 850px) {
     padding-top: 40px;
     height: auto;
+    padding-bottom: 65px;
   }
 `;
 export const WrapContent = styled.div`
   position: relative;
   z-index: 10;
-  max-width: 1440px;
-  width: 100%;
+  width: 1440px;
   height: auto;
   display: flex;
   flex-direction: column;
-
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background: white;
-  /* padding-top: 85px;
-  padding-bottom: 105px; */
+  margin: 90px auto 0 auto;
+  background-color: white;
+  padding: 0 150px;
+  @media only screen and (max-width: 1600px) {
+    width: 100%;
+    padding: 0 30px;
+  }
   @media only screen and (max-width: 850px) {
-    padding-top: 40px;
+    margin: 40px auto 0 auto;
+    padding: 0 0 30px 0;
     height: auto;
+  }
+  @media only screen and (max-width: 430px) {
   }
 `;
 export const TextBox = styled.div`
@@ -49,9 +55,16 @@ export const TextBox = styled.div`
   justify-content: flex-start;
   align-items: center;
 
-  @media only screen and (max-width: 850px) {
+  @media only screen and (max-width: 1200px) {
+    width: 75%;
+
     padding-top: 40px;
     height: auto;
+  }
+  @media only screen and (max-width: 850px) {
+    width: 90%;
+  }
+  @media only screen and (max-width: 430px) {
   }
 `;
 export const SmallText = styled.div`
@@ -87,6 +100,8 @@ export const WrapImages = styled.div`
   width: 100%;
   margin-top: 100px;
   @media only screen and (max-width: 850px) {
+    flex-direction: column;
+    align-items: center;
   }
 `;
 export const Img1 = styled.div`
@@ -99,6 +114,7 @@ export const Img1 = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   @media only screen and (max-width: 850px) {
+    margin-bottom: 20px;
   }
 `;
 export const Img2 = styled.div`
@@ -112,6 +128,7 @@ export const Img2 = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   @media only screen and (max-width: 850px) {
+    margin-bottom: 20px;
   }
 `;
 export const Img3 = styled.div`
@@ -126,6 +143,7 @@ export const Img3 = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   @media only screen and (max-width: 850px) {
+    margin-bottom: 20px;
   }
 `;
 export const Img4 = styled.div`
@@ -140,6 +158,7 @@ export const Img4 = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   @media only screen and (max-width: 850px) {
+    margin-bottom: 20px;
   }
 `;
 export const Icon = styled.div`
@@ -162,12 +181,13 @@ export const Title = styled.h2`
   /* identical to box height, or 48px */
 
   text-align: center;
-  text-transform: uppercase;
+
   color: #000000;
   margin: 10px 0 30px 0;
   @media only screen and (max-width: 1200px) {
   }
-  @media only screen and (max-width: 420px) {
+  @media only screen and (max-width: 650px) {
+    font-size: 36px;
   }
 `;
 export const UpTitle = styled.h2`
@@ -185,7 +205,8 @@ export const UpTitle = styled.h2`
   color: #000000;
   @media only screen and (max-width: 1200px) {
   }
-  @media only screen and (max-width: 420px) {
+  @media only screen and (max-width: 650px) {
+    font-size: 16px;
   }
 `;
 export const Text = styled.h2`
@@ -205,6 +226,7 @@ export const Text = styled.h2`
   color: #1c2640;
   @media only screen and (max-width: 1200px) {
   }
-  @media only screen and (max-width: 420px) {
+  @media only screen and (max-width: 6500px) {
+    font-size: 16px;
   }
 `;

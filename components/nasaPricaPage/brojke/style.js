@@ -17,6 +17,7 @@ export const WrapAll = styled.div`
   @media only screen and (max-width: 850px) {
     padding-top: 40px;
     height: auto;
+    padding-bottom: 45px;
   }
 `;
 export const Overlay = styled.div`
@@ -25,10 +26,8 @@ export const Overlay = styled.div`
   width: 100%;
   height: 100%;
   background: rgba(21, 28, 50, 0.6);
-
+  top: 0;
   @media only screen and (max-width: 850px) {
-    padding-top: 40px;
-    height: auto;
   }
 `;
 export const OverlayTop = styled.div`
@@ -51,8 +50,10 @@ export const Container = styled.div`
   display: flex;
   width: 1300px;
   justify-content: space-between;
-  @media only screen and (max-width: 850px) {
+  @media only screen and (max-width: 1000px) {
     padding-top: 40px;
     height: auto;
+    flex-direction: column;
+    width: 90vw;
   }
 `;

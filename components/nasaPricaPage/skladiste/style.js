@@ -10,7 +10,9 @@ export const WrapSkladiste = styled.div`
 
   @media only screen and (max-width: 850px) {
     padding-top: 40px;
-    height: auto;
+    height: 60vw;
+    max-height: 400px;
+    min-height: 230px;
   }
 `;
 export const BlueLine = styled.div`
@@ -25,6 +27,5 @@ export const BlueLine = styled.div`
 
   @media only screen and (max-width: 850px) {
     padding-top: 40px;
-    height: auto;
   }
 `;

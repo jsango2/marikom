@@ -26,7 +26,7 @@ export const WrapContent = styled.div`
   height: auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin: 90px auto 0 auto;
   background-color: white;
   padding: 0 150px;
@@ -34,8 +34,10 @@ export const WrapContent = styled.div`
     width: 100%;
   }
   @media only screen and (max-width: 850px) {
-    flex-direction: column-reverse;
-    height: auto;
+    flex-direction: column;
+    margin: 0px auto 0 auto;
+    padding: 0 30px 0 5px;
+    align-content: flex-start;
   }
 `;
 
@@ -55,10 +57,10 @@ export const Content = styled.div`
   }
   @media only screen and (max-width: 850px) {
     width: 97%;
-    margin-top: 140px;
+    margin-top: 40px;
   }
   @media only screen and (max-width: 550px) {
-    margin-top: 150px;
+    padding-left: 20px;
   }
 `;
 
@@ -73,7 +75,11 @@ export const Photos = styled.div`
     width: 50%;
   }
   @media only screen and (max-width: 850px) {
-    width: 90%;
+    width: 85vw;
+    padding-left: 20px;
+  }
+  @media only screen and (max-width: 450px) {
+    height: 60vw;
   }
 `;
 export const WrapPhoto = styled.div`
@@ -85,7 +91,9 @@ export const WrapPhoto = styled.div`
   @media only screen and (max-width: 1250px) {
     /* width: calc(100% / 3.3); */
   }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 850px) {
+    margin-left: 0px;
+
     /* height: 70vw;
     min-height: 400px; */
   }
@@ -145,8 +153,8 @@ export const Text = styled.div`
   color: #000000;
   width: 95%;
   margin-bottom: 40px;
-  @media only screen and (max-width: 1250px) {
-    font-size: 14px;
+  @media only screen and (max-width: 850px) {
+    font-size: 16px;
     width: 90%;
   }
 `;

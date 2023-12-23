@@ -100,6 +100,7 @@ function Vrijednosti() {
               // height={244}
               layout="fill"
               alt="p1"
+              objectFit="cover"
             />
           </Img1>
           <Img2>
@@ -110,6 +111,7 @@ function Vrijednosti() {
               // height={244}
               layout="fill"
               alt="p1"
+              objectFit="cover"
             />
           </Img2>
           <Img3>
@@ -120,6 +122,7 @@ function Vrijednosti() {
               // height={244}
               layout="fill"
               alt="p1"
+              objectFit="cover"
             />
           </Img3>
           <Img4>
@@ -130,6 +133,7 @@ function Vrijednosti() {
               // height={244}
               layout="fill"
               alt="p1"
+              objectFit="cover"
             />
           </Img4>
         </WrapImages>
