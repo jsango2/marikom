@@ -16,6 +16,7 @@ export const WrapAllCertifikati = styled.div`
   @media only screen and (max-width: 850px) {
     /* padding-top: 40px;
     height: auto; */
+    padding: 0 0 50px 0;
   }
 `;
 export const WrapCerts = styled.div`
@@ -121,6 +122,7 @@ export const ContentWrap = styled.div`
   @media only screen and (max-width: 850px) {
     /* padding-top: 40px;
     height: auto; */
+    padding: 40px 0;
   }
 `;
 
@@ -142,7 +144,7 @@ export const Title = styled.h2`
   @media only screen and (max-width: 1200px) {
   }
   @media only screen and (max-width: 650px) {
-    font-size: 36px;
+    font-size: 30px;
   }
 `;
 export const UpTitle = styled.h2`

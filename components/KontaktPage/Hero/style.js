@@ -18,7 +18,7 @@ export const WrapAllContactHero = styled.div`
   );
   padding-bottom: 70px;
   @media only screen and (max-width: 850px) {
-    padding-top: 20px;
+    padding-top: 0px;
     padding-bottom: 30px;
   }
 `;

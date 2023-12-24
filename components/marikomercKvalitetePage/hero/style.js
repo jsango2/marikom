@@ -32,6 +32,9 @@ export const HeroWrap = styled.div`
   }
   @media only screen and (max-width: 850px) {
     /* height: 556px; */
+    width: 100vw;
+    height: 65vw;
+    min-height: 270px;
   }
 `;
 export const ContentWrap = styled.div`
@@ -62,6 +65,9 @@ export const ContentWrap = styled.div`
   @media only screen and (max-width: 1400px) {
   }
   @media only screen and (max-width: 850px) {
+    padding-top: 0;
+
+    font-size: 36px;
   }
   @media only screen and (max-width: 600px) {
   }
