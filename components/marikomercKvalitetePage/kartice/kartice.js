@@ -1,4 +1,4 @@
-import { WrapAll } from "./style.js";
+import { WrapAll, CardContainer } from "./style.js";
 // import HeroVideo from "../../video/kraciVideo.mp4";
 // import useWindowSize from "../../helper/usewindowsize";
 import { Link as Veza } from "react-scroll";
@@ -9,6 +9,7 @@ import Kartica from "./kartica/index.js";
 const Kartice = () => {
   // const size = useWindowSize();
   return (
+    // <CardContainer>
     <WrapAll>
       {data.map((a, index) => (
         <Kartica
@@ -22,6 +23,7 @@ const Kartice = () => {
         />
       ))}
     </WrapAll>
+    // </CardContainer>
   );
 };
 

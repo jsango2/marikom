@@ -66,7 +66,7 @@ const MeniMobile = ({
         </Link>
         <Link href="/horeca">HoReCa suradnja</Link>
         <Link href="/karijere">Karijere</Link>
-        <Link href="http://www.zadarnight.run">Kontakt</Link>
+        <Link href="/kontakt">Kontakt</Link>
         <Link href="/novosti">Novosti</Link>
         <Link href="http://www.zadarnight.run">Grupa</Link>
         <div className="mobileLinkDivider"></div>

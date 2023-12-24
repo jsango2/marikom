@@ -9,15 +9,12 @@ export const WrapAll = styled.div`
   z-index: 0;
   min-height: 317px;
   height: auto;
-  width: 100%;
+  width: 700px;
+  overflow: hidden;
   /* display: flex;
   justify-content: flex-start;
   align-items: center; */
-  background: linear-gradient(
-    180deg,
-    rgba(199, 199, 199, 0.102) 0%,
-    rgba(242, 242, 242, 0) 100%
-  );
+  background: #f5faff;
   /* display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -26,18 +23,17 @@ export const WrapAll = styled.div`
   overflow: hidden;
   z-index: 0; */
 
-  @media only screen and (max-width: 1400px) {
-    padding: 100px 0 70px 70px;
-  }
+  margin: 10px;
   @media only screen and (max-width: 850px) {
-    padding: 0 0 70px 0;
-
+    padding: 30px 0 20px 0;
+    min-height: 257px;
     /* height: 556px; */
   }
 `;
+
 export const Container = styled.div`
   position: relative;
-  z-index: 0;
+  z-index: 11;
   height: auto;
   max-width: 1450px;
   width: 90%;
@@ -54,18 +50,13 @@ export const Container = styled.div`
   overflow: hidden;
   z-index: 0; */
 
-  @media only screen and (max-width: 1400px) {
-    padding: 100px 0 70px 70px;
-  }
   @media only screen and (max-width: 850px) {
-    padding: 0 0 70px 0;
-
     /* height: 556px; */
   }
 `;
 export const WrapText = styled.div`
   position: relative;
-  z-index: 0;
+  z-index: 11;
   height: auto;
   width: 600px;
   display: flex;
@@ -82,11 +73,8 @@ export const WrapText = styled.div`
   overflow: hidden;
   z-index: 0; */
 
-  @media only screen and (max-width: 1400px) {
-    padding: 100px 0 70px 70px;
-  }
   @media only screen and (max-width: 850px) {
-    padding: 0 0 70px 0;
+    padding: 0 0 20px 0;
 
     /* height: 556px; */
   }
@@ -114,6 +102,24 @@ export const Photo = styled.div`
   }
 `;
 
+export const Overlay = styled.div`
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 300px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(123, 127, 134, 0.1) 0%,
+    rgba(242, 242, 242, 0) 100%
+  );
+  @media only screen and (max-width: 1400px) {
+  }
+  @media only screen and (max-width: 850px) {
+    /* height: 556px; */
+  }
+`;
 export const UpTitle = styled.h3`
   position: relative;
   z-index: 10;
@@ -167,7 +173,7 @@ export const Text = styled.p`
   /* or 22px */
 
   color: #000000;
-  width: 90%;
+  width: 100%;
   margin-bottom: 0px;
   @media only screen and (max-width: 1250px) {
     font-size: 14px;
@@ -208,8 +214,9 @@ export const Number = styled.h1`
 
   color: #b5d3e3;
   margin: 0;
-  top: 30px;
-  left: -20px;
+  top: 37px;
+  left: -80px;
+  width: 131px;
   @media only screen and (max-width: 1250px) {
     /* font-size: 14px;
     width: 90%; */

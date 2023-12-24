@@ -4,8 +4,8 @@ export const WrapAllContactData = styled.div`
   position: relative;
   z-index: 10;
   width: 100%;
-  height: 846px;
-
+  height: auto;
+  padding: 40px;
   /* display: flex;
   flex-direction: column;
 
@@ -14,6 +14,9 @@ export const WrapAllContactData = styled.div`
   background-image: url("/kontaktBgImg.webp");
   @media only screen and (max-width: 850px) {
     padding-top: 40px;
+  }
+  @media only screen and (max-width: 650px) {
+    padding: 0px;
   }
 `;
 export const WrapContent = styled.div`
@@ -25,8 +28,8 @@ export const WrapContent = styled.div`
   margin: 0 auto;
   padding: 54px 0 0 25px;
 
-  @media only screen and (max-width: 1300px) {
-    padding: 70px 100px;
+  @media only screen and (max-width: 850px) {
+    flex-direction: column;
   }
 `;
 export const Photo = styled.div`
@@ -35,16 +38,21 @@ export const Photo = styled.div`
   width: 240px;
   height: 260px;
   background-image: url("/dellorco.png");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   margin-right: 30px;
-  @media only screen and (max-width: 1300px) {
+  @media only screen and (max-width: 650px) {
+    width: 132px;
+    height: 152px;
   }
 `;
 export const Data = styled.div`
   position: relative;
   z-index: 11;
   margin-left: 130px;
-  @media only screen and (max-width: 1300px) {
+  @media only screen and (max-width: 850px) {
+    margin-left: 0;
+    margin-top: 40px;
   }
 `;
 export const Ceo = styled.div`

@@ -31,6 +31,8 @@ export const HeroWrap = styled.div`
     padding: 100px 0 70px 70px;
   }
   @media only screen and (max-width: 850px) {
+    min-height: unset;
+
     padding: 0 0 70px 0;
 
     /* height: 556px; */
@@ -66,6 +68,7 @@ export const ContentWrap = styled.div`
   @media only screen and (max-width: 850px) {
   }
   @media only screen and (max-width: 600px) {
+    font-size: 30px;
   }
 `;
 export const HeroTitle = styled.h1`
@@ -131,7 +134,8 @@ export const Overlay = styled.div`
   height: 100%;
   background: #1c2640;
   opacity: 0.3;
-
+  top: 0;
+  left: 0;
   @media only screen and (max-width: 600px) {
   }
   @media only screen and (max-width: 420px) {

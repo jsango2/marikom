@@ -5,6 +5,8 @@ import {
   WrapPhoto,
   GoogleButton,
   Title,
+  BlueLine,
+  Text,
 } from "./style.js";
 
 import useWindowSize from "../../helper/usewindowsize";
@@ -15,8 +17,7 @@ import hr from "../../../locales/hr.json";
 import { useRouter } from "next/router.js";
 
 import { useState } from "react";
-import { BlueLine } from "../../ProLogMapSection/style.js";
-import { TopTitle, Text } from "../../HorecaPage/Mapa/style.js";
+import { TopTitle } from "../../HorecaPage/Mapa/style.js";
 function ContactHero() {
   const { locale } = useRouter();
 
@@ -48,7 +49,7 @@ function ContactHero() {
           <GoogleButton>Upute Google Maps</GoogleButton>
         </WrapText>
         <WrapPhoto>
-          <Image src="/kontaktHeroImg.webp" layout="fill" />
+          <Image src="/kontaktHeroImg.webp" layout="fill" objectFit="cover" />
         </WrapPhoto>
       </WrapContent>
     </WrapAllContactHero>

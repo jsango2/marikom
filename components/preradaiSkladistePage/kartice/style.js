@@ -49,10 +49,12 @@ export const WrapKartica = styled.div`
     width: 100%;
   }
   @media only screen and (max-width: 850px) {
+    margin: 40px auto 0 auto;
+
     &:nth-child(2) {
-      flex-direction: column-reverse;
+      flex-direction: column;
     }
-    flex-direction: column-reverse;
+    flex-direction: column;
     height: auto;
   }
 `;
@@ -66,21 +68,20 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-
+  padding: 0 20px;
   @media only screen and (max-width: 1250px) {
     width: 43%;
     padding-left: 30px;
   }
   @media only screen and (max-width: 850px) {
     width: 97%;
-    margin-top: 140px;
+    margin-top: 20px;
   }
   @media only screen and (max-width: 550px) {
-    margin-top: 150px;
   }
 `;
 
-export const Photo = styled.div`
+export const Photo1 = styled.div`
   position: relative;
   z-index: 10;
   width: 600px;
@@ -88,6 +89,47 @@ export const Photo = styled.div`
   background-color: grey;
   display: flex;
   justify-content: space-between;
+  background: ${(props) => `url(${props.bg}) no-repeat center`};
+  background-size: cover;
+  @media only screen and (max-width: 1250px) {
+    width: 50%;
+  }
+  @media only screen and (max-width: 850px) {
+    width: 100%;
+    height: 65vw;
+    min-height: 250px;
+  }
+`;
+export const Photo2 = styled.div`
+  position: relative;
+  z-index: 10;
+  width: 600px;
+  height: 630px;
+  background-color: grey;
+  display: flex;
+  justify-content: space-between;
+  background: ${(props) => `url(${props.bg}) no-repeat center`};
+  background-size: cover;
+  @media only screen and (max-width: 1250px) {
+    width: 50%;
+  }
+  @media only screen and (max-width: 850px) {
+    width: 100%;
+    height: 65vw;
+    min-height: 250px;
+  }
+`;
+export const Photo3 = styled.div`
+  position: relative;
+  z-index: 10;
+  width: 600px;
+  height: 528px;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: ${(props) => `url(${props.bg}) no-repeat center`};
+  background-size: cover;
   @media only screen and (max-width: 1250px) {
     width: 50%;
   }
@@ -95,7 +137,41 @@ export const Photo = styled.div`
     width: 100%;
   }
 `;
+export const WrapCert = styled.div`
+  position: relative;
+  z-index: 10;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  @media only screen and (max-width: 1250px) {
+  }
+  @media only screen and (max-width: 850px) {
+    margin: 20px;
 
+    width: 60px;
+    height: 60px;
+  }
+`;
+
+export const Overlay = styled.div`
+  position: relative;
+  z-index: 10;
+  width: 383px;
+  height: 370px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: stretch;
+  align-content: center;
+  @media only screen and (max-width: 1250px) {
+    width: 50%;
+  }
+  @media only screen and (max-width: 850px) {
+    width: 75vw;
+  }
+`;
 export const UpTitle = styled.div`
   position: relative;
   z-index: 10;
@@ -183,10 +259,10 @@ export const BlueLine = styled.div`
   height: 101px;
   background: #4299c8;
   top: 18px;
-  left: -30px;
+  left: -20px;
   border-radius: 1px;
   /* overflow: hidden; */
   @media only screen and (max-width: 850px) {
-    left: 0px;
+    left: 4px;
   }
 `;

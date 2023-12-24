@@ -51,7 +51,24 @@ function LanguageSwitcher({
         // const homeRedirect = getSlug === "" ? "/en" : "/";
         return router.push("/karijere", undefined, { locale: lang });
       }
-
+      if (asPath === "/o-nama") {
+        // const homeRedirect = getSlug === "" ? "/en" : "/";
+        return router.push("/o-nama", undefined, { locale: lang });
+      }
+      if (asPath === "/marikomerc-kvalitete") {
+        // const homeRedirect = getSlug === "" ? "/en" : "/";
+        return router.push("/marikomerc-kvalitete", undefined, {
+          locale: lang,
+        });
+      }
+      if (asPath === "/prerada-i-skladiste") {
+        // const homeRedirect = getSlug === "" ? "/en" : "/";
+        return router.push("/prerada-i-skladiste", undefined, { locale: lang });
+      }
+      if (asPath === "/kontakt") {
+        // const homeRedirect = getSlug === "" ? "/en" : "/";
+        return router.push("/kontakt", undefined, { locale: lang });
+      }
       if (asPath.includes("/karijere/")) {
         const getTranslationRouteForNews = oglasiNaslovi.filter((naslov) =>
           locale === "en"

@@ -9,7 +9,6 @@ function index() {
     <Layout>
       <Hero />
       <Kartice />
-      <FooterSection />
     </Layout>
   );
 }
