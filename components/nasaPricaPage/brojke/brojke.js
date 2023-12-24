@@ -1,17 +1,21 @@
-import { Overlay, WrapAll, Container, OverlayTop } from "./style.js";
+import { Overlay, WrapAll, Container, OverlayTop, Number } from "./style.js";
 
 import Image from "next/image";
 import bg from "../../../assets/images/nasaPrica/brojkeBG.png";
 import {
   Line,
-  Number,
   Right,
   SingleFact,
   TextFact,
   Wrap,
 } from "../../RastSection/style.js";
+import { useRouter } from "next/router.js";
+import en from "../../../locales/en.json";
+import hr from "../../../locales/hr.json";
 
 function Brojke() {
+  const { locale } = useRouter();
+  const t = locale === "en" ? en : hr;
   return (
     <WrapAll>
       <OverlayTop />
@@ -22,30 +26,28 @@ function Brojke() {
           <SingleFact>
             <Wrap>
               <Number>+36%</Number>
-              <TextFact>Prosječan rast prihoda u zadnje 3 godine</TextFact>
+              <TextFact>{t.Onama.brojke1}</TextFact>
             </Wrap>
             <Line />
           </SingleFact>
           <SingleFact>
             <Wrap>
               <Number>467</Number>
-              <TextFact>Ukupni kapacitet u n° paleta + 4°C</TextFact>
+              <TextFact>{t.Onama.brojke2}</TextFact>
             </Wrap>
             <Line />
           </SingleFact>
           <SingleFact>
             <Wrap>
               <Number>122</Number>
-              <TextFact>Kapacitet prijema kamiona u jednom danu</TextFact>
+              <TextFact>{t.Onama.brojke3}</TextFact>
             </Wrap>
             <Line />
           </SingleFact>
           <SingleFact>
             <Wrap>
               <Number>335</Number>
-              <TextFact>
-                Volumen prerađenih proizvoda godišnje u tonama
-              </TextFact>
+              <TextFact>{t.Onama.brojke4}</TextFact>
             </Wrap>
           </SingleFact>
         </Right>
@@ -53,28 +55,28 @@ function Brojke() {
           <SingleFact>
             <Wrap>
               <Number>+16%</Number>
-              <TextFact>Prosječan rast prihoda u zadnje 3 godine</TextFact>
+              <TextFact>{t.Onama.brojke5}</TextFact>
             </Wrap>
             <Line />
           </SingleFact>
           <SingleFact>
             <Wrap>
               <Number>952</Number>
-              <TextFact>Broj kupaca u prošloj godini</TextFact>
+              <TextFact>{t.Onama.brojke6}</TextFact>
             </Wrap>
             <Line />
           </SingleFact>
           <SingleFact>
             <Wrap>
               <Number>874</Number>
-              <TextFact>Skladišni prostor u n° paleta</TextFact>
+              <TextFact>{t.Onama.brojke7}</TextFact>
             </Wrap>
             <Line />
           </SingleFact>
           <SingleFact>
             <Wrap>
               <Number>1.608 t</Number>
-              <TextFact>Ukupne količine u 2021. godini </TextFact>
+              <TextFact>{t.Onama.brojke8} </TextFact>
             </Wrap>
           </SingleFact>
         </Right>

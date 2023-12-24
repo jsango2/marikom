@@ -76,10 +76,7 @@ export const ContentWrap = styled.div`
     font-size: 36px;
   }
 `;
-export const HeroTitle = styled.h1`
-  @media only screen and (max-width: 420px) {
-  }
-`;
+
 export const WrapText = styled.div`
   width: 520px;
 

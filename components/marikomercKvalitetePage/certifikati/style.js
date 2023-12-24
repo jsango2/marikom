@@ -33,6 +33,7 @@ export const WrapCerts = styled.div`
   }
 `;
 export const CardText = styled.p`
+  position: relative;
   margin-top: 30px;
   color: #f5faff;
   text-align: center;
@@ -69,6 +70,17 @@ export const WrapCertImage = styled.div`
     height: auto; */
   }
 `;
+export const Overlay = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgba(28, 38, 64, 0.8);
+  @media only screen and (max-width: 850px) {
+    /* padding-top: 40px;
+    height: auto; */
+  }
+`;
 export const WrapSingleCert = styled.div`
   position: relative;
   z-index: 10;
@@ -78,8 +90,10 @@ export const WrapSingleCert = styled.div`
 
   justify-content: flex-start;
   align-items: center;
-  background: #1c2640;
 
+  background-image: url("/kvaliteteCard.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 37px 29px;
   height: 508px;
   width: 300px;

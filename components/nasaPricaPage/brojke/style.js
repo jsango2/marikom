@@ -30,6 +30,27 @@ export const Overlay = styled.div`
   @media only screen and (max-width: 850px) {
   }
 `;
+export const Number = styled.h2`
+  position: relative;
+  width: 200px;
+  z-index: 11;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 120%;
+  /* identical to box height, or 77px */
+  margin-right: 33px;
+  /* SUNRISE/Sunray */
+
+  color: #f5faff;
+  /* overflow: hidden; */
+
+  @media only screen and (max-width: 430px) {
+    width: 156px;
+    font-size: 36px;
+  }
+`;
 export const OverlayTop = styled.div`
   position: absolute;
   z-index: 10;

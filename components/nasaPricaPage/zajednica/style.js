@@ -11,7 +11,7 @@ export const WrapAll = styled.div`
   justify-content: center;
   align-items: center;
   background: white;
-  padding-top: 85px;
+  padding-top: 35px;
   padding-bottom: 105px;
   @media only screen and (max-width: 850px) {
     padding-top: 40px;

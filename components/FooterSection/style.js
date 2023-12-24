@@ -26,7 +26,7 @@ export const Container = styled.div`
   position: relative;
   z-index: 10;
   width: 917px;
-  height: 536px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

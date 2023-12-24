@@ -13,42 +13,38 @@ import {
   Img4,
   WrapContent,
 } from "./style.js";
+import { useRouter } from "next/router.js";
+import en from "../../../locales/en.json";
+import hr from "../../../locales/hr.json";
 
 function Zajednica() {
+  const { locale } = useRouter();
+  const t = locale === "en" ? en : hr;
   return (
     <WrapAll>
       <WrapContent>
         <TextBox>
-          <UpTitle>RAD U ZAJEDNICI</UpTitle>
-          <Title>
-            Podržavamo projekte i aktivnosti lokalne i regionalne zajednice i
-            rastemo zajedno s njima
-          </Title>
-          <Text>
-            Kroz korporativno volontiranje, donacije i podršku lokalnim i
-            regionalnim inicijativama nastojimo biti društveno odgovorno
-            poduzeće koje ostvaruje pozitivan utjecaj na zajednicu.
-          </Text>
+          <UpTitle>{t.Onama.radUzajednici}</UpTitle>
+          <Title>{t.Onama.naslovPodrzavamo}</Title>
+          <Text>{t.Onama.textPodrzavamo}</Text>
         </TextBox>
 
         <WrapImages>
           <Img1>
             <Overlay />
-            <SmallText>
-              Sponzoriranje košarkaškog kolektiva Diadora
-            </SmallText>{" "}
+            <SmallText>{t.Onama.card1}</SmallText>{" "}
           </Img1>
           <Img2>
             <Overlay />
-            <SmallText>Sponzoriranje košarkaškog kolektiva Diadora</SmallText>
+            <SmallText>{t.Onama.card2}</SmallText>
           </Img2>
           <Img3>
             <Overlay />
-            <SmallText>Sponzoriranje košarkaškog kolektiva Diadora</SmallText>
+            <SmallText>{t.Onama.card3}</SmallText>
           </Img3>
           <Img4>
             <Overlay />
-            <SmallText>Sponzoriranje košarkaškog kolektiva Diadora</SmallText>
+            <SmallText>{t.Onama.card4}</SmallText>
           </Img4>
         </WrapImages>
       </WrapContent>

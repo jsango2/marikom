@@ -11,7 +11,7 @@ export const WrapAll = styled.div`
   justify-content: center;
   align-items: center;
   background: white;
-  padding-top: 105px;
+  padding-top: 35px;
   padding-bottom: 85px;
   @media only screen and (max-width: 850px) {
     padding-top: 40px;
@@ -76,6 +76,10 @@ export const WrapIcons = styled.div`
   height: auto;
   width: 100%;
   margin-top: 70px;
+  @media only screen and (max-width: 850px) {
+    width: 100vw;
+    flex-wrap: wrap;
+  }
   @media only screen and (max-width: 430px) {
     margin-top: 30px;
   }
@@ -144,15 +148,52 @@ export const Img4 = styled.div`
     display: none;
   }
 `;
+export const WrapIcon = styled.div`
+  position: relative;
+  z-index: 10;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media only screen and (max-width: 850px) {
+    margin: 15px 5px;
+  }
+`;
 export const Icon = styled.div`
   position: relative;
   z-index: 10;
-  height: 150px;
-  width: 150px;
+  height: 45px;
+  width: 45px;
+  @media only screen and (max-width: 850px) {
+    height: 35px;
+    width: 35px;
+  }
   @media only screen and (max-width: 430px) {
-    height: 120px;
-    width: 90px;
     margin: 0 5px;
+  }
+`;
+export const IconText = styled.div`
+  position: relative;
+  z-index: 10;
+  color: #1c2640;
+  text-align: center;
+  /* M-Button */
+  font-family: Gilroy;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 19.2px */
+  width: 155px;
+  margin-top: 18px;
+  @media only screen and (max-width: 850px) {
+    font-size: 12px;
+    width: 100px;
+  }
+  @media only screen and (max-width: 430px) {
+    font-size: 11px;
+
+    margin: 10px 5px 0 5px;
   }
 `;
 export const Title = styled.h2`
@@ -176,7 +217,7 @@ export const Title = styled.h2`
     font-size: 36px;
   }
 `;
-export const UpTitle = styled.h2`
+export const UpTitle = styled.h4`
   position: relative;
 
   font-family: "Gilroy";

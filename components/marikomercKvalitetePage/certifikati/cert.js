@@ -3,6 +3,7 @@ import {
   CardText,
   WrapImages,
   WrapCertImage,
+  Overlay,
 } from "./style.js";
 // import HeroVideo from "../../video/kraciVideo.mp4";
 import useWindowSize from "../../helper/usewindowsize.js";
@@ -13,6 +14,7 @@ const Cert = ({ text, ISO, MSC, IFS, ZZ, ASC }) => {
   return (
     <>
       <WrapSingleCert>
+        <Overlay />
         <WrapImages>
           {ISO && (
             <WrapCertImage>

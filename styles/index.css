@@ -130,7 +130,7 @@ html {
 
 /* ------FONTS------ */
 
-.H1 {
+/* .H1 {
   font-style: italic;
   font-weight: bold;
   font-size: 72px;
@@ -209,17 +209,14 @@ p {
   line-height: 120%;
 }
 .blast-from-the-past {
-  /* font-family: Komika Axis; */
   font-style: normal;
   font-weight: normal;
   font-size: 50px;
   line-height: 120%;
-  /* or 60px */
   text-align: center;
-  /* Tamno plava pozadina */
   color: #191b26;
   transform: rotate(-3.8deg);
-}
+} */
 /* ------------------------ */
 .headroom-wrapper {
   z-index: 1000;

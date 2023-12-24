@@ -116,7 +116,7 @@ export const UpTitle = styled.div`
   @media only screen and (max-width: 600px) {
   }
 `;
-export const Title = styled.div`
+export const Title = styled.h2`
   position: relative;
   z-index: 10;
   font-family: "Roboto Condensed", sans-serif;
@@ -140,7 +140,7 @@ export const Title = styled.div`
     line-height: 120%;
   }
 `;
-export const Text = styled.div`
+export const Text = styled.p`
   position: relative;
   z-index: 10;
   font-family: "Gilroy";

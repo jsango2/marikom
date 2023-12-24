@@ -109,6 +109,7 @@ export const Icon = styled.div`
   position: absolute;
   z-index: 10;
   right: 150px;
+  top: 0;
   opacity: 0.9;
   &.outViewArrow {
     opacity: 0;
