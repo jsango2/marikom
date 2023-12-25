@@ -36,39 +36,80 @@ import useScrollBlock from "../helper/useScrollBlock.js";
 import { storage } from "../firebase/firebase.js";
 import { getDownloadURL, ref } from "firebase/storage";
 import { productImagesIds } from "./productImagesIds.js";
+
+import { useContext } from "react";
+import { AppContext } from "../../pages/_app.js";
+
 function ProizvodiPage() {
+  const [category, setCategory] = useContext(AppContext);
+  const [kategorija, setKategorija] = useState(
+    // locale === "hr" ? "Riba" : "Fish"
+    ""
+  );
+  const [current, setCurrent] = useState(kategorija);
+  console.log("PROIZVODIcat iz  /proizvodi:", category);
+
   const [data, setData] = useState([]);
 
   const [blockScroll, allowScroll] = useScrollBlock();
   const size = useWindowSize();
   const router = useRouter();
   const { locale } = router;
-  const [kategorija, setKategorija] = useState(
-    locale === "hr" ? "Glavonošci" : "Cephalopods"
-  );
   const [forcePage, setForcePage] = useState();
   const [searchTerm, setSearchTerm] = useState("");
   const [state, setstate] = useState({
     query: "",
     list: [],
   });
+  // useEffect(() => {
+  //   category == ""
+  //     ? setKategorija(category)
+  //     : setKategorija(locale === "hr" ? "Glavonošci" : "Cephalopods");
+  // }, []);
 
-  const findKatbyLang = catalogData.find(
-    (k) =>
-      k["Kategorija kojoj proizvod pripada:"] ||
-      k["Kategorija kojoj proizvod pripada ENG:"] === kategorija
-  );
+  // const findKatbyLang = catalogData.find(
+  //   (k) =>
+  //     k["Kategorija kojoj proizvod pripada:"] ||
+  //     k["Kategorija kojoj proizvod pripada ENG:"] === kategorija
+  // );
+
   useEffect(() => {
-    setKategorija(
-      locale === "hr"
-        ? findKatbyLang["Kategorija kojoj proizvod pripada:"]
-        : findKatbyLang["Kategorija kojoj proizvod pripada ENG:"]
-    );
-    setCurrent(
-      locale === "hr"
-        ? findKatbyLang["Kategorija kojoj proizvod pripada:"]
-        : findKatbyLang["Kategorija kojoj proizvod pripada ENG:"]
-    );
+    if (category.length > 0) {
+      const findKatbyLang = catalogData.find(
+        (k) =>
+          k["Kategorija kojoj proizvod pripada:"] === category ||
+          k["Kategorija kojoj proizvod pripada ENG:"] === category
+      );
+      setKategorija(
+        locale === "hr"
+          ? findKatbyLang["Kategorija kojoj proizvod pripada:"]
+          : findKatbyLang["Kategorija kojoj proizvod pripada ENG:"]
+      );
+      setCurrent(
+        locale === "hr"
+          ? findKatbyLang["Kategorija kojoj proizvod pripada:"]
+          : findKatbyLang["Kategorija kojoj proizvod pripada ENG:"]
+      );
+      console.log(kategorija, current);
+    } else {
+      const findKatbyLang = catalogData.find(
+        (k) =>
+          k["Kategorija kojoj proizvod pripada:"] ||
+          k["Kategorija kojoj proizvod pripada ENG:"] === kategorija
+      );
+      setKategorija(
+        locale === "hr"
+          ? findKatbyLang["Kategorija kojoj proizvod pripada:"]
+          : findKatbyLang["Kategorija kojoj proizvod pripada ENG:"]
+      );
+
+      setCurrent(
+        locale === "hr"
+          ? findKatbyLang["Kategorija kojoj proizvod pripada:"]
+          : findKatbyLang["Kategorija kojoj proizvod pripada ENG:"]
+      );
+      console.log(kategorija, current);
+    }
   }, [locale]);
 
   // const allPhotosProizvoda = allPhotosProizvodi.edges;
@@ -79,7 +120,6 @@ function ProizvodiPage() {
 
   // console.log(allPhotosProizvoda);
 
-  const [current, setCurrent] = useState(kategorija);
   const [filteredData, setFilteredData] = useState([]);
   const [filteredDataOnInput, setFilteredDataOnInput] = useState([]);
   const [filteredByKat, setFilteredByKat] = useState([]);
@@ -93,6 +133,7 @@ function ProizvodiPage() {
   const kategorije = [...new Set(sveKategorije)];
 
   const handleClick = (kat) => {
+    setCategory(kat);
     setKategorija(kat);
     current === kat ? setCurrent(null) : setCurrent(kat);
     setItemOffset(0);

@@ -180,7 +180,12 @@ export async function getStaticPaths({ locales }) {
     return paths.push({
       params: {
         slug:
-          post.node.novosti.naslovEng.toLowerCase().split(" ").join("-") +
+          slugify(
+            post.node.novosti.naslovEng.toLowerCase().split(" ").join("-"),
+            {
+              locale: "eng",
+            }
+          ) +
           "-" +
           post.node.novosti.datum.split("/").join("-"),
       },
@@ -204,7 +209,9 @@ export async function getStaticProps({ params }) {
         "-" +
         data.node.novosti.datum.split("/").join("-") ===
         currentPath ||
-      data.node.novosti.naslovEng.toLowerCase().split(" ").join("-") +
+      slugify(data.node.novosti.naslovEng.toLowerCase().split(" ").join("-"), {
+        locale: "eng",
+      }) +
         "-" +
         data.node.novosti.datum.split("/").join("-") ===
         currentPath

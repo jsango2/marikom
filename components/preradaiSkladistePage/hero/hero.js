@@ -5,8 +5,14 @@ import { Link as Veza } from "react-scroll";
 import Companies from "../../hero/companies/index.js";
 import Image from "next/image";
 import hero from "../../../assets/images/nasaPrica/hero.png";
+import { useRouter } from "next/router.js";
+import en from "../../../locales/en.json";
+import hr from "../../../locales/hr.json";
 
 const Hero = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : hr;
   const size = useWindowSize();
   return (
     <>
@@ -18,9 +24,8 @@ const Hero = () => {
           layout="fill"
           objectFit="cover"
         />
-        <ContentWrap>PRERADA I SKLADIŠTE</ContentWrap>
+        <ContentWrap>{t.Prerada.heroNaslov}</ContentWrap>
       </HeroWrap>
-      <Companies />
     </>
   );
 };
