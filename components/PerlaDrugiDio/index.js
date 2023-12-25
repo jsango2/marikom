@@ -114,14 +114,11 @@ function PerlaDrugiDio() {
       </Proizvodi>
       <Button>{t.Perla2.button}</Button>
       <Karamarko ref={ref3}>
-        <PozadinaPerla percentage={percentage}>
-          <Image src="/PerlaBg.svg" layout="fill" />
-        </PozadinaPerla>
         <Left>
-          {" "}
-          <ImageWrap>
-            <Image src={KaramarkCut} alt="p1" objectFit="cover" />
-          </ImageWrap>
+          <PozadinaPerla percentage={percentage}>
+            <Image src="/PerlaBg.svg" layout="fill" />
+          </PozadinaPerla>{" "}
+          <ImageWrap></ImageWrap>
           <Potpis percentage={percentage}>
             <Image src={PotpisKaramarko} alt="p2" objectFit="cover" />
           </Potpis>

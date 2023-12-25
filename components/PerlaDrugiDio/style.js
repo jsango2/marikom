@@ -15,7 +15,7 @@ export const WrapAll = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column; */
-  /* overflow: hidden; */
+  overflow: hidden;
   @media only screen and (max-width: 768px) {
     /* padding-bottom: 100px; */
   }
@@ -226,18 +226,19 @@ export const LogoHks = styled.div`
   @media only screen and (max-width: 850px) {
     width: 170px;
     height: 170px;
+    margin: 85px auto 0 auto;
   }
   @media only screen and (max-width: 430px) {
-    position: absolute;
+    /* position: absolute;
     top: 360px;
     width: 90px;
-    height: 90px;
+    height: 90px; */
   }
   @media only screen and (max-width: 410px) {
-    position: absolute;
+    /* position: absolute;
     top: 380px;
     width: 90px;
-    height: 90px;
+    height: 90px; */
   }
 `;
 export const WrapLogo = styled.div`
@@ -373,14 +374,17 @@ export const Karamarko = styled.div`
   /* overflow: hidden; */
 
   justify-content: center;
-  margin: 230px auto 0 auto;
-  @media only screen and (max-width: 800px) {
+  margin: 230px auto 20px auto;
+  @media only screen and (max-width: 1300px) {
+    width: 100%;
+  }
+  @media only screen and (max-width: 1000px) {
     flex-direction: column-reverse;
     width: 100%;
     margin-top: 50px;
+    margin-bottom: 0;
   }
   @media only screen and (max-width: 800px) {
-    width: 82%;
   }
 `;
 export const Left = styled.div`
@@ -391,22 +395,38 @@ export const Left = styled.div`
   display: flex;
   justify-content: center;
   padding-left: 70px;
-  @media only screen and (max-width: 800px) {
+  align-items: flex-end;
+  @media only screen and (max-width: 1000px) {
+    align-items: flex-end;
     width: 100%;
+    padding-left: 0;
+  }
+  @media only screen and (max-width: 430px) {
+    align-items: flex-end;
+    width: 100vw;
+    padding-left: 0;
   }
 `;
 export const ImageWrap = styled.div`
   position: relative;
   z-index: 10;
-  height: 440px;
+  height: 543px;
   width: 400px;
+  background-image: url("/karamarko.png");
+  background-size: cover;
   @media only screen and (max-width: 1000px) {
-    height: 418px;
+    height: 395px;
     width: 300px;
+  }
+  @media only screen and (max-width: 650px) {
+    width: 70vw;
   }
   @media only screen and (max-width: 430px) {
     height: 371px;
-    width: 249px;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
   }
 `;
 export const Potpis = styled.div`
@@ -417,13 +437,17 @@ export const Potpis = styled.div`
 
   left: -135px;
   top: ${(props) => props.percentage * 50 + 100}px;
-  @media only screen and (max-width: 800px) {
-    width: 100%;
+  @media only screen and (max-width: 1000px) {
     width: 220px;
     height: 230px;
+    left: 41px;
+    top: 341px;
   }
+
   @media only screen and (max-width: 430px) {
-    left: -75px;
+    top: 160px;
+
+    left: 0px;
   }
 `;
 export const PozadinaPerla = styled.div`
@@ -434,9 +458,23 @@ export const PozadinaPerla = styled.div`
   bottom: ${(props) => props.percentage * 70}px;
 
   left: -195px;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 1000px) {
+    left: -95px;
+
+    position: relative;
     width: 560px;
     height: 550px;
+  }
+  @media only screen and (max-width: 800px) {
+    left: 10px;
+    width: 50%;
+  }
+  @media only screen and (max-width: 430px) {
+    position: absolute;
+    bottom: ${(props) => props.percentage * 70 - 40}px;
+
+    left: 0px;
+    width: 80%;
   }
 `;
 export const RedLine2 = styled.div`
@@ -458,8 +496,8 @@ export const Right = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 80px;
-  @media only screen and (max-width: 800px) {
+  padding-top: 20px;
+  @media only screen and (max-width: 1000px) {
     width: 100%;
     height: auto;
   }
