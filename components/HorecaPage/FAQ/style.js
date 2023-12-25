@@ -18,7 +18,9 @@ export const WrapAll = styled.div`
   );
 
   @media only screen and (max-width: 850px) {
+    height: auto;
     padding-top: 40px;
+    margin-bottom: 0px;
   }
 `;
 export const HorecaContent = styled.div`
@@ -27,8 +29,13 @@ export const HorecaContent = styled.div`
   max-width: 1440px;
   margin: 0 auto;
   padding: 90px 150px;
+  display: flex;
   @media only screen and (max-width: 1300px) {
     padding: 70px 100px;
+  }
+  @media only screen and (max-width: 850px) {
+    flex-direction: column;
+    padding: 70px 0px 0 0;
   }
 `;
 export const HorecaAccordion = styled.div`
@@ -39,6 +46,13 @@ export const HorecaAccordion = styled.div`
 
   @media only screen and (max-width: 1300px) {
     width: 400px;
+  }
+  @media only screen and (max-width: 850px) {
+    padding: 0px 0 30px 0;
+    margin: 0 auto;
+  }
+  @media only screen and (max-width: 430px) {
+    width: 95vw;
   }
 `;
 export const AccordionTitle = styled.h3`
@@ -72,5 +86,14 @@ export const HorecaWrapImage = styled.div`
 
   @media only screen and (max-width: 1300px) {
     width: 35%;
+  }
+  @media only screen and (max-width: 850px) {
+    width: 100vw;
+    height: 65vw;
+    min-height: 260px;
+    top: unset;
+    right: unset;
+    position: relative;
+    background-position: 0 60%;
   }
 `;

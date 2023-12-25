@@ -483,6 +483,7 @@ export const PerlaLogoWrap = styled.div`
   /* /* overflow: hidden; */
   @media only screen and (max-width: 1000px) {
     width: 100%;
+    display: none;
   }
 `;
 export const YellowArrow = styled.div`
@@ -528,7 +529,8 @@ export const RightSide = styled.div`
   width: 750px;
   height: auto;
   margin-left: 100px;
-
+  display: flex;
+  flex-direction: column;
   /* color: black;
   display: flex;
   justify-content: center;
@@ -538,8 +540,12 @@ export const RightSide = styled.div`
     width: 54%;
   }
   @media only screen and (max-width: 1000px) {
+    padding-top: 100px;
     margin-left: 0;
     width: 100%;
+  }
+  @media only screen and (max-width: 430px) {
+    padding-top: 60px;
   }
 `;
 

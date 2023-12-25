@@ -13,7 +13,8 @@ export const MapaWrapAll = styled.div`
   align-items: center; */
 
   @media only screen and (max-width: 850px) {
-    padding-top: 40px;
+    padding-top: 0px;
+    margin-bottom: 0;
   }
 `;
 export const MapaContent = styled.div`
@@ -26,7 +27,13 @@ export const MapaContent = styled.div`
   margin: 0 auto;
   padding: 90px 0px;
   @media only screen and (max-width: 1300px) {
-    padding: 70px 100px;
+    padding: 70px 0px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  @media only screen and (max-width: 850px) {
+    padding: 0px 0px;
+    flex-direction: column;
   }
 `;
 export const MapaWrapKarta = styled.div`
@@ -37,8 +44,14 @@ export const MapaWrapKarta = styled.div`
   background-image: url("/mapa.png");
   top: -150px;
   border-radius: 3px;
-
+  background-size: cover;
   @media only screen and (max-width: 1300px) {
+    top: 0px;
+  }
+  @media only screen and (max-width: 850px) {
+    width: 100vw;
+    height: 65vw;
+    min-height: 360px;
   }
 `;
 export const MapaWrapTextBlock = styled.div`
@@ -51,6 +64,13 @@ export const MapaWrapTextBlock = styled.div`
   border-radius: 3px;
   padding: 85px 86px 100px 76px;
   @media only screen and (max-width: 1300px) {
+    top: 0px;
+  }
+  @media only screen and (max-width: 850px) {
+    width: 100vw;
+  }
+  @media only screen and (max-width: 430px) {
+    padding: 65px 30px 100px 30px;
   }
 `;
 export const TopTitle = styled.h3`
@@ -118,7 +138,8 @@ export const Galeb1 = styled.div`
   z-index: 12;
   bottom: -15%;
   left: 20%;
-  @media only screen and (max-width: 1300px) {
+  @media only screen and (max-width: 850px) {
+    display: none;
   }
 `;
 export const Galeb2 = styled.div`
@@ -127,7 +148,8 @@ export const Galeb2 = styled.div`
   bottom: 50px;
   left: 50%;
 
-  @media only screen and (max-width: 1300px) {
+  @media only screen and (max-width: 850px) {
+    display: none;
   }
 `;
 export const Galeb3 = styled.div`
@@ -136,6 +158,7 @@ export const Galeb3 = styled.div`
   bottom: -5%;
   right: 15%;
 
-  @media only screen and (max-width: 1300px) {
+  @media only screen and (max-width: 850px) {
+    display: none;
   }
 `;
