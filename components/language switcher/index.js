@@ -139,14 +139,17 @@ function LanguageSwitcher({
 
         const matchingUrl =
           locale === "hr"
-            ? getTranslationRouteForNews[0].node.novosti.naslovEng
-                .toLowerCase()
-                .split(" ")
-                .join("-") +
-              "-" +
-              getTranslationRouteForNews[0].node.novosti.datum
-                .split("/")
-                .join("-")
+            ? slugify(
+                getTranslationRouteForNews[0].node.novosti.naslovEng
+                  .toLowerCase()
+                  .split(" ")
+                  .join("-") +
+                  "-" +
+                  getTranslationRouteForNews[0].node.novosti.datum
+                    .split("/")
+                    .join("-"),
+                { locale: "eng" }
+              )
             : slugify(
                 getTranslationRouteForNews[0].node.novosti.naslov
                   .toLowerCase()
