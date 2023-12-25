@@ -24,8 +24,6 @@ function LanguageSwitcher({
   const chooseMessage = (message) => {
     setMessage(message);
   };
-  console.log(oglasiNaslovi);
-  // console.log(novostiNaslovi);
 
   // funkcija za promjenu jezika i trazenje url-a za istu stranicu na drugom jeziku. novostiNaslovi u propsima dolazi iz parent page Novosti
   function handleRouteChange(lang) {
@@ -44,29 +42,23 @@ function LanguageSwitcher({
         return router.push(homeRedirect, undefined, { locale: lang });
       }
       if (asPath === "/novosti") {
-        // const homeRedirect = getSlug === "" ? "/en" : "/";
         return router.push("/novosti", undefined, { locale: lang });
       }
       if (asPath === "/karijere") {
-        // const homeRedirect = getSlug === "" ? "/en" : "/";
         return router.push("/karijere", undefined, { locale: lang });
       }
       if (asPath === "/o-nama") {
-        // const homeRedirect = getSlug === "" ? "/en" : "/";
         return router.push("/o-nama", undefined, { locale: lang });
       }
       if (asPath === "/marikomerc-kvalitete") {
-        // const homeRedirect = getSlug === "" ? "/en" : "/";
         return router.push("/marikomerc-kvalitete", undefined, {
           locale: lang,
         });
       }
       if (asPath === "/prerada-i-skladiste") {
-        // const homeRedirect = getSlug === "" ? "/en" : "/";
         return router.push("/prerada-i-skladiste", undefined, { locale: lang });
       }
       if (asPath === "/kontakt") {
-        // const homeRedirect = getSlug === "" ? "/en" : "/";
         return router.push("/kontakt", undefined, { locale: lang });
       }
       if (asPath.includes("/karijere/")) {
@@ -169,18 +161,6 @@ function LanguageSwitcher({
   }
   return (
     <div className="languageSwitchWrap">
-      {/* {lang.map((lang) => (
-        <Switcher
-          key={lang}
-          onClick={(e) => {
-            handleSelectLang(e, lang);
-            closeMenu();
-          }}
-          className={locale === "hr" ? "activeLinkHr" : "activeLinkEn"}
-        >
-          {lang}
-        </Switcher>
-      ))} */}
       <Switcher
         onClick={(e) => {
           handleSelectLang(e, "hr");

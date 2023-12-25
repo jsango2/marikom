@@ -54,7 +54,7 @@ export const Photo = styled.div`
   z-index: 10;
   width: 100%;
   height: 250px;
-  background: grey;
+  background: white;
   border-radius: 3px;
   overflow: hidden;
   /* overflow: hidden; */

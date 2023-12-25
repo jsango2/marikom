@@ -25,6 +25,9 @@ export const AdSectionHeader = styled.h2`
   font-weight: 600;
   line-height: 120%;
   text-transform: uppercase;
+
+  /* H2 */
+  font-family: "Roboto";
   &::before {
     position: absolute;
     display: block;
@@ -50,6 +53,7 @@ export const AdSectionTabs = styled.div`
 export const AdSectionTab = styled.p`
   color: ${(props) => (props.active ? "#4299c8" : "#1c2640")};
   font-size: clamp(0.5rem, 1.125rem, 3vw);
+  font-family: Gilroy;
   font-style: normal;
   font-weight: 700;
   line-height: 142.5%;
@@ -78,7 +82,7 @@ export const AdSectionAdContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   width: 100%;
-  gap: 2rem;
+  gap: 1rem;
   padding: 0 1rem;
   margin-top: 3.85rem;
   place-items: start;
@@ -90,7 +94,7 @@ export const AdSectionInnerContainer = styled.div`
   flex-basis: auto;
 
   width: 100%;
-  gap: 1.5rem;
+  gap: 0.5rem;
   @media only screen and (min-width: 1440px) {
     flex-basis: 36rem;
     gap: 1rem;
@@ -170,6 +174,7 @@ export const SingleAdTitle = styled.div`
     font-size: clamp(0.75rem, 1.125rem, 1.5vw);
     text-transform: uppercase;
     color: #4299c8;
+    margin: 0;
   }
 
   h2 {
@@ -180,6 +185,7 @@ export const SingleAdTitle = styled.div`
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 36px */
+    margin: 0;
   }
   @media only screen and (max-width: 430px) {
     h2 {
@@ -202,6 +208,7 @@ export const SingleAdBodyText = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: 142.5%; /* 25.65px */
+    margin: 0;
   }
   @media only screen and (max-width: 430px) {
     p {

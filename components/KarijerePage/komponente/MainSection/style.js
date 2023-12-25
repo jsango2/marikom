@@ -48,6 +48,9 @@ export const MainSectionWrapper = styled.div`
   flex-direction: column;
   place-items: start;
   place-self: center;
+  @media only screen and (max-width: 430px) {
+    margin-top: 0px;
+  }
 `;
 
 export const InnerWrapper = styled.div`
@@ -68,8 +71,15 @@ export const InnerWrapper = styled.div`
 
 export const Breadcrumbs = styled.div`
   text-transform: uppercase;
-  font-weight: 400;
+
   color: #1c2640;
+  /* Roboto 16 nadnaslov */
+  font-family: "Roboto Condensed";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
 `;
 
 export const SectionHeadlineSpan = styled.span`
@@ -85,13 +95,20 @@ export const SectionHeadlineSpan = styled.span`
 export const SectionHeadlineText = styled.div`
   h2 {
     font-size: clamp(2rem, 3.4375rem, 3vw);
-    font-style: normal;
-    font-weight: 700;
+
     line-height: 120%;
     max-width: 35rem;
     text-transform: uppercase;
     white-space: pre-line;
+
     color: #1c2640;
+    /* H1 */
+    font-family: "Roboto";
+
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 66px */
+    text-transform: uppercase;
   }
 `;
 
@@ -122,6 +139,7 @@ export const SectionBodyText = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
+    font-family: Gilroy;
   }
 `;
 

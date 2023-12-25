@@ -61,17 +61,6 @@ function ProizvodiPage() {
     query: "",
     list: [],
   });
-  // useEffect(() => {
-  //   category == ""
-  //     ? setKategorija(category)
-  //     : setKategorija(locale === "hr" ? "Glavonošci" : "Cephalopods");
-  // }, []);
-
-  // const findKatbyLang = catalogData.find(
-  //   (k) =>
-  //     k["Kategorija kojoj proizvod pripada:"] ||
-  //     k["Kategorija kojoj proizvod pripada ENG:"] === kategorija
-  // );
 
   useEffect(() => {
     if (category.length > 0) {
@@ -112,14 +101,6 @@ function ProizvodiPage() {
     }
   }, [locale]);
 
-  // const allPhotosProizvoda = allPhotosProizvodi.edges;
-
-  // allPhotosProizvoda.forEach(
-  //   (item) => (item.node.id = item.node.sourceUrl.slice(-9, -4))
-  // );
-
-  // console.log(allPhotosProizvoda);
-
   const [filteredData, setFilteredData] = useState([]);
   const [filteredDataOnInput, setFilteredDataOnInput] = useState([]);
   const [filteredByKat, setFilteredByKat] = useState([]);
@@ -140,7 +121,6 @@ function ProizvodiPage() {
     setIsDropdownOpen(false);
     allowScroll();
   };
-  // const photoIdList = allPhotosProizvoda.map((item) => item.node.id);
 
   // ./productImagesIds.js sadrzi array sa fotkama koje su u bazi (neki proizvodi nemaju fotku). Treba appendati tu informaciju svakom proizvodu a bi se znala renderirati fotka ili placeholder
   // ako nam posalju nove fotke (nazvane prema id proizvoda), stavi ih sve u /public/productImages u webp formatu a listu imena stavi u .productImagesId.js
@@ -221,7 +201,7 @@ function ProizvodiPage() {
   const paginationClick = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
-  // FIREBASE GET PHOTOS FROM STORAGE:
+
   // useEffect(() => {
   //   let podaci = [];
   //   const getNotes = () => {
@@ -412,20 +392,3 @@ function ProizvodiPage() {
 }
 
 export default ProizvodiPage;
-{
-  /* <ProizvodWrap key={item["Kataloški broj: "]}>
-            {item.hasUrl ? (
-              <Image
-                src={`https://cms.marikomerc.hr/wp-content/uploads/2023/12/${item["Kataloški broj: "]}.png`}
-                layout="fill"
-                objectFit="contain"
-              ></Image>
-            ) : (
-              <Image
-                src={`https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ1IMbohmTHJxvrfCCuSg1W0j7TJgb0Q7bVp-N5NfiTqmqagRzu`}
-                layout="fill"
-                objectFit="contain"
-              ></Image>
-            )}
-          </ProizvodWrap> */
-}

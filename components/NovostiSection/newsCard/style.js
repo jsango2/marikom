@@ -20,6 +20,11 @@ export const WrapAll = styled.div`
     width: 95%;
     margin: 15px 15px;
   }
+  @media only screen and (max-width: 430px) {
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
 `;
 
 export const Container = styled.div`
@@ -76,7 +81,10 @@ export const Text = styled.h3`
   /* SUNRISE / Text Grey */
   margin-top: 5px;
   color: #605866;
-  @media only screen and (max-width: 600px) {
+  p {
+    margin: 0;
+  }
+  @media only screen and (max-width: 430px) {
   }
 `;
 export const Datum = styled.p`
@@ -117,7 +125,8 @@ export const ViseInfo = styled.div`
     align-items: center;
     justify-content: space-between;
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 430px) {
+    margin-top: 0;
   }
 `;
 export const LinkInfo = styled(Link)`

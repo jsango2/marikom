@@ -24,6 +24,9 @@ const generateImageStyles = (imageSource, animationDelay) => styled.div`
   opacity: 0;
   scroll-snap-align: center;
   scroll-snap-stop: always;
+  @media only screen and (max-width: 430px) {
+    width: 40%;
+  }
 `;
 
 const HeaderWrapper = styled.div`
@@ -41,6 +44,9 @@ const HeaderWrapper = styled.div`
   }
 
   overflow: hidden;
+  @media only screen and (max-width: 430px) {
+    height: clamp(25vh, 30vh, 60.625rem);
+  }
 `;
 
 export const Header = () => {

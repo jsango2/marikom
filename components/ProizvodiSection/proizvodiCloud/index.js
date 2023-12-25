@@ -7,11 +7,17 @@ function ProizvodiCLoud() {
   const router = useRouter();
   const { locale } = router;
 
-  const sveKategorije = catalogData.map((kat) =>
-    locale === "hr"
-      ? kat["Kategorija kojoj proizvod pripada:"]
-      : kat["Kategorija kojoj proizvod pripada ENG:"]
+  // const sveKategorije = catalogData.map((kat) =>
+  //   locale === "hr"
+  //     ? kat["Kategorija kojoj proizvod pripada:"]
+  //     : kat["Kategorija kojoj proizvod pripada ENG:"]
+  // );
+
+  const sveKategorije = catalogData.map(
+    (kat) =>
+      kat[`Kategorija kojoj proizvod pripada${locale === "hr" ? ":" : " ENG:"}`]
   );
+
   const kategorije = [...new Set(sveKategorije)];
   return (
     <WrapAll>

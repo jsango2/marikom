@@ -9,6 +9,10 @@ export const ContactSectionWrapper = styled.div`
   padding: 0 0 15rem 0;
   place-self: center;
   margin: 130px auto;
+  @media only screen and (max-width: 430px) {
+    margin: 130px auto 70px auto;
+    padding: 0;
+  }
 `;
 
 export const ContactSectionHeadingOne = styled.div`
@@ -38,6 +42,7 @@ export const ContactSectionHeadingOne = styled.div`
     font-weight: 400;
     line-height: 142.5%;
     color: #1c2640;
+    font-family: Gilroy;
   }
 
   a {
@@ -78,6 +83,7 @@ export const ContactSectionHeadingTwo = styled.h2`
   padding: 0 1rem;
   max-width: 60ch;
   text-decoration: none;
+  font-family: Gilroy;
 `;
 
 export const ContactSectionImageStack = styled.div`
