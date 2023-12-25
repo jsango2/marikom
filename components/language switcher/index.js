@@ -114,16 +114,27 @@ function LanguageSwitcher({
       if (asPath.includes("/novosti/")) {
         const getTranslationRouteForNews = novostiNaslovi.filter((naslov) =>
           locale === "en"
-            ? naslov.node.novosti.naslovEng.toLowerCase().split(" ").join("-") +
+            ? slugify(
+                naslov.node.novosti.naslovEng
+                  .toLowerCase()
+                  .split(" ")
+                  .join("-"),
+                {
+                  locale: "eng",
+                }
+              ) +
                 "-" +
                 naslov.node.novosti.datum.split("/").join("-") ===
               getSlug
             : slugify(
-                naslov.node.novosti.naslov.toLowerCase().split(" ").join("-") +
-                  "-" +
-                  naslov.node.novosti.datum.split("/").join("-"),
-                { locale: "hrv" }
-              ) === getSlug
+                naslov.node.novosti.naslov.toLowerCase().split(" ").join("-"),
+                {
+                  locale: "hrv",
+                }
+              ) +
+                "-" +
+                naslov.node.novosti.datum.split("/").join("-") ===
+              getSlug
         );
 
         const matchingUrl =
