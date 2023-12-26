@@ -307,7 +307,9 @@ function ProizvodiPage() {
               {/* <Image src={lupa} width={10} height={10} /> */}
               <input
                 type="text"
-                placeholder="Pretraga artikala"
+                placeholder={
+                  locale === "hr" ? "Pretraga artikala" : "Search products"
+                }
                 value={state.query}
                 onChange={handleChange}
               />
@@ -315,7 +317,7 @@ function ProizvodiPage() {
           </TrakaSearch>
           {size.width < 900 && (
             <DropdownMobile onClick={handleDropdownClick}>
-              ODABIR KATEGORIJE
+              {locale === "hr" ? "ODABIR KATEGORIJE" : "CHOOSE CATEGORY"}
               <ArrowDown>
                 <Image src="/arrowDown.svg" width={15} height={15} />
               </ArrowDown>
@@ -382,7 +384,10 @@ function ProizvodiPage() {
               />
             ))
           ) : (
-            <NoInput>Nema traženog artikla</NoInput>
+            <NoInput>
+              {" "}
+              {locale === "hr" ? "Nema traženog artikla" : "No product found"}
+            </NoInput>
           )}
         </WrapProizvodi>
         <Pagination>

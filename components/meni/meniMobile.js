@@ -50,9 +50,19 @@ const MeniMobile = ({
         </div>
         {isOnamaMenuOpen && (
           <div className="mobileSubLinkParent">
-            <Link href="/o-nama">Naša priča</Link>
-            <Link href="/marikomerc-kvalitete">Marikomerc kvalitete</Link>
-            <Link href="/prerada-i-skladiste">Prerada i skladište</Link>
+            <Link href="/o-nama">
+              {locale === "hr" ? "Naša priča" : "Our story"}
+            </Link>
+            <Link href="/marikomerc-kvalitete">
+              {locale === "hr"
+                ? "Marikomerc kvalitete"
+                : "Marikomerc qualities"}
+            </Link>
+            <Link href="/prerada-i-skladiste">
+              {locale === "hr"
+                ? "Prerada i skladište"
+                : "Processing and Storage"}
+            </Link>
           </div>
         )}
         <Link
@@ -62,13 +72,15 @@ const MeniMobile = ({
           //   setIsOpen(false);
           // }}
         >
-          Proizvodi
+          {locale === "hr" ? "Proizvodi" : "Products"}
         </Link>
-        <Link href="/horeca">HoReCa suradnja</Link>
-        <Link href="/karijere">Karijere</Link>
-        <Link href="/kontakt">Kontakt</Link>
-        <Link href="/novosti">Novosti</Link>
-        <Link href="http://www.zadarnight.run">Grupa</Link>
+        <Link href="/horeca">
+          {locale === "hr" ? "HoReCa suradnja" : "HoReCa collaboration"}
+        </Link>
+        <Link href="/karijere">{locale === "hr" ? "Karijere" : "Careers"}</Link>
+        <Link href="/kontakt">{locale === "hr" ? "Kontakt" : "Contact"}</Link>
+        <Link href="/novosti">{locale === "hr" ? "Novosti" : "News"}</Link>
+        <Link href="/">Grupa</Link>
         <div className="mobileLinkDivider"></div>
         <LanguageSwitcher
           closeMenu={closeMenu}
