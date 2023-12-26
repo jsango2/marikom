@@ -288,6 +288,7 @@ export const Divider = styled.div`
   width: 100%;
   @media only screen and (max-width: 600px) {
     /* display: none; */
+    height: 20px;
   }
 `;
 export const Pagination = styled.div`

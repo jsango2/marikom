@@ -25,7 +25,7 @@ import hr from "../../locales/hr.json";
 import { catalogData } from "../../catalogData.js";
 import { useEffect, useState } from "react";
 import Image from "next/image.js";
-import axios from "axios";
+// import axios from "axios";
 import ReactPaginate from "react-paginate";
 
 import Kartica from "./kartica/index.js";
@@ -33,8 +33,8 @@ import Lupa from "../../assets/images/lupa.svg";
 import Arrow from "../../assets/images/arrowDown.svg";
 import useWindowSize from "../helper/usewindowsize";
 import useScrollBlock from "../helper/useScrollBlock.js";
-import { storage } from "../firebase/firebase.js";
-import { getDownloadURL, ref } from "firebase/storage";
+// import { storage } from "../firebase/firebase.js";
+// import { getDownloadURL, ref } from "firebase/storage";
 import { productImagesIds } from "./productImagesIds.js";
 
 import { useContext } from "react";
@@ -49,14 +49,17 @@ function ProizvodiPage() {
   const [current, setCurrent] = useState(kategorija);
   console.log("PROIZVODIcat iz  /proizvodi:", category);
 
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
 
   const [blockScroll, allowScroll] = useScrollBlock();
   const size = useWindowSize();
   const router = useRouter();
   const { locale } = router;
-  const [forcePage, setForcePage] = useState();
-  const [searchTerm, setSearchTerm] = useState("");
+  // const [forcePage, setForcePage] = useState();
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(10);
+
+  // const [searchTerm, setSearchTerm] = useState("");
   const [state, setstate] = useState({
     query: "",
     list: [],
@@ -102,8 +105,8 @@ function ProizvodiPage() {
   }, [locale]);
 
   const [filteredData, setFilteredData] = useState([]);
-  const [filteredDataOnInput, setFilteredDataOnInput] = useState([]);
-  const [filteredByKat, setFilteredByKat] = useState([]);
+  // const [filteredDataOnInput, setFilteredDataOnInput] = useState([]);
+  // const [filteredByKat, setFilteredByKat] = useState([]);
   const t = locale === "en" ? en : hr;
 
   const sveKategorije = catalogData.map((kat) =>
@@ -120,6 +123,9 @@ function ProizvodiPage() {
     setItemOffset(0);
     setIsDropdownOpen(false);
     allowScroll();
+    if (currentPage !== 0) {
+      setCurrentPage(1);
+    }
   };
 
   // ./productImagesIds.js sadrzi array sa fotkama koje su u bazi (neki proizvodi nemaju fotku). Treba appendati tu informaciju svakom proizvodu a bi se znala renderirati fotka ili placeholder
@@ -174,17 +180,26 @@ function ProizvodiPage() {
     });
   };
 
-  // PAGINATION::::::
-
-  const [itemOffset, setItemOffset] = useState([]);
-  const [newOffset2, setNewOffset2] = useState([]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  // PAGINATION::::::
+  const [page, setPage] = useState();
+
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const [itemOffset, setItemOffset] = useState([]);
+  // const [newOffset2, setNewOffset2] = useState([]);
+  const currentListPaginated = state.list.slice(
+    indexOfFirstPost,
+    indexOfLastPost
+  );
+  const paginate = ({ selected }) => {
+    setCurrentPage(selected + 1);
+  };
 
   const [itemsPerPage] = useState(9);
-  const endOffset = itemOffset + itemsPerPage;
-  // console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-  const currentItems = state.list.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(state.list.length / itemsPerPage);
+  // const endOffset = itemOffset + itemsPerPage;
+  // const currentItems = state.list.slice(itemOffset, endOffset);
+  // const pageCount = Math.ceil(state.list.length / itemsPerPage);
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % state.list.length;
     console.log(
@@ -193,13 +208,15 @@ function ProizvodiPage() {
 
     setItemOffset(newOffset);
   };
+  const paginationClick = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+  // --------
+
   const handleDropdownClick = () => {
     setIsDropdownOpen(!isDropdownOpen);
     blockScroll();
     // document.body.style.overflow = "hidden";
-  };
-  const paginationClick = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
 
   // useEffect(() => {
@@ -321,7 +338,7 @@ function ProizvodiPage() {
 
           <Divider />
           {state.list.length > 0 ? (
-            currentItems.map((item, i) => (
+            currentListPaginated.map((item, i) => (
               <Kartica
                 // key={item["Kataloški broj: "]}
                 key={i}
@@ -369,7 +386,7 @@ function ProizvodiPage() {
           )}
         </WrapProizvodi>
         <Pagination>
-          <ReactPaginate
+          {/* <ReactPaginate
             breakLabel="..."
             nextLabel=""
             onPageChange={handlePageClick}
@@ -383,6 +400,26 @@ function ProizvodiPage() {
             containerClassName={"pagination"}
             previousLabel={""}
             forcePage={forcePage}
+            onClick={paginationClick}
+          /> */}
+          <ReactPaginate
+            activeClassName={"item active "}
+            breakClassName={"item break-me "}
+            breakLabel={"..."}
+            containerClassName={"pagination"}
+            disabledClassName={"disabled-page"}
+            onPageChange={paginate}
+            pageCount={Math.ceil(state.list.length / postsPerPage)}
+            previousLabel={""}
+            nextLabel={""}
+            nextClassName={"item next "}
+            pageClassName={"pageClassName"}
+            pageLinkClassName={"pagelink"}
+            previousLinkClassName={"page-number"}
+            nextLinkClassName={"page-number"}
+            activeLinkClassName={"activePage"}
+            previousClassName={"item previous"}
+            forcePage={page}
             onClick={paginationClick}
           />
         </Pagination>

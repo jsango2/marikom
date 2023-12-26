@@ -23,8 +23,8 @@ export const catalogData = [
     "IFS Food": "DA",
     "Certifikat 'Živjeti Zdravo' (DA/NE)": "NE",
     "Polje ostavljeno za neki buduci certifikat (ne ispunjavati)": "NE",
-    'OZNAKA "Novo" (DA/NE)': "NE",
-    'OZNAKA: "Novo pakiranje" (DA/NE)': "NE",
+    'OZNAKA "Novo" (DA/NE)': "DA",
+    'OZNAKA: "Novo pakiranje" (DA/NE)': "DA",
     "SPECIFIKACIJE: Ukoliko se uz proizvod uploada i pdf specifikacija, taj dokument treba imati ime po kataloškom broju i ekstenziju pdf":
       "",
   },

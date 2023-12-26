@@ -4,7 +4,7 @@ export const WrapAll = styled.div`
   position: relative;
   z-index: 9;
   width: 330px;
-  height: 507px;
+  height: 479px;
 
   color: black;
   display: flex;
@@ -31,6 +31,9 @@ export const WrapAll = styled.div`
     z-index: 11;
   }
   @media only screen and (max-width: 600px) {
+    /* height: 400px; */
+    height: auto;
+    padding: 15px 0 15px 0;
   }
 `;
 export const WrapData = styled.div`
@@ -54,6 +57,8 @@ export const WrapData = styled.div`
   -ms-flex-pack: justify;
   justify-content: flex-start;
   @media only screen and (max-width: 600px) {
+    margin: 10px 0 auto 30px;
+    height: auto;
   }
 `;
 export const DonjiBlok = styled.div`
@@ -84,21 +89,33 @@ export const GornjiBlok = styled.div`
   }
 `;
 export const WrapCerts = styled.div`
-  position: absolute;
+  position: relative;
   z-index: 10;
-  margin-top: 20px;
+  left: 40px;
+  /* margin-top: 20px;
   margin-left: 40px;
   display: flex;
   align-items: center;
-  bottom: 20px;
+  bottom: 20px; */
+  display: flex;
   @media only screen and (max-width: 600px) {
+  }
+`;
+export const WrapCert = styled.div`
+  position: relative;
+  z-index: 10;
+  height: auto;
+  @media only screen and (max-width: 600px) {
+    /* margin-top: 35px; */
+    top: 5px;
+    margin: 5px 0 0 0;
   }
 `;
 export const Novo = styled.div`
   position: absolute;
   z-index: 20;
-  bottom: 450px;
-  right: -35px;
+  top: 30px;
+  right: 0;
   width: 75px;
   height: 25px;
   background: linear-gradient(135deg, #338bc2 0%, #dffee6 100%);
@@ -114,8 +131,8 @@ export const Novo = styled.div`
 export const NovoPakiranje = styled.div`
   position: absolute;
   z-index: 20;
-  bottom: 415px;
-  right: -35px;
+  top: 70px;
+  right: 0;
   height: 25px;
   width: 150px;
   background: linear-gradient(135deg, #338bc2 0%, #dffee6 100%);
@@ -178,6 +195,7 @@ export const LatinskiNaziv = styled.div`
   margin: 10px 0 20px 0;
 
   @media only screen and (max-width: 600px) {
+    margin: 5px 0 10px 0;
   }
 `;
 export const JedinicaMjere = styled.div`
@@ -191,6 +209,7 @@ export const JedinicaMjere = styled.div`
   line-height: 120%; /* 14.4px */
   margin-top: 30px;
   @media only screen and (max-width: 600px) {
+    margin-top: 10px;
   }
 `;
 export const Pakiranje = styled.div`
@@ -230,6 +249,8 @@ export const Opis = styled.div`
   line-height: 153%; /* 21.42px */
   min-height: 40px;
   @media only screen and (max-width: 600px) {
+    min-height: unset;
+    height: auto;
   }
 `;
 export const Placeholder = styled.div`

@@ -14,6 +14,7 @@ import {
   NovoPakiranje,
   DonjiBlok,
   GornjiBlok,
+  WrapCert,
 } from "./style.js";
 
 import { useRouter } from "next/router";
@@ -53,6 +54,14 @@ function Kartica({
   const t = locale === "en" ? en : hr;
   return (
     <WrapAll>
+      {oznakaNovo === "DA" ? (
+        <Novo>{locale === "hr" ? "NOVO" : "NEW"}</Novo>
+      ) : null}
+      {oznakaNovoPakiranje === "DA" ? (
+        <NovoPakiranje>
+          {locale === "hr" ? "NOVO PAKIRANJE" : "NEW PACKAGING"}
+        </NovoPakiranje>
+      ) : null}
       <Photo>
         {hasPhoto ? (
           <Image src={photo} layout="fill" objectFit="contain" />
@@ -88,36 +97,45 @@ function Kartica({
           )}
         </DonjiBlok>
       </WrapData>
+
       <WrapCerts>
         {certifikatIFS === "DA" ? (
-          <Image src={IFScert} width={50} height={35} objectFit="cover" />
+          <WrapCert>
+            <Image src={IFScert} width={50} height={35} objectFit="cover" />
+          </WrapCert>
         ) : null}
         <div style={{ marginLeft: "10px" }}>
           {certifikatMSC === "DA" ? (
-            <Image src={mscLogo} width={55} height={15} objectFit="cover" />
+            <WrapCert>
+              <Image src={mscLogo} width={55} height={15} objectFit="cover" />
+            </WrapCert>
           ) : null}
         </div>
-        {oznakaNovo === "DA" ? (
+        {/* {oznakaNovo === "DA" ? (
           <Novo>{locale === "hr" ? "NOVO" : "NEW"}</Novo>
         ) : null}
         {oznakaNovoPakiranje === "DA" ? (
           <NovoPakiranje>
             {locale === "hr" ? "NOVO PAKIRANJE" : "NEW PACKAGING"}
           </NovoPakiranje>
-        ) : null}
+        ) : null} */}
         <div style={{ marginLeft: "10px" }}>
           {perlaHoreca === "DA" ? (
-            <Image src={perla} width={50} height={25} objectFit="cover" />
+            <WrapCert>
+              <Image src={perla} width={50} height={25} objectFit="cover" />
+            </WrapCert>
           ) : null}
         </div>
         <div style={{ marginLeft: "10px" }}>
           {certifikatZivjetiZdravo === "DA" ? (
-            <Image
-              src={zivjetiZdravo}
-              width={50}
-              height={25}
-              objectFit="cover"
-            />
+            <WrapCert>
+              <Image
+                src={zivjetiZdravo}
+                width={50}
+                height={25}
+                objectFit="cover"
+              />
+            </WrapCert>
           ) : null}
         </div>
       </WrapCerts>

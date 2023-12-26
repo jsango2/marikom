@@ -109,6 +109,7 @@ export const SectionHeadlineText = styled.div`
     font-weight: 700;
     line-height: 120%; /* 66px */
     text-transform: uppercase;
+    margin: 0;
   }
 `;
 

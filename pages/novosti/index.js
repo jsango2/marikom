@@ -64,7 +64,6 @@ function index(props) {
     item.node.novosti.datum = format(new Date(item.node.novosti.datum), "P");
   });
 
-  console.log(otherNovosti);
   const currentItems = otherNovosti.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(otherNovosti.length / itemsPerPage);
   const handlePageClick = (event) => {

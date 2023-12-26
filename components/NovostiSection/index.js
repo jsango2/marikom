@@ -12,12 +12,23 @@ import en from "../../locales/en.json";
 import hr from "../../locales/hr.json";
 import { useRouter } from "next/router.js";
 import slugify from "slugify";
+import { format, parseISO } from "date-fns";
 
 function NovostiSection({ background, novosti }) {
   const router = useRouter();
   const { locale } = router;
   // console.log(novosti);
   const t = locale === "en" ? en : hr;
+  // novosti.forEach((item) => {
+  //   item.node.novosti.datum = format(
+  //     new Date(item.node.novosti.datum),
+  //     "dd/MM/yyyy"
+  //   );
+  // });
+  const novostiSorted = novosti.sort(
+    (objA, objB) =>
+      new Date(objB.node.novosti.datum) - new Date(objA.node.novosti.datum)
+  );
   return (
     <WrapAll background={background}>
       <Container>
@@ -26,7 +37,7 @@ function NovostiSection({ background, novosti }) {
           <SubTitle>/ {t.NewsSectionHomePage.Archive}</SubTitle>
         </WrapTitleSubTitle>
         <WrapCards>
-          {novosti.slice(0, 3).map((n) => (
+          {novostiSorted.slice(0, 3).map((n) => (
             <NewsCard
               key={n.node.id}
               datum={n.node.novosti.datum}
