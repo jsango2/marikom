@@ -481,6 +481,7 @@ export const PerlaLogoWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
   /* /* overflow: hidden; */
   @media only screen and (max-width: 1000px) {
     margin-top: 100px;
@@ -506,7 +507,7 @@ export const YellowArrow = styled.div`
 `;
 export const LogoWrap = styled.div`
   position: absolute;
-  top: -60px;
+  top: 0px;
   left: 30px;
   z-index: 11;
   width: 300px;
