@@ -16,9 +16,9 @@ export const WrapAll = styled.div`
   /* padding-bottom: 50px; */
   /* border: 2px solid var(--color-boja-svj-plava-ocjena, #bee2f0); */
 
-  -webkit-box-shadow: 10px 10px 73px -43px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 73px -43px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 73px -43px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 73px -43px rgba(0, 0, 0, 0.65);
+  -moz-box-shadow: 10px 10px 73px -43px rgba(0, 0, 0, 0.65);
+  box-shadow: 10px 10px 73px -43px rgba(0, 0, 0, 0.65);
   margin: 14px 24px;
   padding: 15px 0;
   /* transform: ; */
@@ -34,6 +34,7 @@ export const WrapAll = styled.div`
     /* height: 400px; */
     height: auto;
     padding: 15px 0 15px 0;
+    margin: 7px 24px;
   }
 `;
 export const WrapData = styled.div`

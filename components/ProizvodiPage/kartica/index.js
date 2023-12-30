@@ -101,13 +101,18 @@ function Kartica({
       <WrapCerts>
         {certifikatIFS === "DA" ? (
           <WrapCert>
-            <Image src={IFScert} width={50} height={35} objectFit="cover" />
+            <Image
+              src="/IFSfood.svg"
+              width={50}
+              height={35}
+              objectFit="cover"
+            />
           </WrapCert>
         ) : null}
         <div style={{ marginLeft: "10px" }}>
           {certifikatMSC === "DA" ? (
             <WrapCert>
-              <Image src={mscLogo} width={55} height={15} objectFit="cover" />
+              <Image src="/MSC.svg" width={55} height={15} objectFit="cover" />
             </WrapCert>
           ) : null}
         </div>
@@ -119,7 +124,7 @@ function Kartica({
             {locale === "hr" ? "NOVO PAKIRANJE" : "NEW PACKAGING"}
           </NovoPakiranje>
         ) : null} */}
-        <div style={{ marginLeft: "10px" }}>
+        <div style={{ marginLeft: "0px" }}>
           {perlaHoreca === "DA" ? (
             <WrapCert>
               <Image src={perla} width={50} height={25} objectFit="cover" />
@@ -130,8 +135,8 @@ function Kartica({
           {certifikatZivjetiZdravo === "DA" ? (
             <WrapCert>
               <Image
-                src={zivjetiZdravo}
-                width={50}
+                src="/zivjetizdravo.svg"
+                width={40}
                 height={25}
                 objectFit="cover"
               />
