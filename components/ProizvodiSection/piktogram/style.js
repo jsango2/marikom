@@ -10,7 +10,7 @@ export const WrapAll = styled.div`
 
   /* overflow: hidden; */
   @media only screen and (max-width: 600px) {
-    display: none;
+    height: 50px;
   }
 `;
 

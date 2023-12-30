@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled from "styled-components";
 
 export const WrapAll = styled.div`
@@ -15,7 +16,7 @@ export const WrapAll = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column; */
-  overflow: hidden;
+  /* overflow: hidden; */
   @media only screen and (max-width: 768px) {
     /* padding-bottom: 100px; */
   }
@@ -115,6 +116,10 @@ export const Button = styled.div`
   color: #f5faff;
   margin: 55px auto 0 auto;
   cursor: pointer;
+  a {
+    text-decoration: none;
+    color: #f5faff;
+  }
   @media only screen and (max-width: 600px) {
   }
 `;
@@ -209,12 +214,12 @@ export const RedLine = styled.div`
 export const WrapLogoPerla = styled.div`
   position: relative;
   z-index: 10;
-  top: -15px;
-  width: 254px;
+  top: -25px;
+  width: 324px;
   height: 152px;
   @media only screen and (max-width: 850px) {
-    width: 170px;
-    height: 122px;
+    width: 208px;
+    height: 152px;
   }
 `;
 export const LogoHks = styled.div`
@@ -374,7 +379,7 @@ export const Karamarko = styled.div`
   /* overflow: hidden; */
 
   justify-content: center;
-  margin: 230px auto 20px auto;
+  margin: 230px auto 0px auto;
   @media only screen and (max-width: 1300px) {
     width: 100%;
   }

@@ -256,7 +256,7 @@ export const TextWrap = styled.div`
   }
   @media only screen and (max-width: 430px) {
     width: 90%;
-    margin-bottom: 60px;
+    /* margin-bottom: 100px; */
     /* align-items: left; */
   }
 `;
@@ -347,7 +347,7 @@ export const WrapButton = styled.div`
     opacity: 0;
   }
   @media only screen and (max-width: 850px) {
-    /* margin: 0 auto; */
+    margin: 0 auto;
   }
 `;
 export const Grad = styled.div`
@@ -458,11 +458,12 @@ export const WrapPhotos2 = styled.div`
     width: 50%;
   }
   @media only screen and (max-width: 1000px) {
-    top: 10px;
+    display: none;
+    /* top: 10px;
     height: auto;
     min-width: unset;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto; */
   }
   @media only screen and (max-width: 650px) {
   }
@@ -482,6 +483,7 @@ export const PerlaLogoWrap = styled.div`
   align-items: center;
   /* /* overflow: hidden; */
   @media only screen and (max-width: 1000px) {
+    margin-top: 100px;
     width: 100%;
   }
 `;
@@ -504,7 +506,7 @@ export const YellowArrow = styled.div`
 `;
 export const LogoWrap = styled.div`
   position: absolute;
-  top: -55px;
+  top: -60px;
   left: 30px;
   z-index: 11;
   width: 300px;
@@ -515,8 +517,11 @@ export const LogoWrap = styled.div`
   align-items: center; */
   /* overflow: hidden; */
   @media only screen and (max-width: 1000px) {
-    left: 50%;
-    transform: translate(-50%, 0);
+    position: relative;
+    top: unset;
+
+    /* left: 50%; */
+    left: unset;
     display: flex;
     justify-content: center;
   }

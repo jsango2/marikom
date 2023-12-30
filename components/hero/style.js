@@ -128,6 +128,9 @@ export const WrapText = styled.div`
     padding-left: 27px;
     padding-top: 60px;
   }
+  @media only screen and (max-width: 430px) {
+    padding-top: 50px;
+  }
 `;
 export const WrapImage = styled.div`
   position: relative;
@@ -182,7 +185,6 @@ export const Title = styled.h1`
   font-size: var(--h2);
   font-style: normal;
   font-weight: 700;
-
   line-height: 120%;
   /* or 48px */
 
@@ -203,7 +205,9 @@ export const Title = styled.h1`
   @media only screen and (max-width: 900px) {
     font-size: var(--h3);
   }
-  @media only screen and (max-width: 420px) {
+  @media only screen and (max-width: 430px) {
+    margin-top: 0;
+
     font-size: 30px;
   }
 `;

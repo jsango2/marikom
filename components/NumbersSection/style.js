@@ -19,7 +19,7 @@ export const WrapAll = styled.div`
   }
   @media only screen and (max-width: 850px) {
     height: auto;
-    padding: 80px 0 70px 0;
+    padding: 60px 0 70px 0;
   }
 `;
 export const Up = styled.div`

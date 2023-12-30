@@ -45,10 +45,11 @@ import hr from "../../locales/hr.json";
 import { useInView } from "react-intersection-observer";
 import { useLottie } from "lottie-react";
 import animacija from "./perlaAnimacija.js";
+import Link from "next/link.js";
 
 function PerlaDrugiDio() {
   const style = {
-    height: 120,
+    height: 200,
   };
   const PerlaLogoAnimacija = () => {
     const options = {
@@ -112,7 +113,9 @@ function PerlaDrugiDio() {
           </WrapProizvod>
         ))}
       </Proizvodi>
-      <Button>{t.Perla2.button}</Button>
+      <Button>
+        <Link href="/proizvodi">{t.Perla2.button}</Link>
+      </Button>
       <Karamarko ref={ref3}>
         <Left>
           <PozadinaPerla percentage={percentage}>

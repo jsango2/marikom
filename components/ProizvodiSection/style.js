@@ -119,7 +119,7 @@ export const Title = styled.h1`
     font-size: var(--h2);
   }
   @media only screen and (max-width: 650px) {
-    margin: 70px auto 15px auto;
+    margin: 130px auto 15px auto;
   }
 `;
 
