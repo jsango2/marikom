@@ -63,6 +63,8 @@ export const Title = styled.h1`
   /* SUNRISE / Charcoal */
 
   color: #37313c;
+  text-transform: uppercase;
+  margin-bottom: 5px;
   @media only screen and (max-width: 600px) {
   }
 `;
@@ -80,6 +82,7 @@ export const Text = styled.h3`
 
   /* SUNRISE / Text Grey */
   margin-top: 5px;
+  margin-bottom: 5px;
   color: #605866;
   p {
     margin: 0;
@@ -98,6 +101,7 @@ export const Datum = styled.p`
   /* SUNRISE / Dark Grey */
 
   color: #aea8b3;
+  margin: 0;
   @media only screen and (max-width: 600px) {
   }
 `;

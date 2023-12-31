@@ -22,6 +22,9 @@ export const WrapAll = styled.div`
   @media only screen and (max-width: 650px) {
     height: 27px;
   }
+  @media only screen and (max-width: 430px) {
+    margin: 5px 5px;
+  }
 `;
 
 export const Text = styled.div`

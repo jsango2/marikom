@@ -71,10 +71,11 @@ export const Container = styled.div`
   display: flex;
   width: 1300px;
   justify-content: space-between;
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1100px) {
     padding-top: 40px;
     height: auto;
     flex-direction: column;
     width: 90vw;
+    align-items: center;
   }
 `;

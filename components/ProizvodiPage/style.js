@@ -117,6 +117,7 @@ export const ButtonsWrapDesktop = styled.div`
     font-weight: 400;
     line-height: 120%; /* 19.2px */
     padding: 10px 10px;
+    border-radius: 3px;
   }
   button:hover {
     background: #2f3e66;
@@ -233,6 +234,7 @@ export const TrakaSearch = styled.div`
   padding-right: 70px;
   display: flex;
   align-items: center;
+  border-radius: 3px;
   @media only screen and (max-width: 600px) {
     height: 100px;
     /* min-height: 100px; */

@@ -23,7 +23,7 @@ export const WrapAll = styled.div`
   overflow: hidden;
   z-index: 0; */
   overflow: hidden;
-  padding-top: 145px;
+  padding-top: 85px;
   @media only screen and (max-width: 1400px) {
     padding: 100px 0 70px 70px;
   }
@@ -37,11 +37,11 @@ export const WrapKartica = styled.div`
   position: relative;
   z-index: 10;
   width: 1266px;
-  height: 643px;
+  height: 560px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 90px auto 0 auto;
+  margin: 60px auto 0 auto;
   &:nth-child(2) {
     flex-direction: row-reverse;
   }
@@ -56,6 +56,15 @@ export const WrapKartica = styled.div`
     }
     flex-direction: column;
     height: auto;
+  }
+`;
+export const WrapKartica3 = styled(WrapKartica)`
+  margin: 200px auto 0 auto;
+
+  @media only screen and (max-width: 1250px) {
+  }
+  @media only screen and (max-width: 850px) {
+    margin: 40px auto 0 auto;
   }
 `;
 
@@ -91,6 +100,8 @@ export const Photo1 = styled.div`
   justify-content: space-between;
   background: ${(props) => `url(${props.bg}) no-repeat center`};
   background-size: cover;
+  overflow: hidden;
+  border-radius: 5px;
   @media only screen and (max-width: 1250px) {
     width: 50%;
   }
@@ -104,12 +115,14 @@ export const Photo2 = styled.div`
   position: relative;
   z-index: 10;
   width: 600px;
-  height: 630px;
+  height: 580px;
   background-color: grey;
   display: flex;
   justify-content: space-between;
   background: ${(props) => `url(${props.bg}) no-repeat center`};
   background-size: cover;
+  overflow: hidden;
+  border-radius: 5px;
   @media only screen and (max-width: 1250px) {
     width: 50%;
   }

@@ -98,7 +98,8 @@ export const WrapSingleCert = styled.div`
   height: 508px;
   width: 300px;
   text-align: center;
-  border-radius: 3px;
+  border-radius: 4px;
+  overflow: hidden;
   margin: 0 3px;
   @media only screen and (max-width: 850px) {
     /* padding-top: 40px;
@@ -109,7 +110,7 @@ export const WrapSingleCert = styled.div`
     /* padding-top: 40px;
     height: auto; */
     margin: 10px 0px;
-    width: 84vw;
+    width: 80vw;
     height: auto;
   }
 `;

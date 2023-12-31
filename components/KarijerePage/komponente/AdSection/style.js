@@ -88,6 +88,27 @@ export const AdSectionAdContainer = styled.div`
   place-items: start;
 `;
 
+export const NemaOglasa = styled.h3`
+  width: 80%;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 136.5%;
+  /* or 22px */
+
+  letter-spacing: 0.875px;
+  text-align: center;
+  /* SUNRISE / Text Grey */
+  margin: 25px auto;
+  color: #605866;
+  p {
+    margin: 0;
+  }
+  @media only screen and (max-width: 430px) {
+    font-size: 16px;
+  }
+`;
 export const AdSectionInnerContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);

@@ -136,14 +136,15 @@ export const Title = styled.h1`
   font-style: normal;
   font-weight: 700;
 
-  font-size: 40px;
+  font-size: 36px;
+
   line-height: 120%;
   /* identical to box height, or 48px */
 
   color: #ffffff;
   margin-bottom: 0;
+
   @media only screen and (max-width: 1200px) {
-    font-size: 36px;
   }
   @media only screen and (max-width: 420px) {
   }

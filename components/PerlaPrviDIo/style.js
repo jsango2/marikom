@@ -416,7 +416,7 @@ export const ListItem = styled.div`
   &.inView {
     top: 0px;
     opacity: 1;
-    transition: all 1.4s ease-out;
+    transition: all 0.7s ease-out;
   }
   &.inView:nth-child(1) {
     transition-delay: 400ms;

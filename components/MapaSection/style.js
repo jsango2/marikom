@@ -88,6 +88,9 @@ export const WrapMap = styled.div`
     width: 400px;
     height: 232px;
   }
+  @media only screen and (max-width: 430px) {
+    width: 400px;
+  }
 `;
 export const Block = styled.div`
   position: relative;
@@ -145,6 +148,9 @@ export const WrapPhotos = styled.div`
     width: 100%;
     margin-top: 100px;
   }
+  @media only screen and (max-width: 430px) {
+    height: 333px;
+  }
 `;
 export const Photo1 = styled.div`
   position: relative;
@@ -194,6 +200,7 @@ export const Photo2 = styled.div`
     width: calc(92% / 2.7);
   }
   @media only screen and (max-width: 600px) {
+    height: 85%;
   }
 `;
 export const Photo3 = styled.div`
@@ -218,6 +225,10 @@ export const Photo3 = styled.div`
     width: calc(92% / 2.5);
   }
   @media only screen and (max-width: 600px) {
+    height: 85%;
+    &.inView {
+      top: 40px;
+    }
   }
 `;
 export const Photo4 = styled.div`
@@ -267,7 +278,7 @@ export const TitleUp = styled.h4`
 export const Title = styled.h1`
   position: relative;
   z-index: 10;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: var(--h1);

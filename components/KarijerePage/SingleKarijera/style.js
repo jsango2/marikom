@@ -36,6 +36,7 @@ export const Data = styled.div`
   width: auto;
   color: #1c2640;
   padding: 0px 22px;
+  border-radius: 3px;
   background-color: #c0e0eb69;
   display: flex;
   justify-content: center;

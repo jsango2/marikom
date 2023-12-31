@@ -135,7 +135,8 @@ export const Name = styled.h2`
   line-height: 140%; /* 22.4px */
   @media only screen and (max-width: 600px) {
   }
-  @media only screen and (max-width: 420px) {
+  @media only screen and (max-width: 430px) {
+    margin: 0;
   }
 `;
 export const WrapColumns = styled.div`
@@ -184,6 +185,9 @@ export const WrapDown = styled.div`
     align-items: center;
 
     flex-direction: column;
+  }
+  @media only screen and (max-width: 430px) {
+    margin: 30px auto 0 auto;
   }
 `;
 export const Box = styled.div`

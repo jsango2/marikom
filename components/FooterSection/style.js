@@ -269,6 +269,8 @@ export const SingleLink2 = styled.div`
   margin: 3px;
   cursor: pointer;
   @media only screen and (max-width: 600px) {
+    width: 100%;
+    justify-content: flex-start;
   }
 `;
 export const Column = styled.div`
@@ -284,6 +286,9 @@ export const Column = styled.div`
 
   @media only screen and (max-width: 770px) {
     width: 140px;
+  }
+  @media only screen and (max-width: 430px) {
+    width: 162px;
   }
 `;
 export const Divider = styled.div`

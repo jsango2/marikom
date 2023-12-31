@@ -138,6 +138,7 @@ export const SingleFact = styled.div`
 
   /* overflow: hidden; */
   @media only screen and (max-width: 600px) {
+    height: 94px;
   }
 `;
 // export const Wrap = styled.div`
@@ -253,10 +254,10 @@ export const Number = styled.div`
     font-size: 36px;
   }
   @media only screen and (max-width: 600px) {
-    width: 220px;
+    width: 250px;
   }
   @media only screen and (max-width: 435px) {
-    font-size: 7.5vw;
+    font-size: 36px;
   }
 `;
 export const WrapNumberText = styled.div`

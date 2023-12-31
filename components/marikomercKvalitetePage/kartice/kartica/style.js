@@ -24,6 +24,7 @@ export const WrapAll = styled.div`
   z-index: 0; */
 
   margin: 10px;
+  border-radius: 5px;
   @media only screen and (max-width: 850px) {
     padding: 30px 0 20px 0;
     min-height: 257px;

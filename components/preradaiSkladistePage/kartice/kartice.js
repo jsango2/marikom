@@ -8,6 +8,7 @@ import {
   Photo2,
   Photo3,
   WrapKartica,
+  WrapKartica3,
   Content,
   Overlay,
   WrapCert,
@@ -45,7 +46,7 @@ const Kartice = () => {
         </Content>
         <Photo2 bg="/prerada/p2.webp"></Photo2>
       </WrapKartica>{" "}
-      <WrapKartica>
+      <WrapKartica3>
         <Content>
           <BlueLine />
           <UpTitle>{t.Prerada.upTitle3}</UpTitle>
@@ -73,7 +74,7 @@ const Kartice = () => {
             </WrapCert>
           </Overlay>
         </Photo3>
-      </WrapKartica>
+      </WrapKartica3>
     </WrapAll>
   );
 };

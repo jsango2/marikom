@@ -13,6 +13,7 @@ import {
   AdSectionWrapper,
   SingleAdBodyText,
   SingleAdTitle,
+  NemaOglasa,
 } from "./style.js";
 import { useRouter } from "next/router";
 import slugify from "slugify";
@@ -65,70 +66,74 @@ const AdSection = (oglasi) => {
           </AdSectionTab>
         ))}
       </AdSectionTabs>
-      <AdSectionAdContainer>
-        {prikazaniOglasi.map((item, index) => (
-          <AdSectionSingleAd key={item.node.id} delay={index * 0.75 + 0.75}>
-            <AdSectionSpanBodyWrapper>
-              <span>{`0${index + 1}`}</span>
-              <AdSectionInnerContainer>
-                <SingleAdTitle>
-                  <p>{item.node.oglasi.tvrtka}</p>
-                  <h2>
-                    {locale === "hr"
-                      ? item.node.oglasi.naslovOglasa
-                      : item.node.oglasi.naslovOglasaEng}
-                  </h2>
-                </SingleAdTitle>
-                <SingleAdBodyText>
-                  <p>
-                    {t.Karijere.trajanjeNatjecaja}{" "}
-                    {item.node.oglasi.natjecajTrajeDo}
-                  </p>
-                  <p>
-                    {t.Karijere.mjestoRada} {item.node.oglasi.mjestoRada}
-                  </p>
-                </SingleAdBodyText>
-                <AdSectionActionButton>
-                  <Link
-                    href={
-                      locale === "hr"
-                        ? `/karijere/${slugify(
-                            item.node.oglasi.naslovOglasa
-                              .toLowerCase()
-                              .split(" ")
-                              .join("-") +
+      {prikazaniOglasi.length === 0 ? (
+        <NemaOglasa>{t.Karijere.nemaAktivnihNatjecaja}</NemaOglasa>
+      ) : (
+        prikazaniOglasi.map((item, index) => (
+          <AdSectionAdContainer>
+            <AdSectionSingleAd key={item.node.id} delay={index * 0.75 + 0.75}>
+              <AdSectionSpanBodyWrapper>
+                <span>{`0${index + 1}`}</span>
+                <AdSectionInnerContainer>
+                  <SingleAdTitle>
+                    <p>{item.node.oglasi.tvrtka}</p>
+                    <h2>
+                      {locale === "hr"
+                        ? item.node.oglasi.naslovOglasa
+                        : item.node.oglasi.naslovOglasaEng}
+                    </h2>
+                  </SingleAdTitle>
+                  <SingleAdBodyText>
+                    <p>
+                      {t.Karijere.trajanjeNatjecaja}{" "}
+                      {item.node.oglasi.natjecajTrajeDo}
+                    </p>
+                    <p>
+                      {t.Karijere.mjestoRada} {item.node.oglasi.mjestoRada}
+                    </p>
+                  </SingleAdBodyText>
+                  <AdSectionActionButton>
+                    <Link
+                      href={
+                        locale === "hr"
+                          ? `/karijere/${slugify(
+                              item.node.oglasi.naslovOglasa
+                                .toLowerCase()
+                                .split(" ")
+                                .join("-") +
+                                "-" +
+                                item.node.id,
+                              { locale: "hrv" }
+                            )}`
+                          : `/karijere/${
+                              item.node.oglasi.naslovOglasaEng
+                                .toLowerCase()
+                                .split(" ")
+                                .join("-") +
                               "-" +
-                              item.node.id,
-                            { locale: "hrv" }
-                          )}`
-                        : `/karijere/${
-                            item.node.oglasi.naslovOglasaEng
-                              .toLowerCase()
-                              .split(" ")
-                              .join("-") +
-                            "-" +
-                            item.node.id
-                          }`
-                    }
-                  >
-                    {t.Karijere.pogledajOglasButton}
-                  </Link>
-                </AdSectionActionButton>
-              </AdSectionInnerContainer>
-            </AdSectionSpanBodyWrapper>
-            <AdSectionBanner
-              logosource={
-                item.node.oglasi.tvrtka === "Marikomerc"
-                  ? "/karijereLogo//marikomerc.png"
-                  : item.node.oglasi.tvrtka === "MLS"
-                  ? "/karijereLogo//MLS.png"
-                  : "/karijereLogo//diMaris.png"
-              }
-            />
-            <AdSectionBanner />
-          </AdSectionSingleAd>
-        ))}
-      </AdSectionAdContainer>
+                              item.node.id
+                            }`
+                      }
+                    >
+                      {t.Karijere.pogledajOglasButton}
+                    </Link>
+                  </AdSectionActionButton>
+                </AdSectionInnerContainer>
+              </AdSectionSpanBodyWrapper>
+              <AdSectionBanner
+                logosource={
+                  item.node.oglasi.tvrtka === "Marikomerc"
+                    ? "/karijereLogo//marikomerc.png"
+                    : item.node.oglasi.tvrtka === "MLS"
+                    ? "/karijereLogo//MLS.png"
+                    : "/karijereLogo//diMaris.png"
+                }
+              />
+              <AdSectionBanner />
+            </AdSectionSingleAd>
+          </AdSectionAdContainer>
+        ))
+      )}
     </AdSectionWrapper>
   );
 };

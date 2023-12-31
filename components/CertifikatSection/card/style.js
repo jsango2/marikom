@@ -38,7 +38,7 @@ export const WrapCard = styled.div`
   @media only screen and (max-width: 600px) {
     width: 100%;
     height: auto;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 `;
 export const WrapImage = styled.div`
@@ -77,17 +77,17 @@ export const Text = styled.p`
   color: #f5faff;
   /* M-P */
   font-family: Gilroy;
-  font-size: 14px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 500;
   line-height: 153%; /* 21.42px */
-  @media only screen and (max-width: 850px) {
+  @media only screen and (max-width: 430px) {
   }
 `;
 export const WrapText = styled.div`
   color: #f5faff;
   /* M-P */
-  padding: 35px 22px 26px 20px;
+  padding: 15px 22px 10px 20px;
   @media only screen and (max-width: 850px) {
   }
 `;
@@ -95,7 +95,7 @@ export const WrapCerts = styled.div`
   color: #f5faff;
   /* M-P */
   height: 47px;
-  width: 85%;
+  width: 234px;
   display: flex;
   justify-content: space-between;
   @media only screen and (max-width: 850px) {

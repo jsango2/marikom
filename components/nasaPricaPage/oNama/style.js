@@ -88,6 +88,8 @@ export const WrapPhoto = styled.div`
   width: 100%;
   height: 100%;
   margin-left: 20px;
+  border-radius: 3px;
+  overflow: hidden;
   @media only screen and (max-width: 1250px) {
     /* width: calc(100% / 3.3); */
   }

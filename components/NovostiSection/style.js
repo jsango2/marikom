@@ -16,6 +16,9 @@ export const WrapAll = styled.div`
   @media only screen and (max-width: 820px) {
     padding: 70px 25px 30px 25px;
   }
+  @media only screen and (max-width: 430px) {
+    padding: 70px 25px 30px 15px;
+  }
 `;
 
 export const Container = styled.div`
