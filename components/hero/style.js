@@ -35,6 +35,9 @@ export const HeroWrap = styled.div`
     align-items: flex-start;
     /* height: 556px; */
   }
+  @media only screen and (max-width: 430px) {
+    min-height: unset;
+  }
 `;
 export const ContentWrap = styled.div`
   position: relative;
