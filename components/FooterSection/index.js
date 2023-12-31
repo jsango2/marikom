@@ -9,6 +9,8 @@ import {
   SingleLink2,
   SubLinks,
   Column,
+  Column2,
+  ColumnIkone,
   SubName,
   Social,
   Copy,
@@ -86,14 +88,14 @@ function FooterSection() {
             </Column>
           )}
 
-          <Column>
+          <Column2>
             <SubName>{t.Linkovi.claniceGrupe}</SubName>
             <SingleLink2>Marikomerc</SingleLink2>
             <SingleLink2>DiMaris Ribarnice</SingleLink2>
             <SingleLink2>MLS Logistika</SingleLink2>
-          </Column>
+          </Column2>
           {size.width > 770 && (
-            <Column>
+            <ColumnIkone>
               <SubName>{t.Linkovi.kontaktirajteNas}</SubName>
               <Social>
                 <Instagram />
@@ -102,11 +104,11 @@ function FooterSection() {
                 <Location />
                 <Email />
               </Social>
-            </Column>
+            </ColumnIkone>
           )}
         </SubLinks>
         {size.width < 770 && (
-          <Column
+          <ColumnIkone
             style={{
               width: "70%",
               justifyContent: "center",
@@ -121,7 +123,7 @@ function FooterSection() {
               <Location />
               <Email />
             </Social>
-          </Column>
+          </ColumnIkone>
         )}
         <Copy>
           <CopyLink>© 2023 MARIKOMERC</CopyLink>

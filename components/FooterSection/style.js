@@ -224,7 +224,7 @@ export const SubLinks = styled.div`
   }
   @media only screen and (max-width: 430px) {
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin-top: 65px;
     min-width: 100%;
   }
@@ -289,6 +289,17 @@ export const Column = styled.div`
   }
   @media only screen and (max-width: 430px) {
     width: 162px;
+    margin-left: 45px;
+  }
+`;
+export const Column2 = styled(Column)`
+  @media only screen and (max-width: 430px) {
+    margin-left: 5px;
+  }
+`;
+export const ColumnIkone = styled(Column)`
+  @media only screen and (max-width: 430px) {
+    margin-left: 0px;
   }
 `;
 export const Divider = styled.div`

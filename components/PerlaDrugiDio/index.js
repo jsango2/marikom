@@ -23,17 +23,9 @@ import {
   LogoHks,
   ImageWrap,
 } from "./style.js";
-import p1 from "../../assets/images/perla/perla1.png";
 
-import meal4 from "../../assets/images/perla/meal4.png";
-import KaramarkCut from "../../assets/images/karamarko.png";
 // import PotpisKaramarko from "../../assets/images/potpiskaramarko.svg";
 import PotpisKaramarko from "../../assets/images/potpiskaramarko.png";
-import { IoMdTime } from "react-icons/io";
-
-import Logo from "../../svg/PerlaBiserMora.svg";
-import LogoHKS2 from "../../assets/images/HKS.png";
-import PerlaBg from "../../assets/images/PerlaBg.svg";
 import Image from "next/image";
 import useWindowSize from "../helper/usewindowsize";
 import { useScrollPercentage } from "react-scroll-percentage";
@@ -130,7 +122,7 @@ function PerlaDrugiDio() {
           <Title2>{t.Perla2.karamarkoText}</Title2>
           <LogoHks>
             {" "}
-            <Image src={LogoHKS2} alt="p1" layout="fill" objectFit="cover" />
+            <Image src="/HKS.svg" alt="p1" layout="fill" objectFit="cover" />
           </LogoHks>
         </Right>
       </Karamarko>

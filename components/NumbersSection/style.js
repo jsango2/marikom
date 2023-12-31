@@ -85,6 +85,7 @@ export const Left = styled.div`
     width: 90%;
   }
   @media only screen and (max-width: 850px) {
+    width: 95%;
   }
 `;
 export const BlueLine = styled.div`
@@ -123,7 +124,7 @@ export const Right = styled.div`
   } */
 
   @media only screen and (max-width: 850px) {
-    width: 90%;
+    width: 95%;
   }
 `;
 export const SingleFact = styled.div`
@@ -233,7 +234,7 @@ export const Numbers = styled.div`
     flex-direction: column;
   }
   @media only screen and (max-width: 600px) {
-    width: 90%;
+    width: 95%;
 
     /* width: 45px;
 
