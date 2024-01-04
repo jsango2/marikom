@@ -26,7 +26,7 @@ export const WrapContent = styled.div`
   position: relative;
   z-index: 11;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   max-width: 1440px;
   margin: 0 auto;
   padding: 54px 0 0 25px;
@@ -51,6 +51,8 @@ export const WrapPhoto = styled.div`
   z-index: 11;
   width: 721px;
   height: 480px;
+  overflow: hidden;
+  border-radius: 3px;
   @media only screen and (max-width: 850px) {
     width: 100vw;
     height: 65vw;

@@ -31,7 +31,7 @@ export const WrapContent = styled.div`
 
   max-width: 1440px;
   margin: 0 auto;
-  padding: 54px 0 0 25px;
+  padding: 54px 0 0 55px;
 
   justify-content: space-between;
   @media only screen and (max-width: 850px) {
@@ -45,7 +45,8 @@ export const Photo = styled.div`
 
   width: 700px;
   height: 510px;
-
+  overflow: hidden;
+  border-radius: 3px;
   @media only screen and (max-width: 850px) {
     flex-direction: column;
   }

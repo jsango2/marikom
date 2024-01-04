@@ -45,7 +45,8 @@ export const Photo = styled.div`
 
   width: 700px;
   height: 510px;
-
+  overflow: hidden;
+  border-radius: 3px;
   @media only screen and (max-width: 850px) {
     flex-direction: column;
   }

@@ -26,7 +26,7 @@ export const WrapContent = styled.div`
 
   max-width: 1440px;
   margin: 0 auto;
-  padding: 54px 0 0 25px;
+  padding: 54px 0 0 69px;
 
   @media only screen and (max-width: 850px) {
     flex-direction: column;
