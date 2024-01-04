@@ -85,7 +85,7 @@ export const Left = styled.div`
     width: 90%;
   }
   @media only screen and (max-width: 850px) {
-    width: 95%;
+    width: 100%;
   }
 `;
 export const BlueLine = styled.div`
@@ -124,7 +124,7 @@ export const Right = styled.div`
   } */
 
   @media only screen and (max-width: 850px) {
-    width: 95%;
+    width: 100%;
   }
 `;
 export const SingleFact = styled.div`
@@ -235,7 +235,7 @@ export const Numbers = styled.div`
   }
   @media only screen and (max-width: 600px) {
     width: 95%;
-
+    align-items: center;
     /* width: 45px;
 
     font-size: 34px; */
@@ -255,7 +255,10 @@ export const Number = styled.div`
     font-size: 36px;
   }
   @media only screen and (max-width: 600px) {
-    width: 250px;
+    margin-right: 30px;
+
+    text-align: end;
+    width: 170px;
   }
   @media only screen and (max-width: 435px) {
     font-size: 36px;
@@ -270,7 +273,8 @@ export const WrapNumberText = styled.div`
   padding: 0 15px;
   @media only screen and (max-width: 1000px) {
   }
-  @media only screen and (max-width: 850px) {
+  @media only screen and (max-width: 600px) {
+    padding: 0px;
   }
 `;
 
@@ -329,6 +333,8 @@ export const Line = styled.div`
     width: 0;
   }
   @media only screen and (max-width: 600px) {
+    height: 4px;
+
     width: 90%;
     &.inViewLine {
       width: 90vw;

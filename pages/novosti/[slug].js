@@ -13,6 +13,8 @@ import {
   Datum,
   Naslov,
   WrapContent,
+  GallerySection,
+  GalleryImage,
 } from "../../components/NovostiSection/style";
 import AppContext from "../../components/AppContext.js";
 import { BlueLine } from "../../components/NovostiSection/newsCard/style.js";
@@ -36,7 +38,7 @@ export default function News({
   const textNovosti =
     locale === "hr" ? novost.textNovosti : novost.textNovostiEng;
   const htmlString = `<div>${textNovosti}</div>`;
-
+  console.log(novost);
   return (
     <Layout novostiNaslovi={novostiNaslovi.edges}>
       <Head>
@@ -149,6 +151,15 @@ export default function News({
           <Content>{parse(htmlString)}</Content>
         </WrapContent>
       </TextSection>
+      {novost.gallery !== null && (
+        <GallerySection>
+          {novost.gallery.map((image) => (
+            <GalleryImage>
+              <Image src={image.sourceUrl} layout="fill" objectFit="cover" />
+            </GalleryImage>
+          ))}
+        </GallerySection>
+      )}
       <OtherNews novosti={novosti} />
     </Layout>
   );

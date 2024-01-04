@@ -142,7 +142,7 @@ export const SingleFact = styled.div`
   align-items: flex-start;
   /* overflow: hidden; */
   @media only screen and (max-width: 430px) {
-    width: 90vw;
+    width: 100%;
   }
 `;
 export const Wrap = styled.div`

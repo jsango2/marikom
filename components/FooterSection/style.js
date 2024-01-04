@@ -271,6 +271,7 @@ export const SingleLink2 = styled.div`
   @media only screen and (max-width: 600px) {
     width: 100%;
     justify-content: flex-start;
+    margin: 3px 0;
   }
 `;
 export const Column = styled.div`

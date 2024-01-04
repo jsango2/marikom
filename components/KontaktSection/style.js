@@ -37,6 +37,9 @@ export const Container = styled.div`
   @media only screen and (max-width: 850px) {
     padding-bottom: 0;
   }
+  @media only screen and (max-width: 430px) {
+    margin-top: 80px;
+  }
 `;
 export const Overlay = styled.div`
   position: absolute;
@@ -76,6 +79,11 @@ export const BlueLine = styled.div`
     &.inViewLine {
       width: 80vw;
     }
+    @media only screen and (max-width: 430px) {
+   
+    margin-top: 30px;
+    margin-bottom:5px ;
+ 
   }
 `;
 export const Title = styled.h1`
@@ -107,6 +115,7 @@ font-size: 26px;
 font-style: normal;
 font-weight: 700;
 line-height: 120%;  */
+    margin: 0 auto 20px auto;
   }
 `;
 export const BoldTitle = styled.h3`
@@ -167,6 +176,9 @@ export const WrapUp = styled.div`
     width: auto;
     flex-direction: column;
   }
+  @media only screen and (max-width: 430px) {
+    margin: 20px auto 0 auto;
+  }
 `;
 export const WrapDown = styled.div`
   position: relative;
@@ -187,7 +199,7 @@ export const WrapDown = styled.div`
     flex-direction: column;
   }
   @media only screen and (max-width: 430px) {
-    margin: 30px auto 0 auto;
+    margin: 0px auto 0 auto;
   }
 `;
 export const Box = styled.div`

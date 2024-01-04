@@ -70,8 +70,8 @@ const AdSection = (oglasi) => {
         <NemaOglasa>{t.Karijere.nemaAktivnihNatjecaja}</NemaOglasa>
       ) : (
         prikazaniOglasi.map((item, index) => (
-          <AdSectionAdContainer>
-            <AdSectionSingleAd key={item.node.id} delay={index * 0.75 + 0.75}>
+          <AdSectionAdContainer key={item.node.id}>
+            <AdSectionSingleAd delay={index * 0.75 + 0.75}>
               <AdSectionSpanBodyWrapper>
                 <span>{`0${index + 1}`}</span>
                 <AdSectionInnerContainer>

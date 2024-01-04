@@ -37,6 +37,44 @@ export const Container = styled.div`
     width: 100%;
   }
 `;
+export const GallerySection = styled.div`
+  position: relative;
+  z-index: 10;
+  width: 70%;
+  min-height: 300px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  /* overflow: hidden; */
+
+  @media only screen and (max-width: 850px) {
+    width: 95%;
+  }
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+`;
+export const GalleryImage = styled.div`
+  position: relative;
+  z-index: 10;
+  width: calc(100% / 3.1);
+
+  height: 250px;
+  background-color: grey;
+  /* overflow: hidden; */
+  margin-bottom: 20px;
+  background-image: url("/marikomerc.webp");
+  background-position: center;
+  background-size: cover;
+  @media only screen and (max-width: 600px) {
+    width: 95%;
+    margin-bottom: 10px;
+    height: 60vw;
+  }
+`;
+
 export const WrapCards = styled.div`
   position: relative;
   z-index: 10;
@@ -106,7 +144,7 @@ export const FeaturedImage = styled.div`
   /* align-items: center; */
   /* overflow: hidden; */
   margin: 42px auto;
-  @media only screen and (max-width: 630px) {
+  @media only screen and (max-width: 850px) {
     width: 100%;
     margin-top: 0;
   }
@@ -198,6 +236,7 @@ export const Content = styled.div`
   }
   @media only screen and (max-width: 430px) {
     width: 90vw;
+    font-size: 16px;
   }
 `;
 export const Datum = styled.div`

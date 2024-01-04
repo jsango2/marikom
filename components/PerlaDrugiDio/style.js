@@ -41,8 +41,11 @@ export const Proizvodi = styled.div`
     flex-wrap: wrap;
   }
   @media only screen and (max-width: 450px) {
-    width: 90%;
+    margin: 63px auto 0 auto;
+
+    width: 95%;
     min-width: 355px;
+    justify-content: space-evenly;
   }
 `;
 export const WrapProizvod = styled.div`
@@ -62,7 +65,9 @@ export const WrapProizvod = styled.div`
     margin-bottom: 40px;
   }
   @media only screen and (max-width: 450px) {
-    width: 170px;
+    margin-bottom: 25px;
+
+    width: 45%;
   }
 `;
 export const WrapProizvodImage = styled.div`
@@ -120,7 +125,8 @@ export const Button = styled.div`
     text-decoration: none;
     color: #f5faff;
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 430px) {
+    margin: 35px auto 0 auto;
   }
 `;
 export const Proizvod = styled.div`
@@ -234,6 +240,10 @@ export const LogoHks = styled.div`
     margin: 85px auto 0 auto;
   }
   @media only screen and (max-width: 430px) {
+    width: 90px;
+    height: 90px;
+    margin: 45px auto 0 auto;
+
     /* position: absolute;
     top: 360px;
     width: 90px;

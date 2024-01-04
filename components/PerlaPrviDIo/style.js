@@ -278,6 +278,9 @@ export const UpTitle = styled.h3`
   @media only screen and (max-width: 850px) {
     text-align: left;
   }
+  @media only screen and (max-width: 430px) {
+    margin: 0;
+  }
 `;
 export const Title = styled.h1`
   font-family: "Roboto Condensed", sans-serif;
@@ -298,6 +301,9 @@ export const Title = styled.h1`
   @media only screen and (max-width: 850px) {
     text-align: left;
   }
+  @media only screen and (max-width: 430px) {
+    margin: 10px 0;
+  }
 `;
 export const SubTitle = styled.h3`
   font-family: Gilroy;
@@ -313,6 +319,10 @@ export const SubTitle = styled.h3`
   margin-bottom: 10px;
   @media only screen and (max-width: 850px) {
     text-align: left;
+  }
+  @media only screen and (max-width: 430px) {
+    margin-bottom: 10px;
+    margin-top: 10px;
   }
 `;
 export const WrapGradovi = styled.div`
@@ -346,6 +356,7 @@ export const WrapButton = styled.div`
     top: 25px;
     opacity: 0;
   }
+
   @media only screen and (max-width: 850px) {
     margin: 0 auto;
   }
@@ -486,6 +497,10 @@ export const PerlaLogoWrap = styled.div`
   @media only screen and (max-width: 1000px) {
     margin-top: 100px;
     width: 100%;
+  }
+  @media only screen and (max-width: 430px) {
+    margin-top: 80px;
+    margin-bottom: 0px;
   }
 `;
 export const YellowArrow = styled.div`

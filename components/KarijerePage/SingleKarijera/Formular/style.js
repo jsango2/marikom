@@ -135,7 +135,16 @@ export const StyledButton = styled.button`
   font-style: normal;
   font-weight: 700;
   line-height: 142.5%;
+  transition: all 0.3s ease-in-out;
+
   /* opacity: ${(props) => (!props.enabled ? 0.5 : 1)}; */
+  &:hover {
+    background: var(--color-boja-tamnoplava-ocjena);
+  }
+  &:active {
+    background: #4299c8;
+    border: 1px solid #93f9ff;
+  }
   @media only screen and (max-width: 900px) {
     display: none;
   }
@@ -151,7 +160,7 @@ export const StyledButtonMob = styled.button`
   border-radius: 4px;
   background: #4299c8;
   color: #fff;
-  width: 300px;
+  width: 100%;
   text-align: center;
   font-family: Gilroy;
   font-size: 18px;

@@ -75,7 +75,7 @@ export const Container = styled.div`
     padding-top: 40px;
     height: auto;
     flex-direction: column;
-    width: 90vw;
+    width: 95vw;
     align-items: center;
   }
 `;

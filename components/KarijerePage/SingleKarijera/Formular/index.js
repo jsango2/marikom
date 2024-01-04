@@ -44,7 +44,12 @@ function Formular() {
     e.preventDefault();
     // await submit({ ime, email, telefon, poruka, file });
     // alert("Form submitted");
-    handleUpload();
+    if (file === null) {
+      await submit({ ime, email, telefon, poruka });
+      alert("Form submitted");
+    } else {
+      handleUpload();
+    }
   };
   const handleIme = (e) => {
     setIme(e.target.value);
@@ -118,13 +123,19 @@ function Formular() {
       <StyledForm onSubmit={handleSubmit}>
         <WrapData>
           <StyledLabel>{t.Formular.ime}</StyledLabel>
-          <StyledInput type="text" value={ime} onChange={(e) => handleIme(e)} />
+          <StyledInput
+            type="text"
+            value={ime}
+            onChange={(e) => handleIme(e)}
+            required
+          />
           <DoubleRow>
             <SmallBlock>
               <StyledLabel>Email</StyledLabel>
               <StyledInput
                 type="email"
                 value={email}
+                required
                 onChange={(e) => handleEmail(e)}
               />
             </SmallBlock>
@@ -133,6 +144,7 @@ function Formular() {
               <StyledInput
                 type="tel"
                 value={telefon}
+                required
                 onChange={(e) => handleTel(e)}
               />
             </SmallBlock>

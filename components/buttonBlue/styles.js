@@ -30,16 +30,23 @@ export const WrapButton = styled.button`
   z-index: 10;
   cursor: pointer;
   /* SUNRISE / White */
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   a {
     text-decoration: none;
     color: ${(props) => props.color};
   }
-  &:hover a {
+  /* &:hover a {
     color: inherit;
   }
   &:hover {
     box-shadow: 3px 3px 5px 0px #2088b3;
+  } */
+  &:hover {
+    background: var(--color-boja-tamnoplava-ocjena);
+  }
+  &:active {
+    background: #4299c8;
+    border: 1px solid #93f9ff;
   }
   @media screen and (max-width: 440px) {
     font-size: 16px;
