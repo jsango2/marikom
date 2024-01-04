@@ -5,16 +5,19 @@ export const MapaWrapAll = styled.div`
   z-index: 10;
   width: 100%;
   height: auto;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
   /* display: flex;
   flex-direction: column;
 
   justify-content: flex-start;
   align-items: center; */
-
+  padding: 280px 0 150px 0;
+  background-image: url("/pozadinaKontaktMapa.png");
+  background-size: cover;
   @media only screen and (max-width: 850px) {
     padding-top: 0px;
     margin-bottom: 0;
+    padding-bottom: 0;
   }
 `;
 export const MapaContent = styled.div`

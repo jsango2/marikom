@@ -210,7 +210,7 @@ export const WrapContent = styled.div`
   width: 1478px;
   height: auto;
   margin: 0px auto 0 auto;
-  padding-top: 120px;
+  padding-top: 0;
   padding-left: 105px;
   /* padding-bottom: 180px; */
   display: flex;
@@ -261,17 +261,18 @@ export const TextWrap = styled.div`
   }
 `;
 export const UpTitle = styled.h3`
-  font-family: "Gilroy";
+  font-family: "Roboto Condensed";
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  font-size: 21px;
-  line-height: 120%;
+  line-height: normal;
+  text-transform: uppercase;
   /* or 25px */
 
   /* MK Plava */
 
   color: #1c2640;
-  text-transform: uppercase;
+
   @media only screen and (max-width: 1300px) {
     font-size: 16px;
   }
@@ -291,9 +292,10 @@ export const Title = styled.h1`
 
   color: #1c2640;
   width: 600px;
+  margin-bottom: 25px;
   @media only screen and (max-width: 1300px) {
     font-size: 30px;
-    width: 100%;
+    width: 95%;
   }
   @media only screen and (max-width: 850px) {
     text-align: left;
@@ -390,7 +392,7 @@ export const ListWrap = styled.div`
 export const ItemText = styled.div`
   position: relative;
   z-index: 10;
-  margin-left: 20px;
+  margin-left: 5px;
   text-align: left;
   width: 100%;
   @media only screen and (max-width: 600px) {
@@ -402,7 +404,7 @@ export const ListItem = styled.div`
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 140%;
   /* or 22px */
 
@@ -445,7 +447,7 @@ export const WrapPhotos2 = styled.div`
   position: relative;
   z-index: 10;
   min-width: 652px;
-  height: 630px;
+  height: 751px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -505,10 +507,10 @@ export const YellowArrow = styled.div`
 `;
 export const LogoWrap = styled.div`
   position: absolute;
-  top: -55px;
-  left: 30px;
+  top: -39px;
+  left: 0;
   z-index: 11;
-  width: 300px;
+  width: 240px;
   height: 200px;
   /* color: black;
   display: flex;
@@ -530,6 +532,7 @@ export const RightSide = styled.div`
   height: auto;
   margin-left: 100px;
   display: flex;
+  padding-top: 100px;
   flex-direction: column;
   /* color: black;
   display: flex;

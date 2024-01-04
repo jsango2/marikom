@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const WrapAll = styled.div`
   position: relative;
-  z-index: 10;
+  z-index: 11;
   width: 100%;
   height: 1000px;
-  margin-bottom: 300px;
+  /* margin-bottom: 300px; */
   /* display: flex;
   flex-direction: column;
 
@@ -48,7 +48,7 @@ export const HorecaAccordion = styled.div`
     width: 400px;
   }
   @media only screen and (max-width: 850px) {
-    padding: 0px 0 30px 0;
+    padding: 0px 0 60px 0;
     margin: 0 auto;
   }
   @media only screen and (max-width: 430px) {
@@ -67,8 +67,12 @@ export const AccordionTitle = styled.h3`
   line-height: 120%; /* 48px */
   margin-bottom: 60px;
   text-transform: uppercase;
+  text-align: center;
   @media only screen and (max-width: 1300px) {
     width: 400px;
+  }
+  @media only screen and (max-width: 1300px) {
+    font-size: 36px;
   }
 `;
 export const HorecaWrapImage = styled.div`

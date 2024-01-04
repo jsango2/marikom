@@ -28,7 +28,7 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 function FAQ() {
-  const [open, setOpen] = useState("");
+  const [open, setOpen] = useState("1");
   const toggle = (id) => {
     if (open === id) {
       setOpen();
