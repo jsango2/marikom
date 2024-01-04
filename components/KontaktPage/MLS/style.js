@@ -18,7 +18,7 @@ export const WrapAllDiMaris = styled.div`
     #101628 100%
   );
   @media only screen and (max-width: 850px) {
-    padding-top: 40px;
+    padding: 0px;
   }
   @media only screen and (max-width: 650px) {
     padding: 0px;
@@ -35,7 +35,8 @@ export const WrapContent = styled.div`
 
   justify-content: space-between;
   @media only screen and (max-width: 850px) {
-    flex-direction: column;
+    padding: 0;
+    flex-direction: column-reverse;
   }
 `;
 export const Photo = styled.div`
@@ -48,6 +49,8 @@ export const Photo = styled.div`
   overflow: hidden;
   border-radius: 3px;
   @media only screen and (max-width: 850px) {
+    width: 100vw;
+    height: 60vw;
     flex-direction: column;
   }
 `;
@@ -58,7 +61,7 @@ export const Data = styled.div`
 
   width: 634px;
   min-height: 200px;
-  @media only screen and (max-width: 850px) {
-    flex-direction: column;
+  @media only screen and (max-width: 1100px) {
+    padding: 30px 30px 40px 25px;
   }
 `;

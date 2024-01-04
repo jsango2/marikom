@@ -29,6 +29,7 @@ export const WrapContent = styled.div`
   padding: 54px 0 0 69px;
 
   @media only screen and (max-width: 850px) {
+    padding: 48px 0 0 25px;
     flex-direction: column;
   }
 `;

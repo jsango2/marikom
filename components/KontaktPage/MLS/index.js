@@ -60,7 +60,7 @@ function MLS() {
           </WrapText>
         </Data>
         <Photo>
-          <Image src="/MLSKontaktPage.png" layout="fill" />
+          <Image src="/MLSKontaktPage.png" layout="fill" objectFit="cover" />
         </Photo>
       </WrapContent>
     </WrapAllDiMaris>

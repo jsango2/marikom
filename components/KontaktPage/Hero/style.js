@@ -86,7 +86,8 @@ export const Text = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 22.4px */
-  @media only screen and (max-width: 1300px) {
+  @media only screen and (max-width: 850px) {
+    width: 85vw;
   }
 `;
 export const GoogleButton = styled.button`
@@ -109,6 +110,18 @@ export const GoogleButton = styled.button`
   @media only screen and (max-width: 1300px) {
   }
 `;
+export const Data = styled.div`
+  position: relative;
+  z-index: 11;
+  display: flex;
+
+  width: 634px;
+  min-height: 200px;
+  @media only screen and (max-width: 1100px) {
+    padding: 30px 30px 40px 25px;
+  }
+`;
+
 export const BlueLine = styled.div`
   position: absolute;
   z-index: 10;

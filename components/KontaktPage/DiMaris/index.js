@@ -24,7 +24,11 @@ function DiMaris() {
     <WrapAllDiMaris>
       <WrapContent>
         <Photo>
-          <Image src="/diMarisKontaktPage.png" layout="fill" />
+          <Image
+            src="/diMarisKontaktPage.png"
+            layout="fill"
+            objectFit="cover"
+          />
         </Photo>
         <Data>
           <WrapText>

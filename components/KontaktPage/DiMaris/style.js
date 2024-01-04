@@ -17,8 +17,8 @@ export const WrapAllDiMaris = styled.div`
     #253151 0%,
     #101628 100%
   );
-  @media only screen and (max-width: 850px) {
-    padding-top: 40px;
+  @media only screen and (max-width: 1100px) {
+    padding: 0px;
   }
   @media only screen and (max-width: 650px) {
     padding: 0px;
@@ -28,14 +28,15 @@ export const WrapContent = styled.div`
   position: relative;
   z-index: 11;
   display: flex;
-
+  min-width: 1400px;
   max-width: 1440px;
   margin: 0 auto;
   padding: 54px 0 0 25px;
 
   justify-content: space-between;
-  @media only screen and (max-width: 850px) {
+  @media only screen and (max-width: 1100px) {
     flex-direction: column;
+    padding: 0 25px 50px 0px;
   }
 `;
 export const Photo = styled.div`
@@ -47,8 +48,12 @@ export const Photo = styled.div`
   height: 510px;
   overflow: hidden;
   border-radius: 3px;
+  @media only screen and (max-width: 1100px) {
+    width: 100%;
+  }
   @media only screen and (max-width: 850px) {
-    flex-direction: column;
+    width: 100vw;
+    height: 60vw;
   }
 `;
 export const Data = styled.div`
@@ -58,7 +63,7 @@ export const Data = styled.div`
 
   width: 634px;
   min-height: 200px;
-  @media only screen and (max-width: 850px) {
-    flex-direction: column;
+  @media only screen and (max-width: 1100px) {
+    padding: 30px 30px 40px 25px;
   }
 `;
