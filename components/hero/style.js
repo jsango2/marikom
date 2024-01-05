@@ -232,7 +232,7 @@ export const SubTitle = styled.p`
   /* mix-blend-mode: normal; */
 
   margin-bottom: 45px;
-  width: 75%;
+  width: 95%;
   &.inViewHero {
     top: 0px;
     opacity: 1;

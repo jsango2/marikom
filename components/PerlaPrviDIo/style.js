@@ -261,7 +261,7 @@ export const TextWrap = styled.div`
   }
 `;
 export const UpTitle = styled.h3`
-  font-family: "Gilroy";
+  font-family: "Roboto Condensed";
   font-style: normal;
   font-weight: 400;
   font-size: 21px;
@@ -272,6 +272,7 @@ export const UpTitle = styled.h3`
 
   color: #1c2640;
   text-transform: uppercase;
+  margin-bottom: 0;
   @media only screen and (max-width: 1300px) {
     font-size: 16px;
   }
@@ -294,6 +295,7 @@ export const Title = styled.h1`
 
   color: #1c2640;
   width: 600px;
+  margin-top: 10px;
   @media only screen and (max-width: 1300px) {
     font-size: 30px;
     width: 100%;
@@ -413,7 +415,7 @@ export const ListItem = styled.div`
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 140%;
   /* or 22px */
 
@@ -523,9 +525,9 @@ export const YellowArrow = styled.div`
 export const LogoWrap = styled.div`
   position: absolute;
   top: 0px;
-  left: 30px;
+  left: 0;
   z-index: 11;
-  width: 300px;
+  width: 239px;
   height: 200px;
   /* color: black;
   display: flex;

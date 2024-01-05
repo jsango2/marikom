@@ -19,9 +19,9 @@ import en from "../../../locales/en.json";
 import hr from "../../../locales/hr.json";
 import { useRouter } from "next/router.js";
 
-function ContactData() {
+function ContactData({ kontakti }) {
   const { locale } = useRouter();
-
+  console.log(kontakti);
   const t = locale === "en" ? en : hr;
   const size = useWindowSize();
   return (
@@ -30,46 +30,28 @@ function ContactData() {
         <Ceo>
           <Photo></Photo>
           <WrapText>
-            <Ime>Ivan Dell'Orco </Ime>
-            <Pozicija>Predsjednik nadzornog Odbora</Pozicija>
+            <Ime>{kontakti.prviKontakt.imeIPrezime}</Ime>
+            <Pozicija>
+              {locale === "hr"
+                ? kontakti.prviKontakt.funkcija
+                : kontakti.prviKontakt.funkcijaEng}
+            </Pozicija>
           </WrapText>
         </Ceo>
         <Data>
-          <Block>
-            <Ime>Grgo Anzulović, </Ime>
-            <Funkcija>Direktor prodaje i marketinga</Funkcija>
-            <Email>grgo.anzulovic@marikomerc.hr</Email>
-          </Block>
-          <Block>
-            <Ime>Grgo Anzulović, </Ime>
-            <Funkcija>Direktor prodaje i marketinga</Funkcija>
-            <Email>grgo.anzulovic@marikomerc.hr</Email>
-          </Block>{" "}
-          <Block>
-            <Ime>Grgo Anzulović, </Ime>
-            <Funkcija>Direktor prodaje i marketinga</Funkcija>
-            <Email>grgo.anzulovic@marikomerc.hr</Email>
-          </Block>{" "}
-          <Block>
-            <Ime>Grgo Anzulović, </Ime>
-            <Funkcija>Direktor prodaje i marketinga</Funkcija>
-            <Email>grgo.anzulovic@marikomerc.hr</Email>
-          </Block>{" "}
-          <Block>
-            <Ime>Grgo Anzulović, </Ime>
-            <Funkcija>Direktor prodaje i marketinga</Funkcija>
-            <Email>grgo.anzulovic@marikomerc.hr</Email>
-          </Block>{" "}
-          <Block>
-            <Ime>Grgo Anzulović, </Ime>
-            <Funkcija>Direktor prodaje i marketinga</Funkcija>
-            <Email>grgo.anzulovic@marikomerc.hr</Email>
-          </Block>{" "}
-          <Block>
-            <Ime>Grgo Anzulović, </Ime>
-            <Funkcija>Direktor prodaje i marketinga</Funkcija>
-            <Email>grgo.anzulovic@marikomerc.hr</Email>
-          </Block>
+          {kontakti.ostaliKontakti.map((kontakt) => (
+            <Block key={kontakt.imeIPrezime}>
+              <Ime>{kontakt.imeIPrezime}, </Ime>
+              <Funkcija>
+                {" "}
+                {locale === "hr" ? kontakt.funkcija : kontakt.funkcijaEng}
+              </Funkcija>
+              <Email>{kontakt.email}</Email>
+              {kontakt.brojTelefona !== null && (
+                <Email>{kontakt.brojTelefona}</Email>
+              )}
+            </Block>
+          ))}
         </Data>
       </WrapContent>
     </WrapAllContactData>

@@ -25,7 +25,7 @@ export const WrapAll = styled.div`
 export const WrapCards = styled.div`
   position: relative;
   z-index: 10;
-  width: 60%;
+  width: 65%;
   max-width: 1000px;
   height: auto;
   display: flex;

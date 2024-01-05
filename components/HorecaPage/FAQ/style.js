@@ -67,7 +67,7 @@ export const AccordionTitle = styled.h3`
   line-height: 120%; /* 48px */
   margin-bottom: 60px;
   text-transform: uppercase;
-  text-align: center;
+  padding-left: 20px;
   @media only screen and (max-width: 1300px) {
     width: 400px;
   }

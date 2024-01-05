@@ -6,16 +6,8 @@ import {
   AccordionTitle,
 } from "./style.js";
 
+import "bootstrap/dist/css/bootstrap.min.css";
 import useWindowSize from "../../helper/usewindowsize";
-import Image from "next/image.js";
-// import "react-accessible-accordion/dist/fancy-example.css";
-// import {
-//   Accordion,
-//   AccordionItem,
-//   AccordionItemHeading,
-//   AccordionItemButton,
-//   AccordionItemPanel,
-// } from "react-accessible-accordion";
 import en from "../../../locales/en.json";
 import hr from "../../../locales/hr.json";
 import { useRouter } from "next/router.js";
@@ -25,9 +17,8 @@ import {
   AccordionHeader,
   AccordionItem,
 } from "reactstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
-function FAQ() {
+function FAQ(props) {
   const [open, setOpen] = useState("1");
   const toggle = (id) => {
     if (open === id) {

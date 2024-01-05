@@ -136,28 +136,28 @@ function PerlaPrviDio() {
             <Title>{t.Perla.title}</Title>
             <SubTitle>{t.Perla.contactUs}</SubTitle>
             <ListWrap ref={ref}>
-              <ListItem className={` ${inView ? "inView" : "outView"}`}>
+              <ListItem>
                 <GreenMark style={{ marginRight: "10px" }} />
                 <ItemText>{t.Perla.line1}</ItemText>
               </ListItem>
-              <ListItem className={` ${inView ? "inView" : "outView"}`}>
+              <ListItem>
                 <GreenMark style={{ marginRight: "10px" }} />
                 <ItemText>{t.Perla.line2}</ItemText>
               </ListItem>
-              <ListItem className={` ${inView ? "inView" : "outView"}`}>
+              <ListItem>
                 <GreenMark style={{ marginRight: "10px" }} />
                 <ItemText>{t.Perla.line3}</ItemText>
               </ListItem>
-              <ListItem className={` ${inView ? "inView" : "outView"}`}>
+              <ListItem>
                 <GreenMark style={{ marginRight: "10px" }} />
                 <ItemText>{t.Perla.line4}</ItemText>
               </ListItem>
-              <ListItem className={` ${inView ? "inView" : "outView"}`}>
+              <ListItem>
                 <GreenMark style={{ marginRight: "10px" }} />
                 <ItemText>{t.Perla.line5}</ItemText>
               </ListItem>
             </ListWrap>
-            <WrapButton className={` ${inView ? "inView" : "outView"}`}>
+            <WrapButton>
               <Button
                 bgcolor="#4299C8"
                 color="#FFFFFF"

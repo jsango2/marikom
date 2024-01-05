@@ -12,7 +12,7 @@ import {
 } from "../style.js";
 import Image from "next/image";
 import { useRouter } from "next/router";
-
+import parse from "html-react-parser";
 import useWindowSize from "../../helper/usewindowsize.js";
 // import { useTranslations } from "next-intl";
 import en from "../../../locales/en.json";
@@ -38,7 +38,7 @@ function Content() {
             ref={ref}
             className={` ${inView ? "inViewHero" : "outViewHero"}`}
           >
-            {t.Hero.title}
+            {parse(t.Hero.title)}
           </Title>
           <SubTitle className={` ${inView ? "inViewHero" : "outViewHero"}`}>
             {t.Hero.description}

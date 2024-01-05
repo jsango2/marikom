@@ -4,12 +4,15 @@ import ContactHero from "../../components/KontaktPage/Hero";
 import ContactData from "../../components/KontaktPage/Data";
 import DiMaris from "../../components/KontaktPage/DiMaris";
 import MLS from "../../components/KontaktPage/MLS";
+import { getAllKontakti } from "../../lib/api2";
 
-function index() {
+function index(props) {
+  const kontakti = props.kontakti.edges[0].node.kontakti;
+
   return (
     <Layout>
       <ContactHero />
-      <ContactData />
+      <ContactData kontakti={kontakti} />
       <DiMaris />
       <MLS />
     </Layout>
@@ -17,3 +20,14 @@ function index() {
 }
 
 export default index;
+
+export async function getStaticProps({ locales }) {
+  const kontakti = await getAllKontakti();
+
+  return {
+    props: {
+      fallback: false,
+      kontakti,
+    },
+  };
+}
