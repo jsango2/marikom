@@ -14,6 +14,7 @@ import {
   WrapText,
 } from "../Hero/style.js";
 import { TopTitle } from "../../HorecaPage/Mapa/style.js";
+import parse from "html-react-parser";
 
 function DiMaris() {
   const { locale } = useRouter();
@@ -33,35 +34,10 @@ function DiMaris() {
         <Data>
           <WrapText>
             <BlueLine />
-            <TopTitle>Lanac ribarnica</TopTitle>
+            <TopTitle>{t.Kontakt.lanacRibarnica}</TopTitle>
             <Title>Di Maris d.o.o.</Title>
-            <Text>
-              Adresa: Obala kneza Trpimira 2,
-              <br />
-              23000 Zadar - Hrvatska
-              <br />
-              Matični broj: 3468925
-              <br />
-              OIB: 02359254184
-              <br />
-              <br />
-              E-mail: info@dimaris.hr
-              <br />
-              E-mail: info@delimaris.hr
-              <br />
-              Tel: +385(0)23/342-613
-              <br />
-              Fax: +385(0)23/354-238
-              <br />
-              <br />
-              BANKA OTP, Adresa, 23000 Zadar IBAN: HR8024020061100078207
-              <br />
-              <br />
-              Di Maris d.o.o. je upisan u registar
-              <br />
-              Trgovačkog suda u Zadru, broj spisa: 02454831
-            </Text>
-            <GoogleButton>Upute Google Maps</GoogleButton>
+            <Text>{parse(t.Kontakt.diMarisData)}</Text>
+            <GoogleButton>{t.Kontakt.uputeGoogleMaps}</GoogleButton>
           </WrapText>
         </Data>
       </WrapContent>

@@ -21,7 +21,7 @@ import { useRouter } from "next/router.js";
 
 function ContactData({ kontakti }) {
   const { locale } = useRouter();
-  console.log(kontakti);
+
   const t = locale === "en" ? en : hr;
   const size = useWindowSize();
   return (

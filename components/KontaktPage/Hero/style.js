@@ -96,7 +96,8 @@ export const GoogleButton = styled.button`
   z-index: 11;
   border-radius: 6px;
   border: 1px solid #f5faff;
-  width: 137px;
+  padding: 0 20px;
+  width: auto;
   height: 25px;
   color: #f5faff;
   text-align: center;
@@ -107,6 +108,7 @@ export const GoogleButton = styled.button`
   font-weight: 600;
   line-height: 140%; /* 16.8px */
   margin-top: 20px;
+  cursor: pointer;
   @media only screen and (max-width: 1300px) {
   }
 `;

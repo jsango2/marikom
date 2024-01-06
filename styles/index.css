@@ -703,6 +703,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   right: -25px;
   top: -50px;
 }
+/* .testimonialSlider {
+  width: 100% !important;
+} */
 .hamburgerMenu {
   margin-right: 30px;
   cursor: pointer;
