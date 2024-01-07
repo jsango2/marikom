@@ -143,6 +143,7 @@ export const SingleFact = styled.div`
   /* overflow: hidden; */
   @media only screen and (max-width: 430px) {
     width: 100%;
+    height: 80px;
   }
 `;
 export const Wrap = styled.div`

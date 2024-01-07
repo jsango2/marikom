@@ -313,6 +313,17 @@ export const Divider = styled.div`
   @media only screen and (max-width: 600px) {
   }
 `;
+export const WrapCerts = styled.div`
+  position: relative;
+  z-index: 10;
+  width: 250px;
+  margin-top: 40px;
+  height: 27px;
+  display: flex;
+  justify-content: space-between;
+  @media only screen and (max-width: 600px) {
+  }
+`;
 
 export const Kontakt = styled.p`
   position: relative;

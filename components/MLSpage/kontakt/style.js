@@ -5,7 +5,6 @@ export const WrapKontakt = styled.div`
   z-index: 10;
   width: 100%;
   height: auto;
-  border: 1px solid #f5faff;
 
   background: radial-gradient(
     107.92% 107.92% at 1.33% 0%,
@@ -52,14 +51,14 @@ export const Photo = styled.div`
   @media only screen and (max-width: 850px) {
   }
 `;
-export const GoogleButton = styled.button`
+export const GoogleButton = styled.a`
   position: relative;
   background-color: transparent;
   z-index: 11;
   border-radius: 6px;
   border: 1px solid #f5faff;
-  padding: 0 20px;
-  width: 170px;
+  padding: 5px 20px;
+  width: 150px;
   height: 25px;
   color: #f5faff;
   text-align: center;
@@ -71,6 +70,7 @@ export const GoogleButton = styled.button`
   line-height: 140%; /* 16.8px */
   margin-top: 20px;
   cursor: pointer;
+  text-decoration: none;
   @media only screen and (max-width: 1300px) {
   }
 `;
@@ -78,16 +78,17 @@ export const GoogleButton = styled.button`
 export const Grid = styled.div`
   position: relative;
   z-index: 10;
-  width: 70%;
+  width: 80%;
   height: auto;
   display: grid;
   /* grid-template-columns: repeat(3, 1fr); */
   grid-template-columns: repeat(auto-fill, minmax(186px, 1fr));
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 10vw;
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 5vw;
   grid-row-gap: 70px;
   margin: 90px auto;
-  @media only screen and (max-width: 1050px) {
+  @media only screen and (max-width: 850px) {
+    grid-column-gap: 10vw;
   }
   @media only screen and (max-width: 430px) {
     width: 85%;
@@ -110,6 +111,17 @@ export const Text = styled.div`
   @media only screen and (max-width: 850px) {
   }
 `;
+export const WrapEmail = styled.div`
+  position: relative;
+  z-index: 10;
+  display: flex;
+  margin-top: 10px;
+  color: white;
+  @media only screen and (max-width: 1050px) {
+  }
+  @media only screen and (max-width: 850px) {
+  }
+`;
 export const Naslov = styled.h3`
   color: #f5faff;
   text-align: center;
@@ -119,6 +131,7 @@ export const Naslov = styled.h3`
   font-style: normal;
   font-weight: 600;
   line-height: 120%; /* 48px */
+  text-transform: uppercase;
   @media only screen and (max-width: 700px) {
     font-size: 30px;
   }
@@ -134,8 +147,10 @@ export const PodNaslov = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 153%; /* 21.42px */
-  width: 85vw;
+  width: 90%;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
   @media only screen and (max-width: 820px) {
   }
 `;
@@ -157,7 +172,7 @@ export const Adresa = styled.div`
   font-style: normal;
   font-weight: 500;
   line-height: 153%; /* 21.42px */
-  margin: 20px 0;
+  margin: 20px 0 10px 0;
   @media only screen and (max-width: 820px) {
   }
 `;
@@ -169,6 +184,7 @@ export const Grad = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: 120%; /* 25.2px */
+  text-transform: uppercase;
   @media only screen and (max-width: 820px) {
   }
 `;

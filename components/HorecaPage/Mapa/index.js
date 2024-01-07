@@ -17,6 +17,7 @@ import Image from "next/image.js";
 import en from "../../../locales/en.json";
 import hr from "../../../locales/hr.json";
 import { useRouter } from "next/router.js";
+import parse from "html-react-parser";
 
 function Mapa() {
   const { locale } = useRouter();
@@ -29,7 +30,7 @@ function Mapa() {
         <MapaWrapTextBlock>
           <TopTitle>{t.Horeca.topTitle}</TopTitle>
           <Title>{t.Horeca.Title}</Title>
-          <Text>{t.Horeca.Text}</Text>
+          <Text>{parse(t.Horeca.Text)}</Text>
           <Button>{t.Horeca.buttonText}</Button>
         </MapaWrapTextBlock>
 

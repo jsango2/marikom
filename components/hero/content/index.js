@@ -61,7 +61,11 @@ function Content() {
           <video autoPlay muted loop="loop" className="videoHero" playsInline>
             <source src="/HeroVideo.mp4" type="video/mp4" />
           </video>
-          <Icon href="https://www.youtube.com/watch?v=JjshNMQqKnU">
+
+          <Icon
+            href="https://www.youtube.com/watch?v=JjshNMQqKnU"
+            target="_blank"
+          >
             <AiOutlineYoutube size={45} />
           </Icon>
         </WrapImage>

@@ -47,7 +47,7 @@ export const WrapBg = styled.div`
 
 export const WrapCerts = styled.div`
   position: relative;
-  z-index: 10;
+  z-index: 11;
   width: 657px;
   height: 68px;
   margin-top: 70px;
@@ -79,10 +79,15 @@ export const WrapImage = styled.div`
 
 export const Overlay = styled.div`
   position: absolute;
-  z-index: 10;
+  z-index: 11;
+  top: 0;
   width: 100%;
-  height: 20%;
-
+  height: 99%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 34, 123, 0.25) 0%,
+    rgba(0, 34, 123, 0.25) 100%
+  );
   @media only screen and (max-width: 600px) {
   }
 `;

@@ -141,7 +141,7 @@ export const ButtonsWrapMobile = styled.div`
   top: 70px;
   /* overflow: hidden; */
   /* padding-bottom: 50px; */
-  background-color: white;
+  background-color: #ffffff00;
   /* padding-bottom: 30px; */
 
   button {
@@ -234,7 +234,6 @@ export const TrakaSearch = styled.div`
   padding-right: 70px;
   display: flex;
   align-items: center;
-  border-radius: 3px;
   @media only screen and (max-width: 600px) {
     height: 100px;
     /* min-height: 100px; */

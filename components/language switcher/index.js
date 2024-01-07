@@ -55,6 +55,11 @@ function LanguageSwitcher({
           locale: lang,
         });
       }
+      if (asPath === "/MLS") {
+        return router.push("/MLS", undefined, {
+          locale: lang,
+        });
+      }
       if (asPath === "/prerada-i-skladiste") {
         return router.push("/prerada-i-skladiste", undefined, { locale: lang });
       }

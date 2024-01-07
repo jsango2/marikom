@@ -41,7 +41,7 @@ export const Down = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/pozadinaBrojke.webp");
+  background-image: url("/BrojkeMore.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100% 50%;
@@ -372,7 +372,7 @@ export const Elipse = styled.div`
   height: 800px;
   /* bottom: -400px; */
   z-index: 22;
-  clip-path: ellipse(50% 10% at 50% 50%);
+  clip-path: ellipse(43% 10% at 50% 50%);
   background-color: white;
   bottom: 5%;
   left: 50%;

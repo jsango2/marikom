@@ -104,7 +104,7 @@ function NumbersSection() {
             </Right>
           </Numbers>
         </WrapContent>
-        <Overlay />
+        {/* <Overlay /> */}
         <Elipse />
       </Down>
     </WrapAll>

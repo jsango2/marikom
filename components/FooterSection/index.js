@@ -15,6 +15,7 @@ import {
   Social,
   Copy,
   CopyLink,
+  WrapCerts,
 } from "./style.js";
 import MarikomercLogo from "../../assets/svg/marikomerc_logo_footer.svg";
 import Instagram from "../../assets/svg/Instagram.svg";
@@ -27,6 +28,7 @@ import { useInView } from "react-intersection-observer";
 import en from "../../locales/en.json";
 import hr from "../../locales/hr.json";
 import { useRouter } from "next/router.js";
+import Image from "next/image.js";
 function FooterSection() {
   const router = useRouter();
   const { locale } = router;
@@ -104,6 +106,17 @@ function FooterSection() {
                 <Location />
                 <Email />
               </Social>
+              <WrapCerts>
+                <Image src="/certifikat/MSC.svg" height={27} width={70} />
+                <Image src="/certifikat/ASC.svg" height={27} width={50} />
+                <Image src="/certifikat/IFSfood.svg" height={27} width={40} />
+                <Image
+                  src="/certifikat/zivjetizdravo.svg"
+                  height={27}
+                  width={35}
+                />
+                <Image src="/certifikat/ISO9001.svg" height={27} width={30} />
+              </WrapCerts>
             </ColumnIkone>
           )}
         </SubLinks>
@@ -123,6 +136,17 @@ function FooterSection() {
               <Location />
               <Email />
             </Social>
+            <WrapCerts>
+              <Image src="/certifikat/MSC.svg" height={27} width={70} />
+              <Image src="/certifikat/ASC.svg" height={27} width={50} />
+              <Image src="/certifikat/IFSfood.svg" height={27} width={40} />
+              <Image
+                src="/certifikat/zivjetizdravo.svg"
+                height={27}
+                width={35}
+              />
+              <Image src="/certifikat/ISO9001.svg" height={27} width={30} />
+            </WrapCerts>
           </ColumnIkone>
         )}
         <Copy>

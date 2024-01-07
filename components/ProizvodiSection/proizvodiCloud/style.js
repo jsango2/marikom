@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const WrapAll = styled.div`
   position: relative;
-  z-index: 10;
+  z-index: 11;
   max-width: 1088px;
   width: 90%;
   height: auto;

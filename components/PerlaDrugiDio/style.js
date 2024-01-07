@@ -240,10 +240,12 @@ export const LogoHks = styled.div`
     margin: 85px auto 0 auto;
   }
   @media only screen and (max-width: 430px) {
+    position: absolute;
     width: 90px;
     height: 90px;
-    margin: 45px auto 0 auto;
-
+    /* margin: 45px auto 0 auto; */
+    top: 290px;
+    left: 20px;
     /* position: absolute;
     top: 360px;
     width: 90px;
@@ -460,7 +462,7 @@ export const Potpis = styled.div`
   }
 
   @media only screen and (max-width: 430px) {
-    top: 160px;
+    top: 0px;
 
     left: 0px;
   }

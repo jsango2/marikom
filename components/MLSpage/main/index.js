@@ -23,6 +23,7 @@ import {
   TextIspod,
   BottomSlider,
   Truck,
+  OverlayTeret,
 } from "./style.js";
 // import HeroVideo from "../../video/kraciVideo.mp4";
 // import useWindowSize from "../../helper/usewindowsize";
@@ -39,8 +40,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Kategorija from "../kategorija/index.js";
 import Kontakt from "../kontakt/index.js";
+import useWindowSize from "../../helper/usewindowsize.js";
+import parse from "html-react-parser";
 
 const Main = () => {
+  const size = useWindowSize();
+
   const settings = {
     // dots: false,
     // infinite: true,
@@ -99,33 +104,14 @@ const Main = () => {
         <WrapKartica>
           <Content>
             <BlueLine />
-            <UpTitle>MODERNA LOGISTIKA</UpTitle>
-            <Title>
-              Uz našu logističku podršku osiguravamo vam optimalnu dostupnost,
-              točnost i efikasnost u svim fazama lanca opskrbe
-            </Title>
-            <Text>
-              Uz to što je distributer kvalitetne hrane, tvrtka Marikomerc pruža
-              usluge prijevoza tereta u temperaturnom režimu, odnosno u
-              kontroliranom temperaturnom lancu, kako bi se osigurala kvaliteta,
-              svježina i sigurnost proizvoda. Ovaj režim je ključan za
-              osjetljive proizvode koji zahtijevaju određenu temperaturu kako bi
-              ostali nepokvareni i funkcionalni tijekom cijelog lanca opskrbe,
-              od proizvodnje do isporuke.
-              <br />
-              <br /> Teret se prevozi na domaćim i međunarodnim rutama, koje su
-              dobro isplanirane, praćene i upravljane svim aspektima kako bi se
-              osigurala sigurna, učinkovita i pravodobna isporuka robe. Uz
-              transport smrznutih i svježih proizvoda iste skladištimo u
-              kontroliranim uvjetima kako bi se očuvala sigurnost, kvaliteta i
-              integritet proizvoda u kontroliranom temperaturnom lancu na
-              temperaturnim režimima od -25°c - +35°c.
-            </Text>
+            <UpTitle>{t.MLS.modernaLogistika}</UpTitle>
+            <Title>{t.MLS.naslov1}</Title>
+            <Text>{parse(t.MLS.textTop)}</Text>
             <Button
               bgcolor="#4299C8"
               color="#FFFFFF"
               width="226px"
-              text="Zatražite ponudu"
+              text={t.MLS.zatrazitePonudu}
               linkTo="/o-nama"
             ></Button>
           </Content>
@@ -140,106 +126,84 @@ const Main = () => {
             </BottomSlider>
           </Photo1>
         </WrapKartica>
-        <Teret>
+      </WrapContent>
+      <Teret>
+        <OverlayTeret />
+        <WrapContent>
           <BlueDivider />
-          <Naslov>TERET KOJI PREVOZIMO</Naslov>
+          <Naslov>{t.MLS.teretKojiPrecozime}</Naslov>
           <WrapIkone>
             <IkonaiText>
               <Ikona>
                 <Image src="/MLSpageIkone/Frame.svg" layout="fill" />
               </Ikona>
-              <TextIspod>
-                Riblji proizvodI (smrznuta i svježa riba i proizvodi ribarstva)
-                -25°c - +4°c
-              </TextIspod>
+              <TextIspod>{t.MLS.ikona1}</TextIspod>
             </IkonaiText>
             <IkonaiText>
               <Ikona>
                 <Image src="/MLSpageIkone/Frame-1.svg" layout="fill" />
               </Ikona>
-              <TextIspod>Mesni proizvodI -25°c - +4°c</TextIspod>
+              <TextIspod> {t.MLS.ikona2}</TextIspod>
             </IkonaiText>{" "}
             <IkonaiText>
               <Ikona>
                 <Image src="/MLSpageIkone/Frame-3.svg" layout="fill" />
               </Ikona>
-              <TextIspod>
-                Mliječni proizvodi (sir, maslac, mlijeko, vrhnje, jogurt)
-              </TextIspod>
+              <TextIspod>{t.MLS.ikona3}</TextIspod>
             </IkonaiText>{" "}
             <IkonaiText>
               <Ikona>
                 <Image src="/MLSpageIkone/Frame-7.svg" layout="fill" />
               </Ikona>
-              <TextIspod>Voće i povrće</TextIspod>
+              <TextIspod> {t.MLS.ikona4}</TextIspod>
             </IkonaiText>{" "}
             <IkonaiText>
               <Ikona>
                 <Image src="/MLSpageIkone/Frame-2.svg" layout="fill" />
               </Ikona>
-              <TextIspod>Cvijeće</TextIspod>
+              <TextIspod> {t.MLS.ikona5}</TextIspod>
             </IkonaiText>{" "}
             <IkonaiText>
               <Ikona>
                 <Image src="/MLSpageIkone/Frame-6.svg" layout="fill" />
               </Ikona>
-              <TextIspod>Farmaceutska industrija</TextIspod>
+              <TextIspod> {t.MLS.ikona6}</TextIspod>
             </IkonaiText>{" "}
             <IkonaiText>
               <Ikona>
                 <Image src="/MLSpageIkone/Frame-4.svg" layout="fill" />
               </Ikona>
-              <TextIspod>Ostali proizvodi</TextIspod>
+              <TextIspod> {t.MLS.ikona7}</TextIspod>
             </IkonaiText>
           </WrapIkone>
-        </Teret>
+        </WrapContent>
+      </Teret>
+      <WrapContent>
         <BlueDivider />
         <Kategorizacija>
-          <Naslov>Kategorizacija flote prema MLS standardima</Naslov>
+          <Naslov> {t.MLS.naslov2}</Naslov>
         </Kategorizacija>
         <WrapKategorije>
-          <Kategorija
-            photo="/MLStruck1.webp"
-            text="<strong>INTERNATIONAL</strong> – flota za međunarodni transport sastoji se od tegljača s poluprikolicama i troosovinaca s prikolicama kapaciteta 33-34 paletna mjesta. Sva vozila su dvorežimska te pripremljena da udovolje najkompleksnijim logističkim zahtjevima."
-          />
-          <Kategorija
-            photo="/MLStruck2.webp"
-            text="<strong>INTERCITY</strong> – vozila u kategoriji 10-20 paleta namijenjena pretežito transportu između gradova unutar RH i namijenjena paletnoj isporuci klijentima."
-          />
-          <Kategorija
-            photo="/MLStruck3.webp"
-            text="<strong>LOCAL</strong> – vozila za kapilarnu distribuciju, door to door service. Vozila B i C kategorije u rasponu od 3-10 paletnih mjesta gabaritima adekvatna da se brzo i učinkovito mogu provući i najužim gradskim ulicama."
-          />
+          <Kategorija photo="/MLStruck1.png" text={t.MLS.card1} />
+          <Kategorija photo="/MLStruck2.png" text={t.MLS.card2} />
+          <Kategorija photo="/MLStruck3.png" text={t.MLS.card3} />
         </WrapKategorije>
         <MlsMapa />
         <WrapTwoCards>
           <WrapKartica2>
             <Content>
               <BlueLine />
-              <UpTitle>MODERNA FLOTA VOZILA</UpTitle>
-              <Title>Zašto MLS?</Title>
-              <Text>
-                Odlikuju nas moderni skladišni prostori, flota vozila prosječne
-                starosti 3 godine, kvalificirano osoblje i visoki operativni
-                standardi kako u naprednoj logistici za veliku distribuciju tako
-                i u distribuciji suhih, svježih i smrznutih proizvoda za
-                maloprodajni kanal.
-              </Text>
+              <UpTitle>{t.MLS.modernaFlota} </UpTitle>
+              <Title>{t.MLS.zastoMLS} </Title>
+              <Text>{t.MLS.text1}</Text>
             </Content>
           </WrapKartica2>
           <WrapKartica2>
             <Content>
               <BlueLine />
-              <UpTitle>TELEMATSKI NADZORNI SUSTAV</UpTitle>
-              <Title>Sigurnost i jamstvo</Title>
-              <Text>
-                Uvijek jamčimo najvišu kvalitetu robe koja nam je povjerena. To
-                je moguće zahvaljujući integriranom kompjuteriziranom i
-                telematskom nadzornom sustavu u našim vozilima što nam omogućava
-                nadzor 24 sata na dan, 365 dana u godini, promptno prijavljujući
-                sve anomalije u HACCP zaštitnim protokolima hrane na
-                kontroliranim temperaturama.
-              </Text>
+              <UpTitle>{t.MLS.telematskiSustav} </UpTitle>
+              <Title>{t.MLS.sigurnost} </Title>
+              <Text>{t.MLS.text2}</Text>
             </Content>
           </WrapKartica2>
         </WrapTwoCards>

@@ -105,6 +105,7 @@ export const Icon = styled.a`
     -webkit-tap-highlight-color: transparent;
   }
   @media only screen and (max-width: 420px) {
+    display: none;
   }
 `;
 export const WrapSliderContent = styled.div`

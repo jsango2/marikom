@@ -26,21 +26,21 @@ function Brojke() {
           <SingleFact>
             <Wrap>
               <Number>06-22h</Number>
-              <TextFact>{t.Onama.brojke1}</TextFact>
+              <TextFact>{t.MLS.radnoVrijeme}</TextFact>
             </Wrap>
             <Line />
           </SingleFact>
           <SingleFact>
             <Wrap>
               <Number>9.200 t</Number>
-              <TextFact>{t.Onama.brojke2}</TextFact>
+              <TextFact>{t.MLS.ukupneKoličine}</TextFact>
             </Wrap>
             <Line />
           </SingleFact>
           <SingleFact>
             <Wrap>
               <Number>7</Number>
-              <TextFact>{t.Onama.brojke3}</TextFact>
+              <TextFact>{t.MLS.brojPriključaka}</TextFact>
             </Wrap>
           </SingleFact>
         </Right>
@@ -48,21 +48,21 @@ function Brojke() {
           <SingleFact>
             <Wrap>
               <Number>45000</Number>
-              <TextFact>{t.Onama.brojke5}</TextFact>
+              <TextFact>{t.MLS.kapacitetPaleta}</TextFact>
             </Wrap>
             <Line />
           </SingleFact>
           <SingleFact>
             <Wrap>
               <Number>500</Number>
-              <TextFact>{t.Onama.brojke6}</TextFact>
+              <TextFact>{t.MLS.kapacitetPaleta2}</TextFact>
             </Wrap>
             <Line />
           </SingleFact>
           <SingleFact>
             <Wrap>
               <Number>200</Number>
-              <TextFact>{t.Onama.brojke7}</TextFact>
+              <TextFact>{t.MLS.prijemKamiona}</TextFact>
             </Wrap>
           </SingleFact>
         </Right>

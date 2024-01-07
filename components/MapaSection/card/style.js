@@ -24,6 +24,7 @@ export const WrapAll = styled.div`
     rgba(22, 29, 50, 0.04) 0%,
     rgba(26, 35, 59, 0) 99.48%`}
   );
+  margin: 0 10px;
   @media only screen and (max-width: 1300px) {
   }
 `;
@@ -37,6 +38,16 @@ export const Graphic = styled.div`
   align-items: center;
   z-index: 20;
   margin-bottom: 23px;
+  @media only screen and (max-width: 1000px) {
+  }
+`;
+export const BlueLine = styled.div`
+  position: absolute;
+  width: 2px;
+  height: 60px;
+  background: #4299c8;
+  left: 0;
+  top: 165px;
   @media only screen and (max-width: 1000px) {
   }
 `;

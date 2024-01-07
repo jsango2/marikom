@@ -31,9 +31,10 @@ export const WrapCard = styled.div`
   }
   /* overflow: hidden; */
   /* padding: 70px 0 130px 0; */
-  @media only screen and (max-width: 1000px) {
-    width: 320px;
-    margin-bottom: 30px;
+  margin: 0 10px;
+  @media only screen and (max-width: 800px) {
+    margin: 20px 0px;
+    width: 80%;
   }
   @media only screen and (max-width: 600px) {
     width: 100%;
@@ -51,13 +52,14 @@ export const WrapImage = styled.div`
   background: url(${(props) => props.bg});
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 50% 70%;
+  background-position: 50% 78%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   /* overflow: hidden; */
   /* padding: 70px 0 130px 0; */
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 800px) {
+    height: 232px;
   }
 `;
 export const Title = styled.h3`

@@ -1,5 +1,5 @@
 import React from "react";
-import { WrapAll, Graphic, Title, Text } from "./style.js";
+import { WrapAll, Graphic, Title, Text, BlueLine } from "./style.js";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import en from "../../../locales/en.json";
@@ -19,6 +19,7 @@ export const Card = ({
   const t = locale === "en" ? en : hr;
   return (
     <WrapAll gradient={gradient} className={inview}>
+      <BlueLine />
       <Graphic>
         <Grafika />
       </Graphic>

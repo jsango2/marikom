@@ -19,7 +19,7 @@ export const WrapAll = styled.div`
   -webkit-box-shadow: 10px 10px 73px -43px rgba(0, 0, 0, 0.65);
   -moz-box-shadow: 10px 10px 73px -43px rgba(0, 0, 0, 0.65);
   box-shadow: 10px 10px 73px -43px rgba(0, 0, 0, 0.65);
-  margin: 14px 24px;
+  margin: 9px 8px;
   padding: 15px 0;
   /* transform: ; */
   overflow: hidden;

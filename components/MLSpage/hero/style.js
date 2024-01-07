@@ -8,7 +8,7 @@ export const HeroWrap = styled.div`
   position: relative;
   z-index: 0;
   /* min-height: 700px; */
-  height: 35vw;
+  height: 40vw;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -47,11 +47,7 @@ export const MLStraka = styled.div`
   z-index: 4;
   height: 80px;
   width: 100%;
-  background: radial-gradient(
-    32931.82% 30.37% at 50% 50%,
-    #1d3763 0%,
-    #1b2745 100%
-  );
+  background-image: url("/MLSpozadinaTraka.svg");
   background-size: cover;
   margin-top: auto;
   @media only screen and (max-width: 1400px) {
@@ -66,7 +62,7 @@ export const MLStraka = styled.div`
 export const WrapMLSlogo = styled.div`
   position: relative;
   z-index: 4;
-  height: 80px;
+  height: 75px;
   width: 100%;
   background: blue;
   margin-top: auto;

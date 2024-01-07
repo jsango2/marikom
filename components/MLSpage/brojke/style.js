@@ -47,7 +47,6 @@ export const Number = styled.h2`
   /* overflow: hidden; */
 
   @media only screen and (max-width: 430px) {
-    width: 156px;
     font-size: 36px;
   }
 `;

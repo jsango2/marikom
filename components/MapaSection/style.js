@@ -102,7 +102,7 @@ export const Cards = styled.div`
   position: relative;
   display: flex;
   justify-content: space-around;
-  width: 1271px;
+  width: 1350px;
   min-width: 1271px;
   margin: 0 auto 80px auto;
   flex-wrap: wrap;
@@ -252,7 +252,7 @@ export const Photo4 = styled.div`
   @media only screen and (max-width: 1400px) {
     width: calc(92% / 3.8);
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1000px) {
     display: none;
   }
 `;

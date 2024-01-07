@@ -36,13 +36,13 @@ export const WrapAll = styled.div`
 export const WrapKartica = styled.div`
   position: relative;
   z-index: 10;
-  width: 1266px;
+  width: 100%;
   height: auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin: 60px auto 0 auto;
-
+  padding-bottom: 100px;
   @media only screen and (max-width: 1050px) {
     margin-top: 0;
     flex-direction: column-reverse;
@@ -50,6 +50,7 @@ export const WrapKartica = styled.div`
   }
 
   @media only screen and (max-width: 850px) {
+    padding-bottom: 20px;
   }
 `;
 export const WrapKartica2 = styled(WrapKartica)`
@@ -91,7 +92,8 @@ export const Content = styled.div`
   }
   @media only screen and (max-width: 850px) {
   }
-  @media only screen and (max-width: 550px) {
+  @media only screen and (max-width: 430px) {
+    margin-top: 40px;
   }
 `;
 export const WrapContent = styled.div`
@@ -101,7 +103,7 @@ export const WrapContent = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-
+  margin: 0 auto;
   @media only screen and (max-width: 1050px) {
     width: 100%;
   }
@@ -114,7 +116,7 @@ export const WrapContent = styled.div`
 export const Photo1 = styled.div`
   position: relative;
   z-index: 10;
-  width: 600px;
+  width: 772px;
   height: 781px;
   background-color: grey;
   display: flex;
@@ -243,7 +245,7 @@ export const WrapTwoCards = styled.div`
   }
   @media only screen and (max-width: 850px) {
     flex-direction: column;
-    padding: 60px 0;
+    padding: 20px 0 20px 0;
     height: auto;
     width: 95vw;
   }
@@ -258,8 +260,9 @@ export const Naslov = styled.h3`
   font-weight: 700;
   line-height: 120%; /* 36px */
   text-align: center;
-  width: 450px;
+  width: 480px;
   margin: 0 auto;
+  text-transform: uppercase;
   @media only screen and (max-width: 850px) {
     width: 100%;
     font-size: 30px;
@@ -276,6 +279,19 @@ export const TextIspod = styled.div`
   font-style: normal;
   font-weight: 500;
   line-height: 153%; /* 21.42px */
+  @media only screen and (max-width: 430px) {
+    margin-top: 18px;
+
+    font-size: 12px;
+  }
+`;
+export const OverlayTeret = styled.div`
+  position: absolute;
+  opacity: 0.22;
+  background: linear-gradient(180deg, #bdcbe6 0%, rgba(225, 231, 245, 0) 100%);
+  width: 100%;
+  height: 550px;
+  top: 0;
   @media only screen and (max-width: 430px) {
     margin-top: 18px;
 
@@ -445,5 +461,6 @@ export const BlueLine = styled.div`
   border-radius: 1px;
   /* overflow: hidden; */
   @media only screen and (max-width: 850px) {
+    width: 3px;
   }
 `;

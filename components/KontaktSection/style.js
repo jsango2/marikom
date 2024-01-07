@@ -189,7 +189,7 @@ export const WrapDown = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 50px auto 0 auto;
+  margin: 30px auto 0 auto;
   @media only screen and (max-width: 1200px) {
   }
   @media only screen and (max-width: 1050px) {
@@ -257,7 +257,7 @@ export const Kontakt = styled.a`
   /* MK Plava */
 
   color: #1c2640;
-  height: 33px;
+  height: 28px;
   display: flex;
   justify-content: center;
   align-items: center;

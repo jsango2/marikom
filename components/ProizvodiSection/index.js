@@ -35,9 +35,9 @@ function ProizvodiSection() {
     <WrapAll ref={ref2}>
       <Piktogram />
       <WrapImage2>
-        {/* <Overlay>
-          <Image src={overlay} alt="overlay" layout="fill" objectFit="cover" />
-        </Overlay> */}
+        <Overlay>
+          {/* <Image src={overlay} alt="overlay" layout="fill" objectFit="cover" /> */}
+        </Overlay>
         <WrapBg percentage={percentage}>
           <Image src="/more.webp" alt="bg" layout="fill" objectFit="cover" />
         </WrapBg>

@@ -15,7 +15,7 @@ export const WrapKategorija = styled.div`
   @media only screen and (max-width: 430px) {
     min-width: unset;
     height: auto;
-    width: 95vw;
+    width: 100vw;
   }
 `;
 export const Photo = styled.div`

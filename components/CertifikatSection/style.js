@@ -34,7 +34,7 @@ export const WrapCards = styled.div`
   @media only screen and (max-width: 1350px) {
     width: 97%;
   }
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 800px) {
     width: 85vw;
     flex-direction: column;
     margin: 0 auto;
