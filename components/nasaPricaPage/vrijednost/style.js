@@ -19,6 +19,9 @@ export const WrapAll = styled.div`
     width: 90vw;
     margin: 0 auto;
   }
+  @media only screen and (max-width: 430px) {
+    padding-top: 0px;
+  }
 `;
 export const WrapContent = styled.div`
   position: relative;

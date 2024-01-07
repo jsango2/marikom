@@ -18,6 +18,9 @@ export const WrapAll = styled.div`
     height: auto;
     padding-bottom: 65px;
   }
+  @media only screen and (max-width: 430px) {
+    padding-top: 0px;
+  }
 `;
 export const WrapContent = styled.div`
   position: relative;
@@ -109,7 +112,7 @@ export const WrapImages = styled.div`
 export const Img1 = styled.div`
   position: relative;
   z-index: 10;
-  height: 479px;
+  height: 380px;
   width: 315px;
   border-radius: 3px;
   background-image: url("/nasaPricaImg1.webp");
@@ -122,7 +125,7 @@ export const Img1 = styled.div`
 export const Img2 = styled.div`
   position: relative;
   z-index: 10;
-  height: 479px;
+  height: 380px;
   width: 315px;
   border-radius: 3px;
 
@@ -137,7 +140,7 @@ export const Img3 = styled.div`
   position: relative;
 
   z-index: 10;
-  height: 479px;
+  height: 380px;
   width: 315px;
   border-radius: 3px;
 
@@ -152,7 +155,7 @@ export const Img4 = styled.div`
   position: relative;
 
   z-index: 10;
-  height: 479px;
+  height: 380px;
   width: 315px;
   border-radius: 3px;
 

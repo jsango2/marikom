@@ -61,6 +61,7 @@ export const Content = styled.div`
   }
   @media only screen and (max-width: 550px) {
     padding-left: 20px;
+    margin-top: 0px;
   }
 `;
 
@@ -191,5 +192,6 @@ export const BlueLine = styled.div`
   /* overflow: hidden; */
   @media only screen and (max-width: 850px) {
     left: 0px;
+    width: 3px;
   }
 `;

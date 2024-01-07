@@ -41,7 +41,7 @@ export const Down = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/BrojkeMore.webp");
+  background-image: url("/BrojkeMore.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100% 50%;
@@ -49,7 +49,7 @@ export const Down = styled.div`
     padding: 50px 10px;
   }
   @media only screen and (max-width: 600px) {
-    padding: 70px 10px;
+    padding: 50px 10px 70px 10px;
   }
 `;
 
@@ -234,6 +234,8 @@ export const Numbers = styled.div`
     flex-direction: column;
   }
   @media only screen and (max-width: 600px) {
+    margin-top: 40px;
+
     width: 95%;
     align-items: center;
     /* width: 45px;
