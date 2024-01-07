@@ -25,44 +25,44 @@ function Brojke() {
         <Right>
           <SingleFact>
             <Wrap>
-              <Number>06-22h</Number>
-              <TextFact>{t.MLS.radnoVrijeme}</TextFact>
-            </Wrap>
-            <Line />
-          </SingleFact>
-          <SingleFact>
-            <Wrap>
-              <Number>9.200 t</Number>
-              <TextFact>{t.MLS.ukupneKoličine}</TextFact>
-            </Wrap>
-            <Line />
-          </SingleFact>
-          <SingleFact>
-            <Wrap>
-              <Number>7</Number>
-              <TextFact>{t.MLS.brojPriključaka}</TextFact>
-            </Wrap>
-          </SingleFact>
-        </Right>
-        <Right>
-          <SingleFact>
-            <Wrap>
-              <Number>45000</Number>
-              <TextFact>{t.MLS.kapacitetPaleta}</TextFact>
-            </Wrap>
-            <Line />
-          </SingleFact>
-          <SingleFact>
-            <Wrap>
-              <Number>500</Number>
-              <TextFact>{t.MLS.kapacitetPaleta2}</TextFact>
+              <Number>10.000</Number>
+              <TextFact>{t.MLS.numberFact1}</TextFact>
             </Wrap>
             <Line />
           </SingleFact>
           <SingleFact>
             <Wrap>
               <Number>200</Number>
-              <TextFact>{t.MLS.prijemKamiona}</TextFact>
+              <TextFact>{t.MLS.numberFact2}</TextFact>
+            </Wrap>
+            <Line />
+          </SingleFact>
+          <SingleFact>
+            <Wrap>
+              <Number>5000</Number>
+              <TextFact>{t.MLS.numberFact3}</TextFact>
+            </Wrap>
+          </SingleFact>
+        </Right>
+        <Right>
+          <SingleFact>
+            <Wrap>
+              <Number>500</Number>
+              <TextFact>{t.MLS.numberFact4}</TextFact>
+            </Wrap>
+            <Line />
+          </SingleFact>
+          <SingleFact>
+            <Wrap>
+              <Number>45000</Number>
+              <TextFact>{t.MLS.numberFact5}</TextFact>
+            </Wrap>
+            <Line />
+          </SingleFact>
+          <SingleFact>
+            <Wrap>
+              <Number>1500</Number>
+              <TextFact>{t.MLS.numberFact6}</TextFact>
             </Wrap>
           </SingleFact>
         </Right>

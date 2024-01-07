@@ -24,6 +24,7 @@ import {
   BottomSlider,
   Truck,
   OverlayTeret,
+  BgMLS,
 } from "./style.js";
 // import HeroVideo from "../../video/kraciVideo.mp4";
 // import useWindowSize from "../../helper/usewindowsize";
@@ -42,8 +43,13 @@ import Kategorija from "../kategorija/index.js";
 import Kontakt from "../kontakt/index.js";
 import useWindowSize from "../../helper/usewindowsize.js";
 import parse from "html-react-parser";
+import { useScrollPercentage } from "react-scroll-percentage";
 
 const Main = () => {
+  const [ref, percentage] = useScrollPercentage({
+    /* Optional options */
+    threshold: 0,
+  });
   const size = useWindowSize();
 
   const settings = {
@@ -189,7 +195,8 @@ const Main = () => {
           <Kategorija photo="/MLStruck3.png" text={t.MLS.card3} />
         </WrapKategorije>
         <MlsMapa />
-        <WrapTwoCards>
+        <WrapTwoCards ref={ref}>
+          <BgMLS percentage={percentage} />
           <WrapKartica2>
             <Content>
               <BlueLine />

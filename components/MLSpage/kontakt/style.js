@@ -6,11 +6,14 @@ export const WrapKontakt = styled.div`
   width: 100%;
   height: auto;
 
-  background: radial-gradient(
+  /* background: radial-gradient(
     107.92% 107.92% at 1.33% 0%,
     #2b3a63 0%,
     #101628 100%
-  );
+  ); */
+  background-image: url("/MLSpozadinaKontakti.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,7 +32,7 @@ export const WrapContent = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-
+  align-items: center;
   @media only screen and (max-width: 1050px) {
     width: 100%;
   }
@@ -56,11 +59,12 @@ export const GoogleButton = styled.a`
   background-color: transparent;
   z-index: 11;
   border-radius: 6px;
-  border: 1px solid #f5faff;
+  border: 1px solid #1c2640;
   padding: 5px 20px;
   width: 150px;
   height: 25px;
-  color: #f5faff;
+  /* color: #f5faff; */
+  color: #1c2640;
   text-align: center;
   /* M-T */
   font-family: Gilroy;
@@ -111,7 +115,7 @@ export const Text = styled.div`
   @media only screen and (max-width: 850px) {
   }
 `;
-export const WrapEmail = styled.div`
+export const WrapEmail = styled.a`
   position: relative;
   z-index: 10;
   display: flex;
@@ -122,8 +126,17 @@ export const WrapEmail = styled.div`
   @media only screen and (max-width: 850px) {
   }
 `;
+export const Phone = styled.a`
+  position: relative;
+  text-decoration: none;
+  color: #1c2640;
+
+  @media only screen and (max-width: 1050px) {
+  }
+  @media only screen and (max-width: 850px) {
+  }
+`;
 export const Naslov = styled.h3`
-  color: #f5faff;
   text-align: center;
   /* H2 */
   font-family: "Roboto Condensed", sans-serif;
@@ -132,13 +145,16 @@ export const Naslov = styled.h3`
   font-weight: 600;
   line-height: 120%; /* 48px */
   text-transform: uppercase;
+  color: #1c2640;
+
   @media only screen and (max-width: 700px) {
     font-size: 30px;
   }
 `;
 
 export const PodNaslov = styled.p`
-  color: #f5faff;
+  color: #1c2640;
+
   text-align: center;
 
   /* M-P */
@@ -148,7 +164,7 @@ export const PodNaslov = styled.p`
   font-weight: 400;
   line-height: 153%; /* 21.42px */
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 40px auto;
   display: flex;
   justify-content: center;
   @media only screen and (max-width: 820px) {
@@ -160,11 +176,13 @@ export const Block = styled.div`
   flex-direction: column;
   width: 226px;
   height: 270px;
+
   @media only screen and (max-width: 820px) {
   }
 `;
 export const Adresa = styled.div`
   font-feature-settings: "clig" off, "liga" off;
+  color: #1c2640;
 
   /* M-P */
   font-family: Gilroy;
@@ -177,7 +195,8 @@ export const Adresa = styled.div`
   }
 `;
 export const Grad = styled.div`
-  color: #f5faff;
+  color: #1c2640;
+
   /* H4 */
   font-family: Gilroy;
   font-size: 21px;
@@ -189,7 +208,7 @@ export const Grad = styled.div`
   }
 `;
 export const RadnoVrijeme = styled.div`
-  color: #f5faff;
+  color: #1c2640;
 
   /* M-P */
   font-family: Gilroy;

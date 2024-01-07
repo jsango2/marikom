@@ -93,7 +93,7 @@
     "topTitle": "DISTRIBUTIVNI CENTRI U HRVATSKOJ",
     "Title": "Svaki dan dostavljamo na više od 400 prodajnih mjesta u Hrvatskoj",
     "Text": "3 distributivna centara raspoređena od Rijeke do Dubrovnika i partneri u Zagrebu i Splitu nam omogućuju optimalnu kapilarnost, a obnovljena flota od 23 kamiona hladnjača nam jamči siguran hladni lanac i brze isporuke.<br/><br/> Uz našu logističku podršku možete bolje planirati svoje zalihe i time ostvariti uštede.",
-    "buttonText": "Kontakti regionalnih prodajnih centara"
+    "buttonText": "Kontakti regionalnih DLC centara"
   },
   "Formular": {
     "ime": "Ime i Prezime",
@@ -211,12 +211,12 @@
     "telematskiSustav": "TELEMATSKI NADZORNI SUSTAV",
     "sigurnost": "Sigurnost i jamstvo",
     "text2": "Uvijek jamčimo najvišu kvalitetu robe koja nam je povjerena. To je moguće zahvaljujući integriranom kompjuteriziranom i telematskom nadzornom sustavu u našim vozilima što nam omogućava nadzor 24 sata na dan, 365 dana u godini, promptno prijavljujući sve anomalije u HACCP zaštitnim protokolima hrane na kontroliranim temperaturama.",
-    "radnoVrijeme": "Radno vrijeme",
-    "ukupneKoličine": "Ukupno prevezene količine u 2021.",
-    "brojPriključaka": "Broj priključaka za utovar kamiona",
-    "kapacitetPaleta": "Ukupni kapacitet u n° paleta - 25°C",
-    "kapacitetPaleta2": "Ukupni kapacitet u n° paleta + 4°C",
-    "prijemKamiona": "Kapacitet prijema kamiona u jednom danu",
+    "numberFact1": "Broj kupaca u prošloj godini",
+    "numberFact2": "Kapacitet prijema kamiona u jednom danu",
+    "numberFact3": "Prosječna godišnja količina prodaje",
+    "numberFact4": "Ukupni kapacitet u n° paleta +4°C",
+    "numberFact5": "Ukupni kapacitet u n° paleta -25°C",
+    "numberFact6": "Prosječni godišnji volumen prerađenih vlastitih proizvoda",
     "kontaktirajteNas": "Kontaktirajte nas",
     "raspored": "RADNO VRIJEME: Ponedjeljak-petak: 08.00 - 16.00h | Subota: 08.00 - 16.00h | Nedjelja: Zatvoreno",
     "poslovnica": "Office",

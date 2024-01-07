@@ -1,81 +1,114 @@
 import styled from "styled-components";
 
 export const MapaWrapAll = styled.div`
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   position: relative;
   z-index: 10;
   width: 100%;
-  height: auto;
+  height: 1050px;
   /* margin-bottom: 100px; */
   /* display: flex;
   flex-direction: column;
 
   justify-content: flex-start;
   align-items: center; */
-  padding: 180px 0 150px 0;
+  padding: 100px 0 0px 0;
   /* background-image: url("/pozadinaKontaktMapa.png"); */
   background-size: cover;
-  @media only screen and (max-width: 850px) {
-    width: 100vw;
+  @media only screen and (max-width: 1050px) {
+    height: auto;
+    /* width: 100vw;
     padding-top: 0px;
     margin-bottom: 0;
-    padding-bottom: 0;
+    padding-bottom: 0; */
+  }
+  @media only screen and (max-width: 430px) {
+    padding: 30px 0 0px 0;
   }
 `;
 export const MapaContent = styled.div`
   position: relative;
   z-index: 11;
   max-width: 1440px;
+  height: 830px;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  /* align-items: flex-start; */
   margin: 0 auto;
-  padding: 90px 0px;
-  @media only screen and (max-width: 1300px) {
-    padding: 70px 0px;
+  align-items: center;
+  @media only screen and (max-width: 1050px) {
     flex-direction: column-reverse;
-    align-items: center;
+    /* height: auto;
+    width: 100%; */
+    /* padding: 70px 0px;
+    flex-direction: column-reverse;
+    align-items: center; */
   }
-  @media only screen and (max-width: 850px) {
-    width: 100%;
-    padding: 0px 0px;
-    flex-direction: column;
+  @media only screen and (max-width: 1050px) {
+    width: 100vw;
+    height: auto;
   }
 `;
 export const MapaWrapKarta = styled.div`
   position: relative;
   z-index: 11;
-  width: 980px;
-  height: 830px;
-  background-image: url("/mapa.png");
-  top: -150px;
+  /* width: 980px; */
+  height: 100%;
+  width: 1020px;
+
   border-radius: 3px;
   background-size: cover;
-  @media only screen and (max-width: 1300px) {
-    top: 0px;
+  overflow: hidden;
+
+  @media only screen and (max-width: 1050px) {
+    height: 500px;
+
+    /* top: 0px; */
   }
   @media only screen and (max-width: 850px) {
-    width: 100vw;
+    /* width: 100vw;
     height: 65vw;
-    min-height: 360px;
+    min-height: 360px; */
   }
 `;
 export const MapaWrapTextBlock = styled.div`
   position: relative;
-  z-index: 11;
-  width: 460px;
-
+  left: 68px;
+  z-index: 12;
+  width: 330px;
+  height: 89%;
   background: #11192c;
-  top: 100px;
   border-radius: 3px;
-  padding: 85px 86px 100px 76px;
+  padding-top: 0px;
+  padding-left: 60px;
+  padding-right: 60px;
+
   @media only screen and (max-width: 1300px) {
-    top: 0px;
+    left: 0px;
+    height: 100%;
+
+    /* left: 0;
+    height: 100%; */
+
+    /* padding: 85px 86px 0px 76px;
+
+    top: 0;
+    height: 100%; */
+    /* height: 100%;
+    top: 0px; */
   }
-  @media only screen and (max-width: 850px) {
-    width: 95vw;
+  @media only screen and (max-width: 1050px) {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 60px;
   }
   @media only screen and (max-width: 430px) {
-    padding: 65px 30px 100px 30px;
+    /* padding: 65px 30px 100px 30px; */
   }
 `;
 export const TopTitle = styled.h3`
@@ -88,6 +121,7 @@ export const TopTitle = styled.h3`
   line-height: normal;
   text-transform: uppercase;
   color: #f5faff;
+  margin-top: 60px;
   @media only screen and (max-width: 1300px) {
   }
 `;
@@ -127,20 +161,25 @@ export const Button = styled.button`
   background: #4299c8;
   color: #f5faff;
   text-align: center;
-  font-feature-settings: "clig" off, "liga" off;
   font-family: Gilroy;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 142.5%; /* 25.65px */
-  margin-top: 60px;
+  margin-top: 35px;
+  margin-bottom: 50px;
   cursor: pointer;
   &:hover {
     background: var(--color-boja-tamnoplava-ocjena);
   }
   &:active {
     background: #4299c8;
-    border: 1px solid #93f9ff;
+    /* border: 1px solid #93f9ff; */
+  }
+  @media only screen and (max-width: 1050px) {
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
   }
   @media only screen and (max-width: 850px) {
     width: 95%;

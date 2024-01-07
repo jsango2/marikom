@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled from "styled-components";
 
 export const WrapAll = styled.div`
@@ -200,6 +201,16 @@ export const MainLinks = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 65px;
+  a {
+    text-decoration: none;
+    color: white;
+    font-family: Gilroy;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 153%;
+    margin: 0 16px;
+  }
   @media only screen and (max-width: 770px) {
     display: none;
   }
@@ -229,7 +240,7 @@ export const SubLinks = styled.div`
     min-width: 100%;
   }
 `;
-export const SingleLink = styled.div`
+export const SingleLink = styled(Link)`
   position: relative;
   z-index: 10;
   font-family: "Gilroy";
@@ -250,7 +261,7 @@ export const SingleLink = styled.div`
   @media only screen and (max-width: 600px) {
   }
 `;
-export const SingleLink2 = styled.div`
+export const SingleLink2 = styled(Link)`
   position: relative;
   z-index: 10;
   font-family: "Gilroy";
@@ -258,6 +269,7 @@ export const SingleLink2 = styled.div`
   font-weight: 500;
   font-size: 14px;
   line-height: 153%;
+
   /* or 21px */
 
   /* SUNRISE/Sunray */
@@ -268,6 +280,7 @@ export const SingleLink2 = styled.div`
   align-items: center;
   margin: 3px;
   cursor: pointer;
+
   @media only screen and (max-width: 600px) {
     width: 100%;
     justify-content: flex-start;
@@ -284,6 +297,15 @@ export const Column = styled.div`
   flex-direction: column;
   justify-content: flex;
   align-items: flex-start;
+  a {
+    text-decoration: none;
+    color: white;
+    font-family: Gilroy;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 153%;
+  }
 
   @media only screen and (max-width: 770px) {
     width: 140px;

@@ -33,13 +33,12 @@ function MlsMapa() {
           <Text>{parse(t.Horeca.Text)}</Text>
           <Button>{t.Horeca.buttonText}</Button>
         </MapaWrapTextBlock>
-
         <MapaWrapKarta>
           <iframe
             width="100%"
             height="100%"
             src={`https://api.mapbox.com/styles/v1/lovreperaic/ckx4qlojc09b014tdp3ao3vuw.html?title=false&access_token=${process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN}&zoomwheel=false#${zoom}/44.14/15.576`}
-            title="Marikomerc"
+            title="MLS Mapa"
             style={{ border: "none" }}
           ></iframe>
         </MapaWrapKarta>

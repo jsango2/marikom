@@ -10,6 +10,7 @@ import {
   RadnoVrijeme,
   WrapEmail,
   GoogleButton,
+  Phone,
 } from "./style.js";
 
 import useWindowSize from "../../helper/usewindowsize.js";
@@ -21,6 +22,7 @@ import hr from "../../../locales/hr.json";
 import { useRouter } from "next/router.js";
 import { BlueDivider } from "../main/style.js";
 import { mlsKontaktData } from "../../../mlsKontaktData.js";
+import Button from "../../buttonBlue/Button.js";
 
 function Kontakt({ photo, text }) {
   const { locale } = useRouter();
@@ -33,6 +35,13 @@ function Kontakt({ photo, text }) {
         <BlueDivider />
         <Naslov>{t.MLS.kontaktirajteNas}</Naslov>
         <PodNaslov>{t.MLS.raspored}</PodNaslov>
+        <Button
+          bgcolor="#4299C8"
+          color="#FFFFFF"
+          width="226px"
+          text={t.MLS.zatrazitePonudu}
+          linkTo="/o-nama"
+        />
         <Grid>
           {mlsKontaktData.map((x) => (
             <Block>
@@ -41,11 +50,17 @@ function Kontakt({ photo, text }) {
                 {x.ULICA}
                 <br />
                 {locale === "hr" ? x["GRAD, DRŽAVA"] : x["GRAD, DRŽAVA (ENG)"]}
-                <br /> {x["BROJ TELEFONA"]}
                 <br />
-                <WrapEmail>
+                <Phone href={`tel:${x["BROJ TELEFONA"]}`}>
+                  {x["BROJ TELEFONA"]}
+                </Phone>
+                <br />
+                <WrapEmail href={`mailto:${x.EMAIL}?subject=MLS upit`}>
                   <Image src="/letter.svg" width={15} height={15} />
-                  <div style={{ marginLeft: "10px" }}>{x.EMAIL}</div>
+
+                  <div style={{ marginLeft: "10px", color: "#1c2640" }}>
+                    {x.EMAIL}
+                  </div>
                 </WrapEmail>
               </Adresa>
               <RadnoVrijeme>

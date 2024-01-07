@@ -99,7 +99,7 @@ export const Content = styled.div`
 export const WrapContent = styled.div`
   position: relative;
   z-index: 10;
-  width: 1440px;
+  max-width: 1440px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -237,10 +237,7 @@ export const WrapTwoCards = styled.div`
   display: flex;
   width: 100%;
   height: 500px;
-  background-image: url("/MLSlogoBg.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+
   @media only screen and (max-width: 1250px) {
   }
   @media only screen and (max-width: 850px) {
@@ -248,6 +245,25 @@ export const WrapTwoCards = styled.div`
     padding: 20px 0 20px 0;
     height: auto;
     width: 95vw;
+  }
+`;
+export const BgMLS = styled.div`
+  position: absolute;
+
+  width: 100%;
+  height: 500px;
+  top: ${(props) => (1 / props.percentage) * 10 + 20}px;
+  background-image: url("/MLSlogoBg.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  @media only screen and (max-width: 1250px) {
+  }
+  @media only screen and (max-width: 850px) {
+    top: ${(props) => (1 / props.percentage) * 10 + 250}px;
+
+    height: 200px;
+    width: 85vw;
   }
 `;
 export const Naslov = styled.h3`

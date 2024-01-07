@@ -48,63 +48,85 @@ function FooterSection() {
         ></WrapLogo>
 
         <MainLinks>
-          <SingleLink>{t.Linkovi.onama}</SingleLink>
-          <SingleLink>{t.Linkovi.proizvodi}</SingleLink>
-          <SingleLink>{t.Linkovi.novosti}</SingleLink>
-          <SingleLink>{t.Linkovi.kvaliteta}</SingleLink>
-          <SingleLink>{t.Linkovi.karijere}</SingleLink>
-          <SingleLink>{t.Linkovi.horecaSuradnja} </SingleLink>
-          <SingleLink>{t.Linkovi.kontakt}</SingleLink>
+          <SingleLink href="/o-nama">{t.Linkovi.onama}</SingleLink>
+          <SingleLink href="/proizvodi">{t.Linkovi.proizvodi}</SingleLink>
+          <SingleLink href="/novosti">{t.Linkovi.novosti}</SingleLink>
+          <SingleLink href="/marikomerc-kvalitete">
+            {t.Linkovi.kvaliteta}
+          </SingleLink>
+          <SingleLink href="/karijere">{t.Linkovi.karijere}</SingleLink>
+          <SingleLink href="/horeca">{t.Linkovi.horecaSuradnja}</SingleLink>
+          <SingleLink href="/kontakt">{t.Linkovi.kontakt}</SingleLink>
         </MainLinks>
         <SubLinks>
           {size.width > 770 ? (
             <>
               <Column>
                 <SubName>{t.Linkovi.lokacije}</SubName>
-                <SingleLink2>Zadar</SingleLink2>
-                <SingleLink2>Dubrovnik</SingleLink2>
-                <SingleLink2>Rijeka</SingleLink2>
-                <SingleLink2>Metković</SingleLink2>
+                <SingleLink2 href="/proizvodi">Zadar</SingleLink2>
+                <SingleLink2 href="/proizvodi">Dubrovnik</SingleLink2>
+                <SingleLink2 href="/proizvodi">Rijeka</SingleLink2>
+                <SingleLink2 href="/proizvodi">Metković</SingleLink2>
               </Column>
               <Column>
                 <SubName>{t.Linkovi.proizvodi}</SubName>
-                <SingleLink2>{t.Linkovi.glavonosci}</SingleLink2>
-                <SingleLink2>{t.Linkovi.perlaProizvodi}</SingleLink2>
-                <SingleLink2>{t.Linkovi.rakovi}</SingleLink2>
-                <SingleLink2>{t.Linkovi.fileti}</SingleLink2>
-                <SingleLink2>{t.Linkovi.skoljkasi}</SingleLink2>
-                <SingleLink2>{t.Linkovi.ribe}</SingleLink2>
-                <SingleLink2>{t.Linkovi.ostali}</SingleLink2>
+                <SingleLink2 href="/proizvodi">
+                  {t.Linkovi.glavonosci}
+                </SingleLink2>
+                <SingleLink2 href="/proizvodi">
+                  {t.Linkovi.perlaProizvodi}
+                </SingleLink2>
+                <SingleLink2 href="/proizvodi">{t.Linkovi.rakovi}</SingleLink2>
+                <SingleLink2 href="/proizvodi">{t.Linkovi.fileti}</SingleLink2>
+                <SingleLink2 href="/proizvodi">
+                  {t.Linkovi.skoljkasi}
+                </SingleLink2>
+                <SingleLink2 href="/proizvodi">{t.Linkovi.ribe}</SingleLink2>
+                <SingleLink2 href="/proizvodi">{t.Linkovi.ostali}</SingleLink2>
               </Column>
             </>
           ) : (
             <Column>
               <SubName>MENI</SubName>
-              <SingleLink2>{t.Linkovi.onama}</SingleLink2>
-              <SingleLink2>{t.Linkovi.proizvodi}</SingleLink2>
-              <SingleLink2>{t.Linkovi.novosti}</SingleLink2>
-              <SingleLink2>{t.Linkovi.kvaliteta}</SingleLink2>
-              <SingleLink2>{t.Linkovi.karijere}</SingleLink2>
-              <SingleLink2>{t.Linkovi.horecaSuradnja} </SingleLink2>
-              <SingleLink2>{t.Linkovi.kontakt}</SingleLink2>
+              <SingleLink2 href="/o-nama">{t.Linkovi.onama}</SingleLink2>
+              <SingleLink2 href="/proizvodi">{t.Linkovi.proizvodi}</SingleLink2>
+              <SingleLink2 href="/novosti">{t.Linkovi.novosti}</SingleLink2>
+              <SingleLink2 href="/marikomerc-kvalitete">
+                {t.Linkovi.kvaliteta}
+              </SingleLink2>
+              <SingleLink2 href="/karijere">{t.Linkovi.karijere}</SingleLink2>
+              <SingleLink2 href="/horeca">
+                {t.Linkovi.horecaSuradnja}
+              </SingleLink2>
+              <SingleLink2 href="/kontakt">{t.Linkovi.kontakt}</SingleLink2>
             </Column>
           )}
 
           <Column2>
             <SubName>{t.Linkovi.claniceGrupe}</SubName>
-            <SingleLink2>Marikomerc</SingleLink2>
-            <SingleLink2>DiMaris Ribarnice</SingleLink2>
-            <SingleLink2>MLS Logistika</SingleLink2>
+            <SingleLink2 href="/">Marikomerc</SingleLink2>
+            <SingleLink2 href="/">DiMaris Ribarnice</SingleLink2>
+            <SingleLink2 href="/MLS">MLS Logistika</SingleLink2>
           </Column2>
           {size.width > 770 && (
             <ColumnIkone>
               <SubName>{t.Linkovi.kontaktirajteNas}</SubName>
               <Social>
-                <Instagram />
-                <Facebook />
-                <Linkedin />
-                <Location />
-                <Email />
+                <a href="www.instagram.com">
+                  <Instagram />
+                </a>
+                <a href="www.facebook.com">
+                  <Facebook />
+                </a>
+                <a href="www.linkedin.com">
+                  <Linkedin />
+                </a>
+                <a href="www.google.com">
+                  <Location />
+                </a>
+                <a href="mailto:mls@mls.hr">
+                  <Email />
+                </a>
               </Social>
               <WrapCerts>
                 <Image src="/certifikat/MSC.svg" height={27} width={70} />
@@ -130,7 +152,9 @@ function FooterSection() {
             }}
           >
             <Social>
-              <Instagram />
+              <a href="www.instagram.com">
+                <Instagram />
+              </a>
               <Facebook />
               <Linkedin />
               <Location />
