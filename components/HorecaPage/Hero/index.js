@@ -91,7 +91,7 @@ function HorecaHero() {
   const ReceptiAnimacija = () => {
     const options = {
       animationData: ReceptiLottie,
-      loop: false,
+      loop: true,
       autoplay: true,
       initialSegment: [0, 376],
       rendererSettings: {

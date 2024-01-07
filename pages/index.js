@@ -17,8 +17,13 @@ import useWindowSize from "../components/helper/usewindowsize";
 import CertifikatMobileSection from "../components/CertifikatMobileSection";
 import { getAllNovosti } from "../lib/api2";
 import AppContext from "../components/AppContext.js";
+import FsLightbox from "fslightbox-react";
 
 export default function IndexPage({ allPosts }) {
+  const [toggler, setToggler] = useState(false);
+  const handleYT = () => {
+    setToggler(!toggler);
+  };
   const context = useContext(AppContext);
   const size = useWindowSize();
   // useEffect(() => {
@@ -27,7 +32,11 @@ export default function IndexPage({ allPosts }) {
 
   return (
     <Layout>
-      <Hero />
+      <FsLightbox
+        toggler={toggler}
+        sources={["https://www.youtube.com/watch?v=3nQNiWdeH2Q"]}
+      />
+      <Hero toggleYT={handleYT} />
       <ProizvodiSection />
       <NovostiSection novosti={allPosts.edges} />
       <NumbersSection />

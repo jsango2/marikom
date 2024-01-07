@@ -60,6 +60,7 @@ export const TitleH4 = styled.h4`
   text-align: center;
 
   color: #000000;
+  margin-bottom: 5px;
   @media only screen and (max-width: 1200px) {
   }
   @media only screen and (max-width: 650px) {

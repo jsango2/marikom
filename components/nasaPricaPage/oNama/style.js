@@ -13,8 +13,11 @@ export const WrapAll = styled.div`
   background: white;
   padding-top: 55px;
   padding-bottom: 55px;
+  @media only screen and (max-width: 1100px) {
+    padding-bottom: 0px;
+  }
   @media only screen and (max-width: 850px) {
-    padding-top: 40px;
+    padding-top: 30px;
     height: auto;
   }
 `;
@@ -22,7 +25,8 @@ export const WrapAll = styled.div`
 export const WrapContent = styled.div`
   position: relative;
   z-index: 10;
-  width: 1440px;
+  max-width: 1440px;
+  width: 100%;
   height: auto;
   display: flex;
   justify-content: space-between;
@@ -31,12 +35,11 @@ export const WrapContent = styled.div`
   background-color: white;
   padding: 0 150px;
   @media only screen and (max-width: 1250px) {
-    width: 100%;
   }
-  @media only screen and (max-width: 850px) {
+  @media only screen and (max-width: 1100px) {
     flex-direction: column;
     margin: 0px auto 0 auto;
-    padding: 0 30px 0 5px;
+    padding: 0 30px 0 0px;
     align-content: flex-start;
   }
 `;
@@ -55,8 +58,8 @@ export const Content = styled.div`
     width: 43%;
     padding-left: 30px;
   }
-  @media only screen and (max-width: 850px) {
-    width: 97%;
+  @media only screen and (max-width: 1100px) {
+    width: 100%;
     margin-top: 40px;
   }
   @media only screen and (max-width: 550px) {
@@ -69,15 +72,14 @@ export const Photos = styled.div`
   position: relative;
   z-index: 10;
   width: 674px;
-  height: 550px;
+  height: 700px;
   display: flex;
   justify-content: space-between;
   @media only screen and (max-width: 1250px) {
     width: 50%;
   }
-  @media only screen and (max-width: 850px) {
-    width: 85vw;
-    padding-left: 20px;
+  @media only screen and (max-width: 1100px) {
+    width: 100vw;
   }
   @media only screen and (max-width: 450px) {
     height: 60vw;
@@ -91,7 +93,9 @@ export const WrapPhoto = styled.div`
   margin-left: 20px;
   border-radius: 3px;
   overflow: hidden;
-  @media only screen and (max-width: 1250px) {
+  @media only screen and (max-width: 1100px) {
+    margin-left: 0px;
+
     /* width: calc(100% / 3.3); */
   }
   @media only screen and (max-width: 850px) {
@@ -191,7 +195,7 @@ export const BlueLine = styled.div`
   border-radius: 1px;
   /* overflow: hidden; */
   @media only screen and (max-width: 850px) {
-    left: 0px;
+    left: 5px;
     width: 3px;
   }
 `;

@@ -119,10 +119,11 @@ export const Text = styled.p`
 export const Button = styled.button`
   position: relative;
   z-index: 11;
-  width: 259px;
+  width: 317px;
   height: 72.471px;
   border-radius: 6px;
   background: #4299c8;
+  border: none;
   color: #f5faff;
   text-align: center;
   font-feature-settings: "clig" off, "liga" off;
@@ -133,6 +134,13 @@ export const Button = styled.button`
   line-height: 142.5%; /* 25.65px */
   margin-top: 60px;
   cursor: pointer;
+  &:hover {
+    background: var(--color-boja-tamnoplava-ocjena);
+  }
+  &:active {
+    background: #4299c8;
+    /* border: 1px solid #93f9ff; */
+  }
   @media only screen and (max-width: 1300px) {
   }
 `;

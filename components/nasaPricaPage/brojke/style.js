@@ -57,7 +57,7 @@ export const OverlayTop = styled.div`
   width: 100%;
   height: 432px;
   top: 0;
-  background: linear-gradient(180deg, #111729 0.76%, rgba(21, 28, 50, 0) 100%);
+  background: linear-gradient(180deg, #111729 0%, rgba(21, 28, 50, 0) 100%);
 
   @media only screen and (max-width: 850px) {
     padding-top: 40px;

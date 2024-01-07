@@ -69,6 +69,7 @@ export const TextBox = styled.div`
     width: 90%;
   }
   @media only screen and (max-width: 430px) {
+    padding-top: 20px;
   }
 `;
 export const WrapIcons = styled.div`

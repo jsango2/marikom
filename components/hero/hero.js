@@ -6,13 +6,13 @@ import Content from "./content/index.js";
 import Button from "../buttonBlue/Button.js";
 import Companies from "./companies/index.js";
 
-const Hero = () => {
+const Hero = ({ toggleYT }) => {
   const size = useWindowSize();
   return (
     <>
       <HeroWrap>
         <ContentWrap>
-          <Content />
+          <Content toggleYT={toggleYT} />
         </ContentWrap>
       </HeroWrap>
       {/* <Companies /> */}

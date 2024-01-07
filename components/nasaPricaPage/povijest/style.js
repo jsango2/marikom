@@ -72,7 +72,7 @@ export const Container = styled.div`
     /* padding-top: 40px;
     height: auto; */
     padding: 50px 0 0 50px;
-    height: 442px;
+    height: 400px;
     width: 100vw;
   }
 `;
@@ -100,7 +100,7 @@ export const WrapEvents = styled.div`
   display: flex;
   margin-right: 50px;
   @media only screen and (max-width: 850px) {
-    padding-top: 40px;
+    padding-top: 0px;
     height: auto;
     margin-right: 95px;
   }

@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, { useState } from "react";
 import {
   Title,
   SubTitle,
@@ -19,7 +18,8 @@ import en from "../../../locales/en.json";
 import hr from "../../../locales/hr.json";
 import { AiOutlineYoutube } from "react-icons/ai";
 import { useInView } from "react-intersection-observer";
-function Content() {
+import FsLightbox from "fslightbox-react";
+function Content({ toggleYT }) {
   const { ref, inView, entry } = useInView({
     /* Optional options */
     threshold: 0.2,
@@ -30,6 +30,7 @@ function Content() {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : hr;
+  console.log(toggleYT);
   return (
     <div>
       <WrapSliderContent>
@@ -58,14 +59,18 @@ function Content() {
             layout="fill"
             objectFit="cover"
           /> */}
-          <video autoPlay muted loop="loop" className="videoHero" playsInline>
+          <video
+            autoPlay
+            muted
+            loop="loop"
+            className="videoHero"
+            playsInline
+            poster="/kontaktHeroImg.webp"
+          >
             <source src="/HeroVideo.mp4" type="video/mp4" />
           </video>
 
-          <Icon
-            href="https://www.youtube.com/watch?v=JjshNMQqKnU"
-            target="_blank"
-          >
+          <Icon onClick={() => toggleYT()}>
             <AiOutlineYoutube size={45} />
           </Icon>
         </WrapImage>

@@ -16,6 +16,7 @@ import {
 import { useRouter } from "next/router.js";
 import en from "../../../locales/en.json";
 import hr from "../../../locales/hr.json";
+import { TitleH4 } from "../../../styles/globalStyle.js";
 
 function Zajednica() {
   const { locale } = useRouter();
@@ -24,7 +25,7 @@ function Zajednica() {
     <WrapAll>
       <WrapContent>
         <TextBox>
-          <UpTitle>{t.Onama.radUzajednici}</UpTitle>
+          <TitleH4>{t.Onama.radUzajednici}</TitleH4>
           <Title>{t.Onama.naslovPodrzavamo}</Title>
           <Text>{t.Onama.textPodrzavamo}</Text>
         </TextBox>
