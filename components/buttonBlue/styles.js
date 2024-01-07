@@ -11,6 +11,7 @@ export const WrapButton = styled.button`
   background-color: ${(props) => props.bgcolor};
   color: ${(props) => props.color};
   width: ${(props) => props.width};
+  margin-top: ${(props) => props.marginTop};
   justify-content: center;
   box-shadow: 0px 5px 8px rgba(28, 37, 44, 0.08);
   border-radius: 4px;

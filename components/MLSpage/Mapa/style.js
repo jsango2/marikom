@@ -109,6 +109,7 @@ export const MapaWrapTextBlock = styled.div`
   }
   @media only screen and (max-width: 430px) {
     /* padding: 65px 30px 100px 30px; */
+    padding-bottom: 58px;
   }
 `;
 export const TopTitle = styled.h3`
