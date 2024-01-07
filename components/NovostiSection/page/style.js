@@ -22,7 +22,7 @@ export const FeaturedNews = styled.div`
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 90px;
   /* overflow: hidden; */
   @media only screen and (max-width: 1250px) {
@@ -31,7 +31,7 @@ export const FeaturedNews = styled.div`
   @media only screen and (max-width: 650px) {
     flex-direction: column;
     margin-bottom: 0px;
-    background-color: #f6f6f6;
+    background-color: #e8e8e8;
   }
 `;
 export const Pagination = styled.div`
@@ -83,11 +83,11 @@ export const Right = styled.div`
   padding-top: 50px;
   /* overflow: hidden; */
   @media only screen and (max-width: 650px) {
-    padding-top: 0px;
+    padding-top: 20px;
 
     width: 100%;
     height: auto;
 
-    min-height: 285px;
+    min-height: 300px;
   }
 `;

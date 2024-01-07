@@ -132,7 +132,7 @@ export const BlueLine = styled.div`
   background: #4299c8;
   top: 18px;
   left: -30px;
-  border-radius: 1px;
+  border-radius: 2px;
   /* overflow: hidden; */
   @media only screen and (max-width: 850px) {
     left: 0px;

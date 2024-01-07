@@ -24,6 +24,7 @@ export const WrapAll = styled.div`
   z-index: 0; */
   overflow: hidden;
   padding-top: 85px;
+  padding-bottom: 50px;
   @media only screen and (max-width: 1400px) {
     padding: 100px 0 70px 70px;
   }
@@ -49,7 +50,7 @@ export const WrapKartica = styled.div`
     width: 100%;
   }
   @media only screen and (max-width: 850px) {
-    margin: 40px auto 0 auto;
+    margin: 20px auto 0 auto;
 
     &:nth-child(2) {
       flex-direction: column;
@@ -87,6 +88,8 @@ export const Content = styled.div`
     margin-top: 20px;
   }
   @media only screen and (max-width: 550px) {
+    padding-left: 20px;
+    margin-top: 10px;
   }
 `;
 
@@ -273,9 +276,11 @@ export const BlueLine = styled.div`
   background: #4299c8;
   top: 18px;
   left: -20px;
-  border-radius: 1px;
+  border-radius: 2px;
   /* overflow: hidden; */
   @media only screen and (max-width: 850px) {
     left: 4px;
+    width: 3px;
+    left: 7px;
   }
 `;

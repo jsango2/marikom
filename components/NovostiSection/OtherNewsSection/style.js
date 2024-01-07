@@ -22,7 +22,8 @@ export const WrapTitle = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media only screen and (max-width: 820px) {
+  @media only screen and (max-width: 430px) {
+    margin-bottom: 40px;
   }
 `;
 export const Container = styled.div`
@@ -53,7 +54,8 @@ export const Title = styled.div`
 
   line-height: 120%; /* 48px */
   margin-top: 15px;
-  @media only screen and (max-width: 820px) {
+  @media only screen and (max-width: 430px) {
+    font-size: 26px;
   }
 `;
 export const BlueLine = styled.div`

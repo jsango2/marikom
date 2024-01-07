@@ -22,6 +22,7 @@ import { useState } from "react";
 import { format, parseISO } from "date-fns";
 function index(props) {
   const [itemOffset, setItemOffset] = useState([]);
+  const [pageNumber, setPageNumber] = useState(0);
   const [itemsPerPage] = useState(6);
   const endOffset = itemOffset + itemsPerPage;
   const [blockScroll, allowScroll] = useScrollBlock();
@@ -71,7 +72,7 @@ function index(props) {
     console.log(
       `User requested page number ${event.selected}, which is offset ${newOffset}`
     );
-
+    setPageNumber(event.selected);
     setItemOffset(newOffset);
   };
   const paginationClick = () => {
@@ -86,7 +87,7 @@ function index(props) {
   return (
     <Layout>
       <Container>
-        {featuredNovost && (
+        {pageNumber < 1 && featuredNovost && (
           <FeaturedNews>
             <Left>
               <Image

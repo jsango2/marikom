@@ -18,7 +18,7 @@ function Brojke() {
   const t = locale === "en" ? en : hr;
   return (
     <WrapAll>
-      <OverlayTop />
+      {/* <OverlayTop /> */}
       <Overlay />
       <Image src={bg} alt="p1" layout="fill" objectFit="cover" />
       <Container>

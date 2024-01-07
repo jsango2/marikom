@@ -64,7 +64,7 @@ export const BlueLine = styled.div`
   background: #4299c8;
   top: ${(props) => (props.isFeatured ? "18px" : "34px")};
   left: 0px;
-  border-radius: 1px;
+  border-radius: 2px;
   /* overflow: hidden; */
   @media only screen and (max-width: 600px) {
   }

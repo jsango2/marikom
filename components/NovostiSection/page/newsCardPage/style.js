@@ -47,6 +47,7 @@ export const DataContainer = styled.div`
   padding-left: 30px;
   /* overflow: hidden; */
   @media only screen and (max-width: 600px) {
+    padding-left: 10px;
   }
 `;
 export const Photo = styled.div`
@@ -70,9 +71,12 @@ export const BlueLine = styled.div`
   background: #4299c8;
   top: ${(props) => (props.isFeatured ? "18px" : "34px")};
   left: 0px;
-  border-radius: 1px;
+  border-radius: 2px;
   /* overflow: hidden; */
   @media only screen and (max-width: 600px) {
+    width: 3px;
+    top: 40px;
+    left: -4px;
   }
 `;
 export const Title = styled.h1`
@@ -116,6 +120,7 @@ export const Datum = styled.p`
 
   color: #aea8b3;
   @media only screen and (max-width: 600px) {
+    margin-top: 10px;
   }
 `;
 export const ViseInfo = styled.div`
@@ -132,7 +137,7 @@ export const ViseInfo = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 10px;
   cursor: pointer;
   a {
     color: #4299c8;

@@ -225,7 +225,7 @@ export const BlueDivider = styled.div`
   width: 85px;
   height: 3px;
   background: #4299c8;
-  border-radius: 1px;
+  border-radius: 2px;
   margin: 30px auto;
   @media only screen and (max-width: 1250px) {
   }
@@ -474,7 +474,7 @@ export const BlueLine = styled.div`
   background: #4299c8;
   top: 18px;
   left: -20px;
-  border-radius: 1px;
+  border-radius: 2px;
   /* overflow: hidden; */
   @media only screen and (max-width: 850px) {
     width: 3px;

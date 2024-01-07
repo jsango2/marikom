@@ -172,7 +172,7 @@ export const Line = styled.div`
   height: 4px;
   margin-bottom: 35px;
   margin-top: 70px;
-  border-radius: 1px;
+  border-radius: 2px;
   top: -2px;
   @media only screen and (max-width: 850px) {
   }

@@ -35,6 +35,7 @@ export const Container = styled.div`
   }
   @media only screen and (max-width: 600px) {
     width: 100%;
+    /* padding-top: 30px; */
   }
 `;
 export const GallerySection = styled.div`
@@ -147,6 +148,8 @@ export const FeaturedImage = styled.div`
   @media only screen and (max-width: 850px) {
     width: 100%;
     margin-top: 0;
+    height: 80vw;
+    max-height: 450px;
   }
 `;
 export const TextSection = styled.div`
