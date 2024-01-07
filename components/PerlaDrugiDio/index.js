@@ -111,7 +111,7 @@ function PerlaDrugiDio() {
       <Karamarko ref={ref3}>
         <Left>
           <PozadinaPerla percentage={percentage}>
-            <Image src="/PerlaBg.svg" layout="fill" />
+            <Image src="/perlaLogo.svg" layout="fill" />
           </PozadinaPerla>{" "}
           <ImageWrap></ImageWrap>
           <Potpis percentage={percentage}>

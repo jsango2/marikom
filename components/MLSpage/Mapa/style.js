@@ -158,6 +158,7 @@ export const Button = styled.button`
   width: 100%;
   height: 72.471px;
   border-radius: 6px;
+  border: none;
   background: #4299c8;
   color: #f5faff;
   text-align: center;
