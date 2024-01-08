@@ -50,7 +50,7 @@ const Kartice = () => {
       />
       <WrapKartica3 ref={ref}>
         <Content className={` ${inView ? "inView" : "outView"}`}>
-          <BlueLine />
+          <BlueLine className={` ${inView ? "lineInView" : "lineOutView"}`} />
           <UpTitle>{t.Prerada.upTitle3}</UpTitle>
           <Title>{t.Prerada.title3}</Title>
           <Text>{t.Prerada.text3}</Text>

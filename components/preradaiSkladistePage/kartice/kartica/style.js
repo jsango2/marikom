@@ -201,7 +201,7 @@ export const UpTitle = styled.div`
   text-transform: uppercase;
 
   /* Black */
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: #161722;
   @media only screen and (max-width: 600px) {
   }
@@ -216,7 +216,7 @@ export const Title = styled.div`
   line-height: 120%;
   /* or 66px */
 
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 
   /* MK Plava */
 
@@ -278,6 +278,14 @@ export const BlueLine = styled.div`
   left: -20px;
   border-radius: 2px;
   /* overflow: hidden; */
+  transition: all 1.5s ease-out;
+  transition-delay: 0.8s;
+  &.lineInView {
+    height: 101px;
+  }
+  &.lineOutView {
+    height: 0px;
+  }
   @media only screen and (max-width: 850px) {
     left: 4px;
     width: 3px;

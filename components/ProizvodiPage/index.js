@@ -57,7 +57,7 @@ function ProizvodiPage() {
   const { locale } = router;
   // const [forcePage, setForcePage] = useState();
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(10);
+  const [postsPerPage] = useState(9);
 
   // const [searchTerm, setSearchTerm] = useState("");
   const [state, setstate] = useState({

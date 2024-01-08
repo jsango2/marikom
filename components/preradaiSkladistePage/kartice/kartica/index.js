@@ -36,7 +36,7 @@ const Kartica = ({ upTitle, title, text, photo }) => {
   return (
     <WrapKartica ref={ref}>
       <Content className={` ${inView ? "inView" : "outView"}`}>
-        <BlueLine />
+        <BlueLine className={` ${inView ? "lineInView" : "lineOutView"}`} />
         <UpTitle>{upTitle}</UpTitle>
         <Title>{title}</Title>
         <Text>{parse(text)}</Text>

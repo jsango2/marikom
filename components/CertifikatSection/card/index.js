@@ -28,11 +28,11 @@ function Card({
   const t = locale === "en" ? en : hr;
   const { ref, inView, entry } = useInView({
     /* Optional options */
-    threshold: 0,
+    threshold: 0.2,
     triggerOnce: true,
   });
   return (
-    <WrapCard ref={ref} className={` ${inView ? "inView" : "outView"}`}>
+    <WrapCard ref={ref} className={` ${inView ? "inViewCert" : "outViewCert"}`}>
       <WrapImage bg={image}>
         <WrapCerts>
           {certMSC && (

@@ -11,21 +11,21 @@ export const WrapCard = styled.div`
   border: 1px solid #f5faff36;
   align-items: center;
   flex-direction: column;
-  &.inView {
+  &.inViewCert {
     top: 0px;
     opacity: 1;
-    transition: all 2s ease-out;
+    transition: all 1s ease-out;
   }
-  &.inView:nth-child(1) {
+  &.inViewCert:nth-child(1) {
     transition-delay: 500ms;
   }
-  &.inView:nth-child(2) {
+  &.inViewCert:nth-child(2) {
     transition-delay: 1000ms;
   }
-  &.inView:nth-child(3) {
+  &.inViewCert:nth-child(3) {
     transition-delay: 1500ms;
   }
-  &.outView {
+  &.outViewCert {
     top: 25px;
     opacity: 0;
   }
@@ -40,6 +40,15 @@ export const WrapCard = styled.div`
     width: 100%;
     height: auto;
     padding-bottom: 10px;
+    &.inViewCert:nth-child(1) {
+      transition-delay: 0ms;
+    }
+    &.inViewCert:nth-child(2) {
+      transition-delay: 0ms;
+    }
+    &.inViewCert:nth-child(3) {
+      transition-delay: 0ms;
+    }
   }
 `;
 export const WrapImage = styled.div`
