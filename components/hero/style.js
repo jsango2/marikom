@@ -38,7 +38,7 @@ export const HeroWrap = styled.div`
   }
   @media only screen and (max-width: 700px) {
     min-height: unset;
-    height: 90vh;
+    height: 100vh;
   }
 `;
 export const ContentWrap = styled.div`
