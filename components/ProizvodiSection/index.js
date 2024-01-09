@@ -39,7 +39,7 @@ function ProizvodiSection() {
           {/* <Image src={overlay} alt="overlay" layout="fill" objectFit="cover" /> */}
         </Overlay>
         <WrapBg percentage={percentage}>
-          <Image src="/more.webp" alt="bg" layout="fill" objectFit="cover" />
+          <Image src="/more.png" alt="bg" layout="fill" objectFit="cover" />
         </WrapBg>
         <Title ref={ref} className={` ${inView ? "inView" : "outView"}`}>
           {t.Products.title}

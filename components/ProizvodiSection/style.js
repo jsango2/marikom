@@ -19,6 +19,7 @@ export const WrapImage2 = styled.div`
   position: relative;
   z-index: 10;
   width: 100%;
+  min-height: 500px;
   height: auto;
   display: flex;
   justify-content: center;
@@ -36,7 +37,7 @@ export const WrapBg = styled.div`
   position: absolute;
   z-index: 10;
   width: 100%;
-  height: 100%;
+  height: 130%;
   /* top: 0; */
   /* overflow: hidden; */
   top: ${(props) => props.percentage * 100 - 80}px;
@@ -82,7 +83,7 @@ export const Overlay = styled.div`
   z-index: 11;
   top: 0;
   width: 100%;
-  height: 99%;
+  height: 100%;
   background: linear-gradient(
     0deg,
     rgba(0, 34, 123, 0.25) 0%,
@@ -104,7 +105,7 @@ export const Title = styled.h1`
   text-align: center;
   text-transform: uppercase;
   margin-top: 100px;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 
   /* SUNRISE/Sunray */
 

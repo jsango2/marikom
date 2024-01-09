@@ -28,12 +28,13 @@ export const HeroWrap = styled.div`
   z-index: 0; */
   overflow: hidden;
   @media only screen and (max-width: 1400px) {
-    padding: 100px 0 70px 70px;
+    /* padding: 100px 0 70px 70px; */
   }
   @media only screen and (max-width: 850px) {
     padding: 0 0 0px 0;
     align-items: flex-start;
-    /* height: 556px; */
+    height: 556px;
+    min-height: unset;
   }
   @media only screen and (max-width: 430px) {
     min-height: unset;
@@ -108,7 +109,7 @@ export const Icon = styled.a`
     display: none;
   }
 `;
-export const WrapSliderContent = styled.div`
+export const WrapAll = styled.div`
   display: flex;
   justify-content: space-evenly;
   flex-wrap: nowrap;
@@ -121,19 +122,45 @@ export const WrapSliderContent = styled.div`
   @media only screen and (max-width: 420px) {
   }
 `;
+export const GradientContainer = styled.div`
+  /* display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap; */
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  z-index: 12;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #0e1833 24.62%,
+    rgba(14, 24, 51, 0) 181.84%
+  );
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 50px;
+  @media only screen and (max-width: 700px) {
+    width: 100%;
+    justify-content: center;
+  }
+  @media only screen and (max-width: 420px) {
+  }
+`;
 export const WrapText = styled.div`
   width: 504px;
-
+  margin-left: 20px;
   @media only screen and (max-width: 1100px) {
-    padding-right: 25px;
+    /* padding-right: 25px; */
   }
   @media only screen and (max-width: 850px) {
-    width: 90%;
+    /* width: 90%;
     padding-left: 27px;
-    padding-top: 60px;
+    padding-top: 60px; */
   }
   @media only screen and (max-width: 430px) {
-    padding-top: 50px;
+    /* padding-top: 50px; */
   }
 `;
 export const WrapImage = styled.div`

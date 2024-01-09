@@ -38,30 +38,13 @@ import { useInView } from "react-intersection-observer";
 import { useLottie } from "lottie-react";
 import animacija from "./perlaAnimacija.js";
 import Link from "next/link.js";
+import RedLineComp from "./redLine.js";
 
 function PerlaDrugiDio() {
   const style = {
     height: 200,
   };
-  const PerlaLogoAnimacija = () => {
-    const options = {
-      animationData: animacija,
-      loop: false,
-      autoplay: true,
-      initialSegment: [0, 68],
-    };
 
-    const { View } = useLottie(options, style);
-
-    return View;
-  };
-
-  const { ref, inView, entry } = useInView({
-    /* Optional options */
-    threshold: 0.2,
-    triggerOnce: true,
-  });
-  const ref2 = useRef();
   const size = useWindowSize();
   const router = useRouter();
   const { locale } = router;
@@ -70,6 +53,11 @@ function PerlaDrugiDio() {
   useEffect(() => {
     setPerlaData(catalogData.filter((data) => data.FeaturedPerla == "DA"));
   }, []);
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0,
+    triggerOnce: true,
+  });
 
   const [ref3, percentage] = useScrollPercentage({
     /* Optional options */
@@ -78,9 +66,8 @@ function PerlaDrugiDio() {
 
   return (
     <WrapAll ref={ref}>
-      <RedLine>
-        <WrapLogoPerla>{inView && <PerlaLogoAnimacija />}</WrapLogoPerla>
-      </RedLine>
+      {inView && <RedLineComp />}
+
       <Title>{t.Perla2.title}</Title>
       {/* <Text>{t.Perla2.subTitle}</Text> */}
       <Proizvodi>
@@ -105,9 +92,9 @@ function PerlaDrugiDio() {
           </WrapProizvod>
         ))}
       </Proizvodi>
-      <Button>
-        <Link href="/proizvodi">{t.Perla2.button}</Link>
-      </Button>
+      <Link href="/proizvodi">
+        <Button>{t.Perla2.button}</Button>
+      </Link>
       <Karamarko ref={ref3}>
         <Left>
           <PozadinaPerla percentage={percentage}>

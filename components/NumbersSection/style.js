@@ -37,14 +37,29 @@ export const Down = styled.div`
   z-index: 12;
   width: 100%;
   height: 912px;
-  padding: 100px 245px;
+  padding: 0px 245px 60px 245px;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  @media only screen and (max-width: 850px) {
+    padding: 50px 10px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 50px 10px 70px 10px;
+  }
+`;
+export const BgMore = styled.div`
+  position: absolute;
+  z-index: 12;
+  width: 100%;
+  height: 120%;
   background-image: url("/BrojkeMore.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100% 50%;
+  top: ${(props) => props.percentage * 100 - 80}px;
+
   @media only screen and (max-width: 850px) {
     padding: 50px 10px;
   }
@@ -228,7 +243,7 @@ export const Numbers = styled.div`
 
   color: #f5faff;
   /* overflow: hidden; */
-  margin-top: 80px;
+  margin-top: 40px;
   @media only screen and (max-width: 1150px) {
     width: 500px;
     flex-direction: column;

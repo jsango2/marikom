@@ -121,10 +121,18 @@ export const Button = styled.div`
   color: #f5faff;
   margin: 55px auto 0 auto;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
   a {
     text-decoration: none;
     color: #f5faff;
   }
+  &:hover {
+    background: #203c5e;
+  }
+  &:active {
+    background: #ffffff;
+  }
+
   @media only screen and (max-width: 430px) {
     margin: 35px auto 0 auto;
   }

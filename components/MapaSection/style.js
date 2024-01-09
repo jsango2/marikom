@@ -209,6 +209,7 @@ export const Photo3 = styled.div`
   width: 390px;
   height: 512px;
   background-color: gray;
+  top: 20px;
   &.inView {
     top: 20px;
     transition: all 3s ease-out;
@@ -272,6 +273,7 @@ export const TitleUp = styled.h4`
   /* Black */
 
   color: #161722;
+  margin-bottom: 10px;
   @media only screen and (max-width: 600px) {
   }
 `;

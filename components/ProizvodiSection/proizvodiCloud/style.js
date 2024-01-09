@@ -11,7 +11,7 @@ export const WrapAll = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 0px;
   flex-wrap: wrap;
   /* overflow: hidden; */
   @media only screen and (max-width: 650px) {

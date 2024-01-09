@@ -3,7 +3,7 @@ import {
   Title,
   SubTitle,
   WrapText,
-  WrapSliderContent,
+  WrapAll,
   WrapImage,
   Icon,
   Broj,
@@ -33,9 +33,9 @@ function Content({ toggleYT }) {
   console.log(toggleYT);
   return (
     <div>
-      <WrapSliderContent>
+      <WrapAll>
         <WrapText>
-          <Title
+          {/* <Title
             ref={ref}
             className={` ${inView ? "inViewHero" : "outViewHero"}`}
           >
@@ -43,38 +43,9 @@ function Content({ toggleYT }) {
           </Title>
           <SubTitle className={` ${inView ? "inViewHero" : "outViewHero"}`}>
             {t.Hero.description}
-          </SubTitle>
-          {/* <Button
-                  bgColor="#4299C8"
-                  color="#FFFFFF"
-                  width="178px"
-                  text="Kontaktirajte nas"
-                  linkTo="/o-nama"
-                /> */}
+          </SubTitle> */}
         </WrapText>
-        <WrapImage>
-          {/* <Image
-            src="https://marence53.files.wordpress.com/2019/04/kosarka-lopta01.jpg"
-            alt="Picture of the author"
-            layout="fill"
-            objectFit="cover"
-          /> */}
-          <video
-            autoPlay
-            muted
-            loop="loop"
-            className="videoHero"
-            playsInline
-            poster="/kontaktHeroImg.webp"
-          >
-            <source src="/HeroVideo.mp4" type="video/mp4" />
-          </video>
-
-          <Icon onClick={() => toggleYT()}>
-            <AiOutlineYoutube size={45} />
-          </Icon>
-        </WrapImage>
-      </WrapSliderContent>
+      </WrapAll>
     </div>
   );
 }

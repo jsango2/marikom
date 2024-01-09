@@ -19,6 +19,10 @@ export const WrapAll = styled.div`
   border-radius: 5px;
   margin: 8px 8px;
   padding: 0 20px;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: #1d344b;
+  }
   @media only screen and (max-width: 650px) {
     height: 27px;
   }
