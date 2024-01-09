@@ -12,7 +12,7 @@ import { useInView } from "react-intersection-observer";
 function MapaSection() {
   const { ref, inView, entry } = useInView({
     /* Optional options */
-    threshold: 0,
+    threshold: 0.2,
     triggerOnce: true,
   });
 

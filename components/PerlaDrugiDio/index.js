@@ -66,7 +66,7 @@ function PerlaDrugiDio() {
 
   return (
     <WrapAll ref={ref}>
-      {inView && <RedLineComp />}
+      <RedLineComp />
 
       <Title>{t.Perla2.title}</Title>
       {/* <Text>{t.Perla2.subTitle}</Text> */}

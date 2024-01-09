@@ -19,7 +19,7 @@ function RedLineComp() {
       animationData: animacija,
       loop: false,
       autoplay: true,
-      initialSegment: [0, 68],
+      initialSegment: [0, 100],
     };
 
     const { View } = useLottie(options, style);
@@ -37,7 +37,7 @@ function RedLineComp() {
   const router = useRouter();
   console.log(inView);
   return (
-    <RedLine>
+    <RedLine ref={ref}>
       <WrapLogoPerla>
         {/* <PerlaLogoAnimacija /> */}
         {inView && <PerlaLogoAnimacija />}

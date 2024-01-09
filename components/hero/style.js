@@ -36,8 +36,9 @@ export const HeroWrap = styled.div`
     height: 556px;
     min-height: unset;
   }
-  @media only screen and (max-width: 430px) {
+  @media only screen and (max-width: 700px) {
     min-height: unset;
+    height: 90vh;
   }
 `;
 export const ContentWrap = styled.div`
@@ -141,9 +142,36 @@ export const GradientContainer = styled.div`
   justify-content: flex-end;
   align-items: center;
   padding-right: 50px;
+  &.inViewHero {
+    left: 0;
+    opacity: 1;
+    transition: all 3s ease-out;
+  }
+  &.outViewHero {
+    left: -100%;
+    opacity: 0;
+  }
   @media only screen and (max-width: 700px) {
     width: 100%;
+    height: 56%;
     justify-content: center;
+    bottom: 0;
+    align-items: flex-start;
+    background: linear-gradient(
+      0deg,
+      #0e1833 24.62%,
+      rgba(14, 24, 51, 0) 181.84%
+    );
+  }
+  &.inViewHero {
+    bottom: 0;
+    opacity: 1;
+    transition: all 3s ease-out;
+  }
+  &.outViewHero {
+    left: unset;
+    bottom: -100%;
+    opacity: 0;
   }
   @media only screen and (max-width: 420px) {
   }
@@ -154,7 +182,8 @@ export const WrapText = styled.div`
   @media only screen and (max-width: 1100px) {
     /* padding-right: 25px; */
   }
-  @media only screen and (max-width: 850px) {
+  @media only screen and (max-width: 700px) {
+    margin-top: 50px;
     /* width: 90%;
     padding-left: 27px;
     padding-top: 60px; */
@@ -223,15 +252,6 @@ export const Title = styled.h1`
 
   /* color: #f5faff; */
   color: var(--color-boja-marikomerc-bijela);
-  &.inViewHero {
-    top: 0px;
-    opacity: 1;
-    transition: all 2s ease-out;
-  }
-  &.outViewHero {
-    top: 25px;
-    opacity: 0;
-  }
 
   @media only screen and (max-width: 900px) {
     font-size: var(--h3);
@@ -255,22 +275,13 @@ export const SubTitle = styled.p`
 
   /* SUNRISE/Sunray */
 
-  color: #7e7d7d;
+  color: #a1a0a0;
 
   /* mix-blend-mode: normal; */
 
   margin-bottom: 45px;
   width: 95%;
-  &.inViewHero {
-    top: 0px;
-    opacity: 1;
-    transition: all 2s ease-out;
-    transition-delay: 0.5s;
-  }
-  &.outViewHero {
-    top: 25px;
-    opacity: 0;
-  }
+
   @media only screen and (max-width: 600px) {
   }
   @media only screen and (max-width: 430px) {
