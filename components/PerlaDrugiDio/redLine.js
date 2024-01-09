@@ -38,7 +38,7 @@ function RedLineComp() {
   console.log(inView);
   return (
     <RedLine>
-      <WrapLogoPerla ref={ref}>
+      <WrapLogoPerla>
         {/* <PerlaLogoAnimacija /> */}
         {inView && <PerlaLogoAnimacija />}
       </WrapLogoPerla>
