@@ -39,6 +39,7 @@ export const HeroWrap = styled.div`
   @media only screen and (max-width: 700px) {
     min-height: unset;
     height: 100vh;
+    padding-bottom: 20px;
   }
 `;
 export const ContentWrap = styled.div`
