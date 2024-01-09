@@ -599,13 +599,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   transition-delay: 750ms;
 }
 .inViewHero {
-  left: 0;
-  opacity: 1;
-  transition: all 2.5s ease-out;
+  left: 0 !important;
+  opacity: 1 !important;
+  transition: all 2.5s ease-out !important;
 }
 .outViewHero {
-  left: -100%;
-  opacity: 0;
+  left: -100% !important;
+  opacity: 0 !important;
 }
 .videoHero {
   position: absolute;
@@ -1586,13 +1586,13 @@ select {
     z-index: 2;
   }
   .inViewHero {
-    bottom: 0;
-    opacity: 1;
+    bottom: 0 !important;
+    opacity: 1 !important;
     transition: all 2.1s ease-out;
   }
   .outViewHero {
-    left: unset;
-    bottom: -100%;
+    left: unset !important;
+    bottom: -100% !important;
     opacity: 0;
   }
 }
@@ -1601,6 +1601,7 @@ select {
     width: 100vw;
     overflow: hidden;
   } */
+
   .wrapRaspored {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
