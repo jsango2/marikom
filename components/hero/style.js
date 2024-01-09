@@ -39,6 +39,7 @@ export const HeroWrap = styled.div`
   @media only screen and (max-width: 700px) {
     min-height: unset;
     height: 100dvh;
+    padding-bottom: 20px;
   }
 `;
 export const ContentWrap = styled.div`
@@ -142,15 +143,7 @@ export const GradientContainer = styled.div`
   justify-content: flex-end;
   align-items: center;
   padding-right: 50px;
-  &.inViewHero {
-    left: 0;
-    opacity: 1;
-    transition: all 2.5s ease-out;
-  }
-  &.outViewHero {
-    left: -100%;
-    opacity: 0;
-  }
+
   @media only screen and (max-width: 700px) {
     width: 100%;
     height: 60%;
@@ -163,16 +156,7 @@ export const GradientContainer = styled.div`
       rgba(14, 24, 51, 0) 181.84%
     );
   }
-  &.inViewHero {
-    bottom: 0;
-    opacity: 1;
-    transition: all 2.1s ease-out;
-  }
-  &.outViewHero {
-    left: unset;
-    bottom: -100%;
-    opacity: 0;
-  }
+
   @media only screen and (max-width: 420px) {
   }
 `;

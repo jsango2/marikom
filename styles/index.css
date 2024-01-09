@@ -598,6 +598,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   transition: all 1.5s ease;
   transition-delay: 750ms;
 }
+.inViewHero {
+  left: 0;
+  opacity: 1;
+  transition: all 2.5s ease-out;
+}
+.outViewHero {
+  left: -100%;
+  opacity: 0;
+}
 .videoHero {
   position: absolute;
   width: 135%;
@@ -1575,6 +1584,16 @@ select {
     top: -400px !important;
     opacity: 0.1;
     z-index: 2;
+  }
+  .inViewHero {
+    bottom: 0;
+    opacity: 1;
+    transition: all 2.1s ease-out;
+  }
+  .outViewHero {
+    left: unset;
+    bottom: -100%;
+    opacity: 0;
   }
 }
 @media only screen and (max-width: 600px) {
