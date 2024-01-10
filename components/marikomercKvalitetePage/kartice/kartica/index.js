@@ -21,7 +21,7 @@ const Kartica = ({ num, upTitle, title, text, li, photo }) => {
     <WrapAll>
       <Overlay />
       <Container>
-        <Number>0{num}</Number>
+        <Number>{num}</Number>
         <WrapText>
           <UpTitle>{upTitle}</UpTitle>
           <Title>{title}</Title>

@@ -130,19 +130,29 @@ export const ButtonsWrapMobile = styled.div`
   z-index: 12;
   width: 90vw;
   min-width: 200px;
-  height: auto;
+  height: 83vh;
+  overflow: scroll;
   color: black;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  /* margin-right: 10px; */
   top: 70px;
-  /* overflow: hidden; */
-  /* padding-bottom: 50px; */
   background-color: #ffffff00;
-  /* padding-bottom: 30px; */
 
   button {
     width: 99%;

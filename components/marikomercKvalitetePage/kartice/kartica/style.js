@@ -204,7 +204,7 @@ export const Number = styled.h1`
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 900;
-  font-size: 160px;
+  font-size: 200px;
   line-height: 120%;
   /* identical to box height, or 192px */
 
@@ -216,7 +216,7 @@ export const Number = styled.h1`
   color: #b5d3e3;
   margin: 0;
   top: 37px;
-  left: -80px;
+  left: -55px;
   width: 131px;
   @media only screen and (max-width: 1250px) {
     /* font-size: 14px;
