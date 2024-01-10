@@ -5,6 +5,7 @@ import { useState, createContext } from "react";
 
 import { animations } from "../lib/animations";
 import "../styles/index.css";
+// import "../styles/normalize.css";
 import "../styles/pagination.css";
 import React from "react";
 

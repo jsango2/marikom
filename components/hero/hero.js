@@ -30,8 +30,15 @@ const Hero = ({ toggleYT }) => {
   return (
     <>
       <HeroWrap ref={ref}>
-        <Image src="/HERO.webp" layout="fill" objectFit="cover" />
-        <video autoPlay muted loop="loop" className="videoHero" playsInline>
+        {/* <Image src="/HERO.webp" layout="fill" objectFit="cover" /> */}
+        <video
+          autoPlay
+          muted
+          loop="loop"
+          className="videoHero"
+          playsInline
+          poster="/HERO.webp"
+        >
           <source src="/heroVideo2.mp4" type="video/mp4" />
         </video>
 

@@ -84,8 +84,11 @@ export const AdSectionAdContainer = styled.div`
   width: 100%;
   gap: 1rem;
   padding: 0 1rem;
-  margin-top: 3.85rem;
+  margin-top: 3.8rem;
   place-items: start;
+  @media only screen and (max-width: 875px) {
+    margin-top: 1rem;
+  }
 `;
 
 export const NemaOglasa = styled.h3`
@@ -177,6 +180,9 @@ export const AdSectionSingleAd = styled.div`
     font-weight: 900;
     line-height: 120%;
     text-transform: uppercase;
+  }
+  @media only screen and (max-width: 875px) {
+    height: auto;
   }
   @media only screen and (max-width: 430px) {
     padding: 0rem;
