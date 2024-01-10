@@ -50,7 +50,7 @@ function NumbersSection() {
       <Up>
         <BlueLine />
         <video autoPlay muted loop="loop" className="videoHero" playsInline>
-          <source src="/brojkeVideo.mp4" type="video/mp4" />
+          <source src="/numbersVideo.mp4" type="video/mp4" />
         </video>
       </Up>
       <Down ref={ref2}>

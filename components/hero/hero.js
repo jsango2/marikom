@@ -31,12 +31,15 @@ const Hero = ({ toggleYT }) => {
     <>
       <HeroWrap ref={ref}>
         <Image src="/HERO.webp" layout="fill" objectFit="cover" />
+        <video autoPlay muted loop="loop" className="videoHero" playsInline>
+          <source src="/heroVideo2.mp4" type="video/mp4" />
+        </video>
 
         {/* <ContentWrap>
           <Content toggleYT={toggleYT} />
         </ContentWrap> */}
         <GradientContainer
-          className={`jure ${inView ? "inViewHero" : "outViewHero"}`}
+        // className={`jure ${inView ? "inViewHero" : "outViewHero"}`}
         >
           <WrapText>
             <Title ref={ref}>{parse(t.Hero.title)}</Title>
