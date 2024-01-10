@@ -1411,7 +1411,8 @@ select {
 }
 @media only screen and (max-width: 1040px) {
   .menu {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     position: absolute;
     /* transform: translateY(-100%); */
     transform: translate(50%, -100%);
@@ -1426,12 +1427,13 @@ select {
       #101628 100%
     );
 
-    padding-top: 60px;
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     transition: all 0.3s ease-in-out;
+    overflow-y: scroll;
   }
   .formCalcSubmit {
     margin-top: 0px;

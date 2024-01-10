@@ -22,7 +22,7 @@ const MeniMobile = ({
   const [isOnamaMenuOpen, setIsOnamaMenuOpen] = useState(false);
   const [isGroupMenuOpen, setIsGroupMenuOpen] = useState(false);
   const { locale } = useRouter();
-  const [blockScroll, allowScroll] = useScrollBlock();
+  // const [blockScroll, allowScroll] = useScrollBlock();
 
   // const history = useHistory()
   // const goToHome = () => {
@@ -33,6 +33,7 @@ const MeniMobile = ({
   useEffect(() => {
     if (isOpen === false) {
       setIsOnamaMenuOpen(false);
+      setIsGroupMenuOpen(false);
     }
   }, [isOpen]);
 
@@ -42,6 +43,7 @@ const MeniMobile = ({
         <div
           onClick={() => {
             setIsOnamaMenuOpen(!isOnamaMenuOpen);
+            setIsGroupMenuOpen(false);
           }}
           className={`linkOnama ${
             isOnamaMenuOpen ? "linkOnamaOpen" : "linkOnamaClosed"
@@ -84,6 +86,7 @@ const MeniMobile = ({
         <div
           onClick={() => {
             setIsGroupMenuOpen(!isGroupMenuOpen);
+            setIsOnamaMenuOpen(false);
           }}
           className={`linkGroup ${
             isGroupMenuOpen ? "linkGroupOpen" : "linkGroupClosed"
