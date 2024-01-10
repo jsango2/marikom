@@ -1411,9 +1411,10 @@ select {
 }
 @media only screen and (max-width: 1040px) {
   .menu {
-    min-height: 100vh;
-    height: auto;
-    position: absolute;
+    /* min-height: 49vh; */
+    height: 74vh;
+    /* height: auto; */
+    position: fixed;
     /* transform: translateY(-100%); */
     transform: translate(50%, -100%);
     top: 65px;
@@ -1426,14 +1427,16 @@ select {
       #2b3a63 1.65%,
       #101628 100%
     );
-
     padding-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     transition: all 0.3s ease-in-out;
-    overflow-y: scroll;
+    overflow: auto;
+    padding-bottom: 50px;
+    /* overflow-y: scroll; */
+    /* overflow-y: scroll; */
   }
   .formCalcSubmit {
     margin-top: 0px;
