@@ -776,7 +776,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin: 12px 6px;
   opacity: 0.6;
 }
-.menu div:nth-child(1) {
+.menu div:nth-child(1),
+.linkGroup {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   text-decoration: none;
@@ -789,6 +790,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   width: 84vw;
   justify-content: space-between;
 }
+
 .linkOnamaClosed::after {
   content: "";
   position: relative;
@@ -805,6 +807,36 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   transition: all 0.6s ease;
 }
 .linkOnamaOpen::after {
+  content: "";
+  position: relative;
+  right: 0;
+  top: 50%;
+  display: block;
+  margin-left: 20px;
+  border-left: 2px solid #ffffff;
+  border-top: 2px solid #ffffff;
+  width: 7px;
+  height: 7px;
+  float: right;
+  transform: translate(50%, -50%) rotate(225deg);
+  transition: all 0.6s ease;
+}
+.linkGroupClosed::after {
+  content: "";
+  position: relative;
+  right: 0;
+  top: 50%;
+  display: block;
+  margin-left: 20px;
+  border-left: 2px solid #ffffff;
+  border-top: 2px solid #ffffff;
+  width: 7px;
+  height: 7px;
+  float: right;
+  transform: translate(50%, -50%) rotate(135deg);
+  transition: all 0.6s ease;
+}
+.linkGroupOpen::after {
   content: "";
   position: relative;
   right: 0;

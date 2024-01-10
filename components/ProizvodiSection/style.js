@@ -154,6 +154,6 @@ export const Text = styled.p`
   @media only screen and (max-width: 650px) {
     margin-top: 20px;
     font-size: 16px;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
   }
 `;

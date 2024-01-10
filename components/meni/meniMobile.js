@@ -20,6 +20,7 @@ const MeniMobile = ({
   oglasiNaslovi,
 }) => {
   const [isOnamaMenuOpen, setIsOnamaMenuOpen] = useState(false);
+  const [isGroupMenuOpen, setIsGroupMenuOpen] = useState(false);
   const { locale } = useRouter();
   const [blockScroll, allowScroll] = useScrollBlock();
 
@@ -80,7 +81,31 @@ const MeniMobile = ({
         <Link href="/karijere">{locale === "hr" ? "Karijere" : "Careers"}</Link>
         <Link href="/kontakt">{locale === "hr" ? "Kontakt" : "Contact"}</Link>
         <Link href="/novosti">{locale === "hr" ? "Novosti" : "News"}</Link>
-        <Link href="/">Grupa</Link>
+        <div
+          onClick={() => {
+            setIsGroupMenuOpen(!isGroupMenuOpen);
+          }}
+          className={`linkGroup ${
+            isGroupMenuOpen ? "linkGroupOpen" : "linkGroupClosed"
+          }`}
+        >
+          {locale === "hr" ? "Grupa" : "Group"}
+        </div>
+        {isGroupMenuOpen && (
+          <div className="mobileSubLinkParent">
+            <Link className="navLinkDrop" href="/MLS">
+              {locale === "hr" ? "MLS Logistika" : "MLS Logistics"}
+            </Link>
+            <Link className="navLinkDrop" href="/">
+              {locale === "hr"
+                ? "Di Maris - Ribarnice"
+                : "Di Maris - Fish market"}
+            </Link>
+            <Link className="navLinkDrop" href="/">
+              {locale === "hr" ? "Perla - Biser Mora" : "Perla - Sea Pearl"}
+            </Link>
+          </div>
+        )}
         <div className="mobileLinkDivider"></div>
         <LanguageSwitcher
           closeMenu={closeMenu}

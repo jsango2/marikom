@@ -168,10 +168,33 @@ const Header = ({ siteTitle, novostiNaslovi, oglasiNaslovi }) => {
                     </Link>
                   </div>
                   <div className="navLink borderNav"></div>
-                  <div>
-                    <Link className="navLink" href="/grupa">
-                      {locale === "hr" ? "Grupa" : "Group"}
-                    </Link>
+                  <div className="dropdown">
+                    <div className="dropdown-content">
+                      <Link className="navLinkDrop" href="/MLS">
+                        {locale === "hr" ? "MLS Logistika" : "MLS Logistics"}
+                      </Link>
+                      <Link className="navLinkDrop" href="/">
+                        {locale === "hr"
+                          ? "Di Maris - Ribarnice"
+                          : "Di Maris - Fish market"}
+                      </Link>
+                      <Link className="navLinkDrop" href="/">
+                        {locale === "hr"
+                          ? "Perla - Biser Mora"
+                          : "Perla - Sea Pearl"}
+                      </Link>
+                    </div>
+                    <div
+                      style={{ cursor: "pointer", marginRight: "20px" }}
+                      // onMouseOver={handleOnamaOpen}
+                    >
+                      <Link className="navLink" href="/">
+                        {locale === "hr" ? "Grupa" : "Group"}
+                      </Link>
+                      <ArrowDown
+                        style={{ position: "relative", marginLeft: "-8px" }}
+                      />
+                    </div>
                   </div>
                   <div className="languageSwitcher">
                     {/* <ArrowDown
