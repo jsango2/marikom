@@ -47,7 +47,7 @@ export const News = styled.div`
   position: relative;
   z-index: 10;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1440px;
   height: auto;
   display: flex;
   justify-content: space-around;

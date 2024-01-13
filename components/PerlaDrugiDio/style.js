@@ -44,7 +44,7 @@ export const Proizvodi = styled.div`
     margin: 63px auto 0 auto;
 
     width: 95%;
-    min-width: 355px;
+    min-width: 320px;
     justify-content: space-evenly;
   }
 `;
@@ -135,6 +135,7 @@ export const Button = styled.div`
 
   @media only screen and (max-width: 430px) {
     margin: 35px auto 0 auto;
+    width: 90vw;
   }
 `;
 export const Proizvod = styled.div`
@@ -259,7 +260,11 @@ export const LogoHks = styled.div`
     width: 90px;
     height: 90px; */
   }
-  @media only screen and (max-width: 410px) {
+  @media only screen and (max-width: 350px) {
+    top: 290px;
+
+    width: 60px;
+    height: 60px;
     /* position: absolute;
     top: 380px;
     width: 90px;
@@ -453,6 +458,13 @@ export const ImageWrap = styled.div`
     background-repeat: no-repeat;
     background-position: right;
   }
+  @media only screen and (max-width: 370px) {
+    height: 310px;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
 `;
 export const Potpis = styled.div`
   position: absolute;
@@ -470,6 +482,8 @@ export const Potpis = styled.div`
   }
 
   @media only screen and (max-width: 430px) {
+    width: 180px;
+    height: 190px;
     top: 0px;
 
     left: 0px;

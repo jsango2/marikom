@@ -13,8 +13,12 @@ export const WrapAll = styled.div`
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  margin: 0 0 40px 0;
+  margin: 0 0 50px 0;
   /* overflow: hidden; */
+  cursor: pointer;
+  &:hover .newsArrow {
+    left: 15px;
+  }
   @media only screen and (max-width: 820px) {
     width: 230px;
   }
@@ -105,6 +109,9 @@ export const Text = styled.h3`
   line-height: 136.5%; /* 21.84px */
   letter-spacing: 0.875px;
   width: 100%;
+  p {
+    margin-bottom: 0;
+  }
   @media only screen and (max-width: 600px) {
   }
 `;
@@ -147,10 +154,16 @@ export const ViseInfo = styled.div`
     align-items: center;
     justify-content: space-between;
   }
+  .newsArrow {
+    position: relative;
+    width: 50px;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+  }
   @media only screen and (max-width: 600px) {
   }
 `;
-export const LinkInfo = styled(Link)`
+export const LinkInfo = styled.div`
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 600;
@@ -164,7 +177,7 @@ export const LinkInfo = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 0px;
   cursor: pointer;
   /* a {
     color: #4299c8;

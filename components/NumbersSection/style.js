@@ -279,6 +279,7 @@ export const Number = styled.div`
   }
   @media only screen and (max-width: 435px) {
     font-size: 36px;
+    width: 185px;
   }
 `;
 export const WrapNumberText = styled.div`

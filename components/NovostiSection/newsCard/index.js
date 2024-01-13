@@ -24,30 +24,24 @@ function NewsCard({ datum, naslov, naslovEng, text, link }) {
   const { locale, locales, defaultLocale, asPath } = useRouter();
   const t = locale === "en" ? en : hr;
   return (
-    <WrapAll ref={ref} className={` ${inView ? "inView" : "outView"}`}>
-      <BlueLine />
-      <Datum>{datum}</Datum>
-      <Title>{naslov}</Title>
-      <Text
-        dangerouslySetInnerHTML={{
-          __html: [text.slice(0, 100) + "..."],
-        }}
-      ></Text>
-      <ViseInfo>
-        <LinkInfo
-          href={
-            locale === "hr" ? `/novosti/${slugify(link)}` : `/novosti/${link}`
-          }
-        >
-          {t.MoreInfo.MoreInfo}
-        </LinkInfo>
-        <ArrowRight />
-      </ViseInfo>
-      {/* <ViseInfo>
-        <LinkInfo href={`novosti/${link}`}>{t.MoreInfo.MoreInfo}</LinkInfo>
-        <ArrowRight />
-      </ViseInfo> */}
-    </WrapAll>
+    <Link
+      href={locale === "hr" ? `/novosti/${slugify(link)}` : `/novosti/${link}`}
+    >
+      <WrapAll ref={ref} className={` ${inView ? "inView" : "outView"}`}>
+        <BlueLine />
+        <Datum>{datum}</Datum>
+        <Title>{naslov}</Title>
+        <Text
+          dangerouslySetInnerHTML={{
+            __html: [text.slice(0, 100) + "..."],
+          }}
+        ></Text>
+        <ViseInfo>
+          <LinkInfo>{t.MoreInfo.MoreInfo}</LinkInfo>
+          <ArrowRight className="newsArrow" />
+        </ViseInfo>
+      </WrapAll>
+    </Link>
   );
 }
 
