@@ -209,7 +209,7 @@ export const MainLinks = styled.div`
     font-style: normal;
     font-weight: 500;
     line-height: 153%;
-    margin: 0 16px;
+    margin: 16px;
   }
   @media only screen and (max-width: 770px) {
     display: none;
@@ -258,6 +258,11 @@ export const SingleLink = styled(Link)`
   align-items: center;
   margin: 0 16px;
   cursor: pointer;
+  &div {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+  }
   @media only screen and (max-width: 600px) {
   }
 `;
@@ -278,8 +283,33 @@ export const SingleLink2 = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 3px;
+  margin: 6px 0;
+
   cursor: pointer;
+  a {
+    margin: 6px 0;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    justify-content: flex-start;
+    margin: 3px 0;
+  }
+`;
+export const LinkChild = styled.div`
+  position: relative;
+  z-index: 10;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 6px 0;
+  cursor: pointer;
+  &div {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+  }
 
   @media only screen and (max-width: 600px) {
     width: 100%;
@@ -305,6 +335,7 @@ export const Column = styled.div`
     font-style: normal;
     font-weight: 500;
     line-height: 153%;
+    margin: 5px 0;
   }
 
   @media only screen and (max-width: 770px) {

@@ -80,7 +80,7 @@ function PerlaPrviDio() {
       animationData: animacija,
       loop: false,
       autoplay: true,
-      initialSegment: [0, 68],
+      initialSegment: [1, 68],
     };
 
     const { View } = useLottie(options, style);

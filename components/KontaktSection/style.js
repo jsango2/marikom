@@ -142,6 +142,7 @@ export const Name = styled.h2`
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 22.4px */
+  margin-bottom: 0;
   @media only screen and (max-width: 600px) {
   }
   @media only screen and (max-width: 430px) {

@@ -16,6 +16,7 @@ import {
   Copy,
   CopyLink,
   WrapCerts,
+  LinkChild,
 } from "./style.js";
 import MarikomercLogo from "../../assets/svg/marikomerc_logo_footer.svg";
 import Instagram from "../../assets/svg/Instagram.svg";
@@ -82,44 +83,44 @@ function FooterSection() {
                   {t.Linkovi.glavonosci}
                 </SingleLink2>
                 <SingleLink2 href="/proizvodi">
-                  <div
+                  <LinkChild
                     style={{ cursor: "pointer" }}
                     onClick={() => setCategory(t.Linkovi.perlaProizvodi)}
                   >
                     {t.Linkovi.perlaProizvodi}
-                  </div>
+                  </LinkChild>
                 </SingleLink2>
                 <SingleLink2 href="/proizvodi">
-                  <div
+                  <LinkChild
                     style={{ cursor: "pointer" }}
                     onClick={() => setCategory(t.Linkovi.rakovi)}
                   >
                     {t.Linkovi.rakovi}
-                  </div>
+                  </LinkChild>
                 </SingleLink2>
                 <SingleLink2 href="/proizvodi">
-                  <div
+                  <LinkChild
                     style={{ cursor: "pointer" }}
                     onClick={() => setCategory(t.Linkovi.fileti)}
                   >
                     {t.Linkovi.fileti}
-                  </div>
+                  </LinkChild>
                 </SingleLink2>
                 <SingleLink2 href="/proizvodi">
-                  <div
+                  <LinkChild
                     style={{ cursor: "pointer" }}
                     onClick={() => setCategory(t.Linkovi.skoljkasi)}
                   >
                     {t.Linkovi.skoljkasi}
-                  </div>
+                  </LinkChild>
                 </SingleLink2>
                 <SingleLink2 href="/proizvodi">
-                  <div
+                  <LinkChild
                     style={{ cursor: "pointer" }}
                     onClick={() => setCategory(t.Linkovi.ribe)}
                   >
                     {t.Linkovi.ribe}
-                  </div>
+                  </LinkChild>
                 </SingleLink2>
                 <SingleLink2 href="/proizvodi">{t.Linkovi.ostali}</SingleLink2>
               </Column>
@@ -194,10 +195,18 @@ function FooterSection() {
               <a href="www.instagram.com">
                 <Instagram />
               </a>
-              <Facebook />
-              <Linkedin />
-              <Location />
-              <Email />
+              <a href="www.instagram.com">
+                <Facebook />
+              </a>
+              <a href="www.instagram.com">
+                <Linkedin />
+              </a>
+              <a href="www.instagram.com">
+                <Location />
+              </a>
+              <a href="www.instagram.com">
+                <Email />
+              </a>
             </Social>
             <WrapCerts>
               <Image src="/certifikat/MSC.svg" height={27} width={70} />

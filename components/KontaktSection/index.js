@@ -17,7 +17,7 @@ import {
 import useWindowSize from "../helper/usewindowsize";
 import { data } from "./data.js";
 import Image from "next/image.js";
-import bg from "../../assets/images/kontaktSekcijaBg.png";
+import bg from "../../assets/images/kontaktBgImg.webp";
 import { useScrollPercentage } from "react-scroll-percentage";
 import en from "../../locales/en.json";
 import hr from "../../locales/hr.json";
