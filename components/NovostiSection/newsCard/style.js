@@ -119,7 +119,7 @@ export const ViseInfo = styled.div`
   /* identical to box height, or 26px */
 
   /* SUNRISE/Coral */
-  width: 150px;
+  width: 158px;
   color: #4299c8;
   display: flex;
   align-items: center;

@@ -88,15 +88,18 @@ function index(props) {
     <Layout>
       <Container>
         {pageNumber < 1 && featuredNovost && (
-          <FeaturedNews>
+          <FeaturedNews className="newsCardFeatured">
             <Left>
-              <Image
-                src={
-                  featuredNovost[0].node.novosti.istaknutaFotografija.sourceUrl
-                }
-                layout="fill"
-                objectFit="cover"
-              />
+              <div className="newsCardPhotoFeatured">
+                <Image
+                  src={
+                    featuredNovost[0].node.novosti.istaknutaFotografija
+                      .sourceUrl
+                  }
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
             </Left>
             <Right>
               <NewsCard

@@ -19,6 +19,16 @@ export const WrapAll = styled.div`
   &:hover .newsArrow {
     left: 15px;
   }
+  & div.newsCardPhoto {
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1);
+  }
+
+  &:hover .newsCardPhoto {
+    transform: scale(1.04);
+  }
   @media only screen and (max-width: 820px) {
     width: 230px;
   }

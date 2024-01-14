@@ -4,7 +4,7 @@ import { AppContext } from "../../../../pages/_app.js";
 import { useContext } from "react";
 function ProizvodLink({ text, link }) {
   const [category, setCategory] = useContext(AppContext);
-  console.log("PROIZVODI CLOUD COMP:", category);
+
   return (
     <WrapAll>
       <Text>

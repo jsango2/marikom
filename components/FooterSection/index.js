@@ -29,7 +29,11 @@ import en from "../../locales/en.json";
 import hr from "../../locales/hr.json";
 import { useRouter } from "next/router.js";
 import Image from "next/image.js";
+import { useContext } from "react";
+import { AppContext } from "../../pages/_app.js";
 function FooterSection() {
+  const [category, setCategory] = useContext(AppContext);
+
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : hr;
@@ -70,18 +74,53 @@ function FooterSection() {
               </Column>
               <Column>
                 <SubName>{t.Linkovi.proizvodi}</SubName>
-                <SingleLink2 href="/proizvodi">
+
+                <SingleLink2
+                  href="/proizvodi"
+                  onClick={() => setCategory(t.Linkovi.glavonosci)}
+                >
                   {t.Linkovi.glavonosci}
                 </SingleLink2>
                 <SingleLink2 href="/proizvodi">
-                  {t.Linkovi.perlaProizvodi}
+                  <div
+                    style={{ cursor: "pointer" }}
+                    onClick={() => setCategory(t.Linkovi.perlaProizvodi)}
+                  >
+                    {t.Linkovi.perlaProizvodi}
+                  </div>
                 </SingleLink2>
-                <SingleLink2 href="/proizvodi">{t.Linkovi.rakovi}</SingleLink2>
-                <SingleLink2 href="/proizvodi">{t.Linkovi.fileti}</SingleLink2>
                 <SingleLink2 href="/proizvodi">
-                  {t.Linkovi.skoljkasi}
+                  <div
+                    style={{ cursor: "pointer" }}
+                    onClick={() => setCategory(t.Linkovi.rakovi)}
+                  >
+                    {t.Linkovi.rakovi}
+                  </div>
                 </SingleLink2>
-                <SingleLink2 href="/proizvodi">{t.Linkovi.ribe}</SingleLink2>
+                <SingleLink2 href="/proizvodi">
+                  <div
+                    style={{ cursor: "pointer" }}
+                    onClick={() => setCategory(t.Linkovi.fileti)}
+                  >
+                    {t.Linkovi.fileti}
+                  </div>
+                </SingleLink2>
+                <SingleLink2 href="/proizvodi">
+                  <div
+                    style={{ cursor: "pointer" }}
+                    onClick={() => setCategory(t.Linkovi.skoljkasi)}
+                  >
+                    {t.Linkovi.skoljkasi}
+                  </div>
+                </SingleLink2>
+                <SingleLink2 href="/proizvodi">
+                  <div
+                    style={{ cursor: "pointer" }}
+                    onClick={() => setCategory(t.Linkovi.ribe)}
+                  >
+                    {t.Linkovi.ribe}
+                  </div>
+                </SingleLink2>
                 <SingleLink2 href="/proizvodi">{t.Linkovi.ostali}</SingleLink2>
               </Column>
             </>

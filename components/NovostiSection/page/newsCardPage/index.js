@@ -28,7 +28,9 @@ function NewsCard({ datum, naslov, text, link, isFeatured, photo }) {
       <WrapAll isFeatured={isFeatured}>
         {!isFeatured && (
           <Photo>
-            <Image src={photo} layout="fill" objectFit="cover"></Image>
+            <div className="newsCardPhoto">
+              <Image src={photo} layout="fill" objectFit="cover"></Image>
+            </div>
           </Photo>
         )}
         <DataContainer>

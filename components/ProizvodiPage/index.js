@@ -259,6 +259,7 @@ function ProizvodiPage() {
   //         break;
   //     }
   //   });
+  console.log(category);
   return (
     <WrapAll>
       {size.width > 900 && (
