@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 // import Button from "../button/button.js";
 // import { useHistory } from "react-router-dom"
-import { WrapAll } from "./style.js";
+import { WrapLeftBlock, WrapRightBlock, WrapBlock } from "./style.js";
 // import scrollTo from "gatsby-plugin-smoothscroll"
 // import { AnchorLink } from "gatsby-plugin-anchor-links"
 // import { HashLink } from "react-router-hash-link";
@@ -40,75 +40,85 @@ const MeniMobile = ({
   return (
     <>
       <div className={`menu ${isOpen ? "openMenu" : "closedMenu"}`}>
-        <div
-          onClick={() => {
-            setIsOnamaMenuOpen(!isOnamaMenuOpen);
-            setIsGroupMenuOpen(false);
-          }}
-          className={`linkOnama ${
-            isOnamaMenuOpen ? "linkOnamaOpen" : "linkOnamaClosed"
-          }`}
-        >
-          {locale === "hr" ? "O nama" : "About us"}
-        </div>
-        {isOnamaMenuOpen && (
-          <div className="mobileSubLinkParent">
-            <Link href="/o-nama">
-              {locale === "hr" ? "Naša priča" : "Our story"}
+        <WrapBlock>
+          <WrapLeftBlock>
+            <div
+              onClick={() => {
+                setIsOnamaMenuOpen(!isOnamaMenuOpen);
+                setIsGroupMenuOpen(false);
+              }}
+              className={`linkOnama ${
+                isOnamaMenuOpen ? "linkOnamaOpen" : "linkOnamaClosed"
+              }`}
+            >
+              {locale === "hr" ? "O nama" : "About us"}
+            </div>
+            {isOnamaMenuOpen && (
+              <div className="mobileSubLinkParent">
+                <Link href="/o-nama">
+                  {locale === "hr" ? "Naša priča" : "Our story"}
+                </Link>
+                <Link href="/marikomerc-kvalitete">
+                  {locale === "hr"
+                    ? "Marikomerc kvalitete"
+                    : "Marikomerc qualities"}
+                </Link>
+                <Link href="/prerada-i-skladiste">
+                  {locale === "hr"
+                    ? "Prerada i skladište"
+                    : "Processing and Storage"}
+                </Link>
+              </div>
+            )}
+            <Link
+              className="mobileLinks"
+              href="/proizvodi"
+              // onClick={() => {
+              //   setIsOpen(false);
+              // }}
+            >
+              {locale === "hr" ? "Proizvodi" : "Products"}
             </Link>
-            <Link href="/marikomerc-kvalitete">
-              {locale === "hr"
-                ? "Marikomerc kvalitete"
-                : "Marikomerc qualities"}
+            <Link href="/horeca">
+              {locale === "hr" ? "HoReCa suradnja" : "HoReCa collaboration"}
             </Link>
-            <Link href="/prerada-i-skladiste">
-              {locale === "hr"
-                ? "Prerada i skladište"
-                : "Processing and Storage"}
+            <Link href="/karijere">
+              {locale === "hr" ? "Karijere" : "Careers"}
             </Link>
-          </div>
-        )}
-        <Link
-          className="mobileLinks"
-          href="/proizvodi"
-          // onClick={() => {
-          //   setIsOpen(false);
-          // }}
-        >
-          {locale === "hr" ? "Proizvodi" : "Products"}
-        </Link>
-        <Link href="/horeca">
-          {locale === "hr" ? "HoReCa suradnja" : "HoReCa collaboration"}
-        </Link>
-        <Link href="/karijere">{locale === "hr" ? "Karijere" : "Careers"}</Link>
-        <Link href="/kontakt">{locale === "hr" ? "Kontakt" : "Contact"}</Link>
-        <Link href="/novosti">{locale === "hr" ? "Novosti" : "News"}</Link>
-        <div
-          onClick={() => {
-            setIsGroupMenuOpen(!isGroupMenuOpen);
-            setIsOnamaMenuOpen(false);
-          }}
-          className={`linkGroup ${
-            isGroupMenuOpen ? "linkGroupOpen" : "linkGroupClosed"
-          }`}
-        >
-          {locale === "hr" ? "Grupa" : "Group"}
-        </div>
-        {isGroupMenuOpen && (
-          <div className="mobileSubLinkParent">
-            <Link className="navLinkDrop" href="/MLS">
-              {locale === "hr" ? "MLS Logistika" : "MLS Logistics"}
+            <Link href="/novosti">{locale === "hr" ? "Novosti" : "News"}</Link>
+          </WrapLeftBlock>
+          <WrapRightBlock>
+            <Link href="/kontakt">
+              {locale === "hr" ? "Kontakt" : "Contact"}
             </Link>
-            <Link className="navLinkDrop" href="/">
-              {locale === "hr"
-                ? "Di Maris - Ribarnice"
-                : "Di Maris - Fish market"}
-            </Link>
-            <Link className="navLinkDrop" href="/">
-              {locale === "hr" ? "Perla - Biser Mora" : "Perla - Sea Pearl"}
-            </Link>
-          </div>
-        )}
+            <div
+              onClick={() => {
+                setIsGroupMenuOpen(!isGroupMenuOpen);
+                setIsOnamaMenuOpen(false);
+              }}
+              className={`linkGroup ${
+                isGroupMenuOpen ? "linkGroupOpen" : "linkGroupClosed"
+              }`}
+            >
+              {locale === "hr" ? "Grupa" : "Group"}
+            </div>
+            {isGroupMenuOpen && (
+              <div className="mobileSubLinkParent">
+                <Link className="navLinkDrop" href="/MLS">
+                  {locale === "hr" ? "MLS Logistika" : "MLS Logistics"}
+                </Link>
+                <Link className="navLinkDrop" href="/">
+                  {locale === "hr"
+                    ? "Di Maris - Ribarnice"
+                    : "Di Maris - Fish market"}
+                </Link>
+                <Link className="navLinkDrop" href="/">
+                  {locale === "hr" ? "Perla - Biser Mora" : "Perla - Sea Pearl"}
+                </Link>
+              </div>
+            )}
+          </WrapRightBlock>
+        </WrapBlock>
         <div className="mobileLinkDivider"></div>
         <LanguageSwitcher
           closeMenu={closeMenu}
