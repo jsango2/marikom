@@ -90,7 +90,7 @@ function PerlaPrviDio() {
   const ReceptiAnimacija = () => {
     const options = {
       animationData: ReceptiLottie,
-      loop: false,
+      loop: true,
       autoplay: true,
       initialSegment: [0, 376],
       rendererSettings: {
@@ -105,13 +105,13 @@ function PerlaPrviDio() {
   };
   const { ref, inView, entry } = useInView({
     /* Optional options */
-    threshold: 0.2,
+    threshold: 0,
     triggerOnce: true,
   });
   const ref2 = useRef();
 
   return (
-    <WrapAll ref={ref2}>
+    <WrapAll ref={ref}>
       <Overlay>
         <Image
           src={rizotoBg}
@@ -135,7 +135,7 @@ function PerlaPrviDio() {
             <UpTitle>{t.Perla.topTitle}</UpTitle>
             <Title>{t.Perla.title}</Title>
             <SubTitle>{t.Perla.contactUs}</SubTitle>
-            <ListWrap ref={ref}>
+            <ListWrap r>
               <ListItem>
                 <GreenMark style={{ marginRight: "10px" }} />
                 <ItemText>{t.Perla.line1}</ItemText>

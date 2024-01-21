@@ -2,10 +2,11 @@ import Link from "next/link";
 import styled from "styled-components";
 
 export const WrapAll = styled.div`
+  box-sizing: border-box;
   position: relative;
   z-index: 8;
   width: 100%;
-  height: 838px;
+  height: auto;
   background: radial-gradient(
       79.54% 79.54% at 1.33% 0%,
       #374772 0%,
@@ -16,6 +17,7 @@ export const WrapAll = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 50px 0;
   /* overflow: hidden; */
   @media only screen and (max-width: 430px) {
     height: auto;
@@ -173,7 +175,7 @@ export const SubName = styled.h2`
   /* SUNRISE/Sunray */
 
   color: #f5faff;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   @media only screen and (max-width: 600px) {
   }
   @media only screen and (max-width: 420px) {
@@ -200,7 +202,7 @@ export const MainLinks = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 65px;
+  margin-top: 45px;
   a {
     text-decoration: none;
     color: white;
@@ -223,7 +225,7 @@ export const SubLinks = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 105px;
+  margin-top: 45px;
   @media only screen and (max-width: 1000px) {
     width: 95%;
   }

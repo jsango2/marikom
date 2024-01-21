@@ -41,7 +41,7 @@ const MainSection = () => {
         <SectionBodyText>{parse(t.Karijere.text)}</SectionBodyText>
         <SectionImages isIntersecting={isEntryIntersecting} />
 
-        <SectionSvgOne />
+        {/* <SectionSvgOne /> */}
         <SectionSvgTwo />
       </InnerWrapper>
     </MainSectionWrapper>

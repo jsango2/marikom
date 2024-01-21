@@ -80,10 +80,9 @@ export const BlueLine = styled.div`
       width: 80vw;
     }
     @media only screen and (max-width: 430px) {
-   
-    margin-top: 30px;
-    margin-bottom:5px ;
- 
+      margin-top: 30px;
+      margin-bottom: 5px;
+    }
   }
 `;
 export const Title = styled.h1`

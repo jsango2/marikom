@@ -136,11 +136,12 @@ export const SectionBodyText = styled.div`
   p {
     color: #1c2640;
     max-width: 120ch;
-    font-size: clamp(0.5rem, 1rem, 1rem);
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
     font-family: Gilroy;
+    margin: 0;
   }
 `;
 
@@ -169,11 +170,11 @@ export const SectionSvgOne = styled.div`
 `;
 
 export const SectionSvgTwo = styled.div`
-  background: url("../svg-sutra/13.svg");
+  background: url("/MarikomercLogoKarijere.svg");
   @media only screen and (min-width: 1440px) {
     width: 23.58138rem;
     height: 7.624rem;
-    bottom: -20%;
+    bottom: -25%;
     left: 15%;
   }
   width: 11rem;
@@ -186,7 +187,8 @@ export const SectionSvgTwo = styled.div`
 
   bottom: -12%;
   z-index: -1;
-  left: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const SectionImagesContainer = styled.div`
