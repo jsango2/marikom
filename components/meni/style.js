@@ -59,6 +59,7 @@ export const WrapBlock = styled.div`
   a {
     color: #f5faff;
     opacity: 1;
+    font-size: 18px;
   }
   /* overflow: hidden; */
   @media only screen and (max-width: 600px) {
@@ -91,7 +92,6 @@ export const BottomBlock = styled.div`
   box-sizing: border-box;
   position: relative;
   z-index: 10;
-
   display: flex;
   flex-direction: column;
   background: url("/kontaktBgImg.webp");
@@ -105,7 +105,7 @@ export const BottomBlock = styled.div`
   a {
     color: #1c2640;
     font-family: "Gilroy";
-    font-size: 16px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 500;
     line-height: 120%;
