@@ -76,11 +76,10 @@ function FooterSection() {
               <Column>
                 <SubName>{t.Linkovi.proizvodi}</SubName>
 
-                <SingleLink2
-                  href="/proizvodi"
-                  onClick={() => setCategory(t.Linkovi.glavonosci)}
-                >
-                  {t.Linkovi.glavonosci}
+                <SingleLink2 href="/proizvodi">
+                  <LinkChild onClick={() => setCategory(t.Linkovi.glavonosci)}>
+                    {t.Linkovi.glavonosci}
+                  </LinkChild>
                 </SingleLink2>
                 <SingleLink2 href="/proizvodi">
                   <LinkChild

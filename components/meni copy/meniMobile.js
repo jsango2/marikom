@@ -68,13 +68,7 @@ const MeniMobile = ({
             </Link>
           </div>
         )}
-        <Link
-          className="mobileLinks"
-          href="/proizvodi"
-          // onClick={() => {
-          //   setIsOpen(false);
-          // }}
-        >
+        <Link className="mobileLinks" href="/proizvodi">
           {locale === "hr" ? "Proizvodi" : "Products"}
         </Link>
         <Link href="/horeca">
