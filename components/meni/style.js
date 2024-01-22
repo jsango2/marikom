@@ -134,11 +134,34 @@ export const BottomBlockTop = styled.div`
     font-style: normal;
     font-weight: 500;
     line-height: 120%;
-    margin: 7px 0;
+    margin: 14px 0;
+    opacity: 1;
   }
   /* flex-direction: column;
   align-items: center; */
   /* overflow: hidden; */
   @media only screen and (max-width: 600px) {
+    a {
+      color: #1c2640;
+      font-family: "Gilroy";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+      margin: 12px 0;
+      opacity: 1;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    a {
+      color: #1c2640;
+      font-family: "Gilroy";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+      margin: 7px 0;
+      opacity: 1;
+    }
   }
 `;
