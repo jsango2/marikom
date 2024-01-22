@@ -50,7 +50,7 @@ export const WrapBlock = styled.div`
   z-index: 10;
   margin-top: 30px;
   display: flex;
-  height: 60%;
+  height: 75%;
   width: 100%;
   flex-direction: column;
   align-items: center;
