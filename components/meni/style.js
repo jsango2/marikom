@@ -119,7 +119,7 @@ export const BottomBlockTop = styled.div`
   box-sizing: border-box;
   position: relative;
   z-index: 10;
-
+  margin-bottom: 20px;
   display: flex;
   width: 90%;
   width: 90%;
