@@ -49,7 +49,7 @@ export const Container = styled.div`
   z-index: 10;
   width: 100%;
   max-width: 1440px;
-  height: 542px;
+  height: 450px;
   display: flex;
   margin: 0 auto;
   border-radius: 3px;

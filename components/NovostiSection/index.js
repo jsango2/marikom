@@ -54,7 +54,11 @@ function NovostiSection({ background, novosti }) {
               link={
                 locale === "hr"
                   ? `${slugify(
-                      n.node.novosti.naslov.toLowerCase().split(" ").join("-")
+                      n.node.novosti.naslov.toLowerCase().split(" ").join("-"),
+                      {
+                        locale: "hrv",
+                        strict: true,
+                      }
                     )}` +
                     "-" +
                     n.node.novosti.datum.split("/").join("-")
@@ -62,7 +66,11 @@ function NovostiSection({ background, novosti }) {
                       n.node.novosti.naslovEng
                         .toLowerCase()
                         .split(" ")
-                        .join("-")
+                        .join("-"),
+                      {
+                        locale: "eng",
+                        strict: true,
+                      }
                     )}` +
                     "-" +
                     n.node.novosti.datum.split("/").join("-")

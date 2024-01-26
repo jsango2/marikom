@@ -20,7 +20,7 @@ export const AdSectionHeader = styled.h2`
   text-align: center;
   position: relative;
   max-width: 100vw;
-  font-size: clamp(1rem, 2.5rem, 3vw);
+  font-size: clamp(1.3rem, 2.5rem, 3vw);
   font-style: normal;
   font-weight: 600;
   line-height: 120%;
@@ -89,6 +89,9 @@ export const AdSectionAdContainer = styled.div`
   @media only screen and (max-width: 875px) {
     margin-top: 1rem;
   }
+  @media only screen and (max-width: 430px) {
+    padding: 0;
+  }
 `;
 
 export const NemaOglasa = styled.h3`
@@ -125,6 +128,7 @@ export const AdSectionInnerContainer = styled.div`
   }
   @media only screen and (max-width: 430px) {
     gap: 0.5rem;
+    width: 70%;
   }
 
   place-items: center start;
@@ -140,7 +144,7 @@ export const AdSectionSpanBodyWrapper = styled.div`
     width: 50%;
   }
   @media only screen and (max-width: 430px) {
-    width: 85%;
+    width: 95%;
   }
   @media only screen and (max-width: 400px) {
     gap: 2rem;
@@ -152,7 +156,7 @@ export const AdSectionSingleAd = styled.div`
   flex-flow: row wrap;
   gap: 1rem;
   justify-content: space-between;
-  padding: 0 3rem;
+  padding: 0 3rem 0 1rem;
   /* transform: translateY(-50%); */
   opacity: 1;
   /* animation: ${adsAnimation} 1s ease forwards; */
@@ -186,7 +190,7 @@ export const AdSectionSingleAd = styled.div`
   }
   @media only screen and (max-width: 430px) {
     padding: 0rem;
-    width: 95vw;
+    width: 100vw;
     span {
       font-size: 54px;
     }

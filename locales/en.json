@@ -68,7 +68,7 @@
     "uvjeti": "Requirements",
     "trajanjeNatjecaja": "Ad valid until:",
     "mjestoRada": "Job location:",
-    "pogledajOglasButton": "Check Ad",
+    "pogledajOglasButton": "OPEN AD",
     "stoNudimo": "What We Offer",
     "karijere": "Careers",
     "naslov": "More than 150 Professionals Dedicated to Excellence",
@@ -225,5 +225,11 @@
     "sat": "Saturday",
     "sun": "Sunday",
     "upute": "Google Maps directions"
+  },
+  "DiMaris": {
+    "content1Naslov": "When you think of fish, we know you're thinking of DI Maris.",
+    "content1Text": "DI Maris fish markets are a place where, with pleasant conversation with our staff, you'll gain inspiration and advice for preparing a top-notch seafood meal.<br/><br/>We offer a rich selection of fish and seafood, as well as fresh vegetables, delicacies, pasta, oils, and wines.",
+    "content2Naslov": "But is preparing fish demanding, and does it need cleaning?!",
+    "content2Text": "Our sales location at Miroslava Krleže 1c has received a new look. DI Maris is more than just a fish market; it's a place for gathering and socializing with the highest-quality selection of frozen products, fresh fish and vegetables, delicacies, olive oil, and the best wines from Zadar.<br/><br/> In Maraska Park, you can find all of the mentioned and much more, along with advice and warm words from our knowledgeable and friendly staff, who will make your shopping experience even better. Moreover, cleaning fresh fish is complimentary for all our loyal customers. <br/><br/>Sounds too good to be true? Come to DI Maris and see for yourself. We eagerly await your visit."
   }
 }

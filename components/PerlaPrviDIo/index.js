@@ -1,5 +1,6 @@
 import {
   LightBlueBg,
+  TopImage,
   WrapAll,
   WrapContent,
   Overlay,
@@ -14,7 +15,10 @@ import {
   ListWrap,
   ListItem,
   WrapButton,
+  WrapBottom,
   ItemText,
+  OverlayTop,
+  TextTopImage,
 } from "./style.js";
 
 import Logo from "../../svg/perlalogo.svg";
@@ -112,63 +116,74 @@ function PerlaPrviDio() {
 
   return (
     <WrapAll ref={ref}>
-      <Overlay>
-        <Image
-          src={rizotoBg}
-          alt="Picture of the author"
-          layout="fill"
-          objectFit="cover"
-        />
-      </Overlay>
-      <WrapContent>
-        <WrapPhotos2>
-          {" "}
-          {/* <LightBlueBg> */}
-          <ReceptiAnimacija />
-          {/* </LightBlueBg> */}
-        </WrapPhotos2>
-        <RightSide>
-          <PerlaLogoWrap>
-            <LogoWrap>{inView && <PerlaLogoAnimacija />}</LogoWrap>
-          </PerlaLogoWrap>
-          <TextWrap>
-            <UpTitle>{t.Perla.topTitle}</UpTitle>
-            <Title>{t.Perla.title}</Title>
-            <SubTitle>{t.Perla.contactUs}</SubTitle>
-            <ListWrap r>
-              <ListItem>
-                <GreenMark style={{ marginRight: "10px" }} />
-                <ItemText>{t.Perla.line1}</ItemText>
-              </ListItem>
-              <ListItem>
-                <GreenMark style={{ marginRight: "10px" }} />
-                <ItemText>{t.Perla.line2}</ItemText>
-              </ListItem>
-              <ListItem>
-                <GreenMark style={{ marginRight: "10px" }} />
-                <ItemText>{t.Perla.line3}</ItemText>
-              </ListItem>
-              <ListItem>
-                <GreenMark style={{ marginRight: "10px" }} />
-                <ItemText>{t.Perla.line4}</ItemText>
-              </ListItem>
-              <ListItem>
-                <GreenMark style={{ marginRight: "10px" }} />
-                <ItemText>{t.Perla.line5}</ItemText>
-              </ListItem>
-            </ListWrap>
-            <WrapButton>
-              <Button
-                bgcolor="#4299C8"
-                color="#FFFFFF"
-                width="226px"
-                text={t.Perla.button}
-                linkTo="/o-nama"
-              />
-            </WrapButton>
-          </TextWrap>
-        </RightSide>{" "}
-      </WrapContent>
+      <TopImage>
+        <a href="https://www.youtube.com">
+          <Image src="/playIcon.svg" width={40} height={40} />
+        </a>
+        <TextTopImage>
+          Izdvojite 2 minute i saznajte zašto smo najbolji u onom što radimo.
+        </TextTopImage>
+        <OverlayTop />
+      </TopImage>
+      <WrapBottom>
+        <Overlay>
+          <Image
+            src={rizotoBg}
+            alt="Picture of the author"
+            layout="fill"
+            objectFit="cover"
+          />
+        </Overlay>
+        <WrapContent>
+          <WrapPhotos2>
+            {" "}
+            {/* <LightBlueBg> */}
+            <ReceptiAnimacija />
+            {/* </LightBlueBg> */}
+          </WrapPhotos2>
+          <RightSide>
+            <PerlaLogoWrap>
+              <LogoWrap>{inView && <PerlaLogoAnimacija />}</LogoWrap>
+            </PerlaLogoWrap>
+            <TextWrap>
+              <UpTitle>{t.Perla.topTitle}</UpTitle>
+              <Title>{t.Perla.title}</Title>
+              <SubTitle>{t.Perla.contactUs}</SubTitle>
+              <ListWrap r>
+                <ListItem>
+                  <GreenMark style={{ marginRight: "10px" }} />
+                  <ItemText>{t.Perla.line1}</ItemText>
+                </ListItem>
+                <ListItem>
+                  <GreenMark style={{ marginRight: "10px" }} />
+                  <ItemText>{t.Perla.line2}</ItemText>
+                </ListItem>
+                <ListItem>
+                  <GreenMark style={{ marginRight: "10px" }} />
+                  <ItemText>{t.Perla.line3}</ItemText>
+                </ListItem>
+                <ListItem>
+                  <GreenMark style={{ marginRight: "10px" }} />
+                  <ItemText>{t.Perla.line4}</ItemText>
+                </ListItem>
+                <ListItem>
+                  <GreenMark style={{ marginRight: "10px" }} />
+                  <ItemText>{t.Perla.line5}</ItemText>
+                </ListItem>
+              </ListWrap>
+              <WrapButton>
+                <Button
+                  bgcolor="#4299C8"
+                  color="#FFFFFF"
+                  width="226px"
+                  text={t.Perla.button}
+                  linkTo="/o-nama"
+                />
+              </WrapButton>
+            </TextWrap>
+          </RightSide>{" "}
+        </WrapContent>
+      </WrapBottom>
     </WrapAll>
   );
 }

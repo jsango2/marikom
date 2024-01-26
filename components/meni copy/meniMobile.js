@@ -57,9 +57,7 @@ const MeniMobile = ({
               {locale === "hr" ? "Naša priča" : "Our story"}
             </Link>
             <Link href="/marikomerc-kvalitete">
-              {locale === "hr"
-                ? "Marikomerc kvalitete"
-                : "Marikomerc qualities"}
+              {locale === "hr" ? "Marikomerc kvalitete" : "Marikomerc quality"}
             </Link>
             <Link href="/prerada-i-skladiste">
               {locale === "hr"

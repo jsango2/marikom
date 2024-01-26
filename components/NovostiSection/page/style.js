@@ -31,7 +31,23 @@ export const FeaturedNews = styled.div`
   @media only screen and (max-width: 650px) {
     flex-direction: column;
     margin-bottom: 0px;
-    background-color: #e8e8e8;
+    background-color: #e8e8e82b;
+  }
+`;
+export const OverlayNews = styled.div`
+  position: absolute;
+  background: linear-gradient(
+    180deg,
+    rgba(199, 199, 199, 0.1) 0%,
+    rgba(242, 242, 242, 0) 100%
+  );
+  width: 100vw;
+  height: 100%;
+  top: -70px;
+  @media only screen and (max-width: 1250px) {
+  }
+  @media only screen and (max-width: 650px) {
+    display: none;
   }
 `;
 export const Pagination = styled.div`

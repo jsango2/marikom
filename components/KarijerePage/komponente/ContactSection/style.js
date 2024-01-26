@@ -4,13 +4,13 @@ export const ContactSectionWrapper = styled.div`
   place-self: center;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
   place-items: center;
   padding: 0 0 15rem 0;
   place-self: center;
   margin: 130px auto;
   @media only screen and (max-width: 430px) {
-    margin: 130px auto 70px auto;
+    margin: 80px auto 70px auto;
     padding: 0;
   }
 `;
@@ -43,6 +43,7 @@ export const ContactSectionHeadingOne = styled.div`
     line-height: 142.5%;
     color: #1c2640;
     font-family: Gilroy;
+    margin: 0;
   }
 
   a {
@@ -84,6 +85,7 @@ export const ContactSectionHeadingTwo = styled.h2`
   max-width: 60ch;
   text-decoration: none;
   font-family: Gilroy;
+  margin: 0;
 `;
 
 export const ContactSectionImageStack = styled.div`

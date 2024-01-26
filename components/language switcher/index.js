@@ -69,13 +69,18 @@ function LanguageSwitcher({
       if (asPath.includes("/karijere/")) {
         const getTranslationRouteForNews = oglasiNaslovi.filter((naslov) =>
           locale === "en"
-            ? naslov.node.oglasi.naslovOglasaEng
-                .toLowerCase()
-                .split(" ")
-                .join("-") +
-                "-" +
-                naslov.node.id ===
-              getSlug
+            ? slugify(
+                naslov.node.oglasi.naslovOglasaEng
+                  .toLowerCase()
+                  .split(" ")
+                  .join("-") +
+                  "-" +
+                  naslov.node.id,
+                {
+                  locale: "eng",
+                  strict: true,
+                }
+              ) === getSlug
             : slugify(
                 naslov.node.oglasi.naslovOglasa
                   .toLowerCase()
@@ -83,18 +88,21 @@ function LanguageSwitcher({
                   .join("-") +
                   "-" +
                   naslov.node.id,
-                { locale: "hrv" }
+                { locale: "hrv", strict: true }
               ) === getSlug
         );
 
         const matchingUrl =
           locale === "hr"
-            ? getTranslationRouteForNews[0].node.oglasi.naslovOglasaEng
-                .toLowerCase()
-                .split(" ")
-                .join("-") +
-              "-" +
-              getTranslationRouteForNews[0].node.id
+            ? slugify(
+                getTranslationRouteForNews[0].node.oglasi.naslovOglasaEng
+                  .toLowerCase()
+                  .split(" ")
+                  .join("-") +
+                  "-" +
+                  getTranslationRouteForNews[0].node.id,
+                { locale: "eng", strict: true }
+              )
             : slugify(
                 getTranslationRouteForNews[0].node.oglasi.naslovOglasa
                   .toLowerCase()
@@ -102,7 +110,7 @@ function LanguageSwitcher({
                   .join("-") +
                   "-" +
                   getTranslationRouteForNews[0].node.id,
-                { locale: "hrv" }
+                { locale: "hrv", strict: true }
               );
         console.log(matchingUrl);
         return router.push(matchingUrl, undefined, { locale: lang });
@@ -118,6 +126,7 @@ function LanguageSwitcher({
                   .join("-"),
                 {
                   locale: "eng",
+                  strict: true,
                 }
               ) +
                 "-" +
@@ -127,6 +136,7 @@ function LanguageSwitcher({
                 naslov.node.novosti.naslov.toLowerCase().split(" ").join("-"),
                 {
                   locale: "hrv",
+                  strict: true,
                 }
               ) +
                 "-" +
@@ -145,7 +155,7 @@ function LanguageSwitcher({
                   getTranslationRouteForNews[0].node.novosti.datum
                     .split("/")
                     .join("-"),
-                { locale: "eng" }
+                { locale: "eng", strict: true }
               )
             : slugify(
                 getTranslationRouteForNews[0].node.novosti.naslov
@@ -156,7 +166,7 @@ function LanguageSwitcher({
                   getTranslationRouteForNews[0].node.novosti.datum
                     .split("/")
                     .join("-"),
-                { locale: "hrv" }
+                { locale: "hrv", strict: true }
               );
         console.log(matchingUrl);
         return router.push(matchingUrl, undefined, { locale: lang });

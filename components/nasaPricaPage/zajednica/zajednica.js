@@ -16,7 +16,7 @@ import {
 import { useRouter } from "next/router.js";
 import en from "../../../locales/en.json";
 import hr from "../../../locales/hr.json";
-import { TitleH4 } from "../../../styles/globalStyle.js";
+import { TitleH4 } from "../vrijednost/style.js";
 
 function Zajednica() {
   const { locale } = useRouter();

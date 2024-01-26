@@ -101,7 +101,7 @@ export const WrapImages = styled.div`
   display: flex;
   justify-content: space-around;
   height: auto;
-  width: 100%;
+  width: 92 %;
   margin-top: 100px;
   @media only screen and (max-width: 850px) {
     margin-top: 60px;
@@ -187,7 +187,7 @@ export const Title = styled.h2`
   /* identical to box height, or 48px */
 
   text-align: center;
-
+  text-transform: uppercase;
   color: #000000;
   margin: 10px 0 30px 0;
   @media only screen and (max-width: 1200px) {

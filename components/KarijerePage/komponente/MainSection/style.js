@@ -50,6 +50,7 @@ export const MainSectionWrapper = styled.div`
   place-self: center;
   @media only screen and (max-width: 430px) {
     margin-top: 0px;
+    max-width: 90%;
   }
 `;
 
@@ -126,6 +127,7 @@ export const SectionBodyText = styled.div`
   gap: 1rem;
   place-items: start;
   grid-template-columns: repeat(1, 1fr);
+
   @media only screen and (min-width: 1440px) {
     flex-basis: 28rem;
   }

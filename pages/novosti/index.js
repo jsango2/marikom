@@ -7,6 +7,7 @@ import {
   Left,
   Right,
   Pagination,
+  OverlayNews,
 } from "../../components/NovostiSection/page/style.js";
 import { news } from "../../news";
 import NewsCard from "../../components/NovostiSection/page/newsCardPage";
@@ -125,7 +126,7 @@ function index(props) {
                           featuredNovost[0].node.novosti.datum
                             .split("/")
                             .join("-"),
-                        { locale: "hrv" }
+                        { locale: "hrv", strict: true }
                       )
                     : slugify(
                         featuredNovost[0].node.novosti.naslovEng
@@ -135,7 +136,8 @@ function index(props) {
                           "-" +
                           featuredNovost[0].node.novosti.datum
                             .split("/")
-                            .join("-")
+                            .join("-"),
+                        { locale: "eng", strict: true }
                       )
                 }
                 isFeatured
@@ -145,6 +147,7 @@ function index(props) {
         )}
 
         <News>
+          <OverlayNews />
           {currentItems.map((card) => (
             <NewsCard
               key={card.node.id}
@@ -168,7 +171,7 @@ function index(props) {
                         .join("-") +
                         "-" +
                         card.node.novosti.datum.split("/").join("-"),
-                      { locale: "hrv" }
+                      { locale: "hrv", strict: true }
                     )
                   : slugify(
                       card.node.novosti.naslovEng
@@ -176,7 +179,8 @@ function index(props) {
                         .split(" ")
                         .join("-") +
                         "-" +
-                        card.node.novosti.datum.split("/").join("-")
+                        card.node.novosti.datum.split("/").join("-"),
+                      { locale: "eng", strict: true }
                     )
               }
               isFeatured={false}

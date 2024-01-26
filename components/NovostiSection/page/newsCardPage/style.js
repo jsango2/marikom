@@ -70,7 +70,6 @@ export const Photo = styled.div`
   width: 100%;
   height: 250px;
   background: white;
-  border-radius: 3px;
   overflow: hidden;
   /* overflow: hidden; */
   @media only screen and (max-width: 600px) {
@@ -106,6 +105,7 @@ export const Title = styled.h1`
 
   color: #37313c;
   margin-top: 5px;
+  text-transform: uppercase;
   @media only screen and (max-width: 600px) {
   }
 `;
@@ -136,6 +136,7 @@ export const Datum = styled.p`
   /* SUNRISE / Dark Grey */
 
   color: #aea8b3;
+  margin-bottom: 0;
   @media only screen and (max-width: 600px) {
     margin-top: 10px;
   }

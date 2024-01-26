@@ -37,7 +37,7 @@ export const Container = styled.div`
   z-index: 11;
   height: auto;
   max-width: 1450px;
-  width: 90%;
+  width: 95%;
   display: flex;
 
   justify-content: space-between;
@@ -218,7 +218,9 @@ export const Number = styled.h1`
   top: 37px;
   left: -55px;
   width: 131px;
-  @media only screen and (max-width: 1250px) {
+  @media only screen and (max-width: 450px) {
+    left: -40px;
+
     /* font-size: 14px;
     width: 90%; */
   }

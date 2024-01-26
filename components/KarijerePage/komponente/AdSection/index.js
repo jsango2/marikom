@@ -103,16 +103,17 @@ const AdSection = (oglasi) => {
                                 .join("-") +
                                 "-" +
                                 item.node.id,
-                              { locale: "hrv" }
+                              { locale: "hrv", strict: true }
                             )}`
-                          : `/karijere/${
+                          : `/karijere/${slugify(
                               item.node.oglasi.naslovOglasaEng
                                 .toLowerCase()
                                 .split(" ")
                                 .join("-") +
-                              "-" +
-                              item.node.id
-                            }`
+                                "-" +
+                                item.node.id,
+                              { locale: "eng", strict: true }
+                            )}`
                       }
                     >
                       {t.Karijere.pogledajOglasButton}

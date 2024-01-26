@@ -49,7 +49,7 @@ export const CardText = styled.p`
 export const WrapImages = styled.div`
   position: relative;
   width: 100%;
-  height: 50%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,14 +57,16 @@ export const WrapImages = styled.div`
   @media only screen and (max-width: 850px) {
     /* padding-top: 40px;
     height: auto; */
-    height: 180px;
+    height: auto;
   }
 `;
 export const WrapCertImage = styled.div`
   position: relative;
   width: 100%;
-  height: 45%;
+  height: 70px;
   max-width: 200px;
+  margin: 3px 0;
+
   @media only screen and (max-width: 850px) {
     /* padding-top: 40px;
     height: auto; */
@@ -94,24 +96,25 @@ export const WrapSingleCert = styled.div`
   background-image: url("/kvaliteteCard.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 37px 29px;
-  height: 508px;
+  padding: 57px 29px;
+  height: auto;
   width: 300px;
   text-align: center;
   border-radius: 4px;
   overflow: hidden;
   margin: 0 3px;
+
   @media only screen and (max-width: 850px) {
     /* padding-top: 40px;
     height: auto; */
     margin: 10px 0px;
+    height: auto;
   }
   @media only screen and (max-width: 430px) {
     /* padding-top: 40px;
     height: auto; */
     margin: 10px 0px;
     width: 80vw;
-    height: auto;
   }
 `;
 export const ContentWrap = styled.div`
@@ -155,7 +158,7 @@ export const Title = styled.h2`
   text-align: center;
 
   color: #000000;
-  margin: 10px 0 30px 0;
+  margin: 10px 0 10px 0;
   @media only screen and (max-width: 1200px) {
   }
   @media only screen and (max-width: 650px) {
@@ -175,6 +178,7 @@ export const UpTitle = styled.h2`
   text-align: center;
 
   color: #000000;
+  margin-bottom: 0;
   @media only screen and (max-width: 1200px) {
   }
   @media only screen and (max-width: 650px) {
@@ -205,7 +209,8 @@ export const Text = styled.h2`
 export const TextBox = styled.div`
   position: relative;
   z-index: 10;
-  width: 750px;
+  min-width: 750px;
+  width: 75%;
   height: auto;
 
   display: flex;
@@ -221,6 +226,7 @@ export const TextBox = styled.div`
     height: auto;
   }
   @media only screen and (max-width: 850px) {
+    min-width: unset;
     width: 90%;
   }
   @media only screen and (max-width: 430px) {

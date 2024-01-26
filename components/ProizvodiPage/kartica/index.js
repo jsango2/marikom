@@ -66,7 +66,7 @@ function Kartica({
         {hasPhoto ? (
           <Image src={photo} layout="fill" objectFit="contain" />
         ) : (
-          <Image src={ph} layout="fill" objectFit="cover" />
+          <Image src="/placeholderImg.png" layout="fill" objectFit="contain" />
         )}
       </Photo>
       <WrapData>

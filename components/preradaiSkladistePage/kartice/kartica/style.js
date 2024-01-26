@@ -42,7 +42,7 @@ export const WrapKartica = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 60px auto 0 auto;
+  margin: 100px auto 0 auto;
   &:nth-child(2) {
     flex-direction: row-reverse;
   }
@@ -50,7 +50,7 @@ export const WrapKartica = styled.div`
     width: 100%;
   }
   @media only screen and (max-width: 850px) {
-    margin: 20px auto 0 auto;
+    margin: 30px auto 0 auto;
 
     &:nth-child(2) {
       flex-direction: column;
@@ -60,12 +60,12 @@ export const WrapKartica = styled.div`
   }
 `;
 export const WrapKartica3 = styled(WrapKartica)`
-  margin: 200px auto 0 auto;
+  margin: 100px auto 0 auto;
 
   @media only screen and (max-width: 1250px) {
   }
   @media only screen and (max-width: 850px) {
-    margin: 40px auto 0 auto;
+    margin: 30px auto 0 auto;
   }
 `;
 
@@ -97,7 +97,7 @@ export const Photo1 = styled.div`
   position: relative;
   z-index: 10;
   width: 600px;
-  height: 451px;
+  height: 100%;
   background-color: grey;
   display: flex;
   justify-content: space-between;
@@ -276,7 +276,7 @@ export const BlueLine = styled.div`
   background: #4299c8;
   top: 18px;
   left: -20px;
-  border-radius: 2px;
+  /* border-radius: 2px; */
   /* overflow: hidden; */
   transition: all 1.5s ease-out;
   transition-delay: 0.8s;

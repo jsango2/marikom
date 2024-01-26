@@ -16,9 +16,9 @@ export const WrapAll = styled.div`
   /* padding-bottom: 50px; */
   /* border: 2px solid var(--color-boja-svj-plava-ocjena, #bee2f0); */
 
-  -webkit-box-shadow: 10px 10px 73px -43px rgba(0, 0, 0, 0.65);
-  -moz-box-shadow: 10px 10px 73px -43px rgba(0, 0, 0, 0.65);
-  box-shadow: 10px 10px 73px -43px rgba(0, 0, 0, 0.65);
+  -webkit-box-shadow: 7px 6px 20px 6px rgb(0 0 0 / 7%);
+  -moz-box-shadow: 7px 6px 20px 6px rgb(0 0 0 / 7%);
+  box-shadow: 7px 6px 20px 6px rgb(0 0 0 / 7%);
   margin: 9px 8px;
   padding: 15px 0;
   /* transform: ; */

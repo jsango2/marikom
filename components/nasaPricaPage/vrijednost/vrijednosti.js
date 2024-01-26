@@ -3,6 +3,7 @@ import {
   TextBox,
   UpTitle,
   Title,
+  TitleH4,
   Text,
   WrapIcon,
   WrapIcons,
@@ -19,10 +20,9 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import img1 from "../../../assets/images/nasaPrica/1.png";
-import img2 from "../../../assets/images/nasaPrica/2.png";
-import img3 from "../../../assets/images/nasaPrica/3.png";
-import img4 from "../../../assets/images/nasaPrica/4.png";
-import { TitleH2, TitleH4 } from "../../../styles/globalStyle.js";
+import img2 from "../../../assets/images/nasaPrica/vrijednostiImg1.png";
+import img3 from "../../../assets/images/nasaPrica/vrijednostiImg3.png";
+import img4 from "../../../assets/images/nasaPrica/vrijednostiImg4.png";
 import { useRouter } from "next/router.js";
 import en from "../../../locales/en.json";
 import hr from "../../../locales/hr.json";
@@ -113,17 +113,6 @@ function Vrijednosti() {
           </WrapIcon>
         </WrapIcons>
         <WrapImages>
-          <Img1>
-            {" "}
-            <Image
-              src={img1}
-              // width={157}
-              // height={244}
-              layout="fill"
-              alt="p1"
-              objectFit="cover"
-            />
-          </Img1>
           <Img2>
             {" "}
             <Image
@@ -135,6 +124,17 @@ function Vrijednosti() {
               objectFit="cover"
             />
           </Img2>
+          <Img1>
+            {" "}
+            <Image
+              src={img1}
+              // width={157}
+              // height={244}
+              layout="fill"
+              alt="p1"
+              objectFit="cover"
+            />
+          </Img1>
           <Img3>
             {" "}
             <Image

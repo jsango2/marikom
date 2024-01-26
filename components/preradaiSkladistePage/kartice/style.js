@@ -23,7 +23,7 @@ export const WrapAll = styled.div`
   overflow: hidden;
   z-index: 0; */
   overflow: hidden;
-  padding-top: 85px;
+  padding-top: 25px;
   padding-bottom: 50px;
   @media only screen and (max-width: 1400px) {
     padding: 100px 0 70px 70px;
@@ -60,7 +60,7 @@ export const WrapKartica = styled.div`
   }
 `;
 export const WrapKartica3 = styled(WrapKartica)`
-  margin: 200px auto 0 auto;
+  margin: 150px auto 0 auto;
 
   @media only screen and (max-width: 1250px) {
   }
@@ -274,7 +274,7 @@ export const BlueLine = styled.div`
   background: #4299c8;
   top: 18px;
   left: -20px;
-  border-radius: 2px;
+  /* border-radius: 0px; */
   /* overflow: hidden; */
   transition: all 1.5s ease-out;
   transition-delay: 0.8s;

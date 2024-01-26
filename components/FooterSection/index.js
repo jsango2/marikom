@@ -126,7 +126,7 @@ function FooterSection() {
             </>
           ) : (
             <Column>
-              <SubName>MENI</SubName>
+              <SubName>{locale === "hr" ? "MENI" : "MENU"}</SubName>
               <SingleLink2 href="/o-nama">{t.Linkovi.onama}</SingleLink2>
               <SingleLink2 href="/proizvodi">{t.Linkovi.proizvodi}</SingleLink2>
               <SingleLink2 href="/novosti">{t.Linkovi.novosti}</SingleLink2>
@@ -144,7 +144,9 @@ function FooterSection() {
           <Column2>
             <SubName>{t.Linkovi.claniceGrupe}</SubName>
             <SingleLink2 href="/">Marikomerc</SingleLink2>
-            <SingleLink2 href="/">DiMaris Ribarnice</SingleLink2>
+            <SingleLink2 href="/">
+              {locale === "hr" ? "Di Maris Ribarnice" : "Di Maris Fishmarket"}
+            </SingleLink2>
             <SingleLink2 href="/MLS">MLS Logistika</SingleLink2>
           </Column2>
           {size.width > 770 && (

@@ -110,11 +110,8 @@ export const Overlay = styled.div`
   height: 100%;
   /* background: #1c2640;
   opacity: 0.3; */
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.2) 0%,
-    rgba(0, 0, 0, 0.2) 100%
-  );
+  opacity: 0.3;
+  background: #1c2640;
   top: 0;
   left: 0;
   @media only screen and (max-width: 600px) {

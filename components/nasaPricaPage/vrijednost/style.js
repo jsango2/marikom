@@ -221,6 +221,26 @@ export const Title = styled.h2`
     font-size: 36px;
   }
 `;
+export const TitleH4 = styled.h4`
+  position: relative;
+
+  color: #000;
+  text-align: center;
+
+  /* H5 16 nadnaslov */
+  font-family: "Roboto Condensed";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  @media only screen and (max-width: 1200px) {
+  }
+  @media only screen and (max-width: 650px) {
+    font-size: 16px;
+  }
+`;
 export const UpTitle = styled.h4`
   position: relative;
 

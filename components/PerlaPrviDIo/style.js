@@ -6,6 +6,27 @@ export const WrapAll = styled.div`
   width: 100%;
   height: auto;
   background: white;
+  /* padding-bottom: 130px; */
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+  /* overflow: hidden; */
+  @media only screen and (max-width: 1000px) {
+    /* padding-bottom: 0px; */
+  }
+
+  @media only screen and (max-width: 430px) {
+    /* padding-bottom: 100px; */
+  }
+`;
+export const WrapBottom = styled.div`
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: auto;
+  background: white;
   padding-bottom: 130px;
 
   /* display: flex;
@@ -38,6 +59,26 @@ export const WrapPhotos = styled.div`
     height: auto;
   }
 `;
+export const TopImage = styled.div`
+  box-sizing: border-box;
+  position: relative;
+  background: url("/perlaPrviDioTopImage.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 10;
+  width: 100%;
+  height: 380px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+  @media only screen and (max-width: 1400px) {
+    width: 100%;
+  }
+`;
 export const Overlay = styled.div`
   position: absolute;
   top: 0;
@@ -46,6 +87,24 @@ export const Overlay = styled.div`
   width: 100%;
   height: 100%;
 
+  /* overflow: hidden; */
+  @media only screen and (max-width: 1400px) {
+    width: 100%;
+  }
+`;
+export const OverlayTop = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.24;
+  background: radial-gradient(
+    107.92% 107.92% at 1.33% 0%,
+    #253151 0%,
+    #101628 100%
+  );
   /* overflow: hidden; */
   @media only screen and (max-width: 1400px) {
     width: 100%;
@@ -258,6 +317,26 @@ export const TextWrap = styled.div`
     width: 90%;
     /* margin-bottom: 100px; */
     /* align-items: left; */
+  }
+`;
+export const TextTopImage = styled.div`
+  margin-top: 30px;
+  color: #f5faff;
+  text-align: center;
+  width: 620px;
+  /* H5 Gilroy 30 */
+  font-family: "Gilroy";
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  @media only screen and (max-width: 1300px) {
+  }
+  @media only screen and (max-width: 1000px) {
+  }
+  @media only screen and (max-width: 630px) {
+    width: 90%;
+    font-size: 20px;
   }
 `;
 export const UpTitle = styled.h3`

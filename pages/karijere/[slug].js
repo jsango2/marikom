@@ -102,7 +102,7 @@ export async function getStaticPaths({ locales }) {
             post.node.oglasi.naslovOglasa.toLowerCase().split(" ").join("-") +
               "-" +
               post.node.id,
-            { locale: "hrv" }
+            { locale: "hrv", strict: true }
           ),
         },
         locale: "hr",
@@ -114,13 +114,18 @@ export async function getStaticPaths({ locales }) {
     return locales.map((locale) => {
       return paths.push({
         params: {
-          slug:
+          slug: slugify(
             post.node.oglasi.naslovOglasaEng
               .toLowerCase()
               .split(" ")
               .join("-") +
-            "-" +
-            post.node.id,
+              "-" +
+              post.node.id,
+            {
+              locale: "eng",
+              strict: true,
+            }
+          ),
         },
         locale: "en",
       });
@@ -144,12 +149,18 @@ export async function getStaticProps({ params }) {
           data.node.id,
         {
           locale: "hrv",
+          strict: true,
         }
       ) === currentPath ||
-      data.node.oglasi.naslovOglasaEng.toLowerCase().split(" ").join("-") +
-        "-" +
-        data.node.id ===
-        currentPath
+      slugify(
+        data.node.oglasi.naslovOglasaEng.toLowerCase().split(" ").join("-") +
+          "-" +
+          data.node.id,
+        {
+          locale: "eng",
+          strict: true,
+        }
+      ) === currentPath
   ) || {
     notfound: true,
   };

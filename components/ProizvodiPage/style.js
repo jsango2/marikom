@@ -65,10 +65,7 @@ export const DropdownMobile = styled.div`
   z-index: 10;
   width: 100vw;
   text-align: center;
-  background: var(
-    --gradient-gradient-svjetlo-plava,
-    linear-gradient(135deg, #338bc2 0%, #dffee6 100%)
-  );
+  background: #4299c8;
   padding: 5px 0;
   color: white;
   cursor: pointer;

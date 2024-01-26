@@ -83,7 +83,7 @@ export const Overlay = styled.div`
   width: 100%;
   height: 100%;
   background: #1c2640;
-  opacity: 0.3;
+  opacity: 0.6;
   top: 0;
   left: 0;
   @media only screen and (max-width: 600px) {

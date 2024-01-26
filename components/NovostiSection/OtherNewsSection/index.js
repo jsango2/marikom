@@ -23,14 +23,23 @@ function OtherNews({ novosti }) {
     const getSlug = window.location.pathname.split("/").pop();
     const getOtherNews = novosti.edges.filter((n) =>
       locale === "en"
-        ? n.node.novosti.naslovEng.toLowerCase().split(" ").join("-") +
-            "-" +
-            n.node.novosti.datum.split("/").join("-") !=
-          getSlug
+        ? slugify(
+            n.node.novosti.naslovEng.toLowerCase().split(" ").join("-") +
+              "-" +
+              n.node.novosti.datum.split("/").join("-"),
+            {
+              locale: "eng",
+              strict: true,
+            }
+          ) != getSlug
         : slugify(
             n.node.novosti.naslov.toLowerCase().split(" ").join("-") +
               "-" +
-              n.node.novosti.datum.split("/").join("-")
+              n.node.novosti.datum.split("/").join("-"),
+            {
+              locale: "hrv",
+              strict: true,
+            }
           ) != getSlug
     );
     setOstaleNovosti(getOtherNews);
@@ -68,7 +77,10 @@ function OtherNews({ novosti }) {
                         .join("-") +
                         "-" +
                         card.node.novosti.datum.split("/").join("-"),
-                      { locale: "hrv" }
+                      {
+                        locale: "hrv",
+                        strict: true,
+                      }
                     )
                   : slugify(
                       card.node.novosti.naslovEng
@@ -76,7 +88,11 @@ function OtherNews({ novosti }) {
                         .split(" ")
                         .join("-") +
                         "-" +
-                        card.node.novosti.datum.split("/").join("-")
+                        card.node.novosti.datum.split("/").join("-"),
+                      {
+                        locale: "eng",
+                        strict: true,
+                      }
                     )
               }
               isFeatured={false}
