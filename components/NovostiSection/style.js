@@ -146,6 +146,7 @@ export const FeaturedImage = styled.div`
   /* overflow: hidden; */
   margin: 42px auto;
   @media only screen and (max-width: 850px) {
+    margin-bottom: 0;
     width: 100%;
     margin-top: 0;
     height: 80vw;
@@ -170,6 +171,7 @@ export const TextSection = styled.div`
   justify-content: space-between;
   padding: 35px 0 75px 0;
   @media only screen and (max-width: 850px) {
+    padding-bottom: 40px;
   }
 `;
 export const WrapContent = styled.div`
@@ -209,7 +211,7 @@ export const Content = styled.div`
   width: 60%;
   height: auto;
   min-height: 100px;
-
+  top: -1.5rem;
   color: var(--color-sunrise-text-grey, #605866);
   font-feature-settings: "clig" off, "liga" off;
   font-family: Gilroy;
@@ -240,6 +242,7 @@ export const Content = styled.div`
   @media only screen and (max-width: 430px) {
     width: 90vw;
     font-size: 16px;
+    top: 0rem;
   }
 `;
 export const Datum = styled.div`
@@ -258,12 +261,14 @@ export const Naslov = styled.div`
   position: relative;
   color: var(--color-boja-marikomerc-plava);
   /* H3 */
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Gilroy", sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
   line-height: 120%; /* 36px */
   text-transform: uppercase;
-  @media only screen and (max-width: 820px) {
+  @media only screen and (max-width: 430px) {
+    font-size: 24px;
+    padding-right: 20px;
   }
 `;

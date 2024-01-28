@@ -249,7 +249,7 @@ export const TrakaSearch = styled.div`
     flex-direction: column;
 
     justify-content: center;
-    padding: 20px 0 0 0;
+    padding: 12px 0 0 0;
   }
 `;
 export const Search = styled.div`

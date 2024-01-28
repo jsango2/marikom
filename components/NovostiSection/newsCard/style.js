@@ -51,7 +51,6 @@ export const BlueLine = styled.div`
   background: #4299c8;
   top: 18px;
   left: -20px;
-  border-radius: 2px;
   /* overflow: hidden; */
   @media only screen and (max-width: 600px) {
     width: 3px;
@@ -61,7 +60,7 @@ export const Title = styled.h1`
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 19px;
   letter-spacing: 0.875px;
 
@@ -70,6 +69,7 @@ export const Title = styled.h1`
   color: #37313c;
   text-transform: uppercase;
   margin-bottom: 5px;
+  margin-top: 5px;
   @media only screen and (max-width: 600px) {
   }
 `;
@@ -124,7 +124,7 @@ export const ViseInfo = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 10px;
   cursor: pointer;
   a {
     color: #4299c8;

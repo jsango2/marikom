@@ -84,7 +84,7 @@ export const BlueLine = styled.div`
   background: #4299c8;
   top: ${(props) => (props.isFeatured ? "18px" : "34px")};
   left: 0px;
-  border-radius: 2px;
+  /* border-radius: 2px; */
   /* overflow: hidden; */
   @media only screen and (max-width: 600px) {
     width: 3px;
@@ -93,8 +93,8 @@ export const BlueLine = styled.div`
   }
 `;
 export const Title = styled.h1`
-  font-size: ${(props) => (props.isFeatured ? "30px" : "16px")};
-  font-family: "Roboto Condensed", sans-serif;
+  font-size: ${(props) => (props.isFeatured ? "30px" : "18px")};
+  font-family: "Gilroy";
   color: var(--boja-color-marikomerc-plava);
 
   font-style: normal;
@@ -106,6 +106,7 @@ export const Title = styled.h1`
   color: #37313c;
   margin-top: 5px;
   text-transform: uppercase;
+  margin-bottom: 0;
   @media only screen and (max-width: 600px) {
   }
 `;
@@ -119,7 +120,9 @@ export const Text = styled.h3`
   line-height: 136.5%; /* 21.84px */
   letter-spacing: 0.875px;
   width: 100%;
+  margin: 0;
   p {
+    margin-top: 10px;
     margin-bottom: 0;
   }
   @media only screen and (max-width: 600px) {
