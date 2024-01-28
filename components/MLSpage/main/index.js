@@ -125,9 +125,9 @@ const Main = () => {
             <BottomSlider>
               <Slider {...settings}>
                 <Truck>SCANIA S650A4X2NB - Tegljač</Truck>
-                <Truck>SCANIA S650A4X2NB - Tegljač</Truck>
-                <Truck>SCANIA S650A4X2NB - Tegljač</Truck>
-                <Truck>SCANIA S650A4X2NB - Tegljač</Truck>
+                <Truck>SCANIA S660 A4X2NB - Tegljač</Truck>
+                <Truck>SCANIA S770A4X2NB - Tegljač</Truck>
+                <Truck>VOLVO FH 62R - Hladnjača</Truck>
               </Slider>
             </BottomSlider>
           </Photo1>

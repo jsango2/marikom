@@ -62,7 +62,7 @@ function Kartica({
           {locale === "hr" ? "NOVO PAKIRANJE" : "NEW PACKAGING"}
         </NovoPakiranje>
       ) : null}
-      <Photo>
+      <Photo className="proizvodImg">
         {hasPhoto ? (
           <Image src={photo} layout="fill" objectFit="contain" />
         ) : (

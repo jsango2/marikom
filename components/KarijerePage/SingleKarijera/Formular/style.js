@@ -108,6 +108,7 @@ export const StyledLabel = styled.label`
   font-weight: 400;
   line-height: 140%; /* 22.4px */
   color: #1c2640;
+  width: 300px;
 `;
 
 export const StyledInput = styled.input`

@@ -359,7 +359,7 @@ export const Vietnam = styled.div`
   border-radius: 50%;
   top: 262px;
   left: 675px;
-  transition: all 2s ease-out;
+  transition: all 1s ease-out;
   &.outView {
     opacity: 0;
   }
@@ -391,7 +391,7 @@ export const Norveska = styled.div`
   top: 134px;
   left: 458px;
   /* cursor: pointer; */
-  transition: all 2s ease-out;
+  transition: all 1s ease-out;
   &.outView {
     opacity: 0;
   }
@@ -423,7 +423,7 @@ export const NZ = styled.div`
   top: 425px;
   left: 836px;
   /* cursor: pointer; */
-  transition: all 2s ease-out;
+  transition: all 1s ease-out;
   &.outView {
     opacity: 0;
   }
@@ -454,7 +454,7 @@ export const JAR = styled.div`
   top: 406px;
   left: 481px;
   /* cursor: pointer; */
-  transition: all 2s ease-out;
+  transition: all 1s ease-out;
   &.outView {
     opacity: 0;
   }
@@ -485,7 +485,7 @@ export const HR = styled.div`
   top: 216px;
   left: 466px;
   /* cursor: pointer; */
-  transition: all 2s ease-out;
+  transition: all 1s ease-out;
   &.outView {
     opacity: 0;
   }
@@ -516,7 +516,7 @@ export const USA = styled.div`
   top: 228px;
   left: 300px;
   /* cursor: pointer; */
-  transition: all 2s ease-out;
+  transition: all 1s ease-out;
   &.outView {
     opacity: 0;
   }
@@ -546,7 +546,7 @@ export const SCO = styled.div`
   top: 165px;
   left: 426px;
   /* cursor: pointer; */
-  transition: all 2s ease-out;
+  transition: all 1s ease-out;
   &.outView {
     opacity: 0;
   }
@@ -577,7 +577,7 @@ export const JAP = styled.div`
   top: 238px;
   left: 724px;
   /* cursor: pointer; */
-  transition: all 2s ease-out;
+  transition: all 1s ease-out;
   &.outView {
     opacity: 0;
   }
@@ -608,7 +608,7 @@ export const TUR = styled.div`
   top: 238px;
   left: 495px;
   /* cursor: pointer; */
-  transition: all 2s ease-out;
+  transition: all 1s ease-out;
   &.outView {
     opacity: 0;
   }
@@ -639,7 +639,7 @@ export const NAM = styled.div`
   top: 375px;
   left: 460px;
   /* cursor: pointer; */
-  transition: all 2s ease-out;
+  transition: all 1s ease-out;
   &.outView {
     opacity: 0;
   }
@@ -670,7 +670,7 @@ export const EKV = styled.div`
   top: 368px;
   left: 258px;
   /* cursor: pointer; */
-  transition: all 2s ease-out;
+  transition: all 1s ease-out;
   &.outView {
     opacity: 0;
   }
@@ -701,7 +701,7 @@ export const GR = styled.div`
   top: 229px;
   left: 484px;
   /* cursor: pointer; */
-  transition: all 2s ease-out;
+  transition: all 1s ease-out;
   &.outView {
     opacity: 0;
   }
@@ -735,7 +735,7 @@ export const Peru = styled.div`
   top: 350px;
   left: 255px;
   /* cursor: pointer; */
-  transition: all 2s ease-out;
+  transition: all 1s ease-out;
   &.outView {
     opacity: 0;
   }
@@ -766,7 +766,7 @@ export const Falkland = styled.div`
   top: 439px;
   left: 326px;
   /* cursor: pointer; */
-  transition: all 2s ease-out;
+  transition: all 1s ease-out;
   &.outView {
     opacity: 0;
   }
@@ -797,7 +797,7 @@ export const Argentina = styled.div`
   top: 446px;
   left: 286px;
   /* cursor: pointer; */
-  transition: all 2s ease-out;
+  transition: all 1s ease-out;
   &.outView {
     opacity: 0;
   }
@@ -828,7 +828,7 @@ export const Poljska = styled.div`
   top: 191px;
   left: 467px;
   /* cursor: pointer; */
-  transition: all 2s ease-out;
+  transition: all 1s ease-out;
   &.outView {
     opacity: 0;
   }
@@ -859,7 +859,7 @@ export const Esp = styled.div`
   top: 214px;
   left: 419px;
   /* cursor: pointer; */
-  transition: all 2s ease-out;
+  transition: all 1s ease-out;
   &.outView {
     opacity: 0;
   }

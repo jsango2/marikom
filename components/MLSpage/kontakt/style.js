@@ -146,7 +146,7 @@ export const Naslov = styled.h3`
   line-height: 120%; /* 48px */
   text-transform: uppercase;
   color: #1c2640;
-
+  margin: 0 0 10px 0;
   @media only screen and (max-width: 700px) {
     font-size: 30px;
   }

@@ -115,6 +115,7 @@ export const ButtonsWrapDesktop = styled.div`
     line-height: 120%; /* 19.2px */
     padding: 10px 10px;
     border-radius: 3px;
+    transition: all 0.2s ease-in-out;
   }
   button:hover {
     background: #2f3e66;
@@ -242,13 +243,13 @@ export const TrakaSearch = styled.div`
   display: flex;
   align-items: center;
   @media only screen and (max-width: 600px) {
-    height: 100px;
+    height: 100%;
     /* min-height: 100px; */
     /* padding-right: 2%; */
     flex-direction: column;
 
     justify-content: center;
-    padding: 0;
+    padding: 20px 0 0 0;
   }
 `;
 export const Search = styled.div`
@@ -257,23 +258,38 @@ export const Search = styled.div`
   margin-left: auto;
   display: flex;
   align-items: center;
-  width: 200px;
-  justify-content: center;
+  width: 100%;
+  justify-content: flex-end;
+
   input {
     width: 176px;
     height: 30px;
-    padding-left: 35px;
+    padding-left: 15px;
     font-style: italic;
+
+    border: none;
   }
   input:focus {
     outline: none;
   }
   @media only screen and (max-width: 600px) {
     margin: 0;
-
+    border-bottom: 1px solid white;
     input {
-      width: 55%;
-      height: 23px;
+      width: 100%;
+      height: 28px;
+      padding-left: 0;
+      font-style: italic;
+      background-color: #4299c8;
+      border: none;
+      display: flex;
+      color: white;
+      text-align: center;
+
+      ::placeholder {
+        text-align: center;
+        color: white;
+      }
     }
   }
 `;
@@ -283,10 +299,12 @@ export const WrapLupa = styled.div`
   left: 29px;
   top: 3px;
   opacity: 0.7;
+  display: none;
   @media only screen and (max-width: 600px) {
     position: absolute;
-    left: 33px;
+    left: 7px;
     top: 7px;
+    display: block;
   }
 `;
 export const Divider = styled.div`

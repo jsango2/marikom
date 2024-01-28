@@ -46,7 +46,7 @@ const Hero = ({ toggleYT }) => {
           <Content toggleYT={toggleYT} />
         </ContentWrap> */}
         <GradientContainer
-        // className={`jure ${inView ? "inViewHero" : "outViewHero"}`}
+          className={`jure ${inView ? "inViewHero" : "outViewHero"}`}
         >
           <WrapText>
             <Title ref={ref}>{parse(t.Hero.title)}</Title>

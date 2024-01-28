@@ -30,6 +30,14 @@ export const WrapAll = styled.div`
     transform: scale3d(1.05, 1.05, 1);
     z-index: 11;
   }
+  &:hover .proizvodBG {
+    transform: rotate(90deg);
+    width: 250%;
+    height: 250%;
+  }
+  &:hover .proizvodImg {
+    transform: rotate(8deg) translate(0px, 0px) scale(1, 1) skew(-7deg, 0deg);
+  }
   @media only screen and (max-width: 600px) {
     /* height: 400px; */
     height: auto;
@@ -167,6 +175,8 @@ export const Photo = styled.div`
   /* padding-bottom: 50px; */
 
   margin: 0 auto auto auto;
+  transition: all 0.5s ease-in-out;
+  transform: scale(0.9);
   @media only screen and (max-width: 600px) {
   }
 `;

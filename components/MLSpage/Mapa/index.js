@@ -39,7 +39,7 @@ function MlsMapa() {
             width="306px"
             text={t.Horeca.buttonText}
             linkTo="/o-nama"
-            marginTop="50px"
+            marginTop="40px"
           />
         </MapaWrapTextBlock>
         <MapaWrapKarta>

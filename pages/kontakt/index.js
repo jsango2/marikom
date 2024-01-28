@@ -5,6 +5,7 @@ import ContactData from "../../components/KontaktPage/Data";
 import DiMaris from "../../components/KontaktPage/DiMaris";
 import MLS from "../../components/KontaktPage/MLS";
 import { getAllKontakti } from "../../lib/api2";
+import Kontakt from "../../components/MLSpage/kontakt";
 
 function index(props) {
   const kontakti = props.kontakti.edges[0].node.kontakti;
@@ -15,6 +16,7 @@ function index(props) {
       <ContactData kontakti={kontakti} />
       <DiMaris />
       <MLS />
+      <Kontakt />
     </Layout>
   );
 }

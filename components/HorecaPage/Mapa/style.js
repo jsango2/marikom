@@ -95,7 +95,7 @@ export const Title = styled.h2`
   color: #f5faff;
   /* H2 */
   font-family: "Roboto Condensed";
-  margin: 15px auto 50px auto;
+  margin: 15px auto 20px auto;
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
@@ -132,7 +132,7 @@ export const Button = styled.button`
   font-style: normal;
   font-weight: 700;
   line-height: 142.5%; /* 25.65px */
-  margin-top: 60px;
+  margin-top: 30px;
   cursor: pointer;
   &:hover {
     background: var(--color-boja-tamnoplava-ocjena);

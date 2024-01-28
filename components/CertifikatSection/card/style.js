@@ -17,17 +17,17 @@ export const WrapCard = styled.div`
     transition: all 1s ease-out;
   }
   &.inViewCert:nth-child(1) {
-    transition-delay: 500ms;
+    transition-delay: 400ms;
   }
   &.inViewCert:nth-child(2) {
-    transition-delay: 1000ms;
+    transition-delay: 800ms;
   }
   &.inViewCert:nth-child(3) {
-    transition-delay: 1500ms;
+    transition-delay: 1200ms;
   }
   &.outViewCert {
-    top: 25px;
-    opacity: 0;
+    top: 45px;
+    opacity: 1;
   }
   /* overflow: hidden; */
   /* padding: 70px 0 130px 0; */

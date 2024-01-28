@@ -114,12 +114,12 @@ export const Title = styled.h1`
   &.inView {
     top: 0px;
     opacity: 1;
-    transition: all 2s ease-out;
+    transition: all 1s ease-out;
     /* transition-delay: 0.5s; */
   }
   &.outView {
     top: 25px;
-    opacity: 0;
+    opacity: 0.5;
   }
   @media only screen and (max-width: 850px) {
     font-size: var(--h2);

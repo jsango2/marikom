@@ -241,6 +241,7 @@ export const Divider = styled.div`
 `;
 
 export const Kontakt = styled.a`
+  position: relative;
   cursor: pointer;
   text-decoration: none;
   position: relative;
@@ -261,6 +262,12 @@ export const Kontakt = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    font-weight: 600;
+    transform: scale(1.02);
+  }
   @media only screen and (max-width: 600px) {
   }
 `;

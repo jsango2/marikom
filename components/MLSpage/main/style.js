@@ -226,7 +226,7 @@ export const BlueDivider = styled.div`
   height: 3px;
   background: #4299c8;
   border-radius: 2px;
-  margin: 30px auto;
+  margin: 20px auto;
   @media only screen and (max-width: 1250px) {
   }
   @media only screen and (max-width: 850px) {

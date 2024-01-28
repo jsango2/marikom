@@ -38,7 +38,7 @@ export default function IndexPage({ allPosts }) {
 
   return (
     <Layout>
-      {/* <Head>
+      <Head>
         <title> Marikomerc.hr</title>
         <link
           rel="canonical"
@@ -76,7 +76,7 @@ export default function IndexPage({ allPosts }) {
           }
         />
         <meta property="og:image" content="/HERO.png" />
-      </Head> */}
+      </Head>
       <FsLightbox
         toggler={toggler}
         sources={["https://www.youtube.com/watch?v=3nQNiWdeH2Q"]}

@@ -27,7 +27,7 @@ export const WrapContent = styled.div`
   z-index: 11;
   display: flex;
   justify-content: space-around;
-  max-width: 1440px;
+  max-width: 1360px;
   margin: 0 auto;
   padding: 54px 0 0 25px;
   @media only screen and (max-width: 850px) {

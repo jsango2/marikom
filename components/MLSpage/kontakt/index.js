@@ -26,22 +26,26 @@ import Button from "../../buttonBlue/Button.js";
 
 function Kontakt({ photo, text }) {
   const { locale } = useRouter();
-
+  const router = useRouter();
   const t = locale === "en" ? en : hr;
   const size = useWindowSize();
   return (
     <WrapKontakt>
       <WrapContent>
-        <BlueDivider />
-        <Naslov>{t.MLS.kontaktirajteNas}</Naslov>
-        <PodNaslov>{t.MLS.raspored}</PodNaslov>
-        <Button
-          bgcolor="#4299C8"
-          color="#FFFFFF"
-          width="226px"
-          text={t.MLS.zatrazitePonudu}
-          linkTo="/o-nama"
-        />
+        {router.pathname === "/MLS" && (
+          <>
+            <BlueDivider />
+            <Naslov>{t.MLS.kontaktirajteNas}</Naslov>
+            <PodNaslov>{t.MLS.raspored}</PodNaslov>
+            <Button
+              bgcolor="#4299C8"
+              color="#FFFFFF"
+              width="226px"
+              text={t.MLS.zatrazitePonudu}
+              linkTo="/o-nama"
+            />
+          </>
+        )}
         <Grid>
           {mlsKontaktData.map((x) => (
             <Block>

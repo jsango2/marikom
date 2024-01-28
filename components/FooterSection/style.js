@@ -204,6 +204,7 @@ export const MainLinks = styled.div`
   align-items: center;
   margin-top: 45px;
   a {
+    position: relative;
     text-decoration: none;
     color: white;
     font-family: Gilroy;
@@ -212,6 +213,13 @@ export const MainLinks = styled.div`
     font-weight: 500;
     line-height: 153%;
     margin: 16px;
+    bottom: 0;
+    transition: bottom 0.3s ease-in-out;
+    &:hover {
+      /* font-weight: 600;
+      transform: scale(1.02); */
+      bottom: 3px;
+    }
   }
   @media only screen and (max-width: 770px) {
     display: none;
@@ -265,6 +273,7 @@ export const SingleLink = styled(Link)`
     font-style: normal;
     font-weight: 500;
   }
+
   @media only screen and (max-width: 600px) {
   }
 `;
@@ -308,9 +317,17 @@ export const LinkChild = styled.div`
   margin: 6px 0;
   cursor: pointer;
   &div {
+    position: relative;
     font-family: "Gilroy";
     font-style: normal;
     font-weight: 500;
+  }
+  bottom: 0;
+  transition: bottom 0.3s ease-in-out;
+  &:hover {
+    /* font-weight: 600;
+    transform: scale(1.02); */
+    bottom: 3px;
   }
 
   @media only screen and (max-width: 600px) {
@@ -330,6 +347,7 @@ export const Column = styled.div`
   justify-content: flex;
   align-items: flex-start;
   a {
+    position: relative;
     text-decoration: none;
     color: white;
     font-family: Gilroy;
@@ -338,6 +356,13 @@ export const Column = styled.div`
     font-weight: 500;
     line-height: 153%;
     margin: 5px 0;
+    bottom: 0;
+    transition: bottom 0.3s ease-in-out;
+    &:hover {
+      /* font-weight: 600;
+      transform: scale(1.02); */
+      bottom: 3px;
+    }
   }
 
   @media only screen and (max-width: 770px) {

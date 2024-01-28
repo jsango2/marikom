@@ -132,7 +132,7 @@ export const Title = styled.h2`
   color: #f5faff;
   /* H2 */
   font-family: "Roboto Condensed";
-  margin: 15px auto 50px auto;
+  margin: 15px auto 30px auto;
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
