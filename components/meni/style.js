@@ -103,6 +103,7 @@ export const BottomBlock = styled.div`
   justify-content: flex-start;
   padding-top: 30px;
   grid-area: 2 / 1 / 3 / 2;
+  overflow: hidden;
   a {
     color: #1c2640;
     font-family: "Gilroy";

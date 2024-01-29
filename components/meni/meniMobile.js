@@ -68,7 +68,11 @@ const MeniMobile = ({
             />
           </SwitcherWrap>
         </WrapBlock>
-        <BottomBlock>
+        <BottomBlock
+          className={`bottomMenu ${
+            isOpen ? "openBottomMenu" : "closedBottomMenu"
+          }`}
+        >
           <BottomBlockTop>
             <WrapLeftBlock>
               <Title>{locale === "hr" ? "O NAMA" : "ABOUT US"}</Title>{" "}
