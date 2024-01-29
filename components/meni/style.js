@@ -132,7 +132,7 @@ export const BottomBlockTop = styled.div`
     font-family: "Gilroy";
     font-size: 16px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 120%;
     margin: 14px 0;
     opacity: 1;
@@ -146,7 +146,7 @@ export const BottomBlockTop = styled.div`
       font-family: "Gilroy";
       font-size: 16px;
       font-style: normal;
-      font-weight: 500;
+      font-weight: 600;
       line-height: 120%;
       margin: 12px 0;
       opacity: 1;
@@ -158,7 +158,7 @@ export const BottomBlockTop = styled.div`
       font-family: "Gilroy";
       font-size: 16px;
       font-style: normal;
-      font-weight: 500;
+      font-weight: 600;
       line-height: 120%;
       margin: 7px 0;
       opacity: 1;

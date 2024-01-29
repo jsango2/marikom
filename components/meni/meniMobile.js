@@ -71,7 +71,7 @@ const MeniMobile = ({
         <BottomBlock>
           <BottomBlockTop>
             <WrapLeftBlock>
-              <Title>{locale === "hr" ? "O nama" : "About us"}</Title>{" "}
+              <Title>{locale === "hr" ? "O NAMA" : "ABOUT US"}</Title>{" "}
               <Link href="/o-nama">
                 {locale === "hr" ? "Naša priča" : "Our story"}
               </Link>
@@ -87,7 +87,7 @@ const MeniMobile = ({
               </Link>
             </WrapLeftBlock>
             <WrapRightBlock>
-              <Title>{locale === "hr" ? "Grupa" : "Group"}</Title>{" "}
+              <Title>{locale === "hr" ? "GRUPA" : "GROUP"}</Title>{" "}
               <Link className="navLinkDrop" href="/MLS">
                 {locale === "hr" ? "MLS Logistika" : "MLS Logistics"}
               </Link>

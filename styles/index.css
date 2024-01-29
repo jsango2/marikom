@@ -35,7 +35,7 @@ body .slick-next::before {
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("../assets/fonts/gilroy/Gilroy-SemiBold.ttf");
+  src: url("../assets/fonts/gilroy/Gilroy-Medium.ttf");
   font-weight: 600;
   font-style: normal;
   format: truetype;
