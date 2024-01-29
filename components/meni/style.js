@@ -100,7 +100,8 @@ export const BottomBlock = styled.div`
   width: 100%;
   height: 100%;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 30px;
   grid-area: 2 / 1 / 3 / 2;
   a {
     color: #1c2640;
