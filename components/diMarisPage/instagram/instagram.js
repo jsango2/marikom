@@ -14,13 +14,19 @@ import { useRouter } from "next/router.js";
 import en from "../../../locales/en.json";
 import hr from "../../../locales/hr.json";
 import parse from "html-react-parser";
+import { useInView } from "react-intersection-observer";
 function Instagram() {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    triggerOnce: true,
+    threshold: 0,
+  });
   const { locale } = useRouter();
   const t = locale === "en" ? en : hr;
   return (
-    <WrapAll>
+    <WrapAll ref={ref}>
       <Overlay />
-      <WrapContent>
+      <WrapContent inView={inView}>
         <Naslov>PRATITE NAS NA INSTAGRAMU I FACEBOOKU!</Naslov>
         <ButtonLeft href="https://www.instagram.com/dimaris_croatia/">
           @dimaris_croatia

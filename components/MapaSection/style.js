@@ -158,6 +158,7 @@ export const Photo1 = styled.div`
   width: 234px;
   height: 100%;
   background-color: gray;
+  /* top: ${(props) => props.percentage}px; */
 
   &.inView {
     top: 40px;
@@ -184,6 +185,8 @@ export const Photo2 = styled.div`
   width: 293px;
   height: 384px;
   background-color: gray;
+  /* top: ${(props) => 1 / props.percentage}px; */
+
   &.inView {
     bottom: 10px;
     transition: all 3s ease-out;
@@ -209,7 +212,9 @@ export const Photo3 = styled.div`
   width: 390px;
   height: 512px;
   background-color: gray;
-  top: 20px;
+
+  /* top: ${(props) => props.percentage}px; */
+
   &.inView {
     top: 20px;
     transition: all 3s ease-out;

@@ -42,6 +42,12 @@ export const WrapContent = styled.div`
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   align-items: center;
+  transform: scale(0, 0);
+  opacity: 1;
+  transition: all 1s ease-out;
+  transform: ${(props) => props.inView && `scale(1,1)`};
+  opacity: ${(props) => props.inView && `1`};
+
   @media only screen and (max-width: 1150px) {
     width: 500px;
   }

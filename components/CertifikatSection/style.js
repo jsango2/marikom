@@ -16,7 +16,7 @@ export const WrapAll = styled.div`
   align-items: center;
   flex-direction: column;
   /* overflow: hidden; */
-  padding: 70px 0 0px 0;
+  padding: 70px 0 100px 0;
   @media only screen and (max-width: 600px) {
     padding: 70px 0 0px 0;
   }
@@ -37,6 +37,9 @@ export const TopImage = styled.div`
   margin-top: 83px;
   @media only screen and (max-width: 1400px) {
     width: 100%;
+  }
+  @media only screen and (max-width: 650px) {
+    height: 240px;
   }
 `;
 export const TextTopImage = styled.div`

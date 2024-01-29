@@ -46,7 +46,7 @@ function ProizvodiSection() {
         </Title>
         <Text>{t.Products.subTitle}</Text>
         <ProizvodiCLoud />
-        <WrapCerts>
+        <WrapCerts inView={inView}>
           <WrapImage>
             <Image src="/certifikat/MSC.svg" height={62} width={173} />
           </WrapImage>

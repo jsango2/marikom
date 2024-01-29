@@ -392,15 +392,28 @@ export const UpTitle = styled.div`
 export const VideoFrame = styled.div`
   position: relative;
   z-index: 10;
-  height: 800px;
+  height: 35vw;
   width: 100%;
   overflow: hidden;
-  background-image: url("/MLS4kamiona.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+
   @media only screen and (max-width: 850px) {
     height: 60vw;
+  }
+`;
+export const ImageAbsolute = styled.div`
+  position: absolute;
+  z-index: 10;
+  height: 45vw;
+  width: 100%;
+  top: ${(props) => props.percentage * 50 - 170}px;
+
+  background-image: url("/volvo1png.png");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  @media only screen and (max-width: 850px) {
+    height: 95vw;
+    top: ${(props) => props.percentage * 50 - 120}px;
   }
 `;
 export const Title = styled.h1`

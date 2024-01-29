@@ -94,6 +94,9 @@ export const Grid = styled.div`
   @media only screen and (max-width: 850px) {
     grid-column-gap: 10vw;
   }
+  @media only screen and (max-width: 550px) {
+    justify-items: center;
+  }
   @media only screen and (max-width: 430px) {
     width: 85%;
   }
@@ -123,7 +126,8 @@ export const WrapEmail = styled.a`
   color: white;
   @media only screen and (max-width: 1050px) {
   }
-  @media only screen and (max-width: 850px) {
+  @media only screen and (max-width: 550px) {
+    margin-top: 0px;
   }
 `;
 export const Phone = styled.a`
@@ -177,7 +181,8 @@ export const Block = styled.div`
   width: 226px;
   height: 270px;
 
-  @media only screen and (max-width: 820px) {
+  @media only screen and (max-width: 550px) {
+    align-items: center;
   }
 `;
 export const Adresa = styled.div`
@@ -191,7 +196,12 @@ export const Adresa = styled.div`
   font-weight: 500;
   line-height: 153%; /* 21.42px */
   margin: 20px 0 10px 0;
-  @media only screen and (max-width: 820px) {
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: 550px) {
+    align-items: center;
+    margin: 10px 0 5px 0;
   }
 `;
 export const Grad = styled.div`
@@ -204,7 +214,8 @@ export const Grad = styled.div`
   font-weight: 700;
   line-height: 120%; /* 25.2px */
   text-transform: uppercase;
-  @media only screen and (max-width: 820px) {
+  @media only screen and (max-width: 550px) {
+    text-align: center;
   }
 `;
 export const RadnoVrijeme = styled.div`
@@ -215,8 +226,10 @@ export const RadnoVrijeme = styled.div`
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 153%; /* 21.42px */
   opacity: 0.6;
-  @media only screen and (max-width: 820px) {
+  height: 50px;
+  display: flex;
+  @media only screen and (max-width: 550px) {
+    text-align: center;
   }
 `;

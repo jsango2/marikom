@@ -13,7 +13,30 @@ export const WrapAll = styled.div`
   align-items: center;
   background: white;
   padding-top: 55px;
-  padding-bottom: 145px;
+  padding-bottom: 0;
+  margin: 0 auto;
+  @media only screen and (max-width: 1100px) {
+    padding-bottom: 0px;
+  }
+  @media only screen and (max-width: 850px) {
+    /* padding-top: 30px;
+    height: auto; */
+  }
+`;
+export const WrapAll2 = styled.div`
+  position: relative;
+  z-index: 10;
+  max-width: 1440px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+  align-items: center;
+  background: white;
+
+  padding-bottom: 100px;
   margin: 0 auto;
   @media only screen and (max-width: 1100px) {
     padding-bottom: 0px;
@@ -91,6 +114,7 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+
   @media only screen and (max-width: 1250px) {
     /* width: 43%;
     padding-left: 30px; */

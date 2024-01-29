@@ -16,6 +16,8 @@ import { useRouter } from "next/router.js";
 import en from "../../../locales/en.json";
 import hr from "../../../locales/hr.json";
 import parse from "html-react-parser";
+import { useInView } from "react-intersection-observer";
+
 function Lokacija({
   lokacija,
   ulica,
@@ -28,11 +30,16 @@ function Lokacija({
   google,
   photo,
 }) {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    triggerOnce: true,
+    threshold: 0,
+  });
   const { locale } = useRouter();
   const t = locale === "en" ? en : hr;
   console.log(lokacija);
   return (
-    <WrapLokacija>
+    <WrapLokacija ref={ref} className={` ${inView ? "inView" : "outView"}`}>
       <Photo>
         <Image src={photo} layout="fill" objectFit="cover" />
       </Photo>

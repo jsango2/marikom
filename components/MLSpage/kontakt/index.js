@@ -23,8 +23,13 @@ import { useRouter } from "next/router.js";
 import { BlueDivider } from "../main/style.js";
 import { mlsKontaktData } from "../../../mlsKontaktData.js";
 import Button from "../../buttonBlue/Button.js";
-
+import { useInView } from "react-intersection-observer";
 function Kontakt({ photo, text }) {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0.2,
+    triggerOnce: true,
+  });
   const { locale } = useRouter();
   const router = useRouter();
   const t = locale === "en" ? en : hr;
@@ -48,11 +53,11 @@ function Kontakt({ photo, text }) {
         )}
         <Grid>
           {mlsKontaktData.map((x) => (
-            <Block>
+            <Block key={x.LOKACIJA}>
               <Grad>{locale === "hr" ? x.LOKACIJA : x.ENG}</Grad>
               <Adresa>
-                {x.ULICA}
-                <br />
+                <div style={{ margin: 0 }}>{x.ULICA}</div>
+
                 {locale === "hr" ? x["GRAD, DRŽAVA"] : x["GRAD, DRŽAVA (ENG)"]}
                 <br />
                 <Phone href={`tel:${x["BROJ TELEFONA"]}`}>

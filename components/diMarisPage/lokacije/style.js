@@ -211,7 +211,7 @@ export const Photo = styled.div`
 
   /* background: #1c2640;
   opacity: 0.3; */
-  background: red;
+  /* background: red; */
   border-radius: 3px;
   overflow: hidden;
   @media only screen and (max-width: 1250px) {

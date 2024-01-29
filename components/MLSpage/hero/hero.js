@@ -10,7 +10,7 @@ const Hero = () => {
     <>
       <HeroWrap>
         <video autoPlay muted loop="loop" className="videoHero" playsInline>
-          <source src="/MarikomercMLSvideoSmanjen.mp4" type="video/mp4" />
+          <source src="/MarikomercMLSvideoSmanjen.mov" type="video/mp4" />
         </video>
         <MLStraka>
           {/* <WrapMLSlogo> */}

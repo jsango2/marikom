@@ -25,6 +25,7 @@ import {
   Truck,
   OverlayTeret,
   BgMLS,
+  ImageAbsolute,
 } from "./style.js";
 // import HeroVideo from "../../video/kraciVideo.mp4";
 // import useWindowSize from "../../helper/usewindowsize";
@@ -44,6 +45,7 @@ import Kontakt from "../kontakt/index.js";
 import useWindowSize from "../../helper/usewindowsize.js";
 import parse from "html-react-parser";
 import { useScrollPercentage } from "react-scroll-percentage";
+import ParallaxTruck from "./parallaxTruck.js";
 
 const Main = () => {
   const [ref, percentage] = useScrollPercentage({
@@ -124,10 +126,19 @@ const Main = () => {
           <Photo1 bg="/MLSpageHero.webp">
             <BottomSlider>
               <Slider {...settings}>
-                <Truck>SCANIA S650A4X2NB - Tegljač</Truck>
-                <Truck>SCANIA S660 A4X2NB - Tegljač</Truck>
-                <Truck>SCANIA S770A4X2NB - Tegljač</Truck>
-                <Truck>VOLVO FH 62R - Hladnjača</Truck>
+                <Truck>
+                  SCANIA S650A4X2NB - {locale === "hr" ? "Tegljač" : "Truck"}
+                </Truck>
+                <Truck>
+                  SCANIA S660 A4X2NB - {locale === "hr" ? "Tegljač" : "Truck"}
+                </Truck>
+                <Truck>
+                  SCANIA S770A4X2NB - {locale === "hr" ? "Tegljač" : "Truck"}
+                </Truck>
+                <Truck>
+                  VOLVO FH 62R -{" "}
+                  {locale === "hr" ? "Tegljač" : "Refrigerated truck"}
+                </Truck>
               </Slider>
             </BottomSlider>
           </Photo1>
@@ -216,7 +227,7 @@ const Main = () => {
         </WrapTwoCards>
       </WrapContent>
       <Brojke />
-      <VideoFrame></VideoFrame>
+      <ParallaxTruck />
       <Kontakt />
     </WrapAll>
   );

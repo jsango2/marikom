@@ -22,12 +22,18 @@ import { useRouter } from "next/router.js";
 import en from "../../../locales/en.json";
 import hr from "../../../locales/hr.json";
 import parse from "html-react-parser";
+import { useInView } from "react-intersection-observer";
 function Content1() {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    triggerOnce: true,
+    threshold: 0,
+  });
   const { locale } = useRouter();
   const t = locale === "en" ? en : hr;
   return (
     <WrapAll>
-      <WrapContent>
+      <WrapContent ref={ref} className={` ${inView ? "inView" : "outView"}`}>
         <Content>
           <BlueLine />
 
@@ -81,24 +87,6 @@ function Content1() {
           />
         </WrapZaposlenik>
       </Zaposlenici>
-      <WrapContent>
-        <Photos2>
-          <WrapPhoto>
-            <Image
-              src="/diMarisContent1Img.png"
-              alt="diMaris shop"
-              layout="fill"
-              objectFit="cover"
-            />
-          </WrapPhoto>
-        </Photos2>
-        <Content>
-          <BlueLine />
-
-          <TitleH2>{t.DiMaris.content2Naslov}</TitleH2>
-          <Textp>{parse(t.DiMaris.content2Text)}</Textp>
-        </Content>
-      </WrapContent>
     </WrapAll>
   );
 }

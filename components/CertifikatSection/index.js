@@ -54,7 +54,7 @@ function CertifikatSection() {
           text={t.Certifikat.text3}
         />
       </WrapCards>
-      <TopImage ref={ref}>
+      {/* <TopImage ref={ref}>
         <ImageAbsolute percentage={percentage} />
         <TextTopImage>
           <a href="https://www.youtube.com">
@@ -63,7 +63,7 @@ function CertifikatSection() {
           Izdvojite 2 minute i saznajte zašto smo najbolji u onom što radimo.
         </TextTopImage>
         <OverlayTop />
-      </TopImage>
+      </TopImage> */}
     </WrapAll>
   );
 }

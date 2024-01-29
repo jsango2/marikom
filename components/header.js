@@ -173,7 +173,7 @@ const Header = ({ siteTitle, novostiNaslovi, oglasiNaslovi }) => {
                       <Link className="navLinkDrop" href="/MLS">
                         {locale === "hr" ? "MLS Logistika" : "MLS Logistics"}
                       </Link>
-                      <Link className="navLinkDrop" href="/">
+                      <Link className="navLinkDrop" href="/dimaris">
                         {locale === "hr"
                           ? "Di Maris - Ribarnice"
                           : "Di Maris - Fish market"}
