@@ -16,9 +16,86 @@ export const WrapAll = styled.div`
   align-items: center;
   flex-direction: column;
   /* overflow: hidden; */
-  padding: 70px 0 130px 0;
+  padding: 70px 0 0px 0;
   @media only screen and (max-width: 600px) {
-    padding: 70px 0 80px 0;
+    padding: 70px 0 0px 0;
+  }
+`;
+export const TopImage = styled.div`
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+  width: 100%;
+  height: 380px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+  margin-top: 83px;
+  @media only screen and (max-width: 1400px) {
+    width: 100%;
+  }
+`;
+export const TextTopImage = styled.div`
+  position: relative;
+  z-index: 20;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  color: #f5faff;
+  text-align: center;
+  width: 620px;
+  /* H5 Gilroy 30 */
+  font-family: "Gilroy";
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  @media only screen and (max-width: 1300px) {
+  }
+  @media only screen and (max-width: 1000px) {
+  }
+  @media only screen and (max-width: 630px) {
+    width: 90%;
+    font-size: 20px;
+  }
+`;
+export const ImageAbsolute = styled.div`
+  position: absolute;
+  background: url("/perlaPrviDioTopImage.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 10;
+  width: 100%;
+  height: 140%;
+
+  /* overflow: hidden; */
+  top: ${(props) => props.percentage * 100 - 100}px;
+
+  @media only screen and (max-width: 1400px) {
+    width: 100%;
+  }
+`;
+export const OverlayTop = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.24;
+  background: radial-gradient(
+    107.92% 107.92% at 1.33% 0%,
+    #253151 0%,
+    #101628 100%
+  );
+  /* overflow: hidden; */
+  @media only screen and (max-width: 1400px) {
+    width: 100%;
   }
 `;
 

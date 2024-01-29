@@ -62,10 +62,7 @@ export const WrapPhotos = styled.div`
 export const TopImage = styled.div`
   box-sizing: border-box;
   position: relative;
-  background: url("/perlaPrviDioTopImage.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  overflow: hidden;
   z-index: 10;
   width: 100%;
   height: 380px;
@@ -75,6 +72,24 @@ export const TopImage = styled.div`
   justify-content: center;
   align-items: center;
   /* overflow: hidden; */
+
+  @media only screen and (max-width: 1400px) {
+    width: 100%;
+  }
+`;
+export const ImageAbsolute = styled.div`
+  position: absolute;
+  background: url("/perlaPrviDioTopImage.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 10;
+  width: 100%;
+  height: 140%;
+
+  /* overflow: hidden; */
+  top: ${(props) => props.percentage * 100 - 100}px;
+
   @media only screen and (max-width: 1400px) {
     width: 100%;
   }
@@ -320,7 +335,11 @@ export const TextWrap = styled.div`
   }
 `;
 export const TextTopImage = styled.div`
+  position: relative;
+  z-index: 20;
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
   color: #f5faff;
   text-align: center;
   width: 620px;

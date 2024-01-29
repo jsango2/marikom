@@ -104,7 +104,7 @@ export const Title = styled.h1`
   /* identical to box height, or 66px */
   text-align: center;
   text-transform: uppercase;
-  margin-top: 100px;
+  margin-top: 80px;
   margin-bottom: 0px;
 
   /* SUNRISE/Sunray */

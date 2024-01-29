@@ -19,11 +19,13 @@ import {
   ItemText,
   OverlayTop,
   TextTopImage,
+  ImageAbsolute,
 } from "./style.js";
 
 import Logo from "../../svg/perlalogo.svg";
 import Image from "next/image";
 import Lottie, { useLottie } from "lottie-react";
+import { useScrollPercentage } from "react-scroll-percentage";
 
 import GreenMark from "../../svg/greenMark.svg";
 import Button from "../buttonBlue/Button.js";
@@ -112,19 +114,24 @@ function PerlaPrviDio() {
     threshold: 0,
     triggerOnce: true,
   });
-  const ref2 = useRef();
+
+  const [ref2, percentage] = useScrollPercentage({
+    /* Optional options */
+    threshold: 0,
+  });
 
   return (
     <WrapAll ref={ref}>
-      <TopImage>
-        <a href="https://www.youtube.com">
-          <Image src="/playIcon.svg" width={40} height={40} />
-        </a>
+      {/* <TopImage ref={ref2}>
+        <ImageAbsolute percentage={percentage} />
         <TextTopImage>
+          <a href="https://www.youtube.com">
+            <Image src="/playIcon.svg" width={40} height={40} />
+          </a>
           Izdvojite 2 minute i saznajte zašto smo najbolji u onom što radimo.
         </TextTopImage>
         <OverlayTop />
-      </TopImage>
+      </TopImage> */}
       <WrapBottom>
         <Overlay>
           <Image
