@@ -21,7 +21,6 @@ import {
   Elipse,
   Up,
   Down,
-  BgMore,
 } from "./style.js";
 
 import viljuskar from "../../assets/images/viljuskar.webp";
@@ -30,6 +29,7 @@ import en from "../../locales/en.json";
 import hr from "../../locales/hr.json";
 import { useInView } from "react-intersection-observer";
 import { useScrollPercentage } from "react-scroll-percentage";
+import BGmore from "./bgMore.js";
 
 function NumbersSection() {
   const { ref, inView, entry } = useInView({
@@ -40,10 +40,6 @@ function NumbersSection() {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : hr;
-  const [ref2, percentage] = useScrollPercentage({
-    /* Optional options */
-    threshold: 0,
-  });
 
   return (
     <WrapAll>
@@ -53,8 +49,8 @@ function NumbersSection() {
           <source src="/numbersVideo.mp4" type="video/mp4" />
         </video>
       </Up>
-      <Down ref={ref2}>
-        <BgMore percentage={percentage} />
+      <Down>
+        <BGmore />
         <WrapContent>
           <Title>
             <TopText>{t.Numbers.title}</TopText>

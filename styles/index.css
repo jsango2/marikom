@@ -759,19 +759,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   transition: all 0.3s ease-in-out;
   padding-left: 0px;
 }
-.bottomMenu {
-}
+
 .closedBottomMenu {
   transition: all 0.3s ease-in-out;
   transition-delay: 0.3s;
-  right: -110%;
+  bottom: -110%;
   opacity: 0;
 }
 .openBottomMenu {
   transition: all 1s ease-in-out;
-  transition-delay: 0.3s;
+  transition-delay: 0s;
 
-  right: 0%;
+  bottom: 0%;
   opacity: 1;
 }
 

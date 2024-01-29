@@ -3,6 +3,7 @@ import {
   RedLine,
   RedLine2,
   WrapLogo,
+  PozadinaPerla,
   WrapLogoPerla,
   Title,
   Title2,
@@ -38,45 +39,24 @@ import { useLottie } from "lottie-react";
 import animacija from "./perlaAnimacija.js";
 import Link from "next/link.js";
 import RedLineComp from "./redLine.js";
-import PozadinaPerla from "./pozadinaPerla.js";
-import PozadinaPerlaComp from "./pozadinaPerla.js";
 
-function KaramarkoComp() {
-  const style = {
-    height: 200,
-  };
-
-  const size = useWindowSize();
-  const router = useRouter();
-  const { locale } = router;
-  const t = locale === "en" ? en : hr;
-  const [perlaData, setPerlaData] = useState([]);
-  useEffect(() => {
-    setPerlaData(catalogData.filter((data) => data.FeaturedPerla == "DA"));
-  }, []);
-
-  const [ref1, percentage] = useScrollPercentage({
+function PozadinaPerlaComp() {
+  const [ref, percentage] = useScrollPercentage({
     /* Optional options */
     threshold: 0,
   });
 
-  const { ref, inView, entry } = useInView({
-    /* Optional options */
-    threshold: 0,
-    triggerOnce: true,
-  });
   return (
-    <Karamarko ref={ref1}>
-      <PozadinaPerlaComp />
-      <Right ref={ref}>
-        <Title2 inView={inView}>{t.Perla2.karamarkoText}</Title2>
-        <LogoHks>
-          {" "}
-          <Image src="/HKS.svg" alt="p1" layout="fill" objectFit="cover" />
-        </LogoHks>
-      </Right>
-    </Karamarko>
+    <Left ref={ref}>
+      <PozadinaPerla percentage={percentage}>
+        <Image src="/perlaLogo.svg" layout="fill" />
+      </PozadinaPerla>
+      <ImageWrap></ImageWrap>
+      <Potpis percentage={percentage}>
+        <Image src={PotpisKaramarko} alt="p2" objectFit="cover" />
+      </Potpis>
+    </Left>
   );
 }
 
-export default KaramarkoComp;
+export default PozadinaPerlaComp;
