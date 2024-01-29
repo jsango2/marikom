@@ -19,7 +19,7 @@ function Instagram() {
   const { ref, inView, entry } = useInView({
     /* Optional options */
     triggerOnce: true,
-    threshold: 0,
+    threshold: 0.2,
   });
   const { locale } = useRouter();
   const t = locale === "en" ? en : hr;

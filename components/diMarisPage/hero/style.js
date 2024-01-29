@@ -53,6 +53,13 @@ export const MLStraka = styled.div`
   background-image: url("/MLSpozadinaTraka.svg");
   background-size: cover;
   margin-top: auto;
+  img {
+    transform: scale(0, 0);
+    opacity: 1;
+    transition: all 1s ease-out;
+    transform: ${(props) => props.inView && `scale(0.9,0.9)`};
+    opacity: ${(props) => props.inView && `1`};
+  }
   @media only screen and (max-width: 1400px) {
     height: 6vw;
   }

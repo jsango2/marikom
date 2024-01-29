@@ -13,7 +13,6 @@ import {
   Content,
   VideoFrame,
   Kategorizacija,
-  Teret,
   BlueDivider,
   Naslov,
   WrapIkone,
@@ -46,12 +45,11 @@ import useWindowSize from "../../helper/usewindowsize.js";
 import parse from "html-react-parser";
 import { useScrollPercentage } from "react-scroll-percentage";
 import ParallaxTruck from "./parallaxTruck.js";
+import { useInView } from "react-intersection-observer";
+import TwoCards from "./twoCards.js";
+import TeretComp from "./teret.js";
 
 const Main = () => {
-  const [ref, percentage] = useScrollPercentage({
-    /* Optional options */
-    threshold: 0,
-  });
   const size = useWindowSize();
 
   const settings = {
@@ -106,10 +104,16 @@ const Main = () => {
   const { locale } = router;
   const t = locale === "en" ? en : hr;
   // const size = useWindowSize();
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    triggerOnce: true,
+    threshold: 0,
+  });
+
   return (
     <WrapAll>
       <WrapContent>
-        <WrapKartica>
+        <WrapKartica ref={ref} className={` ${inView ? "inView" : "outView"}`}>
           <Content>
             <BlueLine />
             <UpTitle>{t.MLS.modernaLogistika}</UpTitle>
@@ -144,57 +148,7 @@ const Main = () => {
           </Photo1>
         </WrapKartica>
       </WrapContent>
-      <Teret>
-        <OverlayTeret />
-        <WrapContent>
-          <BlueDivider />
-          <Naslov>{t.MLS.teretKojiPrecozime}</Naslov>
-          <WrapIkone>
-            <IkonaiText>
-              <Ikona>
-                <Image src="/MLSpageIkone/Frame.svg" layout="fill" />
-              </Ikona>
-              <TextIspod>{t.MLS.ikona1}</TextIspod>
-            </IkonaiText>
-            <IkonaiText>
-              <Ikona>
-                <Image src="/MLSpageIkone/Frame-1.svg" layout="fill" />
-              </Ikona>
-              <TextIspod> {t.MLS.ikona2}</TextIspod>
-            </IkonaiText>{" "}
-            <IkonaiText>
-              <Ikona>
-                <Image src="/MLSpageIkone/Frame-3.svg" layout="fill" />
-              </Ikona>
-              <TextIspod>{t.MLS.ikona3}</TextIspod>
-            </IkonaiText>{" "}
-            <IkonaiText>
-              <Ikona>
-                <Image src="/MLSpageIkone/Frame-7.svg" layout="fill" />
-              </Ikona>
-              <TextIspod> {t.MLS.ikona4}</TextIspod>
-            </IkonaiText>{" "}
-            <IkonaiText>
-              <Ikona>
-                <Image src="/MLSpageIkone/Frame-2.svg" layout="fill" />
-              </Ikona>
-              <TextIspod> {t.MLS.ikona5}</TextIspod>
-            </IkonaiText>{" "}
-            <IkonaiText>
-              <Ikona>
-                <Image src="/MLSpageIkone/Frame-6.svg" layout="fill" />
-              </Ikona>
-              <TextIspod> {t.MLS.ikona6}</TextIspod>
-            </IkonaiText>{" "}
-            <IkonaiText>
-              <Ikona>
-                <Image src="/MLSpageIkone/Frame-4.svg" layout="fill" />
-              </Ikona>
-              <TextIspod> {t.MLS.ikona7}</TextIspod>
-            </IkonaiText>
-          </WrapIkone>
-        </WrapContent>
-      </Teret>
+      <TeretComp />
       <WrapContent>
         <BlueDivider />
         <Kategorizacija>
@@ -206,25 +160,7 @@ const Main = () => {
           <Kategorija photo="/MLStruck3.png" text={t.MLS.card3} />
         </WrapKategorije>
         <MlsMapa />
-        <WrapTwoCards ref={ref}>
-          <BgMLS percentage={percentage} />
-          <WrapKartica2>
-            <Content>
-              <BlueLine />
-              <UpTitle>{t.MLS.modernaFlota} </UpTitle>
-              <Title>{t.MLS.zastoMLS} </Title>
-              <Text>{t.MLS.text1}</Text>
-            </Content>
-          </WrapKartica2>
-          <WrapKartica2>
-            <Content>
-              <BlueLine />
-              <UpTitle>{t.MLS.telematskiSustav} </UpTitle>
-              <Title>{t.MLS.sigurnost} </Title>
-              <Text>{t.MLS.text2}</Text>
-            </Content>
-          </WrapKartica2>
-        </WrapTwoCards>
+        <TwoCards />
       </WrapContent>
       <Brojke />
       <ParallaxTruck />

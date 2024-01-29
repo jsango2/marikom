@@ -8,6 +8,10 @@ export const WrapAll = styled.div`
   width: 100%;
   height: 68px;
 
+  opacity: 0;
+  transition: all 2s ease-out;
+  transition-delay: 0.5;
+  opacity: ${(props) => props.inView && `1`};
   /* overflow: hidden; */
   @media only screen and (max-width: 600px) {
     height: 50px;
