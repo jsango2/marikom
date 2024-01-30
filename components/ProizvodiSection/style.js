@@ -57,7 +57,8 @@ export const WrapCerts = styled.div`
   justify-content: space-around;
   flex-wrap: nowrap;
   transition: all 1.5s ease-out;
-  left: ${(props) => (props.inView ? "0%" : "100%")};
+  left: ${(props) => (props.inView ? "0%" : "50%")};
+  opacity: ${(props) => (props.inView ? "1" : "0")};
 
   /* img {
     margin: 0 20px !important;

@@ -7,7 +7,7 @@ import styled from "styled-components";
 export const HeroWrap = styled.div`
   position: relative;
   z-index: 0;
-  min-height: 617px;
+  min-height: 517px;
   height: auto;
   width: 100%;
   display: flex;
@@ -28,7 +28,7 @@ export const HeroWrap = styled.div`
   z-index: 0; */
   overflow: hidden;
   @media only screen and (max-width: 1400px) {
-    padding: 100px 0 70px 70px;
+    /* padding: 100px 0 70px 70px; */
   }
   @media only screen and (max-width: 850px) {
     min-height: unset;

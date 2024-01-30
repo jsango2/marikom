@@ -8,12 +8,19 @@ import {
 // import HeroVideo from "../../video/kraciVideo.mp4";
 import useWindowSize from "../../helper/usewindowsize.js";
 import Image from "next/image.js";
+import { useInView } from "react-intersection-observer";
 
 const Cert = ({ text, ISO, MSC, IFS, ZZ, ASC }) => {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+
   const size = useWindowSize();
   return (
     <>
-      <WrapSingleCert>
+      <WrapSingleCert ref={ref} className={` ${inView ? "inView" : "outView"}`}>
         <Overlay />
         <WrapImages>
           {ISO && (

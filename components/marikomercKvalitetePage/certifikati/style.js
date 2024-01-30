@@ -168,11 +168,12 @@ export const Title = styled.h2`
 export const UpTitle = styled.h2`
   position: relative;
 
-  font-family: "Gilroy";
+  font-family: "Roboto Condensed";
+  font-size: 16px;
   font-style: normal;
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 120%;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
   /* or 25px */
 
   text-align: center;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const WrapAll = styled.div`
   position: relative;
-  z-index: 10;
+  z-index: 11;
   width: 100%;
   height: auto;
   display: flex;
@@ -12,7 +12,8 @@ export const WrapAll = styled.div`
   align-items: center;
   background: white;
   padding-top: 35px;
-  padding-bottom: 85px;
+  padding-bottom: 0px;
+
   @media only screen and (max-width: 850px) {
     padding-top: 40px;
     height: auto;
@@ -35,16 +36,18 @@ export const WrapContent = styled.div`
   margin: 90px auto 0 auto;
   background-color: white;
   padding: 0 150px;
+  margin-bottom: 100px;
   @media only screen and (max-width: 1600px) {
     width: 100%;
     padding: 0 30px;
   }
   @media only screen and (max-width: 850px) {
-    margin: 40px auto 0 auto;
+    margin: 40px auto 50px auto;
     padding: 0 0 30px 0;
     height: auto;
   }
   @media only screen and (max-width: 430px) {
+    margin-bottom: 80px;
   }
 `;
 export const TextBox = styled.div`
@@ -86,6 +89,18 @@ export const WrapIcons = styled.div`
   }
   @media only screen and (max-width: 430px) {
     margin-top: 30px;
+  }
+`;
+export const BlueBorder = styled.div`
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 15px;
+  background: #4299c8;
+  @media only screen and (max-width: 850px) {
+    width: 100vw;
+  }
+  @media only screen and (max-width: 430px) {
   }
 `;
 export const WrapImages = styled.div`

@@ -18,7 +18,7 @@ export const WrapAll = styled.div`
   /* overflow: hidden; */
   padding: 70px 0 100px 0;
   @media only screen and (max-width: 600px) {
-    padding: 70px 0 0px 0;
+    padding: 70px 0 40px 0;
   }
 `;
 export const TopImage = styled.div`

@@ -15,6 +15,7 @@ import {
   Img3,
   Img4,
   WrapContent,
+  BlueBorder,
 } from "./style.js";
 
 import Image from "next/image";
@@ -26,14 +27,21 @@ import img4 from "../../../assets/images/nasaPrica/vrijednostiImg4.png";
 import { useRouter } from "next/router.js";
 import en from "../../../locales/en.json";
 import hr from "../../../locales/hr.json";
+import { useInView } from "react-intersection-observer";
 
 function Vrijednosti() {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+
   const { locale } = useRouter();
   const t = locale === "en" ? en : hr;
   return (
     <WrapAll>
       <WrapContent>
-        <TextBox>
+        <TextBox ref={ref} className={` ${inView ? "inView" : "outView"}`}>
           <TitleH4>{t.Onama.prirodno}</TitleH4>
           <Title>{t.Onama.vrijednosti}</Title>
           <Text>{t.Onama.text2}</Text>
@@ -159,6 +167,7 @@ function Vrijednosti() {
           </Img4>
         </WrapImages>
       </WrapContent>
+      <BlueBorder />
     </WrapAll>
   );
 }

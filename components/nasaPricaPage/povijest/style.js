@@ -99,6 +99,13 @@ export const WrapEvents = styled.div`
 
   display: flex;
   margin-right: 50px;
+  transition: all 1.5s cubic-bezier(0.12, 0.52, 0.2, 0.99);
+  &.inViewHistory {
+    left: 0px;
+  }
+  &.outViewHistory {
+    left: -600px;
+  }
   @media only screen and (max-width: 850px) {
     padding-top: 0px;
     height: auto;

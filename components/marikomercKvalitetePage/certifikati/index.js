@@ -21,8 +21,14 @@ import en from "../../../locales/en.json";
 import hr from "../../../locales/hr.json";
 
 import { useRouter } from "next/router.js";
+import { useInView } from "react-intersection-observer";
 
 const Certifikati = () => {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0.2,
+    triggerOnce: true,
+  });
   const { locale } = useRouter();
   const t = locale === "en" ? en : hr;
   const size = useWindowSize();
@@ -31,7 +37,7 @@ const Certifikati = () => {
       <WrapAllCertifikati>
         <PhotosRow />
         <ContentWrap>
-          <TextBox>
+          <TextBox ref={ref} className={` ${inView ? "inView" : "outView"}`}>
             <UpTitle>{t.Kvalitete.certifikati}</UpTitle>
             <Title>{t.Kvalitete.naslov1}</Title>
             <Text>{t.Kvalitete.text1}</Text>

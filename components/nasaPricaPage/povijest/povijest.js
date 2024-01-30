@@ -103,7 +103,10 @@ function Povijest() {
             <IoIosArrowForward size={24} />
           </Icon>
         </Title>
-        <WrapEvents ref={ref}>
+        <WrapEvents
+          ref={ref}
+          className={` ${inView ? "inViewHistory" : "outViewHistory"}`}
+        >
           {events.map((event, index) => (
             <Dogadjaj
               key={index}

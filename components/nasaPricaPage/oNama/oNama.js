@@ -19,12 +19,19 @@ import { useRouter } from "next/router.js";
 import en from "../../../locales/en.json";
 import hr from "../../../locales/hr.json";
 import parse from "html-react-parser";
+import { useInView } from "react-intersection-observer";
 function Onama() {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+
   const { locale } = useRouter();
   const t = locale === "en" ? en : hr;
   return (
     <WrapAll>
-      <WrapContent>
+      <WrapContent ref={ref} className={` ${inView ? "inView" : "outView"}`}>
         <Content>
           <BlueLine />
           <TitleH5>{t.Onama.oNama}</TitleH5>

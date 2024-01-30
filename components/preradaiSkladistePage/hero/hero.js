@@ -8,8 +8,15 @@ import hero from "../../../assets/images/nasaPrica/hero.png";
 import { useRouter } from "next/router.js";
 import en from "../../../locales/en.json";
 import hr from "../../../locales/hr.json";
+import { useInView } from "react-intersection-observer";
 
 const Hero = () => {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : hr;
@@ -24,7 +31,9 @@ const Hero = () => {
           layout="fill"
           objectFit="cover"
         />
-        <ContentWrap>{t.Prerada.heroNaslov}</ContentWrap>
+        <ContentWrap ref={ref} className={` ${inView ? "inView" : "outView"}`}>
+          {t.Prerada.heroNaslov}
+        </ContentWrap>
       </HeroWrap>
     </>
   );

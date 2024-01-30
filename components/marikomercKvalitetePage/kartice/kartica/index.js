@@ -14,11 +14,17 @@ import {
 // import useWindowSize from "../../helper/usewindowsize";
 import { Link as Veza } from "react-scroll";
 import Image from "next/image";
-
+import { useInView } from "react-intersection-observer";
 const Kartica = ({ num, upTitle, title, text, li, photo }) => {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+
   //   const size = useWindowSize();
   return (
-    <WrapAll>
+    <WrapAll ref={ref} className={` ${inView ? "inView" : "outView"}`}>
       <Overlay />
       <Container>
         <Number>{num}</Number>

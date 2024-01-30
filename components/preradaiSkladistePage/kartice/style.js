@@ -26,7 +26,7 @@ export const WrapAll = styled.div`
   padding-top: 25px;
   padding-bottom: 50px;
   @media only screen and (max-width: 1400px) {
-    padding: 100px 0 70px 70px;
+    /* padding: 100px 0 70px 70px; */
   }
   @media only screen and (max-width: 850px) {
     padding: 0 0 70px 0;

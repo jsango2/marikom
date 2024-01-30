@@ -18,6 +18,7 @@ import en from "../../locales/en.json";
 import hr from "../../locales/hr.json";
 import { useScrollPercentage } from "react-scroll-percentage";
 import { useInView } from "react-intersection-observer";
+import CertsComp from "./certs.js";
 function ProizvodiSection() {
   const { ref, inView, entry } = useInView({
     /* Optional options */
@@ -46,28 +47,7 @@ function ProizvodiSection() {
         </Title>
         <Text>{t.Products.subTitle}</Text>
         <ProizvodiCLoud />
-        <WrapCerts inView={inView}>
-          <WrapImage>
-            <Image src="/certifikat/MSC.svg" height={62} width={173} />
-          </WrapImage>
-          <WrapImage>
-            <Image src="/certifikat/ASC.svg" height={62} width={130} />
-          </WrapImage>
-
-          <WrapImage>
-            <Image src="/certifikat/IFSfood.svg" height={62} width={113} />
-          </WrapImage>
-
-          <WrapImage>
-            {" "}
-            <Image src="/certifikat/zivjetizdravo.svg" height={62} width={85} />
-          </WrapImage>
-
-          <WrapImage>
-            {" "}
-            <Image src="/certifikat/ISO9001.svg" height={62} width={70} />
-          </WrapImage>
-        </WrapCerts>
+        <CertsComp />
       </WrapImage2>
     </WrapAll>
   );

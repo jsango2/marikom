@@ -7,12 +7,22 @@ export const WrapSkladiste = styled.div`
   height: 437px;
 
   background: white;
-
+  overflow: hidden;
   @media only screen and (max-width: 850px) {
     padding-top: 40px;
     height: 60vw;
     max-height: 400px;
     min-height: 230px;
+  }
+`;
+export const WrapImage = styled.div`
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 637px;
+  bottom: ${(props) => props.percentage * 100 - 100}px;
+
+  @media only screen and (max-width: 850px) {
   }
 `;
 export const BlueLine = styled.div`
