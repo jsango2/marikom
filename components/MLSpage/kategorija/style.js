@@ -16,6 +16,7 @@ export const WrapKategorija = styled.div`
     min-width: unset;
     height: auto;
     width: 100vw;
+    margin-bottom: 0;
   }
 `;
 export const Photo = styled.div`
@@ -43,7 +44,7 @@ export const Text = styled.div`
   font-style: normal;
   font-weight: 500;
   line-height: 153%;
-  padding: 15px 30px;
+  padding: 25px 30px 45px 30px;
   @media only screen and (max-width: 1050px) {
   }
   @media only screen and (max-width: 850px) {
