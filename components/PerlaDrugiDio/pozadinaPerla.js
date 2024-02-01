@@ -48,7 +48,7 @@ function PozadinaPerlaComp() {
 
   return (
     <Left ref={ref}>
-      <PozadinaPerla percentage={percentage}>
+      <PozadinaPerla>
         <Image src="/perlaLogo.svg" layout="fill" />
       </PozadinaPerla>
       <ImageWrap></ImageWrap>

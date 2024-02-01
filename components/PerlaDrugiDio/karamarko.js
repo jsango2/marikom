@@ -50,15 +50,6 @@ function KaramarkoComp() {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : hr;
-  const [perlaData, setPerlaData] = useState([]);
-  useEffect(() => {
-    setPerlaData(catalogData.filter((data) => data.FeaturedPerla == "DA"));
-  }, []);
-
-  const [ref1, percentage] = useScrollPercentage({
-    /* Optional options */
-    threshold: 0,
-  });
 
   const { ref, inView, entry } = useInView({
     /* Optional options */
@@ -66,10 +57,12 @@ function KaramarkoComp() {
     triggerOnce: true,
   });
   return (
-    <Karamarko ref={ref1}>
+    <Karamarko>
       <PozadinaPerlaComp />
-      <Right ref={ref}>
-        <Title2 inView={inView}>{t.Perla2.karamarkoText}</Title2>
+      <Right>
+        <Title2 ref={ref} className={`jure ${inView ? "inView" : "outView"}`}>
+          {t.Perla2.karamarkoText}
+        </Title2>
         <LogoHks>
           {" "}
           <Image src="/HKS.svg" alt="p1" layout="fill" objectFit="cover" />

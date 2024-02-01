@@ -647,9 +647,6 @@ export const Title2 = styled.h1`
   width: 680px;
   margin: 0 auto 0 auto;
 
-  transition: all 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  left: ${(props) => (props.inView ? "0" : "130%")};
-  opacity: ${(props) => (props.inView ? "1" : "0")};
   @media only screen and (max-width: 1000px) {
     font-size: 36px;
     width: 75%;
