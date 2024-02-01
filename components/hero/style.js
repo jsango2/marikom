@@ -38,7 +38,9 @@ export const HeroWrap = styled.div`
   }
   @media only screen and (max-width: 700px) {
     min-height: unset;
+    max-height: 950px;
     height: 100dvh;
+    min-height: 650px;
     padding-bottom: 20px;
   }
 `;
