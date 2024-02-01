@@ -104,7 +104,7 @@ export const Photo1 = styled.div`
   background: ${(props) => `url(${props.bg}) no-repeat center`};
   background-size: cover;
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 2px;
   @media only screen and (max-width: 1250px) {
     width: 50%;
   }
@@ -125,7 +125,7 @@ export const Photo2 = styled.div`
   background: ${(props) => `url(${props.bg}) no-repeat center`};
   background-size: cover;
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 2px;
   @media only screen and (max-width: 1250px) {
     width: 50%;
   }
