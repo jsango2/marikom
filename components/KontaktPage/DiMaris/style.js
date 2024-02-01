@@ -28,8 +28,8 @@ export const WrapContent = styled.div`
   position: relative;
   z-index: 11;
   display: flex;
-  min-width: 1400px;
-  max-width: 1440px;
+  min-width: 1340px;
+  max-width: 1340px;
   margin: 0 auto;
   padding: 54px 0 0 25px;
 
@@ -44,7 +44,7 @@ export const Photo = styled.div`
   z-index: 11;
   display: flex;
 
-  width: 700px;
+  width: 600px;
   height: 510px;
   overflow: hidden;
   border-radius: 3px;

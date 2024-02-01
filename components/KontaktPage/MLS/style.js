@@ -29,11 +29,11 @@ export const WrapContent = styled.div`
   z-index: 11;
   display: flex;
 
-  max-width: 1440px;
-  margin: 0 auto;
+  max-width: 1340px;
+  margin: 0 auto 0 auto;
   padding: 54px 0 0 55px;
 
-  justify-content: space-between;
+  justify-content: space-around;
   @media only screen and (max-width: 850px) {
     padding: 0;
     flex-direction: column-reverse;
@@ -44,7 +44,7 @@ export const Photo = styled.div`
   z-index: 11;
   display: flex;
 
-  width: 700px;
+  width: 600px;
   height: 510px;
   overflow: hidden;
   border-radius: 3px;

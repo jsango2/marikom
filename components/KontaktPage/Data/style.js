@@ -105,7 +105,7 @@ export const Funkcija = styled.div`
   @media only screen and (max-width: 1300px) {
   }
 `;
-export const Email = styled.div`
+export const Email = styled.a`
   position: relative;
   z-index: 11;
   color: #1c2640;
@@ -116,6 +116,7 @@ export const Email = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 22.4px */
+  text-decoration: none;
   @media only screen and (max-width: 1300px) {
   }
 `;

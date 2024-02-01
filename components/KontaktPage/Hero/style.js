@@ -27,7 +27,7 @@ export const WrapContent = styled.div`
   z-index: 11;
   display: flex;
   justify-content: space-around;
-  max-width: 1360px;
+  max-width: 1340px;
   margin: 0 auto;
   padding: 54px 0 0 25px;
   @media only screen and (max-width: 850px) {
@@ -49,7 +49,7 @@ export const WrapText = styled.div`
 export const WrapPhoto = styled.div`
   position: relative;
   z-index: 11;
-  width: 721px;
+  width: 621px;
   height: 480px;
   overflow: hidden;
   border-radius: 3px;
@@ -86,6 +86,10 @@ export const Text = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 22.4px */
+  a {
+    text-decoration: none;
+    color: #f5faff;
+  }
   @media only screen and (max-width: 850px) {
     width: 85vw;
   }
@@ -98,7 +102,7 @@ export const GoogleButton = styled.button`
   border: 1px solid #f5faff;
   padding: 0 20px;
   width: auto;
-  height: 25px;
+  height: 30px;
   color: #f5faff;
   text-align: center;
   /* M-T */

@@ -108,12 +108,12 @@
     "ljudskiResursi": "ljudski resursi",
     "kontaktTelefon": "Kontakt telefon",
     "distribucijaIprerada": "Distribucija i prerada",
-    "heroData": " Grabi 54<br /> 23241 Poličnik, Hrvatska<br /> Matični broj: 3468925<br /> OIB: 02359254184<br /><br /> E-mail: info@marikomerc.hr<br /> Tel: +385(0)23/627-696<br /><br /> ERSTE BANKA, Jadranski trg 3A, 51000 Rijeka, Hrvatska<br /> IBAN: HR8024020061100078207<br /> TimoCom ID: 227763<br /><br /> Marikomerc d.o.o. je upisan u registar Trgovačkog suda uZadru, broj spisa: 02454831",
+    "heroData": " Grabi 54<br /> 23241 Poličnik, Hrvatska<br /> Matični broj: 3468925<br /> OIB: 02359254184<br /><br /> E-mail:<a href='mailto:posao@marikomerc.hr'> info@marikomerc.hr</a><br /> Tel: <a href='tel:+385(0)23/627-696'>+385(0)23/627-696</a><br /><br /> ERSTE BANKA, Jadranski trg 3A, 51000 Rijeka, Hrvatska<br /> IBAN: HR8024020061100078207<br /> TimoCom ID: 227763<br /><br /> Marikomerc d.o.o. je upisan u registar Trgovačkog suda uZadru, broj spisa: 02454831",
     "lanacRibarnica": "Lanac ribarnica",
-    "diMarisData": " Adresa: Obala kneza Trpimira 2,<br />23000 Zadar - Hrvatska<br />Matični broj: 3468925<br />OIB: 02359254184<br /><br />E-mail: info@dimaris.hr<br />E-mail: info@delimaris.hr<br />Tel: +385(0)23/342-613<br />Fax: +385(0)23/354-238<br /><br />BANKA OTP, Adresa, 23000 Zadar IBAN: HR8024020061100078207<br /><br />Di Maris d.o.o. je upisan u registar<br />Trgovačkog suda u Zadru, broj spisa: 02454831",
+    "diMarisData": " Adresa: Obala kneza Trpimira 2,<br />23000 Zadar - Hrvatska<br />Matični broj: 3468925<br />OIB: 02359254184<br /><br />E-mail:<a href='mailto:info@dimaris.hr'> info@dimaris.hr</a> <br />Tel:<a href='tel:+385(0)23/342-613'>+385(0)23/342-613</a> <br />Fax: +385(0)23/354-238<br /><br />BANKA OTP, Adresa, 23000 Zadar IBAN: HR8024020061100078207<br /><br />Di Maris d.o.o. je upisan u registar<br />Trgovačkog suda u Zadru, broj spisa: 02454831",
     "uputeGoogleMaps": "Upute Google maps",
     "logistika": "logistika",
-    "MLSdata": "  Grabi 54<br />23241 Poličnik, Hrvatska<br />Matični broj: 3468925<br />OIB: 02359254184<br /><br />E-mail: info@marikomerc.hr<br />Tel: +385(0)23/342-613<br />Fax: +385(0)23/354-238<br /><br />BANKA OTP, Adresa, 23000 Zadar<br />IBAN: HR8024020061100078207<br />TimoCom ID: 227763<br /><br />Marikomerc d.o.o. je upisan u registar<br />Trgovačkog suda u Zadru, broj spisa: 02454831"
+    "MLSdata": "  Grabi 54<br />23241 Poličnik, Hrvatska<br />Matični broj: 3468925<br />OIB: 02359254184<br /><br />E-mail:<a href='mailto:info@mls.hr'> info@mls.hr</a> <br />Tel:<a href='tel:+385(0)23/342-613'>+385(0)23/342-613</a> <br />Fax: +385(0)23/354-238<br /><br />BANKA OTP, Adresa, 23000 Zadar<br />IBAN: HR8024020061100078207<br />TimoCom ID: 227763<br /><br />Marikomerc d.o.o. je upisan u registar<br />Trgovačkog suda u Zadru, broj spisa: 02454831"
   },
   "Linkovi": {
     "onama": "O nama",

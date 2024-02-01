@@ -135,7 +135,7 @@ export const UpTitle = styled.h3`
 
   /* Black */
   color: #161722;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   @media only screen and (max-width: 600px) {
   }
 `;
@@ -153,7 +153,7 @@ export const Title = styled.h2`
   /* MK Plava */
 
   color: #1c2640;
-  margin-bottom: 25px;
+  margin: 0;
   @media only screen and (max-width: 1250px) {
     width: 90%;
     font-size: 40px;
@@ -219,7 +219,7 @@ export const Number = styled.h1`
   left: -55px;
   width: 131px;
   @media only screen and (max-width: 450px) {
-    left: -40px;
+    left: -28px;
 
     /* font-size: 14px;
     width: 90%; */

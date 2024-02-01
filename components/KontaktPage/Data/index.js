@@ -46,9 +46,14 @@ function ContactData({ kontakti }) {
                 {" "}
                 {locale === "hr" ? kontakt.funkcija : kontakt.funkcijaEng}
               </Funkcija>
-              <Email>{kontakt.email}</Email>
+              <Email href={`mailto:${kontakt.email}?subject=upit`}>
+                {kontakt.email}
+              </Email>
+              <br />
               {kontakt.brojTelefona !== null && (
-                <Email>{kontakt.brojTelefona}</Email>
+                <Email href={`tel:${kontakt.brojTelefona}`}>
+                  {kontakt.brojTelefona}
+                </Email>
               )}
             </Block>
           ))}

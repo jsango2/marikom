@@ -86,6 +86,7 @@ export const TopTitle = styled.h3`
   line-height: normal;
   text-transform: uppercase;
   color: #f5faff;
+  margin-bottom: 0;
   @media only screen and (max-width: 1300px) {
   }
 `;

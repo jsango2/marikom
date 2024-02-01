@@ -37,9 +37,9 @@ const Hero = ({ toggleYT }) => {
           loop="loop"
           className="videoHero"
           playsInline
-          poster="/HERO.webp"
+          poster="/heroPosterSm.webp"
         >
-          <source src="/heroVideo2.mp4" type="video/mp4" />
+          <source src="/heroVideo2.mov" type="video/mp4" />
         </video>
 
         {/* <ContentWrap>
