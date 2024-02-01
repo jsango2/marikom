@@ -74,7 +74,6 @@ export const MapaWrapTextBlock = styled.div`
   width: 510px;
   height: 78%;
   background: #11192c;
-  border-radius: 3px;
   padding-top: 60px;
   padding-left: 60px;
   padding-right: 60px;
