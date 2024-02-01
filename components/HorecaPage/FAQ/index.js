@@ -42,7 +42,7 @@ function FAQ(props) {
   return (
     <WrapAll>
       <HorecaContent>
-        <HorecaAccordion>
+        <HorecaAccordion ref={ref}>
           <AccordionTitle>{t.Horeca.FAQ}</AccordionTitle>
           <Accordion flush open={open} toggle={toggle}>
             <AccordionItem className="accordionItem">
@@ -88,7 +88,6 @@ function FAQ(props) {
           </Accordion>
         </HorecaAccordion>
         <HorecaWrapImage
-          ref={ref}
           className={` ${inView ? "inViewPhoto" : "outViewPhoto"}`}
         ></HorecaWrapImage>
       </HorecaContent>
