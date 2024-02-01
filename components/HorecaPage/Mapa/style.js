@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const MapaWrapAll = styled.div`
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   position: relative;
   z-index: 10;
   width: 100%;
@@ -24,56 +27,84 @@ export const MapaContent = styled.div`
   position: relative;
   z-index: 11;
   max-width: 1440px;
+  height: 830px;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  /* align-items: flex-start; */
   margin: 0 auto;
-  padding: 90px 0px;
-  @media only screen and (max-width: 1300px) {
-    padding: 70px 0px;
+  align-items: center;
+  @media only screen and (max-width: 1050px) {
     flex-direction: column-reverse;
-    align-items: center;
+    /* height: auto;
+    width: 100%; */
+    /* padding: 70px 0px;
+    flex-direction: column-reverse;
+    align-items: center; */
   }
-  @media only screen and (max-width: 850px) {
-    padding: 0px 0px;
-    flex-direction: column;
+  @media only screen and (max-width: 1050px) {
+    width: 100vw;
+    height: auto;
   }
 `;
 export const MapaWrapKarta = styled.div`
   position: relative;
   z-index: 11;
-  width: 980px;
-  height: 830px;
-  background-image: url("/mapa.png");
-  top: -150px;
+  /* width: 980px; */
+  height: 100%;
+  width: 1020px;
+
   border-radius: 3px;
   background-size: cover;
-  @media only screen and (max-width: 1300px) {
-    top: 0px;
+  overflow: hidden;
+  @media only screen and (max-width: 1050px) {
+    height: 500px;
+
+    /* top: 0px; */
   }
   @media only screen and (max-width: 850px) {
-    width: 100vw;
+    /* width: 100vw;
     height: 65vw;
-    min-height: 360px;
+    min-height: 360px; */
   }
 `;
 export const MapaWrapTextBlock = styled.div`
   position: relative;
-  z-index: 11;
-  width: 460px;
-
+  left: 68px;
+  z-index: 12;
+  width: 510px;
+  height: 78%;
   background: #11192c;
-  top: 100px;
   border-radius: 3px;
-  padding: 85px 86px 100px 76px;
+  padding-top: 60px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 20px;
   @media only screen and (max-width: 1300px) {
-    top: 0px;
+    left: 0px;
+    height: 100%;
+
+    /* left: 0;
+    height: 100%; */
+
+    /* padding: 85px 86px 0px 76px;
+
+    top: 0;
+    height: 100%; */
+    /* height: 100%;
+    top: 0px; */
   }
-  @media only screen and (max-width: 850px) {
-    width: 100vw;
+  @media only screen and (max-width: 1050px) {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 60px;
+    padding-bottom: 30px;
   }
   @media only screen and (max-width: 430px) {
-    padding: 65px 30px 100px 30px;
+    /* padding: 65px 30px 100px 30px; */
+    padding-bottom: 58px;
   }
 `;
 export const TopTitle = styled.h3`

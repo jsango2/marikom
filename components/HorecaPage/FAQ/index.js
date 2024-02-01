@@ -4,6 +4,7 @@ import {
   HorecaContent,
   HorecaAccordion,
   AccordionTitle,
+  WrapImage,
 } from "./style.js";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -11,6 +12,7 @@ import useWindowSize from "../../helper/usewindowsize";
 import en from "../../../locales/en.json";
 import hr from "../../../locales/hr.json";
 import { useRouter } from "next/router.js";
+import { useInView } from "react-intersection-observer";
 import {
   Accordion,
   AccordionBody,
@@ -19,6 +21,12 @@ import {
 } from "reactstrap";
 import { useState } from "react";
 function FAQ(props) {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+
   const [open, setOpen] = useState("1");
   const toggle = (id) => {
     if (open === id) {
@@ -79,7 +87,10 @@ function FAQ(props) {
             </AccordionItem>
           </Accordion>
         </HorecaAccordion>
-        <HorecaWrapImage></HorecaWrapImage>
+        <HorecaWrapImage
+          ref={ref}
+          className={` ${inView ? "inViewPhoto" : "outViewPhoto"}`}
+        ></HorecaWrapImage>
       </HorecaContent>
     </WrapAll>
   );

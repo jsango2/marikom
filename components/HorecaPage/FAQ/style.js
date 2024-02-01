@@ -83,11 +83,19 @@ export const HorecaWrapImage = styled.div`
   z-index: 11;
   height: 1200px;
   width: 640px;
-  background-image: url("/horeca1.webp");
+  background-image: url("/kuhar.png");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 3px;
-
+  transition: all 1s ease-out;
+  &.inViewPhoto {
+    right: 0;
+    opacity: 1;
+  }
+  &.outViewPhoto {
+    opacity: 0;
+    right: -400px;
+  }
   @media only screen and (max-width: 1300px) {
     width: 35%;
   }

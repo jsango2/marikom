@@ -6,7 +6,6 @@ import {
   TopTitle,
   Title,
   Text,
-  Button,
   Galeb1,
   Galeb2,
   Galeb3,
@@ -18,6 +17,7 @@ import en from "../../../locales/en.json";
 import hr from "../../../locales/hr.json";
 import { useRouter } from "next/router.js";
 import parse from "html-react-parser";
+import Button from "../../buttonBlue/Button.js";
 
 function Mapa() {
   const { locale } = useRouter();
@@ -33,7 +33,14 @@ function Mapa() {
           <TopTitle>{t.Horeca.topTitle}</TopTitle>
           <Title>{t.Horeca.Title}</Title>
           <Text>{parse(t.Horeca.Text)}</Text>
-          <Button>{t.Horeca.buttonText}</Button>
+          <Button
+            bgcolor="#4299C8"
+            color="#FFFFFF"
+            width="306px"
+            text={t.Horeca.buttonText}
+            linkTo="/kontakt"
+            marginTop="40px"
+          />
         </MapaWrapTextBlock>
 
         <MapaWrapKarta>
