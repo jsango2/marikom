@@ -146,7 +146,7 @@ export const GradientContainer = styled.div`
 
   @media only screen and (max-width: 700px) {
     width: 100%;
-    height: 60%;
+    height: 430px;
     justify-content: center;
     bottom: 0;
     align-items: flex-start;
@@ -158,6 +158,7 @@ export const GradientContainer = styled.div`
   }
 
   @media only screen and (max-width: 420px) {
+    height: auto;
   }
 `;
 export const WrapText = styled.div`
