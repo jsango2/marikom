@@ -55,6 +55,11 @@ function LanguageSwitcher({
           locale: lang,
         });
       }
+      if (asPath === "/dimaris") {
+        return router.push("/dimaris", undefined, {
+          locale: lang,
+        });
+      }
       if (asPath === "/MLS") {
         return router.push("/MLS", undefined, {
           locale: lang,
