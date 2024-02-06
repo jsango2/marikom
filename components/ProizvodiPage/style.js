@@ -113,7 +113,7 @@ export const ButtonsWrapDesktop = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 19.2px */
-    padding: 10px 10px;
+    padding: 10px 29px;
     border-radius: 3px;
     transition: all 0.2s ease-in-out;
   }

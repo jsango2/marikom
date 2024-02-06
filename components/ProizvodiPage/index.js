@@ -130,6 +130,8 @@ function ProizvodiPage() {
 
   // ./productImagesIds.js sadrzi array sa fotkama koje su u bazi (neki proizvodi nemaju fotku). Treba appendati tu informaciju svakom proizvodu a bi se znala renderirati fotka ili placeholder
   // ako nam posalju nove fotke (nazvane prema id proizvoda), stavi ih sve u /public/productImages u webp formatu a listu imena stavi u .productImagesId.js
+  //./productImagesIds kreiraj tako da kopiras imena svih fotki koje imas u excel i maknes .jpg..kreiras od tog json sa ID: 23444 npr. To kopiraj u ./productImagesIDs
+
   const photoIdList = productImagesIds.map((item) => item.ID);
 
   useEffect(() => {
