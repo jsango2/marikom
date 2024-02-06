@@ -258,7 +258,7 @@ export const Search = styled.div`
   margin-left: auto;
   display: flex;
   align-items: center;
-  width: 100%;
+  width: auto;
   justify-content: flex-end;
 
   input {
@@ -275,6 +275,7 @@ export const Search = styled.div`
   @media only screen and (max-width: 600px) {
     margin: 0;
     border-bottom: 1px solid white;
+    width: 100%;
     input {
       width: 100%;
       height: 28px;
@@ -342,7 +343,7 @@ export const NazivKategorije = styled.div`
   position: relative;
   z-index: 10;
   color: var(--color-boja-marikomerc-bijela);
-
+  width: auto;
   /* H2 */
   font-family: "Roboto Condensed", sans-serif;
   font-size: 40px;
