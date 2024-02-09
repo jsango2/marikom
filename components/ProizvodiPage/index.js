@@ -144,7 +144,7 @@ function ProizvodiPage() {
 
     const newArr1 = filteredDataByCategory.map((v) => ({
       ...v,
-      photoUrl: `/productImages/${v["Kataloški broj:"]}.jpg`,
+      photoUrl: `/productImages/${v["Kataloški broj:"]}.png`,
     }));
     newArr1.forEach((item) => {
       item.hasUrl = false;

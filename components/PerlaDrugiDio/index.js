@@ -73,7 +73,7 @@ function PerlaDrugiDio() {
               <Overlay />
               <WrapProizvodImage>
                 <Image
-                  src={`/productImages/${data["Kataloški broj:"]}.webp`}
+                  src={`/productImages/${data["Kataloški broj:"]}.png`}
                   layout="fill"
                   alt="p1"
                   objectFit="contain"
