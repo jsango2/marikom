@@ -126,6 +126,7 @@ function ProizvodiPage() {
     if (currentPage !== 0) {
       setCurrentPage(1);
     }
+    setRemountComponent(Math.random());
   };
 
   // ./productImagesIds.js sadrzi array sa fotkama koje su u bazi (neki proizvodi nemaju fotku). Treba appendati tu informaciju svakom proizvodu a bi se znala renderirati fotka ili placeholder
@@ -185,7 +186,7 @@ function ProizvodiPage() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   // PAGINATION::::::
   const [page, setPage] = useState();
-
+  const [remountComponent, setRemountComponent] = useState(0);
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const [itemOffset, setItemOffset] = useState([]);
@@ -263,7 +264,7 @@ function ProizvodiPage() {
   //   });
   console.log(category);
   return (
-    <WrapAll>
+    <WrapAll key={remountComponent}>
       {size.width > 900 && (
         <ButtonsWrapDesktop>
           {kategorije.map((kat) => (
