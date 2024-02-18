@@ -164,7 +164,7 @@ function HorecaHero() {
                 color="#FFFFFF"
                 width="226px"
                 text={t.Perla.button}
-                linkTo="/o-nama"
+                linkTo="mailto: info@marikomerc.hr"
               />
             </WrapButton>
           </TextWrap>

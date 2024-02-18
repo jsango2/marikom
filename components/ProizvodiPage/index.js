@@ -22,7 +22,8 @@ import {
 import { useRouter } from "next/router";
 import en from "../../locales/en.json";
 import hr from "../../locales/hr.json";
-import { catalogData } from "../../catalogData.js";
+// import { catalogData } from "../../catalogData.js";
+import { catalogData } from "../../catalogData18_2_2024.js";
 import { useEffect, useState } from "react";
 import Image from "next/image.js";
 // import axios from "axios";
@@ -280,10 +281,10 @@ function ProizvodiPage() {
             <div style={{ marginBottom: "20px" }}>
               Kontaktirajte nas za više informacija:{" "}
             </div>
-            <a href="tel: 023 627 054">Tel: 023 627 054</a>
-            <a href="mailto: prodaja@marikomerc.hr">prodaja@marikomerc.hr</a>
+            <a href="tel: 023 627 054">Tel: 023 630 539</a>
+            <a href="mailto: info@marikomerc.hr">info@marikomerc.hr</a>
             <a
-              href="/images/myw3schoolsimage.jpg"
+              href="/Katalog_Marikomerc.pdf"
               download
               style={{
                 marginTop: "20px",

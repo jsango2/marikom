@@ -4,7 +4,7 @@ export const WrapAll = styled.div`
   position: relative;
   z-index: 9;
   width: 330px;
-  height: 479px;
+  height: 370px;
 
   color: black;
   display: flex;
@@ -165,7 +165,7 @@ export const Photo = styled.div`
   z-index: 10;
   width: 288px;
 
-  height: 180px;
+  height: 260px;
   color: black;
   display: flex;
 

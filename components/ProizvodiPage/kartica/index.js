@@ -72,15 +72,17 @@ function Kartica({
       <WrapData>
         <GornjiBlok>
           <Naziv>{imeProizvoda}</Naziv>
-          {latinskiNaziv != "-" && (
+          {latinskiNaziv != "-" ? (
             <LatinskiNaziv>lat. {latinskiNaziv}</LatinskiNaziv>
+          ) : (
+            <LatinskiNaziv></LatinskiNaziv>
           )}
-          <Opis>{opis}</Opis>
+          {/* <Opis>{opis}</Opis> */}
         </GornjiBlok>
         <DonjiBlok>
-          <JedinicaMjere>
+          {/* <JedinicaMjere>
             {t.Products.KataloskiBr}: <b>{kataloskiBroj}</b>{" "}
-          </JedinicaMjere>
+          </JedinicaMjere> */}
           <Pakiranje>
             {t.Products.Pakiranje}: <b>{pakiranje}</b>
           </Pakiranje>
