@@ -119,7 +119,7 @@ const Header = ({ siteTitle, novostiNaslovi, oglasiNaslovi }) => {
                         href="/marikomerc-kvalitete"
                       >
                         {locale === "hr"
-                          ? "Marikomerc kvalitete"
+                          ? "Marikomerc kvaliteta"
                           : "Marikomerc quality"}
                       </Link>
                       <Link className="navLinkDrop" href="/prerada-i-skladiste">

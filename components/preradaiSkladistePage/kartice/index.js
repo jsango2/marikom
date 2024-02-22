@@ -44,7 +44,7 @@ const Kartice = () => {
       />
       <Kartica
         upTitle={t.Prerada.upTitle2}
-        title={t.Prerada.title1}
+        title={t.Prerada.title2}
         text={t.Prerada.text2}
         photo="/prerada/p2.webp"
       />
