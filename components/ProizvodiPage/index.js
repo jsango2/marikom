@@ -279,7 +279,9 @@ function ProizvodiPage() {
           ))}
           <Kontakt>
             <div style={{ marginBottom: "20px" }}>
-              Kontaktirajte nas za više informacija:{" "}
+              {locale === "hr"
+                ? "Kontaktirajte nas za više informacija:"
+                : "Contact us for more information:"}
             </div>
             <a href="tel: 023 627 054">Tel: 023 630 539</a>
             <a href="mailto: info@marikomerc.hr">info@marikomerc.hr</a>
@@ -295,7 +297,9 @@ function ProizvodiPage() {
               }}
             >
               <Arrow width="60px" />
-              Download brošure Perla HORECA
+              {locale === "hr"
+                ? "Download brošure Perla HORECA"
+                : "Download the Perla HORECA brochure"}
             </a>
           </Kontakt>
         </ButtonsWrapDesktop>
