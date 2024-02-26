@@ -75,21 +75,6 @@ export const data = [
     photo: "",
   },
   {
-    uptitle: "Sveobuhvatna i personalizirana usluga",
-    uptitleEng: "Comprehensive and Personalized Service",
-    titleEng: "At the Service of Professionals",
-    textEng: {
-      main: "More than 2000 SKU's. Fish and seafood, meat, vegetables, pasta for creating interesting menus. A wide range makes it easy to manage orders and supply products. Marikomerc: More than 235 professionals in the service of excellence.",
-      sub: "",
-    },
-    title: "Na usluzi profesionalcima",
-    text: {
-      main: "Više od 2000 SKU-a. Riba i plodovi mora, meso, povrće, tjestenina za kreiranje zanimljivih jelovnika. Široka ponuda olakšava upravljanje narudžbama i opskrbu proizvoda. Marikomerc: Više od 235 profesionalaca u službi izvrsnosti.",
-      sub: "",
-    },
-    photo: "",
-  },
-  {
     uptitle: "Osobita pozornost na usluge",
     uptitleEng: "Special Attention to Services",
     titleEng: "We Deliver Much More Than Products",
