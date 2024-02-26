@@ -33,7 +33,7 @@ function MapaSection() {
             inview={` ${inView ? "CardSlideUp" : "Card"}`}
             Grafika={Zarulja}
             title="BRZA LOGISTIČKA RJEŠENJA DILJEM OPSKRBNOG LANCA"
-            text="Naša logistička infrastruktura omogućuje nam da u kratkom roku i s visokom preciznošću riješimo i najzahtjevnije logističke izazove."
+            text="Naša logistička infrastruktura omogućuje da u kratkom roku i s visokom preciznošću riješimo i najzahtjevnije logističke izazove."
             titleEng="Fast logistics solutions throughout the supply chain."
             textEng="Our logistics infrastructure enables us to solve even the most demanding logistical challenges quickly and with high precision."
             gradient="2"
@@ -44,7 +44,7 @@ function MapaSection() {
             inview={` ${inView ? "CardSlideUp" : "Card"}`}
             Grafika={Tabla}
             title="POSVEĆENOST KVALITETI I INOVACIJAMA"
-            text="Stvaramo tržišne trendove, a naši stručnjaci u strogo kontroliraju svaku fazu procesa – od ulova do potrošača."
+            text="Stvaramo tržišne trendove, a naši stručnjaci strogo kontroliraju svaku fazu procesa – od ulova do potrošača."
             titleEng="Commitment to Quality and Innovation."
             textEng="We create market trends, and our experts rigorously control every phase of the process - from catch to consumer."
             gradient="1"

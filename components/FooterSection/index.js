@@ -68,10 +68,10 @@ function FooterSection() {
             <>
               <Column>
                 <SubName>{t.Linkovi.lokacije}</SubName>
-                <SingleLink2 href="/proizvodi">Zadar</SingleLink2>
-                <SingleLink2 href="/proizvodi">Dubrovnik</SingleLink2>
-                <SingleLink2 href="/proizvodi">Rijeka</SingleLink2>
-                <SingleLink2 href="/proizvodi">Metković</SingleLink2>
+                <SingleLink2 href="/kontakt/#kontakt">Zadar</SingleLink2>
+                <SingleLink2 href="/kontakt/#kontakt">Dubrovnik</SingleLink2>
+                <SingleLink2 href="/kontakt/#kontakt">Rijeka</SingleLink2>
+                <SingleLink2 href="/kontakt/#kontakt">Metković</SingleLink2>
               </Column>
               <Column>
                 <SubName>{t.Linkovi.proizvodi}</SubName>

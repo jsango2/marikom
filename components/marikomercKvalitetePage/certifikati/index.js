@@ -40,7 +40,7 @@ const Certifikati = () => {
           <TextBox ref={ref} className={` ${inView ? "inView" : "outView"}`}>
             <UpTitle>{t.Kvalitete.certifikati}</UpTitle>
             <Title>{t.Kvalitete.naslov1}</Title>
-            <Text>{t.Kvalitete.text1}</Text>
+            {/* <Text>{t.Kvalitete.text1}</Text> */}
           </TextBox>
           <WrapCerts>
             <Cert text={t.Kvalitete.card1} MSC ASC />

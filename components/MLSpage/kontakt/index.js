@@ -35,7 +35,7 @@ function Kontakt({ photo, text }) {
   const t = locale === "en" ? en : hr;
   const size = useWindowSize();
   return (
-    <WrapKontakt>
+    <WrapKontakt id="kontakt">
       <WrapContent>
         {router.pathname === "/MLS" && (
           <>
