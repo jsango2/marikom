@@ -35,7 +35,7 @@ function RedLineComp() {
 
   const size = useWindowSize();
   const router = useRouter();
-  console.log(inView);
+
   return (
     <RedLine ref={ref}>
       <WrapLogoPerla>

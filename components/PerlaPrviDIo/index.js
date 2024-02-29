@@ -121,16 +121,6 @@ function PerlaPrviDio() {
 
   return (
     <WrapAll ref={ref}>
-      {/* <TopImage ref={ref2}>
-        <ImageAbsolute percentage={percentage} />
-        <TextTopImage>
-          <a href="https://www.youtube.com">
-            <Image src="/playIcon.svg" width={40} height={40} />
-          </a>
-          Izdvojite 2 minute i saznajte zašto smo najbolji u onom što radimo.
-        </TextTopImage>
-        <OverlayTop />
-      </TopImage> */}
       <WrapBottom>
         <Overlay>
           <Image
@@ -142,10 +132,7 @@ function PerlaPrviDio() {
         </Overlay>
         <WrapContent>
           <WrapPhotos2>
-            {" "}
-            {/* <LightBlueBg> */}
             <ReceptiAnimacija />
-            {/* </LightBlueBg> */}
           </WrapPhotos2>
           <RightSide>
             <PerlaLogoWrap>
@@ -155,7 +142,7 @@ function PerlaPrviDio() {
               <UpTitle>{t.Perla.topTitle}</UpTitle>
               <Title>{t.Perla.title}</Title>
               <SubTitle>{t.Perla.contactUs}</SubTitle>
-              <ListWrap r>
+              <ListWrap>
                 <ListItem>
                   <GreenMark style={{ marginRight: "10px" }} />
                   <ItemText>{t.Perla.line1}</ItemText>
@@ -183,7 +170,7 @@ function PerlaPrviDio() {
                   color="#FFFFFF"
                   width="226px"
                   text={t.Perla.button}
-                  linkTo="/o-nama"
+                  linkTo="mailto: info@marikomerc.hr"
                 />
               </WrapButton>
             </TextWrap>
