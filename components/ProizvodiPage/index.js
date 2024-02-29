@@ -23,7 +23,7 @@ import { useRouter } from "next/router";
 import en from "../../locales/en.json";
 import hr from "../../locales/hr.json";
 // import { catalogData } from "../../catalogData.js";
-import { catalogData } from "../../catalogData18_2_2024.js";
+import { catalogData } from "../../catalogData.js";
 import { useEffect, useState } from "react";
 import Image from "next/image.js";
 // import axios from "axios";

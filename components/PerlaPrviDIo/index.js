@@ -22,7 +22,6 @@ import {
   ImageAbsolute,
 } from "./style.js";
 
-import Logo from "../../svg/perlalogo.svg";
 import Image from "next/image";
 import Lottie, { useLottie } from "lottie-react";
 import { useScrollPercentage } from "react-scroll-percentage";
@@ -188,7 +187,7 @@ function PerlaPrviDio() {
                 />
               </WrapButton>
             </TextWrap>
-          </RightSide>{" "}
+          </RightSide>
         </WrapContent>
       </WrapBottom>
     </WrapAll>
