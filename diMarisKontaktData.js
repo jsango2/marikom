@@ -15,7 +15,7 @@ export const diMarisKontaktData = [
     "Google lokacija":
       "https://www.google.com/maps/dir//44.1110081,15.23779/@44.1103977,15.2373209,17.87z?entry=ttu",
     "Photo Link":
-      "http://cms.marikomerc.hr/wp-content/uploads/2024/01/CityGalleria.png",
+      "http://marikomerc.sutra.hr/wp-content/uploads/2024/01/CityGalleria.png",
   },
   {
     "Lokacija ribarnice": "DI Maris Maraska park",
@@ -33,7 +33,7 @@ export const diMarisKontaktData = [
     "Google lokacija":
       "https://www.google.com/maps/dir//Ul.+Miroslava+Krleže+1C,+23000,+Zadar/@44.1207585,15.145636,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x4761fa73fef9756f:0x786e4e0ed780ac05!2m2!1d15.2280373!2d44.1207881?entry=ttu",
     "Photo Link":
-      "http://cms.marikomerc.hr/wp-content/uploads/2024/01/Maraskapark.png",
+      "http://marikomerc.sutra.hr/wp-content/uploads/2024/01/Maraskapark.png",
   },
   {
     "Lokacija ribarnice": "DI Maris Posedarje",
@@ -51,7 +51,7 @@ export const diMarisKontaktData = [
     "Google lokacija":
       "https://www.google.com/maps/dir//Obala+Ante+Damira+Klanca+4,+Posedarje/@44.2099499,15.4719271,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x4761eb0c5eb26e29:0x6d85c0b1b5fe0444!2m2!1d15.477077!2d44.20995?entry=ttu",
     "Photo Link":
-      "http://cms.marikomerc.hr/wp-content/uploads/2024/01/Posedarje.png",
+      "http://marikomerc.sutra.hr/wp-content/uploads/2024/01/Posedarje.png",
   },
   {
     "Lokacija ribarnice": "DI Maris Ribarnica 1",
@@ -69,7 +69,7 @@ export const diMarisKontaktData = [
     "Google lokacija":
       "https://www.google.com/maps/dir//Ulica+pod+bedemom+1A,+Zadar/@44.1158208,15.2223333,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x4761fa6e2369b73d:0xec7b92a24d54f38a!2m2!1d15.2274832!2d44.1158209?entry=ttu",
     "Photo Link":
-      "http://cms.marikomerc.hr/wp-content/uploads/2024/01/Ribarnica1.png",
+      "http://marikomerc.sutra.hr/wp-content/uploads/2024/01/Ribarnica1.png",
   },
   {
     "Lokacija ribarnice": "DI Maris Ribarnica 2",
@@ -87,7 +87,7 @@ export const diMarisKontaktData = [
     "Google lokacija":
       "https://www.google.com/maps/dir//Ulica+pod+bedemom+1A,+Zadar/@44.1158208,15.2223333,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x4761fa6e2369b73d:0xec7b92a24d54f38a!2m2!1d15.2274832!2d44.1158209?entry=ttu",
     "Photo Link":
-      "http://cms.marikomerc.hr/wp-content/uploads/2024/01/Ribarnica2.png",
+      "http://marikomerc.sutra.hr/wp-content/uploads/2024/01/Ribarnica2.png",
   },
   {
     "Lokacija ribarnice": "DI Maris Vatrogasni",
@@ -105,7 +105,7 @@ export const diMarisKontaktData = [
     "Google lokacija":
       "https://www.google.com/maps/dir//44.1106602,15.2444619/@44.1106702,15.2437506,18.95z?entry=ttu",
     "Photo Link":
-      "http://cms.marikomerc.hr/wp-content/uploads/2024/01/Vatrogasni.png",
+      "http://marikomerc.sutra.hr/wp-content/uploads/2024/01/Vatrogasni.png",
   },
   {
     "Lokacija ribarnice": "DI Maris Biograd tržnica",
@@ -123,7 +123,7 @@ export const diMarisKontaktData = [
     "Google lokacija":
       "https://www.google.com/maps/dir//Šetalište+kneza+Branimira+6,+Biograd+na+Moru/@43.9380551,15.4391489,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1334cad065843321:0xb89509fed0877293!2m2!1d15.4442988!2d43.9380552?entry=ttu",
     "Photo Link":
-      "http://cms.marikomerc.hr/wp-content/uploads/2024/01/biograd.png",
+      "http://marikomerc.sutra.hr/wp-content/uploads/2024/01/biograd.png",
   },
   {
     "Lokacija ribarnice": "Di Maris uprava",
@@ -141,6 +141,6 @@ export const diMarisKontaktData = [
     "Google lokacija":
       "https://www.google.com/maps/dir//Obala+kneza+Trpimira+2,+23000,+Zadar/@44.1196822,15.144768,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x4761fa73dc5eb42d:0x1dc6e49e4b816db5!2m2!1d15.2271693!2d44.1197118?entry=ttu",
     "Photo Link":
-      "http://cms.marikomerc.hr/wp-content/uploads/2024/01/Uprava.png",
+      "http://marikomerc.sutra.hr/wp-content/uploads/2024/01/Uprava.png",
   },
 ];
