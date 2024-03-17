@@ -26,8 +26,8 @@ function index() {
           key="canonical"
         />
 
-        <meta property="og:title" content="Marikomerc Kvaliteta" key="title" />
-        <meta name="twitter:title" content="Marikomerc Kvaliteta" />
+        <meta property="og:title" content="Marikomerc - O nama" key="title" />
+        <meta name="twitter:title" content="Marikomerc - O nama" />
         <meta
           name="twitter:description"
           content={
