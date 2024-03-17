@@ -46,26 +46,37 @@ export default function IndexPage({ allPosts }) {
           key="canonical"
         />
 
-        <meta
-          property="og:title"
-          content={`Marikomerc - ${t.Hero.title}`}
-          key="title"
-        />
-        <meta name="twitter:title" content={`Marikomerc - ${t.Hero.title}`} />
+        <meta property="og:title" content="Marikomerc" key="title" />
+        <meta name="twitter:title" content="Marikomerc" />
         <meta
           name="twitter:description"
-          content={`Marikomerc - ${t.Hero.description}`}
+          content={
+            locale === "hr"
+              ? "Otkrijte visokokvalitetne morske plodove, smrznute i svježe, uz naglasak na održivost i sigurnost hrane. Poslužujemo sektor HoReCa i maloprodaju uz učinkovitu logistiku."
+              : "Discover high-quality seafood, frozen & fresh, with a focus on sustainability & food safety. Serving HoReCa & retail sectors backed by efficient logistics."
+          }
         />
-        <meta name="twitter:image" content="/HERO.png" />
+        <meta
+          name="twitter:image"
+          content={locale === "hr" ? "/naslovnaOGhr.png" : "/naslovnaOGeng.png"}
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="description"
-          content={`Marikomerc - ${t.Hero.title}`}
+          content={
+            locale === "hr"
+              ? "Otkrijte visokokvalitetne morske plodove, smrznute i svježe, uz naglasak na održivost i sigurnost hrane. Poslužujemo sektor HoReCa i maloprodaju uz učinkovitu logistiku."
+              : "Discover high-quality seafood, frozen & fresh, with a focus on sustainability & food safety. Serving HoReCa & retail sectors backed by efficient logistics."
+          }
           key="desc"
         />
         <meta
           property="og:description"
-          content={`Marikomerc - ${t.Hero.description}`}
+          content={
+            locale === "hr"
+              ? "Otkrijte visokokvalitetne morske plodove, smrznute i svježe, uz naglasak na održivost i sigurnost hrane. Poslužujemo sektor HoReCa i maloprodaju uz učinkovitu logistiku."
+              : "Discover high-quality seafood, frozen & fresh, with a focus on sustainability & food safety. Serving HoReCa & retail sectors backed by efficient logistics."
+          }
         />
         <meta
           property="og:url"
@@ -75,7 +86,10 @@ export default function IndexPage({ allPosts }) {
               : `"https://www.marikomerc.hr/en"`
           }
         />
-        <meta property="og:image" content="/HERO.png" />
+        <meta
+          property="og:image"
+          content={locale === "hr" ? "/naslovnaOGhr.png" : "/naslovnaOGeng.png"}
+        />
       </Head>
       <FsLightbox
         toggler={toggler}
