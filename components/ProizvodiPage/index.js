@@ -286,7 +286,7 @@ function ProizvodiPage() {
             <a href="tel: 023 627 054">Tel: 023 630 539</a>
             <a href="mailto: info@marikomerc.hr">info@marikomerc.hr</a>
             <a
-              href="/Katalog_Marikomerc2024.pdf"
+              href="/Katalog_Marikomerc.pdf"
               download
               style={{
                 marginTop: "20px",
