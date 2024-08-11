@@ -34,7 +34,7 @@ function Kontakt({ photo, text, radnaVremena }) {
   const router = useRouter();
   const t = locale === "en" ? en : hr;
   const size = useWindowSize();
-  console.log(radnaVremena);
+  console.log(radnaVremena.zadarrv.subota);
   return (
     <WrapKontakt id="kontakt">
       <WrapContent>
@@ -85,7 +85,7 @@ function Kontakt({ photo, text, radnaVremena }) {
               </GoogleButton>
             </Block>
           ))}
-          {/* <Block>
+          <Block>
             <Grad>
               {locale === "hr"
                 ? mlsKontaktData[0].LOKACIJA
@@ -125,7 +125,7 @@ function Kontakt({ photo, text, radnaVremena }) {
               {t.MLS.upute}
             </GoogleButton>
           </Block>
-          <Block>
+          {/* <Block>
             <Grad>
               {locale === "hr"
                 ? mlsKontaktData[1].LOKACIJA
