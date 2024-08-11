@@ -34,8 +34,8 @@ function Kontakt({ photo, text, radnaVremena }) {
   const router = useRouter();
   const t = locale === "en" ? en : hr;
   const size = useWindowSize();
-  const time = radnaVremena.node.radnaVremenaPoslovnica;
-  console.log(time.zadar);
+
+  console.log(radnaVremena.node);
   return (
     <WrapKontakt id="kontakt">
       <WrapContent>
