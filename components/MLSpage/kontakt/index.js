@@ -85,7 +85,7 @@ function Kontakt({ photo, text, radnaVremena }) {
               </GoogleButton>
             </Block>
           ))}
-          <Block>
+          {/* <Block>
             <Grad>
               {locale === "hr"
                 ? mlsKontaktData[0].LOKACIJA
@@ -124,7 +124,7 @@ function Kontakt({ photo, text, radnaVremena }) {
             >
               {t.MLS.upute}
             </GoogleButton>
-          </Block>
+          </Block> */}
           {/* <Block>
             <Grad>
               {locale === "hr"
