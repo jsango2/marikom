@@ -24,7 +24,7 @@ import { BlueDivider } from "../main/style.js";
 import { mlsKontaktData } from "../../../mlsKontaktData.js";
 import Button from "../../buttonBlue/Button.js";
 import { useInView } from "react-intersection-observer";
-function Kontakt({ photo, text, radnoVrijeme }) {
+function Kontakt({ photo, text }) {
   const { ref, inView, entry } = useInView({
     /* Optional options */
     threshold: 0.2,
@@ -34,7 +34,7 @@ function Kontakt({ photo, text, radnoVrijeme }) {
   const router = useRouter();
   const t = locale === "en" ? en : hr;
   const size = useWindowSize();
-  console.log(radnoVrijeme);
+
   return (
     <WrapKontakt id="kontakt">
       <WrapContent>
@@ -53,7 +53,7 @@ function Kontakt({ photo, text, radnoVrijeme }) {
           </>
         )}
         <Grid>
-          {/* {mlsKontaktData.map((x) => (
+          {mlsKontaktData.map((x) => (
             <Block key={x.LOKACIJA}>
               <Grad>{locale === "hr" ? x.LOKACIJA : x.ENG}</Grad>
               <Adresa>
@@ -84,8 +84,8 @@ function Kontakt({ photo, text, radnoVrijeme }) {
                 {t.MLS.upute}
               </GoogleButton>
             </Block>
-          ))} */}
-          <Block key={mlsKontaktData[0].LOKACIJA}>
+          ))}
+          {/* <Block key={mlsKontaktData[0].LOKACIJA}>
             <Grad>
               {locale === "hr"
                 ? mlsKontaktData[0].LOKACIJA
@@ -244,7 +244,7 @@ function Kontakt({ photo, text, radnoVrijeme }) {
             >
               {t.MLS.upute}
             </GoogleButton>
-          </Block>
+          </Block> */}
         </Grid>
       </WrapContent>
     </WrapKontakt>
