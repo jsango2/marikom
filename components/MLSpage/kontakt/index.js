@@ -24,7 +24,7 @@ import { BlueDivider } from "../main/style.js";
 import { mlsKontaktData } from "../../../mlsKontaktData.js";
 import Button from "../../buttonBlue/Button.js";
 import { useInView } from "react-intersection-observer";
-function Kontakt({ photo, text, radnoVrijeme }) {
+function Kontakt({ photo, text, radnaVremena }) {
   const { ref, inView, entry } = useInView({
     /* Optional options */
     threshold: 0.2,
@@ -34,7 +34,7 @@ function Kontakt({ photo, text, radnoVrijeme }) {
   const router = useRouter();
   const t = locale === "en" ? en : hr;
   const size = useWindowSize();
-  console.log(radnoVrijeme);
+  console.log(radnaVremena);
   return (
     <WrapKontakt id="kontakt">
       <WrapContent>
@@ -85,7 +85,7 @@ function Kontakt({ photo, text, radnoVrijeme }) {
               </GoogleButton>
             </Block>
           ))} */}
-          {/* <Block>
+          <Block>
             <Grad>
               {locale === "hr"
                 ? mlsKontaktData[0].LOKACIJA
@@ -114,8 +114,8 @@ function Kontakt({ photo, text, radnoVrijeme }) {
             </Adresa>
             <RadnoVrijeme>
               {t.MLS.radnoVrijeme}
-              <br /> {t.MLS.ponFri}: {radnoVrijeme.zadar.ponedjeljakPetak}
-              <br /> {t.MLS.sat}: {radnoVrijeme.zadar.subota} <br />
+              <br /> {t.MLS.ponFri}: {radnaVremena.zadarrv.ponedjeljakPetak}
+              <br /> {t.MLS.sat}: {radnaVremena.zadarrv.subota} <br />
             </RadnoVrijeme>
             <GoogleButton
               href={
@@ -124,7 +124,7 @@ function Kontakt({ photo, text, radnoVrijeme }) {
             >
               {t.MLS.upute}
             </GoogleButton>
-          </Block> */}
+          </Block>
           <Block>
             <Grad>
               {locale === "hr"
@@ -154,8 +154,8 @@ function Kontakt({ photo, text, radnoVrijeme }) {
             </Adresa>
             <RadnoVrijeme>
               {t.MLS.radnoVrijeme}
-              <br /> {t.MLS.ponFri}: {radnoVrijeme.rijeka.ponedjeljakPetak}
-              <br /> {t.MLS.sat}: {radnoVrijeme.rijeka.subota} <br />
+              <br /> {t.MLS.ponFri}: {radnaVremena.rijekarv.ponedjeljakPetak}
+              <br /> {t.MLS.sat}: {radnaVremena.rijekarv.subota} <br />
             </RadnoVrijeme>
             <GoogleButton
               href={
@@ -194,8 +194,8 @@ function Kontakt({ photo, text, radnoVrijeme }) {
             </Adresa>
             <RadnoVrijeme>
               {t.MLS.radnoVrijeme}
-              <br /> {t.MLS.ponFri}: {radnoVrijeme.dubrovnik.ponedjeljakPetak}
-              <br /> {t.MLS.sat}: {radnoVrijeme.dubrovnik.subota} <br />
+              <br /> {t.MLS.ponFri}: {radnaVremena.dubrovnikrv.ponedjeljakPetak}
+              <br /> {t.MLS.sat}: {radnaVremena.dubrovnikrv.subota} <br />
             </RadnoVrijeme>
             <GoogleButton
               href={
@@ -234,8 +234,8 @@ function Kontakt({ photo, text, radnoVrijeme }) {
             </Adresa>
             <RadnoVrijeme>
               {t.MLS.radnoVrijeme}
-              <br /> {t.MLS.ponFri}: {radnoVrijeme.metkovi.ponedjeljakPetak}
-              <br /> {t.MLS.sat}: {radnoVrijeme.metkovi.subota} <br />
+              <br /> {t.MLS.ponFri}: {radnaVremena.metkovicrv.ponedjeljakPetak}
+              <br /> {t.MLS.sat}: {radnaVremena.metkovicrv.subota} <br />
             </RadnoVrijeme>
             <GoogleButton
               href={

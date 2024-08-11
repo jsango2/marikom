@@ -13,7 +13,7 @@ function index(props) {
   const router = useRouter();
   const { locale } = router;
   const kontakti = props.kontakti.edges[0].node.kontakti;
-  const radnoVrijeme =
+  const radnaVremena =
     props.radnaVremena.edges[0].node.radnoVrijeme.radnoVrijeme;
 
   // console.log(props);
@@ -76,7 +76,7 @@ function index(props) {
       <ContactData kontakti={kontakti} />
       <DiMaris />
       <MLS />
-      <Kontakt radnoVrijeme={radnoVrijeme} />
+      <Kontakt radnaVremena={radnaVremena} />
     </Layout>
   );
 }
