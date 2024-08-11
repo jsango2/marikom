@@ -114,7 +114,7 @@ function Kontakt({ photo, text, radnaVremena }) {
             </Adresa>
             <RadnoVrijeme>
               {t.MLS.radnoVrijeme}
-              <br /> {t.MLS.ponFri}: {radnaVremena.zadarrv.ponedjeljakPetak}
+              <br /> {t.MLS.ponFri}: {radnaVremena.zadarrv.ponedjeljakpetak}
               <br /> {t.MLS.sat}: {radnaVremena.zadarrv.subota} <br />
             </RadnoVrijeme>
             <GoogleButton
@@ -154,7 +154,7 @@ function Kontakt({ photo, text, radnaVremena }) {
             </Adresa>
             <RadnoVrijeme>
               {t.MLS.radnoVrijeme}
-              <br /> {t.MLS.ponFri}: {radnaVremena.rijekarv.ponedjeljakPetak}
+              <br /> {t.MLS.ponFri}: {radnaVremena.rijekarv.ponedjeljakpetak}
               <br /> {t.MLS.sat}: {radnaVremena.rijekarv.subota} <br />
             </RadnoVrijeme>
             <GoogleButton
@@ -194,7 +194,7 @@ function Kontakt({ photo, text, radnaVremena }) {
             </Adresa>
             <RadnoVrijeme>
               {t.MLS.radnoVrijeme}
-              <br /> {t.MLS.ponFri}: {radnaVremena.dubrovnikrv.ponedjeljakPetak}
+              <br /> {t.MLS.ponFri}: {radnaVremena.dubrovnikrv.ponedjeljakpetak}
               <br /> {t.MLS.sat}: {radnaVremena.dubrovnikrv.subota} <br />
             </RadnoVrijeme>
             <GoogleButton
@@ -234,7 +234,7 @@ function Kontakt({ photo, text, radnaVremena }) {
             </Adresa>
             <RadnoVrijeme>
               {t.MLS.radnoVrijeme}
-              <br /> {t.MLS.ponFri}: {radnaVremena.metkovicrv.ponedjeljakPetak}
+              <br /> {t.MLS.ponFri}: {radnaVremena.metkovicrv.ponedjeljakpetak}
               <br /> {t.MLS.sat}: {radnaVremena.metkovicrv.subota} <br />
             </RadnoVrijeme>
             <GoogleButton
