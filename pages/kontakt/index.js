@@ -13,8 +13,8 @@ function index(props) {
   const router = useRouter();
   const { locale } = router;
   const kontakti = props.kontakti.edges[0].node.kontakti;
-  // const radnoVrijeme =
-  //   props.radnaVremena.edges[0].node.radnoVrijeme.radnoVrijeme;
+  const radnoVrijeme =
+    props.radnaVremena.edges[0].node.radnoVrijeme.radnoVrijeme;
 
   // console.log(props);
   return (
@@ -76,7 +76,7 @@ function index(props) {
       <ContactData kontakti={kontakti} />
       <DiMaris />
       <MLS />
-      <Kontakt />
+      <Kontakt radnoVrijeme={radnoVrijeme} />
     </Layout>
   );
 }
@@ -85,12 +85,12 @@ export default index;
 
 export async function getStaticProps({ locales }) {
   const kontakti = await getAllKontakti();
-  // const radnaVremena = await getAllRadnaVremena();
+  const radnaVremena = await getAllRadnaVremena();
   return {
     props: {
       fallback: false,
       kontakti,
-      // radnaVremena,
+      radnaVremena,
     },
   };
 }
