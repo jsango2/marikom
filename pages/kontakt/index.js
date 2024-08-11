@@ -13,7 +13,8 @@ function index(props) {
   const router = useRouter();
   const { locale } = router;
   const kontakti = props.kontakti.edges[0].node.kontakti;
-  const radnaVremena = props.radnaVremena;
+  const radnaVremena =
+    props.radnaVremena.edges[0].node.radnaVremenaPoslovnica.zadar;
 
   // console.log(props);
   return (

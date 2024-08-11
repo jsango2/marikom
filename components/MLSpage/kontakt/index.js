@@ -35,7 +35,7 @@ function Kontakt({ photo, text, radnaVremena }) {
   const t = locale === "en" ? en : hr;
   const size = useWindowSize();
 
-  console.log(radnaVremena.nodes[0].radnaVremenaPoslovnica);
+  console.log(radnaVremena);
   return (
     <WrapKontakt id="kontakt">
       <WrapContent>
