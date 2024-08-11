@@ -24,7 +24,7 @@ import { BlueDivider } from "../main/style.js";
 import { mlsKontaktData } from "../../../mlsKontaktData.js";
 import Button from "../../buttonBlue/Button.js";
 import { useInView } from "react-intersection-observer";
-function Kontakt({ photo, text }) {
+function Kontakt({ photo, text, radnoVrijeme }) {
   const { ref, inView, entry } = useInView({
     /* Optional options */
     threshold: 0.2,
@@ -34,6 +34,7 @@ function Kontakt({ photo, text }) {
   const router = useRouter();
   const t = locale === "en" ? en : hr;
   const size = useWindowSize();
+  console.log(radnoVrijeme);
   return (
     <WrapKontakt id="kontakt">
       <WrapContent>
@@ -52,7 +53,7 @@ function Kontakt({ photo, text }) {
           </>
         )}
         <Grid>
-          {mlsKontaktData.map((x) => (
+          {/* {mlsKontaktData.map((x) => (
             <Block key={x.LOKACIJA}>
               <Grad>{locale === "hr" ? x.LOKACIJA : x.ENG}</Grad>
               <Adresa>
@@ -83,7 +84,167 @@ function Kontakt({ photo, text }) {
                 {t.MLS.upute}
               </GoogleButton>
             </Block>
-          ))}
+          ))} */}
+          <Block key={mlsKontaktData[0].LOKACIJA}>
+            <Grad>
+              {locale === "hr"
+                ? mlsKontaktData[0].LOKACIJA
+                : mlsKontaktData[0].ENG}
+            </Grad>
+            <Adresa>
+              <div style={{ margin: 0 }}>{mlsKontaktData[0].ULICA}</div>
+
+              {locale === "hr"
+                ? mlsKontaktData[0]["GRAD, DRŽAVA"]
+                : mlsKontaktData[0]["GRAD, DRŽAVA (ENG)"]}
+              <br />
+              <Phone href={`tel:${mlsKontaktData[0]["BROJ TELEFONA"]}`}>
+                {mlsKontaktData[0]["BROJ TELEFONA"]}
+              </Phone>
+              <br />
+              <WrapEmail
+                href={`mailto:${mlsKontaktData[0].EMAIL}?subject=MLS upit`}
+              >
+                <Image src="/letter.svg" width={15} height={15} />
+
+                <div style={{ marginLeft: "10px", color: "#1c2640" }}>
+                  {mlsKontaktData[0].EMAIL}
+                </div>
+              </WrapEmail>
+            </Adresa>
+            <RadnoVrijeme>
+              {t.MLS.radnoVrijeme}
+              <br /> {t.MLS.ponFri}: {radnoVrijeme.zadar.ponedjeljakPetak}
+              <br /> {t.MLS.sat}: {radnoVrijeme.zadar.subota} <br />
+            </RadnoVrijeme>
+            <GoogleButton
+              href={
+                mlsKontaktData[0]["Upute Google Maps (link na google poziciju)"]
+              }
+            >
+              {t.MLS.upute}
+            </GoogleButton>
+          </Block>
+          <Block key={mlsKontaktData[1].LOKACIJA}>
+            <Grad>
+              {locale === "hr"
+                ? mlsKontaktData[1].LOKACIJA
+                : mlsKontaktData[1].ENG}
+            </Grad>
+            <Adresa>
+              <div style={{ margin: 1 }}>{mlsKontaktData[1].ULICA}</div>
+
+              {locale === "hr"
+                ? mlsKontaktData[1]["GRAD, DRŽAVA"]
+                : mlsKontaktData[1]["GRAD, DRŽAVA (ENG)"]}
+              <br />
+              <Phone href={`tel:${mlsKontaktData[1]["BROJ TELEFONA"]}`}>
+                {mlsKontaktData[1]["BROJ TELEFONA"]}
+              </Phone>
+              <br />
+              <WrapEmail
+                href={`mailto:${mlsKontaktData[1].EMAIL}?subject=MLS upit`}
+              >
+                <Image src="/letter.svg" width={15} height={15} />
+
+                <div style={{ marginLeft: "10px", color: "#1c2640" }}>
+                  {mlsKontaktData[1].EMAIL}
+                </div>
+              </WrapEmail>
+            </Adresa>
+            <RadnoVrijeme>
+              {t.MLS.radnoVrijeme}
+              <br /> {t.MLS.ponFri}: {radnoVrijeme.rijeka.ponedjeljakPetak}
+              <br /> {t.MLS.sat}: {radnoVrijeme.rijeka.subota} <br />
+            </RadnoVrijeme>
+            <GoogleButton
+              href={
+                mlsKontaktData[1]["Upute Google Maps (link na google poziciju)"]
+              }
+            >
+              {t.MLS.upute}
+            </GoogleButton>
+          </Block>
+          <Block key={mlsKontaktData[2].LOKACIJA}>
+            <Grad>
+              {locale === "hr"
+                ? mlsKontaktData[2].LOKACIJA
+                : mlsKontaktData[2].ENG}
+            </Grad>
+            <Adresa>
+              <div style={{ margin: 2 }}>{mlsKontaktData[2].ULICA}</div>
+
+              {locale === "hr"
+                ? mlsKontaktData[2]["GRAD, DRŽAVA"]
+                : mlsKontaktData[2]["GRAD, DRŽAVA (ENG)"]}
+              <br />
+              <Phone href={`tel:${mlsKontaktData[2]["BROJ TELEFONA"]}`}>
+                {mlsKontaktData[2]["BROJ TELEFONA"]}
+              </Phone>
+              <br />
+              <WrapEmail
+                href={`mailto:${mlsKontaktData[2].EMAIL}?subject=MLS upit`}
+              >
+                <Image src="/letter.svg" width={15} height={15} />
+
+                <div style={{ marginLeft: "10px", color: "#1c2640" }}>
+                  {mlsKontaktData[2].EMAIL}
+                </div>
+              </WrapEmail>
+            </Adresa>
+            <RadnoVrijeme>
+              {t.MLS.radnoVrijeme}
+              <br /> {t.MLS.ponFri}: {radnoVrijeme.dubrovnik.ponedjeljakPetak}
+              <br /> {t.MLS.sat}: {radnoVrijeme.dubrovnik.subota} <br />
+            </RadnoVrijeme>
+            <GoogleButton
+              href={
+                mlsKontaktData[2]["Upute Google Maps (link na google poziciju)"]
+              }
+            >
+              {t.MLS.upute}
+            </GoogleButton>
+          </Block>
+          <Block key={mlsKontaktData[3].LOKACIJA}>
+            <Grad>
+              {locale === "hr"
+                ? mlsKontaktData[3].LOKACIJA
+                : mlsKontaktData[3].ENG}
+            </Grad>
+            <Adresa>
+              <div style={{ margin: 3 }}>{mlsKontaktData[3].ULICA}</div>
+
+              {locale === "hr"
+                ? mlsKontaktData[3]["GRAD, DRŽAVA"]
+                : mlsKontaktData[3]["GRAD, DRŽAVA (ENG)"]}
+              <br />
+              <Phone href={`tel:${mlsKontaktData[3]["BROJ TELEFONA"]}`}>
+                {mlsKontaktData[3]["BROJ TELEFONA"]}
+              </Phone>
+              <br />
+              <WrapEmail
+                href={`mailto:${mlsKontaktData[3].EMAIL}?subject=MLS upit`}
+              >
+                <Image src="/letter.svg" width={15} height={15} />
+
+                <div style={{ marginLeft: "10px", color: "#1c2640" }}>
+                  {mlsKontaktData[3].EMAIL}
+                </div>
+              </WrapEmail>
+            </Adresa>
+            <RadnoVrijeme>
+              {t.MLS.radnoVrijeme}
+              <br /> {t.MLS.ponFri}: {radnoVrijeme.metkovi.ponedjeljakPetak}
+              <br /> {t.MLS.sat}: {radnoVrijeme.metkovi.subota} <br />
+            </RadnoVrijeme>
+            <GoogleButton
+              href={
+                mlsKontaktData[3]["Upute Google Maps (link na google poziciju)"]
+              }
+            >
+              {t.MLS.upute}
+            </GoogleButton>
+          </Block>
         </Grid>
       </WrapContent>
     </WrapKontakt>

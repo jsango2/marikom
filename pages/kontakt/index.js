@@ -4,7 +4,7 @@ import ContactHero from "../../components/KontaktPage/Hero";
 import ContactData from "../../components/KontaktPage/Data";
 import DiMaris from "../../components/KontaktPage/DiMaris";
 import MLS from "../../components/KontaktPage/MLS";
-import { getAllKontakti } from "../../lib/api2";
+import { getAllKontakti, getAllRadnaVremena } from "../../lib/api2";
 import Kontakt from "../../components/MLSpage/kontakt";
 import { useRouter } from "next/router.js";
 import Head from "next/head";
@@ -13,7 +13,10 @@ function index(props) {
   const router = useRouter();
   const { locale } = router;
   const kontakti = props.kontakti.edges[0].node.kontakti;
+  const radnoVrijeme =
+    props.radnaVremena.edges[0].node.radnoVrijeme.radnoVrijeme;
 
+  console.log(props);
   return (
     <Layout>
       <Head>
@@ -73,7 +76,7 @@ function index(props) {
       <ContactData kontakti={kontakti} />
       <DiMaris />
       <MLS />
-      <Kontakt />
+      <Kontakt radnoVrijeme={radnoVrijeme} />
     </Layout>
   );
 }
@@ -82,11 +85,12 @@ export default index;
 
 export async function getStaticProps({ locales }) {
   const kontakti = await getAllKontakti();
-
+  const radnaVremena = await getAllRadnaVremena();
   return {
     props: {
       fallback: false,
       kontakti,
+      radnaVremena,
     },
   };
 }
