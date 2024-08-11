@@ -30,7 +30,6 @@ function index(props) {
   const catDat = catalogData.map(
     (item) => item["IME PROIZVODA - do 60 znakova"]
   );
-
   const { locale, locales, defaultLocale, asPath, basePath } = useRouter();
   const novosti = props.novosti.edges;
 

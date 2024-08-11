@@ -14,7 +14,7 @@ function index(props) {
   const { locale } = router;
   const kontakti = props.kontakti.edges[0].node.kontakti;
   const radnaVremena =
-    props.radnaVremena.edges[0].node.radnoVrijeme.radnoVrijeme;
+    props.radnaVremena.edges[0].node.radnaVremenaTrgovina.radnoVrijemeTrgovina;
 
   // console.log(props);
   return (
