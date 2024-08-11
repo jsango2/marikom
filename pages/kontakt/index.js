@@ -76,7 +76,7 @@ function index(props) {
       <ContactData kontakti={kontakti} />
       <DiMaris />
       <MLS />
-      <Kontakt radnoVrijeme={radnoVrijeme} />
+      <Kontakt />
     </Layout>
   );
 }
