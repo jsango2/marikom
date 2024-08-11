@@ -53,7 +53,7 @@ function Kontakt({ photo, text, radnaVremena }) {
           </>
         )}
         <Grid>
-          {/* {mlsKontaktData.map((x) => (
+          {mlsKontaktData.map((x) => (
             <Block key={x.LOKACIJA}>
               <Grad>{locale === "hr" ? x.LOKACIJA : x.ENG}</Grad>
               <Adresa>
@@ -84,8 +84,8 @@ function Kontakt({ photo, text, radnaVremena }) {
                 {t.MLS.upute}
               </GoogleButton>
             </Block>
-          ))} */}
-          <Block>
+          ))}
+          {/* <Block>
             <Grad>
               {locale === "hr"
                 ? mlsKontaktData[0].LOKACIJA
@@ -244,7 +244,7 @@ function Kontakt({ photo, text, radnaVremena }) {
             >
               {t.MLS.upute}
             </GoogleButton>
-          </Block>
+          </Block> */}
         </Grid>
       </WrapContent>
     </WrapKontakt>
