@@ -68,13 +68,6 @@ function PerlaPrviDio() {
       : {
           height: 120,
         };
-  // useEffect(() => {
-  //   if (size < 1000) {
-  //     setStyle2({ width: 100 });
-  //   } else {
-  //     setStyle2({ width: 700, height: 750 });
-  //   }
-  // }, []);
 
   const style2 = {
     // height: 520,

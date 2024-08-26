@@ -24,7 +24,7 @@ import { BlueDivider } from "../main/style.js";
 import { mlsKontaktData } from "../../../mlsKontaktData.js";
 import Button from "../../buttonBlue/Button.js";
 import { useInView } from "react-intersection-observer";
-function Kontakt({ photo, text, radnaVremena }) {
+function Kontakt(props) {
   const { ref, inView, entry } = useInView({
     /* Optional options */
     threshold: 0.2,
@@ -35,7 +35,7 @@ function Kontakt({ photo, text, radnaVremena }) {
   const t = locale === "en" ? en : hr;
   const size = useWindowSize();
 
-  console.log(radnaVremena);
+  console.log(props.radnaVremena.zadar);
   return (
     <WrapKontakt id="kontakt">
       <WrapContent>
