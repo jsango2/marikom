@@ -12,7 +12,7 @@ import Head from "next/head";
 function index(props) {
   const router = useRouter();
   const { locale } = router;
-  // const kontakti = props.kontakti.edges[0].node.kontakti;
+  const kontakti = props.kontakti.edges[0].node.kontakti;
   // const radnaVremena = props.radnaVremena.edges[0].node.radnaVremenaPoslovnica;
 
   // console.log(props);
@@ -75,7 +75,7 @@ function index(props) {
       <ContactData kontakti={kontakti} />
       <DiMaris />
       <MLS />
-      <Kontakt radnaVremena={radnaVremena} />
+      <Kontakt />
     </Layout>
   );
 }
