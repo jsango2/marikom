@@ -35,7 +35,6 @@ function Kontakt(props) {
   const t = locale === "en" ? en : hr;
   const size = useWindowSize();
 
-  console.log(props.radnaVremena.zadar);
   return (
     <WrapKontakt id="kontakt">
       <WrapContent>
