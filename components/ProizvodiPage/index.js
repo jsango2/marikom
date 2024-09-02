@@ -263,7 +263,7 @@ function ProizvodiPage() {
   //         break;
   //     }
   //   });
-  console.log(category);
+  // console.log("Context cat:", category);
   return (
     <WrapAll key={remountComponent}>
       {size.width > 900 && (

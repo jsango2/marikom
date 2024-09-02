@@ -124,7 +124,7 @@ const Main = () => {
               color="#FFFFFF"
               width="226px"
               text={t.MLS.zatrazitePonudu}
-              linkTo="/o-nama"
+              linkTo="mailto: info@marikomerc.hr"
             ></Button>
           </Content>
           <Photo1 bg="/MLSpageHero.webp">

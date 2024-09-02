@@ -310,6 +310,7 @@ export const SingleLink2 = styled(Link)`
 export const LinkChild = styled.div`
   position: relative;
   z-index: 10;
+  color: #fff;
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 500;

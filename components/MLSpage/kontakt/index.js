@@ -48,7 +48,7 @@ function Kontakt(props) {
               color="#FFFFFF"
               width="226px"
               text={t.MLS.zatrazitePonudu}
-              linkTo="/o-nama"
+              linkTo="mailto: info@marikomerc.hr"
             />
           </>
         )}

@@ -101,7 +101,7 @@ export const Block = styled.div`
 export const Cards = styled.div`
   position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   width: 1350px;
   min-width: 1271px;
   margin: 0 auto 80px auto;

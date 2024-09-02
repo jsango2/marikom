@@ -15,6 +15,7 @@ import {
   WrapText,
 } from "../Hero/style.js";
 import { TopTitle } from "../../HorecaPage/Mapa/style.js";
+import Link from "next/link.js";
 
 function MLS() {
   const { locale } = useRouter();
@@ -30,7 +31,9 @@ function MLS() {
             <TopTitle>{t.Kontakt.logistika}</TopTitle>
             <Title>MLS</Title>
             <Text>{parse(t.Kontakt.MLSdata)}</Text>
-            <GoogleButton>{t.Kontakt.uputeGoogleMaps}</GoogleButton>
+            <Link href="https://www.google.com/maps/@44.1751437,15.3570071,19.73z?entry=ttu">
+              <GoogleButton>{t.Kontakt.uputeGoogleMaps}</GoogleButton>
+            </Link>
           </WrapText>
         </Data>
         <Photo>

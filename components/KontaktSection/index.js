@@ -79,20 +79,36 @@ function KontaktSection() {
         <WrapDown>
           <Box>
             <BoldTitle>MARIKOMERC GRUPA</BoldTitle>
-            <Kontakt href="www.google.com">Google Maps</Kontakt>
-            <Kontakt href="www.instagram.com">Instagram</Kontakt>
-            <Kontakt href="www.facebook.com">Facebook</Kontakt>
+            <Kontakt href="https://www.google.com/maps/@44.1751437,15.3570071,19.73z?entry=ttu">
+              Google Maps
+            </Kontakt>
+            <Kontakt href="https://www.instagram.com/marikomerc">
+              Instagram
+            </Kontakt>
+            <Kontakt href="https://www.facebook.com/marikomerc">
+              Facebook
+            </Kontakt>
           </Box>
           <Box>
             <BoldTitle>DI MARIS</BoldTitle>
-            <Kontakt href="www.google.com">Google Maps</Kontakt>
-            <Kontakt href="www.instagram.com">Instagram</Kontakt>
-            <Kontakt href="www.facebook.com">Facebook</Kontakt>
+            <Kontakt href="https://www.google.com/maps/@44.1197623,15.2271416,21z?entry=ttu">
+              Google Maps
+            </Kontakt>
+            <Kontakt href="https://www.instagram.com/dimaris_croatia">
+              Instagram
+            </Kontakt>
+            <Kontakt href="https://www.facebook.com/dimaris.hr">
+              Facebook
+            </Kontakt>
           </Box>{" "}
           <Box>
             <BoldTitle>MLS LOGISTIKA</BoldTitle>
-            <Kontakt href="www.google.com">Google Maps</Kontakt>
-            <Kontakt href="www.instagram.com">Instagram</Kontakt>
+            <Kontakt href="https://www.google.com/maps/@44.1751437,15.3570071,19.73z?entry=ttu">
+              Google Maps
+            </Kontakt>
+            <Kontakt href="https://www.instagram.com/marikomerc_logistics_solutions">
+              Instagram
+            </Kontakt>
           </Box>
         </WrapDown>
       </Container>

@@ -130,7 +130,14 @@ function HorecaHero() {
         </WrapPhotos2>
         <RightSide>
           <PerlaLogoWrap>
-            <LogoWrap>{inView && <PerlaLogoAnimacija />}</LogoWrap>
+            <LogoWrap>
+              {/* {inView && <PerlaLogoAnimacija />} */}
+              <Image
+                src="/perlaLogoWithRed.svg"
+                layout="fill"
+                objectFit="contain"
+              />
+            </LogoWrap>
           </PerlaLogoWrap>
           <TextWrap>
             <UpTitle>{t.Perla.topTitle}</UpTitle>

@@ -20,6 +20,7 @@ import parse from "html-react-parser";
 
 import { useState } from "react";
 import { TopTitle } from "../../HorecaPage/Mapa/style.js";
+import Link from "next/link.js";
 
 function ContactHero() {
   const { locale } = useRouter();
@@ -33,9 +34,12 @@ function ContactHero() {
           <WrapText>
             <BlueLine />
             <TopTitle>{t.Kontakt.distribucijaIprerada}</TopTitle>
-            <Title>Marikomerc grupa d.o.o.</Title>
+            <Title>Marikomerc d.o.o.</Title>
             <Text>{parse(t.Kontakt.heroData)}</Text>
-            <GoogleButton>{t.Kontakt.uputeGoogleMaps}</GoogleButton>
+
+            <Link href="https://www.google.com/maps/@44.1751437,15.3570071,19.73z?entry=ttu">
+              <GoogleButton>{t.Kontakt.uputeGoogleMaps}</GoogleButton>
+            </Link>
           </WrapText>
         </Data>
         <WrapPhoto>

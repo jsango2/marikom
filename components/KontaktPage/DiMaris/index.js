@@ -15,6 +15,7 @@ import {
 } from "../Hero/style.js";
 import { TopTitle } from "../../HorecaPage/Mapa/style.js";
 import parse from "html-react-parser";
+import Link from "next/link.js";
 
 function DiMaris() {
   const { locale } = useRouter();
@@ -35,9 +36,11 @@ function DiMaris() {
           <WrapText>
             <BlueLine />
             <TopTitle>{t.Kontakt.lanacRibarnica}</TopTitle>
-            <Title>Di Maris d.o.o.</Title>
+            <Title>DI Maris d.o.o.</Title>
             <Text>{parse(t.Kontakt.diMarisData)}</Text>
-            <GoogleButton>{t.Kontakt.uputeGoogleMaps}</GoogleButton>
+            <Link href="https://www.google.com/maps/@44.1197623,15.2271416,21z?entry=ttu">
+              <GoogleButton>{t.Kontakt.uputeGoogleMaps}</GoogleButton>
+            </Link>
           </WrapText>
         </Data>
       </WrapContent>

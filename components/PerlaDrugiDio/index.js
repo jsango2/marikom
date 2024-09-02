@@ -2,46 +2,33 @@ import {
   WrapAll,
   RedLine,
   RedLine2,
-  WrapLogo,
-  PozadinaPerla,
-  WrapLogoPerla,
   Title,
-  Title2,
-  Text,
   Proizvodi,
   Proizvod,
   Overlay,
   WrapProizvod,
   WrapProizvodImage,
   ProizvodName,
-  ProizvodWeight,
   Button,
-  Karamarko,
-  Left,
-  Right,
-  Potpis,
-  LogoHks,
-  ImageWrap,
 } from "./style.js";
 
 // import PotpisKaramarko from "../../assets/images/potpiskaramarko.svg";
-import PotpisKaramarko from "../../assets/images/potpiskaramarko.png";
 import Image from "next/image";
 import useWindowSize from "../helper/usewindowsize";
-import { useScrollPercentage } from "react-scroll-percentage";
 import { catalogData } from "../../catalogData.js";
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router.js";
 import en from "../../locales/en.json";
 import hr from "../../locales/hr.json";
 import { useInView } from "react-intersection-observer";
-import { useLottie } from "lottie-react";
-import animacija from "./perlaAnimacija.js";
+
 import Link from "next/link.js";
 import RedLineComp from "./redLine.js";
 import KaramarkoComp from "./karamarko.js";
-
+import { useContext } from "react";
+import { AppContext } from "../../pages/_app.js";
 function PerlaDrugiDio() {
+  const [category, setCategory] = useContext(AppContext);
   const style = {
     height: 200,
   };
@@ -59,6 +46,9 @@ function PerlaDrugiDio() {
     threshold: 0,
     triggerOnce: true,
   });
+  const handleClick = () => {
+    setCategory("PERLA");
+  };
 
   return (
     <WrapAll ref={ref}>
@@ -89,7 +79,7 @@ function PerlaDrugiDio() {
         ))}
       </Proizvodi>
       <Link href="/proizvodi">
-        <Button>{t.Perla2.button}</Button>
+        <Button onClick={() => handleClick()}>{t.Perla2.button}</Button>
       </Link>
       <KaramarkoComp />
       <RedLine2 />

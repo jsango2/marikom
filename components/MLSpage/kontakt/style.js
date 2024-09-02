@@ -84,18 +84,19 @@ export const Grid = styled.div`
   z-index: 10;
   width: 80%;
   height: auto;
-  display: grid;
+  display: flex;
+  justify-content: space-evenly;
   /* grid-template-columns: repeat(3, 1fr); */
-  grid-template-columns: repeat(auto-fill, minmax(186px, 1fr));
+  /* grid-template-columns: repeat(auto-fill, minmax(186px, 1fr));
   grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 5vw;
-  grid-row-gap: 70px;
+  grid-row-gap: 70px; */
   margin: 90px auto;
   @media only screen and (max-width: 850px) {
-    grid-column-gap: 10vw;
+    flex-direction: column;
   }
   @media only screen and (max-width: 550px) {
-    justify-items: center;
+    align-items: center;
   }
   @media only screen and (max-width: 430px) {
     width: 85%;
@@ -180,6 +181,10 @@ export const Block = styled.div`
   flex-direction: column;
   width: 226px;
   height: 270px;
+  @media only screen and (max-width: 850px) {
+    height: auto;
+    margin-bottom: 50px;
+  }
 
   @media only screen and (max-width: 550px) {
     align-items: center;

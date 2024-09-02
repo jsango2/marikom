@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../../components/layout";
 import ContactHero from "../../components/KontaktPage/Hero";
-import ContactData from "../../components/KontaktPage/Data";
+// import ContactData from "../../components/KontaktPage/Data";
 import DiMaris from "../../components/KontaktPage/DiMaris";
 import MLS from "../../components/KontaktPage/MLS";
 import { getAllKontakti, getAllRadnaVremena } from "../../lib/api2";
@@ -72,7 +72,7 @@ function index(props) {
         />
       </Head>
       <ContactHero />
-      <ContactData kontakti={kontakti} />
+      {/* <ContactData kontakti={kontakti} /> */}
       <DiMaris />
       <MLS />
       <Kontakt />

@@ -153,16 +153,16 @@ function FooterSection() {
             <ColumnIkone>
               <SubName>{t.Linkovi.kontaktirajteNas}</SubName>
               <Social>
-                <a href="www.instagram.com">
+                <a href="https://www.instagram.com/marikomerc">
                   <Instagram />
                 </a>
-                <a href="www.facebook.com">
+                <a href="https://www.facebook.com/marikomerc">
                   <Facebook />
                 </a>
-                <a href="www.linkedin.com">
+                <a href="https://www.linkedin.com/company/marikomerc/">
                   <Linkedin />
                 </a>
-                <a href="www.google.com">
+                <a href="https://www.google.com/maps/@44.1751437,15.3570071,19.73z?entry=ttu">
                   <Location />
                 </a>
                 <a href="mailto:mls@mls.hr">

@@ -511,7 +511,7 @@ export const LogoWrap = styled.div`
   left: 0;
   z-index: 11;
   width: 240px;
-  height: 200px;
+  height: 116px;
   /* color: black;
   display: flex;
   justify-content: center;

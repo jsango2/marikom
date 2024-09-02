@@ -2,7 +2,7 @@ export const diMarisKontaktData = [
   {
     "Lokacija ribarnice": "DI Maris City Galleria",
     "Lokacija ribarnice ENG": "DI Maris City Galleria",
-    Ulica: "Murvička 1",
+    Ulica: "Polačišće 2",
     "Poštanski broj i grad": "23000 Zadar",
     TEL: "095/233-4451",
     Voditelj: "Mateja Bengez",
