@@ -4,13 +4,20 @@ import Layout from "../../components/layout";
 
 import { catalogData } from "../../catalogData";
 import ProizvodiPage from "../../components/ProizvodiPage";
-import { getAllPhotosProizvodi } from "../../lib/api2.js";
+import {
+  getAllPhotosProizvodi,
+  getAllProizvodi,
+  getAllProizvodi100,
+  getAllProizvodi200,
+} from "../../lib/api2.js";
 import Hero from "../../components/ProizvodiPage/Hero/hero.js";
 import { useRouter } from "next/router.js";
 import Head from "next/head";
-function index() {
+function index({ allProizvodi }) {
   const router = useRouter();
   const { locale } = router;
+  console.log("ALL", allProizvodi);
+
   return (
     <Layout>
       <Head>
@@ -88,3 +95,11 @@ export default index;
 //     props: { allPhotosProizvodi },
 //   };
 // }
+
+export async function getStaticProps({ preview = false }) {
+  const allProizvodi = await getAllProizvodi();
+
+  return {
+    props: { allProizvodi },
+  };
+}
