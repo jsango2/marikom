@@ -35,7 +35,7 @@ export default function News({ pageData, params, oglasiNaslovi, oglasi }) {
   const t = locale === "en" ? en : hr;
 
   const karijera = pageData.node.oglasi;
-  console.log("Oglasi u 1 oglasu", oglasi);
+
   return (
     <Layout oglasiNaslovi={oglasiNaslovi.edges}>
       <WrapAll>

@@ -13,7 +13,6 @@ import ArrowRight from "../../../svg/arrowRight.svg";
 import Link from "next/link";
 
 function NewsCard({ datum, naslov, text, link, isFeatured }) {
-  console.log(isFeatured);
   return (
     <WrapAll isFeatured={isFeatured}>
       {!isFeatured && <Photo></Photo>}

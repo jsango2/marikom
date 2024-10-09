@@ -16,7 +16,6 @@ import Head from "next/head";
 function index({ allProizvodi }) {
   const router = useRouter();
   const { locale } = router;
-  console.log("ALL", allProizvodi);
 
   return (
     <Layout>

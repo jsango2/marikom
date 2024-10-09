@@ -48,7 +48,6 @@ function ProizvodiPage() {
     ""
   );
   const [current, setCurrent] = useState(kategorija);
-  console.log("PROIZVODIcat iz  /proizvodi:", category);
 
   // const [data, setData] = useState([]);
 
@@ -83,7 +82,6 @@ function ProizvodiPage() {
           ? findKatbyLang["Kategorija kojoj proizvod pripada:"]
           : findKatbyLang["Kategorija kojoj proizvod pripada ENG:"]
       );
-      console.log(kategorija, current);
     } else {
       const findKatbyLang = catalogData.find(
         (k) =>
@@ -101,7 +99,6 @@ function ProizvodiPage() {
           ? findKatbyLang["Kategorija kojoj proizvod pripada:"]
           : findKatbyLang["Kategorija kojoj proizvod pripada ENG:"]
       );
-      console.log(kategorija, current);
     }
   }, [locale]);
 

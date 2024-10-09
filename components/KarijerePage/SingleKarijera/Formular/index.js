@@ -93,7 +93,6 @@ function Formular() {
       () => {
         // download url
         getDownloadURL(uploadTask.snapshot.ref).then((CV) => {
-          console.log(CV);
           submit({ ime, email, telefon, poruka, CV });
           alert("Form submitted");
           setIme("");

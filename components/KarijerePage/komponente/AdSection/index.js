@@ -50,8 +50,6 @@ const AdSection = (oglasi) => {
     }
   }, [currentActiveTab]);
 
-  console.log(prikazaniOglasi);
-
   return (
     <AdSectionWrapper>
       <AdSectionHeader>{t.Karijere.aktivniNatjecaji}</AdSectionHeader>
