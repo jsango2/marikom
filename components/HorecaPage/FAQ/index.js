@@ -16,12 +16,6 @@ import { useInView } from "react-intersection-observer";
 import { IoIosArrowDown } from "react-icons/io";
 import styled from "styled-components";
 
-// import {
-//   Accordion,
-//   AccordionBody,
-//   AccordionHeader,
-//   AccordionItem,
-// } from "reactstrap";
 import { Accordion, AccordionItem as Item } from "@szhsin/react-accordion";
 import { useState } from "react";
 const ItemWithChevron = ({ header, ...rest }) => (

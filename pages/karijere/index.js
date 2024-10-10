@@ -15,7 +15,6 @@ function Karijere(props) {
   const { locale } = router;
   const oglasi = props.oglasi;
 
-  // console.log(props);
   return (
     <Layout>
       <Head>
