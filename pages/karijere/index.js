@@ -93,7 +93,7 @@ export async function getStaticProps({ locales }) {
         slug:
           post.node.oglasi.naslovOglasa.toLowerCase().split(" ").join("-") +
           "-" +
-          post.node.id,
+          post.node.id.toLowerCase(),
       },
       locale: "hr",
     });
@@ -104,7 +104,7 @@ export async function getStaticProps({ locales }) {
         slug:
           post.node.oglasi.naslovOglasaEng.toLowerCase().split(" ").join("-") +
           "-" +
-          post.node.id,
+          post.node.id.toLowerCase(),
       },
       locale: "en",
     });

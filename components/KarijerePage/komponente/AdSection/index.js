@@ -100,8 +100,8 @@ const AdSection = (oglasi) => {
                                 .split(" ")
                                 .join("-") +
                                 "-" +
-                                item.node.id,
-                              { locale: "hrv", strict: true }
+                                item.node.id.toLowerCase(),
+                              { locale: "hrv", strict: true, lower: true }
                             )}`
                           : `/karijere/${slugify(
                               item.node.oglasi.naslovOglasaEng
@@ -109,8 +109,8 @@ const AdSection = (oglasi) => {
                                 .split(" ")
                                 .join("-") +
                                 "-" +
-                                item.node.id,
-                              { locale: "eng", strict: true }
+                                item.node.id.toLowerCase(),
+                              { locale: "eng", strict: true, lower: true }
                             )}`
                       }
                     >

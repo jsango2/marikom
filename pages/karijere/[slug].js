@@ -107,7 +107,7 @@ export async function getStaticPaths({ locales }) {
           slug: slugify(
             post.node.oglasi.naslovOglasa.toLowerCase().split(" ").join("-") +
               "-" +
-              post.node.id,
+              post.node.id.toLowerCase(),
             { locale: "hrv", strict: true }
           ),
         },
@@ -126,7 +126,7 @@ export async function getStaticPaths({ locales }) {
               .split(" ")
               .join("-") +
               "-" +
-              post.node.id,
+              post.node.id.toLowerCase(),
             {
               locale: "eng",
               strict: true,
@@ -152,7 +152,7 @@ export async function getStaticProps({ params }) {
       slugify(
         data.node.oglasi.naslovOglasa.toLowerCase().split(" ").join("-") +
           "-" +
-          data.node.id,
+          data.node.id.toLowerCase(),
         {
           locale: "hrv",
           strict: true,
@@ -161,7 +161,7 @@ export async function getStaticProps({ params }) {
       slugify(
         data.node.oglasi.naslovOglasaEng.toLowerCase().split(" ").join("-") +
           "-" +
-          data.node.id,
+          data.node.id.toLowerCase(),
         {
           locale: "eng",
           strict: true,
