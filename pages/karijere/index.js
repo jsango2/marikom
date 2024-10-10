@@ -14,7 +14,7 @@ function Karijere(props) {
   const router = useRouter();
   const { locale } = router;
   const oglasi = props.oglasi;
-
+  console.log(oglasi);
   return (
     <Layout>
       <Head>
