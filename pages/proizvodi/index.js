@@ -4,16 +4,16 @@ import Layout from "../../components/layout";
 
 import { catalogData } from "../../catalogData";
 import ProizvodiPage from "../../components/ProizvodiPage";
-import {
-  getAllPhotosProizvodi,
-  getAllProizvodi,
-  getAllProizvodi100,
-  getAllProizvodi200,
-} from "../../lib/api2.js";
+// import {
+//   getAllPhotosProizvodi,
+//   getAllProizvodi,
+//   getAllProizvodi100,
+//   getAllProizvodi200,
+// } from "../../lib/api2.js";
 import Hero from "../../components/ProizvodiPage/Hero/hero.js";
 import { useRouter } from "next/router.js";
 import Head from "next/head";
-function index({ allProizvodi }) {
+function index() {
   const router = useRouter();
   const { locale } = router;
 
@@ -95,10 +95,10 @@ export default index;
 //   };
 // }
 
-export async function getStaticProps({ preview = false }) {
-  const allProizvodi = await getAllProizvodi();
+// export async function getStaticProps({ preview = false }) {
+//   const allProizvodi = await getAllProizvodi();
 
-  return {
-    props: { allProizvodi },
-  };
-}
+//   return {
+//     props: { allProizvodi },
+//   };
+// }

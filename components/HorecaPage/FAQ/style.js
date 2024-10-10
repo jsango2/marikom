@@ -53,6 +53,7 @@ export const HorecaAccordion = styled.div`
   }
   @media only screen and (max-width: 430px) {
     width: 95vw;
+    padding: 0px 0 160px 0;
   }
 `;
 export const AccordionTitle = styled.h3`

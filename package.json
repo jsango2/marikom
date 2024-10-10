@@ -11,6 +11,7 @@
     "@react-spring/web": "^9.6.1",
     "@steveeeie/react-page-transition": "^1.2.1",
     "@svgr/webpack": "^6.1.2",
+    "@szhsin/react-accordion": "^1.2.5",
     "@uidotdev/usehooks": "^2.4.1",
     "@use-gesture/react": "^10.2.23",
     "axios": "^0.24.0",
