@@ -95,21 +95,23 @@ const AdSection = (oglasi) => {
                       href={
                         locale === "hr"
                           ? `/karijere/${slugify(
-                              item.node.oglasi.naslovOglasa
-                                .toLowerCase()
-                                .split(" ")
-                                .join("-") +
-                                "-" +
-                                item.node.id.toLowerCase(),
+                              item.node.title,
+                              // item.node.oglasi.naslovOglasa
+                              //   .toLowerCase()
+                              //   .split(" ")
+                              //   .join("-") +
+                              //   "-" +
+                              //   item.node.id.toLowerCase(),
                               { locale: "hrv", strict: true, lower: true }
                             )}`
                           : `/karijere/${slugify(
-                              item.node.oglasi.naslovOglasaEng
-                                .toLowerCase()
-                                .split(" ")
-                                .join("-") +
-                                "-" +
-                                item.node.id.toLowerCase(),
+                              item.node.title,
+                              // item.node.oglasi.naslovOglasaEng
+                              //   .toLowerCase()
+                              //   .split(" ")
+                              //   .join("-") +
+                              //   "-" +
+                              //   item.node.id.toLowerCase(),
                               { locale: "eng", strict: true, lower: true }
                             )}`
                       }

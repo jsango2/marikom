@@ -24,7 +24,6 @@ function LanguageSwitcher({
   const chooseMessage = (message) => {
     setMessage(message);
   };
-
   // funkcija za promjenu jezika i trazenje url-a za istu stranicu na drugom jeziku. novostiNaslovi u propsima dolazi iz parent page Novosti
   function handleRouteChange(lang) {
     if (lang != locale) {
@@ -75,47 +74,62 @@ function LanguageSwitcher({
         const getTranslationRouteForNews = oglasiNaslovi.filter((naslov) =>
           locale === "en"
             ? slugify(
-                naslov.node.oglasi.naslovOglasaEng
-                  .toLowerCase()
-                  .split(" ")
-                  .join("-") +
-                  "-" +
-                  naslov.node.id,
+                naslov.node.title,
+                // naslov.node.oglasi.naslovOglasaEng
+                //   .toLowerCase()
+                //   .split(" ")
+                //   .join("-") +
+                //   "-" +
+                //   naslov.node.id,
                 {
                   locale: "eng",
                   strict: true,
+                  lower: true,
                 }
               ) === getSlug
             : slugify(
-                naslov.node.oglasi.naslovOglasa
-                  .toLowerCase()
-                  .split(" ")
-                  .join("-") +
-                  "-" +
-                  naslov.node.id,
-                { locale: "hrv", strict: true }
+                naslov.node.title,
+                // naslov.node.oglasi.naslovOglasa
+                //   .toLowerCase()
+                //   .split(" ")
+                //   .join("-") +
+                //   "-" +
+                //   naslov.node.id,
+                { locale: "hrv", strict: true, lower: true }
               ) === getSlug
         );
 
         const matchingUrl =
           locale === "hr"
             ? slugify(
-                getTranslationRouteForNews[0].node.oglasi.naslovOglasaEng
-                  .toLowerCase()
-                  .split(" ")
-                  .join("-") +
-                  "-" +
-                  getTranslationRouteForNews[0].node.id,
-                { locale: "eng", strict: true }
+                // getTranslationRouteForNews[0].node.oglasi.naslovOglasaEng
+                //   .toLowerCase()
+                //   .split(" ")
+                //   .join("-") +
+                //   "-" +
+                //   getTranslationRouteForNews[0].node.id,
+                getTranslationRouteForNews[0].node.title,
+                // .toLowerCase()
+                // .split(" ")
+                // .join("-") +
+                // "-" +
+                // getTranslationRouteForNews[0].node.id,
+                { locale: "eng", strict: true, lower: true }
               )
             : slugify(
-                getTranslationRouteForNews[0].node.oglasi.naslovOglasa
-                  .toLowerCase()
-                  .split(" ")
-                  .join("-") +
-                  "-" +
-                  getTranslationRouteForNews[0].node.id,
-                { locale: "hrv", strict: true }
+                // getTranslationRouteForNews[0].node.oglasi.naslovOglasa
+                //   .toLowerCase()
+                //   .split(" ")
+                //   .join("-") +
+                //   "-" +
+                //   getTranslationRouteForNews[0].node.id,
+                getTranslationRouteForNews[0].node.title,
+                // .toLowerCase()
+                // .split(" ")
+                // .join("-") +
+                // "-" +
+                // getTranslationRouteForNews[0].node.id,
+                { locale: "hrv", strict: true, lower: true }
               );
         return router.push(matchingUrl, undefined, { locale: lang });
       }

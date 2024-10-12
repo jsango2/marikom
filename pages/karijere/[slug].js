@@ -19,8 +19,7 @@ import {
   Text,
   WrapAll,
 } from "../../components/KarijerePage/SingleKarijera/style.js";
-import AppContext from "../../components/AppContext.js";
-import { BlueLine } from "../../components/NovostiSection/newsCard/style.js";
+
 import parse from "html-react-parser";
 import slugify from "slugify";
 
@@ -30,13 +29,7 @@ import hr from "../../locales/hr.json";
 import Formular from "../../components/KarijerePage/SingleKarijera/Formular/index.js";
 import AdSection from "../../components/KarijerePage/komponente/AdSection/index.js";
 
-export default function News({
-  props,
-  pageData,
-  params,
-  oglasiNaslovi,
-  oglasi,
-}) {
+export default function News({ pageData, oglasiNaslovi, oglasi }) {
   const { locale, locales, defaultLocale, asPath, basePath } = useRouter();
   const t = locale === "en" ? en : hr;
 
@@ -105,10 +98,14 @@ export async function getStaticPaths({ locales }) {
       return paths.push({
         params: {
           slug: slugify(
-            post.node.oglasi.naslovOglasa.toLowerCase().split(" ").join("-") +
-              "-" +
-              post.node.id.toLowerCase(),
-            { locale: "hrv", strict: true }
+            // post.node.oglasi.naslovOglasa.toLowerCase().split(" ").join("-") +
+            //   "-" +
+            //   post.node.id.toLowerCase(),
+            post.node.title,
+
+            // { locale: "hrv", strict: true }
+            // post.node.title,
+            { locale: "hrv", strict: true, lower: true }
           ),
         },
         locale: "hr",
@@ -121,15 +118,18 @@ export async function getStaticPaths({ locales }) {
       return paths.push({
         params: {
           slug: slugify(
-            post.node.oglasi.naslovOglasaEng
-              .toLowerCase()
-              .split(" ")
-              .join("-") +
-              "-" +
-              post.node.id.toLowerCase(),
+            post.node.title,
+            // post.node.oglasi.naslovOglasaEng
+            //   .toLowerCase()
+            //   .split(" ")
+            //   .join("-") +
+            //   "-" +
+            //   post.node.id.toLowerCase(),
+            // post.node.title,
             {
               locale: "eng",
               strict: true,
+              lower: true,
             }
           ),
         },
@@ -143,34 +143,54 @@ export async function getStaticPaths({ locales }) {
 
 export async function getStaticProps({ params }) {
   const oglasi = await getAllOglasi();
-  // const novostiNaslovi = await getAllNovostiNaslovi();
-  const oglasiNaslovi = await getAllOglasiNaslovi();
 
+  const oglasiNaslovi = await getAllOglasiNaslovi();
+  const locales = ["hr", "en"];
   const currentPath = params.slug;
+  const paths = [];
+
+  // const test = oglasi.edges.map((post, i) => {
+  //   return locales.map((locale) => {
+  //     return paths.push({
+  //       params: {
+  //         slug: slugify(
+
+  //           post.node.title,
+  //           { locale: "hrv", strict: true, lower: true }
+  //         ),
+  //       },
+  //       locale: "hr",
+  //     });
+  //   });
+  // });
   const pageData = oglasi.edges.find(
     (data) =>
       slugify(
-        data.node.oglasi.naslovOglasa.toLowerCase().split(" ").join("-") +
-          "-" +
-          data.node.id.toLowerCase(),
+        data.node.title,
+        // data.node.oglasi.naslovOglasa.toLowerCase().split(" ").join("-") +
+        //   "-" +
+        //   data.node.id.toLowerCase(),
         {
           locale: "hrv",
           strict: true,
+          lower: true,
         }
       ) === currentPath ||
       slugify(
-        data.node.oglasi.naslovOglasaEng.toLowerCase().split(" ").join("-") +
-          "-" +
-          data.node.id.toLowerCase(),
+        data.node.title,
+        // data.node.oglasi.naslovOglasaEng.toLowerCase().split(" ").join("-") +
+        //   "-" +
+        //   data.node.id.toLowerCase(),
         {
           locale: "eng",
           strict: true,
+          lower: true,
         }
       ) === currentPath
   ) || {
     notfound: true,
   };
   return {
-    props: { oglasi, params, pageData, oglasiNaslovi },
+    props: { paths, oglasi, params, pageData, oglasiNaslovi },
   };
 }

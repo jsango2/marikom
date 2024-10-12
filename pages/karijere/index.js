@@ -6,15 +6,14 @@ import AdSection from "../../components/KarijerePage/komponente/AdSection";
 import ContactSection from "../../components/KarijerePage/komponente/ContactSection";
 import Layout from "../../components/layout";
 import { getAllOglasi } from "../../lib/api2";
-import slugify from "slugify";
-import Link from "next/link";
+
 import { useRouter } from "next/router.js";
 import Head from "next/head";
 function Karijere(props) {
   const router = useRouter();
   const { locale } = router;
   const oglasi = props.oglasi;
-  console.log(oglasi);
+
   return (
     <Layout>
       <Head>
@@ -86,29 +85,29 @@ export default Karijere;
 export async function getStaticProps({ locales }) {
   const oglasi = await getAllOglasi();
 
-  const paths = [];
-  oglasi.edges.map((post, i) => {
-    return paths.push({
-      params: {
-        slug:
-          post.node.oglasi.naslovOglasa.toLowerCase().split(" ").join("-") +
-          "-" +
-          post.node.id.toLowerCase(),
-      },
-      locale: "hr",
-    });
-  });
-  oglasi.edges.map((post, i) => {
-    return paths.push({
-      params: {
-        slug:
-          post.node.oglasi.naslovOglasaEng.toLowerCase().split(" ").join("-") +
-          "-" +
-          post.node.id.toLowerCase(),
-      },
-      locale: "en",
-    });
-  });
+  // const paths = [];
+  // oglasi.edges.map((post, i) => {
+  //   return paths.push({
+  //     params: {
+  //       slug:
+  //         post.node.oglasi.naslovOglasa.toLowerCase().split(" ").join("-") +
+  //         "-" +
+  //         post.node.id.toLowerCase(),
+  //     },
+  //     locale: "hr",
+  //   });
+  // });
+  // oglasi.edges.map((post, i) => {
+  //   return paths.push({
+  //     params: {
+  //       slug:
+  //         post.node.oglasi.naslovOglasaEng.toLowerCase().split(" ").join("-") +
+  //         "-" +
+  //         post.node.id.toLowerCase(),
+  //     },
+  //     locale: "en",
+  //   });
+  // });
 
   // oglasi.edges.map((post, i) => {
   //   return locales.map((locale) => {
@@ -126,9 +125,9 @@ export async function getStaticProps({ locales }) {
 
   return {
     props: {
-      paths: paths,
+      // paths: paths,
 
-      fallback: false,
+      // fallback: false,
       oglasi,
     },
   };
