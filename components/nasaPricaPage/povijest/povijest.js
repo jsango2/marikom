@@ -5,6 +5,8 @@ import {
   WrapEvents,
   DashedLine,
   Icon,
+  WrapArrowLeft,
+  WrapArrowRight,
 } from "./style.js";
 
 import Image from "next/image";
@@ -12,6 +14,9 @@ import Link from "next/link";
 import Dogadjaj from "./dogadjaj.js";
 import { IoIosArrowForward } from "react-icons/io";
 import { useInView } from "react-intersection-observer";
+import { FaArrowRight } from "react-icons/fa6";
+import { FaArrowLeft } from "react-icons/fa6";
+
 const events = [
   {
     godina: "1990",
@@ -85,8 +90,81 @@ const events = [
 import { useRouter } from "next/router.js";
 import en from "../../../locales/en.json";
 import hr from "../../../locales/hr.json";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { useRef } from "react";
+const settings = {
+  dots: false,
+  infinite: false,
+  focusOnSelect: false,
+  fade: false,
+  arrows: true,
+  initialSlide: 0,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  nextArrow: <FaArrowRight />,
+  prevArrow: <FaArrowLeft />,
+  cssEase: "ease-in-out",
+  className: "testimonialSlider",
+  speed: 300,
+
+  responsive: [
+    {
+      breakpoint: 1400,
+      settings: {
+        dots: false,
+        infinite: true,
+        focusOnSelect: false,
+        fade: false,
+        arrows: false,
+        initialSlide: 0,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 3500,
+        cssEase: "ease-in-out",
+        className: "testimonialSlider",
+        speed: 500,
+      },
+    },
+    {
+      breakpoint: 950,
+      settings: {
+        dots: false,
+        infinite: true,
+        focusOnSelect: false,
+        fade: false,
+        arrows: false,
+        initialSlide: 0,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 3500,
+        cssEase: "ease-in-out",
+        className: "testimonialSlider",
+        speed: 700,
+      },
+    },
+    {
+      breakpoint: 700,
+      settings: {
+        slidesToShow: 1,
+        // centerPadding: "10%",
+
+        fade: false,
+        centerMode: false,
+        dots: true,
+        arrows: false,
+        speed: 100,
+        cssEase: "linear",
+      },
+    },
+  ],
+};
 
 function Povijest() {
+  let sliderRef = useRef(null);
   const { locale } = useRouter();
   const t = locale === "en" ? en : hr;
   const { ref, inView, entry } = useInView({
@@ -102,18 +180,26 @@ function Povijest() {
           <Icon className={` ${inView ? "inViewArrow" : "outViewArrow"}`}>
             <IoIosArrowForward size={24} />
           </Icon>
+          {/* <WrapArrowLeft onClick={() => sliderRef?.current?.slickPrev()}>
+            <FaArrowLeft />
+          </WrapArrowLeft>
+          <WrapArrowRight onClick={() => sliderRef?.current?.slickNext()}>
+            <FaArrowRight />
+          </WrapArrowRight> */}
         </Title>
         <WrapEvents
-          ref={ref}
-          className={` ${inView ? "inViewHistory" : "outViewHistory"}`}
+        // ref={ref}
+        // className={` ${inView ? "inViewHistory" : "outViewHistory"}`}
         >
-          {events.map((event, index) => (
-            <Dogadjaj
-              key={index}
-              godina={event.godina}
-              text={locale === "hr" ? event.text : event.textEng}
-            />
-          ))}
+          <Slider {...settings} ref={sliderRef}>
+            {events.map((event, index) => (
+              <Dogadjaj
+                key={index}
+                godina={event.godina}
+                text={locale === "hr" ? event.text : event.textEng}
+              />
+            ))}
+          </Slider>
         </WrapEvents>
       </Container>
     </WrapAll>

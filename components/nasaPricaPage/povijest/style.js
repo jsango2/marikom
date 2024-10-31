@@ -93,18 +93,83 @@ export const DashedLine = styled.div`
     height: auto; */
   }
 `;
+export const WrapArrowLeft = styled.div`
+  position: absolute;
+  top: 0;
+  right: -50px;
+  cursor: pointer;
+  font-size: 30px;
+  color: white;
+  opacity: 0.8;
+  z-index: 10;
+  @media only screen and (min-width: 900px) {
+    /* ${ButtonLeft}:hover {
+      color: #000;
+    } */
+  }
+  @media only screen and (max-width: 1000px) {
+  }
+  @media only screen and (max-width: 440px) {
+  }
+`;
+export const WrapArrowRight = styled.div`
+  position: absolute;
+  top: 0;
+  right: -100px;
+  font-size: 30px;
+  z-index: 10;
+
+  cursor: pointer;
+  color: white;
+  opacity: 0.8;
+  @media only screen and (min-width: 900px) {
+    /* ${ButtonLeft}:hover {
+      color: #000;
+    } */
+  }
+  @media only screen and (max-width: 1000px) {
+  }
+  @media only screen and (max-width: 440px) {
+  }
+`;
 export const WrapEvents = styled.div`
   position: relative;
   z-index: 10;
-
-  display: flex;
+  width: 100%;
+  height: 500px;
+  /* display: flex; */
   margin-right: 50px;
-  transition: all 1.5s cubic-bezier(0.12, 0.52, 0.2, 0.99);
+  /* transition: all 1.5s cubic-bezier(0.12, 0.52, 0.2, 0.99);
   &.inViewHistory {
     left: 0px;
   }
   &.outViewHistory {
     left: -600px;
+  } */
+  .slick-dots {
+    top: -100px;
+    left: -62px;
+    height: 30px;
+    width: 377px;
+  }
+  .slick-dots li button:before {
+    color: #fffafa;
+    font-size: 9px;
+  }
+  .slick-dots li {
+    margin: 0 1px;
+  }
+  .slick-prev {
+    left: 280px;
+    top: -20px;
+  }
+  .slick-next {
+    left: 320px;
+    top: -20px;
+  }
+  .slick-next:hover,
+  .slick-prev:hover {
+    color: unset;
   }
   @media only screen and (max-width: 850px) {
     padding-top: 0px;
