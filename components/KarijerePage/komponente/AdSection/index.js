@@ -75,11 +75,14 @@ const AdSection = (oglasi) => {
                 <AdSectionInnerContainer>
                   <SingleAdTitle>
                     <p>{item.node.oglasi.tvrtka}</p>
-                    <h2>
-                      {locale === "hr"
-                        ? item.node.oglasi.naslovOglasa
-                        : item.node.oglasi.naslovOglasaEng}
-                    </h2>
+                    <h2
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          locale === "hr"
+                            ? item.node.oglasi.naslovOglasa
+                            : item.node.oglasi.naslovOglasaEng,
+                      }}
+                    ></h2>
                   </SingleAdTitle>
                   <SingleAdBodyText>
                     <p>
@@ -123,7 +126,9 @@ const AdSection = (oglasi) => {
               </AdSectionSpanBodyWrapper>
               <AdSectionBanner
                 logosource={
-                  item.node.oglasi.tvrtka === "Marikomerc"
+                  item.node.oglasi.fotografija.sourceUrl
+                    ? item.node.oglasi.fotografija.sourceUrl
+                    : item.node.oglasi.tvrtka === "Marikomerc"
                     ? "/karijereLogo//marikomerc.png"
                     : item.node.oglasi.tvrtka === "MLS"
                     ? "/karijereLogo//MLS.png"

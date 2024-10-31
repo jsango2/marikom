@@ -209,7 +209,7 @@ export const SingleAdTitle = styled.div`
   }
 
   h2 {
-    max-width: 500px;
+    max-width: 520px;
     color: #1c2640;
     font-family: "Gilroy";
     font-size: 30px;
@@ -289,7 +289,7 @@ export const AdSectionBanner = styled.div`
   background: url(${(props) => props.logosource});
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
 
   height: 10rem;
 

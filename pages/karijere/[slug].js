@@ -34,7 +34,9 @@ export default function News({ pageData, oglasiNaslovi, oglasi }) {
   const t = locale === "en" ? en : hr;
 
   const karijera = pageData.node.oglasi;
-
+  // console.log(
+  //   oglasi.edges.filter((oglas) => oglas.node.oglasi.aktivator !== null)
+  // );
   return (
     <Layout oglasiNaslovi={oglasiNaslovi.edges}>
       <WrapAll>
@@ -53,9 +55,9 @@ export default function News({ pageData, oglasiNaslovi, oglasi }) {
             <Data>
               {t.Karijere.rokPrijave}: {karijera.natjecajTrajeDo}
             </Data>
-            <Data>
+            {/* <Data>
               {t.Karijere.datumObjave}: {karijera.natjecajTrajeDo}
-            </Data>
+            </Data> */}
             <Data>{karijera.tvrtka}</Data>
           </WrapDataOglasa>
           <WrapText>
@@ -90,7 +92,9 @@ export default function News({ pageData, oglasiNaslovi, oglasi }) {
 
 export async function getStaticPaths({ locales }) {
   const oglasi = await getAllOglasi();
-
+  // const aktivniOglasi = oglasiedges.filter(
+  //   (oglas) => oglas.node.oglasi.aktivator !== null
+  // );
   const paths = [];
 
   oglasi.edges.map((post, i) => {
@@ -143,6 +147,10 @@ export async function getStaticPaths({ locales }) {
 
 export async function getStaticProps({ params }) {
   const oglasi = await getAllOglasi();
+
+  // const aktivniOglasi = oglasi.edges.filter(
+  //   (oglas) => oglas.node.oglasi.aktivator !== null
+  // );
 
   const oglasiNaslovi = await getAllOglasiNaslovi();
   const locales = ["hr", "en"];
