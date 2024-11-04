@@ -162,10 +162,12 @@ export const WrapEvents = styled.div`
   .slick-prev {
     left: 280px;
     top: -20px;
+    color: white;
   }
   .slick-next {
     left: 320px;
     top: -20px;
+    color: white;
   }
   .slick-next:hover,
   .slick-prev:hover {

@@ -117,7 +117,7 @@ const settings = {
         infinite: true,
         focusOnSelect: false,
         fade: false,
-        arrows: false,
+        arrows: true,
         initialSlide: 0,
         slidesToShow: 3,
         slidesToScroll: 1,
