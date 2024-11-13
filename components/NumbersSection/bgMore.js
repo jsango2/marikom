@@ -29,18 +29,18 @@ import { useRouter } from "next/router.js";
 import en from "../../locales/en.json";
 import hr from "../../locales/hr.json";
 import { useInView } from "react-intersection-observer";
-import { useScrollPercentage } from "react-scroll-percentage";
+// import { useScrollPercentage } from "react-scroll-percentage";
 
 function BGmore() {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : hr;
-  const [ref, percentage] = useScrollPercentage({
-    /* Optional options */
-    threshold: 0,
-  });
+  // const [ref, percentage] = useScrollPercentage({
+  //   /* Optional options */
+  //   threshold: 0,
+  // });
 
-  return <BgMore ref={ref} percentage={percentage} />;
+  return <BgMore ref={ref} />;
 }
 
 export default BGmore;

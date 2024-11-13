@@ -58,8 +58,8 @@ export const BgMore = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100% 50%;
-  top: ${(props) => props.percentage * 100 - 80}px;
-
+  /* transform: ${(props) => props.percentage * 100 - 80}px; */
+  /* transform: ${(props) => `translateY(${props.percentage * 100 - 80}px)`}; */
   @media only screen and (max-width: 850px) {
     padding: 50px 10px;
   }
