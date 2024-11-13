@@ -40,7 +40,7 @@ function BGmore() {
   //   threshold: 0,
   // });
 
-  return <BgMore ref={ref} />;
+  return <BgMore />;
 }
 
 export default BGmore;
