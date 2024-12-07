@@ -79,34 +79,52 @@ function KontaktSection() {
         <WrapDown>
           <Box>
             <BoldTitle>MARIKOMERC GRUPA</BoldTitle>
-            <Kontakt href="https://www.google.com/maps/@44.1751437,15.3570071,19.73z?entry=ttu">
+            <Kontakt
+              href="https://www.google.com/maps/@44.1751437,15.3570071,19.73z?entry=ttu"
+              target="_blank"
+            >
               Google Maps
             </Kontakt>
-            <Kontakt href="https://www.instagram.com/marikomerc">
+            <Kontakt
+              href="https://www.instagram.com/marikomerc"
+              target="_blank"
+            >
               Instagram
             </Kontakt>
-            <Kontakt href="https://www.facebook.com/marikomerc">
+            <Kontakt href="https://www.facebook.com/marikomerc" target="_blank">
               Facebook
             </Kontakt>
           </Box>
           <Box>
             <BoldTitle>DI MARIS</BoldTitle>
-            <Kontakt href="https://www.google.com/maps/@44.1197623,15.2271416,21z?entry=ttu">
+            <Kontakt
+              href="https://www.google.com/maps/@44.1197623,15.2271416,21z?entry=ttu"
+              target="_blank"
+            >
               Google Maps
             </Kontakt>
-            <Kontakt href="https://www.instagram.com/dimaris_croatia">
+            <Kontakt
+              href="https://www.instagram.com/dimaris_croatia"
+              target="_blank"
+            >
               Instagram
             </Kontakt>
-            <Kontakt href="https://www.facebook.com/dimaris.hr">
+            <Kontakt href="https://www.facebook.com/dimaris.hr" target="_blank">
               Facebook
             </Kontakt>
           </Box>{" "}
           <Box>
             <BoldTitle>MLS LOGISTIKA</BoldTitle>
-            <Kontakt href="https://www.google.com/maps/@44.1751437,15.3570071,19.73z?entry=ttu">
+            <Kontakt
+              href="https://www.google.com/maps/@44.1751437,15.3570071,19.73z?entry=ttu"
+              target="_blank"
+            >
               Google Maps
             </Kontakt>
-            <Kontakt href="https://www.instagram.com/marikomerc_logistics_solutions">
+            <Kontakt
+              href="https://www.instagram.com/marikomerc_logistics_solutions"
+              target="_blank"
+            >
               Instagram
             </Kontakt>
           </Box>

@@ -126,8 +126,8 @@ export const diMarisKontaktData = [
       "http://marikomerc.sutra.hr/wp-content/uploads/2024/01/biograd.png",
   },
   {
-    "Lokacija ribarnice": "Di Maris uprava",
-    "Lokacija ribarnice ENG": "Di Maris management",
+    "Lokacija ribarnice": "DI Maris uprava",
+    "Lokacija ribarnice ENG": "DI Maris management",
     Ulica: "Obala Kneza Trpimira 2",
     "Poštanski broj i grad": "23000 Zadar",
     TEL: "023/643-490",

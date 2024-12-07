@@ -81,9 +81,9 @@
   "Horeca": {
     "FAQ": "Najčešća pitanja",
     "accordion1Title": "Gdje mogu vidjeti vaš asortiman?",
-    "accordion1Text": "Naš asortiman možete pogledati na web stranici ili u našem katalogu. Također, dodatne informacije o artiklima su dostupne telefonski ili putem maila.",
+    "accordion1Text": "Naš asortiman možete pogledati na web stranici ili u našem katalogu. Također, dodatne informacije o artiklima su dostupne telefonski, putem maila i preko naših prodajnih predstavnika.",
     "accordion2Title": "Kako mogu naručiti vaše proizvode?",
-    "accordion2Text": "Naše proizvode možete naručiti telefonom, emailom, preko naših prodajnih predstavnika na terenu ili preko mobilne aplikacije za čije ugovaranje nam naši prodajni predstavnici stoje na raspolaganju. Dostave na lokacije će biti odrađene prcim sljedećim terminom. Narudžbe se mogu i osobno preuzeti na nekoj od naših veleprodajnih poslovnica u radnom vremenu.",
+    "accordion2Text": "Naše proizvode možete naručiti telefonom, emailom, preko naših prodajnih predstavnika na terenu ili preko mobilne aplikacije za čije ugovaranje vam naši prodajni predstavnici stoje na raspolaganju. Dostave na lokacije će biti odrađene prcim sljedećim terminom. Narudžbe se mogu i osobno preuzeti na nekoj od naših veleprodajnih poslovnica u radnom vremenu.",
     "accordion3Title": "Mogu li fizičke osobe kupiti vaše proizvode?",
     "accordion3Text": "U našim veleprodajnim poslovnicama možete kupiti proizvode iz naše ponude i kao fizička osoba. Naše proizvode također možete kupiti u svim DI Maris ribarnicama.",
     "accordion4Title": "Gdje se nalazimo?",
@@ -92,7 +92,7 @@
     "accordion5Text": "Za naše poslovne partnere vršimo uslugu kapilarne dostave direktno na adresu poslovnog subjekta.",
     "topTitle": "DISTRIBUTIVNI CENTRI U HRVATSKOJ",
     "Title": "Svaki dan dostavljamo na više od 400 prodajnih mjesta u Hrvatskoj",
-    "Text": "4 distributivna centara raspoređena od Rijeke do Dubrovnika i partneri u Zagrebu i Splitu nam omogućuju optimalnu kapilarnost, a obnovljena flota od 23 kamiona hladnjača nam jamči siguran hladni lanac i brze isporuke.<br/><br/> Uz našu logističku podršku možete bolje planirati svoje zalihe i time ostvariti uštede.",
+    "Text": "3 distributivna centra raspoređena od Rijeke do Dubrovnika i partneri u Zagrebu i Splitu nam omogućuju optimalnu kapilarnost, a obnovljena flota od 23 kamiona hladnjača nam jamči siguran hladni lanac i brze isporuke.<br/><br/> Uz našu logističku podršku možete bolje planirati svoje zalihe i time ostvariti uštede.",
     "buttonText": "Kontakti regionalnih DLC centara"
   },
   "Formular": {
@@ -113,7 +113,7 @@
     "diMarisData": " Adresa: Obala kneza Trpimira 2,<br />23000 Zadar - Hrvatska<br />Matični broj: 110100221<br />OIB: 75080321648<br /><br />E-mail:<a href='mailto:info@dimaris.hr'> info@dimaris.hr</a> <br />Tel:<a href='tel:+385 (98)163-3090'>+385 (98)163-3090</a><br /> <br />ERSTE BANKA, Adresa: Obala kneza Branimira 6,<br/> 23000 Zadar <br/> IBAN: HR0324020061100980626",
     "uputeGoogleMaps": "Upute Google maps",
     "logistika": "logistika",
-    "MLSdata": "  Grabi 54<br />23241 Poličnik, Hrvatska<br />Matični broj: 3468925<br />OIB: 02359254184<br /><br />E-mail:<a href='mailto:info@mls.hr'> info@mls.hr</a> <br />Tel:<a href='tel:023/630-539'>023/630-539</a> <br /><br />ERSTE BANKA, Jadranski trg 3A, 51000 Rijeka, Hrvatska<br /> IBAN: HR8024020061100078207<br /> TimoCom ID: 227763<br/><br />Marikomerc d.o.o. je upisan u registar<br />Trgovačkog suda u Zadru, broj spisa: 02454831"
+    "MLSdata": "  Grabi 54<br />23241 Poličnik, Hrvatska<br />Matični broj: 3468925<br />OIB: 02359254184<br /><br />E-mail:<a href='mailto:info@mls.hr'> info@mls.hr</a> <br />Tel:<a href='tel:023/630-539'>+385(0)23/630-539</a> <br /><br />ERSTE BANKA, Jadranski trg 3A, 51000 Rijeka, Hrvatska<br /> IBAN: HR8024020061100078207<br /> TimoCom ID: 227763<br/><br />"
   },
   "Linkovi": {
     "onama": "O nama",

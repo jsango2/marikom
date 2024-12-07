@@ -174,8 +174,8 @@ const Header = ({ siteTitle, novostiNaslovi, oglasiNaslovi }) => {
                       </Link>
                       <Link className="navLinkDrop" href="https://dimaris.hr/">
                         {locale === "hr"
-                          ? "Di Maris - Ribarnice"
-                          : "Di Maris - Fish market"}
+                          ? "DI Maris - Ribarnice"
+                          : "DI Maris - Fish market"}
                       </Link>
                       <Link
                         className="navLinkDrop"

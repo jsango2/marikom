@@ -77,13 +77,13 @@ export const MapaWrapTextBlock = styled.div`
   position: relative;
   left: 68px;
   z-index: 12;
-  width: 330px;
+  width: 355px;
   height: 78%;
   background: #11192c;
   border-radius: 3px;
   padding-top: 0px;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 42px;
+  padding-right: 42px;
   padding-bottom: 20px;
   @media only screen and (max-width: 1300px) {
     left: 0px;

@@ -294,9 +294,11 @@ function ProizvodiPage() {
               }}
             >
               <Arrow width="60px" />
-              {locale === "hr"
-                ? "Download brošure Perla HORECA"
-                : "Download the Perla HORECA brochure"}
+              <div style={{ marginLeft: "5px" }}>
+                {locale === "hr"
+                  ? "DOWNLOAD PERLA HORECA KATALOGA"
+                  : "DOWNLOAD PERLA HORECA PRODUCT CATALOGUE"}
+              </div>
             </a>
           </Kontakt>
         </ButtonsWrapDesktop>

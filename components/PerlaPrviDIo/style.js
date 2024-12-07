@@ -600,7 +600,7 @@ export const PerlaLogoWrap = styled.div`
   }
   @media only screen and (max-width: 430px) {
     margin-top: 80px;
-    margin-bottom: 0px;
+    margin-bottom: 30px;
   }
 `;
 export const YellowArrow = styled.div`
@@ -626,7 +626,7 @@ export const LogoWrap = styled.div`
   left: 0;
   z-index: 11;
   width: 239px;
-  height: 200px;
+  height: 130px;
   /* color: black;
   display: flex;
   justify-content: center;
@@ -635,11 +635,13 @@ export const LogoWrap = styled.div`
   @media only screen and (max-width: 1000px) {
     position: relative;
     top: unset;
+    height: 100px;
 
     /* left: 50%; */
     left: unset;
     display: flex;
     justify-content: center;
+    margin-bottom: 40px;
   }
 `;
 

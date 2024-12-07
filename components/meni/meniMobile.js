@@ -97,8 +97,8 @@ const MeniMobile = ({
               </Link>
               <Link className="navLinkDrop" href="https://dimaris.hr/">
                 {locale === "hr"
-                  ? "Di Maris - Ribarnice"
-                  : "Di Maris - Fish market"}
+                  ? "DI Maris - Ribarnice"
+                  : "DI Maris - Fish market"}
               </Link>
               <Link className="navLinkDrop" href="https://perlabisermora.hr/">
                 {locale === "hr" ? "Perla - Biser Mora" : "Perla - Sea Pearl"}

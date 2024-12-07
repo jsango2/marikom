@@ -31,7 +31,7 @@ function DiMarisSection() {
             Dokaz da ribarnice mogu izgledati drugačije nego očekujete
           </Title>
           <Text>
-            Di Maris ribarnice su mjesto gdje ćete ugodno popričati s našim
+            DI Maris ribarnice su mjesto gdje ćete ugodno popričati s našim
             prodavačima i gdje možete kupiti sve potebno za pripremu najboljeg
             ručka s okusom mora. <br />
             <br />U ponudi imamo bogatu ponudu ribe i plodova mora, ali i
@@ -43,14 +43,14 @@ function DiMarisSection() {
           <WrapLokacije>
             {" "}
             <Block>
-              <li>Di Maris Zadar - Gradska Ribarnica 1</li>
-              <li>Di Maris Zadar - TC Relja</li>
-              <li>Di Maris Zadar - Gradska Ribarnica 2</li>
+              <li>DI Maris Zadar - Gradska Ribarnica 1</li>
+              <li>DI Maris Zadar - TC Relja</li>
+              <li>DI Maris Zadar - Gradska Ribarnica 2</li>
             </Block>
             <Block>
-              <li>Di Maris Zadar - Vatrogasni</li>
-              <li>Di Maris Zadar - Maraska park</li>
-              <li>Di Maris Biograd - riva</li>
+              <li>DI Maris Zadar - Vatrogasni</li>
+              <li>DI Maris Zadar - Maraska park</li>
+              <li>DI Maris Biograd - riva</li>
             </Block>
           </WrapLokacije>
           <Button

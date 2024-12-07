@@ -160,9 +160,9 @@ export const ProizvodName = styled.p`
   position: relative;
   z-index: 11;
   margin-top: 16px;
-  font-family: "Avenir Next";
+  font-family: "Roboto";
   font-style: normal;
-  font-weight: 500;
+  font-weight: normal;
   font-size: 18px;
   line-height: 120%;
   text-align: center;
@@ -179,7 +179,7 @@ export const ProizvodName = styled.p`
 export const ProizvodWeight = styled.p`
   position: relative;
   z-index: 11;
-  font-family: "Avenir Next";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 600;
   font-size: 12px;

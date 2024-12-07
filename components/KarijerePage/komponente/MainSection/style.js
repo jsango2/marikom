@@ -215,7 +215,7 @@ export const SectionImages = (props) => {
       transformAmount: "-10%",
     },
     {
-      src: "../main-section-img/11.jpg",
+      src: "../main-section-img/12.jpg",
       transformAmount: "-35%",
     },
   ];

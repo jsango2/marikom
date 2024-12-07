@@ -71,7 +71,7 @@ function FooterSection() {
                 <SingleLink2 href="/kontakt/#kontakt">Zadar</SingleLink2>
                 <SingleLink2 href="/kontakt/#kontakt">Dubrovnik</SingleLink2>
                 <SingleLink2 href="/kontakt/#kontakt">Rijeka</SingleLink2>
-                <SingleLink2 href="/kontakt/#kontakt">Metković</SingleLink2>
+                {/* <SingleLink2 href="/kontakt/#kontakt">Metković</SingleLink2> */}
               </Column>
               <Column>
                 <SubName>{t.Linkovi.proizvodi}</SubName>
@@ -144,8 +144,8 @@ function FooterSection() {
           <Column2>
             <SubName>{t.Linkovi.claniceGrupe}</SubName>
             <SingleLink2 href="/">Marikomerc</SingleLink2>
-            <SingleLink2 href="/">
-              {locale === "hr" ? "Di Maris Ribarnice" : "Di Maris Fishmarket"}
+            <SingleLink2 href="https://dimaris.hr/">
+              {locale === "hr" ? "DI Maris Ribarnice" : "DI Maris Fishmarket"}
             </SingleLink2>
             <SingleLink2 href="/MLS">MLS Logistika</SingleLink2>
           </Column2>
@@ -153,16 +153,22 @@ function FooterSection() {
             <ColumnIkone>
               <SubName>{t.Linkovi.kontaktirajteNas}</SubName>
               <Social>
-                <a href="https://www.instagram.com/marikomerc">
+                <a href="https://www.instagram.com/marikomerc" target="_blank">
                   <Instagram />
                 </a>
-                <a href="https://www.facebook.com/marikomerc">
+                <a href="https://www.facebook.com/marikomerc" target="_blank">
                   <Facebook />
                 </a>
-                <a href="https://www.linkedin.com/company/marikomerc/">
+                <a
+                  href="https://www.linkedin.com/company/marikomerc/"
+                  target="_blank"
+                >
                   <Linkedin />
                 </a>
-                <a href="https://www.google.com/maps/@44.1751437,15.3570071,19.73z?entry=ttu">
+                <a
+                  href="https://www.google.com/maps/@44.1751437,15.3570071,19.73z?entry=ttu"
+                  target="_blank"
+                >
                   <Location />
                 </a>
                 <a href="mailto:mls@mls.hr">
