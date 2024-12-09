@@ -99,9 +99,10 @@ export const GornjiBlok = styled.div`
   }
 `;
 export const WrapCerts = styled.div`
-  position: relative;
+  position: absolute;
   z-index: 10;
   left: 40px;
+  bottom: 5px;
   /* margin-top: 20px;
   margin-left: 40px;
   display: flex;
