@@ -18,6 +18,8 @@ import { useScrollPercentage } from "react-scroll-percentage";
 
 import Mob1 from "../../assets/images/Mob1.webp";
 import Mob2 from "../../assets/images/Mob2.webp";
+import AppStoreimg from "../../assets/images/appstore.png";
+import GoogleImg from "../../assets/images/googleplay.png";
 import useWindowSize from "../helper/usewindowsize.js";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useRef, useState } from "react";
@@ -84,8 +86,32 @@ function AppSection() {
           naručivanja
         </MobileText>
         <WrapAppStore>
-          <Google></Google>
-          <AppStore></AppStore>
+          <a
+            href="https://apps.apple.com/hr/app/marikomerc/id6503952124"
+            target="_blank"
+          >
+            <Google>
+              <Image
+                src={AppStoreimg}
+                alt="Mobile"
+                layout="fill"
+                objectFit="contain"
+              />
+            </Google>
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=net.croz.marikomerc&hl=hr&pli=1"
+            target="_blank"
+          >
+            <AppStore>
+              <Image
+                src={GoogleImg}
+                alt="Mobile"
+                layout="fill"
+                objectFit="contain"
+              />
+            </AppStore>
+          </a>
         </WrapAppStore>
       </AppText>
       <Mobiles ref={ref}>

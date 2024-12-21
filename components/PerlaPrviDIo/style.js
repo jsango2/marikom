@@ -616,6 +616,7 @@ export const WrapAppSection = styled.div`
     flex-direction: column-reverse;
   }
   @media only screen and (max-width: 430px) {
+    padding-bottom: 50px;
   }
 `;
 export const YellowArrow = styled.div`
@@ -808,7 +809,7 @@ export const Google = styled.div`
   position: relative;
   width: 155px;
   height: 45px;
-
+  margin-right: 10px;
   @media only screen and (max-width: 1000px) {
     /* display: none; */
   }
