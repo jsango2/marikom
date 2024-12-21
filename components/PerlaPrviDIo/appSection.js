@@ -1,0 +1,107 @@
+import {
+  WrapAppSection,
+  AppText,
+  MobileText,
+  MobileTitle,
+  MobileTopTitle,
+  MobiletopText,
+  Mobiles,
+  WrapAppStore,
+  Google,
+  AppStore,
+  Mobile1,
+  Mobile2,
+} from "./style.js";
+
+import Image from "next/image";
+import Lottie, { useLottie } from "lottie-react";
+import { useScrollPercentage } from "react-scroll-percentage";
+
+import GreenMark from "../../svg/greenMark.svg";
+import Button from "../buttonBlue/Button.js";
+import Mob1 from "../../assets/images/mob1.webp";
+import Mob2 from "../../assets/images/mob2.webp";
+import useWindowSize from "../helper/usewindowsize.js";
+import rizotoBg from "../../assets/images/rizotoBg.png";
+import { useInView } from "react-intersection-observer";
+import { useEffect, useRef, useState } from "react";
+
+import { useRouter } from "next/router.js";
+import en from "../../locales/en.json";
+import hr from "../../locales/hr.json";
+function AppSection() {
+  // const [style2, setStyle2] = useState({});
+  const size = useWindowSize();
+
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : hr;
+  // const interactivity = {
+  //   mode: "scroll",
+  //   actions: [
+  //     {
+  //       visibility: [0.2, 1.0],
+  //       type: "play",
+  //       frames: [0, 24],
+  //     },
+  //     {
+  //       visibility: [0.2, 1.0],
+  //       type: "stop",
+  //       frames: [25],
+  //     },
+  //   ],
+  // };
+
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0,
+    triggerOnce: false,
+  });
+
+  const [ref2, percentage] = useScrollPercentage({
+    /* Optional options */
+    threshold: 0,
+  });
+
+  return (
+    <WrapAppSection>
+      <AppText>
+        <MobileTopTitle>Prednosti poslovanja s nama</MobileTopTitle>
+        <MobileTitle>
+          Sve što trebate za jednostavno poslovanje – Marikomerc App
+        </MobileTitle>
+        <MobiletopText>Laka navigacija</MobiletopText>
+        <MobileText>Brzo pretraživanje i naručivanje</MobileText>
+        <MobiletopText> Spremanje narudžbi</MobiletopText>
+        <MobileText>
+          Pratite povijest svojih narudžbi izravno u aplikaciji i optimizirajte
+          svoje zalihe
+        </MobileText>
+        <MobiletopText>Personalizirane ponude </MobiletopText>
+        <MobileText>
+          Kreirajte popis svojih omiljenih proizvoda i uživajte u ekskluzivnim
+          ponudama prilagođenima vašim potrebama.
+        </MobileText>
+        <MobiletopText>Podrška korisnicima</MobiletopText>
+        <MobileText>
+          Naš tim za podršku je tu da vam osigura brzo i jednostavno iskustvo
+          naručivanja
+        </MobileText>
+        <WrapAppStore>
+          <Google></Google>
+          <AppStore></AppStore>
+        </WrapAppStore>
+      </AppText>
+      <Mobiles ref={ref}>
+        <Mobile1 inView={inView}>
+          <Image src={Mob1} alt="Mobile" layout="fill" objectFit="contain" />
+        </Mobile1>
+        <Mobile2 inView={inView}>
+          <Image src={Mob2} alt="Mobile" layout="fill" objectFit="contain" />
+        </Mobile2>
+      </Mobiles>
+    </WrapAppSection>
+  );
+}
+
+export default AppSection;

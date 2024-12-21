@@ -37,6 +37,7 @@ import ReceptiLottie from "./ReceptiLottie.js";
 import { useRouter } from "next/router.js";
 import en from "../../locales/en.json";
 import hr from "../../locales/hr.json";
+import AppSection from "./appSection.js";
 function PerlaPrviDio() {
   // const [style2, setStyle2] = useState({});
   const size = useWindowSize();
@@ -113,16 +114,11 @@ function PerlaPrviDio() {
   });
 
   return (
-    <WrapAll ref={ref}>
+    <WrapAll ref={ref} bg={rizotoBg}>
+      <Overlay>
+        <Image src={rizotoBg} alt="Bg" layout="fill" objectFit="cover" />
+      </Overlay>
       <WrapBottom>
-        <Overlay>
-          <Image
-            src={rizotoBg}
-            alt="Picture of the author"
-            layout="fill"
-            objectFit="cover"
-          />
-        </Overlay>
         <WrapContent>
           <WrapPhotos2>
             <ReceptiAnimacija />
@@ -178,6 +174,7 @@ function PerlaPrviDio() {
           </RightSide>
         </WrapContent>
       </WrapBottom>
+      <AppSection />
     </WrapAll>
   );
 }

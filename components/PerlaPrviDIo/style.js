@@ -5,7 +5,11 @@ export const WrapAll = styled.div`
   z-index: 10;
   width: 100%;
   height: auto;
-  background: white;
+
+  background-image: url(${(props) => props.bg});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 78%;
   /* padding-bottom: 130px; */
 
   /* display: flex;
@@ -26,8 +30,8 @@ export const WrapBottom = styled.div`
   z-index: 10;
   width: 100%;
   height: auto;
-  background: white;
-  padding-bottom: 130px;
+
+  /* padding-bottom: 130px; */
 
   /* display: flex;
   justify-content: center;
@@ -104,7 +108,6 @@ export const Overlay = styled.div`
 
   /* overflow: hidden; */
   @media only screen and (max-width: 1400px) {
-    width: 100%;
   }
 `;
 export const OverlayTop = styled.div`
@@ -285,6 +288,7 @@ export const WrapContent = styled.div`
   height: auto;
   margin: 0px auto 0 auto;
   padding-top: 120px;
+  padding-bottom: 120px;
   padding-left: 105px;
   /* padding-bottom: 180px; */
   display: flex;
@@ -304,11 +308,7 @@ export const WrapContent = styled.div`
     /* padding-bottom: 129px; */
   }
   @media only screen and (max-width: 850px) {
-    /* width: 100%;
-    margin: 0px auto 0 auto;
-    padding-top: 0;
-    overflow: unset; */
-    /* padding-bottom: 129px; */
+    padding-bottom: 0;
   }
 `;
 export const TextWrap = styled.div`
@@ -603,6 +603,21 @@ export const PerlaLogoWrap = styled.div`
     margin-bottom: 30px;
   }
 `;
+export const WrapAppSection = styled.div`
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 320px;
+  height: auto;
+  margin: 50px auto 0 auto;
+  display: flex;
+  @media only screen and (max-width: 900px) {
+    flex-direction: column-reverse;
+  }
+  @media only screen and (max-width: 430px) {
+  }
+`;
 export const YellowArrow = styled.div`
   position: absolute;
   top: 0;
@@ -684,6 +699,174 @@ export const LightBlueBg = styled.div`
     height: auto;
     position: relative;
     width: 100%;
+    /* display: none; */
+  }
+`;
+
+export const AppText = styled.div`
+  position: relative;
+  width: 50%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 170px;
+  @media only screen and (max-width: 900px) {
+    width: 90%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 70px;
+
+    /* display: none; */
+  }
+`;
+export const MobileText = styled.div`
+  position: relative;
+  color: var(--boja-marikomerc-plava, #1c2640);
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  margin-bottom: 30px;
+  @media only screen and (max-width: 1000px) {
+    /* display: none; */
+  }
+`;
+export const MobileTitle = styled.div`
+  position: relative;
+  color: var(--boja-marikomerc-plava, #1c2640);
+  font-feature-settings: "liga" off, "clig" off;
+
+  /* H2 */
+  font-family: Roboto;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 44px */
+  margin-bottom: 25px;
+  @media only screen and (max-width: 430px) {
+    font-size: 32px;
+
+    /* display: none; */
+  }
+`;
+export const MobileTopTitle = styled.div`
+  position: relative;
+  color: var(--boja-marikomerc-plava, #1c2640);
+
+  /* H5 16 nadnaslov */
+  font-family: "Roboto Condensed";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  @media only screen and (max-width: 1000px) {
+    /* display: none; */
+  }
+`;
+export const MobiletopText = styled.div`
+  position: relative;
+  color: var(--boja-marikomerc-plava, #1c2640);
+
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 23.4px */
+  @media only screen and (max-width: 1000px) {
+    /* display: none; */
+  }
+`;
+export const Mobiles = styled.div`
+  position: relative;
+  width: 50%;
+  height: auto;
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+    height: 700px;
+    /* display: none; */
+  }
+  @media only screen and (max-width: 430px) {
+    width: 100%;
+    height: 500px;
+    /* display: none; */
+  }
+`;
+
+export const WrapAppStore = styled.div`
+  position: relative;
+  width: 100%;
+  display: flex;
+  @media only screen and (max-width: 1000px) {
+    /* display: none; */
+  }
+`;
+export const Google = styled.div`
+  position: relative;
+  width: 155px;
+  height: 45px;
+
+  @media only screen and (max-width: 1000px) {
+    /* display: none; */
+  }
+`;
+export const AppStore = styled.div`
+  position: relative;
+  width: 155px;
+  height: 45px;
+
+  @media only screen and (max-width: 1000px) {
+    /* display: none; */
+  }
+`;
+export const Mobile1 = styled.div`
+  position: absolute;
+  top: -80px;
+  right: -20px;
+  z-index: 2;
+
+  width: 370px;
+  height: 650px;
+  transition: all 3s ease-in-out;
+  transform: ${(props) =>
+    props.inView === true ? "translate(0,0)" : "translate(-50px,-50px)"};
+
+  @media only screen and (max-width: 430px) {
+    right: -30px;
+    top: -60px;
+
+    width: 310px;
+    height: 550px;
+
+    /* display: none; */
+  }
+`;
+export const Mobile2 = styled.div`
+  position: absolute;
+  top: -20px;
+  right: 140px;
+  z-index: 1;
+  width: 370px;
+  height: 650px;
+
+  @media only screen and (max-width: 900px) {
+    right: unset;
+    left: 50%;
+    transform: translate(-80%, 0);
+
+    /* display: none; */
+  }
+  @media only screen and (max-width: 430px) {
+    right: unset;
+    left: -30px;
+    transform: translate(0, 0);
+    top: -70px;
+    width: 280px;
+    height: 470px;
+
     /* display: none; */
   }
 `;
