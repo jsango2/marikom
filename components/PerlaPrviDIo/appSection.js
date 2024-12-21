@@ -116,10 +116,22 @@ function AppSection() {
       </AppText>
       <Mobiles ref={ref}>
         <Mobile1 inView={inView}>
-          <Image src={Mob1} alt="Mobile" layout="fill" objectFit="contain" />
+          <Image
+            src={Mob1}
+            alt="Mobile"
+            layout="fill"
+            objectFit="contain"
+            priority={true}
+          />
         </Mobile1>
         <Mobile2 inView={inView}>
-          <Image src={Mob2} alt="Mobile" layout="fill" objectFit="contain" />
+          <Image
+            src={Mob2}
+            alt="Mobile"
+            layout="fill"
+            objectFit="contain"
+            priority={true}
+          />
         </Mobile2>
       </Mobiles>
     </WrapAppSection>
