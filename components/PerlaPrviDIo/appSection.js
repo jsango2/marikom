@@ -14,15 +14,11 @@ import {
 } from "./style.js";
 
 import Image from "next/image";
-import Lottie, { useLottie } from "lottie-react";
 import { useScrollPercentage } from "react-scroll-percentage";
 
-import GreenMark from "../../svg/greenMark.svg";
-import Button from "../buttonBlue/Button.js";
-import Mob1 from "../../assets/images/mob1.webp";
-import Mob2 from "../../assets/images/mob2.webp";
+import Mob1 from "../../assets/images/Mob1.webp";
+import Mob2 from "../../assets/images/Mob2.webp";
 import useWindowSize from "../helper/usewindowsize.js";
-import rizotoBg from "../../assets/images/rizotoBg.png";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useRef, useState } from "react";
 
