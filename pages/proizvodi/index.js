@@ -13,7 +13,8 @@ import ProizvodiPage from "../../components/ProizvodiPage";
 import Hero from "../../components/ProizvodiPage/Hero/hero.js";
 import { useRouter } from "next/router.js";
 import Head from "next/head";
-function index() {
+import { getAllProizvodi } from "../../lib/api2.js";
+function index({ allProizvodi }) {
   const router = useRouter();
   const { locale } = router;
 
@@ -81,7 +82,7 @@ function index() {
         />
       </Head>
       <Hero />
-      <ProizvodiPage />
+      <ProizvodiPage allProizvodi={allProizvodi} />
     </Layout>
   );
 }
@@ -95,10 +96,10 @@ export default index;
 //   };
 // }
 
-// export async function getStaticProps({ preview = false }) {
-//   const allProizvodi = await getAllProizvodi();
+export async function getStaticProps({ preview = false }) {
+  const allProizvodi = await getAllProizvodi();
 
-//   return {
-//     props: { allProizvodi },
-//   };
-// }
+  return {
+    props: { allProizvodi },
+  };
+}

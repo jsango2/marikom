@@ -41,7 +41,8 @@ import { productImagesIds } from "./productImagesIds.js";
 import { useContext } from "react";
 import { AppContext } from "../../pages/_app.js";
 
-function ProizvodiPage() {
+function ProizvodiPage({ allProizvodi }) {
+  console.log({ allProizvodi });
   const [category, setCategory] = useContext(AppContext);
   const [kategorija, setKategorija] = useState(
     // locale === "hr" ? "Riba" : "Fish"
