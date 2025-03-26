@@ -37,11 +37,17 @@ import useScrollBlock from "../helper/useScrollBlock.js";
 // import { storage } from "../firebase/firebase.js";
 // import { getDownloadURL, ref } from "firebase/storage";
 import { productImagesIds } from "./productImagesIds.js";
+import {
+  freezingMethods,
+  productCategories,
+  velicine,
+} from "../../productCategories.js";
 
 import { useContext } from "react";
 import { AppContext } from "../../pages/_app.js";
 
 function ProizvodiPage({ allProizvodi }) {
+  console.log({ productCategories });
   console.log({ allProizvodi });
   const [category, setCategory] = useContext(AppContext);
   const [kategorija, setKategorija] = useState(
@@ -108,14 +114,15 @@ function ProizvodiPage({ allProizvodi }) {
   // const [filteredByKat, setFilteredByKat] = useState([]);
   const t = locale === "en" ? en : hr;
 
-  const sveKategorije = catalogData.map((kat) =>
-    locale === "hr"
-      ? kat["Kategorija kojoj proizvod pripada:"]
-      : kat["Kategorija kojoj proizvod pripada ENG:"]
+  // productCategories su fiksni popis kategorija u lokalnom fileu a ne iz CMS-a. Na taj način imamo prijevode kategorija jer ih u CMS-u nema nego su sve hr
+
+  const kategorije = productCategories.map((kat) =>
+    locale === "hr" ? kat.hr : kat.en
   );
-  const kategorije = [...new Set(sveKategorije)];
+  // const kategorije = [...new Set(sveKategorije)];
 
   const handleClick = (kat) => {
+    console.log({ kat });
     setCategory(kat);
     setKategorija(kat);
     current === kat ? setCurrent(null) : setCurrent(kat);
@@ -133,23 +140,47 @@ function ProizvodiPage({ allProizvodi }) {
   //./productImagesIds kreiraj tako da kopiras imena svih fotki koje imas u excel i maknes .jpg..kreiras od tog json sa ID: 23444 npr. To kopiraj u ./productImagesIDs
 
   const photoIdList = productImagesIds.map((item) => item.ID);
+  function findCategoryTranslation(hrTerm) {
+    const category = productCategories.find(
+      (category) => category.hr === hrTerm
+    );
+    return category ? category.en : null; // Return the English translation or null if not found
+  }
+
+  function findFreezingTranslation(hrTerm) {
+    const translation = freezingMethods.find((item) => item.hr === hrTerm);
+    return translation ? translation.en : null;
+  }
+
+  function findSizingTranslation(hrTerm) {
+    const translation = velicine.find(
+      (item) => item.hr.toLowerCase() === hrTerm.toLowerCase()
+    );
+
+    // If a match is found, return the translation; otherwise, return null
+    return translation ? translation.en : null;
+  }
 
   useEffect(() => {
-    const filteredDataByCategory = catalogData.filter(
+    const filteredDataByCategory = allProizvodi.edges.filter(
       (f) =>
         (locale === "hr"
-          ? f["Kategorija kojoj proizvod pripada:"]
-          : f["Kategorija kojoj proizvod pripada ENG:"]) === kategorija
+          ? f.node.proizvodiInformacije.kategorijaKojojProizvodPripada
+          : findCategoryTranslation(
+              f.node.proizvodiInformacije.kategorijaKojojProizvodPripada
+            )) === kategorija
     );
 
     const newArr1 = filteredDataByCategory.map((v) => ({
       ...v,
-      photoUrl: `/productImages/${v["Kataloški broj:"]}.png`,
+      photoUrl: `/productImages/${v.node.proizvodiInformacije.kataloskiBroj}.png`,
     }));
+
+    //gleda dali ima slika u katalogu slika lokalno pa ju prikaze
     newArr1.forEach((item) => {
       item.hasUrl = false;
       for (let j = 0; j < photoIdList.length; j++) {
-        if (item["Kataloški broj:"] == +photoIdList[j]) {
+        if (item.node.proizvodiInformacije.kataloskiBroj == +photoIdList[j]) {
           item.hasUrl = true;
         }
       }
@@ -166,12 +197,12 @@ function ProizvodiPage({ allProizvodi }) {
     const results = filteredData.filter((post) => {
       if (e.target.value === "") return filteredData;
       if (locale === "hr") {
-        return post["IME PROIZVODA - do 60 znakova"]
+        return post.node.proizvodiInformacije.imeProizvodaDo60Znakova
           .toLowerCase()
           .includes(e.target.value.toLowerCase());
       }
       if (locale === "en") {
-        return post["PRODUCT NAME - up to 60 characters"]
+        return postpost.node.proizvodiInformacije.imeProizvodaDo60ZnakovaEng
           .toLowerCase()
           .includes(e.target.value.toLowerCase());
       }
@@ -353,43 +384,54 @@ function ProizvodiPage({ allProizvodi }) {
               <Kartica
                 // key={item["Kataloški broj: "]}
                 key={i}
-                kataloskiBroj={item["Kataloški broj:"]}
+                kataloskiBroj={item.node.proizvodiInformacije.kataloskiBroj}
                 hasPhoto={item.hasUrl}
                 photo={item.photoUrl}
                 imeProizvoda={
                   locale === "hr"
-                    ? item["IME PROIZVODA - do 60 znakova"]
-                    : item["PRODUCT NAME - up to 60 characters"]
+                    ? item.node.proizvodiInformacije.imeProizvodaDo60Znakova
+                    : item.node.proizvodiInformacije.imeProizvodaDo60ZnakovaEng
                 }
-                latinskiNaziv={item["LATINSKI NAZIV - do 60 znakova"]}
+                latinskiNaziv={
+                  item.node.proizvodiInformacije.latinskiNazivDo60Znakova
+                }
                 opis={
                   locale === "hr"
-                    ? item["OPIS (DO 300 ZNAKOVA)"]
-                    : item["OPIS ENGLESKI"]
+                    ? item.node.proizvodiInformacije.opisHrDo300Znakova
+                    : item.node.proizvodiInformacije.opisEngDo300Znakova
                 }
-                jedinicaMjere={item["Jedinica mjere"]}
+                jedinicaMjere={item.node.proizvodiInformacije.jedinicaMjere}
                 ostaleMjere={
                   locale === "hr"
-                    ? item["Ostale jedinice: Veličina/pecatura/broj kom u kg:"]
-                    : item["Other units: Size/patch/number of pcs in kg:"]
+                    ? item.node.proizvodiInformacije
+                        .ostaleJediniceVelicinaPecaturaBrojKomUKg
+                    : findSizingTranslation(
+                        item.node.proizvodiInformacije
+                          .ostaleJediniceVelicinaPecaturaBrojKomUKg
+                      )
                 }
                 ostaleMjereVrijednost={
-                  item["Vrijednost ukoliko je prethodno polje ispunjeno"]
+                  item.node.proizvodiInformacije.vrijednostOstaleVelicine
                 }
-                pakiranje={item["Težina po jedinici mjere"]}
+                pakiranje={item.node.proizvodiInformacije.tezinaPoJediniciMjere}
                 nacinSmrzavanja={
                   locale === "hr"
-                    ? item["NAČIN SMRZAVANJA"]
-                    : item["METHOD OF FREEZING"]
+                    ? item.node.proizvodiInformacije.nacinSmrzavanja
+                    : findFreezingTranslation(
+                        item.node.proizvodiInformacije.nacinSmrzavanja
+                      )
                 }
-                certifikatMSC={item["Certifikat 'MSC' (DA/NE)"]}
-                perlaHoreca={item["Perla HORECA (DA/NE)"]}
-                certifikatIFS={item["IFS Food"]}
+                certifikatMSC={item.node.proizvodiInformacije.certifikatMsc}
+                perlaHoreca={item.node.proizvodiInformacije.perlaHoreca}
+                certifikatIFS={item.node.proizvodiInformacije.ifsFood}
                 certifikatZivjetiZdravo={
-                  item["Certifikat 'Živjeti Zdravo' (DA/NE)"]
+                  item.node.proizvodiInformacije.certifikatZivjetiZdravo
                 }
-                oznakaNovo={item[`OZNAKA "Novo" (DA/NE)`]}
-                oznakaNovoPakiranje={item[`OZNAKA: "Novo pakiranje" (DA/NE)`]}
+                oznakaNovo={item.node.proizvodiInformacije.oznakaNovo}
+                oznakaNovoPakiranje={
+                  item.node.proizvodiInformacije.oznakaNovoPakiranje
+                }
+                slikaProizvoda={item.node.proizvodiInformacije.slikaProizvoda}
               />
             ))
           ) : (

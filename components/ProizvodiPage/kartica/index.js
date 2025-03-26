@@ -29,6 +29,7 @@ import IFScert from "../../../assets/images/IFSfood.png";
 import perla from "../../../assets/images/Perla.png";
 import zivjetiZdravo from "../../../assets/images/zivjetiZdravo.png";
 import mscLogo from "../../../assets/images/mscLogo.png";
+import { velicine } from "../../../productCategories.js";
 
 function Kartica({
   kataloskiBroj,
@@ -48,26 +49,39 @@ function Kartica({
   certifikatIFS,
   certifikatMSC,
   perlaHoreca,
+  slikaProizvoda,
 }) {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : hr;
+
   return (
     <WrapAll>
-      {oznakaNovo === "DA" ? (
+      {oznakaNovo === true ? (
         <Novo>{locale === "hr" ? "NOVO" : "NEW"}</Novo>
       ) : null}
-      {oznakaNovoPakiranje === "DA" ? (
+      {oznakaNovoPakiranje === true ? (
         <NovoPakiranje>
           {locale === "hr" ? "NOVO PAKIRANJE" : "NEW PACKAGING"}
         </NovoPakiranje>
       ) : null}
       <Photo className="proizvodImg">
-        {hasPhoto ? (
+        {slikaProizvoda !== null ? (
+          <Image
+            src={slikaProizvoda.sourceUrl}
+            layout="fill"
+            objectFit="contain"
+          />
+        ) : hasPhoto ? (
           <Image src={photo} layout="fill" objectFit="contain" />
         ) : (
           <Image src="/placeholderImg.png" layout="fill" objectFit="contain" />
         )}
+        {/* {hasPhoto ? (
+          <Image src={photo} layout="fill" objectFit="contain" />
+        ) : (
+          <Image src="/placeholderImg.png" layout="fill" objectFit="contain" />
+        )} */}
       </Photo>
       <WrapData>
         <GornjiBlok>
@@ -86,11 +100,13 @@ function Kartica({
           <Pakiranje>
             {t.Products.Pakiranje}: <b>{pakiranje}</b>
           </Pakiranje>
-          {ostaleMjere !== "-" ? (
-            <Pakiranje>
-              {ostaleMjere}: <b>{ostaleMjereVrijednost}</b>
-            </Pakiranje>
-          ) : null}
+          {ostaleMjere !== "'-" &&
+            ostaleMjereVrijednost !== "-" &&
+            ostaleMjereVrijednost !== null && (
+              <Pakiranje>
+                {ostaleMjere} : <b>{ostaleMjereVrijednost}</b>
+              </Pakiranje>
+            )}
 
           {nacinSmrzavanja != "-" && (
             <NacinSmrzavanja>
@@ -101,7 +117,7 @@ function Kartica({
       </WrapData>
 
       <WrapCerts>
-        {certifikatIFS === "DA" ? (
+        {certifikatIFS === true ? (
           <WrapCert>
             <Image
               src="/IFSfood.svg"
@@ -111,30 +127,35 @@ function Kartica({
             />
           </WrapCert>
         ) : null}
-        <div style={{ marginLeft: "10px" }}>
-          {certifikatMSC === "DA" ? (
+        <div style={{ marginLeft: "10px", paddingTop: "6px" }}>
+          {certifikatMSC === true ? (
             <WrapCert>
-              <Image src="/MSC.svg" width={55} height={15} objectFit="cover" />
+              <Image
+                src="/certifikat/MSC.svg"
+                width={55}
+                height={15}
+                objectFit="cover"
+              />
             </WrapCert>
           ) : null}
         </div>
-        {/* {oznakaNovo === "DA" ? (
+        {/* {oznakaNovo === true ? (
           <Novo>{locale === "hr" ? "NOVO" : "NEW"}</Novo>
         ) : null}
-        {oznakaNovoPakiranje === "DA" ? (
+        {oznakaNovoPakiranje === true ? (
           <NovoPakiranje>
             {locale === "hr" ? "NOVO PAKIRANJE" : "NEW PACKAGING"}
           </NovoPakiranje>
         ) : null} */}
         <div style={{ marginLeft: "0px" }}>
-          {perlaHoreca === "DA" ? (
+          {perlaHoreca === true ? (
             <WrapCert>
               <Image src={perla} width={50} height={25} objectFit="cover" />
             </WrapCert>
           ) : null}
         </div>
         <div style={{ marginLeft: "10px" }}>
-          {certifikatZivjetiZdravo === "DA" ? (
+          {certifikatZivjetiZdravo === true ? (
             <WrapCert>
               <Image
                 src="/zivjetizdravo.svg"

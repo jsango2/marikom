@@ -1,0 +1,68 @@
+{
+  "translations": {
+    "Glavonošci": {
+      "en": "Cephalopods",
+      "hr": "Glavonošci"
+    },
+    "Rakovi": {
+      "en": "Crustaceans",
+      "hr": "Rakovi"
+    },
+    "Riba": {
+      "en": "Fish",
+      "hr": "Riba"
+    },
+    "Fileti i odresci": {
+      "en": "Fillets and Steaks",
+      "hr": "Fileti i odresci"
+    },
+    "Školjkaši": {
+      "en": "Shellfish",
+      "hr": "Školjkaši"
+    },
+    "Panirani proizvodi": {
+      "en": "Breaded Products",
+      "hr": "Panirani proizvodi"
+    },
+    "Konzervirani, sušeni i dimljeni proizvodi": {
+      "en": "Canned, Dried, and Smoked Products",
+      "hr": "Konzervirani, sušeni i dimljeni proizvodi"
+    },
+    "Marinirani proizvodi": {
+      "en": "Marinated Products",
+      "hr": "Marinirani proizvodi"
+    },
+    "Ostali riblji proizvodi": {
+      "en": "Other Fish Products",
+      "hr": "Ostali riblji proizvodi"
+    },
+    "Povrće & Njoki": {
+      "en": "Vegetables & Gnocchi",
+      "hr": "Povrće & Njoki"
+    },
+    "Pommes frites": {
+      "en": "French Fries",
+      "hr": "Pommes frites"
+    },
+    "Svježi i osvježeni proizvodi": {
+      "en": "Fresh and Refreshed Products",
+      "hr": "Svježi i osvježeni proizvodi"
+    },
+    "Tjestenina": {
+      "en": "Pasta",
+      "hr": "Tjestenina"
+    },
+    "Veganski proizvodi": {
+      "en": "Vegan Products",
+      "hr": "Veganski proizvodi"
+    },
+    "Mesni proizvodi": {
+      "en": "Meat Products",
+      "hr": "Mesni proizvodi"
+    },
+    "PERLA": {
+      "en": "PERLA",
+      "hr": "PERLA"
+    }
+  }
+}

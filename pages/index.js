@@ -16,13 +16,13 @@ import PerlaDrugiDio from "../components/PerlaDrugiDio";
 import KontaktSection from "../components/KontaktSection";
 import useWindowSize from "../components/helper/usewindowsize";
 import CertifikatMobileSection from "../components/CertifikatMobileSection";
-import { getAllNovosti } from "../lib/api2";
+import { getAllNovosti, getAllProizvodi } from "../lib/api2";
 import AppContext from "../components/AppContext.js";
 import FsLightbox from "fslightbox-react";
 import en from "../locales/en.json";
 import hr from "../locales/hr.json";
 
-export default function IndexPage({ allPosts }) {
+export default function IndexPage({ allPosts, allProizvodi }) {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : hr;
@@ -102,7 +102,7 @@ export default function IndexPage({ allPosts }) {
       <MapaSection />
       <CertifikatSection />
       <PerlaPrviDio />
-      <PerlaDrugiDio />
+      <PerlaDrugiDio allProizvodi={allProizvodi} />
       <KontaktSection />
     </Layout>
   );
@@ -110,8 +110,9 @@ export default function IndexPage({ allPosts }) {
 
 export async function getStaticProps({ preview = false }) {
   const allPosts = await getAllNovosti();
+  const allProizvodi = await getAllProizvodi();
 
   return {
-    props: { allPosts },
+    props: { allPosts, allProizvodi },
   };
 }

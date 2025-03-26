@@ -205,7 +205,7 @@ export const LatinskiNaziv = styled.div`
   font-style: italic;
   font-weight: 400;
   line-height: 153%; /* 21.42px */
-  margin: 10px 0 20px 0;
+  margin: 7px 0 10px 0;
 
   @media only screen and (max-width: 600px) {
     margin: 5px 0 10px 0;
@@ -235,9 +235,13 @@ export const Pakiranje = styled.div`
   font-weight: 400;
   line-height: 120%; /* 14.4px */
   margin-top: 6px;
+  &::first-letter {
+    text-transform: uppercase;
+  }
   @media only screen and (max-width: 600px) {
   }
 `;
+
 export const NacinSmrzavanja = styled.div`
   position: relative;
   z-index: 10;
