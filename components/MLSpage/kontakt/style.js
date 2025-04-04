@@ -61,7 +61,7 @@ export const GoogleButton = styled.a`
   border-radius: 6px;
   border: 1px solid #1c2640;
   padding: 5px 20px;
-  width: 150px;
+  width: fit-content;
   height: 25px;
   /* color: #f5faff; */
   color: #1c2640;
