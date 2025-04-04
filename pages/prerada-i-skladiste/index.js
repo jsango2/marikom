@@ -15,7 +15,7 @@ function index() {
         <title>Marikomerc - Prerada i Skladište</title>
         <link
           rel="canonical"
-          href="https://www.marikomerc.hr/prerada-i-skladiste"
+          href="https://marikomerc.hr/prerada-i-skladiste"
           key="canonical"
         />
 
@@ -59,8 +59,8 @@ function index() {
           property="og:url"
           content={
             locale === "hr"
-              ? `"https://www.marikomerc.hr/prerada-i-skladiste"`
-              : `"https://www.marikomerc.hr/en/prerada-i-skladiste"`
+              ? `"https://marikomerc.hr/prerada-i-skladiste"`
+              : `"https://marikomerc.hr/en/prerada-i-skladiste"`
           }
         />
         <meta

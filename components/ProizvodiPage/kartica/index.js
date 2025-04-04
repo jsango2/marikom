@@ -100,7 +100,7 @@ function Kartica({
           <Pakiranje>
             {t.Products.Pakiranje}: <b>{pakiranje}</b>
           </Pakiranje>
-          {ostaleMjere !== "'-" &&
+          {ostaleMjere !== "-" &&
             ostaleMjereVrijednost !== "-" &&
             ostaleMjereVrijednost !== null && (
               <Pakiranje>

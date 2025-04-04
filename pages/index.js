@@ -40,11 +40,7 @@ export default function IndexPage({ allPosts, allProizvodi }) {
     <Layout>
       <Head>
         <title> Marikomerc.hr</title>
-        <link
-          rel="canonical"
-          href="https://www.marikomerc.hr"
-          key="canonical"
-        />
+        <link rel="canonical" href="https://marikomerc.hr" key="canonical" />
 
         <meta property="og:title" content="Marikomerc" key="title" />
         <meta name="twitter:title" content="Marikomerc" />
@@ -82,8 +78,8 @@ export default function IndexPage({ allPosts, allProizvodi }) {
           property="og:url"
           content={
             locale === "hr"
-              ? `"https://www.marikomerc.hr"`
-              : `"https://www.marikomerc.hr/en"`
+              ? `"https://marikomerc.hr"`
+              : `"https://marikomerc.hr/en"`
           }
         />
         <meta

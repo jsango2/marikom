@@ -20,7 +20,7 @@ function Karijere(props) {
         <title>Marikomerc - Karijere</title>
         <link
           rel="canonical"
-          href="https://www.marikomerc.hr/karijere"
+          href="https://marikomerc.hr/karijere"
           key="canonical"
         />
 
@@ -60,8 +60,8 @@ function Karijere(props) {
           property="og:url"
           content={
             locale === "hr"
-              ? `"https://www.marikomerc.hr/karijere"`
-              : `"https://www.marikomerc.hr/en/karijere"`
+              ? `"https://marikomerc.hr/karijere"`
+              : `"https://marikomerc.hr/en/karijere"`
           }
         />
         <meta

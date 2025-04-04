@@ -47,14 +47,14 @@ export default function News({
           rel="canonical"
           href={
             locale === "hr"
-              ? `https://www.marikomerc.hr/novosti/${
+              ? `https://marikomerc.hr/novosti/${
                   slugify(novost.naslov.toLowerCase().split(" ").join("-"), {
                     locale: "hrv",
                   }) +
                   "-" +
                   novost.datum.split("/").join("-")
                 }`
-              : `https://www.marikomerc.hr/novosti/${
+              : `https://marikomerc.hr/novosti/${
                   slugify(novost.naslovEng.toLowerCase().split(" ").join("-"), {
                     locale: "hrv",
                   }) +
@@ -110,14 +110,14 @@ export default function News({
           property="og:url"
           content={
             locale === "hr"
-              ? `https://www.marikomerc.hr/novosti/${
+              ? `https://marikomerc.hr/novosti/${
                   slugify(novost.naslov.toLowerCase().split(" ").join("-"), {
                     locale: "hrv",
                   }) +
                   "-" +
                   novost.datum.split("/").join("-")
                 }`
-              : `https://www.marikomerc.hr/novosti/${
+              : `https://marikomerc.hr/novosti/${
                   slugify(novost.naslovEng.toLowerCase().split(" ").join("-"), {
                     locale: "hrv",
                   }) +
