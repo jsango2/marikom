@@ -293,6 +293,8 @@ function ProizvodiPage({ allProizvodi }) {
   //     }
   //   });
   // console.log("Context cat:", category);
+
+  console.log({ state });
   return (
     <WrapAll key={remountComponent}>
       {size.width > 900 && (
@@ -414,13 +416,13 @@ function ProizvodiPage({ allProizvodi }) {
                   item.node.proizvodiInformacije.vrijednostOstaleVelicine
                 }
                 pakiranje={item.node.proizvodiInformacije.tezinaPoJediniciMjere}
-                nacinSmrzavanja={
-                  locale === "hr"
-                    ? item.node.proizvodiInformacije.nacinSmrzavanja
-                    : findFreezingTranslation(
-                        item.node.proizvodiInformacije.nacinSmrzavanja
-                      )
-                }
+                nacinSmrzavanja={item.node.proizvodiInformacije.nacinSmrzavanja}
+                //   locale === "hr"
+                //     ? item.node.proizvodiInformacije.nacinSmrzavanja
+                //     : findFreezingTranslation(
+                //         item.node.proizvodiInformacije.nacinSmrzavanja
+                //       )
+                // }
                 certifikatMSC={item.node.proizvodiInformacije.certifikatMsc}
                 perlaHoreca={item.node.proizvodiInformacije.perlaHoreca}
                 certifikatIFS={item.node.proizvodiInformacije.ifsFood}

@@ -42,8 +42,8 @@ export const velicine = [
     en: "packaging",
   },
   {
-    hr: "'-",
-    en: "'-",
+    hr: "-",
+    en: "-",
   },
 ];
 
