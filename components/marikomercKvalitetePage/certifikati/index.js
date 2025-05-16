@@ -43,7 +43,7 @@ const Certifikati = () => {
             {/* <Text>{t.Kvalitete.text1}</Text> */}
           </TextBox>
           <WrapCerts>
-            <Cert text={t.Kvalitete.card1} MSC ASC />
+            <Cert text={t.Kvalitete.card1} MSC />
             <Cert ISO text={t.Kvalitete.card2} />
             <Cert IFS text={t.Kvalitete.card3} />
             <Cert ZZ text={t.Kvalitete.card4} />

@@ -77,9 +77,9 @@ const events = [
   },
   {
     godina: "2021",
-    text: "Puštanje u rad novih proizvodnih i skladišnih kapaciteta. Razvoj MLS-a, logističkih rješenja u hladnom lancu - Certifikacija ASC/MSC CoC",
+    text: "Puštanje u rad novih proizvodnih i skladišnih kapaciteta. Razvoj MLS-a, logističkih rješenja u hladnom lancu - Certifikacija MSC CoC",
     textEng:
-      "Commissioning of new production and storage capacities. Development of MLS, logistic solutions in the cold chain - ASC/MSC CoC Certification",
+      "Commissioning of new production and storage capacities. Development of MLS, logistic solutions in the cold chain - MSC CoC Certification",
   },
   {
     godina: "2022",

@@ -177,7 +177,7 @@ function FooterSection() {
               </Social>
               <WrapCerts>
                 <Image src="/certifikat/MSC.svg" height={27} width={70} />
-                <Image src="/certifikat/ASC.svg" height={27} width={50} />
+                {/* <Image src="/certifikat/ASC.svg" height={27} width={50} /> */}
                 <Image src="/certifikat/IFSfood.svg" height={27} width={40} />
                 <Image
                   src="/certifikat/zivjetizdravo.svg"

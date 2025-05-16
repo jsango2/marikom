@@ -397,7 +397,7 @@ export const Divider = styled.div`
 export const WrapCerts = styled.div`
   position: relative;
   z-index: 10;
-  width: 250px;
+  width: 200px;
   margin-top: 40px;
   height: 27px;
   display: flex;

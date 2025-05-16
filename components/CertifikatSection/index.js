@@ -38,7 +38,7 @@ function CertifikatSection() {
           title={t.Certifikat.title1}
           text={t.Certifikat.text1}
           certMSC
-          certASC
+          // certASC
         />
         <Card
           image="/p2.webp"
