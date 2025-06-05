@@ -108,7 +108,7 @@ export const WrapCerts = styled.div`
   height: 47px;
   width: 234px;
   display: flex;
-  justify-content: center;
+  justify-content: center ;
   @media only screen and (max-width: 850px) {
   }
 `;
