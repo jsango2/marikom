@@ -11,19 +11,20 @@ import {
   WrapEmail,
   GoogleButton,
   Phone,
-} from "./style.js";
+} from './style.js';
 
-import useWindowSize from "../../helper/usewindowsize.js";
-import Image from "next/image.js";
-import parse from "html-react-parser";
+import useWindowSize from '../../helper/usewindowsize.js';
+import Image from 'next/image.js';
+import parse from 'html-react-parser';
 
-import en from "../../../locales/en.json";
-import hr from "../../../locales/hr.json";
-import { useRouter } from "next/router.js";
-import { BlueDivider } from "../main/style.js";
-import { mlsKontaktData } from "../../../mlsKontaktData.js";
-import Button from "../../buttonBlue/Button.js";
-import { useInView } from "react-intersection-observer";
+import en from '../../../locales/en.json';
+import hr from '../../../locales/hr.json';
+import { useRouter } from 'next/router.js';
+import { BlueDivider } from '../main/style.js';
+import { mlsKontaktData } from '../../../mlsKontaktData.js';
+import Button from '../../buttonBlue/Button.js';
+import { useInView } from 'react-intersection-observer';
+import React from 'react';
 function Kontakt(props) {
   const { ref, inView, entry } = useInView({
     /* Optional options */
@@ -32,57 +33,110 @@ function Kontakt(props) {
   });
   const { locale } = useRouter();
   const router = useRouter();
-  const t = locale === "en" ? en : hr;
+  const t = locale === 'en' ? en : hr;
   const size = useWindowSize();
 
+  const [data, setData] = React.useState(null);
+
+  const fetchData = async () => {
+    const response = await fetch('https://marikomerc.sutra.hr/graphql', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        query: `
+          query getRadnaVremena {
+  radnaVremena {
+    edges {
+      node {
+        id
+        radnaVremenaPoslovnica {
+          zadarlogisticki {
+            
+            ponpet
+            sub
+          }
+          rijekalogisticki {
+
+            ponpet
+            sub
+          }
+          dubrovniklogisticki {
+
+            ponpet
+            sub
+          }
+        }
+      }
+    }
+  }
+}
+        `,
+      }),
+    });
+
+    const result = await response.json();
+    setData(result.data.radnaVremena.edges[0].node.radnaVremenaPoslovnica);
+  };
+
+  React.useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
-    <WrapKontakt id="kontakt">
+    <WrapKontakt id='kontakt'>
       <WrapContent>
-        {router.pathname === "/MLS" && (
+        {router.pathname === '/MLS' && (
           <>
             <BlueDivider />
             <Naslov>{t.MLS.kontaktirajteNas}</Naslov>
             <PodNaslov>{t.MLS.raspored}</PodNaslov>
             <Button
-              bgcolor="#4299C8"
-              color="#FFFFFF"
-              width="226px"
+              bgcolor='#4299C8'
+              color='#FFFFFF'
+              width='226px'
               text={t.MLS.zatrazitePonudu}
-              linkTo="mailto: info@marikomerc.hr"
+              linkTo='mailto: info@marikomerc.hr'
             />
           </>
         )}
         <Grid>
           {mlsKontaktData.map((x) => (
             <Block key={x.LOKACIJA}>
-              <Grad>{locale === "hr" ? x.LOKACIJA : x.ENG}</Grad>
+              <Grad>{locale === 'hr' ? x.LOKACIJA : x.ENG}</Grad>
               <Adresa>
                 <div style={{ margin: 0 }}>{x.ULICA}</div>
 
-                {locale === "hr" ? x["GRAD, DRŽAVA"] : x["GRAD, DRŽAVA (ENG)"]}
+                {locale === 'hr' ? x['GRAD, DRŽAVA'] : x['GRAD, DRŽAVA (ENG)']}
                 <br />
-                <Phone href={`tel:${x["BROJ TELEFONA"]}`}>
-                  {x["BROJ TELEFONA"]}
-                </Phone>
+                <Phone href={`tel:${x['BROJ TELEFONA']}`}>{x['BROJ TELEFONA']}</Phone>
                 <br />
                 <WrapEmail href={`mailto:${x.EMAIL}?subject=MLS upit`}>
-                  <Image src="/letter.svg" width={15} height={15} />
+                  <Image src='/letter.svg' width={15} height={15} />
 
-                  <div style={{ marginLeft: "10px", color: "#1c2640" }}>
-                    {x.EMAIL}
-                  </div>
+                  <div style={{ marginLeft: '10px', color: '#1c2640' }}>{x.EMAIL}</div>
                 </WrapEmail>
               </Adresa>
-              <RadnoVrijeme>
-                {t.MLS.radnoVrijeme}
-                <br /> {t.MLS.ponFri}: {x["Ponedjeljak-petak"]}
-                <br /> {t.MLS.sat}: {x.Subota} <br />
-              </RadnoVrijeme>
-              <GoogleButton
-                href={x["Upute Google Maps (link na google poziciju)"]}
-              >
-                {t.MLS.upute}
-              </GoogleButton>
+              {data && (
+                <RadnoVrijeme>
+                  {t.MLS.radnoVrijeme}
+                  <br /> {t.MLS.ponFri}:{' '}
+                  {x.LOKACIJA === 'Logistički centar Zadar'
+                    ? data.zadarlogisticki.ponpet
+                    : x.LOKACIJA === 'Distribucijski centar Rijeka'
+                    ? data.rijekalogisticki.ponpet
+                    : data.dubrovniklogisticki.ponpet}
+                  <br /> {t.MLS.sat}:{' '}
+                  {x.LOKACIJA === 'Logistički centar Zadar'
+                    ? data.zadarlogisticki.sub
+                    : x.LOKACIJA === 'Distribucijski centar Rijeka'
+                    ? data.rijekalogisticki.sub
+                    : data.dubrovniklogisticki.sub}
+                  <br />
+                </RadnoVrijeme>
+              )}
+              <GoogleButton href={x['Upute Google Maps (link na google poziciju)']}>{t.MLS.upute}</GoogleButton>
             </Block>
           ))}
           {/* <Block>
