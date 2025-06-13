@@ -11,13 +11,15 @@ import {
   Img2,
   Img3,
   Img4,
+  ImgMapa,
   WrapContent,
-} from "./style.js";
-import { useRouter } from "next/router.js";
-import en from "../../../locales/en.json";
-import hr from "../../../locales/hr.json";
-import { TitleH4 } from "../vrijednost/style.js";
-import { useInView } from "react-intersection-observer";
+} from './style.js';
+import { useRouter } from 'next/router.js';
+import en from '../../../locales/en.json';
+import hr from '../../../locales/hr.json';
+import { TitleH4 } from '../vrijednost/style.js';
+import { useInView } from 'react-intersection-observer';
+import React from 'react';
 
 function Zajednica() {
   const { ref, inView, entry } = useInView({
@@ -27,33 +29,76 @@ function Zajednica() {
   });
 
   const { locale } = useRouter();
-  const t = locale === "en" ? en : hr;
+  const t = locale === 'en' ? en : hr;
+
+  const [data, setData] = React.useState(null);
+
+  const fetchData = async () => {
+    const response = await fetch('https://marikomerc.sutra.hr/graphql', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        query: `
+          query getRadUZajednici {
+  radUZajednici {
+    edges {
+      node {
+        id
+        radUZajedniciFotoITekst {
+          opisniTekstEngleskiJezik
+          opisniTekstHrvatskiJezik
+          slikaSDogadajaIliAkcije {
+            id
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+}
+        `,
+      }),
+    });
+
+    const result = await response.json();
+
+    setData(result.data.radUZajednici.edges);
+  };
+
+  React.useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <WrapAll>
       <WrapContent>
-        <TextBox ref={ref} className={` ${inView ? "inView" : "outView"}`}>
+        <TextBox ref={ref} className={` ${inView ? 'inView' : 'outView'}`}>
           <TitleH4>{t.Onama.radUzajednici}</TitleH4>
           <Title>{t.Onama.naslovPodrzavamo}</Title>
           <Text>{t.Onama.textPodrzavamo}</Text>
         </TextBox>
 
         <WrapImages>
-          <Img1>
-            <Overlay />
-            <SmallText>{t.Onama.card1}</SmallText>{" "}
-          </Img1>
-          <Img2>
-            <Overlay />
-            <SmallText>{t.Onama.card2}</SmallText>
-          </Img2>
-          <Img3>
-            <Overlay />
-            <SmallText>{t.Onama.card3}</SmallText>
-          </Img3>
-          <Img4>
-            <Overlay />
-            <SmallText>{t.Onama.card4}</SmallText>
-          </Img4>
+          {data &&
+            data.map((rz, i) => {
+              return (
+                <ImgMapa
+                  key={i}
+                  style={{
+                    backgroundImage: `url(${rz.node.radUZajedniciFotoITekst.slikaSDogadajaIliAkcije.sourceUrl})`,
+                  }}
+                >
+                  <Overlay />
+                  <SmallText>
+                    {locale === 'hr'
+                      ? rz.node.radUZajedniciFotoITekst.opisniTekstHrvatskiJezik
+                      : rz.node.radUZajedniciFotoITekst.opisniTekstEngleskiJezik}
+                  </SmallText>
+                </ImgMapa>
+              );
+            })}
         </WrapImages>
       </WrapContent>
     </WrapAll>
