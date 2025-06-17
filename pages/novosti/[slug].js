@@ -235,6 +235,7 @@ export async function getStaticProps({ params }) {
   };
   return {
     props: { pageData, novostiNaslovi, novosti, params },
+    // revalidate: 90, // Regenerate the page at most every 30 seconds (optional)
   };
 }
 // export async function getStaticPaths({ locales }) {

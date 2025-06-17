@@ -212,13 +212,6 @@ function index(props) {
 
 export default index;
 
-// export async function getStaticProps({ preview = false }) {
-//   const novosti = await getAllNovosti(preview);
-//   return {
-//     props: { novosti, preview },
-//   };
-// }
-
 export async function getStaticProps({ locales }) {
   const novosti = await getAllNovosti();
 
@@ -247,37 +240,6 @@ export async function getStaticProps({ locales }) {
     });
   });
 
-  // pathsAllHr.push({
-  //   params: {
-  //     slug: novostiNaslovHr.toLowerCase().split(" ").join("-"),
-  //   },
-  // });
-  // pathsAllEng.push({
-  //   params: {
-  //     slug: novostiNaslovEng.toLowerCase().split(" ").join("-"),
-  //   },
-  // });
-
-  // locales.forEach((locale, i) => {
-  //   novosti.edges.forEach((post, i) => {
-  //     paths.push({
-  //       params: {
-  //         slugHr: post.node.novosti.naslov.toLowerCase().split(" ").join("-"),
-  //         slugEn: post.node.novosti.naslovEng
-  //           .toLowerCase()
-  //           .split(" ")
-  //           .join("-"),
-  //       },
-  //       locale,
-  //     });
-
-  //     // paths.push({
-  //     //   hrnovosti: post.node.novosti.naslov.toLowerCase().split(" ").join("-"),
-  //     //   ennovosti: post.node.novosti.naslovEng.toLowerCase().split(" ").join("-"),
-  //     // });
-  //   });
-  // });
-
   return {
     props: {
       paths: paths,
@@ -285,5 +247,6 @@ export async function getStaticProps({ locales }) {
       fallback: false,
       novosti,
     },
+    // revalidate: 90, // Regenerate the page at most every 30 seconds (optional)
   };
 }
