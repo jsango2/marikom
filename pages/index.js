@@ -21,7 +21,7 @@ import AppContext from '../components/AppContext.js';
 import FsLightbox from 'fslightbox-react';
 import en from '../locales/en.json';
 import hr from '../locales/hr.json';
-import ObavijestTraka from '../components/rudiKomponente/ObavijestTraka.js';
+// import ObavijestTraka from '../components/rudiKomponente/ObavijestTraka.js';
 
 export default function IndexPage({ allPosts, allProizvodi }) {
   const router = useRouter();
@@ -77,7 +77,7 @@ export default function IndexPage({ allPosts, allProizvodi }) {
       </Head>
       <FsLightbox toggler={toggler} sources={['https://www.youtube.com/watch?v=3nQNiWdeH2Q']} />
       <Hero toggleYT={handleYT} />
-      <ObavijestTraka />
+      {/* <ObavijestTraka /> */}
       <ProizvodiSection />
       <NovostiSection novosti={allPosts.edges} />
       <NumbersSection />
