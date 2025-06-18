@@ -14,7 +14,7 @@ function index() {
         <title>Marikomerc - MLS logistika</title>
         <link
           rel="canonical"
-          href="https://www.marikomerc.hr/MLS"
+          href="https://marikomerc.hr/MLS"
           key="canonical"
         />
 
@@ -58,8 +58,8 @@ function index() {
           property="og:url"
           content={
             locale === "hr"
-              ? `"https://www.marikomerc.hr/MLS"`
-              : `"https://www.marikomerc.hr/en/MLS"`
+              ? `"https://marikomerc.hr/MLS"`
+              : `"https://marikomerc.hr/en/MLS"`
           }
         />
         <meta

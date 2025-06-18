@@ -22,7 +22,7 @@ function index(props) {
         <title>Marikomerc - Kontakti</title>
         <link
           rel="canonical"
-          href="https://www.marikomerc.hr/kontakt"
+          href="https://marikomerc.hr/kontakt"
           key="canonical"
         />
 
@@ -62,8 +62,8 @@ function index(props) {
           property="og:url"
           content={
             locale === "hr"
-              ? `"https://www.marikomerc.hr/kontakt"`
-              : `"https://www.marikomerc.hr/en/kontakt"`
+              ? `"https://marikomerc.hr/kontakt"`
+              : `"https://marikomerc.hr/en/kontakt"`
           }
         />
         <meta

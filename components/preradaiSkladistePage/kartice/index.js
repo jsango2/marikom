@@ -57,9 +57,9 @@ const Kartice = () => {
         </Content>
         <Photo3 bg="/prerada/p3.webp">
           <Overlay>
-            <WrapCert>
+            {/* <WrapCert>
               <Image src="/certifikat/ASC.svg" layout="fill" />
-            </WrapCert>
+            </WrapCert> */}
             <WrapCert>
               <Image src="/certifikat/IFSfood.svg" layout="fill" />
             </WrapCert>

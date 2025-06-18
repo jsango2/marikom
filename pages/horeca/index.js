@@ -16,7 +16,7 @@ function index() {
         <title>Marikomerc - Horeca suradnja</title>
         <link
           rel="canonical"
-          href="https://www.marikomerc.hr/horeca"
+          href="https://marikomerc.hr/horeca"
           key="canonical"
         />
 
@@ -60,8 +60,8 @@ function index() {
           property="og:url"
           content={
             locale === "hr"
-              ? `"https://www.marikomerc.hr/horeca"`
-              : `"https://www.marikomerc.hr/en/horeca"`
+              ? `"https://marikomerc.hr/horeca"`
+              : `"https://marikomerc.hr/en/horeca"`
           }
         />
         <meta

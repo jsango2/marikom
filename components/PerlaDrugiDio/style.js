@@ -76,7 +76,7 @@ export const WrapProizvodImage = styled.div`
   width: 157px;
   height: 244px;
   padding: 20px;
-  background-image: url("/karijereLogo/marikomerc.svg");
+  /* background-image: url("/karijereLogo/marikomerc.svg"); */
   background-size: 80px 80px;
   background-repeat: no-repeat;
   background-position: center;

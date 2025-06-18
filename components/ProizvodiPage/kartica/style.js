@@ -42,7 +42,7 @@ export const WrapAll = styled.div`
   @media only screen and (max-width: 600px) {
     /* height: 400px; */
     height: auto;
-    padding: 15px 0 15px 0;
+    padding: 15px 0 58px 0;
     margin: 7px 24px;
   }
 `;

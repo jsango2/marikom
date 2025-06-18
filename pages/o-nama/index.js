@@ -22,7 +22,7 @@ function index() {
         <title>Marikomerc - O nama</title>
         <link
           rel="canonical"
-          href="https://www.marikomerc.hr/o-nama"
+          href="https://marikomerc.hr/o-nama"
           key="canonical"
         />
 
@@ -62,8 +62,8 @@ function index() {
           property="og:url"
           content={
             locale === "hr"
-              ? `"https://www.marikomerc.hr/o-nama"`
-              : `"https://www.marikomerc.hr/en/o-nama"`
+              ? `"https://marikomerc.hr/o-nama"`
+              : `"https://marikomerc.hr/en/o-nama"`
           }
         />
         <meta

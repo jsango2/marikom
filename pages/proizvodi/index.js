@@ -24,7 +24,7 @@ function index({ allProizvodi }) {
         <title>Marikomerc - Proizvodi</title>
         <link
           rel="canonical"
-          href="https://www.marikomerc.hr/proizvodi"
+          href="https://marikomerc.hr/proizvodi"
           key="canonical"
         />
 
@@ -70,8 +70,8 @@ function index({ allProizvodi }) {
           property="og:url"
           content={
             locale === "hr"
-              ? `"https://www.marikomerc.hr/proizvodi"`
-              : `"https://www.marikomerc.hr/en/proizvodi"`
+              ? `"https://marikomerc.hr/proizvodi"`
+              : `"https://marikomerc.hr/en/proizvodi"`
           }
         />
         <meta

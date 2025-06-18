@@ -15,7 +15,7 @@ function index() {
         <title>Marikomerc Kvaliteta</title>
         <link
           rel="canonical"
-          href="https://www.marikomerc.hr/marikomerc-kvalitete"
+          href="https://marikomerc.hr/marikomerc-kvalitete"
           key="canonical"
         />
 
@@ -57,8 +57,8 @@ function index() {
           property="og:url"
           content={
             locale === "hr"
-              ? `"https://www.marikomerc.hr/marikomerc-kvalitete"`
-              : `"https://www.marikomerc.hr/en/marikomerc-kvalitete"`
+              ? `"https://marikomerc.hr/marikomerc-kvalitete"`
+              : `"https://marikomerc.hr/en/marikomerc-kvalitete"`
           }
         />
         <meta

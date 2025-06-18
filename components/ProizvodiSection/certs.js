@@ -33,9 +33,9 @@ function CertsComp() {
       <WrapImage>
         <Image src="/certifikat/MSC.svg" height={62} width={173} />
       </WrapImage>
-      <WrapImage>
+      {/* <WrapImage>
         <Image src="/certifikat/ASC.svg" height={62} width={130} />
-      </WrapImage>
+      </WrapImage> */}
 
       <WrapImage>
         <Image src="/certifikat/IFSfood.svg" height={62} width={113} />
