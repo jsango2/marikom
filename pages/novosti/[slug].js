@@ -165,46 +165,92 @@ export default function News({
   );
 }
 
+// export async function getStaticPaths({ locales }) {
+//   const novosti = await getAllNovosti();
+
+//   const paths = [];
+
+//   novosti.edges.map((post, i) => {
+//     // return locales.map((locale) => {
+//     return paths.push({
+//       params: {
+//         slug:
+//           slugify(post.node.novosti.naslov.toLowerCase().split(" ").join("-"), {
+//             locale: "hrv",
+//             strict: true,
+//           }) +
+//           "-" +
+//           post.node.novosti.datum.split("/").join("-"),
+//       },
+//       locale: "hr",
+//     });
+//     // });
+//   });
+
+//   novosti.edges.map((post, i) => {
+//     // return locales.map((locale) => {
+//     return paths.push({
+//       params: {
+//         slug:
+//           slugify(
+//             post.node.novosti.naslovEng.toLowerCase().split(" ").join("-"),
+//             {
+//               locale: "eng",
+//               strict: true,
+//             }
+//           ) +
+//           "-" +
+//           post.node.novosti.datum.split("/").join("-"),
+//       },
+//       locale: "en",
+//     });
+//     // });
+//   });
+
+//   return { paths, fallback: false };
+// }
+
+// pages/novosti/[slug].js (unutar getStaticPaths)
+
 export async function getStaticPaths({ locales }) {
   const novosti = await getAllNovosti();
 
   const paths = [];
 
-  novosti.edges.map((post, i) => {
-    // return locales.map((locale) => {
-    return paths.push({
+  novosti.edges.forEach((post) => {
+    // Generiramo URL slug kao i prije (naslov-datum)
+    const hrUrlSlug =
+      slugify(post.node.novosti.naslov.toLowerCase().split(" ").join("-"), {
+        locale: "hrv",
+        strict: true,
+      }) +
+      "-" +
+      post.node.novosti.datum.split("/").join("-");
+
+    const enUrlSlug =
+      slugify(post.node.novosti.naslovEng.toLowerCase().split(" ").join("-"), {
+        locale: "eng",
+        strict: true,
+      }) +
+      "-" +
+      post.node.novosti.datum.split("/").join("-");
+
+    // Dodajemo `id` posta kao dodatni parametar u `params` objektu.
+    // Važno: `slug` je putanja, ali `id` će biti iskorišten za dohvat!
+    paths.push({
       params: {
-        slug:
-          slugify(post.node.novosti.naslov.toLowerCase().split(" ").join("-"), {
-            locale: "hrv",
-            strict: true,
-          }) +
-          "-" +
-          post.node.novosti.datum.split("/").join("-"),
+        slug: hrUrlSlug,
+        id: post.node.id, // Dodano!
       },
       locale: "hr",
     });
-    // });
-  });
-
-  novosti.edges.map((post, i) => {
-    // return locales.map((locale) => {
-    return paths.push({
+    paths.push({
       params: {
-        slug:
-          slugify(
-            post.node.novosti.naslovEng.toLowerCase().split(" ").join("-"),
-            {
-              locale: "eng",
-              strict: true,
-            }
-          ) +
-          "-" +
-          post.node.novosti.datum.split("/").join("-"),
+        slug: enUrlSlug,
+        id: post.node.id, // Dodano!
       },
       locale: "en",
     });
-    // });
   });
 
   return { paths, fallback: false };
@@ -237,41 +283,3 @@ export async function getStaticProps({ params }) {
     props: { pageData, novostiNaslovi, novosti, params },
   };
 }
-// export async function getStaticPaths({ locales }) {
-//   const novosti = await getAllNovosti();
-
-//   const paths = [];
-
-//   novosti.edges.map((post, i) => {
-//     return locales.map((locale) => {
-//       return paths.push({
-//         params: {
-//           slug:
-//             slugify(
-//               post.node.novosti.naslov.toLowerCase().split(" ").join("-"),
-//               { locale: "hrv" }
-//             ) +
-//             "-" +
-//             post.node.novosti.datum.split("/").join("-"),
-//         },
-//         locale: "hr",
-//       });
-//     });
-//   });
-
-//   novosti.edges.map((post, i) => {
-//     return locales.map((locale) => {
-//       return paths.push({
-//         params: {
-//           slug:
-//             post.node.novosti.naslovEng.toLowerCase().split(" ").join("-") +
-//             "-" +
-//             post.node.novosti.datum.split("/").join("-"),
-//         },
-//         locale: "en",
-//       });
-//     });
-//   });
-
-//   return { paths, fallback: false };
-// }
