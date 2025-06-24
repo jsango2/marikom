@@ -167,7 +167,7 @@ function Povijest() {
       body: JSON.stringify({
         query: `
           query timelineNasaPovijesti {
-  timelineNasaPovijesti {
+  timelineNasaPovijesti(first: 25) {
     edges {
       node {
         id
