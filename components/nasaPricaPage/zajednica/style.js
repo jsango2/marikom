@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const WrapAll = styled.div`
   position: relative;
@@ -85,11 +85,7 @@ export const Overlay = styled.div`
   z-index: 10;
   bottom: 0;
   left: 0;
-  background: linear-gradient(
-    0deg,
-    rgba(12, 21, 49, 0.55) 0.76%,
-    rgba(21, 28, 50, 0) 100%
-  );
+  background: linear-gradient(0deg, rgba(12, 21, 49, 0.55) 0.76%, rgba(21, 28, 50, 0) 100%);
   height: 50%;
   width: 100%;
   @media only screen and (max-width: 850px) {
@@ -116,7 +112,7 @@ export const Img1 = styled.div`
   height: 380px;
   width: 315px;
   border-radius: 3px;
-  background-image: url("/nasaPricaImg1.webp");
+  background-image: url('/nasaPricaImg1.webp');
   background-repeat: no-repeat;
   background-size: cover;
   @media only screen and (max-width: 850px) {
@@ -130,7 +126,7 @@ export const Img2 = styled.div`
   width: 315px;
   border-radius: 3px;
 
-  background-image: url("/nasaPricaImg2.webp");
+  background-image: url('/nasaPricaImg2.webp');
   background-repeat: no-repeat;
   background-size: cover;
   @media only screen and (max-width: 850px) {
@@ -145,7 +141,7 @@ export const Img3 = styled.div`
   width: 315px;
   border-radius: 3px;
 
-  background-image: url("/nasaPricaImg3.webp");
+  background-image: url('/nasaPricaImg3.webp');
   background-repeat: no-repeat;
   background-size: cover;
   @media only screen and (max-width: 850px) {
@@ -160,13 +156,30 @@ export const Img4 = styled.div`
   width: 315px;
   border-radius: 3px;
 
-  background-image: url("/nasaPricaImg4.webp");
+  background-image: url('/nasaPricaImg4.webp');
   background-repeat: no-repeat;
   background-size: cover;
   @media only screen and (max-width: 850px) {
     margin-bottom: 20px;
   }
 `;
+
+export const ImgMapa = styled.div`
+  position: relative;
+
+  z-index: 10;
+  height: 380px;
+  width: 315px;
+  border-radius: 3px;
+
+  /* background-image: url('/nasaPricaImg4.webp'); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media only screen and (max-width: 850px) {
+    margin-bottom: 20px;
+  }
+`;
+
 export const Icon = styled.div`
   position: relative;
   z-index: 10;
@@ -178,7 +191,7 @@ export const Icon = styled.div`
 export const Title = styled.h2`
   position: relative;
 
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-style: normal;
   font-weight: 700;
 
@@ -199,7 +212,7 @@ export const Title = styled.h2`
 export const UpTitle = styled.h2`
   position: relative;
 
-  font-family: "Gilroy";
+  font-family: 'Gilroy';
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
@@ -218,7 +231,7 @@ export const UpTitle = styled.h2`
 export const Text = styled.h2`
   position: relative;
 
-  font-family: "Gilroy";
+  font-family: 'Gilroy';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;

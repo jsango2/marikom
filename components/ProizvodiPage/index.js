@@ -17,41 +17,38 @@ import {
   Kontakt,
   ArrowDown,
   OverlayBG,
-} from "./style.js";
+} from './style.js';
 
-import { useRouter } from "next/router";
-import en from "../../locales/en.json";
-import hr from "../../locales/hr.json";
+import { useRouter } from 'next/router';
+import en from '../../locales/en.json';
+import hr from '../../locales/hr.json';
 // import { catalogData } from "../../catalogData.js";
-import { catalogData } from "../../catalogData.js";
-import { useEffect, useState } from "react";
-import Image from "next/image.js";
+import { catalogData } from '../../catalogData.js';
+import { useEffect, useState } from 'react';
+import Image from 'next/image.js';
 // import axios from "axios";
-import ReactPaginate from "react-paginate";
+import ReactPaginate from 'react-paginate';
 
-import Kartica from "./kartica/index.js";
-import Lupa from "../../assets/images/lupa.svg";
-import Arrow from "../../assets/images/arrowDown.svg";
-import useWindowSize from "../helper/usewindowsize";
-import useScrollBlock from "../helper/useScrollBlock.js";
+import Kartica from './kartica/index.js';
+import Lupa from '../../assets/images/lupa.svg';
+import Arrow from '../../assets/images/arrowDown.svg';
+import useWindowSize from '../helper/usewindowsize';
+import useScrollBlock from '../helper/useScrollBlock.js';
 // import { storage } from "../firebase/firebase.js";
 // import { getDownloadURL, ref } from "firebase/storage";
-import { productImagesIds } from "./productImagesIds.js";
-import {
-  freezingMethods,
-  productCategories,
-  velicine,
-} from "../../productCategories.js";
+import { productImagesIds } from './productImagesIds.js';
+import { freezingMethods, productCategories, velicine } from '../../productCategories.js';
 
-import { useContext } from "react";
-import { AppContext } from "../../pages/_app.js";
+import { useContext } from 'react';
+import { AppContext } from '../../pages/_app.js';
+import React from 'react';
 
 function ProizvodiPage({ allProizvodi }) {
   // console.log({ productCategories });
   const [category, setCategory] = useContext(AppContext);
   const [kategorija, setKategorija] = useState(
     // locale === "hr" ? "Riba" : "Fish"
-    ""
+    ''
   );
   const [current, setCurrent] = useState(kategorija);
 
@@ -67,7 +64,7 @@ function ProizvodiPage({ allProizvodi }) {
 
   // const [searchTerm, setSearchTerm] = useState("");
   const [state, setstate] = useState({
-    query: "",
+    query: '',
     list: [],
   });
 
@@ -75,35 +72,33 @@ function ProizvodiPage({ allProizvodi }) {
     if (category.length > 0) {
       const findKatbyLang = catalogData.find(
         (k) =>
-          k["Kategorija kojoj proizvod pripada:"] === category ||
-          k["Kategorija kojoj proizvod pripada ENG:"] === category
+          k['Kategorija kojoj proizvod pripada:'] === category ||
+          k['Kategorija kojoj proizvod pripada ENG:'] === category
       );
       setKategorija(
-        locale === "hr"
-          ? findKatbyLang["Kategorija kojoj proizvod pripada:"]
-          : findKatbyLang["Kategorija kojoj proizvod pripada ENG:"]
+        locale === 'hr'
+          ? findKatbyLang['Kategorija kojoj proizvod pripada:']
+          : findKatbyLang['Kategorija kojoj proizvod pripada ENG:']
       );
       setCurrent(
-        locale === "hr"
-          ? findKatbyLang["Kategorija kojoj proizvod pripada:"]
-          : findKatbyLang["Kategorija kojoj proizvod pripada ENG:"]
+        locale === 'hr'
+          ? findKatbyLang['Kategorija kojoj proizvod pripada:']
+          : findKatbyLang['Kategorija kojoj proizvod pripada ENG:']
       );
     } else {
       const findKatbyLang = catalogData.find(
-        (k) =>
-          k["Kategorija kojoj proizvod pripada:"] ||
-          k["Kategorija kojoj proizvod pripada ENG:"] === kategorija
+        (k) => k['Kategorija kojoj proizvod pripada:'] || k['Kategorija kojoj proizvod pripada ENG:'] === kategorija
       );
       setKategorija(
-        locale === "hr"
-          ? findKatbyLang["Kategorija kojoj proizvod pripada:"]
-          : findKatbyLang["Kategorija kojoj proizvod pripada ENG:"]
+        locale === 'hr'
+          ? findKatbyLang['Kategorija kojoj proizvod pripada:']
+          : findKatbyLang['Kategorija kojoj proizvod pripada ENG:']
       );
 
       setCurrent(
-        locale === "hr"
-          ? findKatbyLang["Kategorija kojoj proizvod pripada:"]
-          : findKatbyLang["Kategorija kojoj proizvod pripada ENG:"]
+        locale === 'hr'
+          ? findKatbyLang['Kategorija kojoj proizvod pripada:']
+          : findKatbyLang['Kategorija kojoj proizvod pripada ENG:']
       );
     }
   }, [locale]);
@@ -111,13 +106,11 @@ function ProizvodiPage({ allProizvodi }) {
   const [filteredData, setFilteredData] = useState([]);
   // const [filteredDataOnInput, setFilteredDataOnInput] = useState([]);
   // const [filteredByKat, setFilteredByKat] = useState([]);
-  const t = locale === "en" ? en : hr;
+  const t = locale === 'en' ? en : hr;
 
   // productCategories su fiksni popis kategorija u lokalnom fileu a ne iz CMS-a. Na taj način imamo prijevode kategorija jer ih u CMS-u nema nego su sve hr
 
-  const kategorije = productCategories.map((kat) =>
-    locale === "hr" ? kat.hr : kat.en
-  );
+  const kategorije = productCategories.map((kat) => (locale === 'hr' ? kat.hr : kat.en));
   // const kategorije = [...new Set(sveKategorije)];
 
   const handleClick = (kat) => {
@@ -140,9 +133,7 @@ function ProizvodiPage({ allProizvodi }) {
 
   const photoIdList = productImagesIds.map((item) => item.ID);
   function findCategoryTranslation(hrTerm) {
-    const category = productCategories.find(
-      (category) => category.hr === hrTerm
-    );
+    const category = productCategories.find((category) => category.hr === hrTerm);
     return category ? category.en : null; // Return the English translation or null if not found
   }
 
@@ -152,9 +143,7 @@ function ProizvodiPage({ allProizvodi }) {
   }
 
   function findSizingTranslation(hrTerm) {
-    const translation = velicine.find(
-      (item) => item.hr.toLowerCase() === hrTerm.toLowerCase()
-    );
+    const translation = velicine.find((item) => item.hr.toLowerCase() === hrTerm.toLowerCase());
 
     // If a match is found, return the translation; otherwise, return null
     return translation ? translation.en : null;
@@ -163,11 +152,9 @@ function ProizvodiPage({ allProizvodi }) {
   useEffect(() => {
     const filteredDataByCategory = allProizvodi.edges.filter(
       (f) =>
-        (locale === "hr"
+        (locale === 'hr'
           ? f.node.proizvodiInformacije.kategorijaKojojProizvodPripada
-          : findCategoryTranslation(
-              f.node.proizvodiInformacije.kategorijaKojojProizvodPripada
-            )) === kategorija
+          : findCategoryTranslation(f.node.proizvodiInformacije.kategorijaKojojProizvodPripada)) === kategorija
     );
 
     const newArr1 = filteredDataByCategory.map((v) => ({
@@ -187,20 +174,20 @@ function ProizvodiPage({ allProizvodi }) {
 
     setFilteredData(newArr1);
     setstate({
-      query: "",
+      query: '',
       list: newArr1,
     });
   }, [kategorija]);
 
   const handleChange = (e) => {
     const results = filteredData.filter((post) => {
-      if (e.target.value === "") return filteredData;
-      if (locale === "hr") {
+      if (e.target.value === '') return filteredData;
+      if (locale === 'hr') {
         return post.node.proizvodiInformacije.imeProizvodaDo60Znakova
           .toLowerCase()
           .includes(e.target.value.toLowerCase());
       }
-      if (locale === "en") {
+      if (locale === 'en') {
         return postpost.node.proizvodiInformacije.imeProizvodaDo60ZnakovaEng
           .toLowerCase()
           .includes(e.target.value.toLowerCase());
@@ -220,10 +207,7 @@ function ProizvodiPage({ allProizvodi }) {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const [itemOffset, setItemOffset] = useState([]);
   // const [newOffset2, setNewOffset2] = useState([]);
-  const currentListPaginated = state.list.slice(
-    indexOfFirstPost,
-    indexOfLastPost
-  );
+  const currentListPaginated = state.list.slice(indexOfFirstPost, indexOfLastPost);
   const paginate = ({ selected }) => {
     setCurrentPage(selected + 1);
   };
@@ -234,14 +218,12 @@ function ProizvodiPage({ allProizvodi }) {
   // const pageCount = Math.ceil(state.list.length / itemsPerPage);
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % state.list.length;
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`
-    );
+    console.log(`User requested page number ${event.selected}, which is offset ${newOffset}`);
 
     setItemOffset(newOffset);
   };
   const paginationClick = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   };
   // --------
 
@@ -293,46 +275,89 @@ function ProizvodiPage({ allProizvodi }) {
   //   });
   // console.log("Context cat:", category);
 
-  console.log({ state });
+  // console.log({ state });
+
+  const fetchData = async () => {
+    const response = await fetch('https://marikomerc.sutra.hr/graphql', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        query: `
+          query getAllKatalozi {
+  katalozi {
+    edges {
+      node {
+        id
+        title
+        katalogProizvoda {
+          nazivKatalogaEngleski
+          nazivKatalogaHrvatski
+          katalog {
+            id
+            title
+            mediaItemUrl
+          }
+        }
+      }
+    }
+  }
+}
+        `,
+      }),
+    });
+
+    const result = await response.json();
+
+    setData(result.data.katalozi.edges[0]);
+  };
+
+  React.useEffect(() => {
+    fetchData();
+  }, []);
+
+  const [data, setData] = React.useState();
+
   return (
     <WrapAll key={remountComponent}>
       {size.width > 900 && (
         <ButtonsWrapDesktop>
           {kategorije.map((kat) => (
-            <button
-              key={kat}
-              onClick={() => handleClick(kat)}
-              className={current === kat ? "blueLink" : ""}
-            >
+            <button key={kat} onClick={() => handleClick(kat)} className={current === kat ? 'blueLink' : ''}>
               {kat}
             </button>
           ))}
           <Kontakt>
-            <div style={{ marginBottom: "20px" }}>
-              {locale === "hr"
-                ? "Kontaktirajte nas za više informacija:"
-                : "Contact us for more information:"}
+            <div style={{ marginBottom: '20px' }}>
+              {locale === 'hr' ? 'Kontaktirajte nas za više informacija:' : 'Contact us for more information:'}
             </div>
-            <a href="tel: 023 627 054">Tel: 023 630 539</a>
-            <a href="mailto: info@marikomerc.hr">info@marikomerc.hr</a>
-            <a
-              href="/Katalog_Marikomerc.pdf"
-              download
+            <a href='tel: 023 627 054'>Tel: 023 630 539</a>
+            <a href='mailto: info@marikomerc.hr'>info@marikomerc.hr</a>
+            <div
+              onClick={() =>
+                data
+                  ? (window.location.href = `/api/download?url=${encodeURIComponent(
+                      data.node.katalogProizvoda.katalog.mediaItemUrl
+                    )}`)
+                  : console.log('no file')
+              }
               style={{
-                marginTop: "20px",
-                textTransform: "uppercase",
-                display: "flex",
-                alignItems: "center",
-                cursor: "pointer",
+                marginTop: '20px',
+                textTransform: 'uppercase',
+                display: 'flex',
+                alignItems: 'center',
+                cursor: 'pointer',
               }}
+              title={`${locale === 'hr' ? 'Preuzmi katalog' : 'Download catalogue'}`}
             >
-              <Arrow width="60px" />
-              <div style={{ marginLeft: "5px" }}>
-                {locale === "hr"
-                  ? "DOWNLOAD PERLA HORECA KATALOGA"
-                  : "DOWNLOAD PERLA HORECA PRODUCT CATALOGUE"}
+              <Arrow width='60px' />
+              <div style={{ marginLeft: '5px' }}>
+                {locale === 'hr'
+                  ? `DOWNLOAD ${data ? data.node.katalogProizvoda.nazivKatalogaHrvatski : ''}`
+                  : `DOWNLOAD ${data ? data.node.katalogProizvoda.nazivKatalogaEngleski : ''}`}
               </div>
-            </a>
+            </div>
           </Kontakt>
         </ButtonsWrapDesktop>
       )}
@@ -347,10 +372,8 @@ function ProizvodiPage({ allProizvodi }) {
               </WrapLupa>
               {/* <Image src={lupa} width={10} height={10} /> */}
               <input
-                type="text"
-                placeholder={
-                  locale === "hr" ? "Pretraga artikala" : "Search products"
-                }
+                type='text'
+                placeholder={locale === 'hr' ? 'Pretraga artikala' : 'Search products'}
                 value={state.query}
                 onChange={handleChange}
               />
@@ -358,20 +381,16 @@ function ProizvodiPage({ allProizvodi }) {
           </TrakaSearch>
           {size.width < 900 && (
             <DropdownMobile onClick={handleDropdownClick}>
-              {locale === "hr" ? "ODABIR KATEGORIJE" : "CHOOSE CATEGORY"}
+              {locale === 'hr' ? 'ODABIR KATEGORIJE' : 'CHOOSE CATEGORY'}
               <ArrowDown>
-                <Image src="/arrowDown.svg" width={15} height={15} />
+                <Image src='/arrowDown.svg' width={15} height={15} />
               </ArrowDown>
             </DropdownMobile>
           )}
           {isDropdownOpen && (
             <ButtonsWrapMobile>
               {kategorije.map((kat) => (
-                <button
-                  key={kat}
-                  onClick={() => handleClick(kat)}
-                  className={current === kat ? "blueLink" : ""}
-                >
+                <button key={kat} onClick={() => handleClick(kat)} className={current === kat ? 'blueLink' : ''}>
                   {kat}
                 </button>
               ))}
@@ -389,31 +408,23 @@ function ProizvodiPage({ allProizvodi }) {
                 hasPhoto={item.hasUrl}
                 photo={item.photoUrl}
                 imeProizvoda={
-                  locale === "hr"
+                  locale === 'hr'
                     ? item.node.proizvodiInformacije.imeProizvodaDo60Znakova
                     : item.node.proizvodiInformacije.imeProizvodaDo60ZnakovaEng
                 }
-                latinskiNaziv={
-                  item.node.proizvodiInformacije.latinskiNazivDo60Znakova
-                }
+                latinskiNaziv={item.node.proizvodiInformacije.latinskiNazivDo60Znakova}
                 opis={
-                  locale === "hr"
+                  locale === 'hr'
                     ? item.node.proizvodiInformacije.opisHrDo300Znakova
                     : item.node.proizvodiInformacije.opisEngDo300Znakova
                 }
                 jedinicaMjere={item.node.proizvodiInformacije.jedinicaMjere}
                 ostaleMjere={
-                  locale === "hr"
-                    ? item.node.proizvodiInformacije
-                        .ostaleJediniceVelicinaPecaturaBrojKomUKg
-                    : findSizingTranslation(
-                        item.node.proizvodiInformacije
-                          .ostaleJediniceVelicinaPecaturaBrojKomUKg
-                      )
+                  locale === 'hr'
+                    ? item.node.proizvodiInformacije.ostaleJediniceVelicinaPecaturaBrojKomUKg
+                    : findSizingTranslation(item.node.proizvodiInformacije.ostaleJediniceVelicinaPecaturaBrojKomUKg)
                 }
-                ostaleMjereVrijednost={
-                  item.node.proizvodiInformacije.vrijednostOstaleVelicine
-                }
+                ostaleMjereVrijednost={item.node.proizvodiInformacije.vrijednostOstaleVelicine}
                 pakiranje={item.node.proizvodiInformacije.tezinaPoJediniciMjere}
                 nacinSmrzavanja={item.node.proizvodiInformacije.nacinSmrzavanja}
                 //   locale === "hr"
@@ -425,21 +436,14 @@ function ProizvodiPage({ allProizvodi }) {
                 certifikatMSC={item.node.proizvodiInformacije.certifikatMsc}
                 perlaHoreca={item.node.proizvodiInformacije.perlaHoreca}
                 certifikatIFS={item.node.proizvodiInformacije.ifsFood}
-                certifikatZivjetiZdravo={
-                  item.node.proizvodiInformacije.certifikatZivjetiZdravo
-                }
+                certifikatZivjetiZdravo={item.node.proizvodiInformacije.certifikatZivjetiZdravo}
                 oznakaNovo={item.node.proizvodiInformacije.oznakaNovo}
-                oznakaNovoPakiranje={
-                  item.node.proizvodiInformacije.oznakaNovoPakiranje
-                }
+                oznakaNovoPakiranje={item.node.proizvodiInformacije.oznakaNovoPakiranje}
                 slikaProizvoda={item.node.proizvodiInformacije.slikaProizvoda}
               />
             ))
           ) : (
-            <NoInput>
-              {" "}
-              {locale === "hr" ? "Nema traženog artikla" : "No product found"}
-            </NoInput>
+            <NoInput> {locale === 'hr' ? 'Nema traženog artikla' : 'No product found'}</NoInput>
           )}
         </WrapProizvodi>
         <Pagination>
@@ -460,22 +464,22 @@ function ProizvodiPage({ allProizvodi }) {
             onClick={paginationClick}
           /> */}
           <ReactPaginate
-            activeClassName={"item active "}
-            breakClassName={"item break-me "}
-            breakLabel={"..."}
-            containerClassName={"pagination"}
-            disabledClassName={"disabled-page"}
+            activeClassName={'item active '}
+            breakClassName={'item break-me '}
+            breakLabel={'...'}
+            containerClassName={'pagination'}
+            disabledClassName={'disabled-page'}
             onPageChange={paginate}
             pageCount={Math.ceil(state.list.length / postsPerPage)}
-            previousLabel={""}
-            nextLabel={""}
-            nextClassName={"item next "}
-            pageClassName={"pageClassName"}
-            pageLinkClassName={"pagelink"}
-            previousLinkClassName={"page-number"}
-            nextLinkClassName={"page-number"}
-            activeLinkClassName={"activePage"}
-            previousClassName={"item previous"}
+            previousLabel={''}
+            nextLabel={''}
+            nextClassName={'item next '}
+            pageClassName={'pageClassName'}
+            pageLinkClassName={'pagelink'}
+            previousLinkClassName={'page-number'}
+            nextLinkClassName={'page-number'}
+            activeLinkClassName={'activePage'}
+            previousClassName={'item previous'}
             forcePage={page}
             onClick={paginationClick}
           />

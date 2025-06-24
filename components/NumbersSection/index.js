@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 import {
   WrapAll,
   WrapContent,
@@ -21,15 +21,16 @@ import {
   Elipse,
   Up,
   Down,
-} from "./style.js";
+} from './style.js';
 
-import viljuskar from "../../assets/images/viljuskar.webp";
-import { useRouter } from "next/router.js";
-import en from "../../locales/en.json";
-import hr from "../../locales/hr.json";
-import { useInView } from "react-intersection-observer";
-import { useScrollPercentage } from "react-scroll-percentage";
-import BGmore from "./bgMore.js";
+import viljuskar from '../../assets/images/viljuskar.webp';
+import { useRouter } from 'next/router.js';
+import en from '../../locales/en.json';
+import hr from '../../locales/hr.json';
+import { useInView } from 'react-intersection-observer';
+import { useScrollPercentage } from 'react-scroll-percentage';
+import BGmore from './bgMore.js';
+import React from 'react';
 
 function NumbersSection() {
   const { ref, inView, entry } = useInView({
@@ -39,14 +40,60 @@ function NumbersSection() {
   });
   const router = useRouter();
   const { locale } = router;
-  const t = locale === "en" ? en : hr;
+  const t = locale === 'en' ? en : hr;
+
+  const [data, setData] = React.useState(null);
+
+  const fetchData = async () => {
+    const response = await fetch('https://marikomerc.sutra.hr/graphql', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        query: `
+          query getBrojke {
+  brojcanici {
+    edges {
+      node {
+        id
+        title
+        brojcanik {
+          brojKupacaUProslojGodini
+          kapacitetPrijemaKamionaUJednomDanu
+          prosjecnaGodisnjaKolicinaProdaje
+          prosjecniGodisnjiVolumenPreradenihVlastitihProizvoda
+          ukupanKapacitetPaletaNa25
+          ukupanKapacitetPaletaNa4
+        }
+      }
+    }
+  }
+}
+        `,
+      }),
+    });
+
+    const result = await response.json();
+
+    const setBrojcanika = result.data.brojcanici.edges.find(
+      (item) => item.node.title === 'Brojke u brojcaniku na Marikomerc webu'
+    );
+
+    setData(setBrojcanika.node.brojcanik);
+    // console.log('RESULT', setBrojcanika.node.brojcanik);
+  };
+
+  React.useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <WrapAll>
       <Up>
         <BlueLine />
-        <video autoPlay muted loop="loop" className="videoHero" playsInline>
-          <source src="/numbersVideo.mp4" type="video/mp4" />
+        <video autoPlay muted loop='loop' className='videoHero' playsInline>
+          <source src='/numbersVideo.mp4' type='video/mp4' />
         </video>
       </Up>
       <Down>
@@ -54,31 +101,28 @@ function NumbersSection() {
         <WrapContent>
           <Title>
             <TopText>{t.Numbers.title}</TopText>
-            <Line
-              ref={ref}
-              className={` ${inView ? "inViewLine" : "outViewLine"}`}
-            />
+            <Line ref={ref} className={` ${inView ? 'inViewLine' : 'outViewLine'}`} />
             <MainTitle>{t.Numbers.subTitle}</MainTitle>
           </Title>
           <Numbers>
             <Left>
               <SingleFact>
                 <WrapNumberText>
-                  <Number>+10.000</Number>
+                  {data && <Number>{data.brojKupacaUProslojGodini}</Number>}
                   <Fact>{t.Numbers.customerNumber}</Fact>
                 </WrapNumberText>
                 <ThinLine />
               </SingleFact>
               <SingleFact>
                 <WrapNumberText>
-                  <Number>60</Number>
+                  {data && <Number>{data.kapacitetPrijemaKamionaUJednomDanu}</Number>}
                   <Fact>{t.Numbers.capacityNumber}</Fact>
                 </WrapNumberText>
                 <ThinLine />
-              </SingleFact>{" "}
+              </SingleFact>{' '}
               <SingleFact>
                 <WrapNumberText>
-                  <Number>+5.000 t</Number>
+                  {data && <Number>{data.prosjecnaGodisnjaKolicinaProdaje}</Number>}
                   <Fact>{t.Numbers.averageYear}</Fact>
                 </WrapNumberText>
               </SingleFact>
@@ -86,21 +130,21 @@ function NumbersSection() {
             <Right>
               <SingleFact>
                 <WrapNumberText>
-                  <Number>+500</Number>
+                  {data && <Number>{data.ukupanKapacitetPaletaNa4}</Number>}
                   <Fact>{t.Numbers.capacity4}</Fact>
                 </WrapNumberText>
                 <ThinLine />
               </SingleFact>
               <SingleFact>
                 <WrapNumberText>
-                  <Number>+4.500</Number>
+                  {data && <Number>{data.ukupanKapacitetPaletaNa25}</Number>}
                   <Fact>{t.Numbers.capacity25}</Fact>
                 </WrapNumberText>
                 <ThinLine />
-              </SingleFact>{" "}
+              </SingleFact>{' '}
               <SingleFact>
                 <WrapNumberText>
-                  <Number>+1.500 t</Number>
+                  {data && <Number>{data.prosjecniGodisnjiVolumenPreradenihVlastitihProizvoda}</Number>}
                   <Fact>{t.Numbers.volume}</Fact>
                 </WrapNumberText>
               </SingleFact>
