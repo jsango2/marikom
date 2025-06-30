@@ -93,7 +93,7 @@ import hr from "../../../locales/hr.json";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useRef } from "react";
+import React, { useRef } from "react";
 const settings = {
   dots: false,
   infinite: false,
@@ -167,10 +167,48 @@ function Povijest() {
   let sliderRef = useRef(null);
   const { locale } = useRouter();
   const t = locale === "en" ? en : hr;
+  const [data, setData] = React.useState(null);
   const { ref, inView, entry } = useInView({
     /* Optional options */
     threshold: 0,
   });
+
+  const fetchData = async () => {
+    const response = await fetch("https://marikomerc.sutra.hr/graphql", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        query: `
+          query timelineNasaPovijesti {
+  timelineNasaPovijesti(first: 25) {
+    edges {
+      node {
+        id
+        timelineNasaPovijest {
+          godinaTimeline
+          opisDogadajaEngleskiJezik
+          opisDogadajaHrvatskiJezik
+        }
+      }
+    }
+  }
+}
+        `,
+      }),
+    });
+
+    const result = await response.json();
+
+    // console.log('RES', result);
+
+    setData(result.data.timelineNasaPovijesti.edges);
+  };
+
+  React.useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <WrapAll>
@@ -192,13 +230,26 @@ function Povijest() {
         // className={` ${inView ? "inViewHistory" : "outViewHistory"}`}
         >
           <Slider {...settings} ref={sliderRef}>
-            {events.map((event, index) => (
-              <Dogadjaj
-                key={index}
-                godina={event.godina}
-                text={locale === "hr" ? event.text : event.textEng}
-              />
-            ))}
+            {/* {events.map((event, index) => (
+              <Dogadjaj key={index} godina={event.godina} text={locale === 'hr' ? event.text : event.textEng} />
+            ))} */}
+
+            {data &&
+              data
+                .reverse()
+                .map((event, index) => (
+                  <Dogadjaj
+                    key={index}
+                    godina={event.node.timelineNasaPovijest.godinaTimeline}
+                    text={
+                      locale === "hr"
+                        ? event.node.timelineNasaPovijest
+                            .opisDogadajaHrvatskiJezik
+                        : event.node.timelineNasaPovijest
+                            .opisDogadajaEngleskiJezik
+                    }
+                  />
+                ))}
           </Slider>
         </WrapEvents>
       </Container>

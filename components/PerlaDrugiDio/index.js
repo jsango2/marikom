@@ -32,7 +32,7 @@ function PerlaDrugiDio({ allProizvodi }) {
   const style = {
     height: 200,
   };
-  console.log({ allProizvodi });
+  // console.log({ allProizvodi });
   const size = useWindowSize();
   const router = useRouter();
   const { locale } = router;
@@ -53,7 +53,7 @@ function PerlaDrugiDio({ allProizvodi }) {
   const handleClick = () => {
     setCategory("PERLA");
   };
-  console.log({ perlaData });
+  // console.log({ perlaData });
   return (
     <WrapAll ref={ref}>
       <RedLineComp />

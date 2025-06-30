@@ -45,6 +45,7 @@ import {
 
 import { useContext } from "react";
 import { AppContext } from "../../pages/_app.js";
+import React from "react";
 
 function ProizvodiPage({ allProizvodi }) {
   // console.log({ productCategories });
@@ -293,7 +294,50 @@ function ProizvodiPage({ allProizvodi }) {
   //   });
   // console.log("Context cat:", category);
 
-  console.log({ state });
+  // console.log({ state });
+
+  const fetchData = async () => {
+    const response = await fetch("https://marikomerc.sutra.hr/graphql", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        query: `
+          query getAllKatalozi {
+  katalozi {
+    edges {
+      node {
+        id
+        title
+        katalogProizvoda {
+          nazivKatalogaEngleski
+          nazivKatalogaHrvatski
+          katalog {
+            id
+            title
+            mediaItemUrl
+          }
+        }
+      }
+    }
+  }
+}
+        `,
+      }),
+    });
+
+    const result = await response.json();
+
+    setData(result.data.katalozi.edges[0]);
+  };
+
+  React.useEffect(() => {
+    fetchData();
+  }, []);
+
+  const [data, setData] = React.useState();
+
   return (
     <WrapAll key={remountComponent}>
       {size.width > 900 && (
@@ -315,9 +359,14 @@ function ProizvodiPage({ allProizvodi }) {
             </div>
             <a href="tel: 023 627 054">Tel: 023 630 539</a>
             <a href="mailto: info@marikomerc.hr">info@marikomerc.hr</a>
-            <a
-              href="/Katalog_Marikomerc.pdf"
-              download
+            <div
+              onClick={() =>
+                data
+                  ? (window.location.href = `/api/download?url=${encodeURIComponent(
+                      data.node.katalogProizvoda.katalog.mediaItemUrl
+                    )}`)
+                  : console.log("no file")
+              }
               style={{
                 marginTop: "20px",
                 textTransform: "uppercase",
@@ -325,14 +374,25 @@ function ProizvodiPage({ allProizvodi }) {
                 alignItems: "center",
                 cursor: "pointer",
               }}
+              title={`${
+                locale === "hr" ? "Preuzmi katalog" : "Download catalogue"
+              }`}
             >
               <Arrow width="60px" />
               <div style={{ marginLeft: "5px" }}>
                 {locale === "hr"
-                  ? "DOWNLOAD PERLA HORECA KATALOGA"
-                  : "DOWNLOAD PERLA HORECA PRODUCT CATALOGUE"}
+                  ? `DOWNLOAD ${
+                      data
+                        ? data.node.katalogProizvoda.nazivKatalogaHrvatski
+                        : ""
+                    }`
+                  : `DOWNLOAD ${
+                      data
+                        ? data.node.katalogProizvoda.nazivKatalogaEngleski
+                        : ""
+                    }`}
               </div>
-            </a>
+            </div>
           </Kontakt>
         </ButtonsWrapDesktop>
       )}
