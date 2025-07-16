@@ -92,5 +92,6 @@ export async function getStaticProps({ locales }) {
       // fallback: false,
       oglasi,
     },
+    revalidate: 90,
   };
 }

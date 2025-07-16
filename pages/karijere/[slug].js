@@ -200,5 +200,6 @@ export async function getStaticProps({ params }) {
   };
   return {
     props: { paths, oglasi, params, pageData, oglasiNaslovi },
+    revalidate: 90,
   };
 }
