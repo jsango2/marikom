@@ -2,7 +2,11 @@ import React, { useState, useEffect, useContext } from "react";
 
 import Layout from "../../components/layout";
 import { useRouter } from "next/router";
-import { getAllOglasi, getOglasById } from "../../lib/api2";
+import {
+  getAllOglasi,
+  getAllOglasiNaslovi,
+  getOglasById,
+} from "../../lib/api2";
 import Image from "next/image";
 import {
   FeaturedImage,
@@ -89,7 +93,7 @@ export default function News({ pageData, oglasiNaslovi, oglasi, pageData2 }) {
 }
 
 export async function getStaticPaths({ locales }) {
-  const oglasi = await getAllOglasi();
+  const oglasi = await getAllOglasiNaslovi();
 
   const paths = [];
 

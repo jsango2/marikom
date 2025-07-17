@@ -53,23 +53,30 @@ function NovostiSection({ background, novosti }) {
               }
               link={
                 locale === "hr"
-                  ? `${slugify(
-                      n.node.novosti.naslov.toLowerCase().split(" ").join("-"),
-                      {
-                        locale: "hrv",
-                        strict: true,
-                      }
-                    )}`
-                  : `${slugify(
-                      n.node.novosti.naslovEng
-                        .toLowerCase()
-                        .split(" ")
-                        .join("-"),
-                      {
-                        locale: "eng",
-                        strict: true,
-                      }
-                    )}`
+                  ? `${
+                      slugify(
+                        n.node.novosti.naslov
+                          .toLowerCase()
+                          .split(" ")
+                          .join("-"),
+                        {
+                          locale: "hrv",
+                          strict: true,
+                        }
+                      ) + `-id-${n.node.id}`
+                    }`
+                  : `${
+                      slugify(
+                        n.node.novosti.naslovEng
+                          .toLowerCase()
+                          .split(" ")
+                          .join("-"),
+                        {
+                          locale: "eng",
+                          strict: true,
+                        }
+                      ) + `-id-${n.node.id}`
+                    }`
               }
             />
           ))}

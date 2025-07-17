@@ -3,7 +3,11 @@ import { catalogData } from "../../catalogData";
 import { news } from "../../news";
 import Layout from "../../components/layout";
 import { useRouter } from "next/router";
-import { getAllNovosti, getNovostById } from "../../lib/api2";
+import {
+  getAllNovosti,
+  getAllNovostiNaslovi,
+  getNovostById,
+} from "../../lib/api2";
 import Image from "next/image";
 import {
   FeaturedImage,
@@ -32,8 +36,6 @@ export default function News({ pageData, novosti, params }) {
   const textNovosti =
     locale === "hr" ? novost.textNovosti : novost.textNovostiEng;
   const htmlString = `<div>${textNovosti}</div>`;
-
-  console.log({ novosti });
 
   return (
     <Layout novostiNaslovi={novosti.edges}>
@@ -209,7 +211,7 @@ export default function News({ pageData, novosti, params }) {
 // pages/novosti/[slug].js (unutar getStaticPaths)
 
 export async function getStaticPaths({ locales }) {
-  const novosti = await getAllNovosti();
+  const novosti = await getAllNovostiNaslovi();
 
   const paths = [];
 
@@ -260,27 +262,7 @@ export async function getStaticProps({ params }) {
   const novosti = await getAllNovosti();
 
   const currentPath = params.slug;
-  // const pageData = novosti.edges.find(
-  //   (data) =>
-  //     slugify(
-  //       data.node.novosti.naslov.toLowerCase().split(" ").join("-") +
-  //         `-id-${data.node.id}`,
-  //       {
-  //         locale: "hrv",
-  //         strict: true,
-  //       }
-  //     ) === currentPath ||
-  //     slugify(
-  //       data.node.novosti.naslovEng.toLowerCase().split(" ").join("-") +
-  //         `-id-${data.node.id}`,
-  //       {
-  //         locale: "eng",
-  //         strict: true,
-  //       }
-  //     ) === currentPath
-  // ) || {
-  //   notfound: true,
-  // };
+
   return {
     props: { pageData, novosti, params },
     // revalidate: 90, // Regenerate the page at most every 30 seconds (optional)
