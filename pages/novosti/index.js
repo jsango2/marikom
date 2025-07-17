@@ -11,7 +11,7 @@ import {
 } from "../../components/NovostiSection/page/style.js";
 import { news } from "../../news";
 import NewsCard from "../../components/NovostiSection/page/newsCardPage";
-import { getAllNovosti, getAllNovostiNaslovi } from "../../lib/api2.js";
+import { getAllNovosti } from "../../lib/api2.js";
 import Image from "next/image.js";
 import { useRouter } from "next/router.js";
 import slugify from "slugify";
@@ -120,22 +120,14 @@ function index(props) {
                         featuredNovost[0].node.novosti.naslov
                           .toLowerCase()
                           .split(" ")
-                          .join("-") +
-                          "-" +
-                          featuredNovost[0].node.novosti.datum
-                            .split("/")
-                            .join("-"),
+                          .join("-"),
                         { locale: "hrv", strict: true }
                       )
                     : slugify(
                         featuredNovost[0].node.novosti.naslovEng
                           .toLowerCase()
                           .split(" ")
-                          .join("-") +
-                          "-" +
-                          featuredNovost[0].node.novosti.datum
-                            .split("/")
-                            .join("-"),
+                          .join("-"),
                         { locale: "eng", strict: true }
                       )
                 }
@@ -167,18 +159,14 @@ function index(props) {
                       card.node.novosti.naslov
                         .toLowerCase()
                         .split(" ")
-                        .join("-") +
-                        "-" +
-                        card.node.novosti.datum.split("/").join("-"),
+                        .join("-"),
                       { locale: "hrv", strict: true }
                     )
                   : slugify(
                       card.node.novosti.naslovEng
                         .toLowerCase()
                         .split(" ")
-                        .join("-") +
-                        "-" +
-                        card.node.novosti.datum.split("/").join("-"),
+                        .join("-"),
                       { locale: "eng", strict: true }
                     )
               }
@@ -219,10 +207,13 @@ export async function getStaticProps({ locales }) {
   novosti.edges.map((post, i) => {
     return paths.push({
       params: {
-        slug:
-          post.node.novosti.naslov.toLowerCase().split(" ").join("-") +
-          "-" +
-          post.node.novosti.datum.split("/").join("-"),
+        slug: slugify(
+          post.node.novosti.naslov.toLowerCase().split(" ").join("-"),
+          {
+            locale: "hrv",
+            strict: true,
+          }
+        ),
       },
       locale: "hr",
     });
@@ -231,10 +222,13 @@ export async function getStaticProps({ locales }) {
   novosti.edges.map((post, i) => {
     return paths.push({
       params: {
-        slug:
-          post.node.novosti.naslovEng.toLowerCase().split(" ").join("-") +
-          "-" +
-          post.node.novosti.datum.split("/").join("-"),
+        slug: slugify(
+          post.node.novosti.naslovEng.toLowerCase().split(" ").join("-"),
+          {
+            locale: "eng",
+            strict: true,
+          }
+        ),
       },
       locale: "en",
     });

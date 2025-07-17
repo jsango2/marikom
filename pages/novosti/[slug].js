@@ -3,7 +3,7 @@ import { catalogData } from "../../catalogData";
 import { news } from "../../news";
 import Layout from "../../components/layout";
 import { useRouter } from "next/router";
-import { getAllNovosti, getAllNovostiNaslovi } from "../../lib/api2";
+import { getAllNovosti } from "../../lib/api2";
 import Image from "next/image";
 import {
   FeaturedImage,
@@ -25,10 +25,8 @@ import Head from "next/head.js";
 
 export default function News({
   pageData,
-  novostiNaslovi,
+
   novosti,
-  testData,
-  params,
 }) {
   const { locale, locales, defaultLocale, asPath, basePath } = useRouter();
   const router = useRouter();
@@ -39,8 +37,10 @@ export default function News({
     locale === "hr" ? novost.textNovosti : novost.textNovostiEng;
   const htmlString = `<div>${textNovosti}</div>`;
 
+  console.log({ novosti });
+
   return (
-    <Layout novostiNaslovi={novostiNaslovi.edges}>
+    <Layout novostiNaslovi={novosti.edges}>
       <Head>
         <title> {locale === "hr" ? novost.naslov : novost.naslovEng}</title>
         <link
@@ -174,13 +174,13 @@ export async function getStaticPaths({ locales }) {
     // return locales.map((locale) => {
     return paths.push({
       params: {
-        slug:
-          slugify(post.node.novosti.naslov.toLowerCase().split(" ").join("-"), {
+        slug: slugify(
+          post.node.novosti.naslov.toLowerCase().split(" ").join("-"),
+          {
             locale: "hrv",
             strict: true,
-          }) +
-          "-" +
-          post.node.novosti.datum.split("/").join("-"),
+          }
+        ),
       },
       locale: "hr",
     });
@@ -191,50 +191,41 @@ export async function getStaticPaths({ locales }) {
     // return locales.map((locale) => {
     return paths.push({
       params: {
-        slug:
-          slugify(
-            post.node.novosti.naslovEng.toLowerCase().split(" ").join("-"),
-            {
-              locale: "eng",
-              strict: true,
-            }
-          ) +
-          "-" +
-          post.node.novosti.datum.split("/").join("-"),
+        slug: slugify(
+          post.node.novosti.naslovEng.toLowerCase().split(" ").join("-"),
+          {
+            locale: "eng",
+            strict: true,
+          }
+        ),
       },
       locale: "en",
     });
     // });
   });
 
-  return { paths, fallback: true };
+  return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }) {
   const novosti = await getAllNovosti();
-  const novostiNaslovi = await getAllNovostiNaslovi();
+  // const novostiNaslovi = await getAllNovostiNaslovi();
   const currentPath = params.slug;
   const pageData = novosti.edges.find(
     (data) =>
       slugify(data.node.novosti.naslov.toLowerCase().split(" ").join("-"), {
         locale: "hrv",
         strict: true,
-      }) +
-        "-" +
-        data.node.novosti.datum.split("/").join("-") ===
-        currentPath ||
+      }) === currentPath ||
       slugify(data.node.novosti.naslovEng.toLowerCase().split(" ").join("-"), {
         locale: "eng",
         strict: true,
-      }) +
-        "-" +
-        data.node.novosti.datum.split("/").join("-") ===
-        currentPath
+      }) === currentPath
   ) || {
     notfound: true,
   };
   return {
-    props: { pageData, novostiNaslovi, novosti, params },
+    props: { pageData, novosti, params },
     // revalidate: 90, // Regenerate the page at most every 30 seconds (optional)
   };
 }
