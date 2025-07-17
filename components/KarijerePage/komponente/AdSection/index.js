@@ -97,26 +97,20 @@ const AdSection = (oglasi) => {
                     <Link
                       href={
                         locale === "hr"
-                          ? `/karijere/${slugify(
-                              item.node.title,
-                              // item.node.oglasi.naslovOglasa
-                              //   .toLowerCase()
-                              //   .split(" ")
-                              //   .join("-") +
-                              //   "-" +
-                              //   item.node.id.toLowerCase(),
-                              { locale: "hrv", strict: true, lower: true }
-                            )}`
-                          : `/karijere/${slugify(
-                              item.node.title,
-                              // item.node.oglasi.naslovOglasaEng
-                              //   .toLowerCase()
-                              //   .split(" ")
-                              //   .join("-") +
-                              //   "-" +
-                              //   item.node.id.toLowerCase(),
-                              { locale: "eng", strict: true, lower: true }
-                            )}`
+                          ? `/karijere/${
+                              slugify(item.node.title, {
+                                locale: "hrv",
+                                strict: true,
+                                lower: true,
+                              }) + `-id-${item.node.id}`
+                            }`
+                          : `/karijere/${
+                              slugify(item.node.title, {
+                                locale: "eng",
+                                strict: true,
+                                lower: true,
+                              }) + `-id-${item.node.id}`
+                            }`
                       }
                     >
                       {t.Karijere.pogledajOglasButton}

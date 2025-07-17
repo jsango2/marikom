@@ -33,6 +33,8 @@ export default function News({ pageData, novosti, params }) {
     locale === "hr" ? novost.textNovosti : novost.textNovostiEng;
   const htmlString = `<div>${textNovosti}</div>`;
 
+  console.log({ novosti });
+
   return (
     <Layout novostiNaslovi={novosti.edges}>
       <Head>

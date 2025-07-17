@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 
 import Layout from "../../components/layout";
 import { useRouter } from "next/router";
-import { getAllOglasi, getAllOglasiNaslovi } from "../../lib/api2";
+import { getAllOglasi, getOglasById } from "../../lib/api2";
 import Image from "next/image";
 import {
   FeaturedImage,
@@ -33,10 +33,10 @@ export default function News({ pageData, oglasiNaslovi, oglasi, pageData2 }) {
   const { locale, locales, defaultLocale, asPath, basePath } = useRouter();
   const t = locale === "en" ? en : hr;
 
-  const karijera = pageData.node.oglasi;
-  console.log({ pageData2 });
+  const karijera = pageData2.oglasi;
+  // console.log({ pageData2 });
   return (
-    <Layout oglasiNaslovi={oglasiNaslovi.edges}>
+    <Layout oglasiNaslovi={oglasi.edges}>
       <WrapAll>
         <FeaturedImage>
           <Image
@@ -135,17 +135,16 @@ export async function getStaticPaths({ locales }) {
 export async function getStaticProps({ params }) {
   const oglasi = await getAllOglasi();
 
-  const oglasiNaslovi = await getAllOglasiNaslovi();
-
   const fullSlug = params.slug;
-
+  // console.log("fullSlug received in getStaticProps:", fullSlug);
   const idMatch = fullSlug.match(/-id-([\w=]+)$/);
   let postId = null;
-
+  // console.log("IDMATCH:", idMatch);
   if (idMatch && idMatch[1]) {
     postId = idMatch[1];
   }
-  const pageData2 = await getNovostById(postId);
+  // console.log("Extracted postId:", postId);
+  const pageData2 = await getOglasById(postId);
   const locales = ["hr", "en"];
   const currentPath = params.slug;
   const paths = [];
@@ -174,7 +173,7 @@ export async function getStaticProps({ params }) {
     notfound: true,
   };
   return {
-    props: { paths, oglasi, params, pageData, oglasiNaslovi, pageData2 },
+    props: { paths, oglasi, params, pageData, pageData2 },
     revalidate: 90,
   };
 }
