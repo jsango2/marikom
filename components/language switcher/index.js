@@ -146,20 +146,14 @@ function LanguageSwitcher({
                   locale: "eng",
                   strict: true,
                 }
-              ) +
-                "-" +
-                naslov.node.novosti.datum.split("/").join("-") ===
-              getSlug
+              ) === getSlug
             : slugify(
                 naslov.node.novosti.naslov.toLowerCase().split(" ").join("-"),
                 {
                   locale: "hrv",
                   strict: true,
                 }
-              ) +
-                "-" +
-                naslov.node.novosti.datum.split("/").join("-") ===
-              getSlug
+              ) === getSlug
         );
 
         const matchingUrl =
@@ -168,22 +162,14 @@ function LanguageSwitcher({
                 getTranslationRouteForNews[0].node.novosti.naslovEng
                   .toLowerCase()
                   .split(" ")
-                  .join("-") +
-                  "-" +
-                  getTranslationRouteForNews[0].node.novosti.datum
-                    .split("/")
-                    .join("-"),
+                  .join("-"),
                 { locale: "eng", strict: true }
               )
             : slugify(
                 getTranslationRouteForNews[0].node.novosti.naslov
                   .toLowerCase()
                   .split(" ")
-                  .join("-") +
-                  "-" +
-                  getTranslationRouteForNews[0].node.novosti.datum
-                    .split("/")
-                    .join("-"),
+                  .join("-"),
                 { locale: "hrv", strict: true }
               );
         return router.push(matchingUrl, undefined, { locale: lang });

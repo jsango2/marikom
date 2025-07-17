@@ -3,7 +3,7 @@ import { catalogData } from "../../catalogData";
 import { news } from "../../news";
 import Layout from "../../components/layout";
 import { useRouter } from "next/router";
-import { getAllNovosti, getAllNovostiNaslovi } from "../../lib/api2";
+import { getAllNovosti } from "../../lib/api2";
 import Image from "next/image";
 import {
   FeaturedImage,
@@ -25,10 +25,8 @@ import Head from "next/head.js";
 
 export default function News({
   pageData,
-  novostiNaslovi,
+
   novosti,
-  testData,
-  params,
 }) {
   const { locale, locales, defaultLocale, asPath, basePath } = useRouter();
   const router = useRouter();
@@ -39,8 +37,10 @@ export default function News({
     locale === "hr" ? novost.textNovosti : novost.textNovostiEng;
   const htmlString = `<div>${textNovosti}</div>`;
 
+  console.log({ novosti });
+
   return (
-    <Layout novostiNaslovi={novostiNaslovi.edges}>
+    <Layout novostiNaslovi={novosti.edges}>
       <Head>
         <title> {locale === "hr" ? novost.naslov : novost.naslovEng}</title>
         <link
