@@ -120,16 +120,16 @@ function index(props) {
                         featuredNovost[0].node.novosti.naslov
                           .toLowerCase()
                           .split(" ")
-                          .join("-") + `-id-${featuredNovost[0].node.id}`,
+                          .join("-"),
                         { locale: "hrv", strict: true }
-                      )
+                      ) + `-id-${featuredNovost[0].node.id}`
                     : slugify(
                         featuredNovost[0].node.novosti.naslovEng
                           .toLowerCase()
                           .split(" ")
-                          .join("-") + `-id-${featuredNovost[0].node.id}`,
+                          .join("-"),
                         { locale: "eng", strict: true }
-                      )
+                      ) + `-id-${featuredNovost[0].node.id}`
                 }
                 isFeatured
               />
@@ -159,16 +159,16 @@ function index(props) {
                       card.node.novosti.naslov
                         .toLowerCase()
                         .split(" ")
-                        .join("-") + `-id-${card.node.id}`,
+                        .join("-"),
                       { locale: "hrv", strict: true }
-                    )
+                    ) + `-id-${card.node.id}`
                   : slugify(
                       card.node.novosti.naslovEng
                         .toLowerCase()
                         .split(" ")
-                        .join("-") + `-id-${card.node.id}`,
+                        .join("-"),
                       { locale: "eng", strict: true }
-                    )
+                    ) + `-id-${card.node.id}`
               }
               isFeatured={false}
               photo={card.node.novosti.istaknutaFotografija.sourceUrl}
@@ -207,14 +207,11 @@ export async function getStaticProps({ locales }) {
   novosti.edges.map((post, i) => {
     return paths.push({
       params: {
-        slug: slugify(
-          post.node.novosti.naslov.toLowerCase().split(" ").join("-") +
-            `-id-${post.node.id}`,
-          {
+        slug:
+          slugify(post.node.novosti.naslov.toLowerCase().split(" ").join("-"), {
             locale: "hrv",
             strict: true,
-          }
-        ),
+          }) + `-id-${post.node.id}`,
       },
       locale: "hr",
     });
@@ -223,14 +220,14 @@ export async function getStaticProps({ locales }) {
   novosti.edges.map((post, i) => {
     return paths.push({
       params: {
-        slug: slugify(
-          post.node.novosti.naslovEng.toLowerCase().split(" ").join("-") +
-            `-id-${post.node.id}`,
-          {
-            locale: "eng",
-            strict: true,
-          }
-        ),
+        slug:
+          slugify(
+            post.node.novosti.naslovEng.toLowerCase().split(" ").join("-"),
+            {
+              locale: "eng",
+              strict: true,
+            }
+          ) + `-id-${post.node.id}`,
       },
       locale: "en",
     });

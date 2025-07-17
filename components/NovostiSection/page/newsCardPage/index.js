@@ -22,9 +22,7 @@ function NewsCard({ datum, naslov, text, link, isFeatured, photo }) {
   const { locale, locales, defaultLocale, asPath } = useRouter();
   const t = locale === "en" ? en : hr;
   return (
-    <Link
-      href={locale === "hr" ? `/novosti/${slugify(link)}` : `/novosti/${link}`}
-    >
+    <Link href={locale === "hr" ? `/novosti/${link}` : `/novosti/${link}`}>
       <WrapAll isFeatured={isFeatured}>
         {!isFeatured && (
           <Photo>

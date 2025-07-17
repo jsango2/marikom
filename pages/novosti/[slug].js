@@ -199,15 +199,13 @@ export async function getStaticPaths({ locales }) {
 
 export async function getStaticProps({ params }) {
   const fullSlug = params.slug;
-  console.log("fullSlug received in getStaticProps:", fullSlug); // <-- ADD THIS LINE
 
-  const idMatch = fullSlug.match(/-id-(\w+)$/);
+  const idMatch = fullSlug.match(/-id-([\w=]+)$/);
   let postId = null;
 
   if (idMatch && idMatch[1]) {
     postId = idMatch[1];
   }
-  console.log("Extracted postId:", postId); // This will tell you if the regex worked
   const pageData = await getNovostById(postId);
 
   const novosti = await getAllNovosti();
