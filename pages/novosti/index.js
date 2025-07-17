@@ -244,7 +244,7 @@ export async function getStaticProps({ locales }) {
     props: {
       paths: paths,
 
-      fallback: false,
+      fallback: true,
       novosti,
     },
     revalidate: 90, // Regenerate the page at most every 30 seconds (optional)
