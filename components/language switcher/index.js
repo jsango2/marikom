@@ -141,14 +141,15 @@ function LanguageSwitcher({
                 naslov.node.novosti.naslovEng
                   .toLowerCase()
                   .split(" ")
-                  .join("-"),
+                  .join("-") + `-id-${naslov.node.id}`,
                 {
                   locale: "eng",
                   strict: true,
                 }
               ) === getSlug
             : slugify(
-                naslov.node.novosti.naslov.toLowerCase().split(" ").join("-"),
+                naslov.node.novosti.naslov.toLowerCase().split(" ").join("-") +
+                  `-id-${naslov.node.id}`,
                 {
                   locale: "hrv",
                   strict: true,
@@ -162,14 +163,14 @@ function LanguageSwitcher({
                 getTranslationRouteForNews[0].node.novosti.naslovEng
                   .toLowerCase()
                   .split(" ")
-                  .join("-"),
+                  .join("-") + `-id-${getTranslationRouteForNews[0].node.id}`,
                 { locale: "eng", strict: true }
               )
             : slugify(
                 getTranslationRouteForNews[0].node.novosti.naslov
                   .toLowerCase()
                   .split(" ")
-                  .join("-"),
+                  .join("-") + `-id-${getTranslationRouteForNews[0].node.id}`,
                 { locale: "hrv", strict: true }
               );
         return router.push(matchingUrl, undefined, { locale: lang });

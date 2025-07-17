@@ -11,7 +11,7 @@ import {
 } from "../../components/NovostiSection/page/style.js";
 import { news } from "../../news";
 import NewsCard from "../../components/NovostiSection/page/newsCardPage";
-import { getAllNovosti } from "../../lib/api2.js";
+import { getAllNovosti, getAllNovostiNaslovi } from "../../lib/api2.js";
 import Image from "next/image.js";
 import { useRouter } from "next/router.js";
 import slugify from "slugify";
@@ -120,14 +120,14 @@ function index(props) {
                         featuredNovost[0].node.novosti.naslov
                           .toLowerCase()
                           .split(" ")
-                          .join("-"),
+                          .join("-") + `-id-${featuredNovost[0].node.id}`,
                         { locale: "hrv", strict: true }
                       )
                     : slugify(
                         featuredNovost[0].node.novosti.naslovEng
                           .toLowerCase()
                           .split(" ")
-                          .join("-"),
+                          .join("-") + `-id-${featuredNovost[0].node.id}`,
                         { locale: "eng", strict: true }
                       )
                 }
@@ -159,14 +159,14 @@ function index(props) {
                       card.node.novosti.naslov
                         .toLowerCase()
                         .split(" ")
-                        .join("-"),
+                        .join("-") + `-id-${card.node.id}`,
                       { locale: "hrv", strict: true }
                     )
                   : slugify(
                       card.node.novosti.naslovEng
                         .toLowerCase()
                         .split(" ")
-                        .join("-"),
+                        .join("-") + `-id-${card.node.id}`,
                       { locale: "eng", strict: true }
                     )
               }
@@ -208,7 +208,8 @@ export async function getStaticProps({ locales }) {
     return paths.push({
       params: {
         slug: slugify(
-          post.node.novosti.naslov.toLowerCase().split(" ").join("-"),
+          post.node.novosti.naslov.toLowerCase().split(" ").join("-") +
+            `-id-${post.node.id}`,
           {
             locale: "hrv",
             strict: true,
@@ -223,7 +224,8 @@ export async function getStaticProps({ locales }) {
     return paths.push({
       params: {
         slug: slugify(
-          post.node.novosti.naslovEng.toLowerCase().split(" ").join("-"),
+          post.node.novosti.naslovEng.toLowerCase().split(" ").join("-") +
+            `-id-${post.node.id}`,
           {
             locale: "eng",
             strict: true,

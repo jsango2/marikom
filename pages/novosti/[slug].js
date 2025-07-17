@@ -3,7 +3,7 @@ import { catalogData } from "../../catalogData";
 import { news } from "../../news";
 import Layout from "../../components/layout";
 import { useRouter } from "next/router";
-import { getAllNovosti } from "../../lib/api2";
+import { getAllNovosti, getNovostById } from "../../lib/api2";
 import Image from "next/image";
 import {
   FeaturedImage,
@@ -23,21 +23,15 @@ import slugify from "slugify";
 import OtherNews from "../../components/NovostiSection/OtherNewsSection/index.js";
 import Head from "next/head.js";
 
-export default function News({
-  pageData,
-
-  novosti,
-}) {
+export default function News({ pageData, novosti, params }) {
   const { locale, locales, defaultLocale, asPath, basePath } = useRouter();
   const router = useRouter();
 
-  const novost = pageData.node.novosti;
+  const novost = pageData.novosti;
 
   const textNovosti =
     locale === "hr" ? novost.textNovosti : novost.textNovostiEng;
   const htmlString = `<div>${textNovosti}</div>`;
-
-  console.log({ novosti });
 
   return (
     <Layout novostiNaslovi={novosti.edges}>
@@ -170,100 +164,78 @@ export async function getStaticPaths({ locales }) {
 
   const paths = [];
 
-  novosti.edges.map((post, i) => {
-    // return locales.map((locale) => {
-    return paths.push({
+  novosti.edges.forEach((post) => {
+    // Changed .map to .forEach as we're pushing into an external array
+    // Croatian path
+    paths.push({
       params: {
-        slug: slugify(
-          post.node.novosti.naslov.toLowerCase().split(" ").join("-"),
-          {
+        slug:
+          slugify(post.node.novosti.naslov.toLowerCase().split(" ").join("-"), {
             locale: "hrv",
             strict: true,
-          }
-        ),
+          }) + `-id-${post.node.id}`,
       },
       locale: "hr",
     });
-    // });
-  });
 
-  novosti.edges.map((post, i) => {
-    // return locales.map((locale) => {
-    return paths.push({
+    // English path
+    paths.push({
       params: {
-        slug: slugify(
-          post.node.novosti.naslovEng.toLowerCase().split(" ").join("-"),
-          {
-            locale: "eng",
-            strict: true,
-          }
-        ),
+        slug:
+          slugify(
+            post.node.novosti.naslovEng.toLowerCase().split(" ").join("-"),
+            {
+              locale: "eng",
+              strict: true,
+            }
+          ) + `-id-${post.node.id}`,
       },
       locale: "en",
     });
-    // });
   });
 
-  return { paths, fallback: false };
+  return { paths, fallback: false }; // Keep fallback: false or change to true/blocking as needed
 }
 
 export async function getStaticProps({ params }) {
+  const fullSlug = params.slug;
+  console.log("fullSlug received in getStaticProps:", fullSlug); // <-- ADD THIS LINE
+
+  const idMatch = fullSlug.match(/-id-(\w+)$/);
+  let postId = null;
+
+  if (idMatch && idMatch[1]) {
+    postId = idMatch[1];
+  }
+  console.log("Extracted postId:", postId); // This will tell you if the regex worked
+  const pageData = await getNovostById(postId);
+
   const novosti = await getAllNovosti();
-  // const novostiNaslovi = await getAllNovostiNaslovi();
+
   const currentPath = params.slug;
-  const pageData = novosti.edges.find(
-    (data) =>
-      slugify(data.node.novosti.naslov.toLowerCase().split(" ").join("-"), {
-        locale: "hrv",
-        strict: true,
-      }) === currentPath ||
-      slugify(data.node.novosti.naslovEng.toLowerCase().split(" ").join("-"), {
-        locale: "eng",
-        strict: true,
-      }) === currentPath
-  ) || {
-    notfound: true,
-  };
+  // const pageData = novosti.edges.find(
+  //   (data) =>
+  //     slugify(
+  //       data.node.novosti.naslov.toLowerCase().split(" ").join("-") +
+  //         `-id-${data.node.id}`,
+  //       {
+  //         locale: "hrv",
+  //         strict: true,
+  //       }
+  //     ) === currentPath ||
+  //     slugify(
+  //       data.node.novosti.naslovEng.toLowerCase().split(" ").join("-") +
+  //         `-id-${data.node.id}`,
+  //       {
+  //         locale: "eng",
+  //         strict: true,
+  //       }
+  //     ) === currentPath
+  // ) || {
+  //   notfound: true,
+  // };
   return {
     props: { pageData, novosti, params },
     // revalidate: 90, // Regenerate the page at most every 30 seconds (optional)
   };
 }
-// export async function getStaticPaths({ locales }) {
-//   const novosti = await getAllNovosti();
-
-//   const paths = [];
-
-//   novosti.edges.map((post, i) => {
-//     return locales.map((locale) => {
-//       return paths.push({
-//         params: {
-//           slug:
-//             slugify(
-//               post.node.novosti.naslov.toLowerCase().split(" ").join("-"),
-//               { locale: "hrv" }
-//             ) +
-//             "-" +
-//             post.node.novosti.datum.split("/").join("-"),
-//         },
-//         locale: "hr",
-//       });
-//     });
-//   });
-
-//   novosti.edges.map((post, i) => {
-//     return locales.map((locale) => {
-//       return paths.push({
-//         params: {
-//           slug:
-//             post.node.novosti.naslovEng.toLowerCase().split(" ").join("-") +
-//             "-" +
-//             post.node.novosti.datum.split("/").join("-"),
-//         },
-//         locale: "en",
-//       });
-//     });
-//   });
-
-//   return { paths, fallback: false };
-// }
