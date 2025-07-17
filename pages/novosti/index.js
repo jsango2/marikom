@@ -219,10 +219,13 @@ export async function getStaticProps({ locales }) {
   novosti.edges.map((post, i) => {
     return paths.push({
       params: {
-        slug:
-          post.node.novosti.naslov.toLowerCase().split(" ").join("-") +
-          "-" +
-          post.node.novosti.datum.split("/").join("-"),
+        slug: slugify(
+          post.node.novosti.naslov.toLowerCase().split(" ").join("-"),
+          {
+            locale: "hrv",
+            strict: true,
+          }
+        ),
       },
       locale: "hr",
     });
@@ -231,10 +234,13 @@ export async function getStaticProps({ locales }) {
   novosti.edges.map((post, i) => {
     return paths.push({
       params: {
-        slug:
-          post.node.novosti.naslovEng.toLowerCase().split(" ").join("-") +
-          "-" +
-          post.node.novosti.datum.split("/").join("-"),
+        slug: slugify(
+          post.node.novosti.naslovEng.toLowerCase().split(" ").join("-"),
+          {
+            locale: "eng",
+            strict: true,
+          }
+        ),
       },
       locale: "en",
     });
@@ -247,6 +253,6 @@ export async function getStaticProps({ locales }) {
       fallback: false,
       novosti,
     },
-    revalidate: 90, // Regenerate the page at most every 30 seconds (optional)
+    // revalidate: 90, // Regenerate the page at most every 30 seconds (optional)
   };
 }
