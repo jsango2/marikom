@@ -129,7 +129,7 @@ export async function getStaticPaths({ locales }) {
     });
   });
 
-  return { paths, fallback: false };
+  return { paths, fallback: "blocking" };
 }
 
 export async function getStaticProps({ params }) {
