@@ -74,14 +74,3 @@ function index() {
 }
 
 export default index;
-
-// export async function getStaticProps({ locales }) {
-//   const kontakti = await getAllKontakti();
-
-//   return {
-//     props: {
-//       fallback: false,
-//       kontakti,
-//     },
-//   };
-// }

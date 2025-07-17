@@ -26,11 +26,15 @@ function OtherNews({ novosti }) {
         ? slugify(n.node.novosti.naslovEng.toLowerCase().split(" ").join("-"), {
             locale: "eng",
             strict: true,
-          }) != getSlug
+          }) +
+            `-id-${n.node.id}` !=
+          getSlug
         : slugify(n.node.novosti.naslov.toLowerCase().split(" ").join("-"), {
             locale: "hrv",
             strict: true,
-          }) != getSlug
+          }) +
+            `-id-${n.node.id}` !=
+          getSlug
     );
     setOstaleNovosti(getOtherNews);
   }, []);
@@ -69,7 +73,7 @@ function OtherNews({ novosti }) {
                         locale: "hrv",
                         strict: true,
                       }
-                    )
+                    ) + `-id-${card.node.id}`
                   : slugify(
                       card.node.novosti.naslovEng
                         .toLowerCase()
@@ -79,7 +83,7 @@ function OtherNews({ novosti }) {
                         locale: "eng",
                         strict: true,
                       }
-                    )
+                    ) + `-id-${card.node.id}`
               }
               isFeatured={false}
               photo={card.node.novosti.istaknutaFotografija.sourceUrl}
