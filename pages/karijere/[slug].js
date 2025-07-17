@@ -145,35 +145,35 @@ export async function getStaticProps({ params }) {
   }
   // console.log("Extracted postId:", postId);
   const pageData2 = await getOglasById(postId);
-  const locales = ["hr", "en"];
-  const currentPath = params.slug;
+  // const locales = ["hr", "en"];
+  // const currentPath = params.slug;
   const paths = [];
 
-  const pageData = oglasi.edges.find(
-    (data) =>
-      slugify(
-        data.node.title,
+  // const pageData = oglasi.edges.find(
+  //   (data) =>
+  //     slugify(
+  //       data.node.title,
 
-        {
-          locale: "hrv",
-          strict: true,
-          lower: true,
-        }
-      ) === currentPath ||
-      slugify(
-        data.node.title,
+  //       {
+  //         locale: "hrv",
+  //         strict: true,
+  //         lower: true,
+  //       }
+  //     ) === currentPath ||
+  //     slugify(
+  //       data.node.title,
 
-        {
-          locale: "eng",
-          strict: true,
-          lower: true,
-        }
-      ) === currentPath
-  ) || {
-    notfound: true,
-  };
+  //       {
+  //         locale: "eng",
+  //         strict: true,
+  //         lower: true,
+  //       }
+  //     ) === currentPath
+  // ) || {
+  //   notfound: true,
+  // };
   return {
-    props: { paths, oglasi, params, pageData, pageData2 },
+    props: { paths, oglasi, params, pageData2 },
     revalidate: 90,
   };
 }
