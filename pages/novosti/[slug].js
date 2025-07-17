@@ -207,7 +207,7 @@ export async function getStaticPaths({ locales }) {
     // });
   });
 
-  return { paths, fallback: false };
+  return { paths, fallback: true };
 }
 
 export async function getStaticProps({ params }) {
