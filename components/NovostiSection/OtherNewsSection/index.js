@@ -23,24 +23,14 @@ function OtherNews({ novosti }) {
     const getSlug = window.location.pathname.split("/").pop();
     const getOtherNews = novosti.edges.filter((n) =>
       locale === "en"
-        ? slugify(
-            n.node.novosti.naslovEng.toLowerCase().split(" ").join("-") +
-              "-" +
-              n.node.novosti.datum.split("/").join("-"),
-            {
-              locale: "eng",
-              strict: true,
-            }
-          ) != getSlug
-        : slugify(
-            n.node.novosti.naslov.toLowerCase().split(" ").join("-") +
-              "-" +
-              n.node.novosti.datum.split("/").join("-"),
-            {
-              locale: "hrv",
-              strict: true,
-            }
-          ) != getSlug
+        ? slugify(n.node.novosti.naslovEng.toLowerCase().split(" ").join("-"), {
+            locale: "eng",
+            strict: true,
+          }) != getSlug
+        : slugify(n.node.novosti.naslov.toLowerCase().split(" ").join("-"), {
+            locale: "hrv",
+            strict: true,
+          }) != getSlug
     );
     setOstaleNovosti(getOtherNews);
   }, []);
@@ -74,9 +64,7 @@ function OtherNews({ novosti }) {
                       card.node.novosti.naslov
                         .toLowerCase()
                         .split(" ")
-                        .join("-") +
-                        "-" +
-                        card.node.novosti.datum.split("/").join("-"),
+                        .join("-"),
                       {
                         locale: "hrv",
                         strict: true,
@@ -86,9 +74,7 @@ function OtherNews({ novosti }) {
                       card.node.novosti.naslovEng
                         .toLowerCase()
                         .split(" ")
-                        .join("-") +
-                        "-" +
-                        card.node.novosti.datum.split("/").join("-"),
+                        .join("-"),
                       {
                         locale: "eng",
                         strict: true,

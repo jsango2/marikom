@@ -59,9 +59,7 @@ function NovostiSection({ background, novosti }) {
                         locale: "hrv",
                         strict: true,
                       }
-                    )}` +
-                    "-" +
-                    n.node.novosti.datum.split("/").join("-")
+                    )}`
                   : `${slugify(
                       n.node.novosti.naslovEng
                         .toLowerCase()
@@ -71,9 +69,7 @@ function NovostiSection({ background, novosti }) {
                         locale: "eng",
                         strict: true,
                       }
-                    )}` +
-                    "-" +
-                    n.node.novosti.datum.split("/").join("-")
+                    )}`
               }
             />
           ))}
