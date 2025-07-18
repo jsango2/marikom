@@ -163,53 +163,6 @@ export default function News({ pageData, novosti, params }) {
   );
 }
 
-// export async function getStaticPaths({ locales }) {
-//   const novosti = await getAllNovosti();
-
-//   const paths = [];
-
-//   novosti.edges.map((post, i) => {
-//     // return locales.map((locale) => {
-//     return paths.push({
-//       params: {
-//         slug:
-//           slugify(post.node.novosti.naslov.toLowerCase().split(" ").join("-"), {
-//             locale: "hrv",
-//             strict: true,
-//           }) +
-//           "-" +
-//           post.node.novosti.datum.split("/").join("-"),
-//       },
-//       locale: "hr",
-//     });
-//     // });
-//   });
-
-//   novosti.edges.map((post, i) => {
-//     // return locales.map((locale) => {
-//     return paths.push({
-//       params: {
-//         slug:
-//           slugify(
-//             post.node.novosti.naslovEng.toLowerCase().split(" ").join("-"),
-//             {
-//               locale: "eng",
-//               strict: true,
-//             }
-//           ) +
-//           "-" +
-//           post.node.novosti.datum.split("/").join("-"),
-//       },
-//       locale: "en",
-//     });
-//     // });
-//   });
-
-//   return { paths, fallback: false };
-// }
-
-// pages/novosti/[slug].js (unutar getStaticPaths)
-
 export async function getStaticPaths({ locales }) {
   const novosti = await getAllNovostiNaslovi();
 

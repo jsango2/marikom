@@ -21,7 +21,7 @@ import AppContext from "../components/AppContext.js";
 import FsLightbox from "fslightbox-react";
 import en from "../locales/en.json";
 import hr from "../locales/hr.json";
-import { catalogData } from "../catalogPerla.js";
+// import { catalogData } from "../catalogPerla.js";
 // import ObavijestTraka from '../components/rudiKomponente/ObavijestTraka.js';
 
 export default function IndexPage({ allPosts, allProizvodi }) {
