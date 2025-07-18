@@ -39,11 +39,7 @@ function PerlaDrugiDio({ allProizvodi }) {
   const t = locale === "en" ? en : hr;
   const [perlaData, setPerlaData] = useState([]);
   useEffect(() => {
-    setPerlaData(
-      allProizvodi.edges.filter(
-        (data) => data.node.proizvodiInformacije.featuredPerlaProduct === true
-      )
-    );
+    setPerlaData(allProizvodi);
   }, []);
   const { ref, inView, entry } = useInView({
     /* Optional options */
@@ -53,7 +49,7 @@ function PerlaDrugiDio({ allProizvodi }) {
   const handleClick = () => {
     setCategory("PERLA");
   };
-  // console.log({ perlaData });
+
   return (
     <WrapAll ref={ref}>
       <RedLineComp />

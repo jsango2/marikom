@@ -16,11 +16,12 @@ import PerlaDrugiDio from "../components/PerlaDrugiDio";
 import KontaktSection from "../components/KontaktSection";
 import useWindowSize from "../components/helper/usewindowsize";
 import CertifikatMobileSection from "../components/CertifikatMobileSection";
-import { getAllProizvodi, getFirstThreeNovosti } from "../lib/api2";
+import { getFirstThreeNovosti } from "../lib/api2";
 import AppContext from "../components/AppContext.js";
 import FsLightbox from "fslightbox-react";
 import en from "../locales/en.json";
 import hr from "../locales/hr.json";
+import { perlaData } from "../perlaData.js";
 // import { catalogData } from "../catalogPerla.js";
 // import ObavijestTraka from '../components/rudiKomponente/ObavijestTraka.js';
 
@@ -109,7 +110,7 @@ export default function IndexPage({ allPosts, allProizvodi }) {
 
 export async function getStaticProps({ preview = false }) {
   const allPosts = await getFirstThreeNovosti();
-  const allProizvodi = await getAllProizvodi();
+  const allProizvodi = await perlaData;
   // const allProizvodi = await catalogData;
 
   return {
