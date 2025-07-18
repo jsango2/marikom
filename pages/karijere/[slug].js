@@ -133,7 +133,7 @@ export async function getStaticPaths({ locales }) {
     });
   });
 
-  return { paths, fallback: false };
+  return { paths, fallback: "blocking" };
 }
 
 export async function getStaticProps({ params }) {
@@ -178,6 +178,6 @@ export async function getStaticProps({ params }) {
   // };
   return {
     props: { paths, oglasi, params, pageData2 },
-    // revalidate: 90,
+    revalidate: 90,
   };
 }
