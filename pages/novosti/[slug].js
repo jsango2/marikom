@@ -198,7 +198,7 @@ export async function getStaticPaths({ locales }) {
     });
   });
 
-  return { paths, fallback: false }; // Keep fallback: false or change to true/blocking as needed
+  return { paths, fallback: "blocking" }; // Keep fallback: false or change to true/blocking as needed
 }
 
 export async function getStaticProps({ params }) {
@@ -218,6 +218,6 @@ export async function getStaticProps({ params }) {
 
   return {
     props: { pageData, novosti, params },
-    // revalidate: 90, // Regenerate the page at most every 30 seconds (optional)
+    revalidate: 90, // Regenerate the page at most every 30 seconds (optional)
   };
 }
