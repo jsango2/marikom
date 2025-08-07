@@ -345,7 +345,7 @@ function ProizvodiPage({ allProizvodi }) {
               //       )}`)
               //     : console.log('no file')
               // }
-              href={data.node.katalogProizvoda.katalog.mediaItemUrl}
+              href={data ? data.node.katalogProizvoda.katalog.mediaItemUrl : ''}
               style={{
                 marginTop: '20px',
                 textTransform: 'uppercase',
