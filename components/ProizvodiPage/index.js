@@ -338,6 +338,7 @@ function ProizvodiPage({ allProizvodi }) {
 
   const [data, setData] = React.useState();
 
+  console.log({ data });
   return (
     <WrapAll key={remountComponent}>
       {size.width > 900 && (
@@ -359,14 +360,15 @@ function ProizvodiPage({ allProizvodi }) {
             </div>
             <a href="tel: 023 627 054">Tel: 023 630 539</a>
             <a href="mailto: info@marikomerc.hr">info@marikomerc.hr</a>
-            <div
-              onClick={() =>
-                data
-                  ? (window.location.href = `/api/download?url=${encodeURIComponent(
-                      data.node.katalogProizvoda.katalog.mediaItemUrl
-                    )}`)
-                  : console.log("no file")
-              }
+            <a
+              // onClick={() =>
+              //   data
+              //     ? (window.location.href = `/api/download?url=${encodeURIComponent(
+              //         data.node.katalogProizvoda.katalog.mediaItemUrl
+              //       )}`)
+              //     : console.log("no file")
+              // }
+              href={data ? data.node.katalogProizvoda.katalog.mediaItemUrl : ""}
               style={{
                 marginTop: "20px",
                 textTransform: "uppercase",
@@ -392,7 +394,7 @@ function ProizvodiPage({ allProizvodi }) {
                         : ""
                     }`}
               </div>
-            </div>
+            </a>
           </Kontakt>
         </ButtonsWrapDesktop>
       )}
