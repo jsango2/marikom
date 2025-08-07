@@ -335,14 +335,17 @@ function ProizvodiPage({ allProizvodi }) {
             </div>
             <a href='tel: 023 627 054'>Tel: 023 630 539</a>
             <a href='mailto: info@marikomerc.hr'>info@marikomerc.hr</a>
-            <div
-              onClick={() =>
-                data
-                  ? (window.location.href = `/api/download?url=${encodeURIComponent(
-                      data.node.katalogProizvoda.katalog.mediaItemUrl
-                    )}`)
-                  : console.log('no file')
-              }
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              // onClick={() =>
+              //   data
+              //     ? (window.location.href = `/api/download?url=${encodeURIComponent(
+              //         data.node.katalogProizvoda.katalog.mediaItemUrl
+              //       )}`)
+              //     : console.log('no file')
+              // }
+              href={data.node.katalogProizvoda.katalog.mediaItemUrl}
               style={{
                 marginTop: '20px',
                 textTransform: 'uppercase',
@@ -358,7 +361,7 @@ function ProizvodiPage({ allProizvodi }) {
                   ? `DOWNLOAD ${data ? data.node.katalogProizvoda.nazivKatalogaHrvatski : ''}`
                   : `DOWNLOAD ${data ? data.node.katalogProizvoda.nazivKatalogaEngleski : ''}`}
               </div>
-            </div>
+            </a>
           </Kontakt>
         </ButtonsWrapDesktop>
       )}
