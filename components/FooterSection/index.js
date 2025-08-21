@@ -38,12 +38,14 @@ function FooterSection() {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : hr;
+  const isHR = locale === "hr";
   const size = useWindowSize();
   const { ref, inView, entry } = useInView({
     /* Optional options */
     threshold: 0,
     triggerOnce: true,
   });
+
   return (
     <WrapAll>
       <Container>
@@ -228,6 +230,21 @@ function FooterSection() {
             </WrapCerts>
           </ColumnIkone>
         )}
+
+        <nav className="footer-legal">
+          <a href={isHR ? "/politika-privatnosti" : "/en/politika-privatnosti"}>
+            <span>{isHR ? "Politika privatnosti" : "Privacy Policy"}</span>
+          </a>
+          <span className="footer-legal__sep">•</span>
+          <a href={isHR ? "/politika-kolacica" : "/en/politika-kolacica"}>
+            <span>{isHR ? "Politika kolačića" : "Cookie Policy"}</span>
+          </a>
+          <span className="footer-legal__sep">•</span>
+          <a href={isHR ? "/uvjeti-koristenja" : "/en/uvjeti-koristenja"}>
+            <span>{isHR ? "Uvjeti korištenja" : "Terms of Use"}</span>
+          </a>
+        </nav>
+
         <Copy>
           <CopyLink>© 2023 MARIKOMERC</CopyLink>
           <CopyLink>

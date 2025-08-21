@@ -22,6 +22,9 @@ import FsLightbox from "fslightbox-react";
 import en from "../locales/en.json";
 import hr from "../locales/hr.json";
 import { perlaData } from "../perlaData.js";
+
+import NewsletterFormspark from "../components/rudiKomponente/Newsletter.js";
+import CookieNotice from "../components/rudiKomponente/CookieNotice.js";
 // import { catalogData } from "../catalogPerla.js";
 // import ObavijestTraka from '../components/rudiKomponente/ObavijestTraka.js';
 
@@ -102,8 +105,9 @@ export default function IndexPage({ allPosts, allProizvodi }) {
       <MapaSection />
       <CertifikatSection />
       <PerlaPrviDio />
-      <PerlaDrugiDio allProizvodi={allProizvodi} />
+      <PerlaDrugiDio allProizvodi={allProizvodi} /> <NewsletterFormspark />
       <KontaktSection />
+      <CookieNotice />
     </Layout>
   );
 }
