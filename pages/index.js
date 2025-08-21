@@ -21,6 +21,8 @@ import AppContext from '../components/AppContext.js';
 import FsLightbox from 'fslightbox-react';
 import en from '../locales/en.json';
 import hr from '../locales/hr.json';
+import NewsletterFormspark from '../components/rudiKomponente/Newsletter.js';
+import CookieNotice from '../components/rudiKomponente/CookieNotice.js';
 // import ObavijestTraka from '../components/rudiKomponente/ObavijestTraka.js';
 
 export default function IndexPage({ allPosts, allProizvodi }) {
@@ -85,7 +87,9 @@ export default function IndexPage({ allPosts, allProizvodi }) {
       <CertifikatSection />
       <PerlaPrviDio />
       <PerlaDrugiDio allProizvodi={allProizvodi} />
+      <NewsletterFormspark />
       <KontaktSection />
+      <CookieNotice />
     </Layout>
   );
 }
