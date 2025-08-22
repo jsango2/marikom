@@ -1903,19 +1903,6 @@ select {
   text-underline-offset: 2px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .legal {
-    background: #0b1020;
-    color: #e5e7eb;
-  }
-  .legal__subtitle {
-    color: #94a3b8;
-  }
-  .legal a {
-    color: #93c5fd;
-  }
-}
-
 /* === Footer legal linkovi === */
 
 .footer-legal {
@@ -1968,21 +1955,24 @@ select {
 }
 
 .newsletter__eyebrow {
-  font-weight: 700;
-  font-size: 12px;
-  letter-spacing: 0.22em;
+  font-weight: 400;
+  font-size: 16px;
+  /* letter-spacing: 0.22em; */
+  line-height: normal;
   text-transform: uppercase;
   color: rgba(28, 38, 64, 0.75);
-  margin-bottom: 12px;
+  margin-bottom: 3px;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .newsletter__title {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
 
   font-size: 40px;
   line-height: 120%;
+  max-width: 650px;
 
   text-align: center;
 
@@ -2003,11 +1993,13 @@ select {
 
 .newsletter__subtitle {
   color: rgba(28, 38, 64, 0.7);
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.7;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
   max-width: 760px;
   margin: 0 auto 28px;
+  font-family: 'Roboto', sans-serif;
+  max-width: 550px;
 }
 
 .newsletter__form {
@@ -2033,6 +2025,7 @@ select {
   box-shadow: none;
   max-width: 300px;
   width: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 .newsletter__input::placeholder {
   color: #9ca3af;
@@ -2055,6 +2048,7 @@ select {
   cursor: pointer;
   border: 1px solid transparent;
   max-width: 200px;
+  font-family: 'Roboto', sans-serif;
 }
 .newsletter__btn:hover {
   filter: brightness(1.05);
