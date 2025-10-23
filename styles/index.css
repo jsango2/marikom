@@ -1208,6 +1208,32 @@ select {
   flex-direction: column;
   align-items: center;
 }
+.download__mobile {
+  z-index: 999;
+  position: absolute;
+  bottom: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.75);
+  transition: all ease-in-out 250ms;
+  display: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  place-items: center;
+  color: #1c2640ff;
+
+  cursor: "pointer";
+
+  &:hover {
+    background-color: white;
+  }
+}
+
+@media (max-width: 1000px) {
+  .download__mobile {
+    display: flex;
+  }
+}
 .wrapFormCalc {
   display: flex;
   align-items: center;
